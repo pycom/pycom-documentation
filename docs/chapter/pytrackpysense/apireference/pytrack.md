@@ -1,0 +1,53 @@
+# Pytrack API
+
+This chapter describes the various libraries which are designed for the Pytrack Board. This includes details about the various methods and classes available for each of the Pytrack’s sensors.
+
+### 3-Axis Accelerometer (LIS2HH12)
+
+Pytrack has a 3-Axis Accelerometer that provides outputs for acceleration as well as roll, pitch and yaw.
+
+#### Constructors
+
+<class><i>class</i> LIS2HH12(pytrack = None, sda = 'P22', scl = 'P21')</class>
+
+Creates a LIS2HH12 object, that will return values for acceleration, roll, pitch and yaw. Constructor must be passed a Pytrack or I2C object to successfully construct.
+
+#### Methods
+<function>LIS2HH12.acceleration()</function>
+
+Read the acceleration from the LIS2HH12. Returns a **tuple** with the 3 values of acceleration (G).
+
+<function>LIS2HH12.roll()</function>
+
+Read the current roll from the LIS2HH12. Returns a **float** in degrees.
+
+<function>LIS2HH12.pitch()</function>
+
+Read the current pitch from the LIS2HH12. Returns a **float** in degrees.
+
+<function>LIS2HH12.yaw()</function>
+
+Read the current yaw from the LIS2HH12. Returns a **float** in degrees.
+
+***
+
+### GPS with GLONASS (Quectel L76-L GNSS)
+
+Pytrack has a GPS (with GLONASS) that provides outputs longitude/latitude, speed and other information about the Pytrack's location.
+
+#### Constructors
+
+<class><i>class</i> L76GNSS(pytrack = None, sda = 'P22', scl = 'P21', timeout = None)</class>
+
+Creates a L76GNSS object, that will return values for longitude and latitude. Constructor must be passed a Pytrack or I2C object to successfully construct. Set the ``timeout`` to a time period (in seconds) for the GPS to search for a lock. If a lock is not found by the time the ``timeout`` has expired, the ``coordinates`` method will return ``(None, None)``.
+
+#### Methods
+<function>L76GNSS.coordinates(debug = False)</function>
+
+Read the longitude and latitude from the L76GNSS. Returns a **tuple** with the longitude and latitude. With ``debug`` set to ``True`` the output from the GPS is verbose.
+
+***
+
+{% hint style='info' %}
+Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)
+{% endhint %}

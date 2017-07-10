@@ -1,0 +1,2325 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.2.6 AWS · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../assets/continuum/cms.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="adc.html" />
+    
+    
+    <link rel="prev" href="mqtt.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../products.html">
+            
+                <a href="../../products.html">
+            
+                    
+                    Pycom Products
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1. Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../gettingstarted/">
+            
+                <a href="../../gettingstarted/">
+            
+                    
+                    1.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../gettingstarted/unboxing.html">
+            
+                <a href="../../gettingstarted/unboxing.html">
+            
+                    
+                    1.2 Unboxing/Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../gettingstarted/installingsoftware.html">
+            
+                <a href="../../gettingstarted/installingsoftware.html">
+            
+                    
+                    1.3 Installing Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../gettingstarted/installation/firmwaretool.html">
+            
+                <a href="../../gettingstarted/installation/firmwaretool.html">
+            
+                    
+                    1.3.1 Updating Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../gettingstarted/installation/pymakr.html">
+            
+                <a href="../../gettingstarted/installation/pymakr.html">
+            
+                    
+                    1.3.2 Pymakr Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../gettingstarted/registration.html">
+            
+                <a href="../../gettingstarted/registration.html">
+            
+                    
+                    1.4 Device Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../gettingstarted/micropython.html">
+            
+                <a href="../../gettingstarted/micropython.html">
+            
+                    
+                    1.5 Introduction to MicroPython
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../gettingstarted/micropython/examples.html">
+            
+                <a href="../../gettingstarted/micropython/examples.html">
+            
+                    
+                    1.5.1 Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2. Tools & Features</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../toolsandfeatures/">
+            
+                <a href="../../toolsandfeatures/">
+            
+                    
+                    2.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../toolsandfeatures/pycommodules.html">
+            
+                <a href="../../toolsandfeatures/pycommodules.html">
+            
+                    
+                    2.2 Pycom Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../toolsandfeatures/repl/">
+            
+                <a href="../../toolsandfeatures/repl/">
+            
+                    
+                    2.3 REPL & Uploading Code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../toolsandfeatures/repl/serial.html">
+            
+                <a href="../../toolsandfeatures/repl/serial.html">
+            
+                    
+                    2.3.1 Serial USB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../toolsandfeatures/repl/telnet.html">
+            
+                <a href="../../toolsandfeatures/repl/telnet.html">
+            
+                    
+                    2.3.2 Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../toolsandfeatures/FTP.html">
+            
+                <a href="../../toolsandfeatures/FTP.html">
+            
+                    
+                    2.3.3 FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../toolsandfeatures/bootmodes.html">
+            
+                <a href="../../toolsandfeatures/bootmodes.html">
+            
+                    
+                    2.4 Boot Modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../toolsandfeatures/notes.html">
+            
+                <a href="../../toolsandfeatures/notes.html">
+            
+                    
+                    2.6 Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3. Pymakr Plugin</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../pymakr/">
+            
+                <a href="../../pymakr/">
+            
+                    
+                    3.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../pymakr/installation/">
+            
+                <a href="../../pymakr/installation/">
+            
+                    
+                    3.2 Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../pymakr/installation/atom.html">
+            
+                <a href="../../pymakr/installation/atom.html">
+            
+                    
+                    3.2.1 Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../pymakr/installation/serial.html">
+            
+                <a href="../../pymakr/installation/serial.html">
+            
+                    
+                    3.2.2 Serial USB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../pymakr/installation/telnet.html">
+            
+                <a href="../../pymakr/installation/telnet.html">
+            
+                    
+                    3.2.3 Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../pymakr/toolsfeatures.html">
+            
+                <a href="../../pymakr/toolsfeatures.html">
+            
+                    
+                    3.4 Tools/Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">4. Pysense & Pytrack</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../pytrackpysense/">
+            
+                <a href="../../pytrackpysense/">
+            
+                    
+                    4.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../pytrackpysense/installation/">
+            
+                <a href="../../pytrackpysense/installation/">
+            
+                    
+                    4.2 Installing Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../pytrackpysense/installation/firmware.html">
+            
+                <a href="../../pytrackpysense/installation/firmware.html">
+            
+                    
+                    4.2.1 Updating Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../pytrackpysense/installation/libraries.html">
+            
+                <a href="../../pytrackpysense/installation/libraries.html">
+            
+                    
+                    4.2.2 Installing Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../pytrackpysense/apireference/">
+            
+                <a href="../../pytrackpysense/apireference/">
+            
+                    
+                    4.3 API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../../pytrackpysense/apireference/pytrack.html">
+            
+                <a href="../../pytrackpysense/apireference/pytrack.html">
+            
+                    
+                    4.3.1 Pytrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../../pytrackpysense/apireference/pysense.html">
+            
+                <a href="../../pytrackpysense/apireference/pysense.html">
+            
+                    
+                    4.3.2 Pysense
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">5. Tutorials & Examples</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    5.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    5.2 All Pycom Device Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="repl.html">
+            
+                <a href="repl.html">
+            
+                    
+                    5.2.1 REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="wlan.html">
+            
+                <a href="wlan.html">
+            
+                    
+                    5.2.2 WLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="ble.html">
+            
+                <a href="ble.html">
+            
+                    
+                    5.2.3 Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="https.html">
+            
+                <a href="https.html">
+            
+                    
+                    5.2.4 HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    5.2.5 MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.2.6" data-path="aws.html">
+            
+                <a href="aws.html">
+            
+                    
+                    5.2.6 AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.7" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    5.2.7 ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.8" data-path="i2c.html">
+            
+                <a href="i2c.html">
+            
+                    
+                    5.2.8 I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.9" data-path="owd.html">
+            
+                <a href="owd.html">
+            
+                    
+                    5.2.9 Onewire Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.10" data-path="threading.html">
+            
+                <a href="threading.html">
+            
+                    
+                    5.2.10 Threading
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.11" data-path="rgbled.html">
+            
+                <a href="rgbled.html">
+            
+                    
+                    5.2.11 RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.12" data-path="timers.html">
+            
+                <a href="timers.html">
+            
+                    
+                    5.2.12 Timers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.13" data-path="pir.html">
+            
+                <a href="pir.html">
+            
+                    
+                    5.2.13 PIR Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../lopy/">
+            
+                <a href="../lopy/">
+            
+                    
+                    5.3 LoPy Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../lopy/lora-mac.html">
+            
+                <a href="../lopy/lora-mac.html">
+            
+                    
+                    5.3.1 LoRa-MAC (Raw LoRa)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../lopy/lorawan-otaa.html">
+            
+                <a href="../lopy/lorawan-otaa.html">
+            
+                    
+                    5.3.2 LoRaWAN with OTAA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="../lopy/lorawan-abp.html">
+            
+                <a href="../lopy/lorawan-abp.html">
+            
+                    
+                    5.3.3 LoRaWAN with ABP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.4" data-path="../lopy/lora-mac-nano-gateway.html">
+            
+                <a href="../lopy/lora-mac-nano-gateway.html">
+            
+                    
+                    5.3.4 LoRa-MAC Nano-Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.5" data-path="../lopy/lopy-lopy.html">
+            
+                <a href="../lopy/lopy-lopy.html">
+            
+                    
+                    5.3.5 LoPy to LoPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.6" data-path="../lopy/lorawan-nano-gateway.html">
+            
+                <a href="../lopy/lorawan-nano-gateway.html">
+            
+                    
+                    5.3.6 LoRaWAN Nano-Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../sipy/">
+            
+                <a href="../sipy/">
+            
+                    
+                    5.4 SiPy Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../sipy/register.html">
+            
+                <a href="../sipy/register.html">
+            
+                    
+                    5.4.1 Register Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../pytrack/README.md">
+            
+                <span>
+            
+                    
+                    5.5 Pytrack Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../pysense/README.md">
+            
+                <span>
+            
+                    
+                    5.6 Pysense Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">6. Firmware & API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../firmwareapi/">
+            
+                <a href="../../firmwareapi/">
+            
+                    
+                    6.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../../firmwareapi/pycom/">
+            
+                <a href="../../firmwareapi/pycom/">
+            
+                    
+                    6.2 Pycom Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../../firmwareapi/pycom/machine/">
+            
+                <a href="../../firmwareapi/pycom/machine/">
+            
+                    
+                    6.2.1 machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1.1" data-path="../../firmwareapi/pycom/machine/ADC.html">
+            
+                <a href="../../firmwareapi/pycom/machine/ADC.html">
+            
+                    
+                    6.2.1.1 ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.2" data-path="../../firmwareapi/pycom/machine/DAC.html">
+            
+                <a href="../../firmwareapi/pycom/machine/DAC.html">
+            
+                    
+                    6.2.1.2 DAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.3" data-path="../../firmwareapi/pycom/machine/I2C.html">
+            
+                <a href="../../firmwareapi/pycom/machine/I2C.html">
+            
+                    
+                    6.2.1.3 I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.4" data-path="../../firmwareapi/pycom/machine/Pin.html">
+            
+                <a href="../../firmwareapi/pycom/machine/Pin.html">
+            
+                    
+                    6.2.1.4 Pin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.5" data-path="../../firmwareapi/pycom/machine/PWM.html">
+            
+                <a href="../../firmwareapi/pycom/machine/PWM.html">
+            
+                    
+                    6.2.1.5 PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.6" data-path="../../firmwareapi/pycom/machine/RTC.html">
+            
+                <a href="../../firmwareapi/pycom/machine/RTC.html">
+            
+                    
+                    6.2.1.6 RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.7" data-path="../../firmwareapi/pycom/machine/SPI.html">
+            
+                <a href="../../firmwareapi/pycom/machine/SPI.html">
+            
+                    
+                    6.2.1.7 SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.8" data-path="../../firmwareapi/pycom/machine/UART.html">
+            
+                <a href="../../firmwareapi/pycom/machine/UART.html">
+            
+                    
+                    6.2.1.8 UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.9" data-path="../../firmwareapi/pycom/machine/WDT.html">
+            
+                <a href="../../firmwareapi/pycom/machine/WDT.html">
+            
+                    
+                    6.2.1.9 WDT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.10" data-path="../../firmwareapi/pycom/machine/Timer.html">
+            
+                <a href="../../firmwareapi/pycom/machine/Timer.html">
+            
+                    
+                    6.2.1.10 Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.11" data-path="../../firmwareapi/pycom/machine/SD.html">
+            
+                <a href="../../firmwareapi/pycom/machine/SD.html">
+            
+                    
+                    6.2.1.11 SD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../../firmwareapi/pycom/network/">
+            
+                <a href="../../firmwareapi/pycom/network/">
+            
+                    
+                    6.2.2 network
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.2.1" data-path="../../firmwareapi/pycom/network/wlan.html">
+            
+                <a href="../../firmwareapi/pycom/network/wlan.html">
+            
+                    
+                    6.2.2.1 WLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.2" data-path="../../firmwareapi/pycom/network/server.html">
+            
+                <a href="../../firmwareapi/pycom/network/server.html">
+            
+                    
+                    6.2.2.2 Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3" data-path="../../firmwareapi/pycom/network/bluetooth/">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/">
+            
+                    
+                    6.2.2.3 Bluetooth
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.2.3.1" data-path="../../firmwareapi/pycom/network/bluetooth/gatt.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gatt.html">
+            
+                    
+                    6.2.2.3.1 GATT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.2" data-path="../../firmwareapi/pycom/network/bluetooth/gattcconnection.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattcconnection.html">
+            
+                    
+                    6.2.2.3.2 GATTCConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.3" data-path="../../firmwareapi/pycom/network/bluetooth/gattccservice.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattccservice.html">
+            
+                    
+                    6.2.2.3.3 GATTCService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.4" data-path="../../firmwareapi/pycom/network/bluetooth/gattccharacteristic.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattccharacteristic.html">
+            
+                    
+                    6.2.2.3.4 GATTCCharacteristic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.5" data-path="../../firmwareapi/pycom/network/bluetooth/gattsservice.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattsservice.html">
+            
+                    
+                    6.2.2.3.5 GATTSService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.6" data-path="../../firmwareapi/pycom/network/bluetooth/gattscharacteristic.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattscharacteristic.html">
+            
+                    
+                    6.2.2.3.6 GATTSCharacteristic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.4" data-path="../../firmwareapi/pycom/network/lora.html">
+            
+                <a href="../../firmwareapi/pycom/network/lora.html">
+            
+                    
+                    6.2.2.4 LoRa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.5" data-path="../../firmwareapi/pycom/network/sigfox.html">
+            
+                <a href="../../firmwareapi/pycom/network/sigfox.html">
+            
+                    
+                    6.2.2.5 Sigfox
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../../firmwareapi/pycom/aes.html">
+            
+                <a href="../../firmwareapi/pycom/aes.html">
+            
+                    
+                    6.2.3 AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.4" data-path="../../firmwareapi/pycom/pycom.html">
+            
+                <a href="../../firmwareapi/pycom/pycom.html">
+            
+                    
+                    6.2.4 pycom
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../../firmwareapi/micropython/">
+            
+                <a href="../../firmwareapi/micropython/">
+            
+                    
+                    6.3 MicroPython Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.3.1" data-path="../../firmwareapi/micropython/micropython.html">
+            
+                <a href="../../firmwareapi/micropython/micropython.html">
+            
+                    
+                    6.3.1 micropython
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.2" data-path="../../firmwareapi/micropython/uctypes.html">
+            
+                <a href="../../firmwareapi/micropython/uctypes.html">
+            
+                    
+                    6.3.2 uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.3" data-path="../../firmwareapi/micropython/sys.html">
+            
+                <a href="../../firmwareapi/micropython/sys.html">
+            
+                    
+                    6.3.3 sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.4" data-path="../../firmwareapi/micropython/uos.html">
+            
+                <a href="../../firmwareapi/micropython/uos.html">
+            
+                    
+                    6.3.4 uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.5" data-path="../../firmwareapi/micropython/array.html">
+            
+                <a href="../../firmwareapi/micropython/array.html">
+            
+                    
+                    6.3.5 array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.6" data-path="../../firmwareapi/micropython/cmath.html">
+            
+                <a href="../../firmwareapi/micropython/cmath.html">
+            
+                    
+                    6.3.6 cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.7" data-path="../../firmwareapi/micropython/math.html">
+            
+                <a href="../../firmwareapi/micropython/math.html">
+            
+                    
+                    6.3.7 math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.8" data-path="../../firmwareapi/micropython/gc.html">
+            
+                <a href="../../firmwareapi/micropython/gc.html">
+            
+                    
+                    6.3.8 gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.9" data-path="../../firmwareapi/micropython/ubinascii.html">
+            
+                <a href="../../firmwareapi/micropython/ubinascii.html">
+            
+                    
+                    6.3.9 ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.10" data-path="../../firmwareapi/micropython/ujson.html">
+            
+                <a href="../../firmwareapi/micropython/ujson.html">
+            
+                    
+                    6.3.10 ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.11" data-path="../../firmwareapi/micropython/ure.html">
+            
+                <a href="../../firmwareapi/micropython/ure.html">
+            
+                    
+                    6.3.11 ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.12" data-path="../../firmwareapi/micropython/usocket.html">
+            
+                <a href="../../firmwareapi/micropython/usocket.html">
+            
+                    
+                    6.3.12 usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.13" data-path="../../firmwareapi/micropython/select.html">
+            
+                <a href="../../firmwareapi/micropython/select.html">
+            
+                    
+                    6.3.13 select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.14" data-path="../../firmwareapi/micropython/utime.html">
+            
+                <a href="../../firmwareapi/micropython/utime.html">
+            
+                    
+                    6.3.14 utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.15" data-path="../../firmwareapi/micropython/uhashlib.html">
+            
+                <a href="../../firmwareapi/micropython/uhashlib.html">
+            
+                    
+                    6.3.15 uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.16" data-path="../../firmwareapi/micropython/ussl.html">
+            
+                <a href="../../firmwareapi/micropython/ussl.html">
+            
+                    
+                    6.3.16 ussl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.17" data-path="../../firmwareapi/micropython/ucrypto.html">
+            
+                <a href="../../firmwareapi/micropython/ucrypto.html">
+            
+                    
+                    6.3.17 ucrypto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.18" data-path="../../firmwareapi/micropython/ustruct.html">
+            
+                <a href="../../firmwareapi/micropython/ustruct.html">
+            
+                    
+                    6.3.18 ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.19" data-path="../../firmwareapi/micropython/_thread.html">
+            
+                <a href="../../firmwareapi/micropython/_thread.html">
+            
+                    
+                    6.3.19 _thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.20" data-path="../../firmwareapi/micropython/builtin.html">
+            
+                <a href="../../firmwareapi/micropython/builtin.html">
+            
+                    
+                    6.3.20 Builtin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">7. Datasheets</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../datasheets/">
+            
+                <a href="../../datasheets/">
+            
+                    
+                    7.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../datasheets/development/">
+            
+                <a href="../../datasheets/development/">
+            
+                    
+                    7.2 Development Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.2.1" data-path="../../datasheets/development/wipy2.html">
+            
+                <a href="../../datasheets/development/wipy2.html">
+            
+                    
+                    7.2.1 WiPy 2.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.2" data-path="../../datasheets/development/lopy.html">
+            
+                <a href="../../datasheets/development/lopy.html">
+            
+                    
+                    7.2.2 LoPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.3" data-path="../../datasheets/development/sipy.html">
+            
+                <a href="../../datasheets/development/sipy.html">
+            
+                    
+                    7.2.3 SiPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.4" data-path="../../datasheets/development/gpy.html">
+            
+                <a href="../../datasheets/development/gpy.html">
+            
+                    
+                    7.2.4 GPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.5" data-path="../../datasheets/development/fipy.html">
+            
+                <a href="../../datasheets/development/fipy.html">
+            
+                    
+                    7.2.5 FiPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../../datasheets/oem/">
+            
+                <a href="../../datasheets/oem/">
+            
+                    
+                    7.3 OEM Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.3.1" data-path="../../datasheets/oem/w01.html">
+            
+                <a href="../../datasheets/oem/w01.html">
+            
+                    
+                    7.3.1 W01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.2" data-path="../../datasheets/oem/l01.html">
+            
+                <a href="../../datasheets/oem/l01.html">
+            
+                    
+                    7.3.2 L01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.3" data-path="../../datasheets/oem/g01.html">
+            
+                <a href="../../datasheets/oem/g01.html">
+            
+                    
+                    7.3.3 G01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.4" data-path="../../datasheets/oem/reference.html">
+            
+                <a href="../../datasheets/oem/reference.html">
+            
+                    
+                    7.3.4 OEM Baseboard Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../../datasheets/boards/">
+            
+                <a href="../../datasheets/boards/">
+            
+                    
+                    7.4 Expansion Boards and Shields
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.4.1" data-path="../../datasheets/boards/expansion.html">
+            
+                <a href="../../datasheets/boards/expansion.html">
+            
+                    
+                    7.4.1 Expansion Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.2" data-path="../../datasheets/boards/pytrack.html">
+            
+                <a href="../../datasheets/boards/pytrack.html">
+            
+                    
+                    7.4.2 Pytrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.3" data-path="../../datasheets/boards/pysense.html">
+            
+                <a href="../../datasheets/boards/pysense.html">
+            
+                    
+                    7.4.3 Pysense
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.4" data-path="../../datasheets/boards/deepsleep.html">
+            
+                <a href="../../datasheets/boards/deepsleep.html">
+            
+                    
+                    7.4.4 Deep Sleep Shield
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../../datasheets/notes/">
+            
+                <a href="../../datasheets/notes/">
+            
+                    
+                    7.5 Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">8. Documentation Notes</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../docnotes/">
+            
+                <a href="../../docnotes/">
+            
+                    
+                    8.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../docnotes/syntax.html">
+            
+                <a href="../../docnotes/syntax.html">
+            
+                    
+                    8.2 Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../../docnotes/replscript.html">
+            
+                <a href="../../docnotes/replscript.html">
+            
+                    
+                    8.3 REPL vs Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">9. License</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../license/">
+            
+                <a href="../../license/">
+            
+                    
+                    9.1 License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >5.2.6 AWS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="amazon-web-services">Amazon Web Services</h1>
+<p>AWS (Amazon Web Services) is a cloud service that offers easy data storage using MQTT, HTTP or websockets protocol. This example uses MQTT to send simple test data to the AWS server. For more information, visit the <a href="https://aws.amazon.com/" target="_blank">Amazon Website</a>.</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Be aware that this example uses an old version of the MQTT library and may be missing features that are currently available.</p>
+</div></div></p>
+<h3 id="connectivity-code-demopy">Connectivity code (demo.py):</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">from</span> mqttclient <span class="hljs-keyword">import</span> MQTTClient
+
+DISCONNECTED = <span class="hljs-number">0</span>
+CONNECTING = <span class="hljs-number">1</span>
+CONNECTED = <span class="hljs-number">2</span>
+DEVICE_ID = <span class="hljs-string">&quot;12345&quot;</span>
+HOST = <span class="hljs-string">&quot;data.iot.us-west-2.amazonaws.com&quot;</span>
+TOPIC_DOWNLOAD = <span class="hljs-string">&quot;Download&quot;</span>
+TOPIC_UPLOAD = <span class="hljs-string">&quot;Upload&quot;</span>
+
+
+state = DISCONNECTED
+connection = <span class="hljs-keyword">None</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_recv_msg_callback</span><span class="hljs-params">(topic, msg)</span>:</span>
+    print(<span class="hljs-string">&quot;Received: {} from Topic: {}&quot;</span>.format(msg, topic))
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_send_msg</span><span class="hljs-params">(msg)</span>:</span>
+    <span class="hljs-keyword">global</span> connection
+    connection.publish(TOPIC_UPLOAD, msg)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">global</span> state
+    <span class="hljs-keyword">global</span> connection
+
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+        <span class="hljs-comment"># Wait for connection</span>
+        <span class="hljs-keyword">while</span> state != CONNECTED:
+            <span class="hljs-keyword">try</span>:
+                state = CONNECTING
+                connection = MQTTClient(DEVICE_ID, server=HOST, port=<span class="hljs-number">8883</span>)
+                connection.connect(ssl=<span class="hljs-keyword">True</span>, certfile=<span class="hljs-string">&apos;/flash/cert/certificate.crt&apos;</span>, keyfile=<span class="hljs-string">&apos;/flash/cert/privateKey.key&apos;</span>, ca_certs=<span class="hljs-string">&apos;/flash/cert/root-CA.cer&apos;</span>)
+                state = CONNECTED
+            <span class="hljs-keyword">except</span>:
+                print(<span class="hljs-string">&apos;Error connecting to the server&apos;</span>)
+                time.sleep(<span class="hljs-number">0.5</span>)
+                <span class="hljs-keyword">continue</span>
+
+        print(<span class="hljs-string">&apos;Connected!&apos;</span>)
+
+        <span class="hljs-comment"># Subscribe for messages</span>
+        connection.set_callback(_recv_msg_callback)
+        connection.subscribe(TOPIC_DOWNLOAD)
+
+        <span class="hljs-keyword">while</span> state == CONNECTED:
+            connection.check_msg()
+            msg = <span class="hljs-string">&apos;{&quot;Name&quot;:&quot;Pycom&quot;, &quot;Data&quot;:&quot;Test&quot;}&apos;</span>
+            print(<span class="hljs-string">&apos;Sending: &apos;</span> + msg)
+            _send_msg(msg)
+            time.sleep(<span class="hljs-number">2.0</span>)
+</code></pre>
+<h3 id="usage-mainpy">Usage (main.py)</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> demo
+demo.run()
+MQTT client <span class="hljs-class"><span class="hljs-keyword">class</span>:</span>
+
+<span class="hljs-keyword">import</span> socket
+<span class="hljs-keyword">import</span> struct
+<span class="hljs-keyword">import</span> select
+<span class="hljs-keyword">from</span> binascii <span class="hljs-keyword">import</span> hexlify
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MQTTException</span><span class="hljs-params">(Exception)</span>:</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MQTTClient</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, client_id, server, port=<span class="hljs-number">1883</span>, user=None, password=None)</span>:</span>
+        self.client_id = client_id.encode(<span class="hljs-string">&apos;utf8&apos;</span>)
+        self.sock = <span class="hljs-keyword">None</span>
+        self.addr = socket.getaddrinfo(server, port)[<span class="hljs-number">0</span>][<span class="hljs-number">-1</span>]
+        self.pid = <span class="hljs-number">0</span>
+        self.cb = <span class="hljs-keyword">None</span>
+        self.poll = select.poll()
+        self.__will_message = <span class="hljs-keyword">None</span>
+        <span class="hljs-keyword">if</span> user:
+            self.__user = user.encode(<span class="hljs-string">&apos;utf8&apos;</span>)
+        <span class="hljs-keyword">else</span>:
+            self.__user = <span class="hljs-keyword">None</span>
+        self.__password = password
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__encode_varlen_length</span><span class="hljs-params">(self, length)</span>:</span>
+        i = <span class="hljs-number">0</span>
+        buff = bytearray()
+        <span class="hljs-keyword">while</span> <span class="hljs-number">1</span>:
+            buff.append(length % <span class="hljs-number">128</span>)
+            length = length // <span class="hljs-number">128</span>
+            <span class="hljs-keyword">if</span> length &gt; <span class="hljs-number">0</span>:
+                buff[i] = buff[i] | <span class="hljs-number">0x80</span>
+                i += <span class="hljs-number">1</span>
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-keyword">break</span>
+
+        <span class="hljs-keyword">return</span> buff
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__encode_16</span><span class="hljs-params">(self, x)</span>:</span>
+        <span class="hljs-keyword">return</span> struct.pack(<span class="hljs-string">&quot;!H&quot;</span>, x)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__pascal_string</span><span class="hljs-params">(self, s)</span>:</span>
+        <span class="hljs-keyword">return</span> struct.pack(<span class="hljs-string">&quot;!H&quot;</span>, len(s)) + s
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__recv_varlen_length</span><span class="hljs-params">(self)</span>:</span>
+        m = <span class="hljs-number">1</span>
+        val = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">while</span> <span class="hljs-number">1</span>:
+            b = self.sock.recv(<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>]
+            val += (b &amp; <span class="hljs-number">0x7F</span>) * m
+            m *= <span class="hljs-number">128</span>
+            <span class="hljs-keyword">if</span> m &gt; <span class="hljs-number">2097152</span>: <span class="hljs-comment"># 128 * 128 * 128</span>
+                <span class="hljs-keyword">raise</span> MQTTException()
+            <span class="hljs-keyword">if</span> (b &amp; <span class="hljs-number">0x80</span>) == <span class="hljs-number">0</span>:
+                <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">return</span> val
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_callback</span><span class="hljs-params">(self, f)</span>:</span>
+        self.cb = f
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_will</span><span class="hljs-params">(self, will_topic, will_message, will_qos=<span class="hljs-number">0</span>, will_retain=<span class="hljs-number">0</span>)</span>:</span>
+        <span class="hljs-keyword">if</span> will_topic:
+            self.__will_topic = will_topic.encode(<span class="hljs-string">&apos;utf8&apos;</span>)
+        self.__will_message = will_message
+        self.__will_qos = will_qos
+        self.__will_retain = will_retain
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">connect</span><span class="hljs-params">(self, clean_session=True, ssl=False, certfile=None, keyfile=None, ca_certs=None)</span>:</span>
+        <span class="hljs-keyword">try</span>:
+            self.poll.unregister(self.sock)
+        <span class="hljs-keyword">except</span>:
+            <span class="hljs-keyword">pass</span>
+        self.sock = socket.socket()
+
+        <span class="hljs-keyword">if</span> ssl:
+            <span class="hljs-keyword">import</span> ssl
+            self.sock = ssl.wrap_socket(self.sock, certfile=certfile, keyfile=keyfile, ca_certs=ca_certs, cert_reqs=ssl.CERT_REQUIRED)
+
+        self.sock.connect(self.addr)
+        self.poll.register(self.sock, select.POLLIN)
+
+        pkt_len = (<span class="hljs-number">12</span> + len(self.client_id) + <span class="hljs-comment"># 10 + 2 + len(client_id)</span>
+                    (<span class="hljs-number">2</span> + len(self.__user) <span class="hljs-keyword">if</span> self.__user <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>) +
+                    (<span class="hljs-number">2</span> + len(self.__password) <span class="hljs-keyword">if</span> self.__password <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>))
+
+        flags = (<span class="hljs-number">0x80</span> <span class="hljs-keyword">if</span> self.__user <span class="hljs-keyword">else</span> <span class="hljs-number">0x00</span>) | (<span class="hljs-number">0x40</span> <span class="hljs-keyword">if</span> self.__password <span class="hljs-keyword">else</span> <span class="hljs-number">0x00</span>) | (<span class="hljs-number">0x02</span> <span class="hljs-keyword">if</span> clean_session <span class="hljs-keyword">else</span> <span class="hljs-number">0x00</span>)
+
+        <span class="hljs-keyword">if</span> self.__will_message:
+            flags |= (self.__will_retain &lt;&lt; <span class="hljs-number">3</span> | self.__will_qos &lt;&lt; <span class="hljs-number">1</span> | <span class="hljs-number">1</span>) &lt;&lt; <span class="hljs-number">2</span>
+            pkt_len += <span class="hljs-number">4</span> + len(self.__will_topic) + len(self.__will_message)
+
+        pkt = bytearray([<span class="hljs-number">0x10</span>]) <span class="hljs-comment"># connect</span>
+        pkt.extend(self.__encode_varlen_length(pkt_len)) <span class="hljs-comment"># len of the remaining</span>
+        pkt.extend(<span class="hljs-string">b&apos;\x00\x04MQTT\x04&apos;</span>) <span class="hljs-comment"># len of &quot;MQTT&quot; (16 bits), protocol name, and protocol version</span>
+        pkt.append(flags)
+        pkt.extend(<span class="hljs-string">b&apos;\x00\x00&apos;</span>) <span class="hljs-comment"># disable keepalive</span>
+        pkt.extend(self.__pascal_string(self.client_id))
+        <span class="hljs-keyword">if</span> self.__will_message:
+            pkt.extend(self.__pascal_string(self.__will_topic))
+            pkt.extend(self.__pascal_string(self.__will_message))
+        <span class="hljs-keyword">if</span> self.__user:
+            pkt.extend(self.__pascal_string(self.__user))
+        <span class="hljs-keyword">if</span> self.__password:
+            pkt.extend(self.__pascal_string(self.__password))
+
+        self.sock.send(pkt)
+        resp = self.sock.recv(<span class="hljs-number">4</span>)
+        <span class="hljs-keyword">assert</span> resp[<span class="hljs-number">0</span>] == <span class="hljs-number">0x20</span> <span class="hljs-keyword">and</span> resp[<span class="hljs-number">1</span>] == <span class="hljs-number">0x02</span>
+        <span class="hljs-keyword">if</span> resp[<span class="hljs-number">3</span>] != <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">raise</span> MQTTException(resp[<span class="hljs-number">3</span>])
+        <span class="hljs-keyword">return</span> resp[<span class="hljs-number">2</span>] &amp; <span class="hljs-number">1</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">disconnect</span><span class="hljs-params">(self)</span>:</span>
+        self.sock.send(<span class="hljs-string">b&quot;\xe0\0&quot;</span>)
+        self.sock.close()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ping</span><span class="hljs-params">(self)</span>:</span>
+        self.sock.send(<span class="hljs-string">b&quot;\xc0\0&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">publish</span><span class="hljs-params">(self, topic, msg, retain=False, qos=<span class="hljs-number">0</span>, dup=<span class="hljs-number">0</span>)</span>:</span>
+        topic = topic.encode(<span class="hljs-string">&apos;utf8&apos;</span>)
+        hdr = <span class="hljs-number">0x30</span> | (dup &lt;&lt; <span class="hljs-number">3</span>) | (qos &lt;&lt; <span class="hljs-number">1</span>) | retain
+        pkt_len = (<span class="hljs-number">2</span> + len(topic) +
+                    (<span class="hljs-number">2</span> <span class="hljs-keyword">if</span> qos <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>) +
+                    (len(msg)))
+
+        pkt = bytearray()
+        pkt.append(hdr)
+        pkt.extend(self.__encode_varlen_length(pkt_len)) <span class="hljs-comment"># len of the remaining</span>
+        pkt.extend(self.__pascal_string(topic))
+        <span class="hljs-keyword">if</span> qos:
+            self.pid += <span class="hljs-number">1</span> <span class="hljs-comment">#todo: I don&apos;t think this is the way to deal with the packet id</span>
+            pkt.extend(self.__encode_16(self.pid))
+
+        self.sock.send(pkt)
+        self.sock.send(msg)
+
+        <span class="hljs-comment">#todo: check next part of the code</span>
+        <span class="hljs-keyword">if</span> qos == <span class="hljs-number">1</span>:
+            <span class="hljs-keyword">while</span> <span class="hljs-number">1</span>:
+                rcv_pid = self.recv_pubconf(<span class="hljs-number">0</span>)
+                <span class="hljs-keyword">if</span> pid == rcv_pid:
+                    <span class="hljs-keyword">return</span>
+        <span class="hljs-keyword">elif</span> qos == <span class="hljs-number">2</span>:
+            <span class="hljs-keyword">assert</span> <span class="hljs-number">0</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">recv_pubconf</span><span class="hljs-params">(self, t)</span>:</span>
+        headers = [<span class="hljs-number">0x40</span>, <span class="hljs-number">0x50</span>, <span class="hljs-number">0x62</span>, <span class="hljs-number">0x70</span>]
+        header = headers[t]
+        <span class="hljs-keyword">while</span> <span class="hljs-number">1</span>:
+            op = self.wait_msg()
+            <span class="hljs-keyword">if</span> op == header:
+                sz = self.sock.recv(<span class="hljs-number">1</span>)
+                <span class="hljs-keyword">assert</span> sz == <span class="hljs-string">b&quot;\x02&quot;</span>
+                <span class="hljs-keyword">return</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">subscribe</span><span class="hljs-params">(self, topic, qos=<span class="hljs-number">0</span>)</span>:</span>
+        <span class="hljs-keyword">assert</span> self.cb <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>, <span class="hljs-string">&quot;Subscribe callback is not set&quot;</span>
+
+        topic = topic.encode(<span class="hljs-string">&apos;utf8&apos;</span>)
+        pkt_len = <span class="hljs-number">2</span> + <span class="hljs-number">2</span> + len(topic) + <span class="hljs-number">1</span> <span class="hljs-comment"># packet identifier + len of topic (16 bits) + topic len + QOS</span>
+
+        self.pid += <span class="hljs-number">1</span>
+        pkt = bytearray([<span class="hljs-number">0x82</span>])
+        pkt.extend(self.__encode_varlen_length(pkt_len)) <span class="hljs-comment"># len of the remaining</span>
+        pkt.extend(self.__encode_16(self.pid))
+        pkt.extend(self.__pascal_string(topic))
+        pkt.append(qos)
+
+        self.sock.send(pkt)
+        resp = self.sock.recv(<span class="hljs-number">5</span>)
+        <span class="hljs-comment">#print(resp)</span>
+        <span class="hljs-keyword">assert</span> resp[<span class="hljs-number">0</span>] == <span class="hljs-number">0x90</span>
+        <span class="hljs-keyword">assert</span> resp[<span class="hljs-number">2</span>] == pkt[<span class="hljs-number">2</span>] <span class="hljs-keyword">and</span> resp[<span class="hljs-number">3</span>] == pkt[<span class="hljs-number">3</span>]
+        <span class="hljs-keyword">if</span> resp[<span class="hljs-number">4</span>] == <span class="hljs-number">0x80</span>:
+            <span class="hljs-keyword">raise</span> MQTTException(resp[<span class="hljs-number">4</span>])
+
+    <span class="hljs-comment"># Wait for a single incoming MQTT message and process it.</span>
+    <span class="hljs-comment"># Subscribed messages are delivered to a callback previously</span>
+    <span class="hljs-comment"># set by .set_callback() method. Other (internal) MQTT</span>
+    <span class="hljs-comment"># messages processed internally.</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wait_msg</span><span class="hljs-params">(self)</span>:</span>
+        res = self.sock.recv(<span class="hljs-number">1</span>)
+        self.sock.setblocking(<span class="hljs-keyword">True</span>)
+        <span class="hljs-keyword">if</span> res <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">or</span> res == <span class="hljs-string">b&quot;&quot;</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+        <span class="hljs-comment">#if res == b&quot;&quot;:</span>
+        <span class="hljs-comment">#    raise OSError(-1)</span>
+        <span class="hljs-keyword">if</span> res == <span class="hljs-string">b&quot;\xd0&quot;</span>:  <span class="hljs-comment"># PINGRESP</span>
+            sz = self.sock.recv(<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>]
+            <span class="hljs-keyword">assert</span> sz == <span class="hljs-number">0</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+        op = res[<span class="hljs-number">0</span>]
+        <span class="hljs-keyword">if</span> op &amp; <span class="hljs-number">0xf0</span> != <span class="hljs-number">0x30</span>:
+            <span class="hljs-keyword">return</span> op
+        sz = self.__recv_varlen_length()
+        topic_len = self.sock.recv(<span class="hljs-number">2</span>)
+        topic_len = (topic_len[<span class="hljs-number">0</span>] &lt;&lt; <span class="hljs-number">8</span>) | topic_len[<span class="hljs-number">1</span>]
+        topic = self.sock.recv(topic_len)
+        sz -= topic_len + <span class="hljs-number">2</span>
+        <span class="hljs-keyword">if</span> op &amp; <span class="hljs-number">6</span>:
+            pid = self.sock.recv(<span class="hljs-number">2</span>)
+            pid = pid[<span class="hljs-number">0</span>] &lt;&lt; <span class="hljs-number">8</span> | pid[<span class="hljs-number">1</span>]
+            sz -= <span class="hljs-number">2</span>
+        msg = self.sock.recv(sz)
+        self.cb(topic, msg)
+        <span class="hljs-keyword">if</span> op &amp; <span class="hljs-number">6</span> == <span class="hljs-number">2</span>:
+            pkt = bytearray(<span class="hljs-string">b&quot;\x40\x02\0\0&quot;</span>)
+            struct.pack_into(<span class="hljs-string">&quot;!H&quot;</span>, pkt, <span class="hljs-number">2</span>, pid)
+            self.sock.send(pkt)
+        <span class="hljs-keyword">elif</span> op &amp; <span class="hljs-number">6</span> == <span class="hljs-number">4</span>:
+            <span class="hljs-keyword">assert</span> <span class="hljs-number">0</span>
+
+    <span class="hljs-comment"># Checks whether a pending message from server is available.</span>
+    <span class="hljs-comment"># If not, returns immediately with None. Otherwise, does</span>
+    <span class="hljs-comment"># the same processing as wait_msg.</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">check_msg</span><span class="hljs-params">(self)</span>:</span>
+        self.sock.setblocking(<span class="hljs-keyword">False</span>)
+        <span class="hljs-keyword">return</span> self.wait_msg()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mqtt.html" class="navigation navigation-prev " aria-label="Previous page: 5.2.5 MQTT">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="adc.html" class="navigation navigation-next " aria-label="Next page: 5.2.7 ADC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.2.6 AWS","level":"6.2.6","depth":2,"next":{"title":"5.2.7 ADC","level":"6.2.7","depth":2,"path":"chapter/tutorials/all/adc.md","ref":"chapter/tutorials/all/adc.md","articles":[]},"previous":{"title":"5.2.5 MQTT","level":"6.2.5","depth":2,"path":"chapter/tutorials/all/mqtt.md","ref":"chapter/tutorials/all/mqtt.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","-fontsettings","bring-yer-favicon","github","youtube","livereload"],"pluginsConfig":{"youtube":{},"github":{"url":"https://github.com/pycom"},"livereload":{},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"bring-yer-favicon":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"favicons":{"favicon.ico":"docs/_book/img/favicon.ico","apple-touch-icon-precomposed-152.png":"docs/_book/img/apple-icon.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/continuum/cms.css"}},"file":{"path":"chapter/tutorials/all/aws.md","mtime":"2017-07-05T17:29:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-10T13:10:52.142Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,2521 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.3.6 LoRaWAN Nano-Gateway · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../assets/continuum/cms.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../sipy/" />
+    
+    
+    <link rel="prev" href="lopy-lopy.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../products.html">
+            
+                <a href="../../products.html">
+            
+                    
+                    Pycom Products
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1. Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../gettingstarted/">
+            
+                <a href="../../gettingstarted/">
+            
+                    
+                    1.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../gettingstarted/unboxing.html">
+            
+                <a href="../../gettingstarted/unboxing.html">
+            
+                    
+                    1.2 Unboxing/Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../gettingstarted/installingsoftware.html">
+            
+                <a href="../../gettingstarted/installingsoftware.html">
+            
+                    
+                    1.3 Installing Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../gettingstarted/installation/firmwaretool.html">
+            
+                <a href="../../gettingstarted/installation/firmwaretool.html">
+            
+                    
+                    1.3.1 Updating Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../gettingstarted/installation/pymakr.html">
+            
+                <a href="../../gettingstarted/installation/pymakr.html">
+            
+                    
+                    1.3.2 Pymakr Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../gettingstarted/registration.html">
+            
+                <a href="../../gettingstarted/registration.html">
+            
+                    
+                    1.4 Device Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../gettingstarted/micropython.html">
+            
+                <a href="../../gettingstarted/micropython.html">
+            
+                    
+                    1.5 Introduction to MicroPython
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../gettingstarted/micropython/examples.html">
+            
+                <a href="../../gettingstarted/micropython/examples.html">
+            
+                    
+                    1.5.1 Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2. Tools & Features</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../toolsandfeatures/">
+            
+                <a href="../../toolsandfeatures/">
+            
+                    
+                    2.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../toolsandfeatures/pycommodules.html">
+            
+                <a href="../../toolsandfeatures/pycommodules.html">
+            
+                    
+                    2.2 Pycom Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../toolsandfeatures/repl/">
+            
+                <a href="../../toolsandfeatures/repl/">
+            
+                    
+                    2.3 REPL & Uploading Code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../toolsandfeatures/repl/serial.html">
+            
+                <a href="../../toolsandfeatures/repl/serial.html">
+            
+                    
+                    2.3.1 Serial USB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../toolsandfeatures/repl/telnet.html">
+            
+                <a href="../../toolsandfeatures/repl/telnet.html">
+            
+                    
+                    2.3.2 Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../toolsandfeatures/FTP.html">
+            
+                <a href="../../toolsandfeatures/FTP.html">
+            
+                    
+                    2.3.3 FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../toolsandfeatures/bootmodes.html">
+            
+                <a href="../../toolsandfeatures/bootmodes.html">
+            
+                    
+                    2.4 Boot Modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../toolsandfeatures/notes.html">
+            
+                <a href="../../toolsandfeatures/notes.html">
+            
+                    
+                    2.6 Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3. Pymakr Plugin</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../pymakr/">
+            
+                <a href="../../pymakr/">
+            
+                    
+                    3.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../pymakr/installation/">
+            
+                <a href="../../pymakr/installation/">
+            
+                    
+                    3.2 Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../pymakr/installation/atom.html">
+            
+                <a href="../../pymakr/installation/atom.html">
+            
+                    
+                    3.2.1 Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../pymakr/installation/serial.html">
+            
+                <a href="../../pymakr/installation/serial.html">
+            
+                    
+                    3.2.2 Serial USB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../pymakr/installation/telnet.html">
+            
+                <a href="../../pymakr/installation/telnet.html">
+            
+                    
+                    3.2.3 Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../pymakr/toolsfeatures.html">
+            
+                <a href="../../pymakr/toolsfeatures.html">
+            
+                    
+                    3.4 Tools/Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">4. Pysense & Pytrack</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../pytrackpysense/">
+            
+                <a href="../../pytrackpysense/">
+            
+                    
+                    4.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../pytrackpysense/installation/">
+            
+                <a href="../../pytrackpysense/installation/">
+            
+                    
+                    4.2 Installing Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../pytrackpysense/installation/firmware.html">
+            
+                <a href="../../pytrackpysense/installation/firmware.html">
+            
+                    
+                    4.2.1 Updating Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../pytrackpysense/installation/libraries.html">
+            
+                <a href="../../pytrackpysense/installation/libraries.html">
+            
+                    
+                    4.2.2 Installing Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../pytrackpysense/apireference/">
+            
+                <a href="../../pytrackpysense/apireference/">
+            
+                    
+                    4.3 API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../../pytrackpysense/apireference/pytrack.html">
+            
+                <a href="../../pytrackpysense/apireference/pytrack.html">
+            
+                    
+                    4.3.1 Pytrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../../pytrackpysense/apireference/pysense.html">
+            
+                <a href="../../pytrackpysense/apireference/pysense.html">
+            
+                    
+                    4.3.2 Pysense
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">5. Tutorials & Examples</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    5.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../all/">
+            
+                <a href="../all/">
+            
+                    
+                    5.2 All Pycom Device Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../all/repl.html">
+            
+                <a href="../all/repl.html">
+            
+                    
+                    5.2.1 REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../all/wlan.html">
+            
+                <a href="../all/wlan.html">
+            
+                    
+                    5.2.2 WLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../all/ble.html">
+            
+                <a href="../all/ble.html">
+            
+                    
+                    5.2.3 Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../all/https.html">
+            
+                <a href="../all/https.html">
+            
+                    
+                    5.2.4 HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../all/mqtt.html">
+            
+                <a href="../all/mqtt.html">
+            
+                    
+                    5.2.5 MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.6" data-path="../all/aws.html">
+            
+                <a href="../all/aws.html">
+            
+                    
+                    5.2.6 AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.7" data-path="../all/adc.html">
+            
+                <a href="../all/adc.html">
+            
+                    
+                    5.2.7 ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.8" data-path="../all/i2c.html">
+            
+                <a href="../all/i2c.html">
+            
+                    
+                    5.2.8 I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.9" data-path="../all/owd.html">
+            
+                <a href="../all/owd.html">
+            
+                    
+                    5.2.9 Onewire Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.10" data-path="../all/threading.html">
+            
+                <a href="../all/threading.html">
+            
+                    
+                    5.2.10 Threading
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.11" data-path="../all/rgbled.html">
+            
+                <a href="../all/rgbled.html">
+            
+                    
+                    5.2.11 RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.12" data-path="../all/timers.html">
+            
+                <a href="../all/timers.html">
+            
+                    
+                    5.2.12 Timers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.13" data-path="../all/pir.html">
+            
+                <a href="../all/pir.html">
+            
+                    
+                    5.2.13 PIR Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    5.3 LoPy Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="lora-mac.html">
+            
+                <a href="lora-mac.html">
+            
+                    
+                    5.3.1 LoRa-MAC (Raw LoRa)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="lorawan-otaa.html">
+            
+                <a href="lorawan-otaa.html">
+            
+                    
+                    5.3.2 LoRaWAN with OTAA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="lorawan-abp.html">
+            
+                <a href="lorawan-abp.html">
+            
+                    
+                    5.3.3 LoRaWAN with ABP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.4" data-path="lora-mac-nano-gateway.html">
+            
+                <a href="lora-mac-nano-gateway.html">
+            
+                    
+                    5.3.4 LoRa-MAC Nano-Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.5" data-path="lopy-lopy.html">
+            
+                <a href="lopy-lopy.html">
+            
+                    
+                    5.3.5 LoPy to LoPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.3.6" data-path="lorawan-nano-gateway.html">
+            
+                <a href="lorawan-nano-gateway.html">
+            
+                    
+                    5.3.6 LoRaWAN Nano-Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../sipy/">
+            
+                <a href="../sipy/">
+            
+                    
+                    5.4 SiPy Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../sipy/register.html">
+            
+                <a href="../sipy/register.html">
+            
+                    
+                    5.4.1 Register Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../pytrack/README.md">
+            
+                <span>
+            
+                    
+                    5.5 Pytrack Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../pysense/README.md">
+            
+                <span>
+            
+                    
+                    5.6 Pysense Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">6. Firmware & API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../firmwareapi/">
+            
+                <a href="../../firmwareapi/">
+            
+                    
+                    6.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../../firmwareapi/pycom/">
+            
+                <a href="../../firmwareapi/pycom/">
+            
+                    
+                    6.2 Pycom Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../../firmwareapi/pycom/machine/">
+            
+                <a href="../../firmwareapi/pycom/machine/">
+            
+                    
+                    6.2.1 machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1.1" data-path="../../firmwareapi/pycom/machine/ADC.html">
+            
+                <a href="../../firmwareapi/pycom/machine/ADC.html">
+            
+                    
+                    6.2.1.1 ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.2" data-path="../../firmwareapi/pycom/machine/DAC.html">
+            
+                <a href="../../firmwareapi/pycom/machine/DAC.html">
+            
+                    
+                    6.2.1.2 DAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.3" data-path="../../firmwareapi/pycom/machine/I2C.html">
+            
+                <a href="../../firmwareapi/pycom/machine/I2C.html">
+            
+                    
+                    6.2.1.3 I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.4" data-path="../../firmwareapi/pycom/machine/Pin.html">
+            
+                <a href="../../firmwareapi/pycom/machine/Pin.html">
+            
+                    
+                    6.2.1.4 Pin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.5" data-path="../../firmwareapi/pycom/machine/PWM.html">
+            
+                <a href="../../firmwareapi/pycom/machine/PWM.html">
+            
+                    
+                    6.2.1.5 PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.6" data-path="../../firmwareapi/pycom/machine/RTC.html">
+            
+                <a href="../../firmwareapi/pycom/machine/RTC.html">
+            
+                    
+                    6.2.1.6 RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.7" data-path="../../firmwareapi/pycom/machine/SPI.html">
+            
+                <a href="../../firmwareapi/pycom/machine/SPI.html">
+            
+                    
+                    6.2.1.7 SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.8" data-path="../../firmwareapi/pycom/machine/UART.html">
+            
+                <a href="../../firmwareapi/pycom/machine/UART.html">
+            
+                    
+                    6.2.1.8 UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.9" data-path="../../firmwareapi/pycom/machine/WDT.html">
+            
+                <a href="../../firmwareapi/pycom/machine/WDT.html">
+            
+                    
+                    6.2.1.9 WDT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.10" data-path="../../firmwareapi/pycom/machine/Timer.html">
+            
+                <a href="../../firmwareapi/pycom/machine/Timer.html">
+            
+                    
+                    6.2.1.10 Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.11" data-path="../../firmwareapi/pycom/machine/SD.html">
+            
+                <a href="../../firmwareapi/pycom/machine/SD.html">
+            
+                    
+                    6.2.1.11 SD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../../firmwareapi/pycom/network/">
+            
+                <a href="../../firmwareapi/pycom/network/">
+            
+                    
+                    6.2.2 network
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.2.1" data-path="../../firmwareapi/pycom/network/wlan.html">
+            
+                <a href="../../firmwareapi/pycom/network/wlan.html">
+            
+                    
+                    6.2.2.1 WLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.2" data-path="../../firmwareapi/pycom/network/server.html">
+            
+                <a href="../../firmwareapi/pycom/network/server.html">
+            
+                    
+                    6.2.2.2 Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3" data-path="../../firmwareapi/pycom/network/bluetooth/">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/">
+            
+                    
+                    6.2.2.3 Bluetooth
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.2.3.1" data-path="../../firmwareapi/pycom/network/bluetooth/gatt.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gatt.html">
+            
+                    
+                    6.2.2.3.1 GATT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.2" data-path="../../firmwareapi/pycom/network/bluetooth/gattcconnection.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattcconnection.html">
+            
+                    
+                    6.2.2.3.2 GATTCConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.3" data-path="../../firmwareapi/pycom/network/bluetooth/gattccservice.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattccservice.html">
+            
+                    
+                    6.2.2.3.3 GATTCService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.4" data-path="../../firmwareapi/pycom/network/bluetooth/gattccharacteristic.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattccharacteristic.html">
+            
+                    
+                    6.2.2.3.4 GATTCCharacteristic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.5" data-path="../../firmwareapi/pycom/network/bluetooth/gattsservice.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattsservice.html">
+            
+                    
+                    6.2.2.3.5 GATTSService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.6" data-path="../../firmwareapi/pycom/network/bluetooth/gattscharacteristic.html">
+            
+                <a href="../../firmwareapi/pycom/network/bluetooth/gattscharacteristic.html">
+            
+                    
+                    6.2.2.3.6 GATTSCharacteristic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.4" data-path="../../firmwareapi/pycom/network/lora.html">
+            
+                <a href="../../firmwareapi/pycom/network/lora.html">
+            
+                    
+                    6.2.2.4 LoRa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.5" data-path="../../firmwareapi/pycom/network/sigfox.html">
+            
+                <a href="../../firmwareapi/pycom/network/sigfox.html">
+            
+                    
+                    6.2.2.5 Sigfox
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../../firmwareapi/pycom/aes.html">
+            
+                <a href="../../firmwareapi/pycom/aes.html">
+            
+                    
+                    6.2.3 AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.4" data-path="../../firmwareapi/pycom/pycom.html">
+            
+                <a href="../../firmwareapi/pycom/pycom.html">
+            
+                    
+                    6.2.4 pycom
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../../firmwareapi/micropython/">
+            
+                <a href="../../firmwareapi/micropython/">
+            
+                    
+                    6.3 MicroPython Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.3.1" data-path="../../firmwareapi/micropython/micropython.html">
+            
+                <a href="../../firmwareapi/micropython/micropython.html">
+            
+                    
+                    6.3.1 micropython
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.2" data-path="../../firmwareapi/micropython/uctypes.html">
+            
+                <a href="../../firmwareapi/micropython/uctypes.html">
+            
+                    
+                    6.3.2 uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.3" data-path="../../firmwareapi/micropython/sys.html">
+            
+                <a href="../../firmwareapi/micropython/sys.html">
+            
+                    
+                    6.3.3 sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.4" data-path="../../firmwareapi/micropython/uos.html">
+            
+                <a href="../../firmwareapi/micropython/uos.html">
+            
+                    
+                    6.3.4 uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.5" data-path="../../firmwareapi/micropython/array.html">
+            
+                <a href="../../firmwareapi/micropython/array.html">
+            
+                    
+                    6.3.5 array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.6" data-path="../../firmwareapi/micropython/cmath.html">
+            
+                <a href="../../firmwareapi/micropython/cmath.html">
+            
+                    
+                    6.3.6 cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.7" data-path="../../firmwareapi/micropython/math.html">
+            
+                <a href="../../firmwareapi/micropython/math.html">
+            
+                    
+                    6.3.7 math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.8" data-path="../../firmwareapi/micropython/gc.html">
+            
+                <a href="../../firmwareapi/micropython/gc.html">
+            
+                    
+                    6.3.8 gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.9" data-path="../../firmwareapi/micropython/ubinascii.html">
+            
+                <a href="../../firmwareapi/micropython/ubinascii.html">
+            
+                    
+                    6.3.9 ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.10" data-path="../../firmwareapi/micropython/ujson.html">
+            
+                <a href="../../firmwareapi/micropython/ujson.html">
+            
+                    
+                    6.3.10 ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.11" data-path="../../firmwareapi/micropython/ure.html">
+            
+                <a href="../../firmwareapi/micropython/ure.html">
+            
+                    
+                    6.3.11 ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.12" data-path="../../firmwareapi/micropython/usocket.html">
+            
+                <a href="../../firmwareapi/micropython/usocket.html">
+            
+                    
+                    6.3.12 usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.13" data-path="../../firmwareapi/micropython/select.html">
+            
+                <a href="../../firmwareapi/micropython/select.html">
+            
+                    
+                    6.3.13 select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.14" data-path="../../firmwareapi/micropython/utime.html">
+            
+                <a href="../../firmwareapi/micropython/utime.html">
+            
+                    
+                    6.3.14 utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.15" data-path="../../firmwareapi/micropython/uhashlib.html">
+            
+                <a href="../../firmwareapi/micropython/uhashlib.html">
+            
+                    
+                    6.3.15 uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.16" data-path="../../firmwareapi/micropython/ussl.html">
+            
+                <a href="../../firmwareapi/micropython/ussl.html">
+            
+                    
+                    6.3.16 ussl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.17" data-path="../../firmwareapi/micropython/ucrypto.html">
+            
+                <a href="../../firmwareapi/micropython/ucrypto.html">
+            
+                    
+                    6.3.17 ucrypto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.18" data-path="../../firmwareapi/micropython/ustruct.html">
+            
+                <a href="../../firmwareapi/micropython/ustruct.html">
+            
+                    
+                    6.3.18 ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.19" data-path="../../firmwareapi/micropython/_thread.html">
+            
+                <a href="../../firmwareapi/micropython/_thread.html">
+            
+                    
+                    6.3.19 _thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.20" data-path="../../firmwareapi/micropython/builtin.html">
+            
+                <a href="../../firmwareapi/micropython/builtin.html">
+            
+                    
+                    6.3.20 Builtin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">7. Datasheets</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../datasheets/">
+            
+                <a href="../../datasheets/">
+            
+                    
+                    7.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../datasheets/development/">
+            
+                <a href="../../datasheets/development/">
+            
+                    
+                    7.2 Development Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.2.1" data-path="../../datasheets/development/wipy2.html">
+            
+                <a href="../../datasheets/development/wipy2.html">
+            
+                    
+                    7.2.1 WiPy 2.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.2" data-path="../../datasheets/development/lopy.html">
+            
+                <a href="../../datasheets/development/lopy.html">
+            
+                    
+                    7.2.2 LoPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.3" data-path="../../datasheets/development/sipy.html">
+            
+                <a href="../../datasheets/development/sipy.html">
+            
+                    
+                    7.2.3 SiPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.4" data-path="../../datasheets/development/gpy.html">
+            
+                <a href="../../datasheets/development/gpy.html">
+            
+                    
+                    7.2.4 GPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.5" data-path="../../datasheets/development/fipy.html">
+            
+                <a href="../../datasheets/development/fipy.html">
+            
+                    
+                    7.2.5 FiPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../../datasheets/oem/">
+            
+                <a href="../../datasheets/oem/">
+            
+                    
+                    7.3 OEM Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.3.1" data-path="../../datasheets/oem/w01.html">
+            
+                <a href="../../datasheets/oem/w01.html">
+            
+                    
+                    7.3.1 W01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.2" data-path="../../datasheets/oem/l01.html">
+            
+                <a href="../../datasheets/oem/l01.html">
+            
+                    
+                    7.3.2 L01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.3" data-path="../../datasheets/oem/g01.html">
+            
+                <a href="../../datasheets/oem/g01.html">
+            
+                    
+                    7.3.3 G01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.4" data-path="../../datasheets/oem/reference.html">
+            
+                <a href="../../datasheets/oem/reference.html">
+            
+                    
+                    7.3.4 OEM Baseboard Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../../datasheets/boards/">
+            
+                <a href="../../datasheets/boards/">
+            
+                    
+                    7.4 Expansion Boards and Shields
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.4.1" data-path="../../datasheets/boards/expansion.html">
+            
+                <a href="../../datasheets/boards/expansion.html">
+            
+                    
+                    7.4.1 Expansion Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.2" data-path="../../datasheets/boards/pytrack.html">
+            
+                <a href="../../datasheets/boards/pytrack.html">
+            
+                    
+                    7.4.2 Pytrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.3" data-path="../../datasheets/boards/pysense.html">
+            
+                <a href="../../datasheets/boards/pysense.html">
+            
+                    
+                    7.4.3 Pysense
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.4" data-path="../../datasheets/boards/deepsleep.html">
+            
+                <a href="../../datasheets/boards/deepsleep.html">
+            
+                    
+                    7.4.4 Deep Sleep Shield
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../../datasheets/notes/">
+            
+                <a href="../../datasheets/notes/">
+            
+                    
+                    7.5 Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">8. Documentation Notes</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../docnotes/">
+            
+                <a href="../../docnotes/">
+            
+                    
+                    8.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../docnotes/syntax.html">
+            
+                <a href="../../docnotes/syntax.html">
+            
+                    
+                    8.2 Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../../docnotes/replscript.html">
+            
+                <a href="../../docnotes/replscript.html">
+            
+                    
+                    8.3 REPL vs Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">9. License</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../license/">
+            
+                <a href="../../license/">
+            
+                    
+                    9.1 License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >5.3.6 LoRaWAN Nano-Gateway</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lorawan-nano-gateway">LoRaWAN Nano-Gateway</h1>
+<p>This example allows to connect a LoPy to a LoRaWAN network such as The Things Network (TTN) or Loriot to be used as a nano-gateway.</p>
+<p>This specific example uses settings specifically for connecting to TTN within the European 868 MHz region. To set this up for a specific usage, please see the <code>config.py</code> file.</p>
+<p>Up to date versions of these snippets can be found at the following <a href="https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway" target="_blank">GitHub Repository</a>. For more information and discussion about this code, see this forum <a href="https://forum.pycom.io/topic/810/new-firmware-release-1-6-7-b1-lorawan-nano-gateway-with-ttn-example" target="_blank">post</a>.</p>
+<h3 id="nano-gateway">Nano-Gateway</h3>
+<p>The Nano-Gateway code is split into 3 files, <code>main.py</code>, <code>config.py</code> and <code>nanogateway.py</code>. These are used to configure and specify how the gateway will connect to a preferred network and how it can act as packet forwarder.</p>
+<h3 id="main-mainpy">Main (main.py)</h3>
+<p>This file runs at boot and calls the library and <code>config.py</code> files to initalise the nano-gateway. Once configuration is set, the nano-gateway is then started.</p>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; LoPy LoRaWAN Nano Gateway example usage &quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">import</span> config
+<span class="hljs-keyword">from</span> nanogateway <span class="hljs-keyword">import</span> NanoGateway
+
+
+nanogw = NanoGateway(id=config.GATEWAY_ID, frequency=config.LORA_FREQUENCY,
+                datarate=config.LORA_DR, ssid=config.WIFI_SSID,
+                password=config.WIFI_PASS, server=config.SERVER,
+                port=config.PORT, ntp=config.NTP, ntp_period=config.NTP_PERIOD_S)
+
+nanogw.start()
+</code></pre>
+<h3 id="configuration-configpy">Configuration (config.py)</h3>
+<p>This file contains the specific settings for the server and network it is connecting to. Depending on the nano-gateway region and provider (TTN, Loriot, etc.) these will vary. For specific settings, check the <a href="https://forum.pycom.io/" target="_blank">forum</a> for others who may have configured their nano-gateway under different configurations.</p>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; LoPy LoRaWAN Nano Gateway configuration options &quot;&quot;&quot;</span>
+
+GATEWAY_ID = <span class="hljs-string">&apos;11aa334455bb7788&apos;</span> <span class="hljs-comment"># specified in when registering your gateway</span>
+
+SERVER = <span class="hljs-string">&apos;router.eu.thethings.network&apos;</span> <span class="hljs-comment"># server address &amp; port to forward received data to</span>
+PORT = <span class="hljs-number">1700</span>
+
+NTP = <span class="hljs-string">&quot;pool.ntp.org&quot;</span> <span class="hljs-comment"># NTP server for getting/setting time</span>
+NTP_PERIOD_S = <span class="hljs-number">3600</span> <span class="hljs-comment"># NTP server polling interval</span>
+
+WIFI_SSID = <span class="hljs-string">&apos;my-wifi&apos;</span>
+WIFI_PASS = <span class="hljs-string">&apos;my-wifi-password&apos;</span>
+
+LORA_FREQUENCY = <span class="hljs-number">868100000</span> <span class="hljs-comment"># check your specifc region for LORA_FREQUENCY and LORA_DR (datarate)</span>
+LORA_DR = <span class="hljs-string">&quot;SF7BW125&quot;</span>   <span class="hljs-comment"># DR_5</span>
+</code></pre>
+<h3 id="library-nanogatewaypy">Library (nanogateway.py)</h3>
+<p>The nano-gateway library controls all of the packet generation and forwarding for the LoRa data. This does not require any user configuration and the latest version of this code should be downloaded from the Pycom <a href="https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway" target="_blank">GitHub Repository</a>.</p>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; LoPy Nano Gateway class &quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> network <span class="hljs-keyword">import</span> WLAN
+<span class="hljs-keyword">from</span> network <span class="hljs-keyword">import</span> LoRa
+<span class="hljs-keyword">from</span> machine <span class="hljs-keyword">import</span> Timer
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> binascii
+<span class="hljs-keyword">import</span> machine
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">import</span> errno
+<span class="hljs-keyword">import</span> _thread
+<span class="hljs-keyword">import</span> socket
+
+
+PROTOCOL_VERSION = const(<span class="hljs-number">2</span>)
+
+PUSH_DATA = const(<span class="hljs-number">0</span>)
+PUSH_ACK = const(<span class="hljs-number">1</span>)
+PULL_DATA = const(<span class="hljs-number">2</span>)
+PULL_ACK = const(<span class="hljs-number">4</span>)
+PULL_RESP = const(<span class="hljs-number">3</span>)
+
+TX_ERR_NONE = <span class="hljs-string">&quot;NONE&quot;</span>
+TX_ERR_TOO_LATE = <span class="hljs-string">&quot;TOO_LATE&quot;</span>
+TX_ERR_TOO_EARLY = <span class="hljs-string">&quot;TOO_EARLY&quot;</span>
+TX_ERR_COLLISION_PACKET = <span class="hljs-string">&quot;COLLISION_PACKET&quot;</span>
+TX_ERR_COLLISION_BEACON = <span class="hljs-string">&quot;COLLISION_BEACON&quot;</span>
+TX_ERR_TX_FREQ = <span class="hljs-string">&quot;TX_FREQ&quot;</span>
+TX_ERR_TX_POWER = <span class="hljs-string">&quot;TX_POWER&quot;</span>
+TX_ERR_GPS_UNLOCKED = <span class="hljs-string">&quot;GPS_UNLOCKED&quot;</span>
+
+STAT_PK = {<span class="hljs-string">&quot;stat&quot;</span>: {<span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;lati&quot;</span>: <span class="hljs-number">0</span>,
+                   <span class="hljs-string">&quot;long&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&quot;alti&quot;</span>: <span class="hljs-number">0</span>,
+                   <span class="hljs-string">&quot;rxnb&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&quot;rxok&quot;</span>: <span class="hljs-number">0</span>,
+                   <span class="hljs-string">&quot;rxfw&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&quot;ackr&quot;</span>: <span class="hljs-number">100.0</span>,
+                   <span class="hljs-string">&quot;dwnb&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&quot;txnb&quot;</span>: <span class="hljs-number">0</span>}}
+
+RX_PK = {<span class="hljs-string">&quot;rxpk&quot;</span>: [{<span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;tmst&quot;</span>: <span class="hljs-number">0</span>,
+                  <span class="hljs-string">&quot;chan&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&quot;rfch&quot;</span>: <span class="hljs-number">0</span>,
+                  <span class="hljs-string">&quot;freq&quot;</span>: <span class="hljs-number">868.1</span>, <span class="hljs-string">&quot;stat&quot;</span>: <span class="hljs-number">1</span>,
+                  <span class="hljs-string">&quot;modu&quot;</span>: <span class="hljs-string">&quot;LORA&quot;</span>, <span class="hljs-string">&quot;datr&quot;</span>: <span class="hljs-string">&quot;SF7BW125&quot;</span>,
+                  <span class="hljs-string">&quot;codr&quot;</span>: <span class="hljs-string">&quot;4/5&quot;</span>, <span class="hljs-string">&quot;rssi&quot;</span>: <span class="hljs-number">0</span>,
+                  <span class="hljs-string">&quot;lsnr&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&quot;size&quot;</span>: <span class="hljs-number">0</span>,
+                  <span class="hljs-string">&quot;data&quot;</span>: <span class="hljs-string">&quot;&quot;</span>}]}
+
+TX_ACK_PK = {<span class="hljs-string">&quot;txpk_ack&quot;</span>:{<span class="hljs-string">&quot;error&quot;</span>:<span class="hljs-string">&quot;&quot;</span>}}
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NanoGateway</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, id, frequency, datarate, ssid, password, server, port, ntp=<span class="hljs-string">&apos;pool.ntp.org&apos;</span>, ntp_period=<span class="hljs-number">3600</span>)</span>:</span>
+            self.id = id
+        self.frequency = frequency
+        self.sf = self._dr_to_sf(datarate)
+        self.ssid = ssid
+        self.password = password
+        self.server = server
+        self.port = port
+        self.ntp = ntp
+        self.ntp_period = ntp_period
+
+        self.rxnb = <span class="hljs-number">0</span>
+        self.rxok = <span class="hljs-number">0</span>
+                self.rxfw = <span class="hljs-number">0</span>
+                self.dwnb = <span class="hljs-number">0</span>
+                self.txnb = <span class="hljs-number">0</span>
+
+        self.stat_alarm = <span class="hljs-keyword">None</span>
+                self.pull_alarm = <span class="hljs-keyword">None</span>
+                self.uplink_alarm = <span class="hljs-keyword">None</span>
+
+        self.udp_lock = _thread.allocate_lock()
+
+        self.lora = <span class="hljs-keyword">None</span>
+        self.lora_sock = <span class="hljs-keyword">None</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># Change WiFi to STA mode and connect</span>
+        self.wlan = WLAN(mode=WLAN.STA)
+        self._connect_to_wifi()
+
+        <span class="hljs-comment"># Get a time Sync</span>
+        self.rtc = machine.RTC()
+        self.rtc.ntp_sync(self.ntp, update_period=self.ntp_period)
+
+        <span class="hljs-comment"># Get the server IP and create an UDP socket</span>
+        self.server_ip = socket.getaddrinfo(self.server, self.port)[<span class="hljs-number">0</span>][<span class="hljs-number">-1</span>]
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, <span class="hljs-number">1</span>)
+        self.sock.setblocking(<span class="hljs-keyword">False</span>)
+
+        <span class="hljs-comment"># Push the first time immediatelly</span>
+        self._push_data(self._make_stat_packet())
+
+        <span class="hljs-comment"># Create the alarms</span>
+        self.stat_alarm = Timer.Alarm(handler=<span class="hljs-keyword">lambda</span> t: self._push_data(self._make_stat_packet()), s=<span class="hljs-number">60</span>, periodic=<span class="hljs-keyword">True</span>)
+        self.pull_alarm = Timer.Alarm(handler=<span class="hljs-keyword">lambda</span> u: self._pull_data(), s=<span class="hljs-number">25</span>, periodic=<span class="hljs-keyword">True</span>)
+
+        <span class="hljs-comment"># Start the UDP receive thread</span>
+        _thread.start_new_thread(self._udp_thread, ())
+
+        <span class="hljs-comment"># Initialize LoRa in LORA mode</span>
+        self.lora = LoRa(mode=LoRa.LORA, frequency=self.frequency, bandwidth=LoRa.BW_125KHZ, sf=self.sf,
+                        preamble=<span class="hljs-number">8</span>, coding_rate=LoRa.CODING_4_5, tx_iq=<span class="hljs-keyword">True</span>)
+        <span class="hljs-comment"># Create a raw LoRa socket</span>
+        self.lora_sock = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
+        self.lora_sock.setblocking(<span class="hljs-keyword">False</span>)
+        self.lora_tx_done = <span class="hljs-keyword">False</span>
+
+        self.lora.callback(trigger=(LoRa.RX_PACKET_EVENT | LoRa.TX_PACKET_EVENT), handler=self._lora_cb)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stop</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> Check how to stop the NTP sync</span>
+        <span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> Create a cancel method for the alarm</span>
+        <span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> kill the UDP thread</span>
+        self.sock.close()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_connect_to_wifi</span><span class="hljs-params">(self)</span>:</span>
+        self.wlan.connect(self.ssid, auth=(<span class="hljs-keyword">None</span>, self.password))
+        <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> self.wlan.isconnected():
+            time.sleep(<span class="hljs-number">0.5</span>)
+        print(<span class="hljs-string">&quot;WiFi connected!&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_dr_to_sf</span><span class="hljs-params">(self, dr)</span>:</span>
+        sf = dr[<span class="hljs-number">2</span>:<span class="hljs-number">4</span>]
+        <span class="hljs-keyword">if</span> sf[<span class="hljs-number">1</span>] <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;0123456789&apos;</span>:
+            sf = sf[:<span class="hljs-number">1</span>]
+        <span class="hljs-keyword">return</span> int(sf)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_sf_to_dr</span><span class="hljs-params">(self, sf)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;SF7BW125&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_make_stat_packet</span><span class="hljs-params">(self)</span>:</span>
+        now = self.rtc.now()
+        STAT_PK[<span class="hljs-string">&quot;stat&quot;</span>][<span class="hljs-string">&quot;time&quot;</span>] = <span class="hljs-string">&quot;%d-%02d-%02d %02d:%02d:%02d GMT&quot;</span> % (now[<span class="hljs-number">0</span>], now[<span class="hljs-number">1</span>], now[<span class="hljs-number">2</span>], now[<span class="hljs-number">3</span>], now[<span class="hljs-number">4</span>], now[<span class="hljs-number">5</span>])
+        STAT_PK[<span class="hljs-string">&quot;stat&quot;</span>][<span class="hljs-string">&quot;rxnb&quot;</span>] = self.rxnb
+        STAT_PK[<span class="hljs-string">&quot;stat&quot;</span>][<span class="hljs-string">&quot;rxok&quot;</span>] = self.rxok
+        STAT_PK[<span class="hljs-string">&quot;stat&quot;</span>][<span class="hljs-string">&quot;rxfw&quot;</span>] = self.rxfw
+        STAT_PK[<span class="hljs-string">&quot;stat&quot;</span>][<span class="hljs-string">&quot;dwnb&quot;</span>] = self.dwnb
+        STAT_PK[<span class="hljs-string">&quot;stat&quot;</span>][<span class="hljs-string">&quot;txnb&quot;</span>] = self.txnb
+        <span class="hljs-keyword">return</span> json.dumps(STAT_PK)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_make_node_packet</span><span class="hljs-params">(self, rx_data, rx_time, tmst, sf, rssi, snr)</span>:</span>
+        RX_PK[<span class="hljs-string">&quot;rxpk&quot;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&quot;time&quot;</span>] = <span class="hljs-string">&quot;%d-%02d-%02dT%02d:%02d:%02d.%dZ&quot;</span> % (rx_time[<span class="hljs-number">0</span>], rx_time[<span class="hljs-number">1</span>], rx_time[<span class="hljs-number">2</span>], rx_time[<span class="hljs-number">3</span>], rx_time[<span class="hljs-number">4</span>], rx_time[<span class="hljs-number">5</span>], rx_time[<span class="hljs-number">6</span>])
+        RX_PK[<span class="hljs-string">&quot;rxpk&quot;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&quot;tmst&quot;</span>] = tmst
+        RX_PK[<span class="hljs-string">&quot;rxpk&quot;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&quot;datr&quot;</span>] = self._sf_to_dr(sf)
+        RX_PK[<span class="hljs-string">&quot;rxpk&quot;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&quot;rssi&quot;</span>] = rssi
+        RX_PK[<span class="hljs-string">&quot;rxpk&quot;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&quot;lsnr&quot;</span>] = float(snr)
+        RX_PK[<span class="hljs-string">&quot;rxpk&quot;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&quot;data&quot;</span>] = binascii.b2a_base64(rx_data)[:<span class="hljs-number">-1</span>]
+        RX_PK[<span class="hljs-string">&quot;rxpk&quot;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&quot;size&quot;</span>] = len(rx_data)
+        <span class="hljs-keyword">return</span> json.dumps(RX_PK)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_push_data</span><span class="hljs-params">(self, data)</span>:</span>
+        token = os.urandom(<span class="hljs-number">2</span>)
+        packet = bytes([PROTOCOL_VERSION]) + token + bytes([PUSH_DATA]) + binascii.unhexlify(self.id) + data
+        <span class="hljs-keyword">with</span> self.udp_lock:
+            <span class="hljs-keyword">try</span>:
+                self.sock.sendto(packet, self.server_ip)
+            <span class="hljs-keyword">except</span> Exception:
+                print(<span class="hljs-string">&quot;PUSH exception&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_pull_data</span><span class="hljs-params">(self)</span>:</span>
+        token = os.urandom(<span class="hljs-number">2</span>)
+        packet = bytes([PROTOCOL_VERSION]) + token + bytes([PULL_DATA]) + binascii.unhexlify(self.id)
+        <span class="hljs-keyword">with</span> self.udp_lock:
+            <span class="hljs-keyword">try</span>:
+                self.sock.sendto(packet, self.server_ip)
+            <span class="hljs-keyword">except</span> Exception:
+                print(<span class="hljs-string">&quot;PULL exception&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_ack_pull_rsp</span><span class="hljs-params">(self, token, error)</span>:</span>
+        TX_ACK_PK[<span class="hljs-string">&quot;txpk_ack&quot;</span>][<span class="hljs-string">&quot;error&quot;</span>] = error
+        resp = json.dumps(TX_ACK_PK)
+        packet = bytes([PROTOCOL_VERSION]) + token + bytes([PULL_ACK]) + binascii.unhexlify(self.id) + resp
+        <span class="hljs-keyword">with</span> self.udp_lock:
+            <span class="hljs-keyword">try</span>:
+                self.sock.sendto(packet, self.server_ip)
+            <span class="hljs-keyword">except</span> Exception:
+                print(<span class="hljs-string">&quot;PULL RSP ACK exception&quot;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_lora_cb</span><span class="hljs-params">(self, lora)</span>:</span>
+        events = lora.events()
+        <span class="hljs-keyword">if</span> events &amp; LoRa.RX_PACKET_EVENT:
+            self.rxnb += <span class="hljs-number">1</span>
+            self.rxok += <span class="hljs-number">1</span>
+            rx_data = self.lora_sock.recv(<span class="hljs-number">256</span>)
+            stats = lora.stats()
+            self._push_data(self._make_node_packet(rx_data, self.rtc.now(), stats.timestamp, stats.sf, stats.rssi, stats.snr))
+            self.rxfw += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">if</span> events &amp; LoRa.TX_PACKET_EVENT:
+            self.txnb += <span class="hljs-number">1</span>
+            lora.init(mode=LoRa.LORA, frequency=self.frequency, bandwidth=LoRa.BW_125KHZ,
+                     sf=self.sf, preamble=<span class="hljs-number">8</span>, coding_rate=LoRa.CODING_4_5, tx_iq=<span class="hljs-keyword">True</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_send_down_link</span><span class="hljs-params">(self, data, tmst, datarate, frequency)</span>:</span>
+        self.lora.init(mode=LoRa.LORA, frequency=frequency, bandwidth=LoRa.BW_125KHZ,
+                      sf=self._dr_to_sf(datarate), preamble=<span class="hljs-number">8</span>, coding_rate=LoRa.CODING_4_5,
+                      tx_iq=<span class="hljs-keyword">True</span>)
+        <span class="hljs-keyword">while</span> time.ticks_us() &lt; tmst:
+            <span class="hljs-keyword">pass</span>
+        self.lora_sock.send(data)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_udp_thread</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+            <span class="hljs-keyword">try</span>:
+                data, src = self.sock.recvfrom(<span class="hljs-number">1024</span>)
+                _token = data[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>]
+                _type = data[<span class="hljs-number">3</span>]
+                <span class="hljs-keyword">if</span> _type == PUSH_ACK:
+                    print(<span class="hljs-string">&quot;Push ack&quot;</span>)
+                <span class="hljs-keyword">elif</span> _type == PULL_ACK:
+                    print(<span class="hljs-string">&quot;Pull ack&quot;</span>)
+                <span class="hljs-keyword">elif</span> _type == PULL_RESP:
+                    self.dwnb += <span class="hljs-number">1</span>
+                    ack_error = TX_ERR_NONE
+                    tx_pk = json.loads(data[<span class="hljs-number">4</span>:])
+                    tmst = tx_pk[<span class="hljs-string">&quot;txpk&quot;</span>][<span class="hljs-string">&quot;tmst&quot;</span>]
+                    t_us = tmst - time.ticks_us() - <span class="hljs-number">5000</span>
+                    <span class="hljs-keyword">if</span> t_us &lt; <span class="hljs-number">0</span>:
+                        t_us += <span class="hljs-number">0xFFFFFFFF</span>
+                    <span class="hljs-keyword">if</span> t_us &lt; <span class="hljs-number">20000000</span>:
+                        self.uplink_alarm = Timer.Alarm(handler=<span class="hljs-keyword">lambda</span> x: self._send_down_link(binascii.a2b_base64(tx_pk[<span class="hljs-string">&quot;txpk&quot;</span>][<span class="hljs-string">&quot;data&quot;</span>]),
+                                                                                              tx_pk[<span class="hljs-string">&quot;txpk&quot;</span>][<span class="hljs-string">&quot;tmst&quot;</span>] - <span class="hljs-number">10</span>, tx_pk[<span class="hljs-string">&quot;txpk&quot;</span>][<span class="hljs-string">&quot;datr&quot;</span>],
+                                                                                              int(tx_pk[<span class="hljs-string">&quot;txpk&quot;</span>][<span class="hljs-string">&quot;freq&quot;</span>] * <span class="hljs-number">1000000</span>)), us=t_us)
+                    <span class="hljs-keyword">else</span>:
+                        ack_error = TX_ERR_TOO_LATE
+                        print(<span class="hljs-string">&quot;Downlink timestamp error!, t_us:&quot;</span>, t_us)
+                    self._ack_pull_rsp(_token, ack_error)
+                    print(<span class="hljs-string">&quot;Pull rsp&quot;</span>)
+            <span class="hljs-keyword">except</span> socket.timeout:
+                <span class="hljs-keyword">pass</span>
+            <span class="hljs-keyword">except</span> OSError <span class="hljs-keyword">as</span> e:
+                <span class="hljs-keyword">if</span> e.errno == errno.EAGAIN:
+                    <span class="hljs-keyword">pass</span>
+                <span class="hljs-keyword">else</span>:
+                    print(<span class="hljs-string">&quot;UDP recv OSError Exception&quot;</span>)
+            <span class="hljs-keyword">except</span> Exception:
+                print(<span class="hljs-string">&quot;UDP recv Exception&quot;</span>)
+            <span class="hljs-comment"># Wait before trying to receive again</span>
+            time.sleep(<span class="hljs-number">0.025</span>)
+</code></pre>
+<h3 id="registering-with-ttn">Registering with TTN</h3>
+<p>To set up the gateway with The Things Network (TTN), navigate to their website and create/register an account. Enter a username and an email address to verify with their platform.</p>
+<p align="center"><img src="../../../img/ttn-1.png" width="500"></p>
+
+<p>Once an account has been registered, the nano-gateway can then be registered. To do this, navigate to the TTN Console web page.</p>
+<h3 id="registering-the-gateway">Registering the Gateway</h3>
+<p>Inside the TTN Console, there are two options, <code>applications</code> and <code>gateways</code>. Select <code>gateways</code> and then click on <code>register gateway</code>. This will allow for the set up and registration of a new nano-gateway.</p>
+<p align="center"><img src="../../../img/ttn-2.png" width="500"></p>
+
+<p>On the Register Gateway page, you will need to set the following settings:</p>
+<p align="center"><img src="../../../img/ttn-3.png" width="500"></p>
+
+<p>These are unique to each gateway, location and country specific frequency. Please verify that correct settings are selected otherwise the gateway will not connect to TTN.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protocol</td>
+<td>Packet Forwarder</td>
+</tr>
+<tr>
+<td>Gateway EUI</td>
+<td>User Defined (must match config.py)</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>User Defined</td>
+</tr>
+<tr>
+<td>Frequency Plan</td>
+<td>Select Country (e.g. EU - 868 MHz)</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>User Defined</td>
+</tr>
+<tr>
+<td>Antenna Placement</td>
+<td>Indoor or Outdoor</td>
+</tr>
+</tbody>
+</table>
+<p>Once these settings have been applied, click <code>Register Gateway</code>. A Gateway Overview page will appear, with the configuration settings showing. Next click on the <code>Gateway Settings</code> and configure the Router address to match that of the gateway (default - router.eu.thethings.network).</p>
+<p align="center"><img src="../../../img/ttn-4.png" width="500"></p>
+
+<p>The <code>Gateway</code> should now be configured. Next one or more nodes can now be configured to use the nano-gateway and TTN applications may be built.</p>
+<h3 id="lopy-node">LoPy Node</h3>
+<p>There are two methods of connecting LoPy devices to the nano-gateway, Over the Air Activation (OTAA) and Activation By Personalisation (ABP). The code and instructions for registering these methods are shown below, followed by instruction for how to connect them to an application on TTN.</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>It&#x2019;s important that the following code examples (also on GitHub) are used to connect to the nano-gateway as it only supports single channel connections.</p>
+</div></div></p>
+<h4 id="otaa-over-the-air-activation">OTAA (Over The Air Activation)</h4>
+<p>When the LoPy connects an application (via TTN) using OTAA, the network configuration is derived automatically during a handshake between the LoPy and network server. Note that the network keys derived using the OTAA methodology are specific to the device and are used to encrypt and verify transmissions at the network level.</p>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; OTAA Node example compatible with the LoPy Nano Gateway &quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> network <span class="hljs-keyword">import</span> LoRa
+<span class="hljs-keyword">import</span> socket
+<span class="hljs-keyword">import</span> binascii
+<span class="hljs-keyword">import</span> struct
+<span class="hljs-keyword">import</span> time
+
+<span class="hljs-comment"># Initialize LoRa in LORAWAN mode.</span>
+lora = LoRa(mode=LoRa.LORAWAN)
+
+<span class="hljs-comment"># create an OTA authentication params</span>
+dev_eui = binascii.unhexlify(<span class="hljs-string">&apos;AA BB CC DD EE FF 77 78&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)) <span class="hljs-comment"># these settings can be found from TTN</span>
+app_eui = binascii.unhexlify(<span class="hljs-string">&apos;70 B3 D5 7E F0 00 3B FD&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)) <span class="hljs-comment"># these settings can be found from TTN</span>
+app_key = binascii.unhexlify(<span class="hljs-string">&apos;36 AB 76 25 FE 77 77 68 81 68 3B 49 53 00 FF D6&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)) <span class="hljs-comment"># these settings can be found from TTN</span>
+
+<span class="hljs-comment"># set the 3 default channels to the same frequency (must be before sending the OTAA join request)</span>
+lora.add_channel(<span class="hljs-number">0</span>, frequency=<span class="hljs-number">868100000</span>, dr_min=<span class="hljs-number">0</span>, dr_max=<span class="hljs-number">5</span>)
+lora.add_channel(<span class="hljs-number">1</span>, frequency=<span class="hljs-number">868100000</span>, dr_min=<span class="hljs-number">0</span>, dr_max=<span class="hljs-number">5</span>)
+lora.add_channel(<span class="hljs-number">2</span>, frequency=<span class="hljs-number">868100000</span>, dr_min=<span class="hljs-number">0</span>, dr_max=<span class="hljs-number">5</span>)
+
+<span class="hljs-comment"># join a network using OTAA</span>
+lora.join(activation=LoRa.OTAA, auth=(dev_eui, app_eui, app_key), timeout=<span class="hljs-number">0</span>)
+
+<span class="hljs-comment"># wait until the module has joined the network</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> lora.has_joined():
+    time.sleep(<span class="hljs-number">2.5</span>)
+    print(<span class="hljs-string">&apos;Not joined yet...&apos;</span>)
+
+<span class="hljs-comment"># remove all the non-default channels</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>, <span class="hljs-number">16</span>):
+    lora.remove_channel(i)
+
+<span class="hljs-comment"># create a LoRa socket</span>
+s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
+
+<span class="hljs-comment"># set the LoRaWAN data rate</span>
+s.setsockopt(socket.SOL_LORA, socket.SO_DR, <span class="hljs-number">5</span>)
+
+<span class="hljs-comment"># make the socket blocking</span>
+s.setblocking(<span class="hljs-keyword">False</span>)
+
+time.sleep(<span class="hljs-number">5.0</span>)
+
+<span class="hljs-string">&quot;&quot;&quot; Your own code can be written below! &quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range (<span class="hljs-number">200</span>):
+    s.send(<span class="hljs-string">b&apos;PKT #&apos;</span> + bytes([i]))
+    time.sleep(<span class="hljs-number">4</span>)
+    rx = s.recv(<span class="hljs-number">256</span>)
+    <span class="hljs-keyword">if</span> rx:
+        print(rx)
+    time.sleep(<span class="hljs-number">6</span>)
+</code></pre>
+<h4 id="abp-activation-by-personalisation">ABP (Activation By Personalisation)</h4>
+<p>Using ABP join mode requires the user to define the following values and input them into both the LoPy and the TTN Application:</p>
+<ul>
+<li>Device Address</li>
+<li>Application Session Key</li>
+<li>Network Session Key</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot; ABP Node example compatible with the LoPy Nano Gateway &quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">from</span> network <span class="hljs-keyword">import</span> LoRa
+<span class="hljs-keyword">import</span> socket
+<span class="hljs-keyword">import</span> binascii
+<span class="hljs-keyword">import</span> struct
+<span class="hljs-keyword">import</span> time
+
+<span class="hljs-comment"># Initialize LoRa in LORAWAN mode.</span>
+lora = LoRa(mode=LoRa.LORAWAN)
+
+<span class="hljs-comment"># create an ABP authentication params</span>
+dev_addr = struct.unpack(<span class="hljs-string">&quot;&gt;l&quot;</span>, binascii.unhexlify(<span class="hljs-string">&apos;26 01 14 7D&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)))[<span class="hljs-number">0</span>] <span class="hljs-comment"># these settings can be found from TTN</span>
+nwk_swkey = binascii.unhexlify(<span class="hljs-string">&apos;3C74F4F40CAE2221303BC24284FCF3AF&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)) <span class="hljs-comment"># these settings can be found from TTN</span>
+app_swkey = binascii.unhexlify(<span class="hljs-string">&apos;0FFA7072CC6FF69A102A0F39BEB0880F&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)) <span class="hljs-comment"># these settings can be found from TTN</span>
+
+<span class="hljs-comment"># join a network using ABP (Activation By Personalization)</span>
+lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))
+
+<span class="hljs-comment"># remove all the non-default channels</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>, <span class="hljs-number">16</span>):
+    lora.remove_channel(i)
+
+<span class="hljs-comment"># set the 3 default channels to the same frequency</span>
+lora.add_channel(<span class="hljs-number">0</span>, frequency=<span class="hljs-number">868100000</span>, dr_min=<span class="hljs-number">0</span>, dr_max=<span class="hljs-number">5</span>)
+lora.add_channel(<span class="hljs-number">1</span>, frequency=<span class="hljs-number">868100000</span>, dr_min=<span class="hljs-number">0</span>, dr_max=<span class="hljs-number">5</span>)
+lora.add_channel(<span class="hljs-number">2</span>, frequency=<span class="hljs-number">868100000</span>, dr_min=<span class="hljs-number">0</span>, dr_max=<span class="hljs-number">5</span>)
+
+<span class="hljs-comment"># create a LoRa socket</span>
+s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
+
+<span class="hljs-comment"># set the LoRaWAN data rate</span>
+s.setsockopt(socket.SOL_LORA, socket.SO_DR, <span class="hljs-number">5</span>)
+
+<span class="hljs-comment"># make the socket blocking</span>
+s.setblocking(<span class="hljs-keyword">False</span>)
+
+<span class="hljs-string">&quot;&quot;&quot; Your own code can be written below! &quot;&quot;&quot;</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range (<span class="hljs-number">200</span>):
+    s.send(<span class="hljs-string">b&apos;PKT #&apos;</span> + bytes([i]))
+    time.sleep(<span class="hljs-number">4</span>)
+    rx = s.recv(<span class="hljs-number">256</span>)
+    <span class="hljs-keyword">if</span> rx:
+        print(rx)
+    time.sleep(<span class="hljs-number">6</span>)
+</code></pre>
+<h3 id="ttn-applications">TTN Applications</h3>
+<p>Now that the gateway &amp; nodes have been setup, a TTN Application can be built; i.e. what happens to the LoRa data once it is received by TTN. There are a number of different setups/systems that can be used, however the following example demonstrates the HTTP request integration.</p>
+<h3 id="registering-an-application">Registering an Application</h3>
+<p>Selecting the <code>Applications</code> tab at the top of the TTN console, will bring up a screen for registering applications. Click register and a new page, similar to the one below, will open.</p>
+<p align="center"><img src="../../../img/ttn-5.png" width="500"></p>
+
+<p>Enter a unique <code>Application ID</code> as well as a Description &amp; Handler Registration.</p>
+<p>Now the LoPy nodes must be registered to send data up to the new Application.</p>
+<h4 id="registering-devices-lopy">Registering Devices (LoPy)</h4>
+<p>To connect nodes to the nano-gateway, devices need to be added to the application. To do this, navigate to the <code>Devices</code> tab on the <code>Application</code> home page and click the <code>Register Device</code> button.</p>
+<p align="center"><img src="../../../img/ttn-6.png" width="500"></p>
+
+<p>In the <code>Register Device</code> panel, complete the forms for the <code>Device ID</code> and the <code>Device EUI</code>. The <code>Device ID</code> is user specified and is unique to the device in this application. The <code>Device EUI</code> is also user specified but must consist of exactly 8 bytes, given in hexadecimal.</p>
+<p>Once the device has been added, change the <code>Activation Method</code> between <code>OTAA</code> and <code>ABP</code> depending on user preference. This option can be found under the Settings tab.</p>
+<h4 id="adding-application-integrations">Adding Application Integrations</h4>
+<p>Now that the data is arriving on the TTN Backend, TTN can be managed as to where data should be delivered to. To do this, use the <code>Integrations</code> tab within the new Application&#x2019;s settings.</p>
+<p align="center"><img src="../../../img/ttn-7.png" width="500"></p>
+
+<p>Upon clicking <code>add integration</code>, a screen with 4 different options will appear. These have various functionality and more information about them can be found on the TTN website/documentation.</p>
+<p>For this example, use the <code>HTTP Integration</code> to forward the LoRaWAN Packets to a remote server/address.</p>
+<p align="center"><img src="../../../img/ttn-8.png" width="500"></p>
+
+<p>Click <code>HTTP Integration</code> to connect up an endpoint that can receive the data.</p>
+<p>For testing, a website called <a href="https://requestb.in/" target="_blank">RequestBin</a> may be used to receive the data that TTN forwards (via POST Request). To set this up, navigate to <a href="https://requestb.in/" target="_blank">RequestBin</a> and click the <code>Create a RequestBin</code>.</p>
+<p align="center"><img src="../../../img/ttn-9.png" width="500"></p>
+
+<p>Copy the URL that is generated and past this into the <code>URL</code> form under the <code>Application Settings</code>.</p>
+<p align="center"><img src="../../../img/ttn-10.png" width="500"></p>
+
+<p>This is the address that TTN will forward data onto. As soon as a LoPy starts sending messages, TTN will forward these onto <code>RequestBin</code> and they will appear at the unique <code>RequestBin URL</code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lopy-lopy.html" class="navigation navigation-prev " aria-label="Previous page: 5.3.5 LoPy to LoPy">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../sipy/" class="navigation navigation-next " aria-label="Next page: 5.4 SiPy Examples">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.3.6 LoRaWAN Nano-Gateway","level":"6.3.6","depth":2,"next":{"title":"5.4 SiPy Examples","level":"6.4","depth":1,"path":"chapter/tutorials/sipy/README.md","ref":"chapter/tutorials/sipy/README.md","articles":[{"title":"5.4.1 Register Device","level":"6.4.1","depth":2,"path":"chapter/tutorials/sipy/register.md","ref":"chapter/tutorials/sipy/register.md","articles":[]}]},"previous":{"title":"5.3.5 LoPy to LoPy","level":"6.3.5","depth":2,"path":"chapter/tutorials/lopy/lopy-lopy.md","ref":"chapter/tutorials/lopy/lopy-lopy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","-fontsettings","bring-yer-favicon","github","youtube","livereload"],"pluginsConfig":{"youtube":{},"github":{"url":"https://github.com/pycom"},"livereload":{},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"bring-yer-favicon":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"favicons":{"favicon.ico":"docs/_book/img/favicon.ico","apple-touch-icon-precomposed-152.png":"docs/_book/img/apple-icon.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/continuum/cms.css"}},"file":{"path":"chapter/tutorials/lopy/lorawan-nano-gateway.md","mtime":"2017-07-06T09:48:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-10T13:10:52.142Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

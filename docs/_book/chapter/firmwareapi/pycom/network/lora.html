@@ -1,0 +1,2351 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.2.2.4 LoRa · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../../assets/continuum/cms.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sigfox.html" />
+    
+    
+    <link rel="prev" href="bluetooth/gattscharacteristic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../products.html">
+            
+                <a href="../../../products.html">
+            
+                    
+                    Pycom Products
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1. Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../gettingstarted/">
+            
+                <a href="../../../gettingstarted/">
+            
+                    
+                    1.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../../gettingstarted/unboxing.html">
+            
+                <a href="../../../gettingstarted/unboxing.html">
+            
+                    
+                    1.2 Unboxing/Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../../gettingstarted/installingsoftware.html">
+            
+                <a href="../../../gettingstarted/installingsoftware.html">
+            
+                    
+                    1.3 Installing Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../../gettingstarted/installation/firmwaretool.html">
+            
+                <a href="../../../gettingstarted/installation/firmwaretool.html">
+            
+                    
+                    1.3.1 Updating Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../../gettingstarted/installation/pymakr.html">
+            
+                <a href="../../../gettingstarted/installation/pymakr.html">
+            
+                    
+                    1.3.2 Pymakr Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../../gettingstarted/registration.html">
+            
+                <a href="../../../gettingstarted/registration.html">
+            
+                    
+                    1.4 Device Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../../gettingstarted/micropython.html">
+            
+                <a href="../../../gettingstarted/micropython.html">
+            
+                    
+                    1.5 Introduction to MicroPython
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../../gettingstarted/micropython/examples.html">
+            
+                <a href="../../../gettingstarted/micropython/examples.html">
+            
+                    
+                    1.5.1 Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2. Tools & Features</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../toolsandfeatures/">
+            
+                <a href="../../../toolsandfeatures/">
+            
+                    
+                    2.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../../toolsandfeatures/pycommodules.html">
+            
+                <a href="../../../toolsandfeatures/pycommodules.html">
+            
+                    
+                    2.2 Pycom Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../../toolsandfeatures/repl/">
+            
+                <a href="../../../toolsandfeatures/repl/">
+            
+                    
+                    2.3 REPL & Uploading Code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../../toolsandfeatures/repl/serial.html">
+            
+                <a href="../../../toolsandfeatures/repl/serial.html">
+            
+                    
+                    2.3.1 Serial USB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../../toolsandfeatures/repl/telnet.html">
+            
+                <a href="../../../toolsandfeatures/repl/telnet.html">
+            
+                    
+                    2.3.2 Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../../toolsandfeatures/FTP.html">
+            
+                <a href="../../../toolsandfeatures/FTP.html">
+            
+                    
+                    2.3.3 FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../../toolsandfeatures/bootmodes.html">
+            
+                <a href="../../../toolsandfeatures/bootmodes.html">
+            
+                    
+                    2.4 Boot Modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../../toolsandfeatures/notes.html">
+            
+                <a href="../../../toolsandfeatures/notes.html">
+            
+                    
+                    2.6 Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3. Pymakr Plugin</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../pymakr/">
+            
+                <a href="../../../pymakr/">
+            
+                    
+                    3.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../../pymakr/installation/">
+            
+                <a href="../../../pymakr/installation/">
+            
+                    
+                    3.2 Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../../pymakr/installation/atom.html">
+            
+                <a href="../../../pymakr/installation/atom.html">
+            
+                    
+                    3.2.1 Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../../pymakr/installation/serial.html">
+            
+                <a href="../../../pymakr/installation/serial.html">
+            
+                    
+                    3.2.2 Serial USB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../../pymakr/installation/telnet.html">
+            
+                <a href="../../../pymakr/installation/telnet.html">
+            
+                    
+                    3.2.3 Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../../pymakr/toolsfeatures.html">
+            
+                <a href="../../../pymakr/toolsfeatures.html">
+            
+                    
+                    3.4 Tools/Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">4. Pysense & Pytrack</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../../pytrackpysense/">
+            
+                <a href="../../../pytrackpysense/">
+            
+                    
+                    4.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../../pytrackpysense/installation/">
+            
+                <a href="../../../pytrackpysense/installation/">
+            
+                    
+                    4.2 Installing Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../../pytrackpysense/installation/firmware.html">
+            
+                <a href="../../../pytrackpysense/installation/firmware.html">
+            
+                    
+                    4.2.1 Updating Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../../pytrackpysense/installation/libraries.html">
+            
+                <a href="../../../pytrackpysense/installation/libraries.html">
+            
+                    
+                    4.2.2 Installing Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../../pytrackpysense/apireference/">
+            
+                <a href="../../../pytrackpysense/apireference/">
+            
+                    
+                    4.3 API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../../../pytrackpysense/apireference/pytrack.html">
+            
+                <a href="../../../pytrackpysense/apireference/pytrack.html">
+            
+                    
+                    4.3.1 Pytrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../../../pytrackpysense/apireference/pysense.html">
+            
+                <a href="../../../pytrackpysense/apireference/pysense.html">
+            
+                    
+                    4.3.2 Pysense
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">5. Tutorials & Examples</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../tutorials/">
+            
+                <a href="../../../tutorials/">
+            
+                    
+                    5.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../../tutorials/all/">
+            
+                <a href="../../../tutorials/all/">
+            
+                    
+                    5.2 All Pycom Device Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../../../tutorials/all/repl.html">
+            
+                <a href="../../../tutorials/all/repl.html">
+            
+                    
+                    5.2.1 REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../../../tutorials/all/wlan.html">
+            
+                <a href="../../../tutorials/all/wlan.html">
+            
+                    
+                    5.2.2 WLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../../../tutorials/all/ble.html">
+            
+                <a href="../../../tutorials/all/ble.html">
+            
+                    
+                    5.2.3 Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../../../tutorials/all/https.html">
+            
+                <a href="../../../tutorials/all/https.html">
+            
+                    
+                    5.2.4 HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../../../tutorials/all/mqtt.html">
+            
+                <a href="../../../tutorials/all/mqtt.html">
+            
+                    
+                    5.2.5 MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.6" data-path="../../../tutorials/all/aws.html">
+            
+                <a href="../../../tutorials/all/aws.html">
+            
+                    
+                    5.2.6 AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.7" data-path="../../../tutorials/all/adc.html">
+            
+                <a href="../../../tutorials/all/adc.html">
+            
+                    
+                    5.2.7 ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.8" data-path="../../../tutorials/all/i2c.html">
+            
+                <a href="../../../tutorials/all/i2c.html">
+            
+                    
+                    5.2.8 I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.9" data-path="../../../tutorials/all/owd.html">
+            
+                <a href="../../../tutorials/all/owd.html">
+            
+                    
+                    5.2.9 Onewire Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.10" data-path="../../../tutorials/all/threading.html">
+            
+                <a href="../../../tutorials/all/threading.html">
+            
+                    
+                    5.2.10 Threading
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.11" data-path="../../../tutorials/all/rgbled.html">
+            
+                <a href="../../../tutorials/all/rgbled.html">
+            
+                    
+                    5.2.11 RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.12" data-path="../../../tutorials/all/timers.html">
+            
+                <a href="../../../tutorials/all/timers.html">
+            
+                    
+                    5.2.12 Timers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.13" data-path="../../../tutorials/all/pir.html">
+            
+                <a href="../../../tutorials/all/pir.html">
+            
+                    
+                    5.2.13 PIR Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../../tutorials/lopy/">
+            
+                <a href="../../../tutorials/lopy/">
+            
+                    
+                    5.3 LoPy Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../../tutorials/lopy/lora-mac.html">
+            
+                <a href="../../../tutorials/lopy/lora-mac.html">
+            
+                    
+                    5.3.1 LoRa-MAC (Raw LoRa)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../../../tutorials/lopy/lorawan-otaa.html">
+            
+                <a href="../../../tutorials/lopy/lorawan-otaa.html">
+            
+                    
+                    5.3.2 LoRaWAN with OTAA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="../../../tutorials/lopy/lorawan-abp.html">
+            
+                <a href="../../../tutorials/lopy/lorawan-abp.html">
+            
+                    
+                    5.3.3 LoRaWAN with ABP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.4" data-path="../../../tutorials/lopy/lora-mac-nano-gateway.html">
+            
+                <a href="../../../tutorials/lopy/lora-mac-nano-gateway.html">
+            
+                    
+                    5.3.4 LoRa-MAC Nano-Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.5" data-path="../../../tutorials/lopy/lopy-lopy.html">
+            
+                <a href="../../../tutorials/lopy/lopy-lopy.html">
+            
+                    
+                    5.3.5 LoPy to LoPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.6" data-path="../../../tutorials/lopy/lorawan-nano-gateway.html">
+            
+                <a href="../../../tutorials/lopy/lorawan-nano-gateway.html">
+            
+                    
+                    5.3.6 LoRaWAN Nano-Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../../tutorials/sipy/">
+            
+                <a href="../../../tutorials/sipy/">
+            
+                    
+                    5.4 SiPy Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../../../tutorials/sipy/register.html">
+            
+                <a href="../../../tutorials/sipy/register.html">
+            
+                    
+                    5.4.1 Register Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../../tutorials/pytrack/README.md">
+            
+                <span>
+            
+                    
+                    5.5 Pytrack Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../../tutorials/pysense/README.md">
+            
+                <span>
+            
+                    
+                    5.6 Pysense Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">6. Firmware & API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    6.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    6.2 Pycom Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../machine/">
+            
+                <a href="../machine/">
+            
+                    
+                    6.2.1 machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1.1" data-path="../machine/ADC.html">
+            
+                <a href="../machine/ADC.html">
+            
+                    
+                    6.2.1.1 ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.2" data-path="../machine/DAC.html">
+            
+                <a href="../machine/DAC.html">
+            
+                    
+                    6.2.1.2 DAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.3" data-path="../machine/I2C.html">
+            
+                <a href="../machine/I2C.html">
+            
+                    
+                    6.2.1.3 I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.4" data-path="../machine/Pin.html">
+            
+                <a href="../machine/Pin.html">
+            
+                    
+                    6.2.1.4 Pin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.5" data-path="../machine/PWM.html">
+            
+                <a href="../machine/PWM.html">
+            
+                    
+                    6.2.1.5 PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.6" data-path="../machine/RTC.html">
+            
+                <a href="../machine/RTC.html">
+            
+                    
+                    6.2.1.6 RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.7" data-path="../machine/SPI.html">
+            
+                <a href="../machine/SPI.html">
+            
+                    
+                    6.2.1.7 SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.8" data-path="../machine/UART.html">
+            
+                <a href="../machine/UART.html">
+            
+                    
+                    6.2.1.8 UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.9" data-path="../machine/WDT.html">
+            
+                <a href="../machine/WDT.html">
+            
+                    
+                    6.2.1.9 WDT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.10" data-path="../machine/Timer.html">
+            
+                <a href="../machine/Timer.html">
+            
+                    
+                    6.2.1.10 Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.11" data-path="../machine/SD.html">
+            
+                <a href="../machine/SD.html">
+            
+                    
+                    6.2.1.11 SD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    6.2.2 network
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.2.1" data-path="wlan.html">
+            
+                <a href="wlan.html">
+            
+                    
+                    6.2.2.1 WLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.2" data-path="server.html">
+            
+                <a href="server.html">
+            
+                    
+                    6.2.2.2 Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3" data-path="bluetooth/">
+            
+                <a href="bluetooth/">
+            
+                    
+                    6.2.2.3 Bluetooth
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.2.3.1" data-path="bluetooth/gatt.html">
+            
+                <a href="bluetooth/gatt.html">
+            
+                    
+                    6.2.2.3.1 GATT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.2" data-path="bluetooth/gattcconnection.html">
+            
+                <a href="bluetooth/gattcconnection.html">
+            
+                    
+                    6.2.2.3.2 GATTCConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.3" data-path="bluetooth/gattccservice.html">
+            
+                <a href="bluetooth/gattccservice.html">
+            
+                    
+                    6.2.2.3.3 GATTCService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.4" data-path="bluetooth/gattccharacteristic.html">
+            
+                <a href="bluetooth/gattccharacteristic.html">
+            
+                    
+                    6.2.2.3.4 GATTCCharacteristic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.5" data-path="bluetooth/gattsservice.html">
+            
+                <a href="bluetooth/gattsservice.html">
+            
+                    
+                    6.2.2.3.5 GATTSService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.6" data-path="bluetooth/gattscharacteristic.html">
+            
+                <a href="bluetooth/gattscharacteristic.html">
+            
+                    
+                    6.2.2.3.6 GATTSCharacteristic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.2.2.4" data-path="lora.html">
+            
+                <a href="lora.html">
+            
+                    
+                    6.2.2.4 LoRa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.5" data-path="sigfox.html">
+            
+                <a href="sigfox.html">
+            
+                    
+                    6.2.2.5 Sigfox
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../aes.html">
+            
+                <a href="../aes.html">
+            
+                    
+                    6.2.3 AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.4" data-path="../pycom.html">
+            
+                <a href="../pycom.html">
+            
+                    
+                    6.2.4 pycom
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../../micropython/">
+            
+                <a href="../../micropython/">
+            
+                    
+                    6.3 MicroPython Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.3.1" data-path="../../micropython/micropython.html">
+            
+                <a href="../../micropython/micropython.html">
+            
+                    
+                    6.3.1 micropython
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.2" data-path="../../micropython/uctypes.html">
+            
+                <a href="../../micropython/uctypes.html">
+            
+                    
+                    6.3.2 uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.3" data-path="../../micropython/sys.html">
+            
+                <a href="../../micropython/sys.html">
+            
+                    
+                    6.3.3 sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.4" data-path="../../micropython/uos.html">
+            
+                <a href="../../micropython/uos.html">
+            
+                    
+                    6.3.4 uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.5" data-path="../../micropython/array.html">
+            
+                <a href="../../micropython/array.html">
+            
+                    
+                    6.3.5 array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.6" data-path="../../micropython/cmath.html">
+            
+                <a href="../../micropython/cmath.html">
+            
+                    
+                    6.3.6 cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.7" data-path="../../micropython/math.html">
+            
+                <a href="../../micropython/math.html">
+            
+                    
+                    6.3.7 math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.8" data-path="../../micropython/gc.html">
+            
+                <a href="../../micropython/gc.html">
+            
+                    
+                    6.3.8 gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.9" data-path="../../micropython/ubinascii.html">
+            
+                <a href="../../micropython/ubinascii.html">
+            
+                    
+                    6.3.9 ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.10" data-path="../../micropython/ujson.html">
+            
+                <a href="../../micropython/ujson.html">
+            
+                    
+                    6.3.10 ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.11" data-path="../../micropython/ure.html">
+            
+                <a href="../../micropython/ure.html">
+            
+                    
+                    6.3.11 ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.12" data-path="../../micropython/usocket.html">
+            
+                <a href="../../micropython/usocket.html">
+            
+                    
+                    6.3.12 usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.13" data-path="../../micropython/select.html">
+            
+                <a href="../../micropython/select.html">
+            
+                    
+                    6.3.13 select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.14" data-path="../../micropython/utime.html">
+            
+                <a href="../../micropython/utime.html">
+            
+                    
+                    6.3.14 utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.15" data-path="../../micropython/uhashlib.html">
+            
+                <a href="../../micropython/uhashlib.html">
+            
+                    
+                    6.3.15 uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.16" data-path="../../micropython/ussl.html">
+            
+                <a href="../../micropython/ussl.html">
+            
+                    
+                    6.3.16 ussl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.17" data-path="../../micropython/ucrypto.html">
+            
+                <a href="../../micropython/ucrypto.html">
+            
+                    
+                    6.3.17 ucrypto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.18" data-path="../../micropython/ustruct.html">
+            
+                <a href="../../micropython/ustruct.html">
+            
+                    
+                    6.3.18 ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.19" data-path="../../micropython/_thread.html">
+            
+                <a href="../../micropython/_thread.html">
+            
+                    
+                    6.3.19 _thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.20" data-path="../../micropython/builtin.html">
+            
+                <a href="../../micropython/builtin.html">
+            
+                    
+                    6.3.20 Builtin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">7. Datasheets</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../../datasheets/">
+            
+                <a href="../../../datasheets/">
+            
+                    
+                    7.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../../datasheets/development/">
+            
+                <a href="../../../datasheets/development/">
+            
+                    
+                    7.2 Development Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.2.1" data-path="../../../datasheets/development/wipy2.html">
+            
+                <a href="../../../datasheets/development/wipy2.html">
+            
+                    
+                    7.2.1 WiPy 2.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.2" data-path="../../../datasheets/development/lopy.html">
+            
+                <a href="../../../datasheets/development/lopy.html">
+            
+                    
+                    7.2.2 LoPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.3" data-path="../../../datasheets/development/sipy.html">
+            
+                <a href="../../../datasheets/development/sipy.html">
+            
+                    
+                    7.2.3 SiPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.4" data-path="../../../datasheets/development/gpy.html">
+            
+                <a href="../../../datasheets/development/gpy.html">
+            
+                    
+                    7.2.4 GPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.5" data-path="../../../datasheets/development/fipy.html">
+            
+                <a href="../../../datasheets/development/fipy.html">
+            
+                    
+                    7.2.5 FiPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../../../datasheets/oem/">
+            
+                <a href="../../../datasheets/oem/">
+            
+                    
+                    7.3 OEM Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.3.1" data-path="../../../datasheets/oem/w01.html">
+            
+                <a href="../../../datasheets/oem/w01.html">
+            
+                    
+                    7.3.1 W01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.2" data-path="../../../datasheets/oem/l01.html">
+            
+                <a href="../../../datasheets/oem/l01.html">
+            
+                    
+                    7.3.2 L01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.3" data-path="../../../datasheets/oem/g01.html">
+            
+                <a href="../../../datasheets/oem/g01.html">
+            
+                    
+                    7.3.3 G01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.4" data-path="../../../datasheets/oem/reference.html">
+            
+                <a href="../../../datasheets/oem/reference.html">
+            
+                    
+                    7.3.4 OEM Baseboard Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../../../datasheets/boards/">
+            
+                <a href="../../../datasheets/boards/">
+            
+                    
+                    7.4 Expansion Boards and Shields
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.4.1" data-path="../../../datasheets/boards/expansion.html">
+            
+                <a href="../../../datasheets/boards/expansion.html">
+            
+                    
+                    7.4.1 Expansion Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.2" data-path="../../../datasheets/boards/pytrack.html">
+            
+                <a href="../../../datasheets/boards/pytrack.html">
+            
+                    
+                    7.4.2 Pytrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.3" data-path="../../../datasheets/boards/pysense.html">
+            
+                <a href="../../../datasheets/boards/pysense.html">
+            
+                    
+                    7.4.3 Pysense
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.4" data-path="../../../datasheets/boards/deepsleep.html">
+            
+                <a href="../../../datasheets/boards/deepsleep.html">
+            
+                    
+                    7.4.4 Deep Sleep Shield
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../../../datasheets/notes/">
+            
+                <a href="../../../datasheets/notes/">
+            
+                    
+                    7.5 Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">8. Documentation Notes</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../../docnotes/">
+            
+                <a href="../../../docnotes/">
+            
+                    
+                    8.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../../docnotes/syntax.html">
+            
+                <a href="../../../docnotes/syntax.html">
+            
+                    
+                    8.2 Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../../../docnotes/replscript.html">
+            
+                <a href="../../../docnotes/replscript.html">
+            
+                    
+                    8.3 REPL vs Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">9. License</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../../license/">
+            
+                <a href="../../../license/">
+            
+                    
+                    9.1 License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >6.2.2.4 LoRa</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="class-lora">class LoRa</h1>
+<p>This class provides a driver for the LoRa network processor in the LoPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> network <span class="hljs-keyword">import</span> LoRa
+<span class="hljs-keyword">import</span> socket
+<span class="hljs-keyword">import</span> binascii
+<span class="hljs-keyword">import</span> struct
+
+<span class="hljs-comment"># Initialize LoRa in LORAWAN mode.</span>
+lora = LoRa(mode=LoRa.LORAWAN)
+
+<span class="hljs-comment"># create an ABP authentication params</span>
+dev_addr = struct.unpack(<span class="hljs-string">&quot;&gt;l&quot;</span>, binascii.unhexlify(<span class="hljs-string">&apos;00 00 00 05&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)))[<span class="hljs-number">0</span>]
+nwk_swkey = binascii.unhexlify(<span class="hljs-string">&apos;2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>))
+app_swkey = binascii.unhexlify(<span class="hljs-string">&apos;2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>))
+
+<span class="hljs-comment"># join a network using ABP (Activation By Personalization)</span>
+lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))
+
+<span class="hljs-comment"># create a LoRa socket</span>
+s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
+
+<span class="hljs-comment"># set the LoRaWAN data rate</span>
+s.setsockopt(socket.SOL_LORA, socket.SO_DR, <span class="hljs-number">5</span>)
+
+<span class="hljs-comment"># make the socket non-blocking</span>
+s.setblocking(<span class="hljs-keyword">False</span>)
+
+<span class="hljs-comment"># send some data</span>
+s.send(bytes([<span class="hljs-number">0x01</span>, <span class="hljs-number">0x02</span>, <span class="hljs-number">0x03</span>]))
+
+<span class="hljs-comment"># get any data received...</span>
+data = s.recv(<span class="hljs-number">64</span>)
+print(data)
+</code></pre>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Please ensure that there is an antenna connected to your device before sending/receiving LoRa messages as inproper use (e.g. without an antenna), may damage the device.</p>
+</div></div></p>
+<h3 id="additional-examples">Additional Examples</h3>
+<p>For various other complete LoRa examples, check here for additional examples.</p>
+<h3 id="constructors">Constructors</h3>
+<class><i>class</i> network.LoRa(id=0, ...)</class>
+
+<p>Create and configure a LoRa object. See init for params of configuration.</p>
+<pre><code class="lang-python">lora = LoRa(mode=LoRa.LORAWAN)
+</code></pre>
+<h3 id="methods">Methods</h3>
+<function>lora.init(mode, * , frequency=868000000, tx_power=14, bandwidth=LoRa.868000000, sf=7, preamble=8, coding_rate=LoRa.CODING_4_5, power_mode=LoRa.ALWAYS_ON, tx_iq=false, rx_iq=false, adr=false, public=true, tx_retries=1, device_class=LoRa.CLASS_A)</function>
+
+<p>This method is used to set the LoRa subsystem configuration and to specific raw LoRa or LoRaWAN.</p>
+<p>The arguments are:</p>
+<ul>
+<li><code>mode</code> can be either <constant>LoRa.LORA</constant> or <constant>LoRa.LORAWAN</constant>.</li>
+<li><code>frequency</code> accepts values between 863000000 and 870000000 in the 868 band, or between 902000000 and 928000000 in the 915 band.</li>
+<li><code>tx_power</code> is the transmit power in dBm. It accepts between 2 and 14 for the 868 band, and between 5 and 20 in the 915 band.</li>
+<li><code>bandwidth</code> is the channel bandwidth in KHz. In the 868 band the accepted values are <constant>LoRa.BW_125KHZ</constant> and <constant>LoRa.BW_250KHZ</constant>. In the 915 band the accepted values are <constant>LoRa.BW_125KHZ</constant> and <constant>LoRa.BW_500KHZ</constant>.</li>
+<li><code>sf</code> sets the desired spreading factor. Accepts values between 7 and 12.</li>
+<li><code>preamble</code> configures the number of pre-amble symbols. The default value is 8.</li>
+<li><code>coding_rate</code> can take the following values: <constant>LoRa.CODING_4_5</constant>, <constant>LoRa.CODING_4_6</constant>, <constant>LoRa.CODING_4_7</constant> or <constant>LoRa.CODING_4_8</constant>.</li>
+<li><code>power_mode</code> can be either <constant>LoRa.ALWAYS_ON</constant>, <constant>LoRa.TX_ONLY</constant> or <constant>LoRa.SLEEP</constant>. In <constant>ALWAYS_ON</constant> mode, the radio is always listening for incoming - packets whenever a transmission is not taking place. In <constant>TX_ONLY</constant> the radio goes to sleep as soon as the transmission completes. In <constant>SLEEP</constant> mode the radio is sent to sleep permanently and won&#x2019;t accept any commands until the power mode is changed.</li>
+<li><code>tx_iq</code> enables TX IQ inversion.</li>
+<li><code>rx_iq</code> enables RX IQ inversion.</li>
+<li><code>adr</code> enables Adaptive Data Rate.</li>
+<li><code>public</code> selects between the public and private sync word.</li>
+<li><code>tx_retries</code> sets the number of TX retries in <constant>LoRa.LORAWAN</constant> mode.</li>
+<li><code>device_class</code> sets the LoRaWAN device class. Can be either <constant>LoRa.CLASS_A</constant> or <constant>LoRa.CLASS_C</constant>.</li>
+</ul>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>In <constant>LoRa.LORAWAN</constant> mode, only <code>adr</code>, <code>public</code>, <code>tx_retries</code> and <code>device_class</code> are used. All the other params will be ignored as they are handled by the LoRaWAN stack directly. On the other hand, in <constant>LoRa.LORA</constant> mode from those 3 arguments, only the public one is important in order to program the sync word. In <constant>LoRa.LORA</constant> mode <code>adr</code>, <code>tx_retries</code> and <code>device_class</code> are ignored since they are only relevant to the LoRaWAN stack.</p>
+</div></div></p>
+<p>For example, you can do:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># initialize in raw LoRa mode</span>
+lora.init(mode=LoRa.LORA, tx_power=<span class="hljs-number">14</span>, sf=<span class="hljs-number">12</span>)
+</code></pre>
+<p>or:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># initialize in LoRaWAN mode</span>
+lora.init(mode=LoRa.LORAWAN)
+</code></pre>
+<function>lora.join(activation, auth, * , timeout=None)</function>
+
+<p>Join a LoRaWAN network. The parameters are:</p>
+<ul>
+<li><code>activation</code>: can be either <constant>LoRa.OTAA</constant> or <constant>LoRa.ABP</constant>.</li>
+<li><code>auth</code>: is a tuple with the authentication data.</li>
+</ul>
+<p>In the case of <constant>LoRa.OTAA</constant> the authentication tuple is: (<code>app_eui</code>, <code>app_key</code>). Example:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> network <span class="hljs-keyword">import</span> LoRa
+<span class="hljs-keyword">import</span> socket
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">import</span> binascii
+
+<span class="hljs-comment"># Initialize LoRa in LORAWAN mode.</span>
+lora = LoRa(mode=LoRa.LORAWAN)
+
+<span class="hljs-comment"># create an OTAA authentication parameters</span>
+app_eui = binascii.unhexlify(<span class="hljs-string">&apos;AD A4 DA E3 AC 12 67 6B&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>))
+app_key = binascii.unhexlify(<span class="hljs-string">&apos;11 B0 28 2A 18 9B 75 B0 B4 D2 D8 C7 FA 38 54 8B&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>))
+
+<span class="hljs-comment"># join a network using OTAA (Over the Air Activation)</span>
+lora.join(activation=LoRa.OTAA, auth=(app_eui, app_key), timeout=<span class="hljs-number">0</span>)
+
+<span class="hljs-comment"># wait until the module has joined the network</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> lora.has_joined():
+    time.sleep(<span class="hljs-number">2.5</span>)
+    print(<span class="hljs-string">&apos;Not yet joined...&apos;</span>)
+</code></pre>
+<p>In the case of <constant>LoRa.ABP</constant> the authentication tuple is: (<code>dev_addr</code>, <code>nwk_swkey</code>, <code>app_swkey</code>). Example:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> network <span class="hljs-keyword">import</span> LoRa
+<span class="hljs-keyword">import</span> socket
+<span class="hljs-keyword">import</span> binascii
+<span class="hljs-keyword">import</span> struct
+
+<span class="hljs-comment"># Initialize LoRa in LORAWAN mode.</span>
+lora = LoRa(mode=LoRa.LORAWAN)
+
+<span class="hljs-comment"># create an ABP authentication params</span>
+dev_addr = struct.unpack(<span class="hljs-string">&quot;&gt;l&quot;</span>, binascii.unhexlify(<span class="hljs-string">&apos;00 00 00 05&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)))[<span class="hljs-number">0</span>]
+nwk_swkey = binascii.unhexlify(<span class="hljs-string">&apos;2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>))
+app_swkey = binascii.unhexlify(<span class="hljs-string">&apos;2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C&apos;</span>.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>))
+
+<span class="hljs-comment"># join a network using ABP (Activation By Personalization)</span>
+lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))
+</code></pre>
+<function>lora.bandwidth([bandwidth])</function>
+
+<p>Get or set the bandwidth in raw LoRa mode (<function>LoRa.LORA</function>). Can be either <function>LoRa.BW_125KHZ</function> (0), <function>LoRa.BW_250KHZ</function> (1) or <function>LoRa.BW_500KHZ</function> (2):</p>
+<pre><code class="lang-python"><span class="hljs-comment"># get raw LoRa Bandwidth</span>
+lora.bandwidth()
+
+<span class="hljs-comment"># set raw LoRa Bandwidth</span>
+lora.bandwidth(LoRa.BW_125KHZ)
+</code></pre>
+<function>lora.frequency([frequency])</function>
+
+<p>Get or set the frequency in raw LoRa mode (<constant>LoRa.LORA</constant>). The allowed range is between 863000000 and 870000000 Hz for the 868 MHz band version or between 902000000 and 928000000 Hz for the 915 MHz band version.:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># get raw LoRa Frequency</span>
+lora.frequency()
+
+<span class="hljs-comment"># set raw LoRa Frequency</span>
+lora.frequency(<span class="hljs-number">868000000</span>)
+</code></pre>
+<p>lora.coding_rate([coding_rate])
+Get or set the coding rate in raw LoRa mode (LoRa.LORA). The allowed values are: <constant>LoRa.CODING_4_5</constant> (0), &lt;/constant&gt;LoRa.CODING_4_6&lt;/constant&gt; (1), <constant>LoRa.CODING_4_7</constant> (2) and <constant>LoRa.CODING_4_8</constant> (3).</p>
+<pre><code class="lang-python"><span class="hljs-comment"># get raw LoRa Coding Rate</span>
+lora.coding_rate()
+
+<span class="hljs-comment"># set raw LoRa Coding Rate</span>
+lora.coding_rate(LoRa.CODING_4_5)
+</code></pre>
+<function>lora.preamble([preamble])</function>
+
+<p>Get or set the number of preamble symbols in raw LoRa mode (<constant>LoRa.LORA</constant>):</p>
+<pre><code class="lang-python"><span class="hljs-comment"># get raw LoRa preamble symbols</span>
+lora.preamble()
+
+<span class="hljs-comment"># set raw LoRa preamble symbols</span>
+lora.preamble(LoRa.CODING_4_5)
+</code></pre>
+<function>lora.sf([sf])</function>
+
+<p>Get or set the spreading factor value in raw LoRa mode (<constant>LoRa.LORA</constant>). The minimum value is 7 and the maximum is 12:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># get raw LoRa spread factor value</span>
+lora.sf()
+
+<span class="hljs-comment"># set raw LoRa spread factor value</span>
+lora.sf(<span class="hljs-number">7</span>)
+</code></pre>
+<function>lora.power_mode([power_mode])</function>
+
+<p>Get or set the power mode in raw LoRa mode (<constant>LoRa.LORA</constant>). The accepted values are: <constant>LoRa.ALWAYS_ON</constant>, <constant>LoRa.TX_ONLY</constant> and <constant>LoRa.SLEEP</constant>:</p>
+<function>lora.stats()</function>
+
+<p>Return a named tuple with useful information from the last received LoRa or LoRaWAN packet. The named tuple has the following form:</p>
+<p>(<code>rx_timestamp</code>, <code>rssi</code>, <code>snr</code>, <code>sftx</code>, <code>sfrx</code>, <code>tx_trials</code>)</p>
+<p>Example:</p>
+<pre><code class="lang-python">lora.stats()
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><code>rx_timestamp</code> is an internal timestamp of the last received packet with microseconds precision.</li>
+<li><code>rssi</code> holds the received signal strength in dBm.</li>
+<li><code>snr</code> contains the signal to noise ratio id dB.</li>
+<li><code>sfrx</code> tells the data rate (in the case of LORAWAN mode) or the spreading factor (in the case of LORA mode) of the last packet received.</li>
+<li><code>sftx</code> tells the data rate (in the case of LORAWAN mode) or the spreading factor (in the case of LORA mode) of the last packet transmitted.</li>
+<li><code>tx_trials</code> is the number of tx attempts of the last transmitted packet (only relevant for LORAWAN confirmed packets).</li>
+</ul>
+<function>lora.has_joined()</function>
+
+<p>Returns <code>True</code> if a LoRaWAN network has been joined. <code>False</code> otherwise.:</p>
+<function>lora.add_channel(index, * , frequency, dr_min, dr_max)</function>
+
+<p>Add a LoRaWAN channel on the specified index. If there&#x2019;s already a channel with that index it will be replaced with the new one.</p>
+<p>The arguments are:</p>
+<ul>
+<li><code>index</code>: Index of the channel to add. Accepts values between 0 and 15 for EU and between 0 and 71 for US.</li>
+<li><code>frequency</code>: Centre frequency in Hz of the channel.</li>
+<li><code>dr_min</code>: Minimum data rate of the channel (0-7).</li>
+<li><code>dr_max</code>: Maximum data rate of the channel (0-7).</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="lang-python">lora.add_channel(index=<span class="hljs-number">0</span>, frequency=<span class="hljs-number">868000000</span>, dr_min=<span class="hljs-number">5</span>, dr_max=<span class="hljs-number">6</span>)
+</code></pre>
+<function>lora.remove_channel(index)</function>
+
+<p>Removes the channel from the specified index. On the 868MHz band the channels 0 to 2 cannot be removed, they can only be replaced by other channels using the lora.add_channel method. A way to remove all channels except for one is to add the same channel, 3 times on indexes 0, 1 and 2. An example can be seen below:</p>
+<pre><code class="lang-python">lora.remove_channel()
+</code></pre>
+<p>On the 915MHz band there are no restrictions around this.</p>
+<function>lora.mac()</function>
+
+<p>Returns a byte object with the 8-Byte MAC address of the LoRa radio.</p>
+<function>lora.callback(trigger, handler=None, arg=None)</function>
+
+<p>Specify a callback handler for the LoRa radio. The trigger types are <constant>LoRa.RX_PACKET_EVENT</constant>, <constant>LoRa.TX_PACKET_EVENT</constant> and <constant>LoRa.TX_FAILED_EVENT</constant></p>
+<p>The <constant>LoRa.RX_PACKET_EVENT</constant> event is raised for every received packet. The <constant>LoRa.TX_PACKET_EVENT</constant> event is raised as soon as the packet transmission cycle ends. In the case of non-confirmed transmissions, this will occur at the end of the receive windows, but, in the case of confirmed transmissions, this event will only be raised if the <code>ack</code> is received. If the ack is not received <constant>LoRa.TX_FAILED_EVENT<constant> will be raised after the number of <code>tx_retries</code> configured have been performed.</constant></constant></p>
+<p>An example of how this callback functions can be seen the in method <function>lora.events()<function>.</function></function></p>
+<function>lora.ischannel_free(rssi_threshold)</function>
+
+<p>This method is used to check for radio activity on the current LoRa channel, and if the <code>rssi</code> of the measured activity is lower than the <code>rssi_threshold</code> given, the return value will be <code>True</code>, otherwise <code>False</code>. Example:</p>
+<pre><code class="lang-python">lora.ischannel_free(<span class="hljs-number">-100</span>)
+</code></pre>
+<function>lora.set_battery_level(level)</function>
+
+<p>Set the battery level value that will be sent when the LoRaWAN MAC command that retrieves the battery level is received. This command is sent by the network and handled automatically by the LoRaWAN stack. Value should be in percentage, from 0 to 100. Values larger than 100 will be clipped:</p>
+<pre><code class="lang-python">lora.set_battery_level(<span class="hljs-number">75</span>)
+</code></pre>
+<function>lora.events()</function>
+
+<p>This method returns a value with bits sets (if any) indicating the events that have triggered the callback. Please note that by calling this function the internal events registry is cleared automatically, therefore calling it immediately for a second time will most likely return a value of 0.</p>
+<p>Example:</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lora_cb</span><span class="hljs-params">(lora)</span>:</span>
+    events = lora.events()
+    <span class="hljs-keyword">if</span> events &amp; LoRa.RX_PACKET_EVENT:
+        print(<span class="hljs-string">&apos;Lora packet received&apos;</span>)
+    <span class="hljs-keyword">if</span> events &amp; LoRa.TX_PACKET_EVENT:
+        print(<span class="hljs-string">&apos;Lora packet sent&apos;</span>)
+
+lora.callback(trigger=(LoRa.RX_PACKET_EVENT | LoRa.TX_PACKET_EVENT), handler=lora_cb)
+</code></pre>
+<h3 id="constants">Constants</h3>
+<p><constant>LoRa.LORA</constant> <constant>LoRa.LORAWAN</constant>
+LoRa stack mode</p>
+<p><constant>LoRa.OTAA</constant> <constant>LoRa.ABP</constant>
+LoRaWAN join procedure</p>
+<p><constant>LoRa.ALWAYS_ON</constant> <constant>LoRa.TX_ONLY</constant> <constant>LoRa.SLEEP</constant>
+Raw LoRa power mode</p>
+<p><constant>LoRa.BW_125KHZ</constant> <constant>LoRa.BW_250KHZ</constant> <constant>LoRa.BW_500KHZ</constant>
+Raw LoRa bandwidth</p>
+<p><constant>LoRa.CODING_4_5</constant> <constant>LoRa.CODING_4_6</constant> <constant>LoRa.CODING_4_7</constant> <constant>LoRa.CODING_4_8</constant>
+Raw LoRa coding rate</p>
+<p><constant>LoRa.RX_PACKET_EVENT</constant> <constant>LoRa.TX_PACKET_EVENT</constant> <constant>LoRa.TX_FAILED_EVENT</constant>
+Callback trigger types (may be ORed)</p>
+<p><constant>LoRa.CLASS_A</constant> <constant>LoRa.CLASS_C</constant>
+LoRaWAN device class</p>
+<h3 id="working-with-lora-and-lorawan-sockets">Working with LoRa and LoRaWAN Sockets</h3>
+<p>LoRa sockets are created in the following way:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> socket
+s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
+</code></pre>
+<p>And they must be created after initialising the LoRa network card.</p>
+<p>LoRa sockets support the following standard methods from the socket module:</p>
+<function>socket.close()</function>
+
+<p>Usage:</p>
+<pre><code class="lang-python">s.close()
+</code></pre>
+<function>socket.bind(port_number)</function>
+
+<p>Usage:</p>
+<pre><code class="lang-python">s.bind(<span class="hljs-number">1</span>)
+</code></pre>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>The <function>bind()</function> method is only applicable when the radio is configured in <constant>LoRa.LORAWAN</constant> mode.</p>
+</div></div></p>
+<function>socket.send(bytes)</function>
+
+<p>Usage:</p>
+<pre><code class="lang-python">s.send(bytes([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]))
+</code></pre>
+<p>or:</p>
+<pre><code class="lang-python">s.send(<span class="hljs-string">&apos;Hello&apos;</span>)
+</code></pre>
+<function>socket.recv(bufsize)</function>
+
+<p>Usage:</p>
+<pre><code class="lang-python">s.recv(<span class="hljs-number">128</span>)
+</code></pre>
+<function>socket.setsockopt(level, optname, value)</function>
+
+<p>Set the value of the given socket option. The needed symbolic constants are defined in the socket module (SO_* etc.). In the case of LoRa the values are always integers. Examples:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># configuring the data rate</span>
+s.setsockopt(socket.SOL_LORA, socket.SO_DR, <span class="hljs-number">5</span>)
+
+<span class="hljs-comment"># selecting non-confirmed type of messages</span>
+s.setsockopt(socket.SOL_LORA, socket.SO_CONFIRMED, <span class="hljs-keyword">False</span>)
+
+<span class="hljs-comment"># selecting confirmed type of messages</span>
+s.setsockopt(socket.SOL_LORA, socket.SO_CONFIRMED, <span class="hljs-keyword">True</span>)
+</code></pre>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Socket options are only applicable when the LoRa radio is used in <constant>LoRa.LORAWAN</constant> mode. When using the radio in LoRa.LORA mode, use the class methods to change the spreading factor, bandwidth and coding rate to the desired values.</p>
+</div></div></p>
+<function>socket.settimeout(value)</function>
+
+<p>Sets the socket timeout value in seconds. Accepts floating point values.</p>
+<p>Usage:</p>
+<pre><code class="lang-python">s.settimeout(<span class="hljs-number">5.5</span>)
+</code></pre>
+<function>socket.setblocking(flag)</function>
+
+<p>Usage:</p>
+<pre><code class="lang-python">s.setblocking(<span class="hljs-keyword">True</span>)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="bluetooth/gattscharacteristic.html" class="navigation navigation-prev " aria-label="Previous page: 6.2.2.3.6 GATTSCharacteristic">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sigfox.html" class="navigation navigation-next " aria-label="Next page: 6.2.2.5 Sigfox">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.2.2.4 LoRa","level":"7.2.2.4","depth":3,"next":{"title":"6.2.2.5 Sigfox","level":"7.2.2.5","depth":3,"path":"chapter/firmwareapi/pycom/network/sigfox.md","ref":"chapter/firmwareapi/pycom/network/sigfox.md","articles":[]},"previous":{"title":"6.2.2.3.6 GATTSCharacteristic","level":"7.2.2.3.6","depth":4,"path":"chapter/firmwareapi/pycom/network/bluetooth/gattscharacteristic.md","ref":"chapter/firmwareapi/pycom/network/bluetooth/gattscharacteristic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","-fontsettings","bring-yer-favicon","github","youtube","livereload"],"pluginsConfig":{"youtube":{},"github":{"url":"https://github.com/pycom"},"livereload":{},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"bring-yer-favicon":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"favicons":{"favicon.ico":"docs/_book/img/favicon.ico","apple-touch-icon-precomposed-152.png":"docs/_book/img/apple-icon.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/continuum/cms.css"}},"file":{"path":"chapter/firmwareapi/pycom/network/lora.md","mtime":"2017-07-10T12:43:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-10T13:10:52.142Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+

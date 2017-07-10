@@ -1,0 +1,2142 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.3.2 uctypes · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../assets/continuum/cms.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sys.html" />
+    
+    
+    <link rel="prev" href="micropython.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../products.html">
+            
+                <a href="../../products.html">
+            
+                    
+                    Pycom Products
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1. Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../gettingstarted/">
+            
+                <a href="../../gettingstarted/">
+            
+                    
+                    1.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../gettingstarted/unboxing.html">
+            
+                <a href="../../gettingstarted/unboxing.html">
+            
+                    
+                    1.2 Unboxing/Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../gettingstarted/installingsoftware.html">
+            
+                <a href="../../gettingstarted/installingsoftware.html">
+            
+                    
+                    1.3 Installing Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../gettingstarted/installation/firmwaretool.html">
+            
+                <a href="../../gettingstarted/installation/firmwaretool.html">
+            
+                    
+                    1.3.1 Updating Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../gettingstarted/installation/pymakr.html">
+            
+                <a href="../../gettingstarted/installation/pymakr.html">
+            
+                    
+                    1.3.2 Pymakr Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../gettingstarted/registration.html">
+            
+                <a href="../../gettingstarted/registration.html">
+            
+                    
+                    1.4 Device Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../gettingstarted/micropython.html">
+            
+                <a href="../../gettingstarted/micropython.html">
+            
+                    
+                    1.5 Introduction to MicroPython
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../gettingstarted/micropython/examples.html">
+            
+                <a href="../../gettingstarted/micropython/examples.html">
+            
+                    
+                    1.5.1 Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2. Tools & Features</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../toolsandfeatures/">
+            
+                <a href="../../toolsandfeatures/">
+            
+                    
+                    2.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../toolsandfeatures/pycommodules.html">
+            
+                <a href="../../toolsandfeatures/pycommodules.html">
+            
+                    
+                    2.2 Pycom Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../toolsandfeatures/repl/">
+            
+                <a href="../../toolsandfeatures/repl/">
+            
+                    
+                    2.3 REPL & Uploading Code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../toolsandfeatures/repl/serial.html">
+            
+                <a href="../../toolsandfeatures/repl/serial.html">
+            
+                    
+                    2.3.1 Serial USB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../toolsandfeatures/repl/telnet.html">
+            
+                <a href="../../toolsandfeatures/repl/telnet.html">
+            
+                    
+                    2.3.2 Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../toolsandfeatures/FTP.html">
+            
+                <a href="../../toolsandfeatures/FTP.html">
+            
+                    
+                    2.3.3 FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../toolsandfeatures/bootmodes.html">
+            
+                <a href="../../toolsandfeatures/bootmodes.html">
+            
+                    
+                    2.4 Boot Modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../toolsandfeatures/notes.html">
+            
+                <a href="../../toolsandfeatures/notes.html">
+            
+                    
+                    2.6 Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3. Pymakr Plugin</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../pymakr/">
+            
+                <a href="../../pymakr/">
+            
+                    
+                    3.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../pymakr/installation/">
+            
+                <a href="../../pymakr/installation/">
+            
+                    
+                    3.2 Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../pymakr/installation/atom.html">
+            
+                <a href="../../pymakr/installation/atom.html">
+            
+                    
+                    3.2.1 Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../pymakr/installation/serial.html">
+            
+                <a href="../../pymakr/installation/serial.html">
+            
+                    
+                    3.2.2 Serial USB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../pymakr/installation/telnet.html">
+            
+                <a href="../../pymakr/installation/telnet.html">
+            
+                    
+                    3.2.3 Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../pymakr/toolsfeatures.html">
+            
+                <a href="../../pymakr/toolsfeatures.html">
+            
+                    
+                    3.4 Tools/Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">4. Pysense & Pytrack</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../pytrackpysense/">
+            
+                <a href="../../pytrackpysense/">
+            
+                    
+                    4.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../pytrackpysense/installation/">
+            
+                <a href="../../pytrackpysense/installation/">
+            
+                    
+                    4.2 Installing Software
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../pytrackpysense/installation/firmware.html">
+            
+                <a href="../../pytrackpysense/installation/firmware.html">
+            
+                    
+                    4.2.1 Updating Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../pytrackpysense/installation/libraries.html">
+            
+                <a href="../../pytrackpysense/installation/libraries.html">
+            
+                    
+                    4.2.2 Installing Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../../pytrackpysense/apireference/">
+            
+                <a href="../../pytrackpysense/apireference/">
+            
+                    
+                    4.3 API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../../pytrackpysense/apireference/pytrack.html">
+            
+                <a href="../../pytrackpysense/apireference/pytrack.html">
+            
+                    
+                    4.3.1 Pytrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../../pytrackpysense/apireference/pysense.html">
+            
+                <a href="../../pytrackpysense/apireference/pysense.html">
+            
+                    
+                    4.3.2 Pysense
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">5. Tutorials & Examples</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../tutorials/">
+            
+                <a href="../../tutorials/">
+            
+                    
+                    5.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../tutorials/all/">
+            
+                <a href="../../tutorials/all/">
+            
+                    
+                    5.2 All Pycom Device Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../../tutorials/all/repl.html">
+            
+                <a href="../../tutorials/all/repl.html">
+            
+                    
+                    5.2.1 REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../../tutorials/all/wlan.html">
+            
+                <a href="../../tutorials/all/wlan.html">
+            
+                    
+                    5.2.2 WLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../../tutorials/all/ble.html">
+            
+                <a href="../../tutorials/all/ble.html">
+            
+                    
+                    5.2.3 Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../../tutorials/all/https.html">
+            
+                <a href="../../tutorials/all/https.html">
+            
+                    
+                    5.2.4 HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../../tutorials/all/mqtt.html">
+            
+                <a href="../../tutorials/all/mqtt.html">
+            
+                    
+                    5.2.5 MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.6" data-path="../../tutorials/all/aws.html">
+            
+                <a href="../../tutorials/all/aws.html">
+            
+                    
+                    5.2.6 AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.7" data-path="../../tutorials/all/adc.html">
+            
+                <a href="../../tutorials/all/adc.html">
+            
+                    
+                    5.2.7 ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.8" data-path="../../tutorials/all/i2c.html">
+            
+                <a href="../../tutorials/all/i2c.html">
+            
+                    
+                    5.2.8 I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.9" data-path="../../tutorials/all/owd.html">
+            
+                <a href="../../tutorials/all/owd.html">
+            
+                    
+                    5.2.9 Onewire Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.10" data-path="../../tutorials/all/threading.html">
+            
+                <a href="../../tutorials/all/threading.html">
+            
+                    
+                    5.2.10 Threading
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.11" data-path="../../tutorials/all/rgbled.html">
+            
+                <a href="../../tutorials/all/rgbled.html">
+            
+                    
+                    5.2.11 RGB LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.12" data-path="../../tutorials/all/timers.html">
+            
+                <a href="../../tutorials/all/timers.html">
+            
+                    
+                    5.2.12 Timers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.13" data-path="../../tutorials/all/pir.html">
+            
+                <a href="../../tutorials/all/pir.html">
+            
+                    
+                    5.2.13 PIR Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../tutorials/lopy/">
+            
+                <a href="../../tutorials/lopy/">
+            
+                    
+                    5.3 LoPy Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../../tutorials/lopy/lora-mac.html">
+            
+                <a href="../../tutorials/lopy/lora-mac.html">
+            
+                    
+                    5.3.1 LoRa-MAC (Raw LoRa)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../../tutorials/lopy/lorawan-otaa.html">
+            
+                <a href="../../tutorials/lopy/lorawan-otaa.html">
+            
+                    
+                    5.3.2 LoRaWAN with OTAA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="../../tutorials/lopy/lorawan-abp.html">
+            
+                <a href="../../tutorials/lopy/lorawan-abp.html">
+            
+                    
+                    5.3.3 LoRaWAN with ABP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.4" data-path="../../tutorials/lopy/lora-mac-nano-gateway.html">
+            
+                <a href="../../tutorials/lopy/lora-mac-nano-gateway.html">
+            
+                    
+                    5.3.4 LoRa-MAC Nano-Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.5" data-path="../../tutorials/lopy/lopy-lopy.html">
+            
+                <a href="../../tutorials/lopy/lopy-lopy.html">
+            
+                    
+                    5.3.5 LoPy to LoPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.6" data-path="../../tutorials/lopy/lorawan-nano-gateway.html">
+            
+                <a href="../../tutorials/lopy/lorawan-nano-gateway.html">
+            
+                    
+                    5.3.6 LoRaWAN Nano-Gateway
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../tutorials/sipy/">
+            
+                <a href="../../tutorials/sipy/">
+            
+                    
+                    5.4 SiPy Examples
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../../tutorials/sipy/register.html">
+            
+                <a href="../../tutorials/sipy/register.html">
+            
+                    
+                    5.4.1 Register Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../tutorials/pytrack/README.md">
+            
+                <span>
+            
+                    
+                    5.5 Pytrack Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../tutorials/pysense/README.md">
+            
+                <span>
+            
+                    
+                    5.6 Pysense Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">6. Firmware & API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    6.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../pycom/">
+            
+                <a href="../pycom/">
+            
+                    
+                    6.2 Pycom Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="../pycom/machine/">
+            
+                <a href="../pycom/machine/">
+            
+                    
+                    6.2.1 machine
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1.1" data-path="../pycom/machine/ADC.html">
+            
+                <a href="../pycom/machine/ADC.html">
+            
+                    
+                    6.2.1.1 ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.2" data-path="../pycom/machine/DAC.html">
+            
+                <a href="../pycom/machine/DAC.html">
+            
+                    
+                    6.2.1.2 DAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.3" data-path="../pycom/machine/I2C.html">
+            
+                <a href="../pycom/machine/I2C.html">
+            
+                    
+                    6.2.1.3 I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.4" data-path="../pycom/machine/Pin.html">
+            
+                <a href="../pycom/machine/Pin.html">
+            
+                    
+                    6.2.1.4 Pin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.5" data-path="../pycom/machine/PWM.html">
+            
+                <a href="../pycom/machine/PWM.html">
+            
+                    
+                    6.2.1.5 PWM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.6" data-path="../pycom/machine/RTC.html">
+            
+                <a href="../pycom/machine/RTC.html">
+            
+                    
+                    6.2.1.6 RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.7" data-path="../pycom/machine/SPI.html">
+            
+                <a href="../pycom/machine/SPI.html">
+            
+                    
+                    6.2.1.7 SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.8" data-path="../pycom/machine/UART.html">
+            
+                <a href="../pycom/machine/UART.html">
+            
+                    
+                    6.2.1.8 UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.9" data-path="../pycom/machine/WDT.html">
+            
+                <a href="../pycom/machine/WDT.html">
+            
+                    
+                    6.2.1.9 WDT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.10" data-path="../pycom/machine/Timer.html">
+            
+                <a href="../pycom/machine/Timer.html">
+            
+                    
+                    6.2.1.10 Timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.1.11" data-path="../pycom/machine/SD.html">
+            
+                <a href="../pycom/machine/SD.html">
+            
+                    
+                    6.2.1.11 SD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="../pycom/network/">
+            
+                <a href="../pycom/network/">
+            
+                    
+                    6.2.2 network
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.2.1" data-path="../pycom/network/wlan.html">
+            
+                <a href="../pycom/network/wlan.html">
+            
+                    
+                    6.2.2.1 WLAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.2" data-path="../pycom/network/server.html">
+            
+                <a href="../pycom/network/server.html">
+            
+                    
+                    6.2.2.2 Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3" data-path="../pycom/network/bluetooth/">
+            
+                <a href="../pycom/network/bluetooth/">
+            
+                    
+                    6.2.2.3 Bluetooth
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.2.3.1" data-path="../pycom/network/bluetooth/gatt.html">
+            
+                <a href="../pycom/network/bluetooth/gatt.html">
+            
+                    
+                    6.2.2.3.1 GATT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.2" data-path="../pycom/network/bluetooth/gattcconnection.html">
+            
+                <a href="../pycom/network/bluetooth/gattcconnection.html">
+            
+                    
+                    6.2.2.3.2 GATTCConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.3" data-path="../pycom/network/bluetooth/gattccservice.html">
+            
+                <a href="../pycom/network/bluetooth/gattccservice.html">
+            
+                    
+                    6.2.2.3.3 GATTCService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.4" data-path="../pycom/network/bluetooth/gattccharacteristic.html">
+            
+                <a href="../pycom/network/bluetooth/gattccharacteristic.html">
+            
+                    
+                    6.2.2.3.4 GATTCCharacteristic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.5" data-path="../pycom/network/bluetooth/gattsservice.html">
+            
+                <a href="../pycom/network/bluetooth/gattsservice.html">
+            
+                    
+                    6.2.2.3.5 GATTSService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.3.6" data-path="../pycom/network/bluetooth/gattscharacteristic.html">
+            
+                <a href="../pycom/network/bluetooth/gattscharacteristic.html">
+            
+                    
+                    6.2.2.3.6 GATTSCharacteristic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.4" data-path="../pycom/network/lora.html">
+            
+                <a href="../pycom/network/lora.html">
+            
+                    
+                    6.2.2.4 LoRa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2.5" data-path="../pycom/network/sigfox.html">
+            
+                <a href="../pycom/network/sigfox.html">
+            
+                    
+                    6.2.2.5 Sigfox
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="../pycom/aes.html">
+            
+                <a href="../pycom/aes.html">
+            
+                    
+                    6.2.3 AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.4" data-path="../pycom/pycom.html">
+            
+                <a href="../pycom/pycom.html">
+            
+                    
+                    6.2.4 pycom
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    6.3 MicroPython Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.3.1" data-path="micropython.html">
+            
+                <a href="micropython.html">
+            
+                    
+                    6.3.1 micropython
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.3.2" data-path="uctypes.html">
+            
+                <a href="uctypes.html">
+            
+                    
+                    6.3.2 uctypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.3" data-path="sys.html">
+            
+                <a href="sys.html">
+            
+                    
+                    6.3.3 sys
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.4" data-path="uos.html">
+            
+                <a href="uos.html">
+            
+                    
+                    6.3.4 uos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.5" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                    6.3.5 array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.6" data-path="cmath.html">
+            
+                <a href="cmath.html">
+            
+                    
+                    6.3.6 cmath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.7" data-path="math.html">
+            
+                <a href="math.html">
+            
+                    
+                    6.3.7 math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.8" data-path="gc.html">
+            
+                <a href="gc.html">
+            
+                    
+                    6.3.8 gc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.9" data-path="ubinascii.html">
+            
+                <a href="ubinascii.html">
+            
+                    
+                    6.3.9 ubinascii
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.10" data-path="ujson.html">
+            
+                <a href="ujson.html">
+            
+                    
+                    6.3.10 ujson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.11" data-path="ure.html">
+            
+                <a href="ure.html">
+            
+                    
+                    6.3.11 ure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.12" data-path="usocket.html">
+            
+                <a href="usocket.html">
+            
+                    
+                    6.3.12 usocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.13" data-path="select.html">
+            
+                <a href="select.html">
+            
+                    
+                    6.3.13 select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.14" data-path="utime.html">
+            
+                <a href="utime.html">
+            
+                    
+                    6.3.14 utime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.15" data-path="uhashlib.html">
+            
+                <a href="uhashlib.html">
+            
+                    
+                    6.3.15 uhashlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.16" data-path="ussl.html">
+            
+                <a href="ussl.html">
+            
+                    
+                    6.3.16 ussl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.17" data-path="ucrypto.html">
+            
+                <a href="ucrypto.html">
+            
+                    
+                    6.3.17 ucrypto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.18" data-path="ustruct.html">
+            
+                <a href="ustruct.html">
+            
+                    
+                    6.3.18 ustruct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.19" data-path="_thread.html">
+            
+                <a href="_thread.html">
+            
+                    
+                    6.3.19 _thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.20" data-path="builtin.html">
+            
+                <a href="builtin.html">
+            
+                    
+                    6.3.20 Builtin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">7. Datasheets</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../datasheets/">
+            
+                <a href="../../datasheets/">
+            
+                    
+                    7.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../datasheets/development/">
+            
+                <a href="../../datasheets/development/">
+            
+                    
+                    7.2 Development Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.2.1" data-path="../../datasheets/development/wipy2.html">
+            
+                <a href="../../datasheets/development/wipy2.html">
+            
+                    
+                    7.2.1 WiPy 2.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.2" data-path="../../datasheets/development/lopy.html">
+            
+                <a href="../../datasheets/development/lopy.html">
+            
+                    
+                    7.2.2 LoPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.3" data-path="../../datasheets/development/sipy.html">
+            
+                <a href="../../datasheets/development/sipy.html">
+            
+                    
+                    7.2.3 SiPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.4" data-path="../../datasheets/development/gpy.html">
+            
+                <a href="../../datasheets/development/gpy.html">
+            
+                    
+                    7.2.4 GPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.5" data-path="../../datasheets/development/fipy.html">
+            
+                <a href="../../datasheets/development/fipy.html">
+            
+                    
+                    7.2.5 FiPy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../../datasheets/oem/">
+            
+                <a href="../../datasheets/oem/">
+            
+                    
+                    7.3 OEM Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.3.1" data-path="../../datasheets/oem/w01.html">
+            
+                <a href="../../datasheets/oem/w01.html">
+            
+                    
+                    7.3.1 W01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.2" data-path="../../datasheets/oem/l01.html">
+            
+                <a href="../../datasheets/oem/l01.html">
+            
+                    
+                    7.3.2 L01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.3" data-path="../../datasheets/oem/g01.html">
+            
+                <a href="../../datasheets/oem/g01.html">
+            
+                    
+                    7.3.3 G01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3.4" data-path="../../datasheets/oem/reference.html">
+            
+                <a href="../../datasheets/oem/reference.html">
+            
+                    
+                    7.3.4 OEM Baseboard Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../../datasheets/boards/">
+            
+                <a href="../../datasheets/boards/">
+            
+                    
+                    7.4 Expansion Boards and Shields
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.4.1" data-path="../../datasheets/boards/expansion.html">
+            
+                <a href="../../datasheets/boards/expansion.html">
+            
+                    
+                    7.4.1 Expansion Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.2" data-path="../../datasheets/boards/pytrack.html">
+            
+                <a href="../../datasheets/boards/pytrack.html">
+            
+                    
+                    7.4.2 Pytrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.3" data-path="../../datasheets/boards/pysense.html">
+            
+                <a href="../../datasheets/boards/pysense.html">
+            
+                    
+                    7.4.3 Pysense
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.4" data-path="../../datasheets/boards/deepsleep.html">
+            
+                <a href="../../datasheets/boards/deepsleep.html">
+            
+                    
+                    7.4.4 Deep Sleep Shield
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../../datasheets/notes/">
+            
+                <a href="../../datasheets/notes/">
+            
+                    
+                    7.5 Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">8. Documentation Notes</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../docnotes/">
+            
+                <a href="../../docnotes/">
+            
+                    
+                    8.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../docnotes/syntax.html">
+            
+                <a href="../../docnotes/syntax.html">
+            
+                    
+                    8.2 Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../../docnotes/replscript.html">
+            
+                <a href="../../docnotes/replscript.html">
+            
+                    
+                    8.3 REPL vs Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">9. License</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../license/">
+            
+                <a href="../../license/">
+            
+                    
+                    9.1 License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >6.3.2 uctypes</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="uctypes-&#x2013;-access-binary-data-in-a-structured-format">uctypes &#x2013; Access Binary Data in a Structured Format</h1>
+<p>This module implements &#x201C;foreign data interface&#x201D; for MicroPython. The idea behind it is similar to CPython&#x2019;s <code>ctypes</code> modules, but the actual API is different, streamlined and optimised for small size. The basic idea of the module is to define data structure layout with about the same power as the C language allows, and the access it using familiar dot-syntax to reference sub-fields.</p>
+<p><div class="alert alert-undefined hints-alert"><div class="hints-icon"><i class="undefined"></i></div><div class="hints-container"><p>Module ustruct
+Standard Python way to access binary data structures (doesn&#x2019;t scale well to large and complex structures).</p>
+</div></div></p>
+<h3 id="defining-structure-layout">Defining Structure Layout</h3>
+<p>Structure layout is defined by a &#x201C;descriptor&#x201D; - a Python dictionary which encodes field names as keys and other properties required to access them as associated values. Currently, <code>uctypes</code> requires explicit specification of offsets for each field. Offset are given in bytes from a structure start.</p>
+<p>Following are encoding examples for various field types:</p>
+<ul>
+<li>Scalar types:</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-string">&quot;field_name&quot;</span>: uctypes.UINT32 | <span class="hljs-number">0</span>
+</code></pre>
+<p>In other words, value is scalar type identifier OR-ed with field offset (in bytes) from the start of the structure.</p>
+<ul>
+<li>Recursive structures:</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-string">&quot;sub&quot;</span>: (<span class="hljs-number">2</span>, {
+    <span class="hljs-string">&quot;b0&quot;</span>: uctypes.UINT8 | <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;b1&quot;</span>: uctypes.UINT8 | <span class="hljs-number">1</span>,
+})
+</code></pre>
+<p>i.e. value is a 2-tuple, first element of which is offset, and second is a structure descriptor dictionary (note: offsets in recursive descriptors are relative to a structure it defines).</p>
+<ul>
+<li>Arrays of Primitive Types:</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-string">&quot;arr&quot;</span>: (uctypes.ARRAY | <span class="hljs-number">0</span>, uctypes.UINT8 | <span class="hljs-number">2</span>),
+</code></pre>
+<p>i.e. value is a 2-tuple, first element of which is ARRAY flag OR-ed with offset, and second is scalar element type ORed number of elements in array.</p>
+<ul>
+<li>Arrays of Aggregate Types:</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-string">&quot;arr2&quot;</span>: (uctypes.ARRAY | <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, {<span class="hljs-string">&quot;b&quot;</span>: uctypes.UINT8 | <span class="hljs-number">0</span>}),
+</code></pre>
+<p>i.e. value is a 3-tuple, first element of which is ARRAY flag OR-ed with offset, second is a number of elements in array, and third is descriptor of element type.</p>
+<ul>
+<li>Pointer to a primitive type:</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-string">&quot;ptr&quot;</span>: (uctypes.PTR | <span class="hljs-number">0</span>, uctypes.UINT8),
+</code></pre>
+<p>i.e. value is a 2-tuple, first element of which is PTR flag ORed with offset, and second is scalar element type.</p>
+<ul>
+<li>Pointer to an aggregate type:</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-string">&quot;ptr2&quot;</span>: (uctypes.PTR | <span class="hljs-number">0</span>, {<span class="hljs-string">&quot;b&quot;</span>: uctypes.UINT8 | <span class="hljs-number">0</span>}),
+</code></pre>
+<p>i.e. value is a 2-tuple, first element of which is PTR flag ORed with offset, second is descriptor of type pointed to.</p>
+<ul>
+<li>Bitfields:</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-string">&quot;bitf0&quot;</span>: uctypes.BFUINT16 | <span class="hljs-number">0</span> | <span class="hljs-number">0</span> &lt;&lt; uctypes.BF_POS | <span class="hljs-number">8</span> &lt;&lt; uctypes.BF_LEN,
+</code></pre>
+<p>i.e. value is type of scalar value containing given bitfield (typenames are similar to scalar types, but prefixes with &#x201C;BF&#x201D;), OR-ed with offset for scalar value containing the bitfield, and further OR-ed with values for bit offset and bit length of the bitfield within scalar value, shifted by BF_POS and BF_LEN positions, respectively. Bitfield position is counted from the least significant bit, and is the number of right-most bit of a field (in other words, it&#x2019;s a number of bits a scalar needs to be shifted right to extra the bitfield).</p>
+<p>In the example above, first UINT16 value will be extracted at offset 0 (this detail may be important when accessing hardware registers, where particular access size and alignment are required), and then bitfield whose rightmost bit is least-significant bit of this UINT16, and length is 8 bits, will be extracted - effectively, this will access least-significant byte of UINT16.</p>
+<p>Note that bitfield operations are independent of target byte endianness, in particular, example above will access least-significant byte of UINT16 in both little- and big-endian structures. But it depends on the least significant bit being numbered 0. Some targets may use different numbering in their native ABI, but <code>uctypes</code> always uses normalised numbering described above.</p>
+<h3 id="module-contents">Module Contents</h3>
+<class><i>class</i> uctypes.struct(addr, descriptor, layout_type=NATIVE)</class>
+
+<p>Instantiate a &#x201C;foreign data structure&#x201D; object based on structure address in memory, descriptor (encoded as a dictionary), and layout type (see below).</p>
+<function>uctypes.LITTLE_ENDIAN</function>
+
+<p>Layout type for a little-endian packed structure. (Packed means that every field occupies exactly as many bytes as defined in the descriptor, i.e. the alignment is 1).</p>
+<function>uctypes.BIG_ENDIAN</function>
+
+<p>Layout type for a big-endian packed structure.</p>
+<function>uctypes.NATIVE</function>
+
+<p>Layout type for a native structure - with data endianness and alignment conforming to the ABI of the system on which MicroPython runs.</p>
+<function>uctypes.sizeof(struct)</function>
+
+<p>Return size of data structure in bytes. Argument can be either structure class or specific instantiated structure object (or its aggregate field).</p>
+<function>uctypes.addressof(obj)</function>
+
+<p>Return address of an object. Argument should be bytes, bytearray or other object supporting buffer protocol (and address of this buffer is what actually returned).</p>
+<function>uctypes.bytes_at(addr, size)</function>
+
+<p>Capture memory at the given address and size as bytes object. As bytes object is immutable, memory is actually duplicated and copied into bytes object, so if memory contents change later, created object retains original value.</p>
+<function>uctypes.bytearray_at(addr, size)</function>
+
+<p>Capture memory at the given address and size as bytearray object. Unlike bytes_at() function above, memory is captured by reference, so it can be both written too, and you will access current value at the given memory address.</p>
+<h3 id="structure-descriptors-and-instantiating-structure-objects">Structure Descriptors and Instantiating Structure Objects</h3>
+<p>Given a structure descriptor dictionary and its layout type, you can instantiate a specific structure instance at a given memory address using <function>uctypes.struct()</function> constructor. Memory address usually comes from following sources:</p>
+<ul>
+<li>Predefined address, when accessing hardware registers on a baremetal system. Lookup these addresses in datasheet for a particular MCU/SoC.</li>
+<li>As a return value from a call to some FFI (Foreign Function Interface) function.</li>
+<li>From <function>uctypes.addressof()</function>, when you want to pass arguments to an FFI function, or alternatively, to access some data for I/O (for example, data read from a file or network socket).</li>
+</ul>
+<h3 id="structure-objects">Structure objects</h3>
+<p>Structure objects allow accessing individual fields using standard dot notation: <code>my_struct.substruct1.field1</code>. If a field is of scalar type, getting it will produce a primitive value (Python integer or float) corresponding to the value contained in a field. A scalar field can also be assigned to.</p>
+<p>If a field is an array, its individual elements can be accessed with the standard subscript operator <code>[]</code> - both read and assigned to.</p>
+<p>If a field is a pointer, it can be dereferenced using <code>[0]</code> syntax (corresponding to C * operator, though <code>[0]</code> works in C too). Subscripting a pointer with other integer values but 0 are supported too, with the same semantics as in C.</p>
+<p>Summing up, accessing structure fields generally follows C syntax, except for pointer dereference, when you need to use [0] operator instead of * .</p>
+<h3 id="limitations">Limitations</h3>
+<p>Accessing non-scalar fields leads to allocation of intermediate objects to represent them. This means that special care should be taken to layout a structure which needs to be accessed when memory allocation is disabled (e.g. from an interrupt). The recommendations are:</p>
+<ul>
+<li>Avoid nested structures. For example, instead of <code>mcu_registers.peripheral_a.register1</code>, define separate layout descriptors for each peripheral, to be accessed as <code>peripheral_a.register1</code>.</li>
+<li>Avoid other non-scalar data, like array. For example, instead of <code>peripheral_a.register[0]</code> use <code>peripheral_a.register0</code>.</li>
+</ul>
+<p>Note that these recommendations will lead to decreased readability and conciseness of layouts, so they should be used only if the need to access structure fields without allocation is anticipated (it&#x2019;s even possible to define 2 parallel layouts - one for normal usage, and a restricted one to use when memory allocation is prohibited).</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="micropython.html" class="navigation navigation-prev " aria-label="Previous page: 6.3.1 micropython">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sys.html" class="navigation navigation-next " aria-label="Next page: 6.3.3 sys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.3.2 uctypes","level":"7.3.2","depth":2,"next":{"title":"6.3.3 sys","level":"7.3.3","depth":2,"path":"chapter/firmwareapi/micropython/sys.md","ref":"chapter/firmwareapi/micropython/sys.md","articles":[]},"previous":{"title":"6.3.1 micropython","level":"7.3.1","depth":2,"path":"chapter/firmwareapi/micropython/micropython.md","ref":"chapter/firmwareapi/micropython/micropython.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","-fontsettings","bring-yer-favicon","github","youtube","livereload"],"pluginsConfig":{"youtube":{},"github":{"url":"https://github.com/pycom"},"livereload":{},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"bring-yer-favicon":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"favicons":{"favicon.ico":"docs/_book/img/favicon.ico","apple-touch-icon-precomposed-152.png":"docs/_book/img/apple-icon.png"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"assets/continuum/cms.css"}},"file":{"path":"chapter/firmwareapi/micropython/uctypes.md","mtime":"2017-07-10T13:54:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-10T13:10:52.142Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
