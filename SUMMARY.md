@@ -127,26 +127,6 @@
 	* [6.3.19 _thread](chapter/firmwareapi/micropython/_thread.md)
 	* [6.3.20 Builtin](chapter/firmwareapi/micropython/builtin.md)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 7. Datasheets
 
 * [7.1 Introduction](chapter/datasheets/README.md)

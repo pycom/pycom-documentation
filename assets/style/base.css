@@ -17,7 +17,7 @@
 
 .book .book-summary ul.summary li a:hover,
 .book .book-summary ul.summary li.active a {
-  color: white;
+  color: #4E8CC8;
 }
 
 .book .book-summary ul.summary li.header {
@@ -37,16 +37,16 @@
 }
 
 #book-search-input input::-webkit-input-placeholder,
-.book-search input::-webkit-input-placeholder { 
-  color: white; 
+.book-search input::-webkit-input-placeholder {
+  color: white;
 }
 
 #book-search-input input::-moz-input-placeholder,
-.book-search input::-moz-input-placeholder { 
-  color: white; 
+.book-search input::-moz-input-placeholder {
+  color: white;
 }
 
 #book-search-input input::-ms-input-placeholder,
-.book-search input::-ms-input-placeholder { 
-  color: white; 
+.book-search input::-ms-input-placeholder {
+  color: white;
 }
