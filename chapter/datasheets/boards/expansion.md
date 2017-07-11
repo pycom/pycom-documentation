@@ -4,7 +4,7 @@
 
 ### Pinout
 
-The pinout of the Expansion Board is available as a [PDF document](downloads/expansion-pinout.pdf).
+The pinout of the Expansion Board is available as a [PDF document](../downloads/expansion-pinout.pdf).
 
 <p align="center"><img src ="../../../img/expansion-pinout.png"></p>
 
@@ -14,4 +14,4 @@ Be gentle when plugging/unplugging from the USB connector. Whilst the USB connec
 
 ### Specsheets
 
-The specsheet of the Expansion Board is available as a [PDF document](downloads/expansion-specsheet.pdf).
+The specsheet of the Expansion Board is available as a [PDF document](../downloads/expansion-specsheet.pdf).
