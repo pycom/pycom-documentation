@@ -23,8 +23,8 @@
 * [2.3 REPL & Uploading Code](chapter/toolsandfeatures/repl/README.md)
 	* [2.3.1 Serial USB](chapter/toolsandfeatures/repl/serial.md)
 	* [2.3.2 Telnet](chapter/toolsandfeatures/repl/telnet.md)
-* [2.3.3 FTP](chapter/toolsandfeatures/FTP.md)
-* [2.4 Boot Modes](chapter/toolsandfeatures/bootmodes.md)
+* [2.4 FTP](chapter/toolsandfeatures/FTP.md)
+* [2.5 Boot Modes](chapter/toolsandfeatures/bootmodes.md)
 * [2.6 Notes](chapter/toolsandfeatures/notes.md)
 
 ### 3. Pymakr Plugin
@@ -34,7 +34,7 @@
 	* [3.2.1 Atom](chapter/pymakr/installation/atom.md)
 	* [3.2.2 Serial USB](chapter/pymakr/installation/serial.md)
 	* [3.2.3 Telnet](chapter/pymakr/installation/telnet.md)
-* [3.4 Tools/Features](chapter/pymakr/toolsfeatures.md)
+* [3.3 Tools/Features](chapter/pymakr/toolsfeatures.md)
 
 ### 4. Pysense & Pytrack
 
