@@ -1,5 +1,4 @@
 {
-	"root": "./docs",
 	"plugins": ["hints","-fontsettings","bring-yer-favicon","github", "youtube"],
 	"pluginsConfig": {
 		"fontsettings": {
