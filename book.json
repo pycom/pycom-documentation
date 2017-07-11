@@ -1,5 +1,5 @@
 {
-	"plugins": ["hints","-fontsettings","bring-yer-favicon","github", "youtube"],
+	"plugins": ["hints","-fontsettings","github", "youtube"],
 	"pluginsConfig": {
 		"fontsettings": {
 			"theme": "white",
@@ -8,10 +8,6 @@
 		},
 		"github": {
 			"url": "https://github.com/pycom"
-		},
-		"favicons": {
-			"favicon.ico": "docs/_book/img/favicon.ico",
-			"apple-touch-icon-precomposed-152.png": "docs/_book/img/apple-icon.png"
 		},
 		"lunr" : {
 			"maxIndexSize": 1000000000
