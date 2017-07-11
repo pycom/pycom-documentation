@@ -1,5 +1,5 @@
 {
-	"plugins": ["hints","-fontsettings","github", "youtube"],
+	"plugins": ["hints","-fontsettings","github", "youtube", "anchors"],
 	"pluginsConfig": {
 		"fontsettings": {
 			"theme": "white",
