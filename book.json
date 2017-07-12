@@ -1,5 +1,5 @@
 {
-	"plugins": ["hints","-fontsettings","github", "youtube", "anchors"],
+	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia"],
 	"pluginsConfig": {
 		"fontsettings": {
 			"theme": "white",
@@ -11,6 +11,12 @@
 		},
 		"lunr" : {
 			"maxIndexSize": 1000000000
+		},
+		"algolia": {
+			"index": "pycom_docs",
+			"applicationID": "PQ23WHN1L4",
+			"publicKey": "4df795f3b883651272450a06ef760108",
+			"freeAccount": "true"
 		}
 	},
 	"styles": {
