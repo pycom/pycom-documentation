@@ -148,12 +148,21 @@
 	* [7.4.4 Deep Sleep Shield](chapter/datasheets/boards/deepsleep.md)
 * [7.5 Notes](chapter/datasheets/notes/README.md)
 
-### 8. Documentation Notes
+### 8. Pybytes Beta
 
-* [8.1 Introduction](chapter/docnotes/README.md)
-* [8.2 Syntax](chapter/docnotes/syntax.md)
-* [8.3 REPL vs Scripts](chapter/docnotes/replscript.md)
+* [8.1 Introduction](chapter/pybytes/README.md)
+* [8.2 Registration](chapter/pybytes/registration.md)
+* [8.3 Device Setup](chapter/pybytes/devicesetup.md)
+* [8.4 Features](chapter/pybytes/features.md)
+* [8.5 Support](chapter/pybytes/support.md)
 
-### 9. License
 
-* [9.1 License](chapter/license/README.md)
+### 9. Documentation Notes
+
+* [9.1 Introduction](chapter/docnotes/README.md)
+* [9.2 Syntax](chapter/docnotes/syntax.md)
+* [9.3 REPL vs Scripts](chapter/docnotes/replscript.md)
+
+### 10. License
+
+* [10.1 License](chapter/license/README.md)
