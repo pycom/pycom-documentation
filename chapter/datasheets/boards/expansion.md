@@ -14,4 +14,4 @@ Be gentle when plugging/unplugging from the USB connector. Whilst the USB connec
 
 ### Specsheets
 
-The specsheet of the Expansion Board is available as a a href="../downloads/expansion-specsheet.pdf" target="_blank">PDF File</a>.
+The specsheet of the Expansion Board is available as a <a href="../downloads/expansion-specsheet.pdf" target="_blank">PDF File</a>.
