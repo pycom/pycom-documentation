@@ -15,7 +15,7 @@ See [network.server]() for information on how to change the defaults. The recomm
 - MacOS/Linux: default FTP client
 - Windows: Filezilla and FireFTP.
 
-For example, from a MacOS/[]()inux terminal:
+For example, from a MacOS/Linux terminal:
 
 ```bash
 $ ftp 192.168.4.1
