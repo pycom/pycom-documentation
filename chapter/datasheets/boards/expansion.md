@@ -4,7 +4,7 @@
 
 ### Pinout
 
-The pinout of the Expansion Board is available as a a href="../downloads/expansion-pinout.pdf" target="_blank">PDF File</a>.
+The pinout of the Expansion Board is available as a <a href="../downloads/expansion-pinout.pdf" target="_blank">PDF File</a>.
 
 <a href="../downloads/expansion-pinout.pdf" target="_blank" align="center"><img src ="../../../img/expansion-pinout.png"></a>
 
