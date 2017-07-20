@@ -32,8 +32,7 @@
 * [3.1 Introduction](chapter/pymakr/README.md)
 * [3.2 Installation](chapter/pymakr/installation/README.md)
 	* [3.2.1 Atom](chapter/pymakr/installation/atom.md)
-	* [3.2.2 Serial USB](chapter/pymakr/installation/serial.md)
-	* [3.2.3 Telnet](chapter/pymakr/installation/telnet.md)
+	* [3.2.2 Visual Studio Code](chapter/pymakr/installation/vscode.md)
 * [3.3 Tools/Features](chapter/pymakr/toolsfeatures.md)
 
 ### 4. Pysense & Pytrack
