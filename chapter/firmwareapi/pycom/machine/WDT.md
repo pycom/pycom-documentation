@@ -18,7 +18,7 @@ Create a WDT object and start it. The id can only be 0. See the init method for 
 
 ### Methods
 
-<function>machine.init(timeout)</function>
+<function>wdt.init(timeout)</function>
 
 Initialises the watchdog timer. The timeout must be given in milliseconds. Once it is running the WDT cannot be stopped but the timeout can be re-configured at any point in time.
 
