@@ -145,6 +145,7 @@
 	* [7.4.2 Pytrack](chapter/datasheets/boards/pytrack.md)
 	* [7.4.3 Pysense](chapter/datasheets/boards/pysense.md)
 	* [7.4.4 Deep Sleep Shield](chapter/datasheets/boards/deepsleep.md)
+		* [7.4.4.1 Deep Sleep API](chapter/datasheets/boards/deepsleep/api.md)
 * [7.5 Notes](chapter/datasheets/notes/README.md)
 
 ### 8. Pybytes Beta
@@ -154,7 +155,6 @@
 * [8.3 Device Setup](chapter/pybytes/devicesetup.md)
 * [8.4 Features](chapter/pybytes/features.md)
 * [8.5 Support](chapter/pybytes/support.md)
-
 
 ### 9. Documentation Notes
 
