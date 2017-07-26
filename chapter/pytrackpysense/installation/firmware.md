@@ -43,6 +43,34 @@ Arch:
 $ sudo pacman -Sy dfu-util
 ```
 
+##### Windows
+
+- [DFU-util](http://dfu-util.sourceforge.net/releases/dfu-util-0.8-binaries/win32-mingw32/dfu-util-static.exe) – Tool to upload the firmware to the Pytrack/Pysense
+- [Zadig](http://zadig.akeo.ie/) – Installer tool for the Pytrack/Pysense board DFU Firmware 
+
+To uploaded the latest DFU firmware to the Pytrack/Pysense, **first install the DFU drivers** to the host computer. Open Zadig and select ``libusbK`` as the driver.
+
+To install the drivers, the Pytrack/Pysense board must be in DFU-mode:
+
+1. Disconnect the USB cable
+2. Hold down the button on the shield
+3. Connect the USB cable
+4. Keep the button pressed for at least one second
+5. Release the button. When the board is connected in DFU-mode, it will be in this state for 7 seconds. 
+6. Click the “Install Driver” button immediately. If the driver was unsuccessful, repeat from step 1. 
+
+Occasionally, Windows will automatically install the incorrect drivers for the board. In this case, the button will be labelled “Reinstall Driver” or “Replace Driver”.
+
+<p align="center"><img src ="../../../img/zadig.png" width="400"></p>
+
+Open the command prompt and navigate to the directory where the DFU-util and the firmware was downloaded (must be in same directory). Repeat the procedure to get the board in DFU-mode and run the command below but replace ``X.X.X`` with the firmware version and replace pysense with pytrack if it is the pytrack that is to be updated (e.g: ``pytrack_0.0.4.dfu``):
+
+```bash
+dfu-util-static.exe -D pysense_X.X.X.dfu
+```
+
+If the update was successful, a message, “Done!” should appear in the bottom of the command prompt.
+
 ### Using DFU-util with Pytrack and Pysense
 
 In order to put Pyrack or Pysense in DFU mode, press and hold the button on the Pytrack/Pysense board whilst powering on the board (connecting the USB cable).
