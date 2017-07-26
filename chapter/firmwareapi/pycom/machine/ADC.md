@@ -1,3 +1,8 @@
+---
+search:
+    keywords: ['ADC', 'Analog', 'ADCChannel']
+---
+
 # class ADC – Analog to Digital Conversion
 
 ### Quick Usage Example
