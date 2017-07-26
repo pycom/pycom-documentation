@@ -89,5 +89,5 @@ This method sends the board into deep sleep for a period of ``seconds`` or until
 This method resets the PIC controller and resets it to the state previous to the pins/min-voltage being set.
 
 {% hint style='info' %}
-Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)
+Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Pycom Libraries](https://github.com/pycom/pycom-libraries) GitHub repository.
 {% endhint %}
