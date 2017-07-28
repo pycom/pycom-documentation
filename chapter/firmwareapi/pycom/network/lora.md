@@ -309,6 +309,22 @@ def lora_cb(lora):
 lora.callback(trigger=(LoRa.RX_PACKET_EVENT | LoRa.TX_PACKET_EVENT), handler=lora_cb)
 ```
 
+<function>lora.nvram_save()</function>
+
+Save the LoRaWAN state (joined status, network keys, packet counters, etc) in non-volatile memory in order to be able to restore the state when coming out of deepsleep or a power cycle.
+
+```python
+lora.nvram_save()
+```
+
+<function>lora.nvram_restore()</function>
+
+Restore the LoRaWAN state (joined status, network keys, packet counters, etc) from non-volatile memory. State must have been previously stored with a call to ``nvram_save`` before entering deepsleep. This is useful to be able to send a LoRaWAN message immediately after coming out of deepsleep without having to join the network again.
+
+```python
+lora.nvram_restore()
+```
+
 ### Constants
 
 <constant>LoRa.LORA</constant> <constant>LoRa.LORAWAN</constant>
