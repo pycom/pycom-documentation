@@ -81,7 +81,7 @@ A data structure that holds an ordered collection (sequence) of items.
 
 ```python
 networks = ['lora', 'sigfox', 'wifi', 'bluetooth', 'lte-m']
-print(network[2]) # expect 'wifi'
+print(networks[2]) # expect 'wifi'
 ```
 
 #### Dictionaries

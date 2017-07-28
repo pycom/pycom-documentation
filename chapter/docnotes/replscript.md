@@ -19,7 +19,7 @@ binascii.hexlify(b'12345') # REPL will print out "b'3132333435'" to the console
 binascii.hexlify(b'12345') # Script will not return any the console
 ```
 
-In order to use these functions that do not print out any values, you will need to either wrap them in a ``print()`` statement or assign them to variables and call them later when you wish to use them.
+In order to use these functions that do not print out any values, you will need to either wrap them in a `print()` statement or assign them to variables and call them later when you wish to use them.
 
 ##### For example:
 
@@ -31,3 +31,6 @@ value = 1 + 1
 # do something here...
 print(value)
 ```
+
+
+
