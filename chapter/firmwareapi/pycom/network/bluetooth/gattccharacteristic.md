@@ -17,7 +17,11 @@ Returns an integer indicating the properties of the characteristic. Properties a
 
 <function>characteristic.read()</function>
 
-Read the value of the characteristic. For now it always returns a bytes object representing the characteristic value. In the future a specific type (integer, string, bytes) will be returned depending on the characteristic in question.
+Read the value of the characteristic, sending a request to the GATT server. Returns a bytes object representing the characteristic value.
+
+<function>characteristic.value()</function>
+
+Returns the locally stored value of the characteristic whithout sending a read request to the GATT server. If the characteristic value hasn't been read from the GATT server yet, the value returned will be 0.
 
 <function>characteristic.write(value)</function>
 
