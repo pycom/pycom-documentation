@@ -96,12 +96,15 @@ or:
 lora.init(mode=LoRa.LORAWAN)
 ```
 
-<function>lora.join(activation, auth, * , timeout=None)</function>
+<function>lora.join(activation, auth, * ,timeout=None, dr=None)</function>
 
-Join a LoRaWAN network. The parameters are:
+Join a LoRaWAN network. Internally the stack will automatically retry every 15 seconds until a Join Accept message is received.
+The parameters are:
 
 - ``activation``: can be either <constant>LoRa.OTAA</constant> or <constant>LoRa.ABP</constant>.
 - ``auth``: is a tuple with the authentication data.
+- ``timeout``: is the maximum time in milliseconds to wait for the Join Accept message to be received. If no timeout (or zero) is given, the call returns immediatelly and the status of the join request can be checked with ``lora.has_joined()``.
+- ``dr``: is an optional value to specify the initial data rate for the Join Request. Possible values are 0 to 5 for **EU868**, or 0 to 4 for **US915**.
 
 In the case of <constant>LoRa.OTAA</constant> the authentication tuple is: (``app_eui``, ``app_key``). Example:
 
@@ -228,7 +231,7 @@ Where:
 
 - ``rx_timestamp`` is an internal timestamp of the last received packet with microseconds precision.
 - ``rssi`` holds the received signal strength in dBm.
-- ``snr`` contains the signal to noise ratio id dB.
+- ``snr`` contains the signal to noise ratio id dB (as a single precision float).
 - ``sfrx`` tells the data rate (in the case of LORAWAN mode) or the spreading factor (in the case of LORA mode) of the last packet received.
 - ``sftx`` tells the data rate (in the case of LORAWAN mode) or the spreading factor (in the case of LORA mode) of the last packet transmitted.
 - ``tx_trials`` is the number of tx attempts of the last transmitted packet (only relevant for LORAWAN confirmed packets).
@@ -397,6 +400,15 @@ s.send('Hello')
 Usage:
 ```python
 s.recv(128)
+```
+
+<function>socket.recvfrom(bufsize)</function>
+
+This method is useful to know the destination port number of the message received. Returns a tuple of the form: ``(data, port)``
+
+Usage:
+```python
+s.recvfrom(128)
 ```
 
 <function>socket.setsockopt(level, optname, value)</function>
