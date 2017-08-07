@@ -56,7 +56,7 @@ lora = LoRa(mode=LoRa.LORAWAN)
 
 ### Methods
 
-<function>lora.init(mode, * , frequency=868000000, tx_power=14, bandwidth=LoRa.BW_125KHZ, sf=7, preamble=8, coding_rate=LoRa.CODING_4_5, power_mode=LoRa.ALWAYS_ON, tx_iq=false, rx_iq=false, adr=false, public=true, tx_retries=1, device_class=LoRa.CLASS_A)</function>
+<function>lora.init(mode, * , frequency=868000000, tx_power=14, bandwidth=LoRa.BW_125KHZ, sf=7, preamble=8, coding_rate=LoRa.CODING_4_5, power_mode=LoRa.ALWAYS_ON, tx_iq=False, rx_iq=False, adr=False, public=True, tx_retries=1, device_class=LoRa.CLASS_A)</function>
 
 This method is used to set the LoRa subsystem configuration and to specific raw LoRa or LoRaWAN.
 
