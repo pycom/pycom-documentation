@@ -65,7 +65,7 @@ Disables the Bluetooth radio.
 
 <function>bluetooth.start_scan(timeout)</function>
 
-Starts performing a scan listening for BLE devices sending advertisements. This function always returns immediately, the scanning will be performed on the background. The return value is ``None``. After starting the scan the function <function>get_adv()</function> can be used to retrieve the advertisements messages from the FIFO. The internal FIFO has space to cache 8 advertisements.
+Starts performing a scan listening for BLE devices sending advertisements. This function always returns immediately, the scanning will be performed on the background. The return value is ``None``. After starting the scan the function <function>get_adv()</function> can be used to retrieve the advertisements messages from the FIFO. The internal FIFO has space to cache 16 advertisements.
 
 The arguments are:
 
@@ -107,6 +107,10 @@ bluetooth.start_scan(20) # scan for 20 seconds
 adv = bluetooth.get_adv() #
 binascii.hexlify(adv.mac) # convert hexidecimal to ascii
 ```
+
+<function>bluetooth.get_advertisements()</function>
+
+Sames as the ``get_adv()`` method, but this one returns a list with all the advertisements received.
 
 <function>bluetooth.resolve_adv_data(data, data_type)</function>
 
