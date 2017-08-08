@@ -289,10 +289,14 @@ lora.ischannel_free(-100)
 
 <function>lora.set_battery_level(level)</function>
 
-Set the battery level value that will be sent when the LoRaWAN MAC command that retrieves the battery level is received. This command is sent by the network and handled automatically by the LoRaWAN stack. Value should be in percentage, from 0 to 100. Values larger than 100 will be clipped:
+Set the battery level value that will be sent when the LoRaWAN MAC command that retrieves the battery level is received. This command is sent by the network and handled automatically by the LoRaWAN stack. The values should be according to the LoRaWAN specification:
+
+- ``0`` means that the end-device is connected to an external power source.
+- ``1..254`` specifies the battery level, 1 being at minimum and 254 being at maximum.
+- ``255`` means that the end-device was not able to measure the battery level.
 
 ```python
-lora.set_battery_level(75)
+lora.set_battery_level(127)    # 50% battery
 ```
 
 <function>lora.events()</function>

@@ -1,4 +1,4 @@
-# class pycom – Pycom Device Features
+# module pycom – Pycom Device Features
 The pycom module contains functions to control specific features of the pycom devices, such as the heartbeat RGB LED.
 
 ### Quick Usage Example
@@ -30,7 +30,7 @@ Set the value of the specified key in the NVRAM memory area of the external flas
 import pycom
 
 pycom.nvs_set('temp', 25)
-pycom.nvs_set('pulses', 10)
+pycom.nvs_set('count', 10)
 ```
 
 <function>pycom.nvs_get(key)</function>
@@ -40,5 +40,17 @@ Get the value the specified key from the NVRAM memory area of the external flash
 ```python
 import pycom
 
-pulses = pycom.nvs_get('pulses')
+pulses = pycom.nvs_get('count')
+```
+
+<function>pycom.wifi_on_boot([enable])</function>
+
+Get or set the WiFi on boot flag. When this flag is set to True, the AP with the default ssid ('lopy-wlan-xxx' for example) will be enabled as part of the boot process. If the flag is seto to False, the module will boot with WiFi disabled until it's enabled by the script via the ``WLAN`` class. This settin is stored in non-volatile memory which preserves it across resets and power cycles. Example:
+
+```python
+import pycom
+
+pycom.wifi_on_boot(True)   # enable WiFi on boot
+
+pycom.wifi_on_boot()       # get the wifi on boot flag
 ```

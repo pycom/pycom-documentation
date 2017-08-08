@@ -1,4 +1,4 @@
-# class machine
+# module machine
 
 The ``machine`` module contains specific functions related to the board.
 
