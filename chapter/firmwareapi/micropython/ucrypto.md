@@ -2,7 +2,7 @@
 This module provides native support for cryptographic algorithms. It’s loosely based on PyCrypto.
 
 ### Classes
-- [class AES](chapter/firmwareapi/pycom/aes.md) - Advanced Encryption Standard
+- [class AES](../pycom/aes.md) - Advanced Encryption Standard
 ### Methods
 
 <function>crypto.getrandbits(bits)</function>
