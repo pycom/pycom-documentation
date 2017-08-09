@@ -117,5 +117,5 @@ clock = Clock()
 ```
 
 {% hint style='info' %}
-For more information on how Pycom’s products handle interrupts, see here.
+For more information on how Pycom’s products handle interrupts, see [notes](../../../toolsandfeatures/notes.md).
 {% endhint %}
