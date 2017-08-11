@@ -9,7 +9,7 @@ Here are the download links to the update tool. Please download the appropriate 
 - [Linux](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) (requires dialog package)
 
 {% hint style='info' %}
-Previous versions of firmware are available for download on the **[Pycom](https://www.pycom.io/support/supportdownloads/#firmware)** website.
+Previous versions of firmware are available for download on the **[Pycom](https://www.pycom.io/downloads/)** website.
 {% endhint %}
 
 ### Updating Device Firmware
