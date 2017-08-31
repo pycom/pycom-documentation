@@ -9,9 +9,9 @@ When powering via VIN:
 
 - The input voltage must be between 3.4V and 5.5V.
 
-When powering via 3V3:
-
-- The input voltage must be exactly 3V3, ripple free and from a supply capable of sourcing at least 500mA of current.
+{% hint style='danger' %}
+Please DO NOT power the board via the 3.3V pin as this may damage the device. ONLY use the VIN pin for powering Pycom Devices.
+{% endhint %}
 
 The battery connector for the expansion board is a **JST SH 2P** variant. The expansion board exposes the male connector and an external battery should use a female adapter in order to connect and power the expansion board.
 
