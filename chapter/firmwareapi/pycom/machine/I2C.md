@@ -92,19 +92,19 @@ Return value is the number of bytes written.
 
 Some I2C devices act as a memory device (or set of registers) that can be read from and written to. In this case there are two addresses associated with an I2C transaction: the slave address and the memory address. The following methods are convenience functions to communicate with such devices.
 
-<function>i2c.readfrom_mem(addr, memaddr, nbytes)</function>
+<function>i2c.readfrom_mem(addr, memaddr, nbytes, *, addrsize=8)</function>
 
-Read nbytes from the slave specified by addr starting from the memory address specified by memaddr.
+Read nbytes from the slave specified by addr starting from the memory address specified by memaddr. The addrsize argument is specified in bits and it can only take 8 or 16.
 
-<function>i2c.readfrom_mem_into(addr, memaddr, buf)</function>
+<function>i2c.readfrom_mem_into(addr, memaddr, buf, *, addrsize=8)</function>
 
-Read into buf from the slave specified by addr starting from the memory address specified by memaddr. The number of bytes read is the length of buf.
+Read into buf from the slave specified by addr starting from the memory address specified by memaddr. The number of bytes read is the length of buf. The addrsize argument is specified in bits and it can only take 8 or 16.
 
 The return value is the number of bytes read.
 
-<function>i2c.writeto_mem(addr, memaddr, buf)</function>
+<function>i2c.writeto_mem(addr, memaddr, buf *, addrsize=8)</function>
 
-Write buf to the slave specified by addr starting from the memory address specified by memaddr. The argument buf can also be an integer which will be treated as a single byte.
+Write buf to the slave specified by addr starting from the memory address specified by memaddr. The argument buf can also be an integer which will be treated as a single byte. The addrsize argument is specified in bits and it can only take 8 or 16.
 
 The return value is the number of bytes written.
 
