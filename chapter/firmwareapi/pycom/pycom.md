@@ -54,3 +54,42 @@ pycom.wifi_on_boot(True)   # enable WiFi on boot
 
 pycom.wifi_on_boot()       # get the wifi on boot flag
 ```
+
+<function>pycom.ota_start()</function>  
+<function>pycom.ota_write(buffer)</function>  
+<function>pycom.ota_finish()</function>  
+Perform a firmware update. These methods are internally used by a firmware updarte though ftp. The update starts with a call to ota_start(), followed by a series of
+calls to ota_write(buffer), and is terminated with ota_finish().
+After reset, the new image gets actice. buffer shall hold the image data to be written, in arbitrary sizes. A block size of 4096 is reccomended.
+
+Example:
+```
+# Firmware update by reading the image from the SD card
+#
+from pycom import ota_start, ota_write, ota_finish
+from os import mount
+from machine import SD
+
+BLOCKSIZE = const(4096)
+APPIMG = "/sd/appimg.bin"
+
+sd = SD()
+mount(sd, '/sd')
+
+with open(APPIMG, "rb") as f:
+    buffer = bytearray(BLOCKSIZE)
+    mv = memoryview(buffer)
+    size=0
+    ota_start()
+    while True:
+        chunk = f.readinto(buffer)
+        if chunk > 0:
+            ota_write(mv[:chunk])
+            size += chunk
+            print("\r%7d " % size, end="")
+        else:
+            break
+    ota_finish()
+```
+Instead of reading the data to be written from a file, it can obviuosly also be received from a server using any suitable protocol, without the need to store
+it in the devices file system.
