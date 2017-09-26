@@ -36,4 +36,6 @@ Set the DC level for a DAC pin. value is a float argument, with values between 0
 
 <function>dac.tone(frequency, amplitude)</function>
 
-Sets up tone signal to the specified frequency at amplitude scale. frequency can be from 125Hz to 20kHz. amplitude is an integer specifying the tone amplitude to write the DAC pin. Amplitude value represents: 0 is 0dB, 1 is 6dB, 2 is 12dB, 3 is 18dB.
+Sets up tone signal to the specified frequency at amplitude scale. frequency can
+be from 125Hz to 20kHz in steps of 122 Hz. amplitude is an integer specifying the tone amplitude to write the DAC pin. Amplitude value represents:
+0 is 0dBV (~ 3Vpp at 600 Ohm load), 1 is -6dBV (~1.5 Vpp), 2 is -12dBV (~0.8 Vpp), 3 is -18dBV (~0.4 Vpp). The generated signal is a sine wave with an DC offset of VDD/2.
