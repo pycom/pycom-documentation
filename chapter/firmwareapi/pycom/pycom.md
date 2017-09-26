@@ -53,4 +53,22 @@ import pycom
 pycom.wifi_on_boot(True)   # enable WiFi on boot
 
 pycom.wifi_on_boot()       # get the wifi on boot flag
+
+```
+<function>pycom.pulses_get(pin, timeout)</function>  
+
+Return a list of pulses at pin. The methods scans for transitions at pin and returns a list of tuples, each telling the pin value and the duration in microseconds of that value.  pin is a pin object, which must have set
+to INP or OPEN_DRAIN mode. The scan stops if not transitions occurs whithin timeout microseconds.
+Exmaple:
+```
+# get the raw data from a DHT11/DHT22/AM2302 sensor
+from machine import Pin
+from pycom import pulses_get
+from time import sleep_ms
+
+pin = Pin("G7", mode=Pin.OPEN_DRAIN)
+pin(0)
+sleep_ms(20)
+pin(1)
+data = pulses_get(pin, 100)
 ```
