@@ -43,6 +43,16 @@ import pycom
 pulses = pycom.nvs_get('count')
 ```
 
+If a non-existing key is given the returned value will be ``None``.
+
+<function>pycom.nvs_erase(key)</function>
+
+Erase the given key from the NVRAM memory area.
+
+<function>pycom.nvs_erase_all()</function>
+
+Erase the entire NVRAM memory area.
+
 <function>pycom.wifi_on_boot([enable])</function>
 
 Get or set the WiFi on boot flag. When this flag is set to True, the AP with the default ssid ('lopy-wlan-xxx' for example) will be enabled as part of the boot process. If the flag is seto to False, the module will boot with WiFi disabled until it's enabled by the script via the ``WLAN`` class. This settin is stored in non-volatile memory which preserves it across resets and power cycles. Example:
