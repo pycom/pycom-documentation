@@ -59,7 +59,7 @@ The return value is a tuple with the following 10 values, in order:
 - ``st_mtime``: time of most recent content modification.
 - ``st_ctime``: time of most recent metadata change.
 
-<function>uos.space_free(path)</function>
+<function>uos.getfree(path)</function>
 
 Returns the free space (in KiB) in the drive specified by path.
 
