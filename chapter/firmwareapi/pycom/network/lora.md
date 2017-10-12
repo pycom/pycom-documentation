@@ -275,7 +275,7 @@ Returns a byte object with the 8-Byte MAC address of the LoRa radio.
 
 Specify a callback handler for the LoRa radio. The trigger types are <constant>LoRa.RX_PACKET_EVENT</constant>, <constant>LoRa.TX_PACKET_EVENT</constant> and <constant>LoRa.TX_FAILED_EVENT</constant>
 
-The <constant>LoRa.RX_PACKET_EVENT</constant> event is raised for every received packet. The <constant>LoRa.TX_PACKET_EVENT</constant> event is raised as soon as the packet transmission cycle ends. In the case of non-confirmed transmissions, this will occur at the end of the receive windows, but, in the case of confirmed transmissions, this event will only be raised if the ``ack`` is received. If the ack is not received <constant>LoRa.TX_FAILED_EVENT<constant> will be raised after the number of ``tx_retries`` configured have been performed.
+The <constant>LoRa.RX_PACKET_EVENT</constant> event is raised for every received packet. The <constant>LoRa.TX_PACKET_EVENT</constant> event is raised as soon as the packet transmission cycle ends, which includes the end of the receive windows (even if a downlink is received, the <constant>LoRa.TX_PACKET_EVENT</constant> will come last). In the case of non-confirmed transmissions, this will occur at the end of the receive windows, but, in the case of confirmed transmissions, this event will only be raised if the ``ack`` is received. If the ack is not received <constant>LoRa.TX_FAILED_EVENT<constant> will be raised after the number of ``tx_retries`` configured have been performed.
 
 An example of how this callback functions can be seen the in method <function>lora.events()<function>.
 
