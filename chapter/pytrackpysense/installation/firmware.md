@@ -4,8 +4,8 @@ To update the firmware on the Pysense/Pytrack, please see the following instruct
 
 The latest firmware is v0.0.4. The DFU file can be downloaded from the links below:
 
-- [Pytrack DFU](https://software.pycom.io/downloads/pytrack_0.0.4.dfu)
-- [Pysense DFU](https://software.pycom.io/downloads/pysense_0.0.4.dfu)
+- [Pytrack DFU](https://software.pycom.io/downloads/pytrack_0.0.6.dfu)
+- [Pysense DFU](https://software.pycom.io/downloads/pysense_0.0.6.dfu)
 
 ### Installing the DFU-util Tools
 
