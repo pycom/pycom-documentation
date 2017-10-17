@@ -1,291 +1,181 @@
 # Amazon Web Services
 
-AWS (Amazon Web Services) is a cloud service that offers easy data storage using MQTT, HTTP or websockets protocol. This example uses MQTT to send simple test data to the AWS server. For more information, visit the [Amazon Website](https://aws.amazon.com/).
+The AWS IoT platform enables devices to connect to the Amazon cloud and lets applications in the cloud interact with Internet-connected things. Common IoT applications either collect and process telemetry from devices or enable users to control a device remotely. Things report their state by publishing messages, in JSON format, on MQTT topics. 
 
-{% hint style='info' %}
-Be aware that this example uses an old version of the MQTT library and may be missing features that are currently available.
-{% endhint %}
+For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/developerguide/iot-dg.pdf).
 
-### Connectivity code (demo.py):
+## Getting Started with AWS IoT
+
+### Creating the message broker (Amazon website):
+
+- Sign in to the AWS Management Console
+- Navigate to the IoT Console by clicking on the AWS IoT link
+- In the left navigation pane, choose Registry to expand the choices
+- Click on the create button, give your device a name and press create
+- Click on the device that has been created
+- On the Details page, in the left navigation pane, choose Security
+- On the Certificates page, choose Create certificate
+- Download the device certificate, private key, and the root CA for AWS IoT
+
+### Setting up the device (Pycom device):
+
+- Download the lastest AWS SDK and sample code from the Pycom [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/aws).
+- Connect to the device via ftp and put the AWSIoTPythonSDK folder in the device flash
+- Put the downloaded certificates in the certs directory
+- Use Atom or visual studio blocks to create the desired MQTT communication. Sample code of publishing, shadow updater and delta listener are given below.
+
+### Configuration (config.py):
+
+This file contains the wifi, certificate paths and application specific settings that need to be updated by the user.
 
 ```python
-import time
-from mqttclient import MQTTClient
+# wifi configuration
+WIFI_SSID = 'my wifi ssid'
+WIFI_PASS = 'my wifi password'
 
-DISCONNECTED = 0
-CONNECTING = 1
-CONNECTED = 2
-DEVICE_ID = "12345"
-HOST = "data.iot.us-west-2.amazonaws.com"
-TOPIC_DOWNLOAD = "Download"
-TOPIC_UPLOAD = "Upload"
+# AWS general configuration
+AWS_PORT = 8883
+AWS_HOST = 'aws host'
+AWS_ROOT_CA = '/flash/cert/aws root CA'
+AWS_PUBLIC_KEY = '/flash/cert/aws public key'
+AWS_PRIVATE_KEY = '/flash/cert/aws private key'
 
+# Subscribe / Publish client 
+CLIENT_ID = 'PycomPublishClient'
+TOPIC = 'PublishTopic'
+OFFLINE_QUEUE_SIZE = -1
+DRAINING_FREQ = 2
+CONN_DISCONN_TIMEOUT = 10
+MQTT_OPER_TIMEOUT = 5
+LAST_WILL_TOPIC = 'PublishTopic'
+LAST_WILL_MSG = 'To All: Last will message'
 
-state = DISCONNECTED
-connection = None
+# Shadow updater
+#THING_NAME = "my thing name"
+#CLIENT_ID = "ShadowUpdater"
+#CONN_DISCONN_TIMEOUT = 10
+#MQTT_OPER_TIMEOUT = 5
 
-def _recv_msg_callback(topic, msg):
-    print("Received: {} from Topic: {}".format(msg, topic))
-
-def _send_msg(msg):
-    global connection
-    connection.publish(TOPIC_UPLOAD, msg)
-
-def run():
-    global state
-    global connection
-
-    while True:
-        # Wait for connection
-        while state != CONNECTED:
-            try:
-                state = CONNECTING
-                connection = MQTTClient(DEVICE_ID, server=HOST, port=8883)
-                connection.connect(ssl=True, certfile='/flash/cert/certificate.crt', keyfile='/flash/cert/privateKey.key', ca_certs='/flash/cert/root-CA.cer')
-                state = CONNECTED
-            except:
-                print('Error connecting to the server')
-                time.sleep(0.5)
-                continue
-
-        print('Connected!')
-
-        # Subscribe for messages
-        connection.set_callback(_recv_msg_callback)
-        connection.subscribe(TOPIC_DOWNLOAD)
-
-        while state == CONNECTED:
-            connection.check_msg()
-            msg = '{"Name":"Pycom", "Data":"Test"}'
-            print('Sending: ' + msg)
-            _send_msg(msg)
-            time.sleep(2.0)
+# Delta Listener 
+#THING_NAME = "my thing name"
+#CLIENT_ID = "DeltaListener"
+#CONN_DISCONN_TIMEOUT = 10
+#MQTT_OPER_TIMEOUT = 5
 ```
 
-### Usage (main.py)
+### Subscibe / Publish (main.py)
 
 ```python
-import demo
-demo.run()
-MQTT client class:
+# user specified callback function
+def customCallback(client, userdata, message):
+	print("Received a new message: ")
+	print(message.payload)
+	print("from topic: ")
+	print(message.topic)
+	print("--------------\n\n")
 
-import socket
-import struct
-import select
-from binascii import hexlify
+# configure the MQTT client
+pycomAwsMQTTClient = AWSIoTMQTTClient(config.CLIENT_ID)
+pycomAwsMQTTClient.configureEndpoint(config.AWS_HOST, config.AWS_PORT)
+pycomAwsMQTTClient.configureCredentials(config.AWS_ROOT_CA, config.AWS_PRIVATE_KEY, config.AWS_PUBLIC_KEY)
 
-class MQTTException(Exception):
-    pass
+pycomAwsMQTTClient.configureOfflinePublishQueueing(config.OFFLINE_QUEUE_SIZE)
+pycomAwsMQTTClient.configureDrainingFrequency(config.DRAINING_FREQ)
+pycomAwsMQTTClient.configureConnectDisconnectTimeout(config.CONN_DISCONN_TIMEOUT)
+pycomAwsMQTTClient.configureMQTTOperationTimeout(config.MQTT_OPER_TIMEOUT)
+pycomAwsMQTTClient.configureLastWill(config.LAST_WILL_TOPIC, config.LAST_WILL_MSG, 1)
 
-class MQTTClient:
+#Connect to MQTT Host
+if pycomAwsMQTTClient.connect():
+    print('AWS connection succeeded')
 
-    def __init__(self, client_id, server, port=1883, user=None, password=None):
-        self.client_id = client_id.encode('utf8')
-        self.sock = None
-        self.addr = socket.getaddrinfo(server, port)[0][-1]
-        self.pid = 0
-        self.cb = None
-        self.poll = select.poll()
-        self.__will_message = None
-        if user:
-            self.__user = user.encode('utf8')
-        else:
-            self.__user = None
-        self.__password = password
+# Subscribe to topic
+pycomAwsMQTTClient.subscribe(config.TOPIC, 1, customCallback)
+time.sleep(2)
 
-    def __encode_varlen_length(self, length):
-        i = 0
-        buff = bytearray()
-        while 1:
-            buff.append(length % 128)
-            length = length // 128
-            if length > 0:
-                buff[i] = buff[i] | 0x80
-                i += 1
-            else:
-                break
+# Send message to host
+loopCount = 0
+while loopCount < 8:
+	pycomAwsMQTTClient.publish(config.TOPIC, "New Message " + str(loopCount), 1)
+	loopCount += 1
+	time.sleep(5.0)
+```
 
-        return buff
+### Shadow updater (main.py)
 
-    def __encode_16(self, x):
-        return struct.pack("!H", x)
+```python
+# user specified callback functions
+def customShadowCallback_Update(payload, responseStatus, token):
+    if responseStatus == "timeout":
+        print("Update request " + token + " time out!")
+    if responseStatus == "accepted":
+        payloadDict = json.loads(payload)
+        print("Update request with token: " + token + " accepted!")
+        print("property: " + str(payloadDict["state"]["desired"]["property"]))
+    if responseStatus == "rejected":
+        print("Update request " + token + " rejected!")
 
-    def __pascal_string(self, s):
-        return struct.pack("!H", len(s)) + s
+def customShadowCallback_Delete(payload, responseStatus, token):
+    if responseStatus == "timeout":
+        print("Delete request " + token + " time out!")
+    if responseStatus == "accepted":
+        print("Delete request with token: " + token + " accepted!")
+    if responseStatus == "rejected":
+        print("Delete request " + token + " rejected!")
 
-    def __recv_varlen_length(self):
-        m = 1
-        val = 0
-        while 1:
-            b = self.sock.recv(1)[0]
-            val += (b & 0x7F) * m
-            m *= 128
-            if m > 2097152: # 128 * 128 * 128
-                raise MQTTException()
-            if (b & 0x80) == 0:
-                break
-        return val
+# configure the MQTT client
+pycomAwsMQTTShadowClient = AWSIoTMQTTShadowClient(config.CLIENT_ID)
+pycomAwsMQTTShadowClient.configureEndpoint(config.AWS_HOST, config.AWS_PORT)
+pycomAwsMQTTShadowClient.configureCredentials(config.AWS_ROOT_CA, config.AWS_PRIVATE_KEY, config.AWS_PUBLIC_KEY)
 
-    def set_callback(self, f):
-        self.cb = f
+pycomAwsMQTTShadowClient.configureConnectDisconnectTimeout(config.CONN_DISCONN_TIMEOUT)
+pycomAwsMQTTShadowClient.configureMQTTOperationTimeout(config.MQTT_OPER_TIMEOUT)
 
-    def set_will(self, will_topic, will_message, will_qos=0, will_retain=0):
-        if will_topic:
-            self.__will_topic = will_topic.encode('utf8')
-        self.__will_message = will_message
-        self.__will_qos = will_qos
-        self.__will_retain = will_retain
+# Connect to MQTT Host
+if pycomAwsMQTTShadowClient.connect():
+    print('AWS connection succeeded')
 
-    def connect(self, clean_session=True, ssl=False, certfile=None, keyfile=None, ca_certs=None):
-        try:
-            self.poll.unregister(self.sock)
-        except:
-            pass
-        self.sock = socket.socket()
+deviceShadowHandler = pycomAwsMQTTShadowClient.createShadowHandlerWithName(config.THING_NAME, True)
 
-        if ssl:
-            import ssl
-            self.sock = ssl.wrap_socket(self.sock, certfile=certfile, keyfile=keyfile, ca_certs=ca_certs, cert_reqs=ssl.CERT_REQUIRED)
+# Delete shadow JSON doc
+deviceShadowHandler.shadowDelete(customShadowCallback_Delete, 5)
 
-        self.sock.connect(self.addr)
-        self.poll.register(self.sock, select.POLLIN)
+# Update shadow in a loop
+loopCount = 0
+while True:
+    JSONPayload = '{"state":{"desired":{"property":' + str(loopCount) + '}}}'
+    deviceShadowHandler.shadowUpdate(JSONPayload, customShadowCallback_Update, 5)
+    loopCount += 1
+    time.sleep(5)
+```
 
-        pkt_len = (12 + len(self.client_id) + # 10 + 2 + len(client_id)
-                    (2 + len(self.__user) if self.__user else 0) +
-                    (2 + len(self.__password) if self.__password else 0))
+### Delta Listener (main.py)
 
-        flags = (0x80 if self.__user else 0x00) | (0x40 if self.__password else 0x00) | (0x02 if clean_session else 0x00)
+```python
+# Custom Shadow callback
+def customShadowCallback_Delta(payload, responseStatus, token):
+	payloadDict = json.loads(payload)
+	print("property: " + str(payloadDict["state"]["property"]))
+	print("version: " + str(payloadDict["version"]))
 
-        if self.__will_message:
-            flags |= (self.__will_retain << 3 | self.__will_qos << 1 | 1) << 2
-            pkt_len += 4 + len(self.__will_topic) + len(self.__will_message)
+    # configure the MQTT client
+pycomAwsMQTTShadowClient = AWSIoTMQTTShadowClient(config.CLIENT_ID)
+pycomAwsMQTTShadowClient.configureEndpoint(config.AWS_HOST, config.AWS_PORT)
+pycomAwsMQTTShadowClient.configureCredentials(config.AWS_ROOT_CA, config.AWS_PRIVATE_KEY, config.AWS_PUBLIC_KEY)
 
-        pkt = bytearray([0x10]) # connect
-        pkt.extend(self.__encode_varlen_length(pkt_len)) # len of the remaining
-        pkt.extend(b'\x00\x04MQTT\x04') # len of "MQTT" (16 bits), protocol name, and protocol version
-        pkt.append(flags)
-        pkt.extend(b'\x00\x00') # disable keepalive
-        pkt.extend(self.__pascal_string(self.client_id))
-        if self.__will_message:
-            pkt.extend(self.__pascal_string(self.__will_topic))
-            pkt.extend(self.__pascal_string(self.__will_message))
-        if self.__user:
-            pkt.extend(self.__pascal_string(self.__user))
-        if self.__password:
-            pkt.extend(self.__pascal_string(self.__password))
+pycomAwsMQTTShadowClient.configureConnectDisconnectTimeout(config.CONN_DISCONN_TIMEOUT)
+pycomAwsMQTTShadowClient.configureMQTTOperationTimeout(config.MQTT_OPER_TIMEOUT)
 
-        self.sock.send(pkt)
-        resp = self.sock.recv(4)
-        assert resp[0] == 0x20 and resp[1] == 0x02
-        if resp[3] != 0:
-            raise MQTTException(resp[3])
-        return resp[2] & 1
+# Connect to MQTT Host
+if pycomAwsMQTTShadowClient.connect():
+    print('AWS connection succeeded')
 
-    def disconnect(self):
-        self.sock.send(b"\xe0\0")
-        self.sock.close()
+deviceShadowHandler = pycomAwsMQTTShadowClient.createShadowHandlerWithName(config.THING_NAME, True)
 
-    def ping(self):
-        self.sock.send(b"\xc0\0")
+# Listen on deltas
+deviceShadowHandler.shadowRegisterDeltaCallback(customShadowCallback_Delta)
 
-    def publish(self, topic, msg, retain=False, qos=0, dup=0):
-        topic = topic.encode('utf8')
-        hdr = 0x30 | (dup << 3) | (qos << 1) | retain
-        pkt_len = (2 + len(topic) +
-                    (2 if qos else 0) +
-                    (len(msg)))
-
-        pkt = bytearray()
-        pkt.append(hdr)
-        pkt.extend(self.__encode_varlen_length(pkt_len)) # len of the remaining
-        pkt.extend(self.__pascal_string(topic))
-        if qos:
-            self.pid += 1 #todo: I don't think this is the way to deal with the packet id
-            pkt.extend(self.__encode_16(self.pid))
-
-        self.sock.send(pkt)
-        self.sock.send(msg)
-
-        #todo: check next part of the code
-        if qos == 1:
-            while 1:
-                rcv_pid = self.recv_pubconf(0)
-                if pid == rcv_pid:
-                    return
-        elif qos == 2:
-            assert 0
-
-    def recv_pubconf(self, t):
-        headers = [0x40, 0x50, 0x62, 0x70]
-        header = headers[t]
-        while 1:
-            op = self.wait_msg()
-            if op == header:
-                sz = self.sock.recv(1)
-                assert sz == b"\x02"
-                return
-
-    def subscribe(self, topic, qos=0):
-        assert self.cb is not None, "Subscribe callback is not set"
-
-        topic = topic.encode('utf8')
-        pkt_len = 2 + 2 + len(topic) + 1 # packet identifier + len of topic (16 bits) + topic len + QOS
-
-        self.pid += 1
-        pkt = bytearray([0x82])
-        pkt.extend(self.__encode_varlen_length(pkt_len)) # len of the remaining
-        pkt.extend(self.__encode_16(self.pid))
-        pkt.extend(self.__pascal_string(topic))
-        pkt.append(qos)
-
-        self.sock.send(pkt)
-        resp = self.sock.recv(5)
-        #print(resp)
-        assert resp[0] == 0x90
-        assert resp[2] == pkt[2] and resp[3] == pkt[3]
-        if resp[4] == 0x80:
-            raise MQTTException(resp[4])
-
-    # Wait for a single incoming MQTT message and process it.
-    # Subscribed messages are delivered to a callback previously
-    # set by .set_callback() method. Other (internal) MQTT
-    # messages processed internally.
-    def wait_msg(self):
-        res = self.sock.recv(1)
-        self.sock.setblocking(True)
-        if res is None or res == b"":
-            return None
-        #if res == b"":
-        #    raise OSError(-1)
-        if res == b"\xd0":  # PINGRESP
-            sz = self.sock.recv(1)[0]
-            assert sz == 0
-            return None
-        op = res[0]
-        if op & 0xf0 != 0x30:
-            return op
-        sz = self.__recv_varlen_length()
-        topic_len = self.sock.recv(2)
-        topic_len = (topic_len[0] << 8) | topic_len[1]
-        topic = self.sock.recv(topic_len)
-        sz -= topic_len + 2
-        if op & 6:
-            pid = self.sock.recv(2)
-            pid = pid[0] << 8 | pid[1]
-            sz -= 2
-        msg = self.sock.recv(sz)
-        self.cb(topic, msg)
-        if op & 6 == 2:
-            pkt = bytearray(b"\x40\x02\0\0")
-            struct.pack_into("!H", pkt, 2, pid)
-            self.sock.send(pkt)
-        elif op & 6 == 4:
-            assert 0
-
-    # Checks whether a pending message from server is available.
-    # If not, returns immediately with None. Otherwise, does
-    # the same processing as wait_msg.
-    def check_msg(self):
-        self.sock.setblocking(False)
-        return self.wait_msg()
+# Loop forever
+while True:
+	time.sleep(1)
 ```
