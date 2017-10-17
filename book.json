@@ -1,6 +1,9 @@
 {
-	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia"],
+	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","ga"],
 	"pluginsConfig": {
+		"ga": {
+			"token": "UA-72107804-1"
+		},
 		"fontsettings": {
 			"theme": "white",
 			"family": "sans",
