@@ -4,7 +4,7 @@ I2C is a two-wire protocol for communicating between devices. At the physical le
 
 I2C objects are created attached to a specific bus. They can be initialized when created, or initialized later on.
 
-### Example
+### Example using default Pins
 
 ```python
 from machine import I2C
@@ -15,6 +15,18 @@ i2c = I2C(0, pins=('P10','P11'))     # create and use non-default PIN assignment
 i2c.init(I2C.MASTER, baudrate=20000) # init as a master
 i2c.deinit()                         # turn off the peripheral
 ```
+
+### Example using non-default Pins
+
+```python
+from machine import I2C
+
+i2c = I2C(0, pins=('P10','P11'))     # create and use non-default PIN assignments (P10=SDA, P11=SCL)
+i2c.init(I2C.MASTER, baudrate=20000) # init as a master
+i2c.deinit()                         # turn off the peripheral
+```
+
+
 
 Printing the i2c object gives you information about its configuration.
 
