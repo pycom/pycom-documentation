@@ -10,3 +10,5 @@ The pinout of the LoPy is available as a <a href="../downloads/lopy-pinout.pdf" 
 ### Specsheets
 
 The specsheet of the LoPy is available as a <a href="../downloads/lopy-specsheet.pdf" target="_blank">PDF File</a>.
+
+Please note that the PIN assigments for UART1 (TX1/RX1), SPI (CLK,MOSI,MISO) and I2C (SDA,SCL) are defaults and can be changed in Software.

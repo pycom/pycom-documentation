@@ -39,6 +39,26 @@ uart.write('hello')
 uart.read(5) # read up to 5 bytes
 ```
 
+### Quick Usage Example using non-default pins (TXD/RXD only)
+
+```python
+from machine import UART
+# this uses the UART_1 non-default pins for TXD and RXD (``P20`` and ``P21``)
+uart = UART(1, baudrate=9600, pins=('P20','P21'))
+uart.write('hello')
+uart.read(5) # read up to 5 bytes
+```
+
+### Quick Usage Example using non-default pins (TXD/RXD and flow control)
+
+```python
+from machine import UART
+# this uses the UART_1 non-default pins for TXD, RXD, RTS and CTS (``P20``, ``P21``, ``P22``and ``P23``)
+uart = UART(1, baudrate=9600, pins=('P20', 'P21', 'P22', 'P23'))
+uart.write('hello')
+uart.read(5) # read up to 5 bytes
+```
+
 ### Constructors
 <class><i>class</i> machine.UART(bus, ...)</class>
 
