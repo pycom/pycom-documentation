@@ -19,15 +19,11 @@ Read the acceleration from the LIS2HH12. Returns a **tuple** with the 3 values o
 
 <function>LIS2HH12.roll()</function>
 
-Read the current roll from the LIS2HH12. Returns a **float** in degrees.
+Read the current roll from the LIS2HH12. Returns a **float** in degrees in the range -180 to 180.
 
 <function>LIS2HH12.pitch()</function>
 
-Read the current pitch from the LIS2HH12. Returns a **float** in degrees.
-
-<function>LIS2HH12.yaw()</function>
-
-Read the current yaw from the LIS2HH12. Returns a **float** in degrees.
+Read the current pitch from the LIS2HH12. Returns a **float** in degrees in the range -90 to 90. Once the board tilts beyond this range the values will repeat. This is due to a lack of yaw measurement, making it not possible to know the exact orientation of the board.
 
 ***
 
