@@ -1,6 +1,6 @@
 # Telnet REPL
 
-Pycom devices also support a connection via telnet, using the device's on board WiFi/WLAN. Connect to the device's WiFi Access Point (AP) and using the following credentials to connect to the AP. The WiFi ``SSID`` will appear upon powering on a Pycom Device for the first time (e.g. lopy-). To re-enable this feature at a later date, please see [network.WLAN]().
+Pycom devices also support a connection via telnet, using the device's on board WiFi/WLAN. Connect to the device's WiFi Access Point (AP) and using the following credentials to connect to the AP. The WiFi ``SSID`` will appear upon powering on a Pycom Device for the first time (e.g. lopy-). To re-enable this feature at a later date, please see [network.WLAN](../../firmwareapi/pycom/network/wlan.md).
 
 **``password``**: www.pycom.io
 
@@ -12,7 +12,7 @@ Additionally, to use the MircoPython REPL over telnet, further authentication is
 
 **``password``**: python
 
-See [network.server]() for info on how to change the default authentication.
+See [network.server](../../firmwareapi/pycom/network/server.md) for info on how to change the default authentication.
 
 ### MacOS and Linux
 

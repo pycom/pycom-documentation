@@ -4,7 +4,7 @@ To make it as easy as possible we developed a series of tools known as the **Pym
 
 <p align="center"><img src ="../../../img/pymakr-logo.png" width="400"></p>
 
-Extended info about these Plugins, such as how to use the Pycom console and other features can be found under [Tools & Features](../../chapter/toolsandfeatures/README.md).
+Extended info about these Plugins, such as how to use the Pycom console and other features can be found under [Tools & Features](../../toolsandfeatures/README.md).
 
 {% hint style='danger' %}
 **Please be aware that Pymakr IDE has been retired** and that plugins for Atom, Sublime, Visual Studio Code & PyCharm are under development, with intention to replace Pymakr. Please read this [**forum post**](https://forum.pycom.io/topic/635/pymakr-time-of-death-09-02/41) for more information.
