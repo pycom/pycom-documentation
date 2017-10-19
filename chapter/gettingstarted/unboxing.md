@@ -22,7 +22,7 @@ Some devices, such as the LoPy, will cover the USB connector. This is normal; re
 ### Looking After Your Device
 To ensure the longevity of your expansion board, please be aware of the following:
 
-- Be gentle when plugging/unplugging the USB cable. Whilst the USB connector is soldered and relatively strong, it can break off and is be difficult to fix.
+- Be gentle when plugging/unplugging the USB cable. Whilst the USB connector is soldered and relatively strong, it can break off and will be difficult to fix.
 - Static electricity can damage components on the board and may destroy them. If there is a lot of static electricity in the area (e.g. dry and cold climates), take extra care not to shock the device. If the device came in a ESD bag (Silver packaging), the best way to store and carry the device is inside this bag as it will be protected against static discharges.
 
 ## Connecting via USB
