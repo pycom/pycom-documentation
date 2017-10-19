@@ -22,11 +22,10 @@ If you are having trouble connecting via USB, make sure you have the correct [FT
 
 1. Disconnect your device from your computer
 2. Connect a jumper cable or wire between G23 and GND
-3. Reconnect the board via USB to your computer
+3. Reconnect the board via USB to your computer, this puts the device in ‘firmware update mode’.
 4. Run the Firmware Upgrade tool
 5. Remove the G23 to GND jumper cable/wire
 6. Reboot the device (button or power off then on)
-7. Connecting G23 and GND puts the device in ‘firmware update mode’. This mode is only used for updating the device’s firmware using the Firmware Update tool.
 
 <p align="center"><img src ="../../../img/firmware-update.png" width="500"></p>
 
