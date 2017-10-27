@@ -12,18 +12,22 @@ Extended info about these Plugins, such as how to use the Pycom console and othe
 
 ## Installing Pymakr Plugin (Atom)
 
+<p align="center"><img src ="../../../img/atom-text-editor.png" width="600"></p>
+
 For beginners, users getting started with MicroPython & Pycom as well as Atom text editor users, we recommend the **Pymakr Plugin for Atom**. This section will help you get started using the Atom Text Editor & Pymakr Plugin.
 
 Please follow these steps to install the Pymakr Plugin:
 
 1. Ensure that you have Atom installed and open.
+<p align="center"><img src ="../../../img/atom/atom_setup_step_1.png" width="600"></p>
 2. Navigate to the Install page, via Atom > Preferences > Install
+<p align="center"><img src ="../../../img/atom/atom_setup_step_2.png" width="600"></p>
 3. Search for Pymakr and select the official Pycom Pymakr Plugin.
-4. You should now see and Install button. Click this to download and install the Pymakr Plugin.
+<p align="center"><img src ="../../../img/atom/atom_setup_step_3.png" width="600"></p>
+4. You should now see and click the Install button. This will download and install the Pymakr Plugin.
+<p align="center"><img src ="../../../img/atom/atom_setup_step_4.png" width="600"></p>
 5. That’s it! You’ve installed the Pymakr Plugin for Atom.
-
-<p align="center"><img src ="../../../img/atom-text-editor.png" width="600"></p>
-
+<p align="center"><img src ="../../../img/atom/atom_setup_step_5.png" width="600"></p>
 
 ## Initial Configuration
 
@@ -31,15 +35,21 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 1. Connect your Pycom device to your computer via USB. **Remove the wire between GND and G23**, before plugging in your device, if you have just finished upgrading your firmware!
 2. Open Atom and ensure that the Pymakr Plugin has correctly installed.
-3. In the menu, go to Atom > Preferences > Packages > Pymakr. This may vary depending on your operating system!
-4. Open the Pymakr console by clicking the 'Open' button, located in the lower right side of the Atom window.
-5. Click, 'More' followed by 'Get Serial Ports'. This will copy the serial address of your expansion board to your clipboard.
-6. Navigate to 'Settings' > 'Global Settings'
-7. Paste this into the text field 'Device Address'
-8. Press connect and the Pymakr console should show three arrows '>>>', indicating that you are connected!
+<p align="center"><img src ="../../../img/atom/atom_config_step_2.png" width="600"></p>
+3. Open the Pymakr console by clicking the '^' button, located in the lower right side of the Atom window.
+<p align="center"><img src ="../../../img/atom/atom_config_step_3.png" width="600"></p>
+4. Click, 'More' followed by 'Get Serial Ports'. This will copy the serial address of your expansion board to your clipboard.
+<p align="center"><img src ="../../../img/atom/atom_config_step_4.png" width="600"></p>
+5. Navigate to 'Settings' > 'Global Settings'
+<p align="center"><img src ="../../../img/atom/atom_config_step_5.png" width="600"></p>
+6. Paste the serial address you copied earlier into the text field 'Device Address'
+<p align="center"><img src ="../../../img/atom/atom_config_step_6.png" width="600"></p>
+7. Press connect and the Pymakr console should show three arrows '>>>', indicating that you are connected!
+<p align="center"><img src ="../../../img/atom/atom_config_step_7.png" width="600"></p>
+
 
 {% hint style='info' %}
-You can also connect to your device via WiFi as the device can open a telnet server. For more information please see [XYZ]().
+You can also connect to your device via WiFi as the device can open a telnet server. For more information please see [Telnet](../../toolsandfeatures/repl/telnet.md).
 {% endhint %}
 
 ## Writing Code
