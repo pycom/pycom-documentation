@@ -17,7 +17,7 @@ Previous versions of firmware are available for download on the **[Pycom](https:
 The instructions given by the updater tool should be followed carefully. The basic procedure can be found below:
 
 {% hint style='info' %}
-If you are having trouble connecting via USB, make sure you have the correct [FTDI drivers](http://www.ftdichip.com/Drivers/D2XX.htm) installed.
+If you are having trouble connecting via USB, make sure you have the correct [FTDI drivers](http://www.ftdichip.com/Drivers/VCP.htm) installed.
 {% endhint %}
 
 1. Disconnect your device from your computer
