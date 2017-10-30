@@ -28,7 +28,7 @@ On Linux, ``picocom`` or ``minicom`` may be used instead of ``screen``. The usb 
 
 ### Windows
 
-To use the serial USB REPL with Windows, first ensure that the FTDI drivers are installed or install them from [here](). A terminal emulator is needed to open the connection from Windows; the easiest option is to download the free program, [PuTTY]().
+To use the serial USB REPL with Windows, first ensure that the FTDI drivers are installed or install them from [here](http://www.ftdichip.com/Drivers/VCP.htm). A terminal emulator is needed to open the connection from Windows; the easiest option is to download the free program, [PuTTY]().
 
 ##### COM Port
 
