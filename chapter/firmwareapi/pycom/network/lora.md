@@ -78,7 +78,7 @@ The arguments are:
 - ``device_class`` sets the LoRaWAN device class. Can be either <constant>LoRa.CLASS_A</constant> or <constant>LoRa.CLASS_C</constant>.
 
 {% hint style='info' %}
-In <constant>LoRa.LORAWAN</constant> mode, only ``adr``, ``public``, ``tx_retries`` and ``device_class`` are used. All the other params will be ignored as they are handled by the LoRaWAN stack directly. On the other hand, in <constant>LoRa.LORA</constant> mode from those 3 arguments, only the public one is important in order to program the sync word. In <constant>LoRa.LORA</constant> mode ``adr``, ``tx_retries`` and ``device_class`` are ignored since they are only relevant to the LoRaWAN stack.
+In <constant>LoRa.LORAWAN</constant> mode, only ``adr``, ``public``, ``tx_retries`` and ``device_class`` are used. All the other params will be ignored as they are handled by the LoRaWAN stack directly. On the other hand, in <constant>LoRa.LORA</constant> mode from those 4 arguments, only the public one is important in order to program the sync word. In <constant>LoRa.LORA</constant> mode ``adr``, ``tx_retries`` and ``device_class`` are ignored since they are only relevant to the LoRaWAN stack.
 {% endhint %}
 
 
