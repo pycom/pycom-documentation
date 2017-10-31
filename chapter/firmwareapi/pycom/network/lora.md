@@ -176,7 +176,7 @@ lora.frequency(868000000)
 ```
 
 lora.coding_rate([coding_rate])
-Get or set the coding rate in raw LoRa mode (LoRa.LORA). The allowed values are: <constant>LoRa.CODING_4_5</constant> (0), <constant>LoRa.CODING_4_6</constant> (1), <constant>LoRa.CODING_4_7</constant> (2) and <constant>LoRa.CODING_4_8</constant> (3).
+Get or set the coding rate in raw LoRa mode (LoRa.LORA). The allowed values are: <constant>LoRa.CODING_4_5</constant> (1), <constant>LoRa.CODING_4_6</constant> (2), <constant>LoRa.CODING_4_7</constant> (3) and <constant>LoRa.CODING_4_8</constant> (4).
 
 
 ```python
