@@ -154,7 +154,7 @@ s.send('Hello')
 This method can be used to receive a Sigfox downlink or FSK message.
 
 ```python
-# size of buffer should be passed for expected payload, e.g. 64 bits
+# size of buffer should be passed for expected payload, e.g. 64 bytes
 s.recv(64)
 ```
 
