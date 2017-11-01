@@ -6,7 +6,7 @@ Here are the download links to the update tool. Please download the appropriate 
 
 - [Windows](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=win32&redirect=true)
 - [MacOS](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=macos&redirect=true) (10.11 or Higher)
-- [Linux](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) (requires dialog package)
+- [Linux](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) (requires dialog and python-serial package)
 
 {% hint style='info' %}
 Previous versions of firmware are available for download on the **[Pycom](https://www.pycom.io/downloads/)** website.
