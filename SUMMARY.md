@@ -63,6 +63,7 @@
 	* [5.2.11 RGB LED](chapter/tutorials/all/rgbled.md)
 	* [5.2.12 Timers](chapter/tutorials/all/timers.md)
 	* [5.2.13 PIR Sensor](chapter/tutorials/all/pir.md)
+	* [5.2.14 Modbus](chapter/tutorials/all/modbus.md)
 * [5.3 LoPy Examples](chapter/tutorials/lopy/README.md)
 	* [5.3.1 LoRa-MAC (Raw LoRa)](chapter/tutorials/lopy/lora-mac.md)
 	* [5.3.2 LoRaWAN with OTAA](chapter/tutorials/lopy/lorawan-otaa.md)
