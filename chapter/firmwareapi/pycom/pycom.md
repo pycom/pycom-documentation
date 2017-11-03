@@ -24,7 +24,7 @@ Set the colour of the RGB LED. The color is specified as 24 bit value representi
 
 <function>pycom.nvs_set(key, value)</function>
 
-Set the value of the specified key in the NVRAM memory area of the external flash. Data sored here is preserved across resets and power cycles. Value can only take 32-bit integers at the moment. Example:
+Set the value of the specified key in the NVRAM memory area of the external flash. Data stored here is preserved across resets and power cycles. Value can only take 32-bit integers at the moment. Example:
 
 ```python
 import pycom
@@ -55,7 +55,7 @@ Erase the entire NVRAM memory area.
 
 <function>pycom.wifi_on_boot([enable])</function>
 
-Get or set the WiFi on boot flag. When this flag is set to True, the AP with the default ssid ('lopy-wlan-xxx' for example) will be enabled as part of the boot process. If the flag is seto to False, the module will boot with WiFi disabled until it's enabled by the script via the ``WLAN`` class. This settin is stored in non-volatile memory which preserves it across resets and power cycles. Example:
+Get or set the WiFi on boot flag. When this flag is set to True, the AP with the default ssid ('lopy-wlan-xxx' for example) will be enabled as part of the boot process. If the flag is set to False, the module will boot with WiFi disabled until it's enabled by the script via the ``WLAN`` class. This setting is stored in non-volatile memory which preserves it across resets and power cycles. Example:
 
 ```python
 import pycom
@@ -68,8 +68,8 @@ pycom.wifi_on_boot()       # get the wifi on boot flag
 <function>pycom.pulses_get(pin, timeout)</function>  
 
 Return a list of pulses at pin. The methods scans for transitions at pin and returns a list of tuples, each telling the pin value and the duration in microseconds of that value.  pin is a pin object, which must have set
-to INP or OPEN_DRAIN mode. The scan stops if not transitions occurs whithin timeout microseconds.
-Exmaple:
+to INP or OPEN_DRAIN mode. The scan stops if not transitions occurs within timeout microseconds.
+Example:
 ```
 # get the raw data from a DHT11/DHT22/AM2302 sensor
 from machine import Pin
@@ -86,9 +86,9 @@ data = pulses_get(pin, 100)
 <function>pycom.ota_start()</function>  
 <function>pycom.ota_write(buffer)</function>  
 <function>pycom.ota_finish()</function>  
-Perform a firmware update. These methods are internally used by a firmware updarte though ftp. The update starts with a call to ota_start(), followed by a series of
+Perform a firmware update. These methods are internally used by a firmware update though ftp. The update starts with a call to ota_start(), followed by a series of
 calls to ota_write(buffer), and is terminated with ota_finish().
-After reset, the new image gets actice. buffer shall hold the image data to be written, in arbitrary sizes. A block size of 4096 is reccomended.
+After reset, the new image gets active. buffer shall hold the image data to be written, in arbitrary sizes. A block size of 4096 is recommended.
 
 Example:
 ```
@@ -119,5 +119,5 @@ with open(APPIMG, "rb") as f:
             break
     ota_finish()
 ```
-Instead of reading the data to be written from a file, it can obviuosly also be received from a server using any suitable protocol, without the need to store
+Instead of reading the data to be written from a file, it can obviously also be received from a server using any suitable protocol, without the need to store
 it in the devices file system.
