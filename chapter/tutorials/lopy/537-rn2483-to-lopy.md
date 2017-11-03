@@ -20,14 +20,14 @@ radio set prlen 8
 radio tx 48656c6C6F  #(should send ‘Hello’)
 ```
 
-### Node B
+### LoPy
 
 ```py
 from network import LoRa
 import socket
 
 lora = LoRa(mode=LoRa.LORA, frequency= 868000000, bandwidth=LoRa.BW_125KHZ, sf=7, preamble=8, coding_rate=LoRa.CODING_4_5, 
-	power_mode=LoRa.ALWAYS_ON, tx_iq=False, rx_iq=False, public=False)
+    power_mode=LoRa.ALWAYS_ON, tx_iq=False, rx_iq=False, public=False)
 
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 
