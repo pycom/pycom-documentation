@@ -1,12 +1,27 @@
 # LoRaWAN Nano-Gateway
 This example allows to connect a LoPy to a LoRaWAN network such as The Things Network (TTN) or Loriot to be used as a nano-gateway.
 
-This specific example uses settings specifically for connecting to TTN within the European 868 MHz region. To set this up for a specific usage, please see the ``config.py`` file.
+This example uses settings specifically for connecting to The Things Network within the European 868 MHz region. For a other usage, please see the ``config.py`` file for relevant sections that need changing.
 
 Up to date versions of these snippets can be found at the following [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway). For more information and discussion about this code, see this forum [post](https://forum.pycom.io/topic/810/new-firmware-release-1-6-7-b1-lorawan-nano-gateway-with-ttn-example).
 
 ### Nano-Gateway
 The Nano-Gateway code is split into 3 files, ``main.py``, ``config.py`` and ``nanogateway.py``. These are used to configure and specify how the gateway will connect to a preferred network and how it can act as packet forwarder.
+
+
+#### Gateway ID
+
+Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit hexadecimal number (called a EUI-64). The recommended practice is to produce this ID from your board by expanding the WiFi MAC address (a 48-bit number, called MAC-48). You can obtain that by running this code prior to configuration:
+
+```python
+from network import WLAN
+import binascii
+wl = WLAN()
+binascii.hexlify(wl.mac())[:6] + 'FFFF' + binascii.hexlify(wl.mac())[6:]
+```
+
+The result will by something like `b'240ac4FFFE008d88'` where `240ac4FFFE008d88` is your Gateway ID.
+
 
 ### Main (main.py)
 This file runs at boot and calls the library and ``config.py`` files to initalise the nano-gateway. Once configuration is set, the nano-gateway is then started.
@@ -28,12 +43,14 @@ nanogw.start()
 
 ### Configuration (config.py)
 
-This file contains the specific settings for the server and network it is connecting to. Depending on the nano-gateway region and provider (TTN, Loriot, etc.) these will vary. For specific settings, check the [forum](https://forum.pycom.io/) for others who may have configured their nano-gateway under different configurations.
+This file contains settings for the server and network it is connecting to. Depending on the nano-gateway region and provider (TTN, Loriot, etc.) these will vary. The provided example will work with The Things Network (TTN) in the European, 868Mhz, region.
+
+**You will need to change the GATEWAY_ID to match your own Gateway ID, which you can obtain by the process above.**
 
 ```python
 """ LoPy LoRaWAN Nano Gateway configuration options """
 
-GATEWAY_ID = '11aa334455bb7788' # specified in when registering your gateway
+GATEWAY_ID = '240ac4FFFE008d88' # specified in when registering your gateway
 
 SERVER = 'router.eu.thethings.network' # server address & port to forward received data to
 PORT = 1700
@@ -309,8 +326,7 @@ Inside the TTN Console, there are two options, ``applications`` and ``gateways``
 
 On the Register Gateway page, you will need to set the following settings:
 
-<p align="center"><img src ="../../../img/ttn-3.png" width="500"></p>
-
+![](/assets/TTN-GatewayReg-11-2017-2.jpg)
 These are unique to each gateway, location and country specific frequency. Please verify that correct settings are selected otherwise the gateway will not connect to TTN.
 
 | Option            | Value                               |
