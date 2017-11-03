@@ -54,7 +54,9 @@ if __name__ == '__main__':
 
 This file contains settings for the server and network it is connecting to. Depending on the nano-gateway region and provider (TTN, Loriot, etc.) these will vary. The provided example will work with The Things Network (TTN) in the European, 868Mhz, region.
 
-**The Gateway ID is generated in the script using the process described above.**
+The Gateway ID is generated in the script using the process described above.
+
+**Please change the WIFI_SSID and WIFI_PASS variables to match to your desired WiFi network**
 
 ```python
 """ LoPy LoRaWAN Nano Gateway configuration options """
