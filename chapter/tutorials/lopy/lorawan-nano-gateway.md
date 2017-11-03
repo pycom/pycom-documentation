@@ -329,6 +329,8 @@ On the Register Gateway page, you will need to set the following settings:
 ![](/assets/TTN-GatewayReg-11-2017-2.jpg)
 These are unique to each gateway, location and country specific frequency. Please verify that correct settings are selected otherwise the gateway will not connect to TTN.
 
+** You need to tick the "I'm using the legacy packet forwarder" to enable the right settings.** This is because the Nano-Gateway uses the 'de facto' standard Semtech UDP protocol.
+
 | Option            | Value                               |
 |-------------------|-------------------------------------|
 | Protocol          | Packet Forwarder                    |
@@ -337,6 +339,8 @@ These are unique to each gateway, location and country specific frequency. Pleas
 | Frequency Plan    | Select Country (e.g. EU - 868 MHz)  |
 | Location          | User Defined                        |
 | Antenna Placement | Indoor or Outdoor                   |
+
+The Gateway EUI should match your Gateway ID from the config.py file. We suggest you follow the procedure described near the top of this document to create your own unique Gateway ID.
 
 Once these settings have been applied, click ``Register Gateway``. A Gateway Overview page will appear, with the configuration settings showing. Next click on the ``Gateway Settings`` and configure the Router address to match that of the gateway (default - router.eu.thethings.network).
 
