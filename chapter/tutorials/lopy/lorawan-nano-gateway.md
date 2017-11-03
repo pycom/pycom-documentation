@@ -17,10 +17,10 @@ Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit 
 from network import WLAN
 import binascii
 wl = WLAN()
-binascii.hexlify(wl.mac())[:6] + 'FFFF' + binascii.hexlify(wl.mac())[6:]
+binascii.hexlify(wl.mac())[:6] + 'FFFE' + binascii.hexlify(wl.mac())[6:]
 ```
 
-The result will by something like `b'240ac4FFFE008d88'` where `240ac4FFFE008d88` is your Gateway ID.
+The result will by something like `b'240ac4FFFE008d88'` where `240ac4FFFE008d88` is your Gateway ID to be used in your network provider configuration.
 
 
 ### Main (main.py)
@@ -32,37 +32,58 @@ This file runs at boot and calls the library and ``config.py`` files to initalis
 import config
 from nanogateway import NanoGateway
 
+if __name__ == '__main__':
+    nanogw = NanoGateway(
+        id=config.GATEWAY_ID,
+        frequency=config.LORA_FREQUENCY,
+        datarate=config.LORA_GW_DR,
+        ssid=config.WIFI_SSID,
+        password=config.WIFI_PASS,
+        server=config.SERVER,
+        port=config.PORT,
+        ntp_server=config.NTP,
+        ntp_period=config.NTP_PERIOD_S
+        )
 
-nanogw = NanoGateway(id=config.GATEWAY_ID, frequency=config.LORA_FREQUENCY,
-                datarate=config.LORA_DR, ssid=config.WIFI_SSID,
-                password=config.WIFI_PASS, server=config.SERVER,
-                port=config.PORT, ntp=config.NTP, ntp_period=config.NTP_PERIOD_S)
-
-nanogw.start()
+    nanogw.start()
+    nanogw._log('You may now press ENTER to enter the REPL')
+    input()
 ```
 
 ### Configuration (config.py)
 
 This file contains settings for the server and network it is connecting to. Depending on the nano-gateway region and provider (TTN, Loriot, etc.) these will vary. The provided example will work with The Things Network (TTN) in the European, 868Mhz, region.
 
-**You will need to change the GATEWAY_ID to match your own Gateway ID, which you can obtain by the process above.**
+**The Gateway ID is generated in the script using the process described above.**
 
 ```python
 """ LoPy LoRaWAN Nano Gateway configuration options """
+  
+import machine
+import ubinascii
 
-GATEWAY_ID = '240ac4FFFE008d88' # specified in when registering your gateway
+WIFI_MAC = ubinascii.hexlify(machine.unique_id()).upper()
+# Set  the Gateway ID to be the first 3 bytes of MAC address + 'FFFE' + last 3 bytes of MAC address
+GATEWAY_ID = WIFI_MAC[:6] + "FFFE" + WIFI_MAC[6:12]
 
-SERVER = 'router.eu.thethings.network' # server address & port to forward received data to
+SERVER = 'router.eu.thethings.network'
 PORT = 1700
 
-NTP = "pool.ntp.org" # NTP server for getting/setting time
-NTP_PERIOD_S = 3600 # NTP server polling interval
+NTP = "pool.ntp.org"
+NTP_PERIOD_S = 3600
 
 WIFI_SSID = 'my-wifi'
 WIFI_PASS = 'my-wifi-password'
 
-LORA_FREQUENCY = 868100000 # check your specifc region for LORA_FREQUENCY and LORA_DR (datarate)
-LORA_DR = "SF7BW125"   # DR_5
+# for EU868
+LORA_FREQUENCY = 868100000
+LORA_GW_DR = "SF7BW125" # DR_5
+LORA_NODE_DR = 5
+
+# for US915
+# LORA_FREQUENCY = 903900000
+# LORA_GW_DR = "SF7BW125" # DR_3
+# LORA_NODE_DR = 3                    
 ```
 
 ### Library (nanogateway.py)
