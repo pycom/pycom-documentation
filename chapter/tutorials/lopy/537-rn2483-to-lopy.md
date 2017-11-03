@@ -1,6 +1,6 @@
 # RN2483 to LoPy
 
-This example show how to send data between a Microchip RN2483 and LoPy via raw LoRa.
+This example shows how to send data between a Microchip RN2483 and a LoPy via raw LoRa.
 
 ### RN2483
 
@@ -31,6 +31,7 @@ lora = LoRa(mode=LoRa.LORA, frequency= 868000000, bandwidth=LoRa.BW_125KHZ, sf=7
 
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 
+# This keeps listening for data "forever".
 while(True):
     s.recv(64)
 ```
