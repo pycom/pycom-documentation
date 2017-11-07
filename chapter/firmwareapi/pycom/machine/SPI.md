@@ -19,10 +19,10 @@ from machine import SPI
 # configure the SPI master @ 2MHz
 # this uses the SPI default pins for CLK, MOSI and MISO (``P10``, ``P11`` and ``P12``)
 spi = SPI(0, mode=SPI.MASTER, baudrate=2000000, polarity=0, phase=0)
-spi.write(bytes([0x01, 0x02, 0x03, 0x04, 0x05]) # send 5 bytes on the bus
+spi.write(bytes([0x01, 0x02, 0x03, 0x04, 0x05])) # send 5 bytes on the bus
 spi.read(5) # receive 5 bytes on the bus
 rbuf = bytearray(5)
-spi.write_readinto(bytes([0x01, 0x02, 0x03, 0x04, 0x05], rbuf) # send a receive 5 bytes
+spi.write_readinto(bytes([0x01, 0x02, 0x03, 0x04, 0x05]), rbuf) # send a receive 5 bytes
 ```
 
 ### Quick Usage Example using non-default pins
@@ -33,10 +33,10 @@ from machine import SPI
 # configure the SPI master @ 2MHz
 # this uses the SPI non-default pins for CLK, MOSI and MISO (``P19``, ``P20`` and ``P21``)
 spi = SPI(0, mode=SPI.MASTER, baudrate=2000000, polarity=0, phase=0, pins=('P19','P20','P21'))
-spi.write(bytes([0x01, 0x02, 0x03, 0x04, 0x05]) # send 5 bytes on the bus
+spi.write(bytes([0x01, 0x02, 0x03, 0x04, 0x05])) # send 5 bytes on the bus
 spi.read(5) # receive 5 bytes on the bus
 rbuf = bytearray(5)
-spi.write_readinto(bytes([0x01, 0x02, 0x03, 0x04, 0x05], rbuf) # send a receive 5 bytes
+spi.write_readinto(bytes([0x01, 0x02, 0x03, 0x04, 0x05]), rbuf) # send a receive 5 bytes
 ```
 
 
