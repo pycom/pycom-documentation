@@ -9,7 +9,7 @@ For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/d
 ### Creating the message broker (Amazon website):
 
 - Sign in to the [AWS Management Console](https://aws.amazon.com/console/)
-- Navigate to the IoT Console by clicking on the [AWS IoT link](../../../img/aws-1.png)
+- Navigate to the IoT Console by clicking on the <a href="../../../img/awd-1.png" target="_blank">AWS IoT link</a>
 - In the left navigation pane, choose [Register/Manage](../../../img/aws-2.png)
 - Click on the create button, give your [device a name and press create](../../../img/aws-3.png)
 - Click on the device that has been created
