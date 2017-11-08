@@ -8,14 +8,14 @@ For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/d
 
 ### Creating the message broker (Amazon website):
 
-- Sign in to the AWS Management Console
-- Navigate to the IoT Console by clicking on the AWS IoT link
-- In the left navigation pane, choose Registry to expand the choices
-- Click on the create button, give your device a name and press create
+- Sign in to the [AWS Management Console](https://aws.amazon.com/console/)
+- Navigate to the IoT Console by clicking on the ![AWS IoT link](../../../img/aws-1.png)
+- In the left navigation pane, choose ![Register/Manage](../../../img/aws-2.png)
+- Click on the create button, give your ![device a name and press create](../../../img/aws-3.png)
 - Click on the device that has been created
-- On the Details page, in the left navigation pane, choose Security
+- On the Details page, in the left navigation pane, choose ![Security](../../../img/aws-4.png)
 - On the Certificates page, choose Create certificate
-- Download the device certificate, private key, and the root CA for AWS IoT
+- Download the device certificate, public key, private key, and the root CA for AWS IoT ![Security](../../../img/aws-5.png)
 
 ### Setting up the device (Pycom device):
 
