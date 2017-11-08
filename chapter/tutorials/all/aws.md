@@ -15,14 +15,17 @@ For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/d
 - Click on the device that has been created
 - On the Details page, in the left navigation pane, choose <a href="../../../img/aws-4.png" target="_blank">Security</a>
 - On the Certificates page, choose Create certificate
-- Download the device certificates, then press the activate and done buttons. <a href="../../../img/aws-5.png" target="_blank">See image</a> 
+- Download all the certificates, then press the Activate and the Attach a Policy buttons. <a href="../../../img/aws-5.png" target="_blank">See image</a> 
+- Click on the Create New Policy button 
+- On the <a href="../../../img/aws-6.png" target="_blank">Create Policy</a> page, choose a policy name and the actions to authorize.
+- Go to the certificates page, click on the three dots of your certificate and attach the policy to the certificate as shown in the <a href="../../../img/aws-7.png" target="_blank">diagram</a>
 
 ### Setting up the device (Pycom device):
 
-- Download the lastest AWS SDK and sample code from the Pycom [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/aws).
-- Connect to the device via ftp and put the AWSIoTPythonSDK folder in the device flash
-- Put the downloaded certificates in the certs directory
-- Use Atom or visual studio blocks to create the desired MQTT communication. Sample code of publishing, shadow updater and delta listener are given below.
+- Download the latest sample code from the Pycom [GitHub Repository](https://github.com/pycom/aws-pycom).
+- Connect to the device via ftp and put the root CA certificate, the client certificate (*.pem.crt) and the private key (*.private.pem.key) in the /flash/cert folder.
+- Update the config file with your wifi settings, the <a href="../../../img/aws-8.png" target="_blank">AWS Host</a> and the certificate paths. 
+- Put the config.py and the main.py in the device flash
 
 ### Configuration (config.py):
 
@@ -30,17 +33,17 @@ This file contains the wifi, certificate paths and application specific settings
 
 ```python
 # wifi configuration
-WIFI_SSID = 'my wifi ssid'
-WIFI_PASS = 'my wifi password'
+WIFI_SSID = 'my_wifi_ssid'
+WIFI_PASS = 'my_wifi_password'
 
 # AWS general configuration
 AWS_PORT = 8883
-AWS_HOST = 'aws host'
-AWS_ROOT_CA = '/flash/cert/aws root CA'
-AWS_PUBLIC_KEY = '/flash/cert/aws public key'
-AWS_PRIVATE_KEY = '/flash/cert/aws private key'
+AWS_HOST = 'aws_host_url'
+AWS_ROOT_CA = '/flash/cert/aws_root.ca'
+AWS_CLIENT_CERT = '/flash/cert/aws_client.cert'
+AWS_PRIVATE_KEY = '/flash/cert/aws_private.key'
 
-# Subscribe / Publish client 
+################## Subscribe / Publish client #################
 CLIENT_ID = 'PycomPublishClient'
 TOPIC = 'PublishTopic'
 OFFLINE_QUEUE_SIZE = -1
@@ -50,20 +53,32 @@ MQTT_OPER_TIMEOUT = 5
 LAST_WILL_TOPIC = 'PublishTopic'
 LAST_WILL_MSG = 'To All: Last will message'
 
-# Shadow updater
+####################### Shadow updater ########################
 #THING_NAME = "my thing name"
 #CLIENT_ID = "ShadowUpdater"
 #CONN_DISCONN_TIMEOUT = 10
 #MQTT_OPER_TIMEOUT = 5
 
-# Delta Listener 
+####################### Delta Listener ########################
 #THING_NAME = "my thing name"
 #CLIENT_ID = "DeltaListener"
+#CONN_DISCONN_TIMEOUT = 10
+#MQTT_OPER_TIMEOUT = 5
+
+####################### Shadow Echo ########################
+#THING_NAME = "my thing name"
+#CLIENT_ID = "ShadowEcho"
 #CONN_DISCONN_TIMEOUT = 10
 #MQTT_OPER_TIMEOUT = 5
 ```
 
 ### Subscibe / Publish (main.py)
+
+To subsribe to a topic:
+- Go to the AWS Iot page, click on manage and choose your device 
+- From the left hand side, choose Activity and then click MQTT client. 
+- Choose the <a href="../../../img/aws-9.png" target="_blank">topic name</a> you entered in the configuration file. 
+- Messages should be published as shown in the <a href="../../../img/aws-10.png" target="_blank">diagram</a>
 
 ```python
 # user specified callback function
@@ -77,7 +92,7 @@ def customCallback(client, userdata, message):
 # configure the MQTT client
 pycomAwsMQTTClient = AWSIoTMQTTClient(config.CLIENT_ID)
 pycomAwsMQTTClient.configureEndpoint(config.AWS_HOST, config.AWS_PORT)
-pycomAwsMQTTClient.configureCredentials(config.AWS_ROOT_CA, config.AWS_PRIVATE_KEY, config.AWS_PUBLIC_KEY)
+pycomAwsMQTTClient.configureCredentials(config.AWS_ROOT_CA, config.AWS_PRIVATE_KEY, config.AWS_CLIENT_CERT)
 
 pycomAwsMQTTClient.configureOfflinePublishQueueing(config.OFFLINE_QUEUE_SIZE)
 pycomAwsMQTTClient.configureDrainingFrequency(config.DRAINING_FREQ)
@@ -126,7 +141,7 @@ def customShadowCallback_Delete(payload, responseStatus, token):
 # configure the MQTT client
 pycomAwsMQTTShadowClient = AWSIoTMQTTShadowClient(config.CLIENT_ID)
 pycomAwsMQTTShadowClient.configureEndpoint(config.AWS_HOST, config.AWS_PORT)
-pycomAwsMQTTShadowClient.configureCredentials(config.AWS_ROOT_CA, config.AWS_PRIVATE_KEY, config.AWS_PUBLIC_KEY)
+pycomAwsMQTTShadowClient.configureCredentials(config.AWS_ROOT_CA, config.AWS_PRIVATE_KEY, config.AWS_CLIENT_CERT)
 
 pycomAwsMQTTShadowClient.configureConnectDisconnectTimeout(config.CONN_DISCONN_TIMEOUT)
 pycomAwsMQTTShadowClient.configureMQTTOperationTimeout(config.MQTT_OPER_TIMEOUT)
@@ -161,7 +176,7 @@ def customShadowCallback_Delta(payload, responseStatus, token):
     # configure the MQTT client
 pycomAwsMQTTShadowClient = AWSIoTMQTTShadowClient(config.CLIENT_ID)
 pycomAwsMQTTShadowClient.configureEndpoint(config.AWS_HOST, config.AWS_PORT)
-pycomAwsMQTTShadowClient.configureCredentials(config.AWS_ROOT_CA, config.AWS_PRIVATE_KEY, config.AWS_PUBLIC_KEY)
+pycomAwsMQTTShadowClient.configureCredentials(config.AWS_ROOT_CA, config.AWS_PRIVATE_KEY, config.AWS_CLIENT_CERT)
 
 pycomAwsMQTTShadowClient.configureConnectDisconnectTimeout(config.CONN_DISCONN_TIMEOUT)
 pycomAwsMQTTShadowClient.configureMQTTOperationTimeout(config.MQTT_OPER_TIMEOUT)
