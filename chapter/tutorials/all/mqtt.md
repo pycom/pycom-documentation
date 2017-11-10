@@ -35,6 +35,7 @@ while True:
     time.sleep(1)
     print("Sending OFF")
     client.publish(topic="youraccount/feeds/lights", msg="OFF")
+    client.check_msg()
 
     time.sleep(1)
 ```
