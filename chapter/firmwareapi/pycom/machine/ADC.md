@@ -47,6 +47,15 @@ Returns an instance of ADCChannel. Example:
 apin = adc.channel(pin='P16')
 ```
 
+<function>adc.vref(*, vref)</function>
+
+If called without any arguments, this function returns the current calibrated voltage (in millivolts) of the 1.1v reference. Otherwise it will update the calibrated value (in millivolts) of the internal 1.1v reference. 
+
+<function>adc.vref_to_pin(*, pin)</function>
+
+Connects the internal 1.1v to external GPIO. It can only be connected to `P22`, `P21` or `P6`. It is recommended to only use `P6` on the WiPy, on other modules this pin is connected to the radio.
+
+
 ### Constants
 
 <constant>ADC.ATTN_0DB</constant> <constant>ADC.ATTN_2_5DB</constant> <constant>ADC.ATTN_6DB</constant> <constant>ADC.ATTN_11DB</constant>
@@ -74,6 +83,15 @@ Read the channel value.
 <function>adcchannel.deinit()</function>
 
 Disable the ADC channel.
+
+<function>adcchannel.voltage()</function>
+
+Reads the channels value and converts it into a voltage (in millivolts)
+
+<function>adcchannel.value_to_voltage(value)</function>
+
+Converts the provided value into a voltage (in millivolts) in the same way voltage does.
+
 
 {% hint style='danger' %}
 ADC pin input range is 0-1.1V. This maximum value can be increased up to 3.3V using the highest attenuation of 11dB. **Do not exceed the maximum of 3.3V**, to avoid damaging the device.
