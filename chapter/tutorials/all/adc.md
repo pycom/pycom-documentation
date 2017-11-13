@@ -22,7 +22,7 @@ adc = ADC()
 adc.vref_to_pin('P22')
 ```
 
-Now that the voltage reference is externally accessable you should measure it with the most accurate voltmeter you have access to. Note down the reading in millivolts, e.g. `1120`. You can then calibrate the ADC by telling it the true value of the internal reference. You should then check your calibration by connecting the ADC to a known voltage source.
+Now that the voltage reference is externally accessable you should measure it with the most accurate voltmeter you have access to. Note down the reading in millivolts, e.g. `1120`. To disconnect the 1.1v reference from `P22` please reset your module. You can now calibrate the ADC by telling it the true value of the internal reference. You should then check your calibration by connecting the ADC to a known voltage source.
 
 ```py
 # Set calibration - see note above
