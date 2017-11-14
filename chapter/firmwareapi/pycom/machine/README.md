@@ -60,6 +60,13 @@ The arguments are:
 
 Get the wake reason. See constants for the possible return values. Returns a tuple of the form: (wake_reason, gpio_list). When the wakeup reason is either GPIO or touch pad, then the second element of the tuple is a list with GPIOs that generated the wakeup.
 
+<function>machine.remaining_sleep_time()</function>
+
+Returns the remaining timer duration (in milliseconds) if the ESP32 is woken up
+from deep sleep by something other than the timer. For Example if you set the
+timer for 30 seconds (30000 ms) and it wakes up after 10 seconds then this
+function will return `20000`.
+
 ### Miscellaneous Functions
 
 <function>machine.main(filename)</function>
@@ -79,6 +86,13 @@ Returns a byte string with a unique identifier of a board/SoC. It will vary from
 {% hint style='info' %}
 Use ``binascii.hexlify()`` to convert the byte string to hexadecimal form for ease of manipulation and use elsewhere.
 {% endhint %}
+
+<function>machine.info()</function>
+
+Returns the high water mark of the stack associated with various system tasks,
+in words (1 word = 4 bytes on the ESP32). If the value is zero then the task has
+likely overflowed its stack. If the value is close to zero then the task
+has come close to overflowing its stack.
 
 ### Constants
 
