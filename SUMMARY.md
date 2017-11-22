@@ -135,9 +135,10 @@
 * [7.2 Development Modules](chapter/datasheets/development/README.md)
   * [7.2.1 WiPy 2.0](chapter/datasheets/development/wipy2.md)
   * [7.2.2 LoPy](chapter/datasheets/development/lopy.md)
-  * [7.2.3 SiPy](chapter/datasheets/development/sipy.md)
-  * [7.2.4 GPy](chapter/datasheets/development/gpy.md)
-  * [7.2.5 FiPy](chapter/datasheets/development/fipy.md)
+  * [7.2.3 LoPy 4](chapter/datasheets/development/lopy4.md)
+  * [7.2.4 SiPy](chapter/datasheets/development/sipy.md)
+  * [7.2.5 GPy](chapter/datasheets/development/gpy.md)
+  * [7.2.6 FiPy](chapter/datasheets/development/fipy.md)
 * [7.3 OEM Modules](chapter/datasheets/oem/README.md)
   * [7.3.1 W01](chapter/datasheets/oem/w01.md)
   * [7.3.2 L01](chapter/datasheets/oem/l01.md)
@@ -168,4 +169,3 @@
 ## 10. License
 
 * [10.1 License](chapter/license/README.md)
-
