@@ -2,7 +2,7 @@
 This module implements binary data hashing algorithms. MD5 and SHA are supported. By limitations in the hardware, only one active hashing operation is supported at a time.
 
 ### Constructors
-<class><i>class</i> uhashlib.MD5([data])</class>
+<class><i>class</i> uhashlib.md5([data])</class>
 
 Create a MD5 hasher object and optionally feed data into it.
 
