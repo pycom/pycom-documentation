@@ -5,7 +5,7 @@
 ### Pinout
 The pinout of the LoPy 4 is available as a <a href="../downloads/lopy4-pinout.pdf" target="_blank">PDF File</a>.
 
-<a href="../downloads/lopy4-pinout.pdf" target="_blank" align="center"><img src ="../../../img/lopy-pinout4.png"></a>
+<a href="../downloads/lopy4-pinout.pdf" target="_blank" align="center"><img src ="../../../img/lopy4-pinout.png"></a>
 
 ### Specsheets
 
