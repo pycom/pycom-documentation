@@ -62,7 +62,12 @@ uart.read(5) # read up to 5 bytes
 ### Constructors
 <class><i>class</i> machine.UART(bus, ...)</class>
 
-Construct a UART object on the given bus. bus can be 0 or 1. If the bus is not given, the default one will be selected (0) or the selection will be made based on the given pins.
+Construct a UART object on the given bus. bus can be 0, 1 or 2. If the bus is not given, the default one will be selected (0) or the selection will be made based on the given pins.
+
+{% hint style='danger' %}
+On the GPy/FiPy UART2 is unavailable because it is used to communicate with the
+cellular radio.
+{% endhint %}
 
 ### Methods
 
