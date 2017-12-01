@@ -3,16 +3,16 @@ This example allows a raw LoRa connection between two LoPys (nodes) to a single 
 
 For more information and discussions about this code, see this forum [post](https://forum.pycom.io/topic/236/lopy-nano-gateway).
 
-### Gateway Gode
+### Gateway Code
 
 ```python
 import socket
 import struct
 from network import LoRa
 
-# A basic package header, B: 1 byte for the deviceId, B: 1 byte for the pkg size, %ds: Formated string for string
+# A basic package header, B: 1 byte for the deviceId, B: 1 byte for the pkg size, %ds: Formatted string for string
 _LORA_PKG_FORMAT = "!BB%ds"
-# A basic ack package, B: 1 byte for the deviceId, B: 1 bytes for the pkg size, B: 1 byte for the Ok (200) or error messages
+# A basic ack package, B: 1 byte for the deviceId, B: 1 byte for the pkg size, B: 1 byte for the Ok (200) or error messages
 _LORA_PKG_ACK_FORMAT = "BBB"
 
 # Open a LoRa Socket, use rx_iq to avoid listening to our own messages
@@ -45,7 +45,7 @@ import time
 import struct
 from network import LoRa
 
-# A basic package header, B: 1 byte for the deviceId, B: 1 bytes for the pkg size
+# A basic package header, B: 1 byte for the deviceId, B: 1 byte for the pkg size
 _LORA_PKG_FORMAT = "BB%ds"
 _LORA_PKG_ACK_FORMAT = "BBB"
 DEVICE_ID = 0x01

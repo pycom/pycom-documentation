@@ -1,7 +1,7 @@
 # LoRaWAN Nano-Gateway
 This example allows to connect a LoPy to a LoRaWAN network such as The Things Network (TTN) or Loriot to be used as a nano-gateway.
 
-This example uses settings specifically for connecting to The Things Network within the European 868 MHz region. For a other usage, please see the ``config.py`` file for relevant sections that need changing.
+This example uses settings specifically for connecting to The Things Network within the European 868 MHz region. For another usage, please see the ``config.py`` file for relevant sections that need changing.
 
 Up to date versions of these snippets can be found at the following [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway). For more information and discussion about this code, see this forum [post](https://forum.pycom.io/topic/810/new-firmware-release-1-6-7-b1-lorawan-nano-gateway-with-ttn-example).
 
@@ -56,7 +56,7 @@ This file contains settings for the server and network it is connecting to. Depe
 
 The Gateway ID is generated in the script using the process described above.
 
-**Please change the WIFI_SSID and WIFI_PASS variables to match to your desired WiFi network**
+**Please change the WIFI_SSID and WIFI_PASS variables to match your desired WiFi network**
 
 ```python
 """ LoPy LoRaWAN Nano Gateway configuration options """
@@ -365,11 +365,11 @@ These are unique to each gateway, location and country specific frequency. Pleas
 
 The Gateway EUI should match your Gateway ID from the config.py file. We suggest you follow the procedure described near the top of this document to create your own unique Gateway ID.
 
-Once these settings have been applied, click ``Register Gateway``. A Gateway Overview page will appear, with the configuration settings showing. Next click on the ``Gateway Settings`` and configure the Router address to match that of the gateway (default - router.eu.thethings.network).
+Once these settings have been applied, click ``Register Gateway``. A Gateway Overview page will appear, with the configuration settings showing. Next click on the ``Gateway Settings`` and configure the Router address to match that of the gateway (default: router.eu.thethings.network).
 
 <p align="center"><img src ="../../../img/ttn-4.png" width="500"></p>
 
-The ``Gateway`` should now be configured. Next one or more nodes can now be configured to use the nano-gateway and TTN applications may be built.
+The ``Gateway`` should now be configured. Next, one or more nodes can now be configured to use the nano-gateway and TTN applications may be built.
 
 ### LoPy Node
 There are two methods of connecting LoPy devices to the nano-gateway, Over the Air Activation (OTAA) and Activation By Personalisation (ABP). The code and instructions for registering these methods are shown below, followed by instruction for how to connect them to an application on TTN.
@@ -421,7 +421,7 @@ s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 # set the LoRaWAN data rate
 s.setsockopt(socket.SOL_LORA, socket.SO_DR, 5)
 
-# make the socket blocking
+# make the socket non-blocking
 s.setblocking(False)
 
 time.sleep(5.0)
@@ -478,7 +478,7 @@ s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 # set the LoRaWAN data rate
 s.setsockopt(socket.SOL_LORA, socket.SO_DR, 5)
 
-# make the socket blocking
+# make the socket non-blocking
 s.setblocking(False)
 
 """ Your own code can be written below! """
