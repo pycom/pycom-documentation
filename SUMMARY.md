@@ -104,7 +104,11 @@
       * [6.2.2.3.5 GATTSService](chapter/firmwareapi/pycom/network/bluetooth/gattsservice.md)
       * [6.2.2.3.6 GATTSCharacteristic](chapter/firmwareapi/pycom/network/bluetooth/gattscharacteristic.md)
     * [6.2.2.4 LoRa](chapter/firmwareapi/pycom/network/lora.md)
-    * [6.2.2.5 Sigfox](chapter/firmwareapi/pycom/network/sigfox.md)
+    * [6.2.2.5 Sigfox]
+(chapter/firmwareapi/pycom/network/sigfox.md)
+    * [6.2.2.6 LTE](chapter/firmwareapi/pycom/network/lte.md)
+      * [Cat M1](chapter/firmwareapi/pycom/network/lte/cat-m1.md)
+      * [NB-IoT \(soon\)](chapter/firmwareapi/pycom/network/lte/nb-iot.md)
   * [6.2.3 AES](chapter/firmwareapi/pycom/aes.md)
   * [6.2.4 pycom](chapter/firmwareapi/pycom/pycom.md)
 * [6.3 MicroPython Modules](chapter/firmwareapi/micropython/README.md)
