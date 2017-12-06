@@ -1,6 +1,6 @@
 # class LoRa
 
-This class provides a driver for the LoRa network processor in the LoPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
+This class provides a driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
 
 ```python
 from network import LoRa
