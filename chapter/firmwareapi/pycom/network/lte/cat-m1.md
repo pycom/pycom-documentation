@@ -28,7 +28,7 @@ This also applies to our MQTT and AWS examples.
 
 <class><i>class</i> network.LTE(id=0, ...)</class>
 
-Create and configure a LoRa object. See init for params of configuration.
+Create and configure a LTE object. See init for params of configuration.
 
 ```python
 from network import LTE
