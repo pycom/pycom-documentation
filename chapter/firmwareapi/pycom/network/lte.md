@@ -1,7 +1,6 @@
 # class LTE
 The LTE class provides access to the LTE-M/NB-IoT modem on the GPy and FiPy. LTE-M/NB-IoT ar new categories of cellular protocols developed by the [3GPP](http://www.3gpp.org) and optimized for long battery life power and longer range. These are new protocols currently in the process of being deployed by mobile networks across the world. 
 
-**Please note: The GPy and FiPy are not compatible with older LTE (non -M or non-NB-IoT) standards.**
 The GPy and FiPy support both new LTE-M protocols: 
 
 * **Cat-M1**: also known as **LTE-M** defines a 1.4 MHz radio channel size and about 375 kbps of throughput. It is optimized for coverage and long battery life, outperforming 2G MTC, while being similar to previous LTE standards. 
