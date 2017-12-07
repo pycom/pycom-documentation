@@ -58,7 +58,7 @@ Initialize the SPI bus with the given parameters:
 - ``polarity`` can be 0 or 1, and is the level the idle clock line sits at.
 - ``phase`` can be 0 or 1 to sample data on the first or second clock edge respectively.
 - ``bits`` is the width of each transfer, accepted values are 8, 16 and 32.
-- ``firstbit`` can be <constant>SPI.MSB</constant> only.
+- ``firstbit`` can be <constant>SPI.MSB</constant> or <constant>SPI.LSB</constant>.
 - ``pins`` is an optional tuple with the pins to assign to the SPI bus. If the pins argument is not given the default pins will be selected (P10 as CLK, P11 as MOSI and P12 as MISO). If pins is passed as None then no pin assignment will be made.
 
 <function>spi.deinit()</function>
@@ -90,3 +90,7 @@ for initialising the SPI bus to master
 <constant>SPI.MSB</constant>
 
 set the first bit to be the most significant bit
+
+<constant>SPI.LSB</constant>
+
+set the first bit to be the least significant bit
