@@ -44,7 +44,7 @@ The arguments are:
 
 - ``cid`` is a Connection ID. This is carrier specific, for Verizon use cid=3. For others like Telstra it should be cid=1. 
 
-<function>wlan.deinit()</function>
+<function>lte.deinit()</function>
 
 Disables LTE until it's been initialized again
 
