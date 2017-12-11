@@ -2,10 +2,10 @@
 
 To update the firmware on the Pysense/Pytrack, please see the following instructions. The firmware of both Pysense and Pytrack can be updated via the USB port using the terminal tool, DFU-util.
 
-The latest firmware is v0.0.7. The DFU file can be downloaded from the links below:
+The latest firmware is v0.0.8. The DFU file can be downloaded from the links below:
 
-- [Pytrack DFU](https://software.pycom.io/downloads/pytrack_0.0.7.dfu)
-- [Pysense DFU](https://software.pycom.io/downloads/pysense_0.0.7.dfu)
+- [Pytrack DFU](https://software.pycom.io/downloads/pytrack_0.0.8.dfu)
+- [Pysense DFU](https://software.pycom.io/downloads/pysense_0.0.8.dfu)
 
 ### Installing the DFU-util Tools
 
@@ -46,7 +46,7 @@ $ sudo pacman -Sy dfu-util
 ##### Windows
 
 - [DFU-util](http://dfu-util.sourceforge.net/releases/dfu-util-0.8-binaries/win32-mingw32/dfu-util-static.exe) – Tool to upload the firmware to the Pytrack/Pysense
-- [Zadig](http://zadig.akeo.ie/) – Installer tool for the Pytrack/Pysense board DFU Firmware 
+- [Zadig](http://zadig.akeo.ie/) – Installer tool for the Pytrack/Pysense board DFU Firmware
 
 To uploaded the latest DFU firmware to the Pytrack/Pysense, **first install the DFU drivers** to the host computer. Open Zadig and select ``libusbK`` as the driver.
 
@@ -56,8 +56,8 @@ To install the drivers, the Pytrack/Pysense board must be in DFU-mode:
 2. Hold down the button on the shield
 3. Connect the USB cable
 4. Keep the button pressed for at least one second
-5. Release the button. When the board is connected in DFU-mode, it will be in this state for 7 seconds. 
-6. Click the “Install Driver” button immediately. If the driver was unsuccessful, repeat from step 1. 
+5. Release the button. When the board is connected in DFU-mode, it will be in this state for 7 seconds.
+6. Click the “Install Driver” button immediately. If the driver was unsuccessful, repeat from step 1.
 
 Occasionally, Windows will automatically install the incorrect drivers for the board. In this case, the button will be labelled “Reinstall Driver” or “Replace Driver”.
 
