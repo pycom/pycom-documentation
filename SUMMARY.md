@@ -106,8 +106,8 @@
     * [6.2.2.4 LoRa](chapter/firmwareapi/pycom/network/lora.md)
     * [6.2.2.5 Sigfox](chapter/firmwareapi/pycom/network/sigfox.md)
     * [6.2.2.6 LTE](chapter/firmwareapi/pycom/network/lte.md)
-      * [Cat M1](chapter/firmwareapi/pycom/network/lte/cat-m1.md)
-      * [NB-IoT \(soon\)](chapter/firmwareapi/pycom/network/lte/nb-iot.md)
+      * [6.2.2.6.1 Cat M1](chapter/firmwareapi/pycom/network/lte/cat-m1.md)
+      * [6.2.2.6.2 NB-IoT \(soon\)](chapter/firmwareapi/pycom/network/lte/nb-iot.md)
   * [6.2.3 AES](chapter/firmwareapi/pycom/aes.md)
   * [6.2.4 pycom](chapter/firmwareapi/pycom/pycom.md)
 * [6.3 MicroPython Modules](chapter/firmwareapi/micropython/README.md)
@@ -173,4 +173,3 @@
 ## 10. License
 
 * [10.1 License](chapter/license/README.md)
-
