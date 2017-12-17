@@ -93,7 +93,7 @@
     * [6.2.1.9 WDT](chapter/firmwareapi/pycom/machine/WDT.md)
     * [6.2.1.10 Timer](chapter/firmwareapi/pycom/machine/Timer.md)
     * [6.2.1.11 SD](chapter/firmwareapi/pycom/machine/SD.md)
-    * [6.2.1.11 SD](chapter/firmwareapi/pycom/machine/CAN.md)
+    * [6.2.1.12 CAN](chapter/firmwareapi/pycom/machine/CAN.md)
   * [6.2.2 network](chapter/firmwareapi/pycom/network/README.md)
     * [6.2.2.1 WLAN](chapter/firmwareapi/pycom/network/wlan.md)
     * [6.2.2.2 Server](chapter/firmwareapi/pycom/network/server.md)
