@@ -68,7 +68,7 @@ can.send(id=0x12, rtr=True)         # sends a remote request for message id=0x12
 
 <function>can.recv(timeout=0)</function>
 
-Get a message from the receive queue, and optionally specify a timeout value. This function returns ``None`` if no messages available.
+Get a message from the receive queue, and optionally specify a timeout value in **ms**. This function returns ``None`` if no messages available.
 If a message is present, it will be returned as a named tuple with the following form:
 
 ``(id, data, rtr, extended)``
