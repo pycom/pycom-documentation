@@ -85,7 +85,9 @@ Specify a software filter accepting only the messages with identifiers falling i
 For example:
 
 ```python
->>> can.soft_filter([(1, 10), (20, 30), (40, 50)])  # only accept identifiers from 1 to 10, from 20 to 30 and from 40 to 50.
+can.soft_filter([(1, 10), (20, 30), (40, 50)])  # only accept identifiers from 1 to 10, from 20 to 30 and from 40 to 50.
+
+can.soft_filter(None)   # disable soft filters
 ```
 
 <function>can.hard_filter(codemask_list)</function>
@@ -96,7 +98,11 @@ only 1 code and mask pair should be passed.
 For example:
 
 ```python
->>> can.hard_filter([(0x10, 0xF800), (0x30, 0xF800)])  # only accept identifiers 0x10 and 0x30
+can.hard_filter([(0x10, 0xF800), (0x30, 0xF800)])  # only accept identifiers 0x10 and 0x30
+
+can.hard_filter([(0x10, 0xFFFF0000)])  # only accept identifiers 0x10
+
+can.hard_filter(None)   # disable hard filters
 ```
 
 <function>can.callback(trigger, handler=None, arg=None)</function>
