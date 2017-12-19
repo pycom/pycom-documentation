@@ -13,7 +13,9 @@ When powering via VIN:
 Please DO NOT power the board via the 3.3V pin as this may damage the device. ONLY use the VIN pin for powering Pycom Devices.
 {% endhint %}
 
-The battery connector for the expansion board is a **JST SH 2P** variant. The expansion board exposes the male connector and an external battery should use a female adapter in order to connect and power the expansion board.
+The battery connector for the expansion board is a **JST PHR-2** variant. The expansion board exposes the male connector and an external
+battery should use a female adapter in order to connect and power the expansion board. The polarity of the battery should be checked
+before being plugged into the expansion board, the cables may require swapping.
 
 {% hint style='danger' %}
 The GPIO pins of the modules are NOT 5V tolerant, connecting them to voltages higher than 3.3V might cause irreparable damage to the device.
