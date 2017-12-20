@@ -4,7 +4,7 @@ This documentation is applicable for all of the devices below. To find out more 
 
 # Development Devices
 
-### [WiPy 2.0](https://www.pycom.io/product/wipy/)
+### [WiPy 3.0](https://www.pycom.io/product/wipy/)
 
 WiFi and Bluetooth (ESP32 Dev Kit)
 
@@ -21,6 +21,12 @@ WiFi, Bluetooth and LoRa (ESP32 Dev Kit)
 WiFi, Bluetooth and Sigfox (ESP32 Dev Kit)
 
 <p><img src ="../img/sipy.png" width="150"></p>
+
+### [LoPy4](https://pycom.io/product/lopy4/)
+
+WiFi, Bluetooth, LoRa and Sigfox (ESP32 Dev Kit)
+
+<p><img src ="../img/lopy4.png" width="150"></p>
 
 ### [GPy](https://www.pycom.io/product/gpy/)
 
@@ -47,6 +53,12 @@ WiFi and Bluetooth (ESP32 OEM)
 WiFi, Bluetooth and LoRa (ESP32 OEM)
 
 <p><img src ="../img/l01.png" width="150"></p>
+
+### [L04](https://pycom.io/product/l04/)
+
+WiFi, Bluetooth, LoRa and Sigfox (ESP32 OEM)
+
+<p><img src ="../img/l04.png" width="150"></p>
 
 ### [G01](https://www.pycom.io/product/g01/)
 
