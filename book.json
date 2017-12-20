@@ -1,5 +1,5 @@
 {
-	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","ga"],
+	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","ga","simpletabs"],
 	"pluginsConfig": {
 		"ga": {
 			"token": "UA-72107804-1"
