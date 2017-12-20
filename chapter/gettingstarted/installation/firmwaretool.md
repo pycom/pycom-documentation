@@ -43,7 +43,7 @@ a connection between P2 and GND, the Pysense/Pytrack will do this automatically.
 
 1. Before connecting your module to a PySense/PyTrack board, you should update
    the firmware on the PySense/PyTrack. Instructions on how to do this can be
-   found [here](../pytrackpysense/installation/firmware.md).
+   found [here](../../pytrackpysense/installation/firmware.md).
 2. Disconnect your device from your computer
 3. Insert module into expansion board
 4. Reconnect the board via USB to your computer
