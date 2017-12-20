@@ -1,13 +1,43 @@
-# Unboxing & Setup (Expansion Board)
+# Connecting your device
 
-Lets get started setting up the Pycom device. The easiest method to programming/using a Pycom device is with the Expansion Board. To start, connect the module to the Expansion Board:
+Lets get started setting up the Pycom device. The easiest method to
+programming/using a Pycom device is with the Pycom Expansion Board, PySense or
+PyTrack.
 
-- Look for the reset button on the module (located at a corner of the board, next to the LED).
+
+
+Select below the tab that matches your configuration for a step by
+step guide.
+
+
+{% tabs first="Expansion Board", second="Pysense/PyTrack" %}
+
+{% content "first" %}
+
+- Look for the reset button on the module (located at a corner of the board,
+  next to the LED).
 - Locate the USB connector on the expansion board.
 - Insert the module on the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 - It’s that simple! For confirmation, here’s a picture demonstrating how to correctly align a Pycom device with the expansion board:
 
-<p align="center"><img src ="../../img/placement.png" width="300"></p>
+<p align="center"><img src ="../../img/placement_exp.png" height="400"></p>
+
+{% content "second" %}
+- Before connecting your module to a PySense/PyTrack board, you should update
+  the firmware on the PySense/PyTrack. Instructions on how to do this can be
+  found [here](../pytrackpysense/installation/firmware.md).
+- Look for the reset button on the module (located at a corner of the board,
+  next to the LED).
+- Locate the USB connector on the PySense/PyTrack.
+- Insert the module on the PySense/PyTrack with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
+- It’s that simple! For confirmation, here’s a picture demonstrating how to correctly align a Pycom device with the Pysense/Pytrack:
+
+<p align="center"><img src ="../../img/placement_pysense_pytrack.png" height="400"></p>
+
+{% endtabs %}
+
+
+
 
 #### Video Tutorial
 
