@@ -37,8 +37,6 @@ step guide.
 {% endtabs %}
 
 
-
-
 #### Video Tutorial
 
 {% youtube %}
@@ -62,3 +60,9 @@ Once everything is in place, the device is ready to be programmed. Plug it into 
 In a few seconds, the LED should start blinking every 4 seconds. This means that everything is working correctly! If the LED is not blinking, please disconnect the power supply and re-check the board’s position on the expansion board.
 
 <p align="center"><img src ="../../img/blinking.gif" width="150"></p>
+
+{% hint style='info' %}
+We highly recommend you update the firmware of your module before trying to use
+it. Instructions on how to do this can be found in the
+[next chapter](installation/firmwaretool.md).
+{% endhint %}
