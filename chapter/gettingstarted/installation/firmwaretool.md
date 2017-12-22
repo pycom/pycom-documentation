@@ -15,7 +15,8 @@ Previous versions of firmware are available for download on the
 
 ### Updating Device Firmware
 
-The instructions given by the updater tool should be followed carefully. The basic procedure can be found below:
+The basic firmware upgrade procedure can be found below, please follow these
+steps carefully:
 
 {% tabs first="Expansion Board 2.0", second="Pysense/PyTrack" %}
 
@@ -33,9 +34,9 @@ The instructions given by the updater tool should be followed carefully. The bas
 7. Reboot the device (button or power off then on), your device is now ready to
    use!
 
-{% hint style='danger' %}
-Make sure the **TX jumper** is present on your expansion board, as the jumpers sometimes come loose in the box during transport. Without this jumper, the updater will fail.
-{% endhint %}
+If you are having any issues, make sure the **TX jumper** is present on your
+expansion board, as the jumpers sometimes come loose in the box during
+transport. Without this jumper, the updater will fail.
 
 {% content "second" %}
 
