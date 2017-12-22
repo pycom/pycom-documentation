@@ -124,6 +124,11 @@ Return value: number of bytes written or None on timeout.
 
 Send a break condition on the bus. This drives the bus low for a duration of 13 bits. Return value: ``None``.
 
+<function>uart.tx_done()</function>
+
+Returns True if all data has been sent and the TX buffer has no data in it,
+otherwise returns False.
+
 ### Constants
 <constant>UART.EVEN</constant> <constant>UART.ODD</constant>
 
