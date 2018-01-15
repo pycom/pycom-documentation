@@ -10,6 +10,7 @@ This example will send a message to a topic on the Adafruit MQTT broker and then
 
 ```python
 from mqtt import MQTTClient
+from network import WLAN
 import machine
 import time
 
