@@ -58,11 +58,11 @@ Send a CAN frame on the bus
 Can be used like:
 
 ```python
-can.send(id=0x20, data=bytes([1, 2, 3, 4, 5]), extended=True)   # sends 5 bytes with an extended identifier
+can.send(id=0x0020, data=bytes([0x01, 0x02, 0x03, 0x04, 0x05]), extended=True)   # sends 5 bytes with an extended identifier
 
-can.send(id=0x10, data=bytes([1, 2, 3, 4, 5, 6, 7, 8]))         # sends 8 bytes with an standard identifier
+can.send(id=0x010, data=bytes([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08])) # sends 8 bytes with an standard identifier
 
-can.send(id=0x12, rtr=True)         # sends a remote request for message id=0x12
+can.send(id=0x012, rtr=True)         # sends a remote request for message id=0x12
 
 ```
 
@@ -75,34 +75,31 @@ If a message is present, it will be returned as a named tuple with the following
 
 ```python
 >>> can.recv()
-(id=12, data=b'123', rtr=False, extended=False)
+(id=0x012, data=b'123', rtr=False, extended=False)
 ```
 
-<function>can.soft_filter(filter_list)</function>
+<function>can.soft_filter(mode, filter_list)</function>
 
-Specify a software filter accepting only the messages with identifiers falling in the range specified. With software filters all messages in the bus are received by the CAN controller, but only the matching ones are passed to the RX queue. This means that the queue won't be filled with non relevant messages, but the interrupt overhead will remain as before. The ``filter_list`` can contain up to 32 tuples stating the range of IDs to be accepted.
+Specify a software filter accepting only the messages that pass the filter test.
+
+
+There are 3 possible filter modes:
+- <constant>CAN.FILTER_LIST</constant> allows to pass the list of IDs that should be accepted.
+- <constant>CAN.FILTER_RANGE</constant> allows to pass a list or tuple of ID ranges that should be accepted.
+- <constant>CAN.FILTER_MASK</constant> allows to pass a list of tuples of the form: ``(filer, mask)``.
+
+With software filters all messages in the bus are received by the CAN controller but only the matching ones are passed to the RX queue. This means that the queue won't be filled up with non relevant messages, but the interrupt overhead will remain as normal. The ``filter_list`` can contain up to 32 elements.
 
 For example:
 
 ```python
-can.soft_filter([(1, 10), (20, 30), (40, 50)])  # only accept identifiers from 1 to 10, from 20 to 30 and from 40 to 50.
+can.soft_filter(CAN.FILTER_LIST, [0x100, 0x200, 0x300, 0x400])  # only accept identifiers from 0x100, 0x200, 0x300 and 0x400
 
-can.soft_filter(None)   # disable soft filters
-```
+can.soft_filter(CAN.FILTER_RANGE, [(0x001, 0x010), (0x020, 0x030), (0x040, 0x050)])  # only accept identifiers from 0x001 to 0x010, from 0x020 to 0x030 and from 0x040 to 0x050.
 
-<function>can.hard_filter(codemask_list)</function>
+can.soft_filter(CAN.FILTER_MASK, [(0x100, 0x7FF), (0x200, 0x7FC)]) # more of the classic Filter and Mask method.
 
-Specify a hardware filter using code and mask. Up to 2 tuples of code and mask can be specified. In order to filter extended messages,
-only 1 code and mask pair should be passed.
-
-For example:
-
-```python
-can.hard_filter([(0x10, 0xF800), (0x30, 0xF800)])  # only accept identifiers 0x10 and 0x30
-
-can.hard_filter([(0x10, 0xFFFF0000)])  # only accept identifiers 0x10
-
-can.hard_filter(None)   # disable hard filters
+can.soft_filter(None)   # disable soft filters, all messages are accepted
 ```
 
 <function>can.callback(trigger, handler=None, arg=None)</function>
