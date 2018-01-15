@@ -1,6 +1,6 @@
 # LoPy to LoPy
 
-This example show how to connect two LoPys \(nodes\) via raw LoRa.
+This example shows how to connect two LoPys \(nodes\) via raw LoRa.
 
 ### Node A
 
