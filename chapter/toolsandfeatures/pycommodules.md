@@ -18,6 +18,7 @@ All members in the current family of Pycom modules are powered by the ESP32, sup
 * [Bluetooth](../firmwareapi/pycom/network/bluetooth/README.md) \(BLE currently\)
 * [LoRa](../firmwareapi/pycom/network/lora.md) \(LoPy, LoPy4 and FiPy\)
 * [Sigfox](../firmwareapi/pycom/network/sigfox.md) \(SiPy, LoPy4 and FiPy\)
+* [LTE CAT M1](/chapter/firmwareapi/pycom/network/lte/cat-m1.md) & [NB-IoT](/chapter/firmwareapi/pycom/network/lte/nb-iot.md) \(GPy and FiPy\)
 * [hashlib](../firmwareapi/micropython/uhashlib.md) MD5, SHA1, SHA256, SHA384 and SHA512 hash algorithms
 * [AES encryption](../firmwareapi/pycom/aes.md)
 * [SSL/TLS support](../firmwareapi/micropython/ussl.md)
