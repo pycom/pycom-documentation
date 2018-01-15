@@ -137,4 +137,5 @@ This method returns a value with bits sets (if any) indicating the events that h
 
 
 ### Constants
-<constant>CAN.NORMAL</constant> <constant>CAN.SILENT</constant> <constant>CAN.FORMAT_STD</constant> <constant>CAN.FORMAT_EXT</constant> <constant>CAN.FORMAT_BOTH</constant> <constant>CAN.RX_FRAME</constant> <constant>CAN.RX_FIFO_NOT_EMPTY</constant> <constant>CAN.RX_FIFO_OVERRRUN</constant>
+<constant>CAN.NORMAL</constant> <constant>CAN.SILENT</constant> <constant>CAN.FORMAT_STD</constant> <constant>CAN.FORMAT_EXT</constant> <constant>CAN.FORMAT_BOTH</constant> <constant>CAN.RX_FRAME</constant> <constant>CAN.RX_FIFO_NOT_EMPTY</constant> <constant>CAN.RX_FIFO_OVERRRUN</constant> <constant>CAN.FILTER_LIST</constant>
+<constant>CAN.FILTER_RANGE</constant> <constant>CAN.FILTER_MASK</constant>
