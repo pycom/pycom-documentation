@@ -43,3 +43,5 @@ To use PuTTY the serial port (COM port) in which the Pycom device is connected, 
 1. With PuTTY open, click on ``Session`` in the left-hand panel
 2. Next click the ``Serial`` radio button on the right and enter the associated COM port (e.g. COM4) in the ``Serial Line`` box
 3. Finally, click the ``Open`` button
+
+<p align="center"><img src ="../../../img/putty.png"></p>
