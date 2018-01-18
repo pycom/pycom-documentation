@@ -68,8 +68,10 @@ can.send(id=0x012, rtr=True)         # sends a remote request for message id=0x1
 
 <function>can.recv(timeout=0)</function>
 
-Get a message from the receive queue, and optionally specify a timeout value in **ms**. This function returns ``None`` if no messages available.
-If a message is present, it will be returned as a named tuple with the following form:
+Get a message from the receive queue, and optionally specify a timeout value in
+**s** (can be a floating point value e.g. `0.2`). This function returns ``None``
+if no messages available. If a message is present, it will be returned as a
+named tuple with the following form:
 
 ``(id, data, rtr, extended)``
 
@@ -104,7 +106,7 @@ can.soft_filter(None)   # disable soft filters, all messages are accepted
 
 <function>can.callback(trigger, handler=None, arg=None)</function>
 
-Set a callback to be triggered when any of this 3 events are present: 
+Set a callback to be triggered when any of this 3 events are present:
 
 - trigger is the type of event that triggers the callback. Possible values are:
 	- <constant>CAN.RX_FRAME</constant> interrupt whenever a new frame is received.
@@ -124,7 +126,7 @@ It can be used like this:
 from machine import CAN
 
 can = CAN(mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))
- 
+
 def can_cb(can_o):
     print('CAN Rx:', can_o.recv())
 
