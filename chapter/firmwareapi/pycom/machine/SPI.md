@@ -17,7 +17,7 @@ Only required parameter is mode, must be <constant>SPI.MASTER</constant>. Polari
 from machine import SPI
 
 # configure the SPI master @ 2MHz
-# this uses the SPI default pins for CLK, MOSI and MISO (``P10``, ``P11`` and ``P12``)
+# this uses the SPI default pins for CLK, MOSI and MISO (``P10``, ``P11`` and ``P14``)
 spi = SPI(0, mode=SPI.MASTER, baudrate=2000000, polarity=0, phase=0)
 spi.write(bytes([0x01, 0x02, 0x03, 0x04, 0x05])) # send 5 bytes on the bus
 spi.read(5) # receive 5 bytes on the bus
@@ -59,7 +59,7 @@ Initialize the SPI bus with the given parameters:
 - ``phase`` can be 0 or 1 to sample data on the first or second clock edge respectively.
 - ``bits`` is the width of each transfer, accepted values are 8, 16 and 32.
 - ``firstbit`` can be <constant>SPI.MSB</constant> or <constant>SPI.LSB</constant>.
-- ``pins`` is an optional tuple with the pins to assign to the SPI bus. If the pins argument is not given the default pins will be selected (P10 as CLK, P11 as MOSI and P12 as MISO). If pins is passed as None then no pin assignment will be made.
+- ``pins`` is an optional tuple with the pins to assign to the SPI bus. If the pins argument is not given the default pins will be selected (`P10` as CLK,`P11` as MOSI and `P14` as MISO). If pins is passed as None then no pin assignment will be made.
 
 <function>spi.deinit()</function>
 
