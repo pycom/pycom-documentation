@@ -22,7 +22,7 @@ device to connect to their home network so instead this network could be provide
 by a vehicle. This vehicle will travel around a certain geographic area in which
 the devices have been sent the special downlink message to initiate the update.
 The devices will look for the WiFi network being broadcast by the vehicle and
-connect.The devices will then connect to a sever running on this WiFi network.
+connect.The devices will then connect to a server running on this WiFi network.
 This server (also shown in this example) will generate manifest files that
 instruct the device on what it should update, and where to get the update data
 from.
