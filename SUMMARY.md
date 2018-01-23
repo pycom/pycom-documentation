@@ -8,24 +8,30 @@
 ## 1. Getting Started
 
 * [1.1 Introduction](chapter/gettingstarted/README.md)
-* [1.2 Unboxing/Setup](chapter/gettingstarted/unboxing.md)
-* [1.3 Installing Software](chapter/gettingstarted/installingsoftware.md)
-  * [1.3.1 Updating Firmware](chapter/gettingstarted/installation/firmwaretool.md)
-  * [1.3.2 Pymakr Plugin](chapter/gettingstarted/installation/pymakr.md)
-* [1.4 Device Registration](chapter/gettingstarted/registration.md)
-* [1.5 Introduction to MicroPython](chapter/gettingstarted/micropython.md)
-  * [1.5.1 Examples](chapter/gettingstarted/micropython/examples.md)
-
-## 2. Tools & Features
-
-* [2.1 Introduction](chapter/toolsandfeatures/README.md)
-* [2.2 Pycom Modules](chapter/toolsandfeatures/pycommodules.md)
-* [2.3 REPL & Uploading Code](chapter/toolsandfeatures/repl/README.md)
-  * [2.3.1 Serial USB](chapter/toolsandfeatures/repl/serial.md)
-  * [2.3.2 Telnet](chapter/toolsandfeatures/repl/telnet.md)
-* [2.4 FTP](chapter/toolsandfeatures/FTP.md)
-* [2.5 Boot Modes](chapter/toolsandfeatures/bootmodes.md)
-* [2.6 Notes](chapter/toolsandfeatures/notes.md)
+* [1.2 Requirements](chapter/gettingstarted/requirements.md)
+* [1.3 Hardware Setup](chapter/gettingstarted/hardwaresetup.md)
+  * [1.3.1 LoPy](chapter/gettingstarted/connection/lopy.md)
+  * [1.3.2 LoPy4](chapter/gettingstarted/connection/lopy4.md)
+  * [1.3.1 SiPy](chapter/gettingstarted/connection/sipy.md)
+  * [1.3.1 GPy](chapter/gettingstarted/connection/gpy.md)
+  * [1.3.1 FiPy](chapter/gettingstarted/connection/fipy.md)
+  * [1.3.1 WiPy](chapter/gettingstarted/connection/wipy.md)
+* [1.4 Software](chapter/gettingstarted/installingsoftware.md)
+  * [1.4.1 Drivers](chapter/gettingstarted/installation/drivers.md)
+  * [1.4.2 Updating Firmware](chapter/gettingstarted/installation/firmwaretool.md)
+  * [1.4.3 Pymakr](chapter/gettingstarted/installation/pymakr.md)
+* [1.5 Programming the modules](chapter/gettingstarted/programming.md)
+  * [1.5.1 REPL](chapter/gettingstarted/programming/repl/README.md)
+    * [1.5.1.1 Serial USB](chapter/gettingstarted/programming/repl/serial.md)
+    * [1.5.1.2 Telnet](chapter/gettingstarted/programming/repl/telnet.md)
+  * [1.5.2 FTP](chapter/gettingstarted/programming/FTP.md)
+  * [1.5.3 Boot Modes](chapter/gettingstarted/programming/bootmodes.md)
+* [1.6 Device Registration](chapter/gettingstarted/registration.md)
+  * [1.6.1 Sigfox](chapter/gettingstarted/registration/sigfox.md)
+  * [1.6.2 Cellular](chapter/gettingstarted/registration/cellular.md)
+  * [1.6.3 LoRaWAN](chapter/gettingstarted/registration/lora.md)
+* [1.6 Introduction to MicroPython](chapter/gettingstarted/micropython.md)
+  * [1.7.1 Examples](chapter/gettingstarted/micropython/examples.md)
 
 ## 3. Pymakr Plugin
 

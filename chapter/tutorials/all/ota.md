@@ -163,7 +163,6 @@ back procedure is not implemented. This is left of the end user to do.
 # Example
 Below is am example implementing the methodology previously explained in this tutorial to initiate an OTA update.
 
-
 {% hint style='info' %}
 The example below will only work on a Pycom device with LoRa capabilities. If
 want to test it out on a device without LoRa functionality then simply comment

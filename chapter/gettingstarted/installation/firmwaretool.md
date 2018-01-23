@@ -23,20 +23,18 @@ steps carefully:
 {% content "first" %}
 
 1. Disconnect your device from your computer
-2. Insert module into expansion board
+2. Insert module into the expansion board
 3. Connect a jumper cable or wire between G23 and GND
 4. Reconnect the board via USB to your computer, this puts the device in ‘firmware update mode’.
-   If you are having trouble connecting via USB, make sure you have the correct
-   [FTDI drivers](http://www.ftdichip.com/Drivers/VCP.htm) installed.
 5. Run the Firmware Upgrade tool
 <p align="center"><img src ="../../../img/firmware-update.png" width="500"></p>
 6. Remove the G23 to GND jumper cable/wire
 7. Reboot the device (button or power off then on), your device is now ready to
    use!
 
-If you are having any issues, make sure the **TX jumper** is present on your
-expansion board, as the jumpers sometimes come loose in the box during
-transport. Without this jumper, the updater will fail.
+If you are having any issues, make sure the **TX and RX jumpers** are present on
+your expansion board, as the jumpers sometimes come loose in the box during
+transport. Without these jumpers, the updater will fail.
 
 {% content "second" %}
 

@@ -1,7 +1,27 @@
 <p align="center"><img src ="../../img/quickstartIcon.png" width="150"></p>
 
 # Getting Started
+So, you've decided to order a Pycom development module. Firstly we would like to
+congratulate you in making an excellent decision. If you haven't yet placed your
+order we highly recommend you check out the [requirements](./requirements.md)
+page before you place your order to ensure you know which accessories you might
+require.
 
-Let’s start with a quick description of what to do after you unpack your brand new Pycom Device. The aim of this guide is not to bug you with complex details about it, but instead get you up and running as quickly as possible!
+## Products
+Click the picture matching your product below to be taken to its getting started
+guide.
 
-This chapter help you with the unboxing of and getting started with your device. If you come across any issues along the way, there is a Troubleshooting section that addresses the common problems. In case you can not find the answer to your issue, you can always ask questions in our [Forum](https://forum.pycom.io).
+{% grid %}
+  {% col 1 %}<a href="connection/wipy.md"><p align="center"><img src ="./img/wipy.png"></p></a>
+  {% col 1 %}<a href="connection/lopy.md"><p align="center"><img src ="./img/lopy.png"></p></a>
+  {% col 1 %}<a href="connection/lopy4.md"><p align="center"><img src ="./img/lopy4.png"></p></a>
+{% endgrid %}
+{% grid %}
+  {% col 1 %}<a href="connection/sipy.md"><p align="center"><img src ="./img/sipy.png"></p></a>
+  {% col 1 %}<a href="connection/gpy.md"><p align="center"><img src ="./img/gpy.png"></p></a>
+  {% col 1 %}<a href="connection/fipy.md"><p align="center"><img src ="./img/fipy.png"></p></a>
+{% endgrid %}
+{% grid %}
+  {% col 1 %}<a href="connection/pysense.md"><p align="center"><img src ="./img/pysense.png"></p></a>
+  {% col 1 %}<a href="connection/pytrack.md"><p align="center"><img src ="./img/pytrack.png"></p></a>
+{% endgrid %}
