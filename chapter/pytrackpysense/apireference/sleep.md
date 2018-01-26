@@ -1,9 +1,9 @@
 # Sleep and Wakeup for Pytrack/Pysense API
 
-This chapter describes the various methods for sleep and wakeup which are embedded in Pytrack and Pysense libraries. Both Pytrack and Pysense have the same methods, although the appropriate class, either pytrack or pysense, has to be instantiated.
+This chapter describes the various methods for sleep and wakeup which are embedded in Pytrack and Pysense libraries. Both Pytrack and Pysense have the same methods, although the appropriate class, either ```pytrack``` or ```pysense```, has to be instantiated.
 
 ## Quick Usage Example
-Example available at [Sleep Wakeup Example Libraries GitHub repository](https://github.com/pycom/pycom-libraries/blob/master/examples/accelerometer_wake/main.py)
+The following example is also available at [Sleep Wakeup Example Libraries GitHub repository](https://github.com/pycom/pycom-libraries/blob/master/examples/accelerometer_wake/main.py)
 
 ```
 #from pytrack import Pytrack
@@ -21,7 +21,8 @@ py = Pysense()
 # WAKE_REASON_TIMER = 4
 # WAKE_REASON_INT_PIN = 8
 
-print("Wakeup reason: " + str(py.get_wake_reason()) + "; Approximate sleep remaining: " + str(py.get_sleep_remaining()) + " sec")
+print("Wakeup reason: " + str(py.get_wake_reason()))
+print("Approximate sleep remaining: " + str(py.get_sleep_remaining()) + " sec")
 time.sleep(0.5)
 
 # enable wakeup source from INT pin
@@ -44,7 +45,7 @@ py.go_to_sleep()
 
 <function>pytrack.get_sleep_remaining()</function>
 
-In the event of a sleep session that was awoken by an asynchronous event (Accelerometer, INT pin or Reset button) the approximate sleep remaining interval can be found out. The user has to manually use **setup_sleep()** to configure the next sleep interval.
+In the event of a sleep session that was awoken by an asynchronous event (Accelerometer, INT pin or Reset button) the approximate sleep remaining interval (expressed in **seconds**) can be found out. The user has to manually use **setup_sleep()** to configure the next sleep interval.
 
 <function>pytrack.get_wake_reason()</function>
 
@@ -59,13 +60,13 @@ As in the above example, this method should be called at the beginning of the sc
 
 <function>pytrack.go_to_sleep([gps=True])</function>
 
-Puts the board in sleep mode, for the duration set previously with **pytrack.setup_sleep(timout_sec)**. The optional boolean parameter sets the GPS state during sleep.
+Puts the board in sleep mode, for the duration, which has to be set previously with **pytrack.setup_sleep(timout_sec)**. The optional boolean parameter sets the GPS state during sleep.
 
-Code after this function is not executed, as wakeup will restart micropython.
+Micropython code, which is after this function, is not executed, as wakeup will restart micropython.
 
 <function>pytrack.setup_int_wake_up(rising, falling])</function>
 
-Enables as wakeup source, the accelerometer INT pin (PIC - RA5). The boolean parameters will indicate rising (activity detection) and/or falling (inactivity detection) edge is configured.
+Enables as wakeup source, the accelerometer INT pin (PIC - RA5). The boolean parameters will indicate rising edge (activity detection) and/or falling edge (inactivity detection) is configured.
 
 **The accelerometer (class LIS2HH12)** has to be also configured for a certain acceleration threshold and duration. Code snippet:
 ```
