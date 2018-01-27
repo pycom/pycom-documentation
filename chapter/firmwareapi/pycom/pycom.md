@@ -68,7 +68,7 @@ pycom.wifi_on_boot()       # get the wifi on boot flag
 <function>pycom.pulses_get(pin, timeout)</function>  
 
 Return a list of pulses at pin. The methods scans for transitions at pin and returns a list of tuples, each telling the pin value and the duration in microseconds of that value.  pin is a pin object, which must have set
-to INP or OPEN_DRAIN mode. The scan stops if not transitions occurs within timeout microseconds.
+to INP or OPEN_DRAIN mode. The scan stops if not transitions occurs within timeout milliseconds.
 Example:
 ```
 # get the raw data from a DHT11/DHT22/AM2302 sensor
