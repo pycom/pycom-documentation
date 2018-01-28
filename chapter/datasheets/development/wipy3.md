@@ -3,7 +3,7 @@
 <p align="center"><img src ="../../../img/wipy2.png" width="300"></p>
 
 ### Pinout
-The pinout of the WiPy 3.0 is available as a <a href="../downloads/wipy2-pinout.pdf" target="_blank">PDF File</a>.
+The pinout of the WiPy 3.0 is available as a <a href="../downloads/wipy3-pinout.pdf" target="_blank">PDF File</a>.
 
 <a href="../downloads/wipy3-pinout.pdf" target="_blank" align="center"><img src ="../../../img/wipy3-pinout.png"></a>
 
