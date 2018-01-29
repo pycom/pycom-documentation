@@ -45,6 +45,7 @@
 * [4.3 API Reference](chapter/pytrackpysense/apireference/README.md)
   * [4.3.1 Pytrack](chapter/pytrackpysense/apireference/pytrack.md)
   * [4.3.2 Pysense](chapter/pytrackpysense/apireference/pysense.md)
+  * [4.3.3 Sleep](chapter/pytrackpysense/apireference/sleep.md)
 
 ## 5. Tutorials & Examples
 
