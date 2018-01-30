@@ -137,19 +137,19 @@ Tutorials on how to use your {{ module }} module can be found in the
 [examples]() section of this documentation. The following tutorial might be of
 specific interest for the {{ module }}:
 
-- WiFi connection
+- [WiFi connection](../../tutorials/all/wlan.md)
 {% if module=="LoPy" or module=="LoPy4" or module=="FiPy" %}
-- LoRaWAN node
-- LoRaWAN nano gateway
+- [LoRaWAN node](../../tutorials/lora/lorawan-otta.md)
+- [LoRaWAN nano gateway](../../tutorials/lora/lorawan-nano-gateway.md)
 {% endif %}
 {% if module=="SiPy" or module=="LoPy4" or module=="FiPy" %}
-- Sigfox getting started
+- [Sigfox](../../tutorials/sigfox/README.md)
 {% endif %}
 {% if module=="GPy" or module=="FiPy" %}
-- LTE CAT-M1
-- NB-IoT
+- [LTE CAT-M1](../../tutorials/cellular/cat_m1.md)
+- [NB-IoT](../../tutorials/cellular/nb_iot.md)
 {% endif %}
-- BLE
+- [BLE](../../tutorials/all/ble.md)
 
 {% if module=="LoPy" or module=="SiPy" or module=="WiPy" %}
 ## Deepsleep current issue
