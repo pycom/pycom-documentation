@@ -11,7 +11,7 @@ these can be located in the accessories section of the
     - *LoRa (433MHz):* [LoRa 433Mhz antenna]()
     - *LTE-M or NB-IoT:* [LTE-M antenna]()
     - *WiFi/BT:* All our modules have an on-board antenna so this is *optional*.
-  - **USB UART:** We high recommend one of our base boards because they connect
+  - **USB UART:** We highly recommend one of our base boards because they connect
     easily with our modules and greatly simplify the firmware upgrade process:
       - [Expansion board]()
       - [Pytrack]()
