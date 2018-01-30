@@ -1,6 +1,6 @@
 ## Basic connection
 
-{% tabs exp="Expansion Board", pic="Pysense/PyTrack", diy="USB UART Adapter"%}
+{% tabs exp="Expansion Board", pic="Pysense/Pytrack", diy="USB UART Adapter"%}
 
 {% content "exp" %}
 
@@ -14,13 +14,13 @@ pins should now no longer be visible.
 <p align="center"><img src ="../img/Expansion_Board_{{ module }}.png" height="400"></p>
 
 {% content "pic" %}
-- Before connecting your module to a PySense/PyTrack board, you should update
-  the firmware on the PySense/PyTrack. Instructions on how to do this can be
+- Before connecting your module to a Pysense/Pytrack board, you should update
+  the firmware on the Pysense/Pytrack. Instructions on how to do this can be
   found [here](../../pytrackpysense/installation/firmware.md).
 - Look for the reset button on the {{ module }} module (located at a corner of
 the board, next to the LED).
-- Locate the USB connector on the PySense/PyTrack.
-- Insert the module on the PySense/PyTrack with the reset button pointing
+- Locate the USB connector on the Pysense/Pytrack.
+- Insert the module on the Pysense/Pytrack with the reset button pointing
 towards the USB connector. It should firmly click into place and the pins
  should now no longer be visible.
 
