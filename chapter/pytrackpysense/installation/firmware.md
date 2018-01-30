@@ -8,19 +8,14 @@ The latest firmware is v0.0.8. The DFU file can be downloaded from the links bel
 - [Pysense DFU](https://software.pycom.io/downloads/pysense_0.0.8.dfu)
 
 While the the normal, application mode, the Pysense and Pytrack require a Serial USB CDC driver, in DFU, bootloader mode, the DFU driver is required. Bellow, the USB Product ID is depicted for each case.
-```
-USB Vendor ID is always 0x04D8.
 
-USB Product ID:
-===================================================
-|         | DFU bootloader | Application firmware |
-|         |  (update mode) |     (normal mode)    |
----------------------------------------------------
+| Board   | DFU bootloader (update mode) | Application firmware (normal mode) |
+|---------|:--------------:|:--------------------:|
 | Pytrack |      0xF014    |        0xF013        |
----------------------------------------------------
 | Pysense |      0xF011    |        0xF012        |
-===================================================
-```
+
+*Note: USB Vendor ID is always 0x04D8.*
+
 ### Installing the DFU-util Tools
 
 ##### Mac OS
@@ -75,7 +70,7 @@ To install the drivers, the Pytrack/Pysense board must be in DFU-mode:
    - *Here the USB ID has to be the DFU-bootloader one (0xF014 for Pytrack or 0xF011 for Pysense).*
    - *This is a successful DFU driver installation for Pytrack:*
 
-<p align="center"><img src ="../../../img/pytrack_dfu_mode_zadig.png" width="600"></p>
+<p align="center"><img src ="../../../img/pytrack_dfu_mode_zadig.png" width="800"></p>
 
 Open the command prompt and navigate to the directory where the DFU-util and the firmware was downloaded (must be in same directory). Repeat the procedure to get the board in DFU-mode and run the command below but replace ``X.X.X`` with the firmware version and replace pysense with pytrack if it is the pytrack that is to be updated (e.g: ``pytrack_0.0.8.dfu``):
 
@@ -87,7 +82,7 @@ If the update was successful, a message, “Done!” should appear in the bottom
 
 If, by mistake, the libusbk driver was installed while the USB ID is the Application mode (0xF013 for Pytrack or 0xF012 for Pysense), then the ``Serial USB (CDC)`` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
 
-<p align="center"><img src ="../../../img/pytrack_app_mode_zadig.png" width="600"></p>
+<p align="center"><img src ="../../../img/pytrack_app_mode_zadig.png" width="800"></p>
 
 ### Using DFU-util with Pytrack and Pysense
 
@@ -133,3 +128,13 @@ Download done.
 state(2) = dfuIDLE, status(0) = No error condition is present
 Done!
 ```
+
+###### Debugging
+
+Using `lsusb` command, the Pytrack/Pysense device should be visible in both normal and bootloader modes.
+
+For exemple, a Pytrack board is visible as either:
+- `Bus 020 Device 004: ID 04d8:f014 Microchip Technology Inc. Application Specific Device`
+  - this is bootloader mode (f014 is USB PID), active just for 7-8 seconds, if the reset button was just  pressed before plugging USB connector.
+- `Bus 020 Device 005: ID 04d8:f013 Microchip Technology Inc. Pytrack Serial: Pyabcde0`
+  - this is normal, application mode (f013 is USB PID), this means the bootloader verified application partition and it boot-up correctly.
