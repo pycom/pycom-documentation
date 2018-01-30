@@ -73,11 +73,9 @@ To install the drivers, the Pytrack/Pysense board must be in DFU-mode:
 5. Release the button. When the board is connected in DFU-mode, it will be in this state for 7 seconds.
 6. Click the “Install Driver” button immediately. If the driver was unsuccessful, repeat from step 1.
    - *Here the USB ID has to be the DFU-bootloader one (0xF014 for Pytrack or 0xF011 for Pysense).*
-   - *If, by mistake, the libusbk driver was installed while the USB ID is the Application mode (0xF013 for Pytrack or 0xF012 for Pysense), then the ``Serial USB (CDC)`` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.*
+   - *This is a successful DFU driver installation for Pytrack:*
 
-Occasionally, Windows will automatically install the incorrect drivers for the board. In this case, the button will be labelled “Reinstall Driver” or “Replace Driver”.
-
-<p align="center"><img src ="../../../img/zadig.png" width="400"></p>
+<p align="center"><img src ="../../../img/pytrack_dfu_mode_zadig.png" width="600"></p>
 
 Open the command prompt and navigate to the directory where the DFU-util and the firmware was downloaded (must be in same directory). Repeat the procedure to get the board in DFU-mode and run the command below but replace ``X.X.X`` with the firmware version and replace pysense with pytrack if it is the pytrack that is to be updated (e.g: ``pytrack_0.0.8.dfu``):
 
@@ -86,6 +84,10 @@ dfu-util-static.exe -D pysense_X.X.X.dfu
 ```
 
 If the update was successful, a message, “Done!” should appear in the bottom of the command prompt.
+
+If, by mistake, the libusbk driver was installed while the USB ID is the Application mode (0xF013 for Pytrack or 0xF012 for Pysense), then the ``Serial USB (CDC)`` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
+
+<p align="center"><img src ="../../../img/pytrack_app_mode_zadig.png" width="600"></p>
 
 ### Using DFU-util with Pytrack and Pysense
 
