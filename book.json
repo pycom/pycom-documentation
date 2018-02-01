@@ -1,5 +1,5 @@
 {
-	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","ga","simpletabs"],
+	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","ga","simpletabs", "meta-single"],
 	"pluginsConfig": {
 		"ga": {
 			"token": "UA-72107804-1"
@@ -20,6 +20,10 @@
 			"applicationID": "PQ23WHN1L4",
 			"publicKey": "4df795f3b883651272450a06ef760108",
 			"freeAccount": "true"
+		},
+		"meta-single": {
+			"name": "google-site-verification",
+			"content": "Kbyrn6in1PWDoUk5OR65BLF-Ff4wU9WcT3RcJb6-VYM"
 		}
 	},
 	"styles": {
