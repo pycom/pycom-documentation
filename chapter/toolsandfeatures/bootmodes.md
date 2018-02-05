@@ -1,23 +1,35 @@
 # Boot Modes
 
-If powering up normally or upon pressing the reset button, a Pycom device will boot into standard mode; the ``boot.py`` file will be executed first, followed by ``main.py``.
+### Bootloader Mode
+In order to put Pycom modules into bootloader mode to allow firmware to be
+upgraded, ``P2`` must be pulled ``low`` during boot. When this is done the
+device will print ``waiting for download``. After this it is ready to receive an
+update via the firmware updater.
 
-This boot sequence may be overridden by pulling ``P12`` (``G28`` on the expansion board) high (i.e. connect it to the ``3V3`` output pin), during reset cycle. This procedure also allows for the firmware to be reverted to earlier versions. A Pycom device can hold up to 3 different firmware versions; the factory firmware plus 2 OTA images.
+### Safe boot
+If powering up normally or upon pressing the reset button, a Pycom device will
+boot into standard mode; the ``boot.py`` file will be executed first, followed
+by ``main.py``.
 
-After reset, if ``P12`` pin is held high, the heartbeat LED begin flashing orange slowly. If after 3 seconds the pin is still held high, the LED will start blinking faster and the device will select the previous OTA image to boot. If this image is the desired firmware, ``P12`` must be released before 3 more seconds elapse. If an additional 3 seconds later, the pin is still high, the factory firmware will be selected. The LED will then flash quickly for another 1.5 seconds and the device will then proceed to boot. The firmware selection mechanism is as follows:
+This boot sequence may be overridden by pulling ``P12`` (``G28`` on the
+expansion board) `high` (i.e. connect it to the ``3V3`` output pin), during
+reset cycle. After reset, if ``P12`` pin is held high, the heartbeat LED will
+begin flashing orange slowly, this will indicate the execution of ``boot.py``
+and ``main.py`` will be skipped. This can be useful when the code in these files
+prevents you from accessing the device, e.g. disabling the UART and WiFi.
 
-### Safe Boot
+If after 3 seconds the pin is still held high, the LED will start blinking
+faster. If the device has been updated using the OTA procedure, this will
+trigger the device to boot its previous firmware (more details on this can be
+found below)
 
-Pin ``P12`` released during:
+### Firmware slots
 
-| 1st 3 secs window | 2nd 3 secs window   | Final 1.5 secs window |
-|:-----------------:|:-------------------:|:---------------------:|
-|``latest firmware``|``previous firmware``| ``factory firmware``  |
-
-
-With all of the 3 above scenarios, safe boot mode is entered. This means that the execution of both ``boot.py`` and ``main.py`` is skipped. This may be useful to recover from crash situations produced by the user scripts. The selection made during safe boot is not persistent, therefore after the next normal reset, the latest firmware will proceed to run again.
-
-If problems occur within the filesystem, the user may wish to format the internal flash drive.
+Pycom modules feature two firmware slots. When you perform a firmware upgrade
+using our updater tool, this is always written to slot 0. When an OTA is applied,
+either by FTP or our provided [OTA functions](../firmwareapi/pycom/pycom.md), it
+will be written to the currently unused slot. Once the OTA is completed and the
+new firmware is verified, the active slot is swapped.
 
 ### Reset
 
@@ -35,7 +47,7 @@ A hard reset is the same as performing a power cycle to the device. In order to 
 >>> machine.reset()
 ```
 
-### Factory Reset the Filesystem
+### Factory Reset the Filesystems
 
 If a device’s filesystem gets corrupted, it can format it by running:
 
