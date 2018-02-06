@@ -22,7 +22,7 @@ Create an CAN object. See init for parameters of initialisation.:
 
 ```python
 # only 1 CAN peripheral is available, so the bus must always be 0
-can = RTC(0, mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))
+can = CAN(0, mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))
 ```
 
 ### Methods
@@ -139,5 +139,5 @@ This method returns a value with bits sets (if any) indicating the events that h
 
 
 ### Constants
-<constant>CAN.NORMAL</constant> <constant>CAN.SILENT</constant> <constant>CAN.FORMAT_STD</constant> <constant>CAN.FORMAT_EXT</constant> <constant>CAN.FORMAT_BOTH</constant> <constant>CAN.RX_FRAME</constant> <constant>CAN.RX_FIFO_NOT_EMPTY</constant> <constant>CAN.RX_FIFO_OVERRRUN</constant> <constant>CAN.FILTER_LIST</constant>
+<constant>CAN.NORMAL</constant> <constant>CAN.SILENT</constant> <constant>CAN.FORMAT_STD</constant> <constant>CAN.FORMAT_EXT</constant> <constant>CAN.FORMAT_BOTH</constant> <constant>CAN.RX_FRAME</constant> <constant>CAN.RX_FIFO_NOT_EMPTY</constant> <constant>CAN.RX_FIFO_OVERRUN</constant> <constant>CAN.FILTER_LIST</constant>
 <constant>CAN.FILTER_RANGE</constant> <constant>CAN.FILTER_MASK</constant>
