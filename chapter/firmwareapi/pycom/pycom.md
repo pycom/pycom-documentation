@@ -14,15 +14,15 @@ pycom.rgbled(0xff00)    # make the LED light up in green color
 
 ### Functions
 
-<function>pycom.heartbeat([enable])</function>
+#####<function>pycom.heartbeat([enable])</function>
 
 Get or set the state (enabled or disabled) of the heartbeat LED. Accepts and returns boolean values (True or False).
 
-<function>pycom.rgbled(color)</function>
+#####<function>pycom.rgbled(color)</function>
 
 Set the colour of the RGB LED. The color is specified as 24 bit value representing red, green and blue, where the red colour is represented by the 8 most significant bits. For instance, passing the value ``0x00FF00`` will light up the LED in a very bright green.
 
-<function>pycom.nvs_set(key, value)</function>
+#####<function>pycom.nvs_set(key, value)</function>
 
 Set the value of the specified key in the NVRAM memory area of the external flash. Data stored here is preserved across resets and power cycles. Value can only take 32-bit integers at the moment. Example:
 
@@ -33,7 +33,7 @@ pycom.nvs_set('temp', 25)
 pycom.nvs_set('count', 10)
 ```
 
-<function>pycom.nvs_get(key)</function>
+#####<function>pycom.nvs_get(key)</function>
 
 Get the value the specified key from the NVRAM memory area of the external flash. Example:
 
@@ -45,15 +45,15 @@ pulses = pycom.nvs_get('count')
 
 If a non-existing key is given the returned value will be ``None``.
 
-<function>pycom.nvs_erase(key)</function>
+#####<function>pycom.nvs_erase(key)</function>
 
 Erase the given key from the NVRAM memory area.
 
-<function>pycom.nvs_erase_all()</function>
+#####<function>pycom.nvs_erase_all()</function>
 
 Erase the entire NVRAM memory area.
 
-<function>pycom.wifi_on_boot([enable])</function>
+#####<function>pycom.wifi_on_boot([enable])</function>
 
 Get or set the WiFi on boot flag. When this flag is set to True, the AP with the default ssid ('lopy-wlan-xxx' for example) will be enabled as part of the boot process. If the flag is set to False, the module will boot with WiFi disabled until it's enabled by the script via the ``WLAN`` class. This setting is stored in non-volatile memory which preserves it across resets and power cycles. Example:
 
@@ -65,7 +65,7 @@ pycom.wifi_on_boot(True)   # enable WiFi on boot
 pycom.wifi_on_boot()       # get the wifi on boot flag
 
 ```
-<function>pycom.pulses_get(pin, timeout)</function>  
+#####<function>pycom.pulses_get(pin, timeout)</function>  
 
 Return a list of pulses at pin. The methods scans for transitions at pin and returns a list of tuples, each telling the pin value and the duration in microseconds of that value.  pin is a pin object, which must have set
 to INP or OPEN_DRAIN mode. The scan stops if not transitions occurs within timeout milliseconds.
@@ -83,9 +83,9 @@ pin(1)
 data = pulses_get(pin, 100)
 ```
 
-<function>pycom.ota_start()</function>  
-<function>pycom.ota_write(buffer)</function>  
-<function>pycom.ota_finish()</function>  
+#####<function>pycom.ota_start()</function>  
+#####<function>pycom.ota_write(buffer)</function>  
+#####<function>pycom.ota_finish()</function>  
 Perform a firmware update. These methods are internally used by a firmware update though ftp. The update starts with a call to ota_start(), followed by a series of
 calls to ota_write(buffer), and is terminated with ota_finish().
 After reset, the new image gets active. buffer shall hold the image data to be written, in arbitrary sizes. A block size of 4096 is recommended.

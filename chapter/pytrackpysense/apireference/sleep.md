@@ -43,11 +43,11 @@ py.go_to_sleep()
 ```
 ## Methods
 
-<function>pytrack.get_sleep_remaining()</function>
+#####<function>pytrack.get_sleep_remaining()</function>
 
 In the event of a sleep session that was awoken by an asynchronous event (Accelerometer, INT pin or Reset button) the approximate sleep remaining interval (expressed in **seconds**) can be found out. The user has to manually use **setup_sleep()** to configure the next sleep interval.
 
-<function>pytrack.get_wake_reason()</function>
+#####<function>pytrack.get_wake_reason()</function>
 
 Returns the last wakeup reason. Possible values are:
 ```
@@ -58,13 +58,13 @@ Returns the last wakeup reason. Possible values are:
 ```
 As in the above example, this method should be called at the beginning of the script, to find out the reset (wakeup) reason.
 
-<function>pytrack.go_to_sleep([gps=True])</function>
+#####<function>pytrack.go_to_sleep([gps=True])</function>
 
 Puts the board in sleep mode, for the duration, which has to be set previously with **pytrack.setup_sleep(timout_sec)**. The optional boolean parameter sets the GPS state during sleep.
 
 Micropython code, which is after this function, is not executed, as wakeup will restart micropython.
 
-<function>pytrack.setup_int_wake_up(rising, falling])</function>
+#####<function>pytrack.setup_int_wake_up(rising, falling])</function>
 
 Enables as wakeup source, the accelerometer INT pin (PIC - RA5). The boolean parameters will indicate rising edge (activity detection) and/or falling edge (inactivity detection) is configured.
 
@@ -83,11 +83,11 @@ py.setup_int_wake_up(True, True)
 acc.enable_activity_interrupt(2000, 200)
 ```
 
-<function>pytrack.setup_int_pin_wake_up([rising_edge = True])</function>
+#####<function>pytrack.setup_int_pin_wake_up([rising_edge = True])</function>
 
 Enables as wakeup source, the INT pic (PIC - RC1). Either rising or falling edge has to be set, by default it's rising edge.
 
-<function>pytrack.setup_sleep(time_seconds)</function>
+#####<function>pytrack.setup_sleep(time_seconds)</function>
 
 Sets the sleep interval, specified in seconds. The actual sleep will be started by calling **go_to_sleep()** method.
 

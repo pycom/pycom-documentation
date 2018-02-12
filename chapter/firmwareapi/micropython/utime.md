@@ -13,7 +13,7 @@ If actual calendar time is not maintained with a system/MicroPython RTC, functio
 
 ### Functions
 
-<function>utime.gmtime([secs])</function>
+#####<function>utime.gmtime([secs])</function>
 
 Convert a time expressed in seconds since the Epoch (see above) into an 8-tuple which contains: (year, month, mday, hour, minute, second, weekday, yearday) If secs is not provided or None, then the current time from the RTC is used.
 
@@ -26,39 +26,39 @@ Convert a time expressed in seconds since the Epoch (see above) into an 8-tuple 
 - weekday is 0-6 for Mon-Sun
 - yearday is 1-366
 
-<function>utime.localtime([secs])</function>
+#####<function>utime.localtime([secs])</function>
 
 Like gmtime() but converts to local time. If secs is not provided or None, the current time from the RTC is used.
 
-<function>utime.mktime()</function>
+#####<function>utime.mktime()</function>
 
 This is inverse function of localtime. It’s argument is a full 8-tuple which expresses a time as per localtime. It returns an integer which is the number of seconds since Jan 1, 2000.
 
-<function>utime.sleep(seconds)</function>
+#####<function>utime.sleep(seconds)</function>
 
 Sleep for the given number of seconds. Seconds can be a floating-point number to sleep for a fractional number of seconds. Note that other MicroPython ports may not accept floating-point argument, for compatibility with them use ``sleep_ms()`` and ``sleep_us()`` functions.
 
-<function>utime.sleep_ms(ms)</function>
+#####<function>utime.sleep_ms(ms)</function>
 
 Delay for given number of milliseconds, should be positive or 0.
 
-<function>utime.sleep_us(us)</function>
+#####<function>utime.sleep_us(us)</function>
 
 Delay for given number of microseconds, should be positive or 0
 
-<function>utime.ticks_ms()</function>
+#####<function>utime.ticks_ms()</function>
 
 Returns uptime, in milliseconds.
 
-<function>utime.ticks_us()</function>
+#####<function>utime.ticks_us()</function>
 
 Just like ``ticks_ms`` above, but in microseconds.
 
-<function>utime.ticks_cpu()</function>
+#####<function>utime.ticks_cpu()</function>
 
 Similar to ``ticks_ms`` and ``ticks_us``, but with higher resolution (25 ns).
 
-<function>utime.ticks_diff(old, new)</function>
+#####<function>utime.ticks_diff(old, new)</function>
 
 Measure period between consecutive calls to ticks_ms(), ticks_us(), or ticks_cpu(). The value returned by these functions may wrap around at any time, so directly subtracting them is not supported. ticks_diff() should be used instead. “old” value should actually precede “new” value in time, or result is undefined. This function should not be used to measure arbitrarily long periods of time (because ticks_*() functions wrap around and usually would have short period). The expected usage pattern is implementing event polling with timeout:
 
@@ -70,10 +70,10 @@ while pin.value() == 0:
         raise TimeoutError
 ```
 
-<function>utime.time()</function>
+#####<function>utime.time()</function>
 
 Returns the number of seconds, as an integer, since the Epoch, assuming that underlying RTC is set. If an RTC is not set, this function returns number of seconds since power up or reset). If you want to develop portable MicroPython application, you should not rely on this function to provide higher than second precision. If you need higher precision, use ``ticks_ms()`` and ``ticks_us()`` functions, if you need calendar time, ``localtime()`` without an argument is a better choice.
 
-<function>utime.timezone([secs])</function>
+#####<function>utime.timezone([secs])</function>
 
 Set or get the timezone offset, in seconds. If ``secs`` is not provided, it returns the current value.

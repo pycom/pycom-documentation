@@ -1,7 +1,7 @@
 # class micropython – MicroPython Internals Controls
 
 ### Functions
-<function>micropython.alloc_emergency_exception_buf(size)</function>  
+#####<function>micropython.alloc_emergency_exception_buf(size)</function>  
 
 Allocate size bytes of RAM for the emergency exception buffer (a good size
 is around 100 bytes). The buffer is used to create exceptions in cases when
@@ -12,7 +12,7 @@ A good way to use this function is to place it at the start of a main script
 (eg boot.py or main.py) and then the emergency exception buffer will be
 active for all the code following it.
 
-<function>micropython.const(expr)</function>  
+#####<function>micropython.const(expr)</function>  
 
 Used to declare that the expression is a constant so that the compile can
 optimise it. The use of this function should be as follows:  
@@ -33,13 +33,13 @@ provided as part of the micropython module mainly so that scripts can be
 written which run under both CPython and MicroPython, by following the above
 pattern.  
 
-<function>micropython.opt_level([level])</function>  
+#####<function>micropython.opt_level([level])</function>  
 
 If *level* is given then this function sets the optimisation level for subsequent
 compilation of scripts, and returns None.  Otherwise it returns the current
 optimisation level.  
 
-<function>micropython.mem_info([verbose])</function>   
+#####<function>micropython.mem_info([verbose])</function>   
 
 Print information about currently used memory.  If the *verbose* argument
 is given then extra information is printed.
@@ -48,7 +48,7 @@ The information that is printed is implementation dependent, but currently
 includes the amount of stack and heap used.  In verbose mode it prints out
 the entire heap indicating which blocks are used and which are free.
 
-<function>micropython.qstr_info([verbose])</function>
+#####<function>micropython.qstr_info([verbose])</function>
 
 Print information about currently interned strings.  If the *verbose*
 argument is given then extra information is printed.  
@@ -57,14 +57,14 @@ The information that is printed is implementation dependent, but currently
 includes the number of interned strings and the amount of RAM they use.  In
 verbose mode it prints out the names of all RAM-interned strings.
 
-<function>micropython.stack_use()</function>  
+#####<function>micropython.stack_use()</function>  
 
 Return an integer representing the current amount of stack that is being
 used.  The absolute value of this is not particularly useful, rather it
 should be used to compute differences in stack usage at different points.
 
-<function>micropython.heap_lock()</function>  
-<function>micropython.heap_unlock()</function>  
+#####<function>micropython.heap_lock()</function>  
+#####<function>micropython.heap_unlock()</function>  
 
 Lock or unlock the heap.  When locked no memory allocation can occur and a
 MemoryError will be raised if any heap allocation is attempted.  
@@ -73,7 +73,7 @@ These functions can be nested, ie heap_lock() can be called multiple times
 in a row and the lock-depth will increase, and then heap_unlock() must be
 called the same number of times to make the heap available again.
 
-<function>micropython.kbd_intr(chr)</function>  
+#####<function>micropython.kbd_intr(chr)</function>  
 
 Set the character that will raise a KeyboardInterrupt exception.  By
 default this is set to 3 during script execution, corresponding to Ctrl-C.

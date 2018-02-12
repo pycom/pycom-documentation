@@ -77,35 +77,35 @@ Note that bitfield operations are independent of target byte endianness, in part
 
 ### Module Contents
 
-<class><i>class</i> uctypes.struct(addr, descriptor, layout_type=NATIVE)</class>
+#####<class><i>class</i> uctypes.struct(addr, descriptor, layout_type=NATIVE)</class>
 
 Instantiate a “foreign data structure” object based on structure address in memory, descriptor (encoded as a dictionary), and layout type (see below).
 
-<function>uctypes.LITTLE_ENDIAN</function>
+#####<function>uctypes.LITTLE_ENDIAN</function>
 
 Layout type for a little-endian packed structure. (Packed means that every field occupies exactly as many bytes as defined in the descriptor, i.e. the alignment is 1).
 
-<function>uctypes.BIG_ENDIAN</function>
+#####<function>uctypes.BIG_ENDIAN</function>
 
 Layout type for a big-endian packed structure.
 
-<function>uctypes.NATIVE</function>
+#####<function>uctypes.NATIVE</function>
 
 Layout type for a native structure - with data endianness and alignment conforming to the ABI of the system on which MicroPython runs.
 
-<function>uctypes.sizeof(struct)</function>
+#####<function>uctypes.sizeof(struct)</function>
 
 Return size of data structure in bytes. Argument can be either structure class or specific instantiated structure object (or its aggregate field).
 
-<function>uctypes.addressof(obj)</function>
+#####<function>uctypes.addressof(obj)</function>
 
 Return address of an object. Argument should be bytes, bytearray or other object supporting buffer protocol (and address of this buffer is what actually returned).
 
-<function>uctypes.bytes_at(addr, size)</function>
+#####<function>uctypes.bytes_at(addr, size)</function>
 
 Capture memory at the given address and size as bytes object. As bytes object is immutable, memory is actually duplicated and copied into bytes object, so if memory contents change later, created object retains original value.
 
-<function>uctypes.bytearray_at(addr, size)</function>
+#####<function>uctypes.bytearray_at(addr, size)</function>
 
 Capture memory at the given address and size as bytearray object. Unlike bytes_at() function above, memory is captured by reference, so it can be both written too, and you will access current value at the given memory address.
 

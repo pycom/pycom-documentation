@@ -5,15 +5,15 @@ Services are used to categorise data up into specific chunks of data known as ch
 
 The following class allows control over Server services.
 
-<function>service.start()</function>
+#####<function>service.start()</function>
 
 Starts the service if not already started.
 
-<function>service.stop()</function>
+#####<function>service.stop()</function>
 
 Stops the service if previously started.
 
-<function>service.characteristic(uuid, * , permissions, properties, value)</function>
+#####<function>service.characteristic(uuid, * , permissions, properties, value)</function>
 
 Creates a new characteristic on the service. Returns an object of the class GATTSCharacteristic. The arguments are:
 

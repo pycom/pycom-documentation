@@ -32,17 +32,17 @@ f.close()
 
 ### Constructors
 
-<class><i>class</i> machine.SD(id, ...)</class>
+#####<class><i>class</i> machine.SD(id, ...)</class>
 
 Create a SD card object. See <function>sd.init()</function> for parameters if initialisation.
 
 ###Methods
 
-<function>sd.init(id=0)</function>
+#####<function>sd.init(id=0)</function>
 
 Enable the SD card.
 
-<function>sd.deinit()</function>
+#####<function>sd.deinit()</function>
 
 Disable the SD card.
 

@@ -33,7 +33,7 @@ print(wlan.ifconfig())
 
 ### Constructors
 
-<class><i>class</i> network.WLAN(id=0, ...)</class>
+#####<class><i>class</i> network.WLAN(id=0, ...)</class>
 
 Create a WLAN object, and optionally configure it. See init for params of configuration.
 
@@ -43,7 +43,7 @@ The WLAN constructor is special in the sense that if no arguments besides the id
 
 ### Methods
 
-<function>wlan.init(mode, * , ssid=None, auth=None, channel=1, antenna=WLAN.INT_ANT, power_save=False)</function>
+#####<function>wlan.init(mode, * , ssid=None, auth=None, channel=1, antenna=WLAN.INT_ANT, power_save=False)</function>
 
 Set or get the WiFi network processor configuration.
 
@@ -70,11 +70,11 @@ or:
 wlan.init(mode=WLAN.STA)
 ```
 
-<function>wlan.deinit()</function>
+#####<function>wlan.deinit()</function>
 
 Disables the WiFi radio.
 
-<function>wlan.connect(ssid, * , auth=None, bssid=None, timeout=None, ca_certs=None, keyfile=None, certfile=None, identity=None)</function>
+#####<function>wlan.connect(ssid, * , auth=None, bssid=None, timeout=None, ca_certs=None, keyfile=None, certfile=None, identity=None)</function>
 
 Connect to a wifi access point using the given SSID, and other security parameters.
 
@@ -86,19 +86,19 @@ keyfile is the path to the client key. Only used if username and password are no
 - ``certfile`` is the path to the client certificate. Only used if username and password are not part of the auth tuple.
 - ``identity`` is only used in case of <constant>WLAN.WPA2_ENT</constant> security.
 
-<function>wlan.scan()</function>
+#####<function>wlan.scan()</function>
 
 Performs a network scan and returns a list of named tuples with (ssid, bssid, sec, channel, rssi). Note that channel is always None since this info is not provided by the WiPy.
 
-<function>wlan.disconnect()</function>
+#####<function>wlan.disconnect()</function>
 
 Disconnect from the wifi access point.
 
-<function>wlan.isconnected()</function>
+#####<function>wlan.isconnected()</function>
 
 In case of STA mode, returns ``True`` if connected to a wifi access point and has a valid IP address. In AP mode returns ``True`` when a station is connected, ``False`` otherwise.
 
-<function>wlan.ifconfig(id=0, config=['dhcp' or configtuple])</function>
+#####<function>wlan.ifconfig(id=0, config=['dhcp' or configtuple])</function>
 
 When ``id`` is 0, the configuration will be get/set on the Station interface. When id is 1 the configuration will be done for the AP interface.
 
@@ -112,27 +112,27 @@ If the 4-tuple config is given then a static IP is configured. For instance:
 wlan.ifconfig(config=('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))
 ```
 
-<function>wlan.mode([mode])</function>
+#####<function>wlan.mode([mode])</function>
 
 Get or set the WLAN mode.
 
-<function>wlan.ssid([ssid])</function>
+#####<function>wlan.ssid([ssid])</function>
 
 Get or set the SSID when in AP mode.
 
-<function>wlan.auth([auth])</function>
+#####<function>wlan.auth([auth])</function>
 
 Get or set the authentication type when in AP mode.
 
-<function>wlan.channel([channel])</function>
+#####<function>wlan.channel([channel])</function>
 
 Get or set the channel (only applicable in AP mode).
 
-<function>wlan.antenna([antenna])</function>
+#####<function>wlan.antenna([antenna])</function>
 
 Get or set the antenna type (external or internal).
 
-<function>wlan.mac()</function>
+#####<function>wlan.mac()</function>
 
 Get a 6-byte long ``bytes`` object with the WiFI MAC address.
 

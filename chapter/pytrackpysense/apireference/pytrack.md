@@ -8,20 +8,20 @@ Pytrack has a 3-Axis Accelerometer that provides outputs for acceleration as wel
 
 #### Constructors
 
-<class><i>class</i> LIS2HH12(pytrack = None, sda = 'P22', scl = 'P21')</class>
+#####<class><i>class</i> LIS2HH12(pytrack = None, sda = 'P22', scl = 'P21')</class>
 
 Creates a LIS2HH12 object, that will return values for acceleration, roll, pitch and yaw. Constructor must be passed a Pytrack or I2C object to successfully construct.
 
 #### Methods
-<function>LIS2HH12.acceleration()</function>
+#####<function>LIS2HH12.acceleration()</function>
 
 Read the acceleration from the LIS2HH12. Returns a **tuple** with the 3 values of acceleration (G).
 
-<function>LIS2HH12.roll()</function>
+#####<function>LIS2HH12.roll()</function>
 
 Read the current roll from the LIS2HH12. Returns a **float** in degrees in the range -180 to 180.
 
-<function>LIS2HH12.pitch()</function>
+#####<function>LIS2HH12.pitch()</function>
 
 Read the current pitch from the LIS2HH12. Returns a **float** in degrees in the range -90 to 90. Once the board tilts beyond this range the values will repeat. This is due to a lack of yaw measurement, making it not possible to know the exact orientation of the board.
 
@@ -33,12 +33,12 @@ Pytrack has a GPS (with GLONASS) that provides outputs longitude/latitude, speed
 
 #### Constructors
 
-<class><i>class</i> L76GNSS(pytrack = None, sda = 'P22', scl = 'P21', timeout = None)</class>
+#####<class><i>class</i> L76GNSS(pytrack = None, sda = 'P22', scl = 'P21', timeout = None)</class>
 
 Creates a L76GNSS object, that will return values for longitude and latitude. Constructor must be passed a Pytrack or I2C object to successfully construct. Set the ``timeout`` to a time period (in seconds) for the GPS to search for a lock. If a lock is not found by the time the ``timeout`` has expired, the ``coordinates`` method will return ``(None, None)``.
 
 #### Methods
-<function>L76GNSS.coordinates(debug = False)</function>
+#####<function>L76GNSS.coordinates(debug = False)</function>
 
 Read the longitude and latitude from the L76GNSS. Returns a **tuple** with the longitude and latitude. With ``debug`` set to ``True`` the output from the GPS is verbose.
 

@@ -26,7 +26,7 @@ This also applies to our MQTT and AWS examples.
 
 ### Constructors
 
-<class><i>class</i> network.LTE(id=0, ...)</class>
+#####<class><i>class</i> network.LTE(id=0, ...)</class>
 
 Create and configure a LTE object. See init for params of configuration.
 
@@ -37,25 +37,25 @@ lte = LTE()
 
 ### Methods
 
-<function>LTE.init(cid=3)</function>
+#####<function>LTE.init(cid=3)</function>
 
 This method is used to set up the LTE subsystem and to specify a CID (Connection ID) for the connection
 The arguments are:
 
 - ``cid`` is a Connection ID. This is carrier specific, for Verizon use cid=3. For others like Telstra it should be cid=1. 
 
-<function>lte.deinit()</function>
+#####<function>lte.deinit()</function>
 
 Disables LTE until it's been initialized again
 
-<function>lte.connect()</function>
+#####<function>lte.connect()</function>
 
 Connect to the LTE Cat M1 network authorized by the inserted SIM card and CID
 
-<function>lte.disconnect()</function>
+#####<function>lte.disconnect()</function>
 
 Disconnect from the LTE network and return to modem to sleep 
 
-<function>lte.isconnected()</function>
+#####<function>lte.isconnected()</function>
 
 Returns *true* if there is an active LTE Cat M1 connection 

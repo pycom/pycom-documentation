@@ -5,7 +5,7 @@ This module provides native support for cryptographic algorithms. It’s loosely
 - [class AES](../pycom/aes.md) - Advanced Encryption Standard
 ### Methods
 
-<function>crypto.getrandbits(bits)</function>
+#####<function>crypto.getrandbits(bits)</function>
 
 Returns a bytes object filled with random bits obtained from the hardware random number generator.
 

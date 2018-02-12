@@ -14,7 +14,7 @@ print(rtc.now())
 
 ### Constructors
 
-<class><i>class</i> machine.RTC(id=0, ...)</class>
+#####<class><i>class</i> machine.RTC(id=0, ...)</class>
 
 Create an RTC object. See init for parameters of initialisation.:
 
@@ -25,7 +25,7 @@ rtc = RTC(id=0)
 
 ### Methods
 
-<function>rtc.init(datetime=None, source=RTC.INTERNAL_RC)</function>
+#####<function>rtc.init(datetime=None, source=RTC.INTERNAL_RC)</function>
 
 Initialize the RTC. The arguments are:
 
@@ -43,7 +43,7 @@ rtc.init((2017, 2, 28, 10, 30, 0, 0, 0))
 tzinfo is ignored by this method. Use ``time.timezone`` to achieve similar results.
 {% endhint %}
 
-<function>rtc.now()</function>
+#####<function>rtc.now()</function>
 
 Get get the current datetime tuple:
 
@@ -52,7 +52,7 @@ Get get the current datetime tuple:
 rtc.now()
 ```
 
-<function>rtc.ntp_sync(server, * , update_period=3600)</function>
+#####<function>rtc.ntp_sync(server, * , update_period=3600)</function>
 
 Set up automatic fetch and update the time using NTP (SNTP).
 
@@ -65,7 +65,7 @@ Can be used like:
 rtc.ntp_sync("pool.ntp.org") # this is an example. You can select a more specific server according to your geographical location
 ```
 
-<function>rtc.synced()</function>
+#####<function>rtc.synced()</function>
 
 Returns True if the last ntp_sync has been completed, False otherwise:
 

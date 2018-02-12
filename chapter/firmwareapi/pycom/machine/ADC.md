@@ -17,23 +17,23 @@ val = apin()                    # read an analog value
 
 ### Constructors
 
-<class><i>class</i> machine.ADC(id=0)</class>
+#####<class><i>class</i> machine.ADC(id=0)</class>
 
 Create an ADC object; associate a channel with a pin. For more info check the hardware section.
 
 ### Methods
 
-<function>adc.init( * , bits=12)</function>
+#####<function>adc.init( * , bits=12)</function>
 
 Enable the ADC block. This method is automatically called on object creation.
 
 - ``Bits`` can take values between 9 and 12 and selects the number of bits of resolution of the ADC block.
 
-<function>adc.deinit()</function>
+#####<function>adc.deinit()</function>
 
 Disable the ADC block.
 
-<function>adc.channel( * , pin, attn=ADC.ATTN_0DB)</function>
+#####<function>adc.channel( * , pin, attn=ADC.ATTN_0DB)</function>
 
 Create an analog pin.
 
@@ -47,11 +47,11 @@ Returns an instance of ADCChannel. Example:
 apin = adc.channel(pin='P16')
 ```
 
-<function>adc.vref(*, vref)</function>
+#####<function>adc.vref(*, vref)</function>
 
-If called without any arguments, this function returns the current calibrated voltage (in millivolts) of the 1.1v reference. Otherwise it will update the calibrated value (in millivolts) of the internal 1.1v reference. 
+If called without any arguments, this function returns the current calibrated voltage (in millivolts) of the 1.1v reference. Otherwise it will update the calibrated value (in millivolts) of the internal 1.1v reference.
 
-<function>adc.vref_to_pin(*, pin)</function>
+#####<function>adc.vref_to_pin(*, pin)</function>
 
 Connects the internal 1.1v to external GPIO. It can only be connected to `P22`, `P21` or `P6`. It is recommended to only use `P6` on the WiPy, on other modules this pin is connected to the radio.
 
@@ -68,27 +68,27 @@ Read analog values from internal/external sources. ADC channels can be connected
 
 ### Methods
 
-<function>adcchannel()</function>
+#####<function>adcchannel()</function>
 
 Fast method to read the channel value.
 
-<function>adcchannel.value()</function>
+#####<function>adcchannel.value()</function>
 
 Read the channel value.
 
-<function>adcchannel.init()</function>
+#####<function>adcchannel.init()</function>
 
 (Re)init and enable the ADC channel. This method is automatically called on object creation.
 
-<function>adcchannel.deinit()</function>
+#####<function>adcchannel.deinit()</function>
 
 Disable the ADC channel.
 
-<function>adcchannel.voltage()</function>
+#####<function>adcchannel.voltage()</function>
 
 Reads the channels value and converts it into a voltage (in millivolts)
 
-<function>adcchannel.value_to_voltage(value)</function>
+#####<function>adcchannel.value_to_voltage(value)</function>
 
 Converts the provided value into a voltage (in millivolts) in the same way voltage does.
 

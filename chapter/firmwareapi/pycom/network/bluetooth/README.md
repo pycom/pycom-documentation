@@ -43,7 +43,7 @@ GAP allows for devices to take various roles but generic flow works with devices
 
 ### Constructors
 
-<class><i>class</i> network.Bluetooth(id=0, ...)</class>
+#####<class><i>class</i> network.Bluetooth(id=0, ...)</class>
 
 Create a Bluetooth object, and optionally configure it. See init for params of configuration.
 
@@ -55,15 +55,15 @@ bluetooth = Bluetooth()
 ```
 
 ### Methods
-<function>bluetooth.init()</function>
+#####<function>bluetooth.init()</function>
 
 Initialises and enables the Bluetooth radio in BLE mode.
 
-<function>bluetooth.deinit()</function>
+#####<function>bluetooth.deinit()</function>
 
 Disables the Bluetooth radio.
 
-<function>bluetooth.start_scan(timeout)</function>
+#####<function>bluetooth.start_scan(timeout)</function>
 
 Starts performing a scan listening for BLE devices sending advertisements. This function always returns immediately, the scanning will be performed on the background. The return value is ``None``. After starting the scan the function <function>get_adv()</function> can be used to retrieve the advertisements messages from the FIFO. The internal FIFO has space to cache 16 advertisements.
 
@@ -78,15 +78,15 @@ bluetooth.start_scan(10)        # starts scanning and stop after 10 seconds
 bluetooth.start_scan(-1)        # starts scanning indefenitely until bluetooth.stop_scan() is called
 ```
 
-<function>bluetooth.stop_scan()</function>
+#####<function>bluetooth.stop_scan()</function>
 
 Stops an ongoing scanning process. Returns ``None``.
 
-<function>bluetooth.isscanning()</function>
+#####<function>bluetooth.isscanning()</function>
 
 Returns ``True`` if a Bluetooth scan is in progress. ``False`` otherwise.
 
-<function>bluetooth.get_adv()</function>
+#####<function>bluetooth.get_adv()</function>
 
 Gets an named tuple with the advertisement data received during the scanning. The tuple has the following structure: (``mac``, ``addr_type``, ``adv_type``, ``rssi``, ``data``)
 
@@ -108,11 +108,11 @@ adv = bluetooth.get_adv() #
 binascii.hexlify(adv.mac) # convert hexidecimal to ascii
 ```
 
-<function>bluetooth.get_advertisements()</function>
+#####<function>bluetooth.get_advertisements()</function>
 
 Sames as the ``get_adv()`` method, but this one returns a list with all the advertisements received.
 
-<function>bluetooth.resolve_adv_data(data, data_type)</function>
+#####<function>bluetooth.resolve_adv_data(data, data_type)</function>
 
 Parses the advertisement data and returns the requested data_type if present. If the data type is not present, the function returns None.
 
@@ -142,7 +142,7 @@ while bluetooth.isscanning():
             print(binascii.hexlify(mfg_data))
 ```
 
-<function>bluetooth.connect(mac_addr)</function>
+#####<function>bluetooth.connect(mac_addr)</function>
 
 Opens a BLE connection with the device specified by the ``mac_addr`` argument. This function blocks until the connection succeeds or fails. If the connections succeeds it returns a object of type ``GATTCConnection``.
 
@@ -150,7 +150,7 @@ Opens a BLE connection with the device specified by the ``mac_addr`` argument. T
 bluetooth.connect('112233eeddff') # mac address is accepted as a string
 ```
 
-<function>bluetooth.callback(trigger=None, handler=None, arg=None)</function>
+#####<function>bluetooth.callback(trigger=None, handler=None, arg=None)</function>
 
 Creates a callback that will be executed when any of the triggers occurs. The arguments are:
 
@@ -160,7 +160,7 @@ Creates a callback that will be executed when any of the triggers occurs. The ar
 
 An example of how this may be used can be seen in the <function>bluetooth.events()<function> method.
 
-<function>bluetooth.events()</function>
+#####<function>bluetooth.events()</function>
 
 Returns a value with bit flags identifying the events that have occurred since the last call. Calling this function clears the events.
 
@@ -184,7 +184,7 @@ bluetooth.callback(trigger=Bluetooth.CLIENT_CONNECTED | Bluetooth.CLIENT_DISCONN
 bluetooth.advertise(True)
 ```
 
-<function>bluetooth.set_advertisement(* , name=None, manufacturer_data=None, service_data=None, service_uuid=None)</function>
+#####<function>bluetooth.set_advertisement(* , name=None, manufacturer_data=None, service_data=None, service_uuid=None)</function>
 
 Configure the data to be sent while advertising. If left with the default of None the data won’t be part of the advertisement message.
 
@@ -201,10 +201,10 @@ Example:
 bluetooth.set_advertisement(name="advert", manufacturer_data="lopy_v1")
 ```
 
-<function>bluetooth.advertise([Enable])</function>
+#####<function>bluetooth.advertise([Enable])</function>
 Start or stop sending advertisements. The <function>set_advertisement()</function> method must have been called prior to this one.
 
-<function>bluetooth.service(uuid, * , isprimary=True, nbr_chars=1, start=True)</function>
+#####<function>bluetooth.service(uuid, * , isprimary=True, nbr_chars=1, start=True)</function>
 
 Create a new service on the internal GATT server. Returns a object of type ``BluetoothServerService``.
 

@@ -24,7 +24,7 @@ print(original)
 ```
 
 ### Constructors
-<class><i>class</i> ucrypto.AES(key, mode, IV, * , counter, segment_size)</class>
+#####<class><i>class</i> ucrypto.AES(key, mode, IV, * , counter, segment_size)</class>
 
 Create an AES object that will let you encrypt and decrypt messages.
 
@@ -38,11 +38,11 @@ The arguments are:
 
 ### Methods
 
-<function>ucrypto.encrypt()</function>
+#####<function>ucrypto.encrypt()</function>
 
 Encrypt data with the key and the parameters set at initialisation.
 
-<function>ucrypto.decrypt()</function>
+#####<function>ucrypto.decrypt()</function>
 
 Decrypt data with the key and the parameters set at initialisation.
 

@@ -19,7 +19,7 @@ p_in() # get value, 0 or 1
 
 ### Constructors
 
-<class><i>class</i> machine.Pin(id, ...)</class>
+#####<class><i>class</i> machine.Pin(id, ...)</class>
 
 Create a new Pin object associated with the string id. If additional arguments are given, they are used to initialise the pin. See <function>pin.init()</function>.
 
@@ -30,7 +30,7 @@ p = Pin('P10', mode=Pin.OUT, pull=None, alt=-1)
 
 ### Methods
 
-<function>pin.init(mode, pull, * , alt)</function>
+#####<function>pin.init(mode, pull, * , alt)</function>
 
 Initialise the pin:
 
@@ -46,17 +46,17 @@ Initialise the pin:
 
 Returns: ``None``.
 
-<function>pin.id()</function>
+#####<function>pin.id()</function>
 
 Get the pin id.
 
-<function>pin.value([value])</function>
+#####<function>pin.value([value])</function>
 
 Get or set the digital logic level of the pin:
 - With no argument, return 0 or 1 depending on the logic level of the pin.
 - With value given, set the logic level of the pin. value can be anything that converts to a boolean. If it converts to True, the pin is set high, otherwise it is set low.
 
-<function>pin([value])</function>
+#####<function>pin([value])</function>
 
 Pin objects are callable. The call method provides a (fast) shortcut to set and get the value of the pin.
 
@@ -70,23 +70,23 @@ pin()   # fast method to get the value
 
 See <function>pin.value()</function> for more details.
 
-<function>pin.toggle()</function>
+#####<function>pin.toggle()</function>
 
 Toggle the value of the pin.
 
-<function>pin.mode([mode])</function>
+#####<function>pin.mode([mode])</function>
 
 Get or set the pin mode.
 
-<function>pin.pull([pull])</function>
+#####<function>pin.pull([pull])</function>
 
 Get or set the pin pull.
 
-<function>pin.hold([hold])</function>
+#####<function>pin.hold([hold])</function>
 
 Get or set the pin hold. Can be used to retain the pin state through a core reset and system reset triggered by watchdog time-out or Deep-sleep events.
 
-<function>pin.callback(trigger, handler=None, arg=None)</function>
+#####<function>pin.callback(trigger, handler=None, arg=None)</function>
 
 Set a callback to be triggered when the input level at the pin changes.
 
@@ -121,7 +121,7 @@ For more information on how Pycom’s products handle interrupts, see [here](../
 
 ### Attributes
 
-<class><i>class</i> pin.exp_board</class>
+#####<class><i>class</i> pin.exp_board</class>
 
 Contains all Pin objects supported by the expansion board. Examples:
 
@@ -131,7 +131,7 @@ led = Pin(Pin.exp_board.G16, mode=Pin.OUT)
 Pin.exp_board.G16.id()
 ```
 
-<class><i>class</i>  pin.module</class>
+#####<class><i>class</i>  pin.module</class>
 Contains all ``Pin`` objects supported by the module. Examples:
 
 ```python

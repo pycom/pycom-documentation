@@ -6,11 +6,11 @@ Polling is an efficient way of waiting for read/write activity on multiple objec
 
 ### Functions
 
-<function>select.poll()</function>
+#####<function>select.poll()</function>
 
 Create an instance of the Poll class.
 
-<function>select.select(rlist, wlist, xlist[, timeout])</function>
+#####<function>select.select(rlist, wlist, xlist[, timeout])</function>
 
 Wait for activity on a set of objects.
 
@@ -19,7 +19,7 @@ This function is provided for compatibility and is not efficient. Usage of Poll 
 ### class Poll
 ### Methods
 
-<function>poll.register(obj[, eventmask])</function>
+#####<function>poll.register(obj[, eventmask])</function>
 
 Register ``obj`` for polling. ``eventmask`` is logical OR of:
 
@@ -29,15 +29,15 @@ Register ``obj`` for polling. ``eventmask`` is logical OR of:
 - ``select.POLLHUP`` - end of stream/connection termination detected
 ``eventmask`` defaults to ``select.POLLIN | select.POLLOUT``.
 
-<function>poll.unregister(obj)</function>
+#####<function>poll.unregister(obj)</function>
 
 Unregister obj from polling.
 
-<function>poll.modify(obj, eventmask)</function>
+#####<function>poll.modify(obj, eventmask)</function>
 
 Modify the eventmask for obj.
 
-<function>poll.poll([timeout])</function>
+#####<function>poll.poll([timeout])</function>
 
 Wait for at least one of the registered objects to become ready. Returns list of (``obj``, ``event``, ...) tuples, ``event`` element specifies which events happened with a stream and is a combination of ``select.POLL*`` constants described above. There may be other elements in tuple, depending on a platform and version, so don’t assume that its size is 2. In case of timeout, an empty list is returned.
 

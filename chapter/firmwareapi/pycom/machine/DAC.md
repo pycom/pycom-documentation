@@ -16,25 +16,25 @@ dac_tone.tone(1000, 0)          # set tone output to 1kHz
 
 ### Constructors
 
-<class><i>class</i> class machine.DAC(pin)</class>
+#####<class><i>class</i> class machine.DAC(pin)</class>
 
 Create a DAC object, that will let you associate a channel with a pin. pin can be a string argument.
 
 ### Methods
 
-<function>dac.init()</function>
+#####<function>dac.init()</function>
 
 Enable the DAC block. This method is automatically called on object creation.
 
-<function>dac.deinit()</function>
+#####<function>dac.deinit()</function>
 
 Disable the DAC block.
 
-<function>dac.write(value)</function>
+#####<function>dac.write(value)</function>
 
 Set the DC level for a DAC pin. value is a float argument, with values between 0 and 1.
 
-<function>dac.tone(frequency, amplitude)</function>
+#####<function>dac.tone(frequency, amplitude)</function>
 
 Sets up tone signal to the specified frequency at amplitude scale. frequency can
 be from 125Hz to 20kHz in steps of 122 Hz. amplitude is an integer specifying the tone amplitude to write the DAC pin. Amplitude value represents:

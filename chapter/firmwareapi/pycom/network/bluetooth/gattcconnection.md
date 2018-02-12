@@ -2,11 +2,11 @@
 
 The GATT Client is the device that requests data from the server, otherwise known as the master device (commonly this might be a phone/tablet/PC). All transactions are initiated by the master, which receives a response from the slave.
 
-<function>connection.disconnect()</function>
+#####<function>connection.disconnect()</function>
 
 Closes the BLE connection. Returns ``None``.
 
-<function>connection.isconnected()</function>
+#####<function>connection.isconnected()</function>
 
 Returns ``True`` if the connection is still open. ``False`` otherwise.
 
@@ -33,7 +33,7 @@ while True:
 print("Connected to device with addr = {}".format(binascii.hexlify(adv.mac)))
 ```
 
-<function>connection.services()</function>
+#####<function>connection.services()</function>
 
 Performs a service search on the connected BLE peripheral (server) a returns a list containing objects of the class <class>GATTCService</class> if the search succeeds.
 

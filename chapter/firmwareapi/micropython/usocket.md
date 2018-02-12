@@ -8,11 +8,11 @@ Functions below which expect a network address, accept it in the format of (ipv4
 
 ### Functions
 
-<function>socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)</function>
+#####<function>socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)</function>
 
 Create a new socket using the given address family, socket type and protocol number.
 
-<function>socket.getaddrinfo(host, port)</function>
+#####<function>socket.getaddrinfo(host, port)</function>
 
 Translate the host/port argument into a sequence of 5-tuples that contain all the necessary arguments for creating a socket connected to that service. The list of 5-tuples has following structure:
 
@@ -61,13 +61,13 @@ Sigfox socket options
 ### class Socket
 ### Methods
 
-<function>socket.close()</function>
+#####<function>socket.close()</function>
 
 Mark the socket closed. Once that happens, all future operations on the socket object will fail. The remote end will receive no more data (after queued data is flushed).
 
 Sockets are automatically closed when they are garbage-collected, but it is recommended to close() them explicitly, or to use a with statement around them.
 
-<function>socket.bind(address)</function>
+#####<function>socket.bind(address)</function>
 
 Bind the socket to address. The socket must not already be bound. The address parameter must be a tuple containing the IP address and the port.
 
@@ -75,46 +75,46 @@ Bind the socket to address. The socket must not already be bound. The address pa
 In the case of LoRa sockets, the address parameter is simply an integer with the port number, for instance: ``s.bind(1)``
 {% endhint %}
 
-<function>socket.listen([backlog])</function>
+#####<function>socket.listen([backlog])</function>
 
 Enable a server to accept connections. If backlog is specified, it must be at least 0 (if it’s lower, it will be set to 0); and specifies the number of unaccepted connections that the system will allow before refusing new connections. If not specified, a default reasonable value is chosen.
 
-<function>socket.accept()</function>
+#####<function>socket.accept()</function>
 
 Accept a connection. The socket must be bound to an address and listening for connections. The return value is a pair (conn, address) where conn is a new socket object usable to send and receive data on the connection, and address is the address bound to the socket on the other end of the connection.
 
-<function>socket.connect(address)</function>
+#####<function>socket.connect(address)</function>
 
 Connect to a remote socket at address.
 
 socket.send(bytes)
 Send data to the socket. The socket must be connected to a remote socket.
 
-<function>socket.sendall(bytes)</function>
+#####<function>socket.sendall(bytes)</function>
 
 Alias of socket.send(bytes).
 
-<function>socket.recv(bufsize)</function>
+#####<function>socket.recv(bufsize)</function>
 
 Receive data from the socket. The return value is a bytes object representing the data received. The maximum amount of data to be received at once is specified by bufsize.
 
-<function>socket.sendto(bytes, address)</function>
+#####<function>socket.sendto(bytes, address)</function>
 
 Send data to the socket. The socket should not be connected to a remote socket, since the destination socket is specified by address.
 
-<function>socket.recvfrom(bufsize)</function>
+#####<function>socket.recvfrom(bufsize)</function>
 
 Receive data from the socket. The return value is a pair (bytes, address) where bytes is a bytes object representing the data received and address is the address of the socket sending the data.
 
-<function>socket.setsockopt(level, optname, value)</function>
+#####<function>socket.setsockopt(level, optname, value)</function>
 
 Set the value of the given socket option. The needed symbolic constants are defined in the socket module (SO_* etc.). The value can be an integer or a bytes-like object representing a buffer.
 
-<function>socket.settimeout(value)</function>
+#####<function>socket.settimeout(value)</function>
 
 Set a timeout on blocking socket operations. The value argument can be a nonnegative floating point number expressing seconds, or None. If a non-zero value is given, subsequent socket operations will raise a timeout exception if the timeout period value has elapsed before the operation has completed. If zero is given, the socket is put in non-blocking mode. If None is given, the socket is put in blocking mode.
 
-<function>socket.setblocking(flag)</function>
+#####<function>socket.setblocking(flag)</function>
 
 Set blocking or non-blocking mode of the socket: if flag is false, the socket is set to non-blocking, else to blocking mode.
 
@@ -125,7 +125,7 @@ sock.setblocking(True) is equivalent to sock.settimeout(None)
 sock.setblocking(False) is equivalent to sock.settimeout(0.0)
 ```
 
-<function>socket.makefile(mode='rb')</function>
+#####<function>socket.makefile(mode='rb')</function>
 
 Return a file object associated with the socket. The exact returned type depends on the arguments given to makefile(). The support is limited to binary modes only (‘rb’ and ‘wb’). CPython’s arguments: ``encoding``, ``errors`` and ``newline`` are not supported.
 
@@ -137,27 +137,27 @@ Difference to CPython
 Closing the file object returned by makefile() WILL close the original socket as well.
 {% endhint %}
 
-<function>socket.read(size)</function>
+#####<function>socket.read(size)</function>
 
 Read up to size bytes from the socket. Return a bytes object. If ``size`` is not given, it behaves just like <function>socket.readall()</function>, see below.
 
-<function>socket.readall()</function>
+#####<function>socket.readall()</function>
 
 Read all data available from the socket until EOF. This function will not return until the socket is closed.
 
-<function>socket.readinto(buf[, nbytes])</function>
+#####<function>socket.readinto(buf[, nbytes])</function>
 
 Read bytes into the ``buf``. If ``nbytes`` is specified then read at most that many bytes. Otherwise, read at most ``len(buf)`` bytes.
 
 Return value: number of bytes read and stored into ``buf``.
 
-<function>socket.readline()</function>
+#####<function>socket.readline()</function>
 
 Read a line, ending in a newline character.
 
 Return value: the line read.
 
-<function>socket.write(buf)</function>
+#####<function>socket.write(buf)</function>
 
 Write the buffer of bytes to the socket.
 

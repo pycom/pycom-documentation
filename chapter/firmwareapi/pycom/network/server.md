@@ -25,23 +25,23 @@ server.isrunning() # check whether the server is running or not
 
 ### Constructors
 
-<class><i>class</i> network.Server(id, ...)</class>
+#####<class><i>class</i> network.Server(id, ...)</class>
 
 Create a server instance, see ``init`` for parameters of initialisation.
 
 ### Methods
-<function>server.init(* , login=('micro', 'python'), timeout=300)</function>
+#####<function>server.init(* , login=('micro', 'python'), timeout=300)</function>
 
 Init (and effectively start the server). Optionally a new ``user``, ``password`` and ``timeout`` (in seconds) can be passed.
 
-<function>server.deinit()</function>
+#####<function>server.deinit()</function>
 
 Stop the server.
 
-<function>server.timeout([timeout_in_seconds])</function>
+#####<function>server.timeout([timeout_in_seconds])</function>
 
 Get or set the server timeout.
 
-<function>server.isrunning()</function>
+#####<function>server.isrunning()</function>
 
 Returns ``True`` if the server is running (connected or accepting connections), ``False`` otherwise.

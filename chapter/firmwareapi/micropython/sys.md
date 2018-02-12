@@ -2,11 +2,11 @@
 
 ### Functions
 
-<function>sys.exit(retval=0)</function>
+#####<function>sys.exit(retval=0)</function>
 
 Terminate current program with a given exit code. Underlyingly, this function raise as SystemExit exception. If an argument is given, its value given as an argument to SystemExit.
 
-<function>sys.print_exception(exc, file=sys.stdout)</function>
+#####<function>sys.print_exception(exc, file=sys.stdout)</function>
 
 Print exception with a traceback to a file-like object file (or sys.stdout by default).
 
