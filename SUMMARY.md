@@ -74,6 +74,7 @@
   * [5.3.5 LoPy to LoPy](chapter/tutorials/lopy/lopy-lopy.md)
   * [5.3.6 LoRaWAN Nano-Gateway](chapter/tutorials/lopy/lorawan-nano-gateway.md)
   * [5.3.7 RN2483 to LoPy](chapter/tutorials/lopy/537-rn2483-to-lopy.md)
+  * [5.3.8 Objenious](chapter/tutorials/lopy/objenious-provisioning.md)
 * [5.4 SiPy Examples](chapter/tutorials/sipy/README.md)
   * [5.4.1 Register Device](chapter/tutorials/sipy/register.md)
 * [5.5 Pytrack Examples](chapter/tutorials/pytrack/README.md)
@@ -178,3 +179,4 @@
 ## 10. License
 
 * [10.1 License](chapter/license/README.md)
+
