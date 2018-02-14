@@ -167,13 +167,18 @@
 * [8.1 Introduction](chapter/pybytes/README.md)
 * [8.2 Adding device quickly](chapter/pybytes/quick-add-device.md)
 * [8.3 Adding device by flashing Pybytes library](chapter/pybytes/add-device.md)
-  
+
 ## 9. Documentation Notes
 
 * [9.1 Introduction](chapter/docnotes/README.md)
 * [9.2 Syntax](chapter/docnotes/syntax.md)
 * [9.3 REPL vs Scripts](chapter/docnotes/replscript.md)
 
-## 10. License
+## 10. Advanced Topics
 
-* [10.1 License](chapter/license/README.md)
+* [10.1 Firmware Downgrade](chapter/advance/downgrade.md)
+* [10.2 CLI Updater](chapter/advance/cli.md)
+
+## 11. License
+
+* [11.1 License](chapter/license/README.md)
