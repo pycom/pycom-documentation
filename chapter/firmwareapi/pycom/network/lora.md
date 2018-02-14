@@ -1,6 +1,8 @@
 # class LoRa
 
-This class provides a driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
+This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network
+processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN
+Activation by Personalisation usage:
 
 ```python
 from network import LoRa
@@ -9,7 +11,12 @@ import binascii
 import struct
 
 # Initialize LoRa in LORAWAN mode.
-lora = LoRa(mode=LoRa.LORAWAN)
+# Please pick the region that matches were you are using the device:
+# Asia = LoRa.AS923
+# Australia = LoRa.AU915
+# Europe = LoRa.EU868
+# United States = LoRa.US915
+lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 # create an ABP authentication params
 dev_addr = struct.unpack(">l", binascii.unhexlify('00 00 00 05'.replace(' ','')))[0]
@@ -56,13 +63,14 @@ lora = LoRa(mode=LoRa.LORAWAN)
 
 ### Methods
 
-#####<function>lora.init(mode, * , frequency=868000000, tx_power=14, bandwidth=LoRa.BW_125KHZ, sf=7, preamble=8, coding_rate=LoRa.CODING_4_5, power_mode=LoRa.ALWAYS_ON, tx_iq=False, rx_iq=False, adr=False, public=True, tx_retries=1, device_class=LoRa.CLASS_A)</function>
+#####<function>lora.init(mode, * ,region=LoRa.EU868, frequency=868000000, tx_power=14, bandwidth=LoRa.BW_125KHZ, sf=7, preamble=8, coding_rate=LoRa.CODING_4_5, power_mode=LoRa.ALWAYS_ON, tx_iq=False, rx_iq=False, adr=False, public=True, tx_retries=1, device_class=LoRa.CLASS_A)</function>
 
 This method is used to set the LoRa subsystem configuration and to specific raw LoRa or LoRaWAN.
 
 The arguments are:
 
 - ``mode`` can be either <constant>LoRa.LORA</constant> or <constant>LoRa.LORAWAN</constant>.
+- ``region`` can take the following values: <constant>LoRa.AS923</constant>, <constant>LoRa.AU915</constant>, <constant>LoRa.EU868</constant> or <constant>LoRa.US915</constant>. If they are not specified, this will set appropriate defaults for ``frequency`` and ``tx_power``.
 - ``frequency`` accepts values between 863000000 and 870000000 in the 868 band, or between 902000000 and 928000000 in the 915 band.
 - ``tx_power`` is the transmit power in dBm. It accepts between 2 and 14 for the 868 band, and between 5 and 20 in the 915 band.
 - ``bandwidth`` is the channel bandwidth in KHz. In the 868 band the accepted values are <constant>LoRa.BW_125KHZ</constant> and <constant>LoRa.BW_250KHZ</constant>. In the 915 band the accepted values are <constant>LoRa.BW_125KHZ</constant> and <constant>LoRa.BW_500KHZ</constant>.
@@ -115,7 +123,12 @@ import time
 import binascii
 
 # Initialize LoRa in LORAWAN mode.
-lora = LoRa(mode=LoRa.LORAWAN)
+# Please pick the region that matches were you are using the device:
+# Asia = LoRa.AS923
+# Australia = LoRa.AU915
+# Europe = LoRa.EU868
+# United States = LoRa.US915
+lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 # create an OTAA authentication parameters
 app_eui = binascii.unhexlify('AD A4 DA E3 AC 12 67 6B'.replace(' ',''))
@@ -140,7 +153,12 @@ import binascii
 import struct
 
 # Initialize LoRa in LORAWAN mode.
-lora = LoRa(mode=LoRa.LORAWAN)
+# Please pick the region that matches were you are using the device:
+# Asia = LoRa.AS923
+# Australia = LoRa.AU915
+# Europe = LoRa.EU868
+# United States = LoRa.US915
+lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 # create an ABP authentication params
 dev_addr = struct.unpack(">l", binascii.unhexlify('00 00 00 05'.replace(' ','')))[0]
@@ -318,7 +336,9 @@ lora.callback(trigger=(LoRa.RX_PACKET_EVENT | LoRa.TX_PACKET_EVENT), handler=lor
 
 #####<function>lora.nvram_save()</function>
 
-Save the LoRaWAN state (joined status, network keys, packet counters, etc) in non-volatile memory in order to be able to restore the state when coming out of deepsleep or a power cycle.
+Save the LoRaWAN state (joined status, network keys, packet counters, etc) in
+non-volatile memory in order to be able to restore the state when coming out of
+deepsleep or a power cycle.
 
 ```python
 lora.nvram_save()
@@ -326,10 +346,24 @@ lora.nvram_save()
 
 #####<function>lora.nvram_restore()</function>
 
-Restore the LoRaWAN state (joined status, network keys, packet counters, etc) from non-volatile memory. State must have been previously stored with a call to ``nvram_save`` before entering deepsleep. This is useful to be able to send a LoRaWAN message immediately after coming out of deepsleep without having to join the network again.
+Restore the LoRaWAN state (joined status, network keys, packet counters, etc)
+from non-volatile memory. State must have been previously stored with a call to
+``nvram_save`` before entering deepsleep. This is useful to be able to send a
+LoRaWAN message immediately after coming out of deepsleep without having to join
+the network again. This can only be used if the current region matches the one
+saved.
 
 ```python
 lora.nvram_restore()
+```
+
+#####<function>lora.nvram_erase()</function>
+
+Remove the LoRaWAN state (joined status, network keys, packet counters, etc)
+from non-volatile memory.
+
+```python
+lora.nvram_erase()
 ```
 
 ### Constants
@@ -354,6 +388,9 @@ Callback trigger types (may be ORed)
 
 <constant>LoRa.CLASS_A</constant> <constant>LoRa.CLASS_C</constant>
 LoRaWAN device class
+
+<constant>LoRa.AS923</constant> <constant>LoRa.AU915</constant> <constant>LoRa.EU868</constant> <constant>LoRa.US915</constant>
+LoRaWAN regions
 
 ### Working with LoRa and LoRaWAN Sockets
 
