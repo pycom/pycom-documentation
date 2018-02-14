@@ -63,7 +63,7 @@ DEVICE_ID = 1
 
 pycom.heartbeat(False)
 
-lora = LoRa(mode=LoRa.LORA, tx_iq=True, frequency = 863000000)
+lora = LoRa(mode=LoRa.LORA, tx_iq=True, region=LoRa.EU868)
 lora_sock = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 lora_sock.setblocking(False)
 

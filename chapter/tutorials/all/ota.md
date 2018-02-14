@@ -197,7 +197,7 @@ w = WLAN()
 w.deinit()
 
 # Initialize LoRa in LORAWAN mode.
-lora = LoRa(mode=LoRa.LORAWAN)
+lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 app_eui = binascii.unhexlify('70B3D57ED0008CD6')
 app_key = binascii.unhexlify('B57F36D88691CEC5EE8659320169A61C')

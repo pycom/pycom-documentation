@@ -11,7 +11,7 @@ import binascii
 import struct
 
 # Initialize LoRa in LORAWAN mode.
-# Please pick the region that matches were you are using the device:
+# Please pick the region that matches where you are using the device:
 # Asia = LoRa.AS923
 # Australia = LoRa.AU915
 # Europe = LoRa.EU868
@@ -58,7 +58,7 @@ For various other complete LoRa examples, check here for additional examples.
 Create and configure a LoRa object. See init for params of configuration.
 
 ```python
-lora = LoRa(mode=LoRa.LORAWAN)
+lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 ```
 
 ### Methods
@@ -123,7 +123,7 @@ import time
 import binascii
 
 # Initialize LoRa in LORAWAN mode.
-# Please pick the region that matches were you are using the device:
+# Please pick the region that matches where you are using the device:
 # Asia = LoRa.AS923
 # Australia = LoRa.AU915
 # Europe = LoRa.EU868
@@ -153,7 +153,7 @@ import binascii
 import struct
 
 # Initialize LoRa in LORAWAN mode.
-# Please pick the region that matches were you are using the device:
+# Please pick the region that matches where you are using the device:
 # Asia = LoRa.AS923
 # Australia = LoRa.AU915
 # Europe = LoRa.EU868
