@@ -70,7 +70,7 @@ This method is used to set the LoRa subsystem configuration and to specific raw 
 The arguments are:
 
 - ``mode`` can be either <constant>LoRa.LORA</constant> or <constant>LoRa.LORAWAN</constant>.
-- ``region`` can take the following values: <constant>LoRa.AS923</constant>, <constant>LoRa.AU915</constant>, <constant>LoRa.EU868</constant> or <constant>LoRa.US915</constant>. If they are not specified, this will set appropriate defaults for ``frequency`` and ``tx_power``.
+- ``region`` can take the following values: <constant>LoRa.AS923</constant>, <constant>LoRa.AU915</constant>, <constant>LoRa.EU868</constant> or <constant>LoRa.US915</constant>. If not provided this will default to ``LoRa.EU868``. If they are not specified, this will also set appropriate defaults for ``frequency`` and ``tx_power``.
 - ``frequency`` accepts values between 863000000 and 870000000 in the 868 band, or between 902000000 and 928000000 in the 915 band.
 - ``tx_power`` is the transmit power in dBm. It accepts between 2 and 14 for the 868 band, and between 5 and 20 in the 915 band.
 - ``bandwidth`` is the channel bandwidth in KHz. In the 868 band the accepted values are <constant>LoRa.BW_125KHZ</constant> and <constant>LoRa.BW_250KHZ</constant>. In the 915 band the accepted values are <constant>LoRa.BW_125KHZ</constant> and <constant>LoRa.BW_500KHZ</constant>.
