@@ -18,6 +18,12 @@ pycom.rgbled(0xff00)    # make the LED light up in green color
 
 Get or set the state (enabled or disabled) of the heartbeat LED. Accepts and returns boolean values (True or False).
 
+#####<function>pycom.heartbeat_on_boot([enable])</function>
+
+Allows you permanently disable or enable the heartbeat LED. Once this setting is
+set, it will persist between reboots. Note, this only comes into effect on the
+next boot, it does not stop the already running heartbeat.
+
 #####<function>pycom.rgbled(color)</function>
 
 Set the colour of the RGB LED. The color is specified as 24 bit value representing red, green and blue, where the red colour is represented by the 8 most significant bits. For instance, passing the value ``0x00FF00`` will light up the LED in a very bright green.
