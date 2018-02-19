@@ -114,7 +114,11 @@ The parameters are:
 - ``timeout``: is the maximum time in milliseconds to wait for the Join Accept message to be received. If no timeout (or zero) is given, the call returns immediatelly and the status of the join request can be checked with ``lora.has_joined()``.
 - ``dr``: is an optional value to specify the initial data rate for the Join Request. Possible values are 0 to 5 for **EU868**, or 0 to 4 for **US915**.
 
-In the case of <constant>LoRa.OTAA</constant> the authentication tuple is: (``app_eui``, ``app_key``). Example:
+In the case of <constant>LoRa.OTAA</constant> the authentication tuple is:
+(``dev_eui``, ``app_eui``, ``app_key``) where ``dev_eui`` is optional. If it is
+not provided the LoRa MAC will be used.
+
+Example:
 
 ```python
 from network import LoRa
