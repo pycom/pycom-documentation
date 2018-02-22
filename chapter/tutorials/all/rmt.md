@@ -32,7 +32,7 @@ In this first example, we define the signal as a tuple of binary values that
 define the shape of the desired signal along with the duration of a bit.
 ```python
 from machine import RMT
-# Map RMT channel 4 to P21, when the RMT is it will output LOW
+# Map RMT channel 4 to P21, when the RMT is idle, it will output LOW
 rmt = RMT(channel=4, gpio="P21", tx_idle_level=RMT.LOW)
 
 # Produces the pattern shown in data, where each bit lasts
@@ -48,7 +48,7 @@ In this example we define the signal by a tuple of durations and what state the
 signal starts in.
 ```python
 from machine import RMT
-# Map RMT channel 4 to P21, when the RMT is it will output LOW
+# Map RMT channel 4 to P21, when the RMT is idle, it will output LOW
 rmt = RMT(channel=4, gpio="P21", tx_idle_level=RMT.LOW)
 
 # The list of durations for each pulse to be, these are in units of the channels
@@ -68,7 +68,7 @@ signal. Each pulse has a defined duration as well as a state. This is useful
 if you don't always want the signal to toggle state.
 ```python
 from machine import RMT
-# Map RMT channel 4 to P21, when the RMT is it will output LOW
+# Map RMT channel 4 to P21, when the RMT is idle, it will output LOW
 rmt = RMT(channel=4, gpio="P21", tx_idle_level=RMT.LOW)
 
 # Produces the pattern shown in data, where each bit lasts
