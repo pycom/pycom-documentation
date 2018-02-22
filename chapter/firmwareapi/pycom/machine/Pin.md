@@ -84,7 +84,10 @@ Get or set the pin pull.
 
 #####<function>pin.hold([hold])</function>
 
-Get or set the pin hold. Can be used to retain the pin state through a core reset and system reset triggered by watchdog time-out or Deep-sleep events.
+Get or set the pin hold. Can be used to retain the pin state through a core
+reset and system reset triggered by watchdog time-out or Deep-sleep events.
+This only work for:  `P2`, `P3`, `P4`, `P6`, `P8`, `P9`, `P10`, `P13`, `P14`,
+ `P15`, `P16`, `P17`, `P18`, `P19`, `P20`, `P21`, `P22`, and `P23`.
 
 #####<function>pin.callback(trigger, handler=None, arg=None)</function>
 
