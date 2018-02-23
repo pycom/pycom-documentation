@@ -5,7 +5,7 @@ specifically in `/frozen` folder. This allows you to add your device quickly to 
 You can still upload your Pybytes library [manually](quick-add-device.md).
 
 ## Follow these steps 
-Install [Firmware updater](https://pycom.io/downloads/) and follow these instructions.
+Install custom Firmware updater from Pybytes beta.
 
 <p><img src ="../../img/pybytes/firmware-updater/1.png" width="650"></p>
 Put your device in firmware update mode:
