@@ -1,8 +1,15 @@
-# Quick add device
+# Adding device quickly
 
 From firmware 1.16.x onward all Pycom devices come with build in *Pybytes library* in firmware
 specifically in `/frozen` folder. This allows you to add your device quickly to Pybytes.
 You can still upload your Pybytes library [manually](quick-add-device.md).
+
+{% hint style='danger' %}
+If you [manually](quick-add-device.md) uploaded Pybytes library on your device before.
+Make sure to do [factory reset](../toolsandfeatures/bootmodes.md#factory-reset-the-filesystems) of your device filesystem.
+Otherwise code in `/flash` folder will have priority over build in 
+library in `/frozen` folder.
+{% endhint %}
 
 ## Follow these steps 
 Install custom Firmware updater from Pybytes beta.
