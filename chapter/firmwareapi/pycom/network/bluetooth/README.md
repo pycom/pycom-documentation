@@ -55,7 +55,14 @@ bluetooth = Bluetooth()
 ```
 
 ### Methods
-#####<function>bluetooth.init()</function>
+#####<function>bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None)</function>
+- ``id`` Only one Bluetooth peripheral available so must always be 0
+- ``mode`` currently the only supported mode is ``Bluetooth.BLE``
+- ``antenna`` selects between the internal and the external antenna. Can be either
+<constant>Bluetooth.INT_ANT</constant>, <constant>Bluetooth.EXT_ANT</constant>.
+With our development boards it defaults to using the internal antenna, but in
+the case of an OEM module, the antenna pin (P12) is not used, so it’s free to be
+used for other things.
 
 Initialises and enables the Bluetooth radio in BLE mode.
 
@@ -224,6 +231,10 @@ bluetooth.service('abc123')
 Closes the BLE connection with the client.
 
 ### Constants
+<constant>Bluetooth.BLE</constant>
+
+Bluetooth mode
+
 <constant>Bluetooth.CONN_ADV</constant> <constant>Bluetooth.CONN_DIR_ADV</constant> <constant>Bluetooth.DISC_ADV</constant> <constant>Bluetooth.NON_CONN_ADV</constant> <constant>Bluetooth.SCAN_RSP</constant>
 
 Advertisement type
@@ -243,3 +254,7 @@ Characteristic properties (bit values that can be combined)
 <constant>Bluetooth.CHAR_READ_EVENT</constant> <constant>Bluetooth.CHAR_WRITE_EVENT</constant> <constant>Bluetooth.NEW_ADV_EVENT</constant> <constant>Bluetooth.CLIENT_CONNECTED</constant> <constant>Bluetooth.CLIENT_DISCONNECTED</constant> <constant>Bluetooth.CHAR_NOTIFY_EVENT</constant>
 
 Characteristic callback events
+
+<constant>Bluetooth.INT_ANT</constant> <constant>Bluetooth.EXT_ANT</constant>
+
+Antenna type
