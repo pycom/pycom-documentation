@@ -241,7 +241,8 @@ Get or set the power mode in raw LoRa mode (<constant>LoRa.LORA</constant>). The
 
 Return a named tuple with useful information from the last received LoRa or LoRaWAN packet. The named tuple has the following form:
 
-(``rx_timestamp``, ``rssi``, ``snr``, ``sftx``, ``sfrx``, ``tx_trials``)
+(``rx_timestamp``, ``rssi``, ``snr``, ``sftx``, ``sfrx``, ``tx_trials``,
+ ``tx_power``, ``tx_time_on_air``, ``tx_counter``, ``tx_frequency``)
 
 Example:
 
@@ -257,6 +258,11 @@ Where:
 - ``sfrx`` tells the data rate (in the case of LORAWAN mode) or the spreading factor (in the case of LORA mode) of the last packet received.
 - ``sftx`` tells the data rate (in the case of LORAWAN mode) or the spreading factor (in the case of LORA mode) of the last packet transmitted.
 - ``tx_trials`` is the number of tx attempts of the last transmitted packet (only relevant for LORAWAN confirmed packets).
+- ``tx_power`` is the power of the last transmission (in dBm).
+- ``tx_time_on_air`` is the time on air of the last transmitted packet (in ms).
+- ``tx_counter`` is the number of packets transmitted.
+- ``tx_frequency`` is the frequency used for the last transmission.
+
 
 #####<function>lora.has_joined()</function>
 
