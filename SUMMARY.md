@@ -162,12 +162,18 @@
     * [7.4.4.1 Deep Sleep API](chapter/datasheets/boards/deepsleep/api.md)
 * [7.5 Notes](chapter/datasheets/notes/README.md)
 
-## 8. Documentation Notes
+## 8. Pybytes Beta
 
-* [8.1 Introduction](chapter/docnotes/README.md)
-* [8.2 Syntax](chapter/docnotes/syntax.md)
-* [8.3 REPL vs Scripts](chapter/docnotes/replscript.md)
+* [8.1 Introduction](chapter/pybytes/README.md)
+* [8.2 Adding device quickly](chapter/pybytes/quick-add-device.md)
+* [8.3 Adding device by flashing Pybytes library](chapter/pybytes/add-device.md)
+  
+## 9. Documentation Notes
 
-## 9. License
+* [9.1 Introduction](chapter/docnotes/README.md)
+* [9.2 Syntax](chapter/docnotes/syntax.md)
+* [9.3 REPL vs Scripts](chapter/docnotes/replscript.md)
 
-* [9.1 License](chapter/license/README.md)
+## 10. License
+
+* [10.1 License](chapter/license/README.md)
