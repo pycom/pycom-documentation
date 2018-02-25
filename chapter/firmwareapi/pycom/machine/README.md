@@ -44,7 +44,9 @@ Gates the clock to the CPU, useful to reduce power consumption at any time durin
 
 #####<function>machine.deepsleep([time_ms])</function>
 
-Stops the CPU and all peripherals (including networking interfaces, if any). Execution is resumed from the main script, just as with a reset. If a value in milliseconds is given then the device will wake up after that period of time, otherwise it will remain in deep sleep until the reset button is pressed.
+Stops the CPU and all peripherals, including the networking interfaces (except for LTE). Execution is resumed from the main script, just as with a reset. If a value in milliseconds is given then the device will wake up after that period of time, otherwise it will remain in deep sleep until the reset button is pressed.
+
+The products with LTE connectivity (FiPy, GPy, G01), require the LTE radio to be disabled separately via the LTE class before entering deepsleep. This is required due to the LTE radio being powered independently and allowing use cases which require the system to be taken out from deepsleep by an event from the LTE network (data or SMS received for instance).
 
 #####<function>machine.pin_deepsleep_wakeup(pins, mode, enable_pull)</function>
 
