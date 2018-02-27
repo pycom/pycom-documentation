@@ -1,5 +1,3 @@
-<p align="center"><img src ="../../img/quickstartIcon.png" width="150"></p>
-
 # Getting Started
 So, you've decided to order a Pycom development module. Firstly we would like to
 congratulate you in making an excellent decision. If you haven't yet placed your

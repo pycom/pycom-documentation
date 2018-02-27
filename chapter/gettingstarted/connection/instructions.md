@@ -1,6 +1,6 @@
 ## Basic connection
 
-{% tabs exp="Expansion Board", pic="Pysense/Pytrack", diy="USB UART Adapter"%}
+{% tabs exp="Expansion Board", pic="Pysense/Pytrack", diy="USB UART Adapter", wifi="WiFi"%}
 
 {% content "exp" %}
 
@@ -40,6 +40,26 @@ firmware you will need to connect `P2` to `GND`. We recommend you connect a
 button between the two to make this simpler.
 
 <p align="center"><img src ="../img/uart_{{ module }}.png"></p>
+
+{% content "wifi" %}
+
+ - In order to access the {{module}} via WiFi you only need to provide `3.5v` - `5.5v` on
+the `Vin` pin of the {{ module }}:
+<p align="center"><img src ="../img/wifi_power.png"></p>
+
+- By default, when the {{module}} boots, it will create a WiFi access point with
+the following credentials:
+
+<p align="center">SSID: `{{ module | lower}}-wlan`</p>
+
+<p align="center">password: `www.pycom.io`</p>
+
+ - Once connected to this network you will be able to access the telnet and FTP
+servers running on the {{module}}. For both of these the login details are:
+
+<p align="center">username: `micro`</p>
+
+<p align="center">password: `python`</p>
 
 {% endtabs %}
 
@@ -131,26 +151,6 @@ more information on acquiring a LTE CAT-M1/NB-IoT enabled nano SIM.
 <p align="center"><img src ="../img/{{ module }}_sim.png"></p>
 
 {% endif %}
-
-## Tutorials
-Tutorials on how to use your {{ module }} module can be found in the
-[examples]() section of this documentation. The following tutorial might be of
-specific interest for the {{ module }}:
-
-- [WiFi connection](../../tutorials/all/wlan.md)
-{% if module=="LoPy" or module=="LoPy4" or module=="FiPy" %}
-- [LoRaWAN node](../../tutorials/lora/lorawan-otta.md)
-- [LoRaWAN nano gateway](../../tutorials/lora/lorawan-nano-gateway.md)
-{% endif %}
-{% if module=="SiPy" or module=="LoPy4" or module=="FiPy" %}
-- [Sigfox](../../tutorials/sigfox/README.md)
-{% endif %}
-{% if module=="GPy" or module=="FiPy" %}
-- [LTE CAT-M1](../../tutorials/cellular/cat_m1.md)
-- [NB-IoT](../../tutorials/cellular/nb_iot.md)
-{% endif %}
-- [BLE](../../tutorials/all/ble.md)
-
 {% if module=="LoPy" or module=="SiPy" or module=="WiPy" %}
 ## Deepsleep current issue
 
