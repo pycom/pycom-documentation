@@ -43,7 +43,7 @@ The WLAN constructor is special in the sense that if no arguments besides the id
 
 ### Methods
 
-#####<function>wlan.init(mode, * , ssid=None, auth=None, channel=1, antenna=WLAN.INT_ANT, power_save=False)</function>
+#####<function>wlan.init(mode, * , ssid=None, auth=None, channel=1, antenna=None, power_save=False)</function>
 
 Set or get the WiFi network processor configuration.
 
@@ -52,9 +52,13 @@ Arguments are:
 - ``mode`` can be either <constant>WLAN.STA</constant>, <constant>WLAN.AP</constant> or <constant>WLAN.STA_AP</constant>.
 - ``ssid`` is a string with the ssid name. Only needed when mode is <constant>WLAN.AP</constant>.
 - ``auth`` is a tuple with (sec, key). Security can be ``None``, <constant>WLAN.WEP</constant>, <constant>WLAN.WPA</constant> or <constant>WLAN.WPA2</constant>. The key is a string with the network password. If ``sec`` is <constant>WLAN.WEP</constant> the key must be a string representing hexadecimal values (e.g. ‘ABC1DE45BF’). Only needed when mode is <constant>WLAN.AP</constant>.
-``channel`` a number in the range 1-11. Only needed when mode is <constant>WLAN.AP</constant>.
-``antenna`` selects between the internal and the external antenna. Can be either <constant>WLAN.INT_ANT</constant> or <constant>WLAN.EXT_ANT</constant>.
-``power_save`` enables or disables power save functions in STA mode.
+- ``channel`` a number in the range 1-11. Only needed when mode is <constant>WLAN.AP</constant>.
+- ``antenna`` selects between the internal and the external antenna. Can be either
+<constant>WLAN.INT_ANT</constant>, <constant>WLAN.EXT_ANT</constant>.
+With our development boards it defaults to using the internal antenna, but in
+the case of an OEM module, the antenna pin (P12) is not used, so it’s free to be
+used for other things.
+- ``power_save`` enables or disables power save functions in STA mode.
 
 For example, you can do:
 
