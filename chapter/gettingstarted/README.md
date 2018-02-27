@@ -5,21 +5,28 @@ order we highly recommend you check out the [requirements](./requirements.md)
 page before you place your order to ensure you know which accessories you might
 require.
 
-## Products
-Click the picture matching your product below to be taken to its getting started
-guide.
+<p align="center"><img src ="../../img/getting_started_step_1.JPG" width="500"></p>
 
-{% grid %}
-  {% col 1 %}<a href="connection/wipy.md"><p align="center"><img src ="./img/wipy.png"></p></a>
-  {% col 1 %}<a href="connection/lopy.md"><p align="center"><img src ="./img/lopy.png"></p></a>
-  {% col 1 %}<a href="connection/lopy4.md"><p align="center"><img src ="./img/lopy4.png"></p></a>
-{% endgrid %}
-{% grid %}
-  {% col 1 %}<a href="connection/sipy.md"><p align="center"><img src ="./img/sipy.png"></p></a>
-  {% col 1 %}<a href="connection/gpy.md"><p align="center"><img src ="./img/gpy.png"></p></a>
-  {% col 1 %}<a href="connection/fipy.md"><p align="center"><img src ="./img/fipy.png"></p></a>
-{% endgrid %}
-{% grid %}
-  {% col 1 %}<a href="connection/pysense.md"><p align="center"><img src ="./img/pysense.png"></p></a>
-  {% col 1 %}<a href="connection/pytrack.md"><p align="center"><img src ="./img/pytrack.png"></p></a>
-{% endgrid %}
+##[Step 1: Getting the hardware setup](hardwaresetup.md)
+In the first part of this getting started guide, we will take you through
+setting up your device. Firstly we will cover how to connect the module to your
+computer either via USB or WiFi. Secondly we will explain how to connect various
+accessories such as antennas or SIM cards to your module.
+
+##[Step 2: Getting your computer setup](installingsoftware.md)
+Now that your module is successfully connected, you will need to install some
+software on your computer to interface with it. The second part of this guide
+will guide you through installing drivers; performing firmware updates for your
+module/accessories to ensure you have the most stable and feature packed version;
+and how to setup the software use to program the device.
+
+##[Step 3: Using your module](micropython.md)
+Now that you have a connected module and all the required software installed it
+is time to begin programming your device. This part of the guide will get you
+started with a basic example and point you in the right direction for getting
+your device connected to your chosen network.
+
+{% hint style='tip' %}
+You can navigate through this guide using the arrow buttons on the left and right
+of the screen (or at the bottom if you are using mobile).
+{% endhint %}
