@@ -1,9 +1,30 @@
 # Pycom Documentation
 
-Welcome to the Pycom documentation site. The documentation is split into 5 sections; we recommend reading through all the sections to familiarise yourself with the various tools and features available to you to help you develop on your Pycom module.
+Welcome to the Pycom documentation site. The documentation is split into 5
+sections; we recommend reading through all the sections to familiarise yourself
+with the various tools and features available to you to help you develop on
+your Pycom module.
 
-<p align="center"><img src ="img/graphic.png"></p>
+To get started, read through the Getting Started Guide then feel free to jump
+straight into the tutorials and examples in Tutorials & Examples to begin
+building your projects.
 
-All the new Pycom modules are based on the same ESP32 chip and therefore share similar schematics, pinouts & firmware. Majority of the documentation is applicable for all Pycom devices, with separate sections for tutorials and firmware references.
 
-To get started, read through the Quickstart Guide then feel free to jump straight into the tutorials and examples in Tutorials & Examples to begin building your projects.
+{% grid %}
+  {% col 1 %}<a href="chapter/products.md"><p align="center"><img src ="img/productIcon.png"></p></a>
+  {% col 1 %}<a href="chapter/gettingstarted/README.md"><p align="center"><img src ="img/quickstartIcon.png"></p></a>
+  {% col 1 %}<a href="chapter/tutorials/README.md"><p align="center"><img src ="img/tutorialsIcon.png"></p></a>
+{% endgrid %}
+{% grid %}
+  {% col 1 %}<a href="chapter/products.md"><p align="center">Products</p></a>
+  {% col 1 %}<a href="chapter/gettingstarted/README.md"><p align="center">Getting Started</p></a>
+  {% col 1 %}<a href="chapter/tutorials/README.md"><p align="center">Tutorials</p></a>
+{% endgrid %}
+{% grid %}
+  {% col 1 %}<a href="chapter/datasheets/README.md"><p align="center"><img src ="img/datasheetsIcon.png"></p></a>
+  {% col 1 %}<a href="chapter/firmwareapi/README.md"><p align="center"><img src ="img/APIIcon.png"></p></a>
+{% endgrid %}
+{% grid %}
+  {% col 1 %}<a href="chapter/datasheets/README.md"><p align="center">Product Datasheets</p></a>
+  {% col 1 %}<a href="chapter/firmwareapi/README.md"><p align="center">API Documentation</p></a>
+{% endgrid %}

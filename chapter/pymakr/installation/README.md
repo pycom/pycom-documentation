@@ -1,12 +1,12 @@
-# Installation
+<p align="center"><img src ="../../../img/pymakr-logo.png" width="400"></p>
 
-Pymakr Plugin is currently under development for 2 platforms; Atom and Visual
-Studio Code. The following sections detail the installation process for the various platforms.
+# Pymakr Plugins
 
-{% hint style='danger' %}
-**Please be aware that Pymakr IDE has been retired** and that plugins for Atom
-and Visual Studio Code are under development, with intention to replace Pymakr.
-Please read this
-[**forum post**](https://forum.pycom.io/topic/635/pymakr-time-of-death-09-02/41)
-for more information.
-{% endhint %}
+To make it as easy as possible Pycom has developed a plugin for two popular text
+editors, called Pymakr. These Plugins have been built and are available for the
+following platforms:
+
+{% grid %}
+  {% col 1 %}<a href="connection/wipy.md"><p align="center"><img src ="../../../img/atom_icon.png"></p></a>
+  {% col 1 %}<a href="connection/lopy.md"><p align="center"><img src ="../../../img/vs_code_icon.png"></p></a>
+{% endgrid %}

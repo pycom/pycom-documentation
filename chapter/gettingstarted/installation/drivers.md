@@ -12,15 +12,8 @@ On Mac OS you shouldn't need to do anything special to get our device to work.
 
 ## Windows
 All our products will work out of the box for Windows 8/10/+. If using Windows
-7, drivers to support the boards will need to be installed.
+7, drivers to support the Pysense/Pytrack boards will need to be installed.
 
-{% tabs exp="Expansion Board", pic="Pysense/Pytrack" %}
-
-{% content "exp" %}
-
-
-
-{% content "pic" %}
 ### Download
 
 Please download the driver software from the link below.
@@ -60,5 +53,3 @@ If the installation was successful, you should now see a window specifying that 
 To confirm that the installation was correct, navigate back to the ``Device Manager`` and click the dropdown for other devices. The warning label should now be gone and Pytrack/Pysense should be installed.
 
 <p align="center"><img src ="../../../img/win7-8.png" width="500"></p>
-
-{% endtabs %}

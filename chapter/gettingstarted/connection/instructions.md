@@ -4,6 +4,11 @@
 
 {% content "exp" %}
 
+{% if module=="FiPy" %}
+- When using the expansion board with a {{module}}, you will need to remove the
+CTS and RTS jumpers as these interfere with communication with the cellular
+modem.
+{% endif %}
 - Look for the reset button on the module (located at a corner of the board,
   next to the LED).
 - Locate the USB connector on {{ base_board }}.
@@ -43,6 +48,9 @@ button between the two to make this simpler.
 
 {% content "wifi" %}
 
+**Note:** This method of connection is not recommended for first time users.
+It is possible to lock yourself out of the device, requiring a USB connection.
+
  - In order to access the {{module}} via WiFi you only need to provide `3.5v` - `5.5v` on
 the `Vin` pin of the {{ module }}:
 <p align="center"><img src ="../img/wifi_power.png"></p>
@@ -62,15 +70,6 @@ servers running on the {{module}}. For both of these the login details are:
 <p align="center">password: `python`</p>
 
 {% endtabs %}
-
-{% hint style='info' %}
-It is strongly recommended to **update the firmware** on your {{module}} module
-before starting to code. Pycom aims to have the latest and most stable firmware
-builds and frequently pushes new firmware to its devices. To ensure that you
-have the most stable build of firmware, please regularly check for firmware
-updates. The update procedure is described in
-[Firmware Upgrades](../installation/firmwaretool.md).
-{% endhint %}
 
 ## Antennas
 
