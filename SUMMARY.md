@@ -78,6 +78,7 @@
   * [5.3.8 Objenious](chapter/tutorials/lora/objenious-provisioning.md)
 * [5.4 Sigfox Examples](chapter/tutorials/sigfox/README.md)
   * [5.4.1 Register Device](chapter/tutorials/sigfox/register.md)
+  * [5.4.2 Disengage Sequence Number](chapter/tutorials/sigfox/disengage_seq_num.md)
 * [5.5 Pytrack Examples](chapter/tutorials/pytrack/README.md)
 * [5.6 Pysense Examples](chapter/tutorials/pysense/README.md)
 
