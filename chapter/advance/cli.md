@@ -4,9 +4,10 @@
 After installing the [windows version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=win32&redirect=true)
 of the updater tool, the CLI tool can be
 found here:
-```
-C:\Program Files\Pycom\Pycom Firmware Update\pycom-fwtool-cli.exe
-```
+
+32-Bit Windows: ``C:\Program Files\Pycom\Pycom Firmware Update\pycom-fwtool-cli.exe``
+
+64-Bit Windows: ``C:\Program Files (x86)\Pycom\Pycom Firmware Update``
 
 ### Mac
 In order to get access to the CLI tool on mac you will need to right click on
