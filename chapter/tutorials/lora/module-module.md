@@ -1,6 +1,7 @@
-# LoPy to LoPy
+# LoRa Module to Module Connection
 
-This example shows how to connect two LoPys \(nodes\) via raw LoRa.
+This example shows how to connect two Pycode LoRa capable modules \(nodes\)
+via raw LoRa.
 
 ### Node A
 
