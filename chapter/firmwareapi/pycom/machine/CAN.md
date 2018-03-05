@@ -22,7 +22,7 @@ Create an CAN object. See init for parameters of initialisation.:
 
 ```python
 # only 1 CAN peripheral is available, so the bus must always be 0
-can = CAN(0, mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))
+can = CAN(0, mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))    # pin order is Tx, Rx
 ```
 
 ### Methods
@@ -35,7 +35,7 @@ Initialize the CAN controller. The arguments are:
 - ``baudrate`` setups the bus speed. Acceptable values are between 1 and 1000000.
 - ``frame_format`` defines the frame format to be accepted by the receiver. Useful for filtering frames based on the identifier length. Can tale either <constant>CAN.FORMAT_STD</constant> or <constant>CAN.FORMAT_EXT</constant> or <constant>CAN.FORMAT_BOTH</constant>. If <constant>CAN.FORMAT_STD</constant> is selected, extended frames won't be received and viceversa.
 - ``rx_queue_len`` defines the number of messages than can be queued by the receiver. Due to CAN being a high traffic bus, large values are recommended (>= 128), otherwise messages will be dropped specially when no filtering is applied.
-- ``pins`` selects the Tx and Rx pins.
+- ``pins`` selects the Tx and Rx pins (in that order).
 
 #####<function>can.deinit()</function>
 
