@@ -13,7 +13,7 @@ to ensure you have the most stable and feature packed firmware, but also to
 ensure all the functionality of your device is enable. E.g. this tool also
 activates your two year free sigfox connectivity.
 
-- [**Development Environment:**](../pymakr/README.md) Pymakr is a plug-in for
+- [**Development Environment:**](installation/pymakr.md) Pymakr is a plug-in for
 Atom and Visual Studio Code developed by Pycom to make development for Pycom
 modules super easy. It allows you to use your favourite text editor while
 simplifying the process of uploading code to the device.

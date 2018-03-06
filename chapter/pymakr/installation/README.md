@@ -7,6 +7,6 @@ editors, called Pymakr. These Plugins have been built and are available for the
 following platforms:
 
 {% grid %}
-  {% col 1 %}<a href="connection/wipy.md"><p align="center"><img src ="../../../img/atom_icon.png"></p></a>
-  {% col 1 %}<a href="connection/lopy.md"><p align="center"><img src ="../../../img/vs_code_icon.png"></p></a>
+  {% col 1 %}<a href="/chapter/pymakr/installation/atom.md"><p align="center"><img src ="../../../img/atom_icon.png"></p></a>
+  {% col 1 %}<a href="/chapter/pymakr/installation/vscode.md"><p align="center"><img src ="../../../img/vs_code_icon.png"></p></a>
 {% endgrid %}
