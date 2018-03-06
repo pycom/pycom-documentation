@@ -166,7 +166,7 @@ optional arguments:
  ```
 
 ### write_remote
-This is an internal function user by the GUI update tool. This is not intended
+This is an internal function used by the GUI update tool. This is not intended
 to be used by end users.
 
 ###  cb                  
@@ -183,10 +183,13 @@ optional arguments:
 ```
 
 To backup your config block:
-``$pycom-fwtool-cli  -p PORT cb -b -f config_block.bak``
+``$pycom-fwtool-cli  -p PORT cb``
+
+If neither `-b` or `-r` is provided, the command will default to backup. If no
+file name is provided, `<WMAC>.cb` is used.
 
 To restore your config block:
-``$pycom-fwtool-cli  -p PORT cb -r -f config_block.bak``
+``$pycom-fwtool-cli  -p PORT cb -r -f backup.cb``
 
 ###  nvs                 
 Read/Write non-volatile storage.
@@ -201,10 +204,13 @@ optional arguments:
 ```
 
 To backup your NVS:
-``$pycom-fwtool-cli  -p PORT nvs -b -f config_block.bak``
+``$pycom-fwtool-cli  -p PORT nvs``
+
+If neither `-b` or `-r` is provided, the command will default to backup. If no
+file name is provided, `<WMAC>.nvs` is used.
 
 To restore your NVS:
-``$pycom-fwtool-cli  -p PORT nvs -r -f config_block.bak``
+``$pycom-fwtool-cli  -p PORT nvs -r -f backup.nvs``
 
 
 ###  ota    
@@ -221,10 +227,13 @@ optional arguments:
 ```
 
 To backup your OTA block:
-``$pycom-fwtool-cli  -p PORT ota -b -f config_block.bak``
+``$pycom-fwtool-cli  -p PORT ota``
+
+If neither `-b` or `-r` is provided, the command will default to backup. If no
+file name is provided, `<WMAC>.ota` is used.
 
 To restore your OTA block:
-``$pycom-fwtool-cli  -p PORT ota -r -f config_block.bak``
+``$pycom-fwtool-cli  -p PORT ota -r -f backup.ota``
 
 ###  lpwan               
 Get/Set LPWAN parameters saved to non-volatile storage. Please see
@@ -248,7 +257,7 @@ usage: pycom-fwtool-cli  -p PORT erase_fs [-h]
 
 optional arguments:
   -h, --help  show this help message and exit
-  ```
+```
 
 ###  erase_all           
 Erase entire flash, only use this if you are sure you know what you are doing.
