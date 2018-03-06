@@ -20,7 +20,7 @@ will guide you through installing drivers; performing firmware updates for your
 module/accessories to ensure you have the most stable and feature packed version;
 and how to setup the software use to program the device.
 
-##[Step 3: Using your module](micropython.md)
+##[Step 3: Using your module](programming.md)
 Now that you have a connected module and all the required software installed it
 is time to begin programming your device. This part of the guide will get you
 started with a basic example and point you in the right direction for getting
