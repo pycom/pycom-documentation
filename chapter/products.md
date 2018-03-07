@@ -22,8 +22,8 @@ as well as what accessories are required to utilise certain functionality.
 | [<img src ="../img/IP67_case_exp.png" width="100"><br> IP67 Case for <br> Expansion Board](https://pycom.io/product/ip67-expansion-board-case/) | ✔ ||||
 | [<img src ="../img/IP67_case_py.png" width="100"><br> IP67 Case for <br> Pysense/Pytrack/Pyscan](https://pycom.io/product/ip67-case/) || ✔ | ✔ | ✔ |
 | [<img src ="../img/IP67_case.png" width="100"><br> IP67 Case <br> (universal)](https://pycom.io/product/universal-ip67-case/) | ✔ | ✔ | ✔ | ✔ |
-| <img src ="../img/lipo.jpg" width="100"><br> LiPo Battery <br> (user-supplied)] | ✔ | ✔ | ✔ | ✔ |
-| <img src ="../img/microusb.png" width="100"><br> Micro USB Cable <br> (user-supplied) | ✔ | ✔ | ✔ | ✔ |
+| <img src ="../img/lipo.jpg" width="100"><br> LiPo Battery <br> (user-supplied) | ✔ | ✔ | ✔ | ✔ |
+| <img src ="../img/microusb.png" width="100"><br> Micro USB Cable <br> <i>Required</i> <br> (user-supplied) | ✔ | ✔ | ✔ | ✔ |
 | Pyscan Modules <td colspan=3 align="center" style="padding:0"> <table style="margin:0"><tr style="border-top:none"><td align="center" style="border:none"><a href="https://pycom.io/product/oled-screen/"><img src ="../img/oled.png" width="100"><br> OLED Module</a></td><td align="center" style="border:none"><a href="https://pycom.io/product/2mp-camera/"><img src ="../img/2MP.png" width="100"><br> 2MP Camera</a></td><td align="center" style="border:none"><a href="https://pycom.io/product/barcode-reader"><img src ="../img/barcode.png" width="100"><br> Barcode Reader</a></td><tr style="background-color: #FFF; border-top:none"><td align="center" style="border:none"><a href="https://pycom.io/product/fingerprint-scanner/"><img src ="../img/fingerprint.png" width="100"><br> Fingerprint <br> Scanner</a></td><td align="center" style="border:none"><a href="https://pycom.io/product/infared-image-sensor/"><img src ="../img/ir.png" width="100"><br> IR Image Sensor</a></td><td align="center" style="border:none"><a href="https://pycom.io/product/TODO/"><img src ="../img/nfc.png" width="100"><br> NFC Antenna</a></td> | ✔ |
 
 # OEM Modules

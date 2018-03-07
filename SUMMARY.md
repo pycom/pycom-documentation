@@ -27,7 +27,7 @@
     * [1.4.4.1 Serial USB](chapter/gettingstarted/programming/repl/serial.md)
     * [1.4.4.2 Telnet](chapter/gettingstarted/programming/repl/telnet.md)
   * [1.4.5 FTP](chapter/gettingstarted/programming/FTP.md)
-  * [1.4.6 Safe boot](chapter/gettingstarted/programming/safe_boot.md)
+  * [1.4.6 Safe boot](chapter/gettingstarted/programming/safeboot.md)
 * [1.5 Device Registration](chapter/gettingstarted/registration.md)
   * [1.5.1 Sigfox](chapter/gettingstarted/registration/sigfox.md)
   * [1.5.2 Cellular](chapter/gettingstarted/registration/cellular.md)
