@@ -39,6 +39,8 @@
   * [3.1.1 Atom](chapter/pymakr/installation/atom.md)
   * [3.1.2 Visual Studio Code](chapter/pymakr/installation/vscode.md)
 * [3.2 Tools/Features](chapter/pymakr/toolsfeatures.md)
+* [3.3 Settings](chapter/pymakr/settings.md)
+
 
 ## 4. Pysense & Pytrack
 
