@@ -32,6 +32,8 @@
   * [1.5.1 Sigfox](chapter/gettingstarted/registration/sigfox.md)
   * [1.5.2 Cellular](chapter/gettingstarted/registration/cellular.md)
   * [1.5.3 LoRaWAN](chapter/gettingstarted/registration/lora.md)
+    * [1.5.3.2 The Things Network](chapter/gettingstarted/registration/lora/ttn.md)
+    * [1.5.3.2 Objenious](chapter/gettingstarted/registration/lora/objenious.md)
 
 ## 3. Pymakr Plugin
 
@@ -82,7 +84,6 @@
   * [5.3.5 LoPy to LoPy](chapter/tutorials/lora/module-module.md)
   * [5.3.6 LoRaWAN Nano-Gateway](chapter/tutorials/lora/lorawan-nano-gateway.md)
   * [5.3.7 RN2483 to LoPy](chapter/tutorials/lora/537-rn2483-to-lopy.md)
-  * [5.3.8 Objenious](chapter/tutorials/lora/objenious-provisioning.md)
 * [5.4 Sigfox Examples](chapter/tutorials/sigfox/README.md)
   * [5.4.1 Register Device](chapter/tutorials/sigfox/register.md)
   * [5.4.2 Disengage Sequence Number](chapter/tutorials/sigfox/disengage_seq_num.md)

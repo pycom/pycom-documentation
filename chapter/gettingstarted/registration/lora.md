@@ -46,9 +46,9 @@ the network.
 
 #### Networks
 {% grid %}
-  {% col 1 %}<a href="lora/TTN.md"><p align="center"><img src ="./lora/img/ttn.png" height="200"></p></a>
+  {% col 1 %}<a href="lora/ttn.md"><p align="center"><img src ="./lora/img/ttn.png" height="200"></p></a>
+  {% col 1 %}<div class="wrapper" style="height:100%; display:flex; align-items:center;"><a href="lora/objenious.md"><img src ="./lora/img/objenious.jpg"></a></div>
 {% endgrid %}
-
 
 {% hint style='tip' %}
 If you cannot find your favourite LoRaWAN network in the list above, please
