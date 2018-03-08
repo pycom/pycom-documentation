@@ -4,7 +4,7 @@ Some of our devices require registration before you can utilise specific feature
 
 <p align="center"><img src ="../../../img/sigfox-logo.png" width="150"></p>
 
-- SiPy ([Sigfox Activation](../tutorials/sipy/register.md))
+- SiPy ([Sigfox Activation](../tutorials/sigfox/register.md))
 
 
 {% hint style='info' %}
