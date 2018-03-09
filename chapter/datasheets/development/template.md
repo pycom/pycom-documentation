@@ -69,6 +69,25 @@ not be used to feed power into the {{module}}, otherwise the on-board regulator
 will be damaged.
 {% endif %}
 
+{% if module=="LoPy" or module=="SiPy" or module=="WiPy2"%}
+### Deep Sleep
+Due to a couple issues with the {{module}} design the module draws more current
+than it should while in deep sleep. The DC-DC switching regulator always stays
+in high performance mode which is used to provide the lowest possible output
+ripple when the modules is in use. In this mode, it draws a quiescent current of
+10mA. When the regulator is put into ECO mode, the quiescent current goes down
+to 10uA. Unfortunately, the pin used to control this mode is out of the RTC
+domain, and therefore not usable during deep sleep. This causes the regulator to
+always stay in PWM mode, keeping its quiescent current at 10mA. Alongside this
+the flash chip doesn't enter power down mode because the CS pin is floating
+during deep sleep. This causes the flash chip to consume around 2mA of current.
+To work around this issue a ["deep sleep shield"](../boards/deepsleep.md) is
+available that attaches to the module and allows power to be cut off from the
+device. The device can then be re-enabled either on a timer or via pin
+interrupt. With the deep sleep shield the current consumption during deep sleep
+is between 7uA and 10uA depending on the wake sources configured.
+{% endif %}
+
 {% if module=="GPy" or module=="FiPy" %}
 ###AT Commands
 
@@ -82,15 +101,21 @@ Tutorials on how to the {{ module }} module can be found in the
 specific interest for the {{ module }}:
 
 - [WiFi connection](../../tutorials/all/wlan.md)
+
 {% if module=="LoPy" or module=="LoPy4" or module=="FiPy" %}
 - [LoRaWAN node](../../tutorials/lora/lorawan-otta.md)
+
 - [LoRaWAN nano gateway](../../tutorials/lora/lorawan-nano-gateway.md)
+
 {% endif %}
 {% if module=="SiPy" or module=="LoPy4" or module=="FiPy" %}
 - [Sigfox](../../tutorials/sigfox/README.md)
+
 {% endif %}
 {% if module=="GPy" or module=="FiPy" %}
 - [LTE CAT-M1](../../tutorials/cellular/cat_m1.md)
+
 - [NB-IoT](../../tutorials/cellular/nb_iot.md)
+
 {% endif %}
 - [BLE](../../tutorials/all/ble.md)
