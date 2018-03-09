@@ -149,8 +149,12 @@
   * [6.3.19 \_thread](chapter/firmwareapi/micropython/_thread.md)
   * [6.3.20 Builtin](chapter/firmwareapi/micropython/builtin.md)
 
+<<<<<<< HEAD
 ## 7. Product Info
 
+=======
+## 7. Datasheets
+>>>>>>> Removed product section introduction
 * [7.1 Development Modules](chapter/datasheets/development/README.md)
   * [7.1.1 WiPy 2.0](chapter/datasheets/development/wipy2.md)
   * [7.1.2 WiPy 3.0](chapter/datasheets/development/wipy3.md)
