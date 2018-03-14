@@ -1,4 +1,4 @@
-# Connecting your device
+# Setting up the hardware
 
 This chapter of the documentation will show you how to connect you Pycom module.
 For each device there are detailed instructions on how to connect your module to
