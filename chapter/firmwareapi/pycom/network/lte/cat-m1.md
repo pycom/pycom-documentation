@@ -53,18 +53,18 @@ lte = LTE()
 
 ### Methods
 
-#####<function>LTE.init()</function>
+#####<function>LTE.init(*, carrier=None)</function>
 
-This method is used to set up the LTE subsystem. After a **deinit()** this method can take several seconds to return waiting for the LTE modem to start-up.
+This method is used to set up the LTE subsystem. After a **deinit()** this method can take several seconds to return waiting for the LTE modem to start-up. Optionally specify a carrier name. The available options are: "verizon", "at&t" and "standard". Standard is generic for any carrier, and it's also the option used when no arguments are given.
 
 #####<function>lte.deinit()</function>
 
 Disables LTE modem completely. This reduces the power consumption to the minimum. Call this before
 entering deepsleep.
 
-#####<function>lte.attach()</function>
+#####<function>lte.attach(*, band=None)</function>
 
-Enable radio functionality and attach to the LTE Cat M1 network authorized by the inserted SIM card.
+Enable radio functionality and attach to the LTE Cat M1 network authorized by the inserted SIM card. Optionally specify the band to scan for networks. If no band (or None) is specified, all 6 bands will be scanned. The possible values for the band are: 3, 4, 12, 13, 20 and 28.
 
 #####<function>lte.isattached()</function>
 
@@ -96,7 +96,7 @@ Send an AT command directly to the modem. Returns the raw response from the mode
 Example:
 
 ```
-lte.send_at_cmd('AT+CEREG?')    # check for network registration
+lte.send_at_cmd('AT+CEREG?')    # check for network registration manually (sames as lte.isattached())
 ```
 
 Optionally the response can be parsed for pretty printing:
