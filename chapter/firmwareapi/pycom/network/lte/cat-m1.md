@@ -111,6 +111,14 @@ send_at_cmd_pretty('AT!="showphy"')     # get the PHY status
 send_at_cmd_pretty('AT!="fsm"')         # get the System FSM
 ```
 
+#####<function>lte.imei()</function>
+
+Returns a string object witht the IMEI number of the LTE modem.
+
+#####<function>lte.iccid()</function>
+
+Returns a string object witht the ICCID number of the SIM card.
+
 #####<function>lte.reset()</function>
 
 Perform a hardware reset on the cellular modem. This function can take up to 5 seconds tu return as it waits for the modem to shutdown and reboot.
