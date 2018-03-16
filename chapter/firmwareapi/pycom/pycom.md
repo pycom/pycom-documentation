@@ -71,6 +71,35 @@ pycom.wifi_on_boot(True)   # enable WiFi on boot
 pycom.wifi_on_boot()       # get the wifi on boot flag
 
 ```
+
+#####<function>pycom.wdt_on_boot([enable])</function>
+
+Enables the WDT at boot time with the timeout in ms set by the function ``wdt_on_boot_timeout``.
+If this flag is set, the application needs to reconfigure the WDT with a new timeout and feed it regilarly to
+avoid a reset.
+
+```python
+import pycom
+
+pycom.wdt_on_boot(True)     # enable WDT on boot
+
+pycom.wdt_on_boot()         # get the WDT on boot flag
+
+```
+
+#####<function>pycom.wdt_on_boot_timeout([timeout])</function>
+
+Sets or gets the WDT on boot timeout in milliseconds. The minimum value is 5000 ms.
+
+```python
+import pycom
+
+pycom.wdt_on_boot_timeout(10000)     # set the timeout to 5000ms
+
+pycom.wdt_on_boot_timeout()         # get the WDT timeout value
+
+```
+
 #####<function>pycom.pulses_get(pin, timeout)</function>  
 
 Return a list of pulses at pin. The methods scans for transitions at pin and returns a list of tuples, each telling the pin value and the duration in microseconds of that value.  pin is a pin object, which must have set
