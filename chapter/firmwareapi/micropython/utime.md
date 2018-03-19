@@ -56,7 +56,7 @@ Just like ``ticks_ms`` above, but in microseconds.
 
 #####<function>utime.ticks_cpu()</function>
 
-Similar to ``ticks_ms`` and ``ticks_us``, but with higher resolution (25 ns).
+Same as ``ticks_us`` but faster.
 
 #####<function>utime.ticks_diff(old, new)</function>
 
