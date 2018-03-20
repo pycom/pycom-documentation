@@ -116,7 +116,18 @@ The parameters are:
 
 In the case of <constant>LoRa.OTAA</constant> the authentication tuple is:
 (``dev_eui``, ``app_eui``, ``app_key``) where ``dev_eui`` is optional. If it is
-not provided the LoRa MAC will be used.
+not provided the LoRa MAC will be used. Therefore, you can do OTAA in 2 different ways:
+
+```python
+lora.join(activation=LoRa.OTAA, auth=(app_eui, app_key), timeout=0)             # the device MAC address is used as DEV_EUI
+```
+
+or
+
+```python
+lora.join(activation=LoRa.OTAA, auth=(dev_eui, app_eui, app_key), timeout=0)     # a custom DEV_EUI is specified
+```
+
 
 Example:
 
