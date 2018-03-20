@@ -1,6 +1,6 @@
 # Modbus Protocol
 
-Modbus is a messaging protocol that defines the packet sructure for transferring data between devices in a master/slave architecure. The protocol is independent of the transmission medium and is usually transmissed over TCP (MODBUS TCP) or over serial communication (MODBUS RTU). Modbus is intended to be a request/reply protocol and delivers services specified by function codes. The function code in the request tells the addressed slave what kind of action to perform. The function codes most commonly supported by devices are listed below. 
+Modbus is a messaging protocol that defines the packet structure for transferring data between devices in a master/slave architecure. The protocol is independent of the transmission medium and is usually transmitted over TCP (MODBUS TCP) or serial communication (MODBUS RTU). Modbus is intended as a request/reply protocol and delivers services specified by function codes. The function code in the request tells the addressed slave what kind of action to perform. The function codes most commonly supported by devices are listed below. 
 
 | Function Name            | Function Code |
 | :----------------------  | :-----------: |
@@ -22,7 +22,7 @@ Python libraries and sample code that support Modbus TCP and Modbus RTU are avai
 
 ### Read Coils
 
-This function code requests the status (ON/OFF) of discrete coils in a remote device. The slave device address, the address of the first coil and the number of coils must be specified in the request. The address of the first coil is 0 and a maximum of 2000 contiguous coils can be read. Python sample code is shown below.
+This function code requests the status (ON/OFF) of discrete coils on a remote device. The slave device address, the address of the first coil and the number of coils must be specified in the request. The address of the first coil is 0 and a maximum of 2000 contiguous coils can be read. Python sample code is shown below.
 
 ```python
 slave_addr=0x0A
@@ -35,7 +35,7 @@ print('Coil status: ' + ' '.join('{:d}'.format(x) for x in coil_status))
 
 ### Read Discrete Inputs
 
-This command is used to read the status (ON/OFF) of discrete inputs in a remote device. The slave address, the address of the first input, and the quantity of inputs to read must be specified. The address of the first input is 0 and a maximum of 2000 contigous inputs can be read. Python sample code is shown below.
+This command is used to read the status (ON/OFF) of discrete inputs on a remote device. The slave address, the address of the first input, and the quantity of inputs to be read must be specified. The address of the first input is 0 and a maximum of 2000 contigous inputs can be read. The Python sample code is shown below.
 
 ```python
 slave_addr=0x0A
@@ -48,7 +48,7 @@ print('Input status: ' + ' '.join('{:d}'.format(x) for x in input_status))
 
 ### Read Holding Registers
 
-This function code is used to read the contents of analogue output holding registers. The slave address, the starting register address, the number of registers to read and the signess of the data must be specified. Register addresses start at 0 and a maximum of 125 contigous registers can be read. 
+This function code is used to read the contents of analogue output holding registers. The slave address, the starting register address, the number of registers to read and the sign of the data must be specified. Register addresses start at 0 and a maximum of 125 contigous registers can be read. 
 
 ```python
 slave_addr=0x0A
@@ -62,7 +62,7 @@ print('Holding register value: ' + ' '.join('{:d}'.format(x) for x in register_v
 
 ### Read Input Registers
 
-This command is used to read up to 125 contigous input registers in a remote device. The slave address, the starting register address, the number of input registers and the signess of the data must be specified. The address of the first input registers is 0.
+This command is used to read up to 125 contigous input registers on a remote device. The slave address, the starting register address, the number of input registers and the sign of the data must be specified. The address of the first input registers is 0.
 
 ```python
 slave_addr=0x0A
@@ -76,7 +76,7 @@ print('Input register value: ' + ' '.join('{:d}'.format(x) for x in register_val
 
 ### Write Single Coil
 
-This function code is used to write the state of a dicrete coil in a remote device. A value of 0xFF00 means the coil should be set to ON, while a value of 0x0000 means the coil should be set to OFF. Python sample code to set the coil at address 0x00, to an ON state is shown below. 
+This function code is used to write the state of a discrete coil on a remote device. A value of 0xFF00 means the coil should be set to ON, while a value of 0x0000 means the coil should be set to OFF. The Python sample code to set the coil at address 0x00, to an ON state is shown below. 
 
 ```python
 slave_addr=0x0A
@@ -90,7 +90,7 @@ print('Writing single coil status: ' + output_flag)
 
 ### Write Single Register
 
-This command is used to write the contents of an analog output holding register in a remote device. The slave address, the register address, the register value and the signess of the data must be specified. As for all the other commands, the register addresses start from 0.
+This command is used to write the contents of an analog output holding register on a remote device. The slave address, the register address, the register value and the signess of the data must be specified. As for all the other commands, the register addresses start from 0.
 
 ```python
 slave_addr=0x0A
@@ -119,7 +119,7 @@ print('Writing multiple coil status: ' + output_flag)
 
 ### Write Multiple Registers
 
-This command is used to write the contents of a contigous sequence of analogue registers in a remote device. The slave address, the starting register address, the register values and the signess of the data must be specified. The address of the first register is 0 and a maximum of 125 register values can be written. Python sample code is shown below.
+This command is used to write the contents of a contigous sequence of analogue registers on a remote device. The slave address, the starting register address, the register values and the signess of the data must be specified. The address of the first register is 0 and a maximum of 125 register values can be written. The Python sample code is shown below.
 
 ```python
 slave_addr=0x0A
