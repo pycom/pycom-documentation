@@ -1,8 +1,8 @@
 # Development Modules Datasheets
-  * [8.1.1 WiPy 2.0](ref://chapter/datasheets/downloads/wipy2-specsheet.pdf)
-  * [8.1.2 WiPy 3.0](ref://chapter/datasheets/downloads/wipy3-specsheet.pdf)
-  * [8.1.3 LoPy](ref://chapter/datasheets/downloads/lopy-specsheet.pdf)
-  * [8.1.4 LoPy 4](ref://chapter/datasheets/downloads/lopy4-specsheet.pdf)
-  * [8.1.5 SiPy](ref://chapter/datasheets/downloads/sipy-specsheet.pdf)
-  * [8.1.6 GPy](ref://chapter/datasheets/downloads/gpy-specsheet.pdf)
-  * [8.1.7 FiPy](ref://chapter/datasheets/downloads/fipy-specsheet.pdf)
+<a href="../downloads/wipy2-specsheet.pdf" target="_blank">• 8.1.1 WiPy 2.0</a><br>
+<a href="../downloads/wipy3-specsheet.pdf" target="_blank">• 8.1.2 WiPy 3.0</a><br>
+<a href="../downloads/lopy-specsheet.pdf" target="_blank">• 8.1.3 LoPy</a><br>
+<a href="../downloads/lopy4-specsheet.pdf" target="_blank">• 8.1.4 LoPy 4</a><br>
+<a href="../downloads/sipy-specsheet.pdf" target="_blank">• 8.1.5 SiPy</a><br>
+<a href="../downloads/gpy-specsheet.pdf" target="_blank">• 8.1.6 GPy</a><br>
+<a href="../downloads/fipy-specsheet.pdf" target="_blank">• 8.1.7 FiPy</a><br>
