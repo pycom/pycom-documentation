@@ -141,49 +141,67 @@
   * [6.3.19 \_thread](chapter/firmwareapi/micropython/_thread.md)
   * [6.3.20 Builtin](chapter/firmwareapi/micropython/builtin.md)
 
-## 7. Datasheets
+## 7. Product Info
 
-* [7.1 Introduction](chapter/datasheets/README.md)
-* [7.2 Development Modules](chapter/datasheets/development/README.md)
-  * [7.2.1 WiPy 2.0](chapter/datasheets/development/wipy2.md)
-  * [7.2.2 WiPy 3.0](chapter/datasheets/development/wipy3.md)
-  * [7.2.3 LoPy](chapter/datasheets/development/lopy.md)
-  * [7.2.4 LoPy 4](chapter/datasheets/development/lopy4.md)
-  * [7.2.5 SiPy](chapter/datasheets/development/sipy.md)
-  * [7.2.6 GPy](chapter/datasheets/development/gpy.md)
-  * [7.2.7 FiPy](chapter/datasheets/development/fipy.md)
-* [7.3 OEM Modules](chapter/datasheets/oem/README.md)
-  * [7.3.1 W01](chapter/datasheets/oem/w01.md)
-  * [7.3.2 L01](chapter/datasheets/oem/l01.md)
-  * [7.3.3 L04](chapter/datasheets/oem/l04.md)
-  * [7.3.4 G01](chapter/datasheets/oem/g01.md)
-  * [7.3.5 L01 OEM Baseboard Reference](chapter/datasheets/oem/l01_reference.md)
-  * [7.3.6 Universal OEM Baseboard Reference](chapter/datasheets/oem/universal_reference.md)
-* [7.4 Expansion Boards and Shields](chapter/datasheets/boards/README.md)
-  * [7.4.1 Expansion Board](chapter/datasheets/boards/expansion.md)
-  * [7.4.2 Pytrack](chapter/datasheets/boards/pytrack.md)
-  * [7.4.3 Pysense](chapter/datasheets/boards/pysense.md)
-  * [7.4.4 Deep Sleep Shield](chapter/datasheets/boards/deepsleep.md)
-    * [7.4.4.1 Deep Sleep API](chapter/datasheets/boards/deepsleep/api.md)
-* [7.5 Notes](chapter/datasheets/notes/README.md)
+* [7.1 Development Modules](chapter/datasheets/development/README.md)
+  * [7.1.1 WiPy 2.0](chapter/datasheets/development/wipy2.md)
+  * [7.1.2 WiPy 3.0](chapter/datasheets/development/wipy3.md)
+  * [7.1.3 LoPy](chapter/datasheets/development/lopy.md)
+  * [7.1.4 LoPy 4](chapter/datasheets/development/lopy4.md)
+  * [7.1.5 SiPy](chapter/datasheets/development/sipy.md)
+  * [7.1.6 GPy](chapter/datasheets/development/gpy.md)
+  * [7.1.7 FiPy](chapter/datasheets/development/fipy.md)
+* [7.2 OEM Modules](chapter/datasheets/oem/README.md)
+  * [7.2.1 W01](chapter/datasheets/oem/w01.md)
+  * [7.2.2 L01](chapter/datasheets/oem/l01.md)
+  * [7.2.3 L04](chapter/datasheets/oem/l04.md)
+  * [7.2.4 G01](chapter/datasheets/oem/g01.md)
+  * [7.2.5 L01 OEM Baseboard Reference](chapter/datasheets/oem/l01_reference.md)
+  * [7.2.6 Universal OEM Baseboard Reference](chapter/datasheets/oem/universal_reference.md)
+* [7.3 Expansion Boards and Shields](chapter/datasheets/boards/README.md)
+  * [7.3.1 Expansion Board 2.0](chapter/datasheets/boards/expansion.md)
+  * [7.3.2 Pytrack](chapter/datasheets/boards/pytrack.md)
+  * [7.3.3 Pysense](chapter/datasheets/boards/pysense.md)
+  * [7.3.4 Deep Sleep Shield](chapter/datasheets/boards/deepsleep.md)
+    * [7.3.4.1 Deep Sleep API](chapter/datasheets/boards/deepsleep/api.md)
+* [7.4 Notes](chapter/datasheets/notes/README.md)
 
-## 8. Pybytes Beta
+## 8. Datasheets
+* [8.1 Development Modules](chapter/datasheets/index_pages/modules.md)
+  * [8.1.1 WiPy 2.0](ref://chapter/datasheets/downloads/wipy2-specsheet.pdf)
+  * [8.1.2 WiPy 3.0](ref://chapter/datasheets/downloads/wipy3-specsheet.pdf)
+  * [8.1.3 LoPy](ref://chapter/datasheets/downloads/lopy-specsheet.pdf)
+  * [8.1.4 LoPy 4](ref://chapter/datasheets/downloads/lopy4-specsheet.pdf)
+  * [8.1.5 SiPy](ref://chapter/datasheets/downloads/sipy-specsheet.pdf)
+  * [8.1.6 GPy](ref://chapter/datasheets/downloads/gpy-specsheet.pdf)
+  * [8.1.7 FiPy](ref://chapter/datasheets/downloads/fipy-specsheet.pdf)
+* [8.2 OEM Modules](chapter/datasheets/index_pages/oem.md)
+  * [8.2.1 W01](ref://chapter/datasheets/downloads/w01-specsheet.pdf)
+  * [8.2.2 L01](ref://chapter/datasheets/downloads/l01-specsheet.pdf)
+  * [8.2.3 L04](ref://chapter/datasheets/downloads/l04-specsheet.pdf)
+  * [8.2.4 G01](ref://chapter/datasheets/downloads/g01-specsheet.pdf)
+* [8.3 Expansion Boards and Shields](chapter/datasheets/index_pages/boards.md)
+  * [8.3.1 Expansion Board 2.0](ref://chapter/datasheets/downloads/expansion-specsheet.pdf)
+  * [8.3.2 Pytrack](ref://chapter/datasheets/downloads/pytrack-specsheet.pdf)
+  * [8.3.3 Pysense](ref://chapter/datasheets/downloads/pysense-specsheet.pdf)
 
-* [8.1 Introduction](chapter/pybytes/README.md)
-* [8.2 Adding device quickly](chapter/pybytes/quick-add-device.md)
-* [8.3 Adding device by flashing Pybytes library](chapter/pybytes/add-device.md)
+## 9. Pybytes Beta
 
-## 9. Documentation Notes
+* [9.1 Introduction](chapter/pybytes/README.md)
+* [9.2 Adding device quickly](chapter/pybytes/quick-add-device.md)
+* [9.3 Adding device by flashing Pybytes library](chapter/pybytes/add-device.md)
 
-* [9.1 Introduction](chapter/docnotes/README.md)
-* [9.2 Syntax](chapter/docnotes/syntax.md)
-* [9.3 REPL vs Scripts](chapter/docnotes/replscript.md)
+## 10. Documentation Notes
 
-## 10. Advanced Topics
+* [10.1 Introduction](chapter/docnotes/README.md)
+* [10.2 Syntax](chapter/docnotes/syntax.md)
+* [10.3 REPL vs Scripts](chapter/docnotes/replscript.md)
 
-* [10.1 Firmware Downgrade](chapter/advance/downgrade.md)
-* [10.2 CLI Updater](chapter/advance/cli.md)
+## 11. Advanced Topics
 
-## 11. License
+* [11.1 Firmware Downgrade](chapter/advance/downgrade.md)
+* [11.2 CLI Updater](chapter/advance/cli.md)
 
-* [11.1 License](chapter/license/README.md)
+## 12. License
+
+* [12.1 License](chapter/license/README.md)
