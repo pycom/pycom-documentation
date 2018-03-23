@@ -8,23 +8,23 @@ To use this library, please upload the associated [Deep Sleep Library](https://g
 
 ```python
 from deepsleep import DeepSleep
- 
+
 ds = DeepSleep()
- 
+
 # get the wake reason and the value of the pins during wake up
 wake_s = ds.get_wake_status()
 print(wake_s)
- 
-if wake_s['wake'] == deepsleep.PIN_WAKE:
+
+if wake_s['wake'] == DeepSleep.PIN_WAKE:
     print("Pin wake up")
-elif wake_s['wake'] == deepsleep.TIMER_WAKE:
+elif wake_s['wake'] == DeepSleep.TIMER_WAKE:
     print("Timer wake up")
 else:  # deepsleep.POWER_ON_WAKE:
     print("Power ON reset")
- 
+
 ds.enable_pullups('P17')  # can also do ds.enable_pullups(['P17', 'P18'])
 ds.enable_wake_on_fall('P17') # can also do ds.enable_wake_on_fall(['P17', 'P18'])
- 
+
 ds.go_to_sleep(60)  # go to sleep for 60 seconds
 ```
 
@@ -46,7 +46,7 @@ ds = DeepSleep()
 
 #####<function>deepsleep.enable_auto_poweroff()</function>
 
-This method allows for a critical battery voltage to be set. For example, if the external power source (e.g. LiPo Cell) falls below 3.3V, turn off the Pycom Device. This is intended to protect the hardware from under voltage. 
+This method allows for a critical battery voltage to be set. For example, if the external power source (e.g. LiPo Cell) falls below 3.3V, turn off the Pycom Device. This is intended to protect the hardware from under voltage.
 
 #####<function>deepsleep.enable_pullups(pins)</function>
 
