@@ -1,6 +1,6 @@
 # Development Modules Datasheets
 <a href="../downloads/wipy2-specsheet.pdf" target="_blank">• 8.1.1 WiPy 2.0</a><br>
-<a href="../downloads/wipy3-specsheet.pdf" target="_blank">• 8.1.2 WiPy 3.0</a><br>
+<a href="https://pycom.io/wp-content/uploads/2018/03/Pycom_Specsheet_WiPy3.0.pdf" target="_blank">• 8.1.2 WiPy 3.0</a><br>
 <a href="../downloads/lopy-specsheet.pdf" target="_blank">• 8.1.3 LoPy</a><br>
 <a href="../downloads/lopy4-specsheet.pdf" target="_blank">• 8.1.4 LoPy 4</a><br>
 <a href="../downloads/sipy-specsheet.pdf" target="_blank">• 8.1.5 SiPy</a><br>
