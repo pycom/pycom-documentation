@@ -43,7 +43,7 @@ The WLAN constructor is special in the sense that if no arguments besides the id
 
 ### Methods
 
-#####<function>wlan.init(mode, * , ssid=None, auth=None, channel=1, antenna=None, power_save=False)</function>
+#####<function>wlan.init(mode, * , ssid=None, auth=None, channel=1, antenna=None, power_save=False, hidden=False)</function>
 
 Set or get the WiFi network processor configuration.
 
@@ -59,6 +59,7 @@ With our development boards it defaults to using the internal antenna, but in
 the case of an OEM module, the antenna pin (P12) is not used, so it’s free to be
 used for other things.
 - ``power_save`` enables or disables power save functions in STA mode.
+- ``hidden`` only valid in <constant>WLAN.AP</constant> mode to create an access point with a hidden SSID when set to ``True``.
 
 For example, you can do:
 
