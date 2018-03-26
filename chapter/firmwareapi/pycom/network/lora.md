@@ -19,9 +19,9 @@ import struct
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 # create an ABP authentication params
-dev_addr = struct.unpack(">l", binascii.unhexlify('00 00 00 05'.replace(' ','')))[0]
-nwk_swkey = binascii.unhexlify('2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C'.replace(' ',''))
-app_swkey = binascii.unhexlify('2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C'.replace(' ',''))
+dev_addr = struct.unpack(">l", binascii.unhexlify('00000005'))[0]
+nwk_swkey = binascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
+app_swkey = binascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
 
 # join a network using ABP (Activation By Personalization)
 lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))
@@ -146,8 +146,8 @@ import binascii
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 # create an OTAA authentication parameters
-app_eui = binascii.unhexlify('AD A4 DA E3 AC 12 67 6B'.replace(' ',''))
-app_key = binascii.unhexlify('11 B0 28 2A 18 9B 75 B0 B4 D2 D8 C7 FA 38 54 8B'.replace(' ',''))
+app_eui = binascii.unhexlify('ADA4DAE3AC12676B')
+app_key = binascii.unhexlify('11B0282A189B75B0B4D2D8C7FA38548B')
 
 # join a network using OTAA (Over the Air Activation)
 lora.join(activation=LoRa.OTAA, auth=(app_eui, app_key), timeout=0)
@@ -176,9 +176,9 @@ import struct
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 # create an ABP authentication params
-dev_addr = struct.unpack(">l", binascii.unhexlify('00 00 00 05'.replace(' ','')))[0]
-nwk_swkey = binascii.unhexlify('2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C'.replace(' ',''))
-app_swkey = binascii.unhexlify('2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C'.replace(' ',''))
+dev_addr = struct.unpack(">l", binascii.unhexlify('00000005'))[0]
+nwk_swkey = binascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
+app_swkey = binascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
 
 # join a network using ABP (Activation By Personalization)
 lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))

@@ -60,7 +60,7 @@ The Gateway ID is generated in the script using the process described above.
 
 ```python
 """ LoPy LoRaWAN Nano Gateway configuration options """
-  
+
 import machine
 import ubinascii
 
@@ -394,9 +394,9 @@ import time
 lora = LoRa(mode=LoRa.LORAWAN)
 
 # create an OTA authentication params
-dev_eui = binascii.unhexlify('AA BB CC DD EE FF 77 78'.replace(' ','')) # these settings can be found from TTN
-app_eui = binascii.unhexlify('70 B3 D5 7E F0 00 3B FD'.replace(' ','')) # these settings can be found from TTN
-app_key = binascii.unhexlify('36 AB 76 25 FE 77 77 68 81 68 3B 49 53 00 FF D6'.replace(' ','')) # these settings can be found from TTN
+dev_eui = binascii.unhexlify('AABBCCDDEEFF7778') # these settings can be found from TTN
+app_eui = binascii.unhexlify('70B3D57EF0003BFD') # these settings can be found from TTN
+app_key = binascii.unhexlify('36AB7625FE77776881683B495300FFD6') # these settings can be found from TTN
 
 # set the 3 default channels to the same frequency (must be before sending the OTAA join request)
 lora.add_channel(0, frequency=868100000, dr_min=0, dr_max=5)
@@ -456,9 +456,9 @@ import time
 lora = LoRa(mode=LoRa.LORAWAN)
 
 # create an ABP authentication params
-dev_addr = struct.unpack(">l", binascii.unhexlify('26 01 14 7D'.replace(' ','')))[0] # these settings can be found from TTN
-nwk_swkey = binascii.unhexlify('3C74F4F40CAE2221303BC24284FCF3AF'.replace(' ','')) # these settings can be found from TTN
-app_swkey = binascii.unhexlify('0FFA7072CC6FF69A102A0F39BEB0880F'.replace(' ','')) # these settings can be found from TTN
+dev_addr = struct.unpack(">l", binascii.unhexlify('2601147D'))[0] # these settings can be found from TTN
+nwk_swkey = binascii.unhexlify('3C74F4F40CAE2221303BC24284FCF3AF') # these settings can be found from TTN
+app_swkey = binascii.unhexlify('0FFA7072CC6FF69A102A0F39BEB0880F') # these settings can be found from TTN
 
 # join a network using ABP (Activation By Personalization)
 lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))

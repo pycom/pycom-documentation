@@ -18,8 +18,8 @@ import binascii
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 # create an OTAA authentication parameters
-app_eui = binascii.unhexlify('AD A4 DA E3 AC 12 67 6B'.replace(' ',''))
-app_key = binascii.unhexlify('11 B0 28 2A 18 9B 75 B0 B4 D2 D8 C7 FA 38 54 8B'.replace(' ',''))
+app_eui = binascii.unhexlify('ADA4DAE3AC12676B')
+app_key = binascii.unhexlify('11B0282A189B75B0B4D2D8C7FA38548B')
 
 # join a network using OTAA (Over the Air Activation)
 lora.join(activation=LoRa.OTAA, auth=(app_eui, app_key), timeout=0)
