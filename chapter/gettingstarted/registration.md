@@ -4,9 +4,12 @@ Some of our devices require registration before you can utilise specific feature
 
 <p align="center"><img src ="../../../img/sigfox-logo.png" width="150"></p>
 
-- SiPy ([Sigfox Activation](../tutorials/sigfox/register.md))
+- SiPy/LoPy4/FiPy - ([Sigfox Activation](../tutorials/sigfox/register.md))
+- GPy/Fipy - To use the cellular features of these modules you require a nano
+sim capable of LTE CAT-M1 or NB-IoT. You can find a map of deployed networks
+and open labs, [here.](https://www.gsma.com/iot/deployment-map/#deployments)
 
 
 {% hint style='info' %}
-**Not all Pycom devices require activation**; most features work immediately out of the box! Currently the registration/activation only applies to the SiPy, in order to connect it to the Sigfox Network.
+**Not all Pycom devices require activation**; most features work immediately out of the box!
 {% endhint %}
