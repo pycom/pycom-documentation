@@ -201,6 +201,7 @@
 
 * [11.1 Firmware Downgrade](chapter/advance/downgrade.md)
 * [11.2 CLI Updater](chapter/advance/cli.md)
+* [11.3 SecureBoot and Encryption](chapter/advance/encryption.md)
 
 ## 12. License
 
