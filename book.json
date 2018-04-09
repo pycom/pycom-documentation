@@ -1,5 +1,5 @@
 {
-	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","simpletabs", "meta-single", "analytics", "anchors", "otherlink"],
+	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","simpletabs", "meta-single", "analytics", "anchors", "otherlink", "header"],
 	"pluginsConfig": {
 		"fontsettings": {
 			"theme": "white",
@@ -24,6 +24,9 @@
 		},
     "analytics": {
         "google": "UA-72107804-3"
+    },
+    "layout": {
+      "headerPath" : "alexa.html"
     }
 	},
 	"styles": {
