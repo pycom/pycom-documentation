@@ -159,5 +159,5 @@ Selects the pin mode.
 
 Enables the pull up or pull down resistor.
 
-### Releated
+### Related
 #####<function>pycom.pulses_get(pin, timeout)</function> see [here](pycom.html#pycompulsesgetpin-timeout)
