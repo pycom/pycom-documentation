@@ -16,7 +16,7 @@ modem.
 pointing towards the USB connector. It should firmly click into place and the
 pins should now no longer be visible.
 
-<p align="center"><img src ="../img/Expansion_Board_2_{{ module }}.png" height="400"></p>
+<p align="center"><img src ="../img/Expansion_Board_2_{{ module }}.png" style="max-height: 400px;"></p>
 
 {% content "exp3" %}
 - Before connecting your module to a expansion board 3.0, you should update
@@ -34,7 +34,7 @@ modem.
 pointing towards the USB connector. It should firmly click into place and the
 pins should now no longer be visible.
 
-<p align="center"><img src ="../img/Expansion_Board_{{ module }}.png" height="400"></p>
+<p align="center"><img src ="../img/Expansion_Board_3_{{ module }}.png" style="max-height: 400px;"></p>
 
 
 {% content "pic" %}
@@ -48,7 +48,7 @@ the board, next to the LED).
 towards the USB connector. It should firmly click into place and the pins
  should now no longer be visible.
 
-<p align="center"><img src ="../img/Pysense_{{ module }}.png" height="400"></p>
+<p align="center"><img src ="../img/Pysense_{{ module }}.png" style="max-height: 400px;"></p>
 
 Once you have completed the above steps successfully you should see the on-board
 LED blinking blue. This indicates the device is powered up and running.
@@ -63,7 +63,7 @@ the `3.3v` supply pin, this will damage the regulator.
 firmware you will need to connect `P2` to `GND`. We recommend you connect a
 button between the two to make this simpler.
 
-<p align="center"><img src ="../img/uart_{{ module }}.png"></p>
+<p align="center"><img src ="../img/UART_{{ module }}.png" style="max-height: 400px;"></p>
 
 {% content "wifi" %}
 
@@ -72,7 +72,7 @@ It is possible to lock yourself out of the device, requiring a USB connection.
 
  - In order to access the {{module}} via WiFi you only need to provide `3.5v` - `5.5v` on
 the `Vin` pin of the {{ module }}:
-<p align="center"><img src ="../img/wifi_power.png"></p>
+<p align="center"><img src ="../img/Bare_{{module}}.png" style="max-height: 400px;"></p>
 
 - By default, when the {{module}} boots, it will create a WiFi access point with
 the following credentials:
@@ -125,13 +125,13 @@ different from the LoPy.
 using the U.FL connector on the same side of the {{ module }} as the LED.
 {% endif %}
 
-<p align="center"><img src ="../img/Expansion_Board_{{ module }}_pigtail.png" height="400"></p>
+<p align="center"><img src ="../img/{{comm | replace("/", "_")}}_pigtail_{{module}}.png" style="max-height: 400px;"></p>
 
 - If you are using a pycase, you will next need to put the SMA connector through
 the antenna hole, ensuring you align the flat edge correctly, and screw down the
 connector using the provided nut.
 - Finally you will need to screw on the antenna to the SMA connector.
-<p align="center"><img src ="../img/Expansion_Board_{{ module }}_antenna.png" height="400"></p>
+<p align="center"><img src ="../img/{{comm | replace("/", "_")}}_pigtail_ANT_{{module}}.png" style="max-height: 400px;"></p>
 {% endif %}
 
 {% if module=="GPy" or module=="FiPy" %}
@@ -145,10 +145,10 @@ connector on the
 {% if module=="GPy" %} same side of the {{ module }} as the LED.
 {% else %} under side of the {{ module }}.
 {% endif %}
-
+<p align="center"><img src ="../img/LTE_ANT_{{module}}.png" style="max-height: 400px;"></p>
 {% endif %}
 
-### WiFi (optional)
+### WiFi/Bluetooth (optional)
 All pycom modules, including the {{ module }}, come with a on-board WiFi antenna
 as well as a U.FL connector for an external antenna. The external antenna is
 optional and only required if you need better performance or are mounting the
@@ -156,7 +156,7 @@ optional and only required if you need better performance or are mounting the
 the antennas is done via software, instructions for this can be found
 [here.](../../firmwareapi/pycom/network/wlan.md)
 
-INSERT PHOTO
+<p align="center"><img src ="../img/WiFI_pigtail_ANT_{{module}}.png" style="max-height: 400px;"></p>
 
 {% if module=="GPy" or module=="FiPy" %}
 ## SIM card
@@ -166,7 +166,7 @@ that the {{ module }} does not support regular LTE connectivity and you may
 require a special SIM. It is best to contact your local cellular providers for
 more information on acquiring a LTE CAT-M1/NB-IoT enabled nano SIM.
 
-<p align="center"><img src ="../img/{{ module }}_sim.png"></p>
+<p align="center"><img src ="../img/SIM_{{ module }}.png"></p>
 
 {% endif %}
 {% if module=="LoPy" or module=="SiPy" or module=="WiPy" %}

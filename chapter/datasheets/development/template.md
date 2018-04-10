@@ -35,8 +35,13 @@ and I2C (SDA,SCL) are defaults and can be changed in Software.
 {% endif %}
 
 ## Datasheet
-The datasheet of the {{module}} is available as a
-<a href="../downloads/{{module | lower}}-{{module}}.pdf" target="_blank">PDF File</a>.
+The datasheet of the {{module}} is available as a {% if module=="WiPy2" %}
+<a href="https://pycom.io/wp-content/uploads/2018/03/Pycom_Specsheet_WiPy2.0.pdf" target="_blank">PDF File</a>.
+{% elif module=="WiPy3" %}
+<a href="https://pycom.io/wp-content/uploads/2018/03/Pycom_Specsheet_WiPy3.0.pdf" target="_blank">PDF File</a>.
+{% else %}
+<a href="https://pycom.io/wp-content/uploads/2018/03/Pycom_Specsheet_{{module}}.pdf" target="_blank">PDF File</a>.
+{% endif %}
 
 ## Notes
 

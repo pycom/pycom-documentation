@@ -19,4 +19,5 @@ There are a number of useful shortcuts for interacting with the MicroPython REPL
 - ``Ctrl-C`` cancels any input, or interrupts the currently running code.
 - ``Ctrl-D`` on a blank line will do a soft reset.
 - ``Ctrl-E`` enters ‘paste mode’ that allows you to copy and paste chunks of text. Exit this mode using ``Ctrl-D``.
+- ``Ctrl-F`` performs a "safe-boot" of the device that prevents `boot.py` and `main.py` from executing
 {% endhint %}

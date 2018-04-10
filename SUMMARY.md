@@ -7,33 +7,33 @@
 
 ## 1. Getting Started
 
-* [1.1 Introduction](chapter/gettingstarted/README.md)
-* [1.2 Hardware Setup](chapter/gettingstarted/hardwaresetup.md)
-  * [1.2.1 LoPy](chapter/gettingstarted/connection/lopy.md)
-  * [1.2.2 LoPy4](chapter/gettingstarted/connection/lopy4.md)
-  * [1.2.1 SiPy](chapter/gettingstarted/connection/sipy.md)
-  * [1.2.1 GPy](chapter/gettingstarted/connection/gpy.md)
-  * [1.2.1 FiPy](chapter/gettingstarted/connection/fipy.md)
-  * [1.2.1 WiPy](chapter/gettingstarted/connection/wipy.md)
-* [1.3 Software](chapter/gettingstarted/installingsoftware.md)
-  * [1.3.1 Drivers](chapter/gettingstarted/installation/drivers.md)
-  * [1.3.2 Updating Firmware](chapter/gettingstarted/installation/firmwaretool.md)
-  * [1.3.3 Pymakr](chapter/gettingstarted/installation/pymakr.md)
-* [1.4 Programming the modules](chapter/gettingstarted/programming.md)
-  * [1.4.1 Introduction to MicroPython](chapter/gettingstarted/programming/micropython.md)
-  * [1.4.2 MicroPython Examples](chapter/gettingstarted/programming/examples.md)
-  * [1.4.3 Your first Pymakr project](chapter/gettingstarted/programming/first_project.md)
-  * [1.4.4 REPL](chapter/gettingstarted/programming/repl/README.md)
-    * [1.4.4.1 Serial USB](chapter/gettingstarted/programming/repl/serial.md)
-    * [1.4.4.2 Telnet](chapter/gettingstarted/programming/repl/telnet.md)
-  * [1.4.5 FTP](chapter/gettingstarted/programming/FTP.md)
-  * [1.4.6 Safe boot](chapter/gettingstarted/programming/safeboot.md)
-* [1.5 Device Registration](chapter/gettingstarted/registration.md)
-  * [1.5.1 Sigfox](chapter/gettingstarted/registration/sigfox.md)
-  * [1.5.2 Cellular](chapter/gettingstarted/registration/cellular.md)
-  * [1.5.3 LoRaWAN](chapter/gettingstarted/registration/lora.md)
-    * [1.5.3.2 The Things Network](chapter/gettingstarted/registration/lora/ttn.md)
-    * [1.5.3.2 Objenious](chapter/gettingstarted/registration/lora/objenious.md)
+* [1.0 Introduction](chapter/gettingstarted/README.md)
+* [1.1 Hardware Setup](chapter/gettingstarted/hardwaresetup.md)
+  * [1.1.1 LoPy](chapter/gettingstarted/connection/lopy.md)
+  * [1.1.2 LoPy4](chapter/gettingstarted/connection/lopy4.md)
+  * [1.1.1 SiPy](chapter/gettingstarted/connection/sipy.md)
+  * [1.1.1 GPy](chapter/gettingstarted/connection/gpy.md)
+  * [1.1.1 FiPy](chapter/gettingstarted/connection/fipy.md)
+  * [1.1.1 WiPy](chapter/gettingstarted/connection/wipy.md)
+* [1.2 Software](chapter/gettingstarted/installingsoftware.md)
+  * [1.2.1 Drivers](chapter/gettingstarted/installation/drivers.md)
+  * [1.2.2 Updating Firmware](chapter/gettingstarted/installation/firmwaretool.md)
+  * [1.2.3 Pymakr](chapter/gettingstarted/installation/pymakr.md)
+* [1.3 Programming the modules](chapter/gettingstarted/programming.md)
+  * [1.3.1 Introduction to MicroPython](chapter/gettingstarted/programming/micropython.md)
+  * [1.3.2 MicroPython Examples](chapter/gettingstarted/programming/examples.md)
+  * [1.3.3 Your first Pymakr project](chapter/gettingstarted/programming/first_project.md)
+  * [1.3.4 REPL](chapter/gettingstarted/programming/repl/README.md)
+    * [1.3.4.1 Serial USB](chapter/gettingstarted/programming/repl/serial.md)
+    * [1.3.4.2 Telnet](chapter/gettingstarted/programming/repl/telnet.md)
+  * [1.3.5 FTP](chapter/gettingstarted/programming/FTP.md)
+  * [1.3.6 Safe boot](chapter/gettingstarted/programming/safeboot.md)
+* [1.4 Device Registration](chapter/gettingstarted/registration.md)
+  * [1.4.1 Sigfox](chapter/gettingstarted/registration/sigfox.md)
+  * [1.4.2 Cellular](chapter/gettingstarted/registration/cellular.md)
+  * [1.4.3 LoRaWAN](chapter/gettingstarted/registration/lora.md)
+    * [1.4.3.2 The Things Network](chapter/gettingstarted/registration/lora/ttn.md)
+    * [1.4.3.2 Objenious](chapter/gettingstarted/registration/lora/objenious.md)
 
 ## 3. Pymakr Plugin
 
@@ -149,12 +149,8 @@
   * [6.3.19 \_thread](chapter/firmwareapi/micropython/_thread.md)
   * [6.3.20 Builtin](chapter/firmwareapi/micropython/builtin.md)
 
-<<<<<<< HEAD
 ## 7. Product Info
-
-=======
-## 7. Datasheets
->>>>>>> Removed product section introduction
+* [7.0 Introduction](chapter/datasheets/README.md)
 * [7.1 Development Modules](chapter/datasheets/development/README.md)
   * [7.1.1 WiPy 2.0](chapter/datasheets/development/wipy2.md)
   * [7.1.2 WiPy 3.0](chapter/datasheets/development/wipy3.md)

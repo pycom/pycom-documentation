@@ -18,7 +18,7 @@ Previous versions of firmware are available for download on the
 The basic firmware upgrade procedure can be found below, please follow these
 steps carefully:
 
-{% tabs first="Expansion Board 2.0", second="Pysense/Pytrack" %}
+{% tabs first="Expansion Board 2.0", second="Pysense/Pytrack/Pyscan/Expansion Board 3.0" %}
 
 {% content "first" %}
 
@@ -38,12 +38,14 @@ transport. Without these jumpers, the updater will fail.
 
 {% content "second" %}
 
-When using a Pysense/Pytrack to update your module you are not required to make
-a connection between P2 and GND, the Pysense/Pytrack will do this automatically.
+When using a Pysense/Pytrack/Pyscan/Expansion Board 3.0 to update your module
+you are not required to make a connection between P2 and GND, the
+Pysense/Pytrack/Pyscan/Expansion Board 3.0 will do this automatically.
 
-1. Before connecting your module to a Pysense/Pytrack board, you should update
-   the firmware on the Pysense/Pytrack. Instructions on how to do this can be
-   found [here](../../pytrackpysense/installation/firmware.md).
+1. Before connecting your module to a Pysense/Pytrack/Pyscan/Expansion Board 3.0
+   board, you should update the firmware on the
+   Pysense/Pytrack/Pyscan/Expansion Board 3.0. Instructions on how to do this
+   can be found [here](../../pytrackpysense/installation/firmware.md).
 2. Disconnect your device from your computer
 3. Insert module into expansion board
 4. Reconnect the board via USB to your computer

@@ -25,6 +25,6 @@ building your projects.
   {% col 1 %}<a href="chapter/firmwareapi/README.md"><p align="center"><img src ="img/APIIcon.png"></p></a>
 {% endgrid %}
 {% grid %}
-  {% col 1 %}<a href="chapter/datasheets/README.md"><p align="center">Product Datasheets</p></a>
+  {% col 1 %}<a href="chapter/datasheets/README.md"><p align="center">Product Info</p></a>
   {% col 1 %}<a href="chapter/firmwareapi/README.md"><p align="center">API Documentation</p></a>
 {% endgrid %}
