@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","simpletabs", "meta-single", "analytics", "anchors", "otherlink", "header"],
-=======
-	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid"],
->>>>>>> WIP
+	"plugins": ["hints","-fontsettings","github", "youtube","search","algolia","simpletabs", "meta-single", "analytics", "anchors", "grid", "otherlink", "header"],
 	"pluginsConfig": {
 		"fontsettings": {
 			"theme": "white",
