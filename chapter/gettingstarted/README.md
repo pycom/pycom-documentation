@@ -1,7 +1,38 @@
-<p align="center"><img src ="../../img/quickstartIcon.png" width="150"></p>
-
 # Getting Started
+So, you've decided to order a Pycom development module. Firstly we would like to
+congratulate you in making an excellent decision. If you haven't yet placed your
+order we highly recommend you check out the [products](../products.md)
+page before you place your order to ensure you know which accessories you might
+require.
 
-Let’s start with a quick description of what to do after you unpack your brand new Pycom Device. The aim of this guide is not to bug you with complex details about it, but instead get you up and running as quickly as possible!
+<p align="center"><img src ="img/getting_started.png" width="500"></p>
 
-This chapter help you with the unboxing of and getting started with your device. If you come across any issues along the way, there is a Troubleshooting section that addresses the common problems. In case you can not find the answer to your issue, you can always ask questions in our [Forum](https://forum.pycom.io).
+##[Step 1: Setting up the hardware](hardwaresetup.md)
+In the first part of this getting started guide, we will take you through
+setting up your device. Firstly we will cover how to connect the module to your
+computer either via USB or WiFi. Secondly we will explain how to connect various
+accessories such as antennas or SIM cards to your module.
+
+##[Step 2: Setting up your computer](installingsoftware.md)
+Now that your module is successfully connected, you will need to install some
+software on your computer to interface with it. The second part of this guide
+will guide you through installing drivers; performing firmware updates for your
+module/accessories to ensure you have the most stable and feature packed version;
+and how to setup the software use to program the device.
+
+##[Step 3: Using your module](programming.md)
+Now that you have a connected module and all the required software installed it
+is time to begin programming your device. This part of the guide will get you
+started with a basic example and point you in the right direction for getting
+your device connected to your chosen network.
+
+##[Step 4: Connecting to a network](registration.md)
+Now that you familiar with programming your device you will no doubt be keen to
+get it connected to one of the advertised wireless networks. This usually
+requires some registration. This step will detail how to get registered and
+connected to various wireless networks.
+
+{% hint style='tip' %}
+You can navigate through this guide using the arrow buttons on the left and right
+of the screen (or at the bottom if you are using mobile).
+{% endhint %}

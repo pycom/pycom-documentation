@@ -7,33 +7,42 @@
 
 ## 1. Getting Started
 
-* [1.1 Introduction](chapter/gettingstarted/README.md)
-* [1.2 Unboxing/Setup](chapter/gettingstarted/unboxing.md)
-* [1.3 Installing Software](chapter/gettingstarted/installingsoftware.md)
-  * [1.3.1 Updating Firmware](chapter/gettingstarted/installation/firmwaretool.md)
-  * [1.3.2 Pymakr Plugin](chapter/gettingstarted/installation/pymakr.md)
+* [1.0 Introduction](chapter/gettingstarted/README.md)
+* [1.1 Hardware Setup](chapter/gettingstarted/hardwaresetup.md)
+  * [1.1.1 LoPy](chapter/gettingstarted/connection/lopy.md)
+  * [1.1.2 LoPy4](chapter/gettingstarted/connection/lopy4.md)
+  * [1.1.1 SiPy](chapter/gettingstarted/connection/sipy.md)
+  * [1.1.1 GPy](chapter/gettingstarted/connection/gpy.md)
+  * [1.1.1 FiPy](chapter/gettingstarted/connection/fipy.md)
+  * [1.1.1 WiPy](chapter/gettingstarted/connection/wipy.md)
+* [1.2 Software](chapter/gettingstarted/installingsoftware.md)
+  * [1.2.1 Drivers](chapter/gettingstarted/installation/drivers.md)
+  * [1.2.2 Updating Firmware](chapter/gettingstarted/installation/firmwaretool.md)
+  * [1.2.3 Pymakr](chapter/gettingstarted/installation/pymakr.md)
+* [1.3 Programming the modules](chapter/gettingstarted/programming.md)
+  * [1.3.1 Introduction to MicroPython](chapter/gettingstarted/programming/micropython.md)
+  * [1.3.2 MicroPython Examples](chapter/gettingstarted/programming/examples.md)
+  * [1.3.3 Your first Pymakr project](chapter/gettingstarted/programming/first_project.md)
+  * [1.3.4 REPL](chapter/gettingstarted/programming/repl/README.md)
+    * [1.3.4.1 Serial USB](chapter/gettingstarted/programming/repl/serial.md)
+    * [1.3.4.2 Telnet](chapter/gettingstarted/programming/repl/telnet.md)
+  * [1.3.5 FTP](chapter/gettingstarted/programming/FTP.md)
+  * [1.3.6 Safe boot](chapter/gettingstarted/programming/safeboot.md)
 * [1.4 Device Registration](chapter/gettingstarted/registration.md)
-* [1.5 Introduction to MicroPython](chapter/gettingstarted/micropython.md)
-  * [1.5.1 Examples](chapter/gettingstarted/micropython/examples.md)
-
-## 2. Tools & Features
-
-* [2.1 Introduction](chapter/toolsandfeatures/README.md)
-* [2.2 Pycom Modules](chapter/toolsandfeatures/pycommodules.md)
-* [2.3 REPL & Uploading Code](chapter/toolsandfeatures/repl/README.md)
-  * [2.3.1 Serial USB](chapter/toolsandfeatures/repl/serial.md)
-  * [2.3.2 Telnet](chapter/toolsandfeatures/repl/telnet.md)
-* [2.4 FTP](chapter/toolsandfeatures/FTP.md)
-* [2.5 Boot Modes](chapter/toolsandfeatures/bootmodes.md)
-* [2.6 Notes](chapter/toolsandfeatures/notes.md)
+  * [1.4.1 Sigfox](chapter/gettingstarted/registration/sigfox.md)
+  * [1.4.2 Cellular](chapter/gettingstarted/registration/cellular.md)
+  * [1.4.3 LoRaWAN](chapter/gettingstarted/registration/lora.md)
+    * [1.4.3.2 The Things Network](chapter/gettingstarted/registration/lora/ttn.md)
+    * [1.4.3.2 Objenious](chapter/gettingstarted/registration/lora/objenious.md)
 
 ## 3. Pymakr Plugin
 
-* [3.1 Introduction](chapter/pymakr/README.md)
-* [3.2 Installation](chapter/pymakr/installation/README.md)
-  * [3.2.1 Atom](chapter/pymakr/installation/atom.md)
-  * [3.2.2 Visual Studio Code](chapter/pymakr/installation/vscode.md)
-* [3.3 Tools/Features](chapter/pymakr/toolsfeatures.md)
+* [3.1 Installation](chapter/pymakr/installation/README.md)
+  * [3.1.1 Atom](chapter/pymakr/installation/atom.md)
+  * [3.1.2 Visual Studio Code](chapter/pymakr/installation/vscode.md)
+* [3.2 Tools/Features](chapter/pymakr/toolsfeatures.md)
+* [3.3 Settings](chapter/pymakr/settings.md)
+
 
 ## 4. Pysense & Pytrack
 
@@ -75,7 +84,6 @@
   * [5.3.5 LoPy to LoPy](chapter/tutorials/lora/module-module.md)
   * [5.3.6 LoRaWAN Nano-Gateway](chapter/tutorials/lora/lorawan-nano-gateway.md)
   * [5.3.7 RN2483 to LoPy](chapter/tutorials/lora/537-rn2483-to-lopy.md)
-  * [5.3.8 Objenious](chapter/tutorials/lora/objenious-provisioning.md)
 * [5.4 Sigfox Examples](chapter/tutorials/sigfox/README.md)
   * [5.4.1 Register Device](chapter/tutorials/sigfox/register.md)
   * [5.4.2 Disengage Sequence Number](chapter/tutorials/sigfox/disengage_seq_num.md)
@@ -142,7 +150,7 @@
   * [6.3.20 Builtin](chapter/firmwareapi/micropython/builtin.md)
 
 ## 7. Product Info
-
+* [7.0 Introduction](chapter/datasheets/README.md)
 * [7.1 Development Modules](chapter/datasheets/development/README.md)
   * [7.1.1 WiPy 2.0](chapter/datasheets/development/wipy2.md)
   * [7.1.2 WiPy 3.0](chapter/datasheets/development/wipy3.md)
