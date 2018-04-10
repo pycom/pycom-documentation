@@ -29,7 +29,8 @@ the board, next to the LED).
 towards the USB connector. It should firmly click into place and the pins
  should now no longer be visible.
 
-<p align="center"><img src ="../img/Pysense_{{ module }}.png" style="max-height: 400px;"></p>
+<p align="center"><img src ="../img/Pysense_{{ module }}.png" style="max-height: 400px;"><img src ="../img/Pytrack_{{ module }}.png" style="max-height: 400px;"></p>
+
 
 Once you have completed the above steps successfully you should see the on-board
 LED blinking blue. This indicates the device is powered up and running.
