@@ -40,7 +40,8 @@ LED blinking blue. This indicates the device is powered up and running.
 supply `3.5v`-`5.5v` to the `Vin` pin. **Note:** Do *not* feed `3.3v`directly to
 the `3.3v` supply pin, this will damage the regulator.
 - The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the
-{{ module }} respectively. Remember to turn on 3V3 signals level on your USB UART converter.
+{{ module }} respectively. **Note:** Please ensure you have the signal level of
+the UART adapter set to `3.3v` before connecting it.
 - In order to put the {{ module }} into bootloader mode to update the device
 firmware you will need to connect `P2` to `GND`. We recommend you connect a
 button between the two to make this simpler.
