@@ -87,7 +87,7 @@
 * [5.4 Sigfox Examples](chapter/tutorials/sigfox/README.md)
   * [5.4.1 Register Device](chapter/tutorials/sigfox/register.md)
   * [5.4.2 Disengage Sequence Number](chapter/tutorials/sigfox/disengage_seq_num.md)
-* [5.5 LTE Examples](chapter/tutorials/LTE/README.md)
+* [5.5 LTE Examples](chapter/tutorials/lte/README.md)
   * [5.5.1 Module IMEI](chapter/tutorials/lte/IMEI.md)
 * [5.6 Pytrack Examples](chapter/tutorials/pytrack/README.md)
 * [5.7 Pysense Examples](chapter/tutorials/pysense/README.md)

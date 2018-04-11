@@ -10,7 +10,7 @@ The file system is accessible via the native FTP server running on each Pycom de
 
 **``password``**: python
 
-See [network.server](../firmwareapi/pycom/network/wlan.md) for information on how to change the defaults. The recommended clients are:
+See [network.server](/chapter/firmwareapi/pycom/network/wlan.md) for information on how to change the defaults. The recommended clients are:
 
 - MacOS/Linux: default FTP client
 - Windows: Filezilla and FireFTP.

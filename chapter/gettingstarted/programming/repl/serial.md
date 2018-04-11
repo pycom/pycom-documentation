@@ -9,11 +9,11 @@ In order to connect to the REPL over USB serial, there are multiple methods.
 Detailed below are the explanations of how to do it in MacOS, Linux and Windows.
 
 ### All platforms
-By far the easiest way to access the USB UART REPL is via the our [Pymakr plug-in](../../../pymakr/README.md)
+By far the easiest way to access the USB UART REPL is via the our [Pymakr plug-in](/chapter/pymakr/installation/README.md)
 for Atom and Visual Studio Code. This adds a pane to the bottom of the editors
 that allows you to directly access the REPL and any output from the device.
 Detailed instructions on how to setup Pymakr can be found
-[here.](../../../pymakr/README.md)
+[here.](/chapter/pymakr/installation/README.md)
 
 ### MacOS and Linux
 

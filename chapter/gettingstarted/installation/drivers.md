@@ -19,7 +19,7 @@ will need to be installed.
 
 Please download the driver software from the link below.
 
-<a href="pycom.inf" download target="_blank">Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver</a>
+<a href="/chapter/pytrackpysense/installation/pycom.inf" download target="_blank">Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver</a>
 
 ### Installation
 

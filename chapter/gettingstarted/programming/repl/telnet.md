@@ -5,7 +5,7 @@ WiFi/WLAN. Connect to the device's WiFi Access Point (AP) and using the
 following credentials to connect to the AP. The WiFi ``SSID`` will appear upon
 powering on a Pycom Device for the first time (e.g. lopy-). To re-enable this
 feature at a later date, please see
-[network.WLAN](../../firmwareapi/pycom/network/wlan.md).
+[network.WLAN](/chapter/firmwareapi/pycom/network/wlan.md).
 
 **``password``**: www.pycom.io
 
@@ -18,15 +18,15 @@ is required. The default credentials for the telnet server are:
 
 **``password``**: python
 
-See [network.server](../../firmwareapi/pycom/network/server.md) for info on how
+See [network.server](/chapter/firmwareapi/pycom/network/server.md) for info on how
 to change the default authentication.
 
 ### All platforms
-By far the easiest way to access the Telnet REPL is via the our [Pymakr plug-in](../../../pymakr/README.md)
+By far the easiest way to access the Telnet REPL is via the our [Pymakr plug-in](../../../pymakr/installation/README.md)
 for Atom and Visual Studio Code. This adds a pane to the bottom of the editors
 that allows you to directly access the REPL and any output from the device.
 Detailed instructions on how to setup Pymakr can be found
-[here.](../../../pymakr/README.md)
+[here.](../../../pymakr/installation/README.md)
 
 ### MacOS and Linux
 

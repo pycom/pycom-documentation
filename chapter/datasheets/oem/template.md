@@ -7,7 +7,7 @@ The pinout of the {{module}} is available as a <a href="../downloads/{{module|lo
 
 ### Specsheets
 
-The specsheet of the {{module}} is available as a <a href="../downloads/{{module}}-specsheet.pdf" target="_blank">PDF File</a>.
+The specsheet of the {{module}} is available as a <a href="../downloads/{{module|lower}}-specsheet.pdf" target="_blank">PDF File</a>.
 
 ### Drawings
 
@@ -29,7 +29,7 @@ specific interest for the {{ module }}:
 
 - [WiFi connection](../../tutorials/all/wlan.md)
 {% if module=="L01" or module=="L04" %}
-- [LoRaWAN node](../../tutorials/lora/lorawan-otta.md)
+- [LoRaWAN node](../../tutorials/lora/lorawan-otaa.md)
 - [LoRaWAN nano gateway](../../tutorials/lora/lorawan-nano-gateway.md)
 {% endif %}
 {% if module=="L04" %}

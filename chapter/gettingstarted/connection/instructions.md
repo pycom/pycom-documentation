@@ -108,13 +108,13 @@ different from the LoPy.
 using the U.FL connector on the same side of the {{ module }} as the LED.
 {% endif %}
 
-<p align="center"><img src ="../img/{{comm | replace("/", "_")}}_pigtail_{{module}}.png" style="max-height: 400px;"></p>
+<p align="center"><img src ="../img/{{comm | replace("/", "_")}}_Pigtail_{{module}}.png" style="max-height: 400px;"></p>
 
 - If you are using a pycase, you will next need to put the SMA connector through
 the antenna hole, ensuring you align the flat edge correctly, and screw down the
 connector using the provided nut.
 - Finally you will need to screw on the antenna to the SMA connector.
-<p align="center"><img src ="../img/{{comm | replace("/", "_")}}_pigtail_ANT_{{module}}.png" style="max-height: 400px;"></p>
+<p align="center"><img src ="../img/{{comm | replace("/", "_")}}_Pigtail_ANT_{{module}}.png" style="max-height: 400px;"></p>
 {% endif %}
 
 {% if module=="GPy" or module=="FiPy" %}
@@ -139,7 +139,7 @@ optional and only required if you need better performance or are mounting the
 the antennas is done via software, instructions for this can be found
 [here.](../../firmwareapi/pycom/network/wlan.md)
 
-<p align="center"><img src ="../img/WiFI_pigtail_ANT_{{module}}.png" style="max-height: 400px;"></p>
+<p align="center"><img src ="../img/WiFi_Pigtail_ANT_{{module}}.png" style="max-height: 400px;"></p>
 
 {% if module=="GPy" or module=="FiPy" %}
 ## SIM card

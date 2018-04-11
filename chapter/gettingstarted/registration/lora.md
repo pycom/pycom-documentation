@@ -33,7 +33,7 @@ will provide you with an `Application EUI` and `Application Key`. The former
 identifies what application your device is connecting to, the latter is a shared
 secret key unique to your device to generate the session keys that prove its
 identity to the network. Once you have these you can use the
-[LoRaWAN OTAA example](../../tutorials/lopy/lorawan-otaa.md) code to connect to
+[LoRaWAN OTAA example](/chapter/tutorials/lora/lorawan-otaa.md) code to connect to
 the network.
 
 ##### ABP
@@ -41,7 +41,7 @@ With ABP the encryption keys enabling communication with the network are
 preconfigured in the device. The network will need to provide you with a
 `Device Address`, `Network Session Key` and `Application Session Key`. Once you
 have these you can use the
-[LoRaWAN ABP example](../../tutorials/lopy/lorawan-otaa.md) code to connect to
+[LoRaWAN ABP example](/chapter/tutorials/lora/lorawan-abp.md) code to connect to
 the network.
 
 #### Networks

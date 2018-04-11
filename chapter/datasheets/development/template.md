@@ -1,4 +1,4 @@
-<p align="center"><img src ="../../../img/{{module}}.png" width="300"></p>
+<p align="center"><img src ="../../../img/{{module|lower}}.png" width="300"></p>
 
 {% if module=="WiPy2" %}
 **Store**: Discontinued, See [WiPy3](./wipy3.md)
@@ -108,7 +108,7 @@ specific interest for the {{ module }}:
 - [WiFi connection](../../tutorials/all/wlan.md)
 
 {% if module=="LoPy" or module=="LoPy4" or module=="FiPy" %}
-- [LoRaWAN node](../../tutorials/lora/lorawan-otta.md)
+- [LoRaWAN node](../../tutorials/lora/lorawan-otaa.md)
 
 - [LoRaWAN nano gateway](../../tutorials/lora/lorawan-nano-gateway.md)
 
