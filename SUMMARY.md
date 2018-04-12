@@ -167,11 +167,12 @@
   * [7.2.5 L01 OEM Baseboard Reference](chapter/datasheets/oem/l01_reference.md)
   * [7.2.6 Universal OEM Baseboard Reference](chapter/datasheets/oem/universal_reference.md)
 * [7.3 Expansion Boards and Shields](chapter/datasheets/boards/README.md)
-  * [7.3.1 Expansion Board 2.0](chapter/datasheets/boards/expansion.md)
+  * [7.3.1 Expansion Board 3.0](chapter/datasheets/boards/expansion3.md)
   * [7.3.2 Pytrack](chapter/datasheets/boards/pytrack.md)
   * [7.3.3 Pysense](chapter/datasheets/boards/pysense.md)
-  * [7.3.4 Deep Sleep Shield](chapter/datasheets/boards/deepsleep.md)
-    * [7.3.4.1 Deep Sleep API](chapter/datasheets/boards/deepsleep/api.md)
+  * [7.3.4 Expansion Board 2.0](chapter/datasheets/boards/expansion2.md)
+  * [7.3.5 Deep Sleep Shield](chapter/datasheets/boards/deepsleep.md)
+    * [7.3.5.1 Deep Sleep API](chapter/datasheets/boards/deepsleep/api.md)
 * [7.4 Notes](chapter/datasheets/notes/README.md)
 
 ## 8. Datasheets
@@ -189,9 +190,11 @@
   * [8.2.3 L04](ref://chapter/datasheets/downloads/l04-specsheet.pdf)
   * [8.2.4 G01](ref://chapter/datasheets/downloads/g01-specsheet.pdf)
 * [8.3 Expansion Boards and Shields](chapter/datasheets/index_pages/boards.md)
-  * [8.3.1 Expansion Board 2.0](ref://chapter/datasheets/downloads/expansion-specsheet.pdf)
+  * [8.3.1 Expansion Board 3.0](ref://chapter/datasheets/downloads/expansion3-specsheet.pdf)
   * [8.3.2 Pytrack](ref://chapter/datasheets/downloads/pytrack-specsheet.pdf)
   * [8.3.3 Pysense](ref://chapter/datasheets/downloads/pysense-specsheet.pdf)
+  * [8.3.4 Expansion Board 2.0](ref://chapter/datasheets/downloads/expansion2-specsheet.pdf)
+
 
 ## 9. Pybytes Beta
 
