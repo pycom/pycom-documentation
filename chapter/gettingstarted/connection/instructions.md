@@ -1,6 +1,6 @@
 ## Basic connection
 
-{% tabs exp2="Exp Board 2.0", pic="Pysense/Pytrack/Pyscan", diy="USB UART Adapter", wifi="WiFi"%}
+{% tabs exp2="Exp Board 2.0", exp3="Exp Board 3.0", pic="Pysense/Pytrack/Pyscan", diy="USB UART Adapter", wifi="WiFi"%}
 
 {% content "exp2" %}
 
@@ -17,6 +17,25 @@ pointing towards the USB connector. It should firmly click into place and the
 pins should now no longer be visible.
 
 <p align="center"><img src ="../img/Expansion_Board_2_{{ module }}.png" style="max-height: 400px;"></p>
+
+{% content "exp3" %}
+- Before connecting your module to a expansion board 3.0, you should update
+  the firmware on the expansion board 3.0. Instructions on how to do this can be
+  found [here](../../pytrackpysense/installation/firmware.md).
+{% if module=="FiPy" %}
+- When using the expansion board with a {{module}}, you will need to remove the
+CTS and RTS jumpers as these interfere with communication with the cellular
+modem.
+{% endif %}
+- Look for the reset button on the module (located at a corner of the board,
+  next to the LED).
+- Locate the USB connector on the expansion board.
+- Insert the {{ module }} module on the the expansion board with the reset button
+pointing towards the USB connector. It should firmly click into place and the
+pins should now no longer be visible.
+
+<p align="center"><img src ="../img/Expansion_Board_3_{{ module }}.png" style="max-height: 400px;"></p>
+
 
 {% content "pic" %}
 - Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update
