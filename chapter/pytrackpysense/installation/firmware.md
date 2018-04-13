@@ -1,20 +1,28 @@
 # Updating Firmware
 
-To update the firmware on the Pysense/Pytrack, please see the following instructions. The firmware of both Pysense and Pytrack can be updated via the USB port using the terminal tool, DFU-util.
+To update the firmware on the Pysense/Pytrack/Pyscan/Expansion Board v3, please
+see the following instructions. The firmware of Pysense/Pytrack/Pyscan/Expansion
+Board v3 can be updated via the USB port using the terminal tool, DFU-util.
 
-The latest firmware is v0.0.8. The DFU file can be downloaded from the links below:
+The latest firmware DFU file can be downloaded from the links below:
 
-- [Pytrack DFU](https://software.pycom.io/downloads/pytrack_0.0.8.dfu)
-- [Pysense DFU](https://software.pycom.io/downloads/pysense_0.0.8.dfu)
+- [Pytrack DFU](https://software.pycom.io/findupgrade?key=pytrack.dfu&type=all&redirect=true)
+- [Pysense DFU](https://software.pycom.io/findupgrade?key=pysense.dfu&type=all&redirect=true)
+- [Expansion Board DFU](https://software.pycom.io/findupgrade?key=expansion3.dfu&type=all&redirect=true)
 
-While the the normal, application mode, the Pysense and Pytrack require a Serial USB CDC driver, in DFU, bootloader mode, the DFU driver is required. Bellow, the USB Product ID is depicted for each case.
+While in the normal, application mode, the Pysense/Pytrack/Pyscan/Expansion
+Board v3 require a Serial USB CDC driver, in DFU, bootloader mode, the DFU
+driver is required. Below, the USB Product ID is depicted for each case.
 
-| Board   | DFU bootloader (update mode) | Application firmware (normal mode) |
+| Board    | DFU bootloader (update mode) | Application firmware (normal mode) |
 |---------|:--------------:|:--------------------:|
-| Pytrack |      0xF014    |        0xF013        |
-| Pysense |      0xF011    |        0xF012        |
+| Pytrack            |      `0xF014`    |        `0xF013`        |
+| Pysense            |      `0xF011`    |        `0xF012`        |
+| Pyscan             |      `0xEF99`    |        `0xEF12`        |
+| Expansion Board v3 |      `0xEF37`    |        `0xEF38`        |
 
-*Note: USB Vendor ID is always 0x04D8.*
+
+*Note: USB Vendor ID is always `0x04D8`.*
 
 ### Installing the DFU-util Tools
 
