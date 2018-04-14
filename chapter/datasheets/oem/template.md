@@ -3,7 +3,7 @@
 ### Pinout
 The pinout of the {{module}} is available as a <a href="../downloads/{{module|lower}}-pinout.pdf" target="_blank">PDF File</a>.
 
-<a href="../downloads/{{module|lower}}-pinout.pdf" target="_blank" align="center"><img src ="../../../img/g01-pinout.png"></a>
+<a href="../downloads/{{module|lower}}-pinout.pdf" target="_blank" align="center"><img src ="../../../img/{{module|lower}}-pinout.png"></a>
 
 ### Specsheets
 
