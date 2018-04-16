@@ -28,7 +28,7 @@ REPL. After reset, if ``P12`` pin is held `high` (i.e. connect it to the `3V3`
 output pin), the heartbeat LED will begin flashing orange slowly.
 If after 3 seconds the pin is still held high, the LED will start blinking
 faster. In this mode the module will do the same as previously explained but
-it will also select the previous [OTA image](TODO:LINK ME) to boot if you have
+it will also select the previous OTA image to boot if you have
 updated the module via the OTA update procedure (updates performed via the
 firmware update tool do not count). This is useful if you flashed a OTA update
 that breaks the device.

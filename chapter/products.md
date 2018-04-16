@@ -16,7 +16,7 @@ as well as what accessories are required to utilise certain functionality.
 | Antennas <td colspan=2 align="center">[<img src ="../img/wifi_ant.png" width="100"><br> External WiFi/BT <br> Antenna Kit](https://pycom.io/product/external-wifi-antenna/)<td colspan=2 align="center">[<img src ="../img/lora_ant.png" width="100"><br> LoRa & Sigfox <br> Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [<img src ="../img/lte_ant.png" width="100"><br> LTE-M <br> Antenna Kit](https://pycom.io/product/lte-m-antenna-kit/) |
 
 # Accessories
-| Accessory | [<img src ="../img/expansion_new.png" width="100"><br> Expansion Board](datasheets/boards/expansion.md) | [<img src ="../img/pysense_new.png" width="100"><br> Pysense](datasheets/boards/pysense.md) | [<img src ="../img/pytrack_new.png" width="100"><br> Pytrack](datasheets/boards/pytrack.md) | [<img src ="../img/pyscan.png" width="100"><br> Pyscan](datasheets/boards/pyscan.md) |
+| Accessory | [<img src ="../img/expansion3.png" width="100"><br> Expansion Board](datasheets/boards/expansion3.md) | [<img src ="../img/pysense_new.png" width="100"><br> Pysense](datasheets/boards/pysense.md) | [<img src ="../img/pytrack_new.png" width="100"><br> Pytrack](datasheets/boards/pytrack.md) | [<img src ="../img/pyscan.png" width="100"><br> Pyscan](datasheets/boards/pyscan.md) |
 | :-------: | :-------------: | :-----: | :-----: | :----: |
 | [<img src ="../img/pycase.png" width="100"><br> PyCase](https://pycom.io/product/pycase/) | ✔ ||||
 | [<img src ="../img/IP67_case_exp.png" width="100"><br> IP67 Case for <br> Expansion Board](https://pycom.io/product/ip67-expansion-board-case/) | ✔ ||||
