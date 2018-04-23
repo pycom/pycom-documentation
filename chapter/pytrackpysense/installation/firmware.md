@@ -94,11 +94,12 @@ If, by mistake, the libusbk driver was installed while the USB ID is the Applica
 
 ### Using DFU-util with Pytrack and Pysense
 
-In order to put Pyrack or Pysense in DFU mode, press and hold the button on the Pytrack/Pysense board whilst powering on the board (connecting the USB cable).
+To enter update mode follow these steps:
 
-1. Press the button and keep it held
-2. Next plug-in the USB cable to the host computer and wait 1 second before releasing the button.
-3. After this you will have approximately 7 seconds to run the DFU-util tool.
+1. Unplug the device
+2. Press the button and keep it held
+3. Plug in the USB cable to the host computer and wait 1 second before releasing the button
+4. After this you will have approximately 7 seconds to run the DFU-util tool
 
 ##### MacOS and Linux:
 
