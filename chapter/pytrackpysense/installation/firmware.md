@@ -18,8 +18,8 @@ driver is required. Below, the USB Product ID is depicted for each case.
 |---------|:--------------:|:--------------------:|
 | Pytrack            |      `0xF014`    |        `0xF013`        |
 | Pysense            |      `0xF011`    |        `0xF012`        |
-| Pyscan             |      `0xEF99`    |        `0xEF12`        |
-| Expansion Board v3 |      `0xEF37`    |        `0xEF38`        |
+| Pyscan             |      `0xEF37`    |        `0xEF38`        |
+| Expansion Board v3 |      `0xEF99`    |        `0xEF98`        |
 
 
 *Note: USB Vendor ID is always `0x04D8`.*
