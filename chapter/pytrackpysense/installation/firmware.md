@@ -92,12 +92,12 @@ If, by mistake, the libusbk driver was installed while the USB ID is the Applica
 
 <p align="center"><img src ="../../../img/pytrack_app_mode_zadig.png" width="800"></p>
 
-### Using DFU-util with Pytrack and Pysense
+### Using DFU-util with Pytrack, Pysense and Expansion Board v3
 
 To enter update mode follow these steps:
 
 1. Unplug the device
-2. Press the button and keep it held
+2. Press the button and keep it held (on the Expansion Board the "S1" button)
 3. Plug in the USB cable to the host computer and wait 1 second before releasing the button
 4. After this you will have approximately 7 seconds to run the DFU-util tool
 
