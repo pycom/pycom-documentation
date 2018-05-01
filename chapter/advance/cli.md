@@ -1,37 +1,36 @@
 # Command Line Update Utility
 
 ### Windows
-After installing the [windows version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=win32&redirect=true)
-of the updater tool, the CLI tool can be
-found here:
+After installing the [Windows version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=win32&redirect=true) of the updater tool, the CLI tool pycom-fwtool-cli.exe can be found here:
 
-32-Bit Windows: ``C:\Program Files\Pycom\Pycom Firmware Update\pycom-fwtool-cli.exe``
+32-Bit Windows: ``C:\Program Files\Pycom\Pycom Firmware Update\``
 
-64-Bit Windows: ``C:\Program Files (x86)\Pycom\Pycom Firmware Update\pycom-fwtool-cli.exe``
+64-Bit Windows: ``C:\Program Files (x86)\Pycom\Pycom Firmware Update\``
+
 
 ### Mac
-In order to get access to the CLI tool on mac you will need to right click on
-the [mac version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=macos&redirect=true)
+In order to get access to the CLI tool on Mac, you will need to right click on
+the [Mac version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=macos&redirect=true)
 of the updater tool and click `Show Package Contents`, then navigate to
-`contents/resources`, here you will find the `pycom-fwtool-cli`.
+`Contents/Resources`, here you will find the `pycom-fwtool-cli`.
+
 
 ### Linux
-The [linux version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true)
-of the updater tool does not come with a precompiled `pycom-fwtool-cli` binary,
-but rather raw the python script. This can be found in `bin/updater.py`
+In the [Ubuntu 14.04 LTS](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) (and newer) version of the updater tool, `pycom-fwtool-cli` is installed in `/usr/local/bin`. In the [Generic Linux](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) package, the tool is extracted into folder `./pyupgrade`
 
 ## Usage
 
 ```
-usage: pycom-fwtool-cli [-h] [-v] [-q] [-p PORT] [-s SPEED] [-c] [-x] [--ftdi]
-                        [--pic]
-                        {list,chip_id,wmac,smac,sigfox,exit,flash,write,write_remote,cb,nvs,ota,lpwan,erase_fs,erase_all}
-                        ...
+usage: pycom-fwtool-cli [-h] [-v] [-d] [-q] [-p PORT] [-s SPEED] [-c] [-x] [--ftdi]
+                  [--pic] [-r]
+                  {list,chip_id,wmac,smac,sigfox,exit,flash,copy,write,write_remote,wifi,pybytes,cb,nvs,ota,lpwan,erase_fs,erase_all}
+                  ...
 
-Update your Pycom device with the specified firmware image file
+Update your Pycom device with the specified firmware image file For more
+details please see https://docs.pycom.io/chapter/advance/cli.html
 
 positional arguments:
-  {list,chip_id,wmac,smac,sigfox,exit,flash,write,write_remote,cb,nvs,ota,lpwan,erase_fs,erase_all}
+  {list,chip_id,wmac,smac,sigfox,exit,flash,copy,write,write_remote,wifi,pybytes,cb,nvs,ota,lpwan,erase_fs,erase_all}
     list                Get list of available COM ports
     chip_id             Show ESP32 chip_id
     wmac                Show WiFi MAC
@@ -39,35 +38,52 @@ positional arguments:
     sigfox              Show sigfox details
     exit                Exit firmware update mode
     flash               Write firmware image to flash
+    copy                Read/Write flash memory partition
     write               Write to flash memory
-    write_remote        Write remote config to flash memory
+    wifi                Get/Set default WIFI parameters
+    pybytes             Read/Write pybytes configuration
     cb                  Read/Write config block
     nvs                 Read/Write non volatile storage
     ota                 Read/Write ota block
-    lpwan               Get/Set LPWAN parameters
+    lpwan               Get/Set LPWAN parameters [ EU868 US915 AS923 AU915]
     erase_fs            Erase flash file system area
     erase_all           Erase entire flash!
 
 optional arguments:
   -h, --help            show this help message and exit
   -v, --verbose         show verbose output from esptool
+  -d, --debug           show debuggin output from fwtool
   -q, --quiet           suppress success messages
   -p PORT, --port PORT  the serial port to use
-  -s SPEED, --speed SPEED    baudrate
+  -s SPEED, --speed SPEED
+                        baudrate
   -c, --continuation    continue previous connection
-  -x, --noexit          do not exit firmware update mode (Pysense/Pytrack only)
+  -x, --noexit          do not exit firmware update mode
   --ftdi                force running in ftdi mode
-  --pic                 force running in pic mode (Pysense/Pytrack)
-
+  --pic                 force running in pic mode
+  -r, --reset           use Espressif reset mode
 ```
 
+## Gloabal Paramaters
+
+`-h / --help`    : shows above help (you can also get detailed help for each sub-command
+`-v / --verbose` : show verbose output from esptool.
+`-d / --debug`   : show debug output from fwtool.
+`-q / --quiet`   : suppress most output, used for scripting
+`-p / --port`    : specifies the serial port to be used. Can also be set via environment variable `ESPPORT`
+`-s / --speed`   : specifies the serial speed to be used. Can also be set via environment variable `ESPBAUD`
+`-c / --continuation` : continue previous connection in FTDI mode. This allows running multiple commands sequentially without having to reset the module. This option is ignored in PIC mode as the module can be reset via the serial connection.
+`-x / --noexit`  : This will prevent the PIC from leaving firmware update mode.
+`--ftdi`         : This will force the CLI updater to run in FTDI mode.
+`--pic`          : This will force the CLI updater to run in PIC mode.
+`-r, --reset`    : This will force the CLI updater to use Espressif's workaround to switch into Firmware update mode. This reset method is intended for 3rd party hardware only and is not supported by the Expansion Board 2.0
 
 
 ## Modes
 ###  list                
 Get list of available serial ports ports.
 ```
-usage: pycom-fwtool-cli  list [-h]
+usage: pycom-fwtool-cli list [-h]
 
 optional arguments:
   -h, --help  show this help message and exit
@@ -131,7 +147,7 @@ optional arguments:
 ```
 
 ###  exit                
-If a Pysense/Pytrack has previously been left in firmware update mode by using
+If a Pysense/Pytrack/Expansion 3 has previously been left in firmware update mode by using
 the `-x` option, this command can be used to exit the firmware update mode.
 
 ```
@@ -152,6 +168,24 @@ optional arguments:
   -t TAR, --tar TAR  perform the upgrade from a tar[.gz] file
 ```
 
+###  copy               
+Read/Write flash memory partition from/to local file
+
+```
+usage: pycom-fwtool-cli  -p PORT [-h] [-p PARTITION] [-f FILE] [-r] [-b]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PARTITION, --partition PARTITION
+                        The partition to read/write (all, fs, nvs, factory,
+                        secureboot, bootloader, partitions, otadata, fs1,
+                        ota_0, config)
+  -f FILE, --file FILE  name of the binary file (default: <wmac>-<part>.bin)
+  -r, --restore         restore partition from binary file
+  -b, --backup          backup partition to binary file (default)
+
+ ```
+
 ###  write               
 Write to a specific location in flash memory.
 
@@ -164,10 +198,6 @@ optional arguments:
                         address to write to
   --contents CONTENTS   contents of the memory to write (base64)
  ```
-
-### write_remote
-This is an internal function used by the GUI update tool. This is not intended
-to be used by end users.
 
 ###  cb                  
 Read/Write config block (LPMAC, Sigfox PAC & ID, etc.). You can find the
@@ -182,11 +212,11 @@ optional arguments:
   -r, --restore         restore cb partition from file
 ```
 
-To backup your config block:
-``$pycom-fwtool-cli  -p PORT cb``
-
 If neither `-b` or `-r` is provided, the command will default to backup. If no
 file name is provided, `<WMAC>.cb` is used.
+
+To backup your config block:
+``$pycom-fwtool-cli  -p PORT cb``
 
 To restore your config block:
 ``$pycom-fwtool-cli  -p PORT cb -r -f backup.cb``
@@ -202,12 +232,11 @@ optional arguments:
   -b, --backup          backup cb partition to file
   -r, --restore         restore cb partition from file
 ```
+If neither `-b` or `-r` is provided, the command will default to backup. If no
+file name is provided, `<WMAC>.nvs` is used.
 
 To backup your NVS:
 ``$pycom-fwtool-cli  -p PORT nvs``
-
-If neither `-b` or `-r` is provided, the command will default to backup. If no
-file name is provided, `<WMAC>.nvs` is used.
 
 To restore your NVS:
 ``$pycom-fwtool-cli  -p PORT nvs -r -f backup.nvs``
@@ -226,11 +255,11 @@ optional arguments:
   -r, --restore         restore cb partition from file
 ```
 
+If neither `-b` nor `-r` is provided, the command will default to backup. If no
+file name is provided, `<WMAC>.ota` is used.
+
 To backup your OTA block:
 ``$pycom-fwtool-cli  -p PORT ota``
-
-If neither `-b` or `-r` is provided, the command will default to backup. If no
-file name is provided, `<WMAC>.ota` is used.
 
 To restore your OTA block:
 ``$pycom-fwtool-cli  -p PORT ota -r -f backup.ota``
@@ -269,3 +298,4 @@ usage: pycom-fwtool-cli erase_all [-h]
 optional arguments:
   -h, --help  show this help message and exit
 ```
+
