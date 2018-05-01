@@ -7,7 +7,7 @@ found here:
 
 32-Bit Windows: ``C:\Program Files\Pycom\Pycom Firmware Update\pycom-fwtool-cli.exe``
 
-64-Bit Windows: ``C:\Program Files (x86)\Pycom\Pycom Firmware Update``
+64-Bit Windows: ``C:\Program Files (x86)\Pycom\Pycom Firmware Update\pycom-fwtool-cli.exe``
 
 ### Mac
 In order to get access to the CLI tool on mac you will need to right click on
