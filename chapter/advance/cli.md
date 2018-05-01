@@ -10,9 +10,7 @@ After installing the [Windows version](https://software.pycom.io/findupgrade?pro
 
 ### Mac
 In order to get access to the CLI tool on Mac, you will need to right click on
-the [Mac version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=macos&redirect=true)
-of the updater tool and click `Show Package Contents`, then navigate to
-`Contents/Resources`, here you will find the `pycom-fwtool-cli`.
+the [Mac version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=macos&redirect=true) of the updater tool and click `Show Package Contents`, then navigate to `Contents/Resources`, here you will find the `pycom-fwtool-cli`.
 
 
 ### Linux
