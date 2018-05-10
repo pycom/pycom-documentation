@@ -11,3 +11,5 @@ Please read the following sections for more information about how to add device 
 [Add your device quickly](quick-add-device.md)
 
 [Add your device by flashing Pybytes library](add-device.md)
+
+Test!
