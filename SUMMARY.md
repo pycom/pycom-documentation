@@ -43,7 +43,6 @@
 * [3.2 Tools/Features](chapter/pymakr/toolsfeatures.md)
 * [3.3 Settings](chapter/pymakr/settings.md)
 
-
 ## 4. Pysense & Pytrack
 
 * [4.1 Introduction](chapter/pytrackpysense/README.md)
@@ -151,6 +150,7 @@
   * [6.3.20 Builtin](chapter/firmwareapi/micropython/builtin.md)
 
 ## 7. Product Info
+
 * [7.0 Introduction](chapter/datasheets/README.md)
 * [7.1 Development Modules](chapter/datasheets/development/README.md)
   * [7.1.1 WiPy 2.0](chapter/datasheets/development/wipy2.md)
@@ -177,6 +177,7 @@
 * [7.4 Notes](chapter/datasheets/notes/README.md)
 
 ## 8. Datasheets
+
 * [8.1 Development Modules](chapter/datasheets/index_pages/modules.md)
   * [8.1.1 WiPy 2.0](ref://chapter/datasheets/downloads/wipy2-specsheet.pdf)
   * [8.1.2 WiPy 3.0](https://pycom.io/wp-content/uploads/2018/03/Pycom_Specsheet_WiPy3.0.pdf)
@@ -196,7 +197,6 @@
   * [8.3.3 Pysense](ref://chapter/datasheets/downloads/pysense-specsheet.pdf)
   * [8.3.4 Expansion Board 2.0](ref://chapter/datasheets/downloads/expansion2-specsheet.pdf)
 
-
 ## 9. Pybytes Beta
 
 * [9.1 Introduction](chapter/pybytes/README.md)
@@ -208,6 +208,7 @@
 * [10.1 Introduction](chapter/docnotes/README.md)
 * [10.2 Syntax](chapter/docnotes/syntax.md)
 * [10.3 REPL vs Scripts](chapter/docnotes/replscript.md)
+* 9.2 Add your device to Pybytes
 
 ## 11. Advanced Topics
 
@@ -218,3 +219,4 @@
 ## 12. License
 
 * [12.1 License](chapter/license/README.md)
+
