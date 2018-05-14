@@ -1,13 +1,13 @@
 <p align="center"><img src ="../../img/pybytes/pybytesLogo.png" width="400"></p>
 
-# Pybytes Beta
+# Pybytes
 
-Pybytes is Pycom's IOT cloud platform available for all Pycom modules.
-Pybytes is running in Closed Beta from March 2018.
+Pybytes is an IoT Ecosystem that empowers you by granting full control of all your Pycom devices.
+Please read the following sections for more informations:
 
-Please read the following sections for more information about how to add device to Pybytes.
+# Chapters for this section
 
-
-[Add your device quickly](quick-add-device.md)
-
-[Add your device by flashing Pybytes library](add-device.md)
+[Overview about Pybytes](overview/intro.md)
+[Getting started](started/intro.md)
+[Connect your Pycom module to Pybytes](connect/intro.md)
+[Visualise data from your device](dashboard/intro.md)
