@@ -8,6 +8,9 @@ Please read the following sections for more informations:
 # Chapters for this section
 
 [Overview about Pybytes](overview/intro.md)
+
 [Getting started](started/intro.md)
+
 [Connect your Pycom module to Pybytes](connect/intro.md)
+
 [Visualise data from your device](dashboard/intro.md)
