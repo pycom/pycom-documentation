@@ -1,6 +1,6 @@
 # Example
 
-##Step 1: Set up your application (main.py)
+## Step 1: Set up your application (main.py)
 The first step is to have an application running on your device. The code example presented here has a routine in which device sends a value within a particular time interval.
 
 Here, we're using the function ``pybytes.send_virtual_pin_value(persistent, pin, value))`` to communicate with Pybytes. This function has three arguments: persistent, pin and value.
@@ -36,11 +36,11 @@ def send_env_data():
 _thread.start_new_thread(send_env_data, ())
 ```
 
-##Step 2: Is your device already connected to your Pybytes account?
-At this point, we assume that you already have your device connected to your account. If you don't have it yet, you should accomplish this action before advancing. Check how to [add your device here](./3_connect/intro.md). As soon as complete this, you can move to step 3.
+## Step 2: Is your device already connected to your Pybytes account?
+At this point, we assume that you already have your device connected to your account. If you don't have it yet, you should accomplish this action before advancing. Check how to [add your device here](../connect/intro.md). After you complete this, you can go to step 3.
 
 
-##Step 3: Go to your device's dashboard
+## Step 3: Go to your device's dashboard
 On Pybytes' sidebar, click on the icon ``Devices``.
 Select the device that you want to visualise data from the Device's table.
 On the tab inside your device click on the option ``Data``.
@@ -48,7 +48,7 @@ On the tab inside your device click on the option ``Data``.
 On the card labelled as ``Signals`` click on the button ``Define New Signal``.
 Once you click on the button, a modal will pop up on your screen.
 
-##Step 4: Define a signal
+## Step 4: Define a signal
 - i. Select a signal number that matches the pin number defined on your application's call of the function ``pybytes.send_virtual_pin_value`` (in our case we defined ``pin = 1``; Hence we select ``1`` for signal);
 - ii. Enter a name for your signal (here we're using the name ``Sinwave``);
 - iii. Select the data type for your signal (since our data is a floating number, we will select the type ``Float32``);
