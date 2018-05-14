@@ -20,10 +20,10 @@ In a nutshell, Pybytes is an environment designed to optimise your IoT applicati
 
 # Let's get started!
 First things first: You need a Pybytes account!
-If you don't have an account, [click here!](../pybytes/2_getstarted/intro.md)
+If you don't have an account, [click here!](getstarted/intro.md)
 
 # Summary
-[Getting started](started/intro.md)
+[Getting started](getstarted/intro.md)
 
 [Connect your Pycom module to Pybytes](connect/intro.md)
 

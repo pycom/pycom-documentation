@@ -18,4 +18,4 @@ Select your option for more instructions:
 [Flash library](add-device-flashlib.md).
 
 # Done!
-Now it's time to set up your device's dashboard. You can check more about it [here!](../pybytes/4_dashboard/intro.md)
+Now it's time to set up your device's dashboard. You can check more about it [here!](../dashboard/intro.md)
