@@ -191,11 +191,11 @@
 
 ## 9. Pybytes
 * [9.1 Introduction](chapter/pybytes/README.md)
-* [9.2 Getting Started](chapter/pybytes/2_getstarted/intro.md)
-* [9.3 Connect your Pycom module to Pybytes](chapter/pybytes/3_connect/intro.md)
-    * [9.3.1 Example](chapter/pybytes/3_connect/example.md)
-* [9.4 Visualise data from your device](chapter/pybytes/4_dashboard/intro.md)
-    * [9.4.1 Example](chapter/pybytes/4_dashboard/example.md)
+* [9.2 Getting Started](chapter/pybytes/getstarted/intro.md)
+* [9.3 Connect your Pycom module to Pybytes](chapter/pybytes/connect/intro.md)
+    * [9.3.1 Example](chapter/pybytes/connect/example.md)
+* [9.4 Visualise data from your device](chapter/pybytes/dashboard/intro.md)
+    * [9.4.1 Example](chapter/pybytes/dashboard/example.md)
 
 ## 10. Documentation Notes
 * [10.1 Introduction](chapter/docnotes/README.md)
