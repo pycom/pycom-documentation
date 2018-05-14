@@ -1,5 +1,5 @@
 {
-	"plugins": ["hints","-fontsettings","github","youtube","search","algolia","meta-single","analytics","anchors","grid","otherlink","header"],
+	"plugins": ["hints","-fontsettings","github","youtube","search","algolia","simpletabs","meta-single","analytics","anchors","grid","otherlink","header"],
 	"pluginsConfig": {
 		"fontsettings": {
 			"theme": "white",
