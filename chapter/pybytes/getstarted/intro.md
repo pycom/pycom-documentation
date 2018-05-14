@@ -12,4 +12,4 @@ Click on the link and complete your login.
 
 ## 3. Go Invent!
 Now it's time to explore Pybytes.
-You can start by exploring how to connect your Pycom board to Pybytes.[Click here](../connect/intro.md).
+You can start by exploring how to connect your Pycom board to Pybytes. [Click here](../connect/intro.md).
