@@ -2,7 +2,7 @@
 
 In this section we will explain you how to connect your device to Pybytes.
 
-# Example
+# Example to quickly add a device to Pybytes
 
 ## Step 1: Add Device Wizard
 On ``Devices`` Page:
@@ -12,18 +12,25 @@ On ``Devices`` Page:
 3. Select your shield (e.g., PySense, PyTrack, PyScan or other);
 4. Select your network option;
 5. Enter a unique name for your device;
-6. Enter the Wi-Fi credentials for your device (SSID and password).
+6. Enter the Wi-Fi credentials for your device (SSID and password);
+7. Download the firmware updater for your operating system and copy the device token.
 
 <p><img src ="../../../img/pybytes/add_device_wizard.gif" width="800"></p>
 
-## Step 2: Connect your device
-After completing your add device wizard, you have two ways of adding your device to Pybytes. You can choose between the quick setup (running the firmware updater with the device's token provided by Pybytes), or you can flash Pybytes library yourself (download the pybytes library and upload it on your device using PyMakr).
+## Step 2: Run the firmware updater
+Install the Firmware updater on your computer.
 
-Select your option for more instructions:
+1. Start the ``Firmware updater``;
+2. Select your device serial port (Make sure your device is connected to your computer);
+3. Mark the options "Erase flash file system" and "Force update Pybytes registration";
+4. Paste your device token from Pybytes;
+5. The firmware updater will update the device's firmware and connect to Pybytes.
 
-[Quick add device](add-device-quick.md);
+<p><img src ="../../../img/pybytes/firmware_updater.gif" width="800"></p>
 
-[Flash library](add-device-flashlib.md).
+
+# Observation
+In case you want to extend Pybytes library you have an option to flash Pybytes library manually. [Click here for more information!](add-device-flashlib.md).
 
 
 # Next step: Device's dashboard!
