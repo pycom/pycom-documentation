@@ -14,15 +14,10 @@ library in `/frozen` folder.
 ## Follow these steps
 Install custom Firmware updater from Pybytes beta.
 
-<p><img src ="../../../img/pybytes/firmware-updater/1.png" width="650"></p>
-Put your device in firmware update mode:
-<p><img src ="../../../img/pybytes/firmware-updater/2.png" width="650"></p>
-Select your device serial port:
-<p><img src ="../../../img/pybytes/firmware-updater/3.png" width="650"></p>
-Copy and paste your device token from Pybytes here:
-<p><img src ="../../../img/pybytes/firmware-updater/4.png" width="650"></p>
-Now firmware updater is updating your firmware. It is asking Pybytes for your device credentials
-like WiFi password. It will write these information to device's config block.
-<p><img src ="../../../img/pybytes/firmware-updater/5.png" width="650"></p>
-Now your device will reboot and will be connected to Pybytes.
-<p><img src ="../../../img/pybytes/firmware-updater/6.png" width="650"></p>
+1. Put your device in firmware update mode
+2. Select your device serial port
+3. Mark the options "Erase flash file system" and "Force update Pybytes registration"
+4. Paste your device token from Pybytes
+5. The firmware updater will update the device's firmware and connect to Pybytes.
+
+<p><img src ="../../../img/pybytes/firmware_updater.gif" width="800"></p>
