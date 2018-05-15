@@ -28,7 +28,7 @@ moving between cells, you will need to reconnect.
 The Sequans modem used on Pycom's cellular enabled modules can only work in one
 of these modes at a time. In order to switch between the two protocols you need
 to flash a different firmware to the Sequans modem. Instructions for this can
-be found [here](firmware.md).
+be found [here](../../../tutorials/lte/firmware.md).
 {% endhint %}
 
 ###AT Commands
