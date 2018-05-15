@@ -118,9 +118,9 @@ specific interest for the {{ module }}:
 
 {% endif %}
 {% if module=="GPy" or module=="FiPy" %}
-- [LTE CAT-M1](../../tutorials/cellular/cat_m1.md)
+- [LTE CAT-M1](../../tutorials/lte/cat_m1.md)
 
-- [NB-IoT](../../tutorials/cellular/nb_iot.md)
+- [NB-IoT](../../tutorials/lte/nb_iot.md)
 
 {% endif %}
 - [BLE](../../tutorials/all/ble.md)
