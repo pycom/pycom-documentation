@@ -24,7 +24,7 @@ pinouts, spec sheets, relevant examples and notes.
 
 ## Shields and Expansion boards
 
-  - [Expansion Board 2.0](boards/expansion.md)
+  - [Expansion Board 2.0](boards/expansion2.md)
   - [Pysense](boards/pysense.md)
   - [Pytrack](boards/pytrack.md)
   - [Deep Sleep Shield](boards/deepsleep.md)
