@@ -36,7 +36,7 @@ specific interest for the {{ module }}:
 - [Sigfox](../../tutorials/sigfox/README.md)
 {% endif %}
 {% if module=="G01" %}
-- [LTE CAT-M1](../../tutorials/cellular/cat_m1.md)
-- [NB-IoT](../../tutorials/cellular/nb_iot.md)
+- [LTE CAT-M1](../../tutorials/lte/cat_m1.md)
+- [NB-IoT](../../tutorials/lte/nb_iot.md)
 {% endif %}
 - [BLE](../../tutorials/all/ble.md)
