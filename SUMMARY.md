@@ -193,8 +193,7 @@
 * [9.1 Introduction](chapter/pybytes/README.md)
 * [9.2 Getting Started](chapter/pybytes/getstarted/intro.md)
 * [9.3 Connect your Pycom module to Pybytes](chapter/pybytes/connect/intro.md)
-    * [9.3.1 Quick add device](chapter/pybytes/connect/add-device-quick.md)
-    * [9.3.2 Flash library](chapter/pybytes/connect/add-device-flashlib.md)
+    * [9.3.1 Flash library](chapter/pybytes/connect/add-device-flashlib.md)
 * [9.4 Visualise data from your device](chapter/pybytes/dashboard/intro.md)
 
 ## 10. Documentation Notes

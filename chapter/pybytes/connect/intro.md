@@ -8,29 +8,45 @@ In this section we will explain you how to connect your device to Pybytes.
 On ``Devices`` Page:
 
 1. Click on ``Add Device``.
+<p><img src ="../../../img/pybytes/add-device-wizard/1.jpg" width="800"></p>
+
 2. Select your device (e.g., WiPy, LoPy, SiPy, etc.);
+<p><img src ="../../../img/pybytes/add-device-wizard/2.jpg" width="800"></p>
+
 3. Select your shield (e.g., PySense, PyTrack, PyScan or other);
+<p><img src ="../../../img/pybytes/add-device-wizard/3.jpg" width="800"></p>
+
 4. Select your network option;
-5. Enter a unique name for your device;
-6. Enter the Wi-Fi credentials for your device (SSID and password);
+<p><img src ="../../../img/pybytes/add-device-wizard/4.jpg" width="800"></p>
+
+5. Enter a unique name and the network credentials (SSID and password) for your device;
+<p><img src ="../../../img/pybytes/add-device-wizard/5.jpg" width="800"></p>
+
 7. Download the firmware updater for your operating system and copy the device token.
+<p><img src ="../../../img/pybytes/add-device-wizard/6.jpg" width="800"></p>
 
-<p><img src ="../../../img/pybytes/add_device_wizard.gif" width="800"></p>
-
-## Step 2: Run the firmware updater
+## Step 2: Firmware updater
 Install the Firmware updater on your computer.
 
 1. Start the ``Firmware updater``;
+<p><img src ="../../../img/pybytes/firmware-updater/1.png" width="550"></p>
+<p><img src ="../../../img/pybytes/firmware-updater/2.png" width="550"></p>
+
 2. Select your device serial port (Make sure your device is connected to your computer);
 3. Mark the options "Erase flash file system" and "Force update Pybytes registration";
+<p><img src ="../../../img/pybytes/firmware-updater/3.png" width="550"></p>
+
 4. Paste your device token from Pybytes;
-5. The firmware updater will update the device's firmware and connect to Pybytes.
+<p><img src ="../../../img/pybytes/firmware-updater/5.gif" width="550"></p>
 
-<p><img src ="../../../img/pybytes/firmware_updater.gif" width="800"></p>
+5. The firmware updater will update the device's firmware.
+<p><img src ="../../../img/pybytes/firmware-updater/6.png" width="550"></p>
+<p><img src ="../../../img/pybytes/firmware-updater/7.png" width="550"></p>
 
 
-# Observation
+{% hint style='danger' %}
 In case you want to extend Pybytes library you have an option to flash Pybytes library manually. [Click here for more information!](add-device-flashlib.md).
+{% endhint %}
 
 
 # Next step: Device's dashboard!
