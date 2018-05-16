@@ -45,7 +45,7 @@ Install the Firmware updater on your computer.
 
 
 {% hint style='danger' %}
-In case you want to extend Pybytes library you have an option to flash Pybytes library manually. [Click here for more information!](add-device-flashlib.md).
+In case you want to extend Pybytes library you have an option to flash Pybytes library manually. [Click here for more information!](add-device-flashlib.md)
 {% endhint %}
 
 
