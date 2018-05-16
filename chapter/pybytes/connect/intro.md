@@ -2,8 +2,6 @@
 
 In this section we will explain you how to connect your device to Pybytes.
 
-# Example to quickly add a device to Pybytes
-
 ## Step 1: Add Device Wizard
 On ``Devices`` Page:
 
@@ -49,5 +47,5 @@ In case you want to extend Pybytes library you have an option to flash Pybytes l
 {% endhint %}
 
 
-# Next step: Device's dashboard!
+# Next step: Display data from your device into Pybytes dashboard!
 Now it's time to set up your device's dashboard. You can check more about it [here!](../dashboard/intro.md)
