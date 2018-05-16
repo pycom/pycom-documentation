@@ -23,6 +23,10 @@ On ``Devices`` Page:
 6. Download the firmware updater for your operating system and copy the device token.
 <p><img src ="../../../img/pybytes/add-device-wizard/6.jpg" width="800"></p>
 
+{% hint style='danger' %}
+In case you want to extend Pybytes library you can flash Pybytes library manually.
+{% endhint %}
+
 ## Step 2: Firmware updater
 Install the Firmware updater on your computer.
 
@@ -41,10 +45,6 @@ Install the Firmware updater on your computer.
 5. The firmware updater will update the device's firmware.
 <p><img src ="../../../img/pybytes/firmware-updater/6.png" width="550"></p>
 <p><img src ="../../../img/pybytes/firmware-updater/7.png" width="550"></p>
-
-{% hint style='danger' %}
-In case you want to extend Pybytes library you have an option to flash Pybytes library manually.
-{% endhint %}
 
 # Next step: Set up your device's dashboard!
 Now it's time to display data from your device into Pybytes dashboard. You can check more about it [here!](../dashboard/intro.md)
