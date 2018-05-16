@@ -56,13 +56,13 @@ In this code, we're calling the function ``pybytes.send_virtual_pin_value(persis
 Go to Pybytes.
 
 1. On ``Devices`` page select a device;
-<p><img src ="../../../img/pybytes/dashboard-signal/01.gif" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/01.gif" width="800"></p>
 
 2. On your device's page click on ``Data`` tab.
-<p><img src ="../../../img/pybytes/dashboard-signal/02.png" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/02.png" width="800"></p>
 
 3. Click on the ``Define New Signal`` button.
-<p><img src ="../../../img/pybytes/dashboard-signal/03.png" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/03.png" width="800"></p>
 
 4. Define the new signal by entering a number, a name, a data type and a unit. Finally, click on the button ``Define``.
 
@@ -74,46 +74,46 @@ The signal number has to match the pin number that you defined on ``pybytes.send
 The datatype also has to match the variable used as argument on ``pybytes.send_virtual_pin_value`` function call, inside your ``main.py`` code (In this example our variable is a floating number; therefore we defined as a  ``Float32``).
 {% endhint %}
 
-<p><img src ="../../../img/pybytes/dashboard-signal/04.gif" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/04.gif" width="800"></p>
 
 5. Your signal was added!
-<p><img src ="../../../img/pybytes/dashboard-signal/05.png" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/05.png" width="800"></p>
 
 
 ## Step 3: Add a widget for the signal
 
 1. Click on the signal card.
-<p><img src ="../../../img/pybytes/dashboard-signal/01.png" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/01.gif" width="800"></p>
 
 2. Click on the button  ``Create a new display``.
-<p><img src ="../../../img/pybytes/dashboard-signal/02.png" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/02.png" width="800"></p>
 
 3. Select the type of visualisation (e.g. Bar chart or Line chart).
-<p><img src ="../../../img/pybytes/dashboard-signal/03.gif" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/03.gif" width="800"></p>
 
 4. You can adjust the parameters of your widget at ``Settings``. After, click on the button ``Create``.
-<p><img src ="../../../img/pybytes/dashboard-signal/04.png" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/04.png" width="800"></p>
 
 5. Your widget was created. Now, add your widget to your device's dashboard. Click on the button ``Edit`` on your widget.
-<p><img src ="../../../img/pybytes/dashboard-signal/05.png" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/05.png" width="800"></p>
 
 6. Mark the checkbox ``Display on Dashboard`` at ``Settings``. Finally, click on the button ``Save``.
-<p><img src ="../../../img/pybytes/dashboard-signal/06.gif" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/06.gif" width="800"></p>
 
 7. Click on the tab ``Dashboard``. Your widget was successfully added there!
-<p><img src ="../../../img/pybytes/dashboard-signal/07.png" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-signal/07.png" width="800"></p>
 
 
 ## Step 4: Organise your dashboard
 
 1. Click on the button ``Organise``. Now the dashboard's grid will allow you to resize and reposition its widgets.
-<p><img src ="../../../img/pybytes/dashboard-organise/01.gif" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-organise/01.gif" width="800"></p>
 
 2. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button ``Save`` to save this action.
-<p><img src ="../../../img/pybytes/dashboard-organise/02.gif" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-organise/02.gif" width="800"></p>
 
 3. Reposition the widget by dragging and dropping over the grid. After, click on the button ``Save`` to save this action.
-<p><img src ="../../../img/pybytes/dashboard-organise/03.gif" width="550"></p>
+<p><img src ="../../../img/pybytes/dashboard-organise/03.gif" width="800"></p>
 
 ## Done!
 Now you've learned how to set up your device's dashboard to display data. Also, you can add more widgets to other pins of your device.
