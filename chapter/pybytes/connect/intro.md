@@ -20,7 +20,7 @@ On ``Devices`` Page:
 5. Enter a unique name and the network credentials (SSID and password) for your device;
 <p><img src ="../../../img/pybytes/add-device-wizard/5.jpg" width="800"></p>
 
-7. Download the firmware updater for your operating system and copy the device token.
+6. Download the firmware updater for your operating system and copy the device token.
 <p><img src ="../../../img/pybytes/add-device-wizard/6.jpg" width="800"></p>
 
 ## Step 2: Firmware updater

@@ -19,11 +19,7 @@ In a nutshell, Pybytes is an environment designed to optimise your IoT applicati
 - Track your assets position: Google Maps API empowers your view over your device's geolocation.
 
 # Let's get started!
-First things first: You need a Pybytes account!
-If you don't have an account, [click here!](getstarted/intro.md)
-
-# Summary
-[Getting started](getstarted/intro.md)
+[Getting started with Pybytes](getstarted/intro.md)
 
 [Connect your Pycom module to Pybytes](connect/intro.md)
 
