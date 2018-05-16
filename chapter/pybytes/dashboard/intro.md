@@ -13,6 +13,7 @@ The application in this example sends data from a vector every 10 seconds to Pyb
 1. Open the ``main.py`` file on Pymakr;
 
 2. Insert the following code on your ``main.py``;
+
 ```python
 # # Import what is necessary to create a thread
 import _thread
