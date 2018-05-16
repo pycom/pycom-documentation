@@ -2,14 +2,11 @@
 
 Follow these steps to create a Pybytes account:
 
-## 1. Go to the registration page
-Go to [this link](https://pyauth.pybytes.pycom.io/register).
-Enter your full name, email address and a password to your account.
+## Step 1: Go to the registration page
+1. Go to [this link](https://pyauth.pybytes.pycom.io/register).
+2. Enter your full name, email address and a password to your account.
+3. Confirm the verification message sent to your email address.
+4. Click on the link and complete your login.
 
-## 2. Check your confirmation email
-Confirm the verification message sent to your email address.
-Click on the link and complete your login.
-
-## 3. Go Invent!
-Now it's time to explore Pybytes.
-You can start by connecting your Pycom board to Pybytes [here](../connect/intro.md).
+## Go Invent!
+Now it's time to explore Pybytes. You can start by connecting your Pycom board to Pybytes. [Check here!](../connect/intro.md)

@@ -13,7 +13,6 @@ The application in this example sends data from a vector every 10 seconds to Pyb
 1. Open the ``main.py`` file on Pymakr;
 
 2. Insert the following code on your ``main.py``;
-
 ```python
 # # Import what is necessary to create a thread
 import _thread
@@ -41,7 +40,6 @@ _thread.start_new_thread(send_env_data, ())
 ```
 
 3. Upload the code into your device. Now your device is sending data to Pybytes.
-
 {% hint style='info' %}
 In this code, we're calling the function ``pybytes.send_virtual_pin_value(persistent, pin, value))`` to communicate with Pybytes. This function is part of the Pybytes library, and it has three arguments: ``persistent``, ``pin`` and ``value``.
 - ``persistent`` denotes information that is infrequently accessed and not likely to be modified;
@@ -108,7 +106,7 @@ The datatype also has to match the variable used as argument on ``pybytes.send_v
 2. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button ``Save`` to save this action.
 <p><img src ="../../../img/pybytes/dashboard-organise/02.gif" width="800"></p>
 
-3. Reposition the widget by dragging and dropping over the grid. After, click on the button ``Save`` to save this action.
+3. Change the widget's position by drag-and-dropping it over the grid. After, click on the button ``Save`` to save this action.
 <p><img src ="../../../img/pybytes/dashboard-organise/03.gif" width="800"></p>
 
 ## Done!
