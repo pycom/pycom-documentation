@@ -49,7 +49,7 @@ lte = LTE()
 
 ### Methods
 
-#####<function>LTE.init(*, carrier=None)</function>
+#####<function>lte.init(*, carrier=None)</function>
 
 This method is used to set up the LTE subsystem. After a **deinit()** this method can take several seconds to return waiting for the LTE modem to start-up. Optionally specify a carrier name. The available options are: "verizon", "at&t" and "standard". Standard is generic for any carrier, and it's also the option used when no arguments are given.
 
@@ -76,6 +76,27 @@ Start a data session and obtain and IP address. Optionally specify a CID (Connec
 The arguments are:
 
     - ``cid`` is a Connection ID. This is carrier specific, for Verizon use cid=3. For others like Telstra it should be cid=1.
+
+For instance, to attach and connect to Verizon:
+
+```python
+import time
+from network import LTE
+
+lte = LTE(carrier="verizon")
+lte.attach(band=13)
+
+while not lte.isattached():
+    time.sleep(0.5)
+    print('Attaching...')
+
+lte.connect(cid=3)
+while not lte.isconnected():
+    time.sleep(0.5)
+    print('Connecting...')
+
+# Now use sockets as usual...
+```
 
 #####<function>lte.isconnected()</function>
 
