@@ -1,6 +1,6 @@
 # Connecting to Pybytes by flashing Pybytes library manually
 
-In this section we will explain you how to connect your device to Pybytes by flashing Pybytes library manually.
+In this section, we will explain to you how to connect your device to Pybytes by flashing Pybytes library manually.
 
 {% hint style='danger' %}
 From firmware 1.16.x onwards all Pycom devices come with Pybytes library build-in `/frozen` folder.

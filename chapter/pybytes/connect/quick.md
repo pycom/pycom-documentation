@@ -1,6 +1,7 @@
 # Connecting your Pycom module to Pybytes
 
-In this section we will explain you how to connect your device to Pybytes quickly.
+In this section, we will explain to you how to connect your device to Pybytes quickly.
+
 
 {% hint style='danger' %}
 In case you want to extend Pybytes library you can flash Pybytes library manually. [Click here if you want more information.](flash.md)
