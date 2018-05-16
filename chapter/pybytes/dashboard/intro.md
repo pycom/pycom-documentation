@@ -83,25 +83,25 @@ The datatype also has to match the variable used as argument on ``pybytes.send_v
 ## Step 3: Add a widget for the signal
 
 1. Click on the signal card.
-<p><img src ="../../../img/pybytes/dashboard-signal/01.gif" width="800"></p>
+<p><img src ="../../../img/pybytes/dashboard-widget/01.gif" width="800"></p>
 
 2. Click on the button  ``Create a new display``.
-<p><img src ="../../../img/pybytes/dashboard-signal/02.png" width="800"></p>
+<p><img src ="../../../img/pybytes/dashboard-widget/02.png" width="800"></p>
 
 3. Select the type of visualisation (e.g. Bar chart or Line chart).
-<p><img src ="../../../img/pybytes/dashboard-signal/03.gif" width="800"></p>
+<p><img src ="../../../img/pybytes/dashboard-widget/03.gif" width="800"></p>
 
 4. You can adjust the parameters of your widget at ``Settings``. After, click on the button ``Create``.
-<p><img src ="../../../img/pybytes/dashboard-signal/04.png" width="800"></p>
+<p><img src ="../../../img/pybytes/dashboard-widget/04.png" width="800"></p>
 
 5. Your widget was created. Now, add your widget to your device's dashboard. Click on the button ``Edit`` on your widget.
-<p><img src ="../../../img/pybytes/dashboard-signal/05.png" width="800"></p>
+<p><img src ="../../../img/pybytes/dashboard-widget/05.png" width="800"></p>
 
 6. Mark the checkbox ``Display on Dashboard`` at ``Settings``. Finally, click on the button ``Save``.
-<p><img src ="../../../img/pybytes/dashboard-signal/06.gif" width="800"></p>
+<p><img src ="../../../img/pybytes/dashboard-widget/06.gif" width="800"></p>
 
 7. Click on the tab ``Dashboard``. Your widget was successfully added there!
-<p><img src ="../../../img/pybytes/dashboard-signal/07.png" width="800"></p>
+<p><img src ="../../../img/pybytes/dashboard-widget/07.png" width="800"></p>
 
 
 ## Step 4: Organise your dashboard
