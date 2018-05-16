@@ -1,6 +1,11 @@
-# Connecting your Pycom's module to Pybytes
+# Connecting your Pycom module to Pybytes
 
-In this section we will explain you how to connect your device to Pybytes.
+In this section, we will explain to you how to connect your device to Pybytes quickly.
+
+
+{% hint style='danger' %}
+In case you want to extend Pybytes library you can flash Pybytes library manually. [Click here if you want more information.](flash.md)
+{% endhint %}
 
 ## Step 1: Add Device Wizard
 On ``Devices`` Page:
@@ -22,10 +27,6 @@ On ``Devices`` Page:
 
 6. Download the firmware updater for your operating system and copy the device token.
 <p><img src ="../../../img/pybytes/add-device-wizard/6.jpg" width="800"></p>
-
-{% hint style='danger' %}
-In case you want to extend Pybytes library you can flash Pybytes library manually.
-{% endhint %}
 
 ## Step 2: Firmware updater
 Install the Firmware updater on your computer.
