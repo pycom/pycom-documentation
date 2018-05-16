@@ -65,6 +65,9 @@ Go to Pybytes.
 4. Define the new signal by entering a number, a name, a data type and a unit. Finally, click on the button ``Define``.
 <p><img src ="../../../img/pybytes/dashboard-signal/04.gif" width="800"></p>
 
+5. Your signal was added!
+<p><img src ="../../../img/pybytes/dashboard-signal/05.png" width="800"></p>
+
 {% hint style='info' %}
 The name and unit are labels used to identify your signal inside Pybytes (In this example we defined ``Sinwave`` as the name of the signal and ``Rad`` as the unit).
 
@@ -73,53 +76,39 @@ The signal number has to match the pin number that you defined on ``pybytes.send
 The datatype also has to match the variable used as argument on ``pybytes.send_virtual_pin_value`` function call, inside your ``main.py`` code (In this example our variable is a floating number; therefore we defined as a  ``Float32``).
 {% endhint %}
 
-5. Your signal was added!
-
-<p><img src ="../../../img/pybytes/dashboard-signal/05.png" width="800"></p>
-
 ## Step 3: Add a widget for the signal
 
 1. Click on the signal card.
-
 <p><img src ="../../../img/pybytes/dashboard-widget/01.png" width="800"></p>
 
 2. Click on the button  ``Create a new display``.
-
 <p><img src ="../../../img/pybytes/dashboard-widget/02.png" width="800"></p>
 
 3. Select the type of visualisation (e.g. Bar chart or Line chart).
-
 <p><img src ="../../../img/pybytes/dashboard-widget/03.gif" width="800"></p>
 
 4. You can adjust the parameters of your widget at ``Settings``. After, click on the button ``Create``.
-
 <p><img src ="../../../img/pybytes/dashboard-widget/04.png" width="800"></p>
 
 5. Your widget was created. Now, add your widget to your device's dashboard. Click on the button ``Edit`` on your widget.
-
 <p><img src ="../../../img/pybytes/dashboard-widget/05.png" width="800"></p>
 
 6. Mark the checkbox ``Display on Dashboard`` at ``Settings``. Finally, click on the button ``Save``.
-
 <p><img src ="../../../img/pybytes/dashboard-widget/06.gif" width="800"></p>
 
 7. Click on the tab ``Dashboard``. Your widget was successfully added there!
-
 <p><img src ="../../../img/pybytes/dashboard-widget/07.png" width="800"></p>
 
 
 ## Step 4: Organise your dashboard
 
 1. Click on the button ``Organise``. Now the dashboard's grid will allow you to resize and reposition its widgets.
-
 <p><img src ="../../../img/pybytes/dashboard-organise/01.gif" width="800"></p>
 
 2. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button ``Save`` to save this action.
-
 <p><img src ="../../../img/pybytes/dashboard-organise/02.gif" width="800"></p>
 
 3. Reposition the widget by dragging and dropping over the grid. After, click on the button ``Save`` to save this action.
-
 <p><img src ="../../../img/pybytes/dashboard-organise/03.gif" width="800"></p>
 
 ## Done!
