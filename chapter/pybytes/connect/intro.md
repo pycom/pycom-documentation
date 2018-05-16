@@ -31,6 +31,7 @@ Install the Firmware updater on your computer.
 <p><img src ="../../../img/pybytes/firmware-updater/2.png" width="550"></p>
 
 2. Select your device serial port (Make sure your device is connected to your computer);
+
 3. Mark the options "Erase flash file system" and "Force update Pybytes registration";
 <p><img src ="../../../img/pybytes/firmware-updater/3.png" width="550"></p>
 
@@ -41,11 +42,9 @@ Install the Firmware updater on your computer.
 <p><img src ="../../../img/pybytes/firmware-updater/6.png" width="550"></p>
 <p><img src ="../../../img/pybytes/firmware-updater/7.png" width="550"></p>
 
-
 {% hint style='danger' %}
 In case you want to extend Pybytes library you have an option to flash Pybytes library manually. [Click here for more information!](add-device-flashlib.md)
 {% endhint %}
 
-
-# Next step: Display data from your device into Pybytes dashboard!
-Now it's time to set up your device's dashboard. You can check more about it [here!](../dashboard/intro.md)
+# Next step: Set up your device's dashboard!
+Now it's time to display data from your device into Pybytes dashboard. You can check more about it [here!](../dashboard/intro.md)
