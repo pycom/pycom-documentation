@@ -1,32 +1,18 @@
-# Connecting your Pycom module to Pybytes
+# Connecting a device to Pybytes quickly by using the Firmware Updater
 
-In this section, we will explain to you how to connect your device to Pybytes quickly.
+In this section, we explain to you how to connect your device to Pybytes quickly using the Firmware Updater.
 
-
-{% hint style='danger' %}
-In case you want to extend Pybytes library you can flash Pybytes library manually. [Click here if you want more information.](flash.md)
+{% hint style='tip' %}
+In case you want to extend Pybytes library you can flash Pybytes library manually. [Click here for more information.](flash.md)
 {% endhint %}
 
-## Step 1: Add Device Wizard
-On ``Devices`` Page:
+## Step 1: Download the firmware updater
+At the last step of the "Add Device" process:
+<p><img src ="../../../img/pybytes/add-device-wizard/7.png" width="800"></p>
 
-1. Click on ``Add Device``.
-<p><img src ="../../../img/pybytes/add-device-wizard/1.jpg" width="800"></p>
-
-2. Select your device (e.g., WiPy, LoPy, SiPy, etc.);
-<p><img src ="../../../img/pybytes/add-device-wizard/2.jpg" width="800"></p>
-
-3. Select your shield (e.g., PySense, PyTrack, PyScan or other);
-<p><img src ="../../../img/pybytes/add-device-wizard/3.jpg" width="800"></p>
-
-4. Select your network option;
-<p><img src ="../../../img/pybytes/add-device-wizard/4.jpg" width="800"></p>
-
-5. Enter a unique name and the network credentials (SSID and password) for your device;
-<p><img src ="../../../img/pybytes/add-device-wizard/5.jpg" width="800"></p>
-
-6. Download the firmware updater for your operating system and copy the device token.
-<p><img src ="../../../img/pybytes/add-device-wizard/6.jpg" width="800"></p>
+1. Download the firmware updater for your operating system;
+<p><img src ="../../../img/pybytes/add-device-wizard/8.png" width="550"></p>
+2. Copy the device token.
 
 ## Step 2: Firmware updater
 Install the Firmware updater on your computer.
