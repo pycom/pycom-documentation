@@ -192,9 +192,10 @@
 ## 9. Pybytes
 * [9.1 Introduction](chapter/pybytes/README.md)
 * [9.2 Getting Started](chapter/pybytes/getstarted/intro.md)
-* [9.3 Connect to Pybytes: Quick Add](chapter/pybytes/connect/quick.md)
-* [9.4 Connect to Pybytes: Flash Pybytes library manually](chapter/pybytes/connect/flash.md)
-* [9.5 Visualise data from your device](chapter/pybytes/dashboard/intro.md)
+* [9.3 Add a device to Pybytes](chapter/pybytes/connect/intro.md)
+    * [9.3.1 Connect to Pybytes: Quick Add](chapter/pybytes/connect/quick.md)
+    * [9.3.2 Connect to Pybytes: Flash Pybytes library manually](chapter/pybytes/connect/flash.md)
+* [9.4 Visualise data from your device](chapter/pybytes/dashboard/intro.md)
 
 ## 10. Documentation Notes
 * [10.1 Introduction](chapter/docnotes/README.md)
