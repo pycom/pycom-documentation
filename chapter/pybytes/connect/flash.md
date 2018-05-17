@@ -38,9 +38,9 @@ In case you haven't installed Pymakr plugin, follow [these instructions](../../p
             "password": "python",
             "sync_folder": "flash"
         }
-5. Checkout your `flash/config.py` file. It will be pre-filled with your information from Pybytes
+5. Checkout your `flash/pybytes_config.json` file. It will be pre-filled with your information from Pybytes
 Like deviceToken or WiFi credentials. You can change e.g. your WiFy password here.
-6. Put your device in [safe boot mode](../../toolsandfeatures/bootmodes.md#safe-boot).
+6. Put your device in [safe boot mode](../../gettingstarted/programming/safeboot.html).
 7. Upload code to your device by clicking on *Upload* button in Pymakr.
 After all Pybytes library files are uploaded to device, device will restart and will connect to Pybytes.
 
