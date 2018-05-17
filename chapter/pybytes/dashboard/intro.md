@@ -101,8 +101,8 @@ The datatype also has to match the variable used as argument on ``pybytes.send_v
 
 ## Step 4: Organise your dashboard
 
-1. Click on the button ``Organise``. Now the dashboard's grid will allow you to resize and reposition its widgets.
-<p><img src ="../../../img/pybytes/dashboard-organise/01.gif" width="800"></p>
+1. Click on the button ``Organise``. Now the dashboard's grid will enter the edit mode and allow you to resize and reposition its widgets.
+<p><img src ="../../../img/pybytes/dashboard-organise/edit-mode.gif" width="800"></p>
 
 2. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button ``Save`` to save this action.
 <p><img src ="../../../img/pybytes/dashboard-organise/02.gif" width="800"></p>
