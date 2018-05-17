@@ -10,17 +10,14 @@ That means that you can add your device quickly without the need of flashing Pyb
 ## Step 1: Download your Pybytes Library
 At the last step of the "Add Device" process:
 <p><img src ="../../../img/pybytes/add-device-wizard/7.png" width="800"></p>
-
 1. Click on download *Pybytes library*
 <p><img src ="../../../img/pybytes/pybytes-library-wizard.png" width="550"></p>
 
-{% hint style='info' %}
 You can also download *Pybytes library* at the device's settings page:
 1. Navigate to your device in Pybytes;
 2. On your device's page click on settings tab;
 3. Click on the button *Download Pybytes library*;
-<p><img src ="../../../img/pybytes/pybytes-library-download.gif"></p>
-{% endhint %}
+<p><img src ="../../../img/pybytes/pybytes-library-download.gif" width="800"></p>
 
 ## Step 2. Flash your device with Pymakr
 
