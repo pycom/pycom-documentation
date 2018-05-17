@@ -16,7 +16,7 @@ At the last step of the "Add Device" process:
 You can also download *Pybytes library* at the device's settings page:
 1. Navigate to your device in Pybytes;
 2. On your device's page click on settings tab;
-3. Click on the button *Download Pybytes library*;
+3. Click on the button *Download* at Pybytes library;
 <p><img src ="../../../img/pybytes/pybytes-library-download.gif"></p>
 
 ## Step 2. Flash your device with Pymakr
