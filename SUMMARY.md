@@ -164,7 +164,7 @@
     * [7.3.1 Expansion Board 3.0](chapter/datasheets/boards/expansion3.md)
     * [7.3.2 Pytrack](chapter/datasheets/boards/pytrack.md)
     * [7.3.3 Pysense](chapter/datasheets/boards/pysense.md)
-    * [7.3.4 Pyscab](chapter/datasheets/boards/pyscan.md)
+    * [7.3.4 Pyscan](chapter/datasheets/boards/pyscan.md)
     * [7.3.5 Expansion Board 2.0](chapter/datasheets/boards/expansion2.md)
     * [7.3.6 Deep Sleep Shield](chapter/datasheets/boards/deepsleep.md)
         * [7.3.6.1 Deep Sleep API](chapter/datasheets/boards/deepsleep/api.md)
