@@ -17,9 +17,9 @@ At the last step of the "Add Device" process:
 {% hint style='info' %}
 You can also download *Pybytes library* at the device's settings page:
 1. Navigate to your device in Pybytes;
-2. Click on settings tab;
-3. Click on *Download Pybytes library* button;
-<p><img src ="../../../img/pybytes/pybytes-library-settings.png"></p>
+2. On your device's page click on settings tab;
+3. Click on the button *Download Pybytes library*;
+<p><img src ="../../../img/pybytes/pybytes-library-download.gif"></p>
 {% endhint %}
 
 ## Step 2. Flash your device with Pymakr
@@ -38,9 +38,9 @@ In case you haven't installed Pymakr plugin, follow [these instructions](../../p
             "password": "python",
             "sync_folder": "flash"
         }
-5. Checkout your `flash/config.py` file. It will be pre-filled with your information from Pybytes
+5. Checkout your `flash/pybytes_config.json` file. It will be pre-filled with your information from Pybytes
 Like deviceToken or WiFi credentials. You can change e.g. your WiFy password here.
-6. Put your device in [safe boot mode](../../toolsandfeatures/bootmodes.md#safe-boot).
+6. Put your device in [safe boot mode](../../gettingstarted/programming/safeboot.html).
 7. Upload code to your device by clicking on *Upload* button in Pymakr.
 After all Pybytes library files are uploaded to device, device will restart and will connect to Pybytes.
 
