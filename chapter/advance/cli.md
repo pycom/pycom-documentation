@@ -62,7 +62,8 @@ optional arguments:
   -r, --reset           use Espressif reset mode
 ```
 
-# Parameters
+# How to use the Parameters
+{% hint style='info' %}
 
 The CLI tool uses a combination of global and command specific parameters.
 The **order of parameters** is **important** to avoid ambiguity.
@@ -72,17 +73,16 @@ The **order of parameters** is **important** to avoid ambiguity.
 While `pycom-fwtool-cli -h` shows help for global parameters and a list of available commands, command specific parameters can be viewed using `pycom-fwtool-cli [command] -h`
 
 The parameter `-r, --reset` has been added as a courtesy for users of 3rd party ESP32 products. This functionality is **not supported** by the Expansion Board 2.0 and may cause this tool to crash or hang in certain circumstances.
+{% endhint %}
 
-
-
-## Gloabal Paramaters
+## Global Parameters
 
 `-h / --help`    : shows above help (you can also get detailed help for each sub-command
 `-v / --verbose` : show verbose output from esptool.
 `-d / --debug`   : show debug output from fwtool.
 `-q / --quiet`   : suppress most output, used for scripting
-`-p / --port`    : specifies the serial port to be used. Can also be set via **environment variable** `ESPPORT`
-`-s / --speed`   : specifies the serial speed to be used. Can also be set via **environment variable** `ESPBAUD`
+`-p / --port`    : specifies the serial port to be used. Can also be set via **environment variable ESPPORT** 
+`-s / --speed`   : specifies the serial speed to be used. Can also be set via **environment variable ESPBAUD** 
 `-c / --continuation` : continue previous connection in FTDI mode. This allows running multiple commands sequentially without having to reset the module. This option is ignored in PIC mode as the module can be reset via the serial connection.
 `-x / --noexit`  : This will prevent the PIC from leaving firmware update mode.
 `--ftdi`         : This will force the CLI updater to run in FTDI mode.
@@ -247,6 +247,10 @@ optional arguments:
                         Set extra preferences
 
  ```
+{% hint style='info' %}
+Note: The local pybytes_config.json file is overwritten when making any modifications using this command (requires Pybytes firmware 1.17.5.b6 or higher and Firmware updater 1.14.3).
+{% endhint %}
+
 
 ###  cb                  
 Read/Write config block (LPMAC, Sigfox PAC & ID, etc.). You can find the
