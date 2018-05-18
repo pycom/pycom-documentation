@@ -19,10 +19,10 @@ In the [Ubuntu 14.04 LTS](https://software.pycom.io/findupgrade?product=pycom-fi
 ## Usage
 
 ```
-usage: pycom-fwtool-cli [-h] [-v] [-d] [-q] [-p PORT] [-s SPEED] [-c] [-x] [--ftdi]
-                  [--pic] [-r]
-                  {list,chip_id,wmac,smac,sigfox,exit,flash,copy,write,write_remote,wifi,pybytes,cb,nvs,ota,lpwan,erase_fs,erase_all}
-                  ...
+usage: pycom-fwtool-cli [-h] [-v] [-d] [-q] [-p PORT] [-s SPEED] [-c] [-x]
+                        [--ftdi] [--pic] [-r]
+                        {list,chip_id,wmac,smac,sigfox,exit,flash,copy,write,write_remote,wifi,pybytes,cb,nvs,ota,lpwan,erase_fs,erase_all}
+                        ...
 
 Update your Pycom device with the specified firmware image file For more
 details please see https://docs.pycom.io/chapter/advance/cli.html
@@ -65,11 +65,13 @@ optional arguments:
 # Parameters
 
 The CLI tool uses a combination of global and command specific parameters.
-The order of parameters is **important** to avoid ambiguity.
+The **order of parameters** is **important** to avoid ambiguity.
 
 `pycom-fwtool-cli [global parameters] [command] [command parameters]`
 
 While `pycom-fwtool-cli -h` shows help for global parameters and a list of available commands, command specific parameters can be viewed using `pycom-fwtool-cli [command] -h`
+
+The parameter `-r, --reset` has been added as a courtesy for users of 3rd party ESP32 products. This functionality is **not supported** by the Expansion Board 2.0 and may cause this tool to crash or hang in certain circumstances.
 
 
 
@@ -113,11 +115,12 @@ COM6  [Pytrack] [USB VID:PID=04D8:F013 SER=Py343434 LOCATION=20-2]
 {% hint style='info' %}
 This is the only command that does not require any additional parameters.
 
-All other commands require **the serial port is specified either through the -p / --port option or through environment variable ESPPORT**
-
+All other commands require that **the serial port is specified either through the -p / --port option or through environment variable ESPPORT**
+You can optionally specify the speed either through -s / --speed or via environment variable ESPBAUD. The default speed is 921600. The maximum speed for read operations on PIC based expansion boards & shields is 230400. The speed will be reduced automatically if necessary.
+{% endhint %}
 ### Special note for Expansion Board 2.0
-You will need to have a **jumper wire** connected between`P2`and`GND`to use any of the commands below. You will also need to **press the reset button** before running the first command. To avoid having to press the reset button again (for example when using a script), you can use the -c / --continuation option. The first command connecting to the device **MUST NOT** use the -c / --continuation option. This is to make sure a program called _stub_ is uploaded onto the device. This _stub_ cannot be uploaded more than once, so you need to tell the cli tool that the _stub_ is already running, which is done through using the -c / --continuation option.
-This option is ignored on PIC based boards
+{% hint style='info' %}
+You will need to have a **jumper wire** connected between`P2`and`GND`to use any of the commands below. You will also need to **press the reset button** either before running each command or at least before running the first command. To avoid having to press the reset button again after each command, you can use the -c / --continuation option. The first command connecting to the device **MUST NOT** use the -c / --continuation option. This is to make sure a program called _stub_ is uploaded onto the device. This _stub_ cannot be uploaded more than once, so you need to tell the cli tool that the _stub_ is already running, which is done through using the -c / --continuation option.
 {% endhint %}
 
 
@@ -231,13 +234,18 @@ optional arguments:
 Read/Write pybytes configuration.
 
 ```
-usage: pycom-fwtool-cli  -p PORT write [-h] [-a ADDRESS] [--contents CONTENTS]
+usage: pycom-fwtool-cli pybytes [-h] [--token TOKEN] [--mqtt MQTT] [--uid UID]
+                                [--nwprefs NWPREFS] [--extraprefs EXTRAPREFS]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -a ADDRESS, --address ADDRESS
-                        address to write to
-  --contents CONTENTS   contents of the memory to write (base64)
+  --token TOKEN         Set Device Token
+  --mqtt MQTT           Set mqttServiceAddress
+  --uid UID             Set userId
+  --nwprefs NWPREFS     Set network preferences
+  --extraprefs EXTRAPREFS
+                        Set extra preferences
+
  ```
 
 
