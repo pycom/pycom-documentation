@@ -117,9 +117,9 @@ This is the only command that does not require any additional parameters.
 
 All other commands require that **the serial port is specified either through the -p / --port option or through environment variable ESPPORT**
 You can optionally specify the speed either through -s / --speed or via environment variable ESPBAUD. The default speed is 921600. The maximum speed for read operations on PIC based expansion boards & shields is 230400. The speed will be reduced automatically if necessary.
-{% endhint %}
+
 ### Special note for Expansion Board 2.0
-{% hint style='info' %}
+
 You will need to have a **jumper wire** connected between`P2`and`GND`to use any of the commands below. You will also need to **press the reset button** either before running each command or at least before running the first command. To avoid having to press the reset button again after each command, you can use the -c / --continuation option. The first command connecting to the device **MUST NOT** use the -c / --continuation option. This is to make sure a program called _stub_ is uploaded onto the device. This _stub_ cannot be uploaded more than once, so you need to tell the cli tool that the _stub_ is already running, which is done through using the -c / --continuation option.
 {% endhint %}
 
@@ -247,7 +247,6 @@ optional arguments:
                         Set extra preferences
 
  ```
-
 
 ###  cb                  
 Read/Write config block (LPMAC, Sigfox PAC & ID, etc.). You can find the
