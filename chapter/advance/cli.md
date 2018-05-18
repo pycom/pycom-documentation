@@ -62,14 +62,25 @@ optional arguments:
   -r, --reset           use Espressif reset mode
 ```
 
+# Parameters
+
+The CLI tool uses a combination of global and command specific parameters.
+The order of parameters is **important** to avoid ambiguity.
+
+`pycom-fwtool-cli [global parameters] [command] [command parameters]`
+
+While `pycom-fwtool-cli -h` shows help for global parameters and a list of available commands, command specific parameters can be viewed using `pycom-fwtool-cli [command] -h`
+
+
+
 ## Gloabal Paramaters
 
 `-h / --help`    : shows above help (you can also get detailed help for each sub-command
 `-v / --verbose` : show verbose output from esptool.
 `-d / --debug`   : show debug output from fwtool.
 `-q / --quiet`   : suppress most output, used for scripting
-`-p / --port`    : specifies the serial port to be used. Can also be set via environment variable `ESPPORT`
-`-s / --speed`   : specifies the serial speed to be used. Can also be set via environment variable `ESPBAUD`
+`-p / --port`    : specifies the serial port to be used. Can also be set via **environment variable** `ESPPORT`
+`-s / --speed`   : specifies the serial speed to be used. Can also be set via **environment variable** `ESPBAUD`
 `-c / --continuation` : continue previous connection in FTDI mode. This allows running multiple commands sequentially without having to reset the module. This option is ignored in PIC mode as the module can be reset via the serial connection.
 `-x / --noexit`  : This will prevent the PIC from leaving firmware update mode.
 `--ftdi`         : This will force the CLI updater to run in FTDI mode.
@@ -77,7 +88,7 @@ optional arguments:
 `-r, --reset`    : This will force the CLI updater to use Espressif's workaround to switch into Firmware update mode. This reset method is intended for 3rd party hardware only and is not supported by the Expansion Board 2.0
 
 
-## Modes
+## Commands
 ###  list                
 Get list of available serial ports ports.
 ```
@@ -88,20 +99,25 @@ optional arguments:
 ```
 
 **Example:**
+On MacOS:
 ```
 $pycom-fwtool-cli  list
 /dev/cu.usbmodemPy343431  [Pytrack] [USB VID:PID=04D8:F013 SER=Py343434 LOCATION=20-2]
 /dev/cu.Bluetooth-Incoming-Port  [n/a] [n/a]
 ```
-or on windows
+On Windows:
 ```
 COM6  [Pytrack] [USB VID:PID=04D8:F013 SER=Py343434 LOCATION=20-2]
 ```
 
 {% hint style='info' %}
-If you are using an expansion board 1.0 or 2.0, you will need to have a jumper
-connected between `P2` and `GND` to use any of the commands below. You will also
-need to press the reset button before running each command.
+This is the only command that does not require any additional parameters.
+
+All other commands require **the serial port is specified either through the -p / --port option or through environment variable ESPPORT**
+
+### Special note for Expansion Board 2.0
+You will need to have a **jumper wire** connected between`P2`and`GND`to use any of the commands below. You will also need to **press the reset button** before running the first command. To avoid having to press the reset button again (for example when using a script), you can use the -c / --continuation option. The first command connecting to the device **MUST NOT** use the -c / --continuation option. This is to make sure a program called _stub_ is uploaded onto the device. This _stub_ cannot be uploaded more than once, so you need to tell the cli tool that the _stub_ is already running, which is done through using the -c / --continuation option.
+This option is ignored on PIC based boards
 {% endhint %}
 
 
@@ -196,6 +212,34 @@ optional arguments:
                         address to write to
   --contents CONTENTS   contents of the memory to write (base64)
  ```
+
+###  wifi               
+Get/Set default WIFI parameters.
+
+```
+usage: pycom-fwtool-cli wifi [-h] [--ssid SSID] [--pwd PWD] [--wob [WOB]]
+
+optional arguments:
+  -h, --help   show this help message and exit
+  --ssid SSID  Set Wifi SSID
+  --pwd PWD    Set Wifi PWD
+  --wob [WOB]  Set Wifi on boot
+
+ ```
+
+###  pybytes               
+Read/Write pybytes configuration.
+
+```
+usage: pycom-fwtool-cli  -p PORT write [-h] [-a ADDRESS] [--contents CONTENTS]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -a ADDRESS, --address ADDRESS
+                        address to write to
+  --contents CONTENTS   contents of the memory to write (base64)
+ ```
+
 
 ###  cb                  
 Read/Write config block (LPMAC, Sigfox PAC & ID, etc.). You can find the
