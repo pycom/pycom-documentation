@@ -43,7 +43,7 @@ s.setblocking(True)
 s.send(bytes([0x01, 0x02, 0x03]))
 
 # make the socket non-blocking
-# (because if there's no data received it will block forever...)
+# (because if there is no data received it will block forever...)
 s.setblocking(False)
 
 # get any data received (if any...)
