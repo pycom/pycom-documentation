@@ -88,7 +88,7 @@ dfu-util-static.exe -D pysense_X.X.X.dfu
 
 If the update was successful, a message, “Done!” should appear in the bottom of the command prompt.
 
-If, by mistake, the libusbk driver was installed while the USB ID is the Application mode (0xF013 for Pytrack or 0xF012 for Pysense), then the ``Serial USB (CDC)`` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
+**Double-check Serial USB (CDC) driver is installed in Application mode:** if, by mistake, the libusbk driver was installed while the USB ID is the Application mode (0xF013 for Pytrack or 0xF012 for Pysense), then the ``Serial USB (CDC)`` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
 
 <p align="center"><img src ="../../../img/pytrack_app_mode_zadig.png" width="800"></p>
 
