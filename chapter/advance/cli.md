@@ -76,8 +76,8 @@ The parameter `-r, --reset` has been added as a courtesy for users of 3rd party 
 {% endhint %}
 
 ## Global Parameters
-{% hint style='info' %}
 
+```
 `-h / --help`    : shows above help (you can also get detailed help for each sub-command
 `-v / --verbose` : show verbose output from esptool.
 `-d / --debug`   : show debug output from fwtool.
@@ -89,7 +89,7 @@ The parameter `-r, --reset` has been added as a courtesy for users of 3rd party 
 `--ftdi`         : This will force the CLI updater to run in FTDI mode.
 `--pic`          : This will force the CLI updater to run in PIC mode.
 `-r, --reset`    : This will force the CLI updater to use Espressif's workaround to switch into Firmware update mode. This reset method is intended for 3rd party hardware only and is not supported by the Expansion Board 2.0
-{% endhint %}
+```
 
 ## Commands
 ###  list                
