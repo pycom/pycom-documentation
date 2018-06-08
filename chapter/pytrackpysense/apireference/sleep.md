@@ -56,6 +56,8 @@ Returns the last wakeup reason. Possible values are:
 # WAKE_REASON_TIMER = 4         # Normal timeout of the sleep interval
 # WAKE_REASON_INT_PIN = 8       # INT pin
 ```
+*Note: the `WAKE_REASON_INT_PIN` can be used if the PIC_RC1 pin (pin#6 on External IO Header) is toggled.*
+
 As in the above example, this method should be called at the beginning of the script, to find out the reset (wakeup) reason.
 
 #####<function>pytrack.go_to_sleep([gps=True])</function>
@@ -85,7 +87,7 @@ acc.enable_activity_interrupt(2000, 200)
 
 #####<function>pytrack.setup_int_pin_wake_up([rising_edge = True])</function>
 
-Enables as wakeup source, the INT pic (PIC - RC1). Either rising or falling edge has to be set, by default it's rising edge.
+Enables as wakeup source, the INT pic (PIC - RC1, pin#6 on External IO Header). Either rising or falling edge has to be set, by default it's rising edge.
 
 #####<function>pytrack.setup_sleep(time_seconds)</function>
 
