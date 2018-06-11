@@ -1,4 +1,4 @@
-<p align="center"><img src ="../../img/pybytes/pybytesLogo.png" width="400"></p>
+<a href="http://pybytes.io/" target="_blank"><p align="center"><img src ="../../img/pybytes/pybytesLogo.png" width="400"></p></a>
 
 # What is Pybytes?
 Pybytes is an IoT Ecosystem that empowers you by granting full control of all your Pycom devices.
