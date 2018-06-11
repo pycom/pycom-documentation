@@ -10,7 +10,7 @@ In case you want to extend Pybytes library you can flash Pybytes library manuall
 At the last step of the "Add Device" process:
 <p><img src ="../../../img/pybytes/add-device-wizard/7.png" width="800"></p>
 
-1. Download the firmware updater for your operating system;
+1. Download the <a href="https://pycom.io/downloads/" target="_blank">firmware updater</a> for your operating system;
 <p><img src ="../../../img/pybytes/add-device-wizard/8.png" width="550"></p>
 2. Copy the device token.
 
