@@ -23,8 +23,10 @@ building your projects.
 {% grid %}
   {% col 1 %}<a href="chapter/datasheets/README.md"><p align="center"><img src ="img/datasheetsIcon.png"></p></a>
   {% col 1 %}<a href="chapter/firmwareapi/README.md"><p align="center"><img src ="img/APIIcon.png"></p></a>
+  {% col 1 %}<a href="chapter/pybytes/README.md"><p align="center"><img src ="img/pybytes/pybytesIcon.png"></p></a>
 {% endgrid %}
 {% grid %}
   {% col 1 %}<a href="chapter/datasheets/README.md"><p align="center">Product Info</p></a>
   {% col 1 %}<a href="chapter/firmwareapi/README.md"><p align="center">API Documentation</p></a>
+  {% col 1 %}<a href="chapter/pybytes/README.md"><p align="center">Pybytes</p></a>
 {% endgrid %}
