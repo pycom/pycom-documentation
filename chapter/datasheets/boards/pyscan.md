@@ -6,6 +6,8 @@
 Pyscan libraries to use the RFID/NFC reader are located here: https://github.com/pycom/pycom-libraries/tree/master/pyscan
 The accelerometer library is here: https://github.com/pycom/pycom-libraries/blob/master/pytrack/lib/LIS2HH12.py
 
+For the time being, we recommend to upload the MFRC630.mpy file via FTP due to current limitations of Pymakr that will be fixed shortly.
+
 Libraries for the rest of the components will be added soon.
 
 ### Pyscan components:
