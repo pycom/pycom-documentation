@@ -92,13 +92,14 @@ If the update was successful, a message, “Done!” should appear in the bottom
 
 <p align="center"><img src ="../../../img/pytrack_app_mode_zadig.png" width="800"></p>
 
-### Using DFU-util with Pytrack and Pysense
+### Using DFU-util with Pytrack, Pysense and Expansion Board v3
 
-In order to put Pyrack or Pysense in DFU mode, press and hold the button on the Pytrack/Pysense board whilst powering on the board (connecting the USB cable).
+To enter update mode follow these steps:
 
-1. Press the button and keep it held
-2. Next plug-in the USB cable to the host computer and wait 1 second before releasing the button.
-3. After this you will have approximately 7 seconds to run the DFU-util tool.
+1. Unplug the device
+2. Press the button and keep it held (on the Expansion Board the "S1" button)
+3. Plug in the USB cable to the host computer and wait 1 second before releasing the button
+4. After this you will have approximately 7 seconds to run the DFU-util tool
 
 ##### MacOS and Linux:
 
