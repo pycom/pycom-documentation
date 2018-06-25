@@ -4,7 +4,7 @@ By default the heartbeat LED flashes in blue colour once every 4s to signal that
 ```python
 import pycom
 pycom.heartbeat(False)
-pycom.rgbled(0xff00)           # turn on the RGB LED in green colour
+pycom.rgbled(0x00ff00)           # turn on the RGB LED in green colour
 ```
 
 The heartbeat LED is also used to indicate that an error was detected.
