@@ -16,7 +16,7 @@ temp = DS18X20(ow)
 while True:
     print(temp.read_temp_async())
     time.sleep(1)
-    temp.start_convertion()
+    temp.start_conversion()
     time.sleep(1)
 ```
 
@@ -189,11 +189,11 @@ class DS18X20(object):
     def isbusy(self):
         """
         Checks wether one of the DS18x20 devices on the bus is busy
-        performing a temperature convertion
+        performing a temperature conversion
         """
         return not self.ow.read_bit()
 
-    def start_convertion(self, rom=None):
+    def start_conversion(self, rom=None):
         """
         Start the temp conversion on one DS18x20 device.
         Pass the 8-byte bytes object with the ROM of the specific device you want to read.
@@ -207,7 +207,7 @@ class DS18X20(object):
 
     def read_temp_async(self, rom=None):
         """
-        Read the temperature of one DS18x20 device if the convertion is complete,
+        Read the temperature of one DS18x20 device if the conversion is complete,
         otherwise return None.
         """
         if self.isbusy():

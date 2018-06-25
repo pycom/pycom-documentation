@@ -86,7 +86,7 @@ Return a 24-bit software generated random number.
 Returns a byte string with a unique identifier of a board/SoC. It will vary from a board/SoC instance to another, if underlying hardware allows. Length varies by hardware (so use substring of a full value if you expect a short ID). In some MicroPython ports, ID corresponds to the network MAC address.
 
 {% hint style='info' %}
-Use ``binascii.hexlify()`` to convert the byte string to hexadecimal form for ease of manipulation and use elsewhere.
+Use ``ubinascii.hexlify()`` to convert the byte string to hexadecimal form for ease of manipulation and use elsewhere.
 {% endhint %}
 
 #####<function>machine.info()</function>

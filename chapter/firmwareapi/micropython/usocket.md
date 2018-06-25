@@ -87,7 +87,8 @@ Accept a connection. The socket must be bound to an address and listening for co
 
 Connect to a remote socket at address.
 
-socket.send(bytes)
+#####<function>socket.send(bytes)</function>
+
 Send data to the socket. The socket must be connected to a remote socket.
 
 #####<function>socket.sendall(bytes)</function>
