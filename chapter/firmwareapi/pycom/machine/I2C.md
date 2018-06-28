@@ -2,7 +2,7 @@
 
 I2C is a two-wire protocol for communicating between devices. At the physical level it consists of 2 wires: SCL and SDA, the clock and data lines respectively.
 
-I2C objects are created attached to a specific bus. They can be initialized when created, or initialized later on.
+I2C objects are created attached to a specific bus. They can be initialised when created, or initialised later on.
 
 ### Example using default Pins
 
@@ -26,9 +26,7 @@ i2c.init(I2C.MASTER, baudrate=20000) # init as a master
 i2c.deinit()                         # turn off the peripheral
 ```
 
-
-
-Printing the i2c object gives you information about its configuration.
+Printing the `i2c` object gives you information about its configuration.
 
 A master must specify the recipient’s address:
 
@@ -66,7 +64,7 @@ i2c.writeto_mem(0x42, 0x10, 'xy') # write 2 bytes to slave 0x42, slave memory 0x
 
 #####<class><i>class</i> machine.I2C(bus, ...)</class>
 
-Construct an I2C object on the given bus. bus can only be 0, 1 or 2. If the bus is not given, the default one will be selected (0). Buses 0 and 1 use the ESP32 I2C hardware peripheral while bus 2 is implemented with a bit-banged software driver.
+Construct an I2C object on the given `bus`. `bus` can only be `0, 1, 2`. If the `bus` is not given, the default one will be selected (`0`). Buses `0` and `1` use the ESP32 I2C hardware peripheral while bus `2` is implemented with a bit-banged software driver.
 
 ### General Methods
 
@@ -74,30 +72,30 @@ Construct an I2C object on the given bus. bus can only be 0, 1 or 2. If the bus 
 
 Initialise the I2C bus with the given parameters:
 
-- ``mode`` must be <constant>I2C.MASTER</constant>
-- ``baudrate`` is the SCL clock rate
-- pins is an optional tuple with the pins to assign to the I2C bus. The default I2C pins are P9 (SDA) and P10 (SCL)
+- `mode` must be <constant>I2C.MASTER</constant>
+- `baudrate` is the SCL clock rate
+- pins is an optional tuple with the pins to assign to the I2C bus. The default I2C pins are `P9` (SDA) and `P10` (SCL)
 
 #####<function>i2c.scan()</function>
 
-Scan all I2C addresses between 0x08 and 0x77 inclusive and return a list of those that respond. A device responds if it pulls the SDA line low after its address (including a read bit) is sent on the bus.
+Scan all I2C addresses between `0x08` and `0x77` inclusive and return a list of those that respond. A device responds if it pulls the SDA line low after its address (including a read bit) is sent on the bus.
 
 ### Standard Bus Operations
 The following methods implement the standard I2C master read and write operations that target a given slave device.
 
 #####<function>i2c.readfrom(addr, nbytes)</function>
 
-Read nbytes from the slave specified by addr. Returns a bytes object with the data read.
+Read `nbytes` from the slave specified by `addr`. Returns a bytes object with the data read.
 
 #####<function>i2c.readfrom_into(addr, buf)</function>
 
-Read into buf from the slave specified by addr. The number of bytes read will be the length of buf.
+Read into `buf` from the slave specified by `addr`. The number of bytes read will be the length of `buf`.
 
 Return value is the number of bytes read.
 
 #####<function>i2c.writeto(addr, buf, * , stop=True)</function>
 
-Write the bytes from buf to the slave specified by addr. The argument buf can also be an integer which will be treated as a single byte. If stop is set to False then the stop condition won’t be sent and the I2C operation may be continued (typically with a read transaction).
+Write the bytes from `buf` to the slave specified by `addr`. The argument `buf` can also be an integer which will be treated as a single byte. If `stop` is set to `False` then the stop condition won’t be sent and the I2C operation may be continued (typically with a read transaction).
 
 Return value is the number of bytes written.
 
@@ -107,17 +105,17 @@ Some I2C devices act as a memory device (or set of registers) that can be read f
 
 #####<function>i2c.readfrom_mem(addr, memaddr, nbytes, *, addrsize=8)</function>
 
-Read nbytes from the slave specified by addr starting from the memory address specified by memaddr. The addrsize argument is specified in bits and it can only take 8 or 16.
+Read `nbytes` from the slave specified by `addr` starting from the memory address specified by `memaddr`. The `addrsize` argument is specified in bits and it can only take 8 or 16.
 
 #####<function>i2c.readfrom_mem_into(addr, memaddr, buf, *, addrsize=8)</function>
 
-Read into buf from the slave specified by addr starting from the memory address specified by memaddr. The number of bytes read is the length of buf. The addrsize argument is specified in bits and it can only take 8 or 16.
+Read into `buf` from the slave specified by `addr` starting from the memory address specified by `memaddr`. The number of bytes read is the length of `buf`. The `addrsize` argument is specified in bits and it can only take 8 or 16.
 
 The return value is the number of bytes read.
 
 #####<function>i2c.writeto_mem(addr, memaddr, buf *, addrsize=8)</function>
 
-Write buf to the slave specified by addr starting from the memory address specified by memaddr. The argument buf can also be an integer which will be treated as a single byte. The addrsize argument is specified in bits and it can only take 8 or 16.
+Write `buf` to the slave specified by `addr` starting from the memory address specified by `memaddr`. The argument `buf` can also be an integer which will be treated as a single byte. The `addrsize` argument is specified in bits and it can only take 8 or 16.
 
 The return value is the number of bytes written.
 

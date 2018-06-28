@@ -15,11 +15,12 @@ instructions, along with links to any specific guides we are aware of.
 Firstly you will need to get your modules `Device EUI`, this can be achieved
 using the following code:
 
-```
+```python
 from network import LoRa
-import binascii
+import ubinascii
+
 lora = LoRa(mode=LoRa.LORAWAN)
-print(binascii.hexlify(lora.mac()).upper().decode('utf-8'))
+print(ubinascii.hexlify(lora.mac()).upper().decode('utf-8'))
 ```
 
 The output will be a hex string like: `70B3D5499585FCA1`. Once you have this
@@ -45,6 +46,7 @@ have these you can use the
 the network.
 
 #### Networks
+
 {% grid %}
   {% col 1 %}<a href="lora/ttn.md"><p align="center"><img src ="./lora/img/ttn.png" height="200"></p></a>
   {% col 1 %}<div class="wrapper" style="height:100%; display:flex; align-items:center;"><a href="lora/objenious.md"><img src ="./lora/img/objenious.jpg"></a></div>
@@ -53,5 +55,5 @@ the network.
 {% hint style='tip' %}
 If you cannot find your favourite LoRaWAN network in the list above, please
 consider writing a tutorial for how to connect a Pycom module with it and
-contribute it to this documentation via a GitHub pull request.
+contribute it to this documentation via a [GitHub pull request](https://github.com/pycom/pycom-documentation).
 {% endhint %}

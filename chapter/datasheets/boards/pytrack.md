@@ -9,7 +9,7 @@ The pinout of the Pytrack is available as a <a href="../downloads/pytrack-pinout
 
 ### Battery Charger
 
-The expansion board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, the expansion board will charger the battery (if connected).
+The board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, it will charge the battery (if connected).
 
 ### Specsheets
 

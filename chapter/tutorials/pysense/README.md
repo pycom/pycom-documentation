@@ -2,9 +2,9 @@
 
 ## Accelerometer
 
-This basic example shows how to read pitch and roll from the on-board accelerometer and output it in comma separated value \(CSV\) format over serial.
+This basic example shows how to read pitch and roll from the on-board accelerometer and output it in comma separated value (CSV) format over serial.
 
-```py
+```python
 from LIS2HH12 import LIS2HH12
 from pytrack import Pytrack
 py = Pytrack()
@@ -13,7 +13,7 @@ acc = LIS2HH12()
 while True:
    pitch = acc.pitch()
    roll = acc.roll()
-   print('{},{}'.format(pitch,roll))
+   print('{},{}'.format(pitch, roll))
    time.sleep_ms(100)
 ```
 

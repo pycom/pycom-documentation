@@ -13,9 +13,9 @@ Please follow these steps to install the Pymakr VSCode Extension:
 <p align="center"><img src ="../../../img/visual_studio_code/vsc_setup_step_1.png" style="max-width:600px;"></p>
 2. Navigate to the Extensions page, using the 5th button in the left navigation
 <p align="center"><img src ="../../../img/visual_studio_code/vsc_setup_step_2.png" style="max-width:600px;"></p>
-3. Search for Pymakr and click the install button next to it.
+3. Search for `Pymakr` and click the install button next to it.
 <p align="center"><img src ="../../../img/visual_studio_code/vsc_setup_step_3.png" style="max-width:600px;"></p>
-4. Within a few minutes, a Reload button should appear. Press it to reload VSCode.
+4. Within a few minutes, a reload button should appear. Press it to reload VSCode.
 <p align="center"><img src ="../../../img/visual_studio_code/vsc_setup_step_4.png" style="max-width:600px;"></p>
 5. That’s it! You’ve installed the Pymakr Extension for VSCode
 <p align="center"><img src ="../../../img/visual_studio_code/vsc_setup_step_5.png" style="max-width:600px;"></p>
@@ -27,7 +27,7 @@ it for first time use. Please follow these steps:
 
 1. Connect your Pycom device to your computer via USB. If you are using an
 expansion board, and have just finished a firmware upgrade, be sure to **Remove
- the wire between GND and G23** and reset your device by pressing the button.
+the wire between GND and G23** and reset your device by pressing the button.
 2. Open Visual Studio Code and ensure that the Pymakr Plugin has correctly installed.
 <p align="center"><img src ="../../../img/visual_studio_code/vsc_config_step_1.png" style="max-width:600px;"></p>
 3. Click `All commands` on the bottom of the Visual Studio Code window
@@ -40,11 +40,11 @@ the correct serial port.
 <p align="center"><img src ="../../../img/visual_studio_code/vsc_config_step_4.png" style="max-width:600px;"></p>
 6. Once again click `All commands`, then click `Pymakr > Global Settings`. This
 will open a JSON file. Paste the serial address you copied earlier into the field
-'address' and save the file.
+`address` and save the file.
  <p align="center"><img src ="../../../img/visual_studio_code/vsc_config_step_5.png" style="max-width:600px;"></p>
 7. Finally close the JSON file, click `All commands`, then `Pymakr > Connect` to
-connect your device. The Pymakr console should show three arrows '>>>',
-indicating that you are connected!
+connect your device. The Pymakr console should show three arrows `>>>`,
+indicating that you are connected
 <p align="center"><img src ="../../../img/visual_studio_code/vsc_config_step_6.png" style="max-width:600px;"></p>
 
 These settings can also be applied on a per project basis by clicking `All
@@ -66,11 +66,11 @@ interface. Please see the following steps:
 
 1. Ensure that Pycom device is turned on
 2. Connect the host computer to the WiFi Access Point named after your board
-(the SSID will be as follows e.g. ``lopy-wlan-xxxx``, ``wipy-wlan-xxxx``, etc.).
-The password is ``www.pycom.io``.
+(the SSID will be as follows e.g. `lopy-wlan-xxxx`, `wipy-wlan-xxxx`, etc.).
+The password is `www.pycom.io`.
 3. Follow the steps as above in the "Connecting via Serial USB" section but
 enter `192.168.4.1` as the address.
-4. The default ``username`` and ``password`` are ``micro`` and ``python``,
+4. The default username and password are `micro` and `python`,
 respectively.
 5. Finally close the JSON file, click `All commands`, then `Pymakr > Connect`,
 Pymakr will now connect via telnet.

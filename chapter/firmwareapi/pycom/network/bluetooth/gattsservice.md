@@ -17,10 +17,10 @@ Stops the service if previously started.
 
 Creates a new characteristic on the service. Returns an object of the class GATTSCharacteristic. The arguments are:
 
-- ``uuid`` is the UUID of the service. Can take an integer or a 16 byte long string or bytes object.
-- ``permissions`` configures the permissions of the characteristic. Takes an integer with a combination of the flags.
-- ``properties`` sets the properties. Takes an integer with an OR-ed combination of the flags.
-- ``value`` sets the initial value. Can take an integer, a string or a bytes object.
+- `uuid` is the UUID of the service. Can take an integer or a 16 byte long string or bytes object.
+- `permissions` configures the permissions of the characteristic. Takes an integer with a combination of the flags.
+- `properties` sets the properties. Takes an integer with an OR-ed combination of the flags.
+- `value` sets the initial value. Can take an integer, a string or a bytes object.
 
 ```python
 service.characteristic('temp', value=25)

@@ -2,7 +2,7 @@
 Sigfox is a Low Power Wide Area Network protocol that enables remote devices to connect using ultra-narrow band, UNB technology. The protocol is bi-directional, messages can both be sent up to and down from the Sigfox servers.
 
 {% hint style='info' %}
-When operating in RCZ2 and RCZ4 the module can only send messages on the default macro-channel (this is due to Sigfox network limitations). Therefore, the device needs to reset automatically to the default macro-channel after every 2 transmissions. However, due to FCC duty cycle limitations, there must a minimum of a 20s delay after resetting to the default macro-channel. Our API takes care of this, (and in real life applications you should not be in the need to send Sigfox messages that often), so it will wait for the necessary amount of time to make sure that the duty cycle restrictions are fulfilled.
+When operating in `RCZ2` and `RCZ4` the module can only send messages on the default macro-channel (this is due to Sigfox network limitations). Therefore, the device needs to reset automatically to the default macro-channel after every 2 transmissions. However, due to FCC duty cycle limitations, there must a minimum of a 20s delay after resetting to the default macro-channel. Our API takes care of this, (and in real life applications you should not be in the need to send Sigfox messages that often), so it will wait for the necessary amount of time to make sure that the duty cycle restrictions are fulfilled.
 
 This means that if you run a piece of test code like:
 
@@ -15,7 +15,7 @@ for i in range(1, 100):
 There will be a 20 second delay after every 2 packets.
 {% endhint %}
 
-This class provides a driver for the Sigfox network processor in the Sigfox enabled Pycom Devices.
+This class provides a driver for the Sigfox network processor in the Sigfox enabled Pycom devices.
 
 ### Quick Usage Example
 
@@ -64,12 +64,12 @@ Set the Sigfox radio configuration.
 
 The arguments are:
 
-- ``mode`` can be either <constant>Sigfox.SIGFOX</constant> or <constant>Sigfox.FSK</constant>. <constant>Sigfox.SIGFOX</constant> uses the Sigfox modulation and protocol while <constant>Sigfox.FSK</constant> allows to create point to point communication between 2 Devices using FSK modulation.
-- ``rcz`` takes the following values: <constant>Sigfox.RCZ1</constant>, <constant>Sigfox.RCZ2</constant>, <constant>Sigfox.RCZ3</constant>, <constant>Sigfox.RCZ4</constant>. The ``rcz`` argument is only required if the mode is <constant>Sigfox.SIGFOX</constant>.
-- ``frequency`` sets the frequency value in ``FSK`` mode. Can take values between 863 and 928 MHz.
+- `mode` can be either <constant>Sigfox.SIGFOX</constant> or <constant>Sigfox.FSK</constant>. <constant>Sigfox.SIGFOX</constant> uses the Sigfox modulation and protocol while <constant>Sigfox.FSK</constant> allows to create point to point communication between 2 Devices using FSK modulation.
+- `rcz` takes the following values: <constant>Sigfox.RCZ1</constant>, <constant>Sigfox.RCZ2</constant>, <constant>Sigfox.RCZ3</constant>, <constant>Sigfox.RCZ4</constant>. The `rcz` argument is only required if the mode is <constant>Sigfox.SIGFOX</constant>.
+- `frequency` sets the frequency value in `FSK` mode. Can take values between 863 and 928 MHz.
 
 {% hint style='info' %}
-The SiPy comes in 2 different hardware flavours: a +14dBm Tx power version which can only work with RCZ1 and RCZ3 and a +22dBm version which works exclusively on RCZ2 and RCZ4.
+The SiPy comes in 2 different hardware flavours: a +14dBm Tx power version which can only work with `RCZ1` and `RCZ3` and a +22dBm version which works exclusively on `RCZ2` and `RCZ4`.
 {% endhint %}
 
 #####<function>sigfox.mac()</function>
@@ -89,21 +89,21 @@ Returns a signed integer with indicating the signal strength value of the last r
 Returns a byte object with the 8-Byte bytes object with the Sigfox PAC.
 
 {% hint style='info' %}
-To return human-readable values you should import ``binascii`` and convert binary values to hexidecimal representation. For example:
+To return human-readable values you should import `ubinascii` and convert binary values to hexidecimal representation. For example:
 {% endhint %}
 
 
 ```python
-print(binascii.hexlify(sigfox.mac()))
+print(ubinascii.hexlify(sigfox.mac()))
 ```
 
 #####<function>sigfox.frequencies()</function>
 
-Returns a tuple of the form: (``uplink_frequency_hz``,``downlink_frequency_hz``)
+Returns a tuple of the form: `(uplink_frequency_hz, downlink_frequency_hz)`
 
 #####<function>sigfox.public_key([public])</function>
 
-Sets or gets the public key flag. When called passing a ``True`` value the Sigfox public key will be used to encrypt the packets. Calling it without arguments returns the state of the flag.
+Sets or gets the public key flag. When called passing a `True` value the Sigfox public key will be used to encrypt the packets. Calling it without arguments returns the state of the flag.
 
 ```python
 # enable encrypted packets
@@ -115,10 +115,13 @@ sigfox.public_key()
 
 ### Constants
 <constant>sigfox.SIGFOX</constant> <constant>sigfox.FSK</constant>
-Sigfox radio mode. SIGFOX to specify usage of the Sigfox Public Network. ``FSK`` to specify device to device communication.
+Sigfox radio mode. SIGFOX to specify usage of the Sigfox Public Network. `FSK` to specify device to device communication.
 
 <constant>sigfox.RCZ1</constant> <constant>sigfox.RCZ2</constant> <constant>sigfox.RCZ3</constant> <constant>sigfox.RCZ4</constant>
-Sigfox zones. RCZ1 to specify Europe, Oman & South Africa. RCZ2 for the USA, Mexico & Brazil. RCZ3 for Japan. RCZ4 for Australia, New Zealand, Singapore, Taiwan, Hong Kong, Colombia & Argentina.
+Sigfox zones.
+- `RCZ1` to specify Europe, Oman & South Africa.
+- `RCZ2` for the USA, Mexico & Brazil. RCZ3 for Japan.
+- `RCZ4` for Australia, New Zealand, Singapore, Taiwan, Hong Kong, Colombia & Argentina.
 
 ### Working with Sigfox Sockets
 
@@ -131,7 +134,7 @@ s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
 
 And they must be created after initialising the Sigfox network card.
 
-Sigfox sockets support the following standard methods from the ``socket`` module:
+Sigfox sockets support the following standard methods from the `socket` module:
 
 #####<function>socket.close()</function>
 
@@ -160,7 +163,7 @@ s.recv(64)
 
 #####<function>socket.setsockopt(level, optname, value)</function>
 
-Set the value of the given socket option. The needed symbolic constants are defined in the socket module (SO_* etc.). In the case of Sigfox the values are always an integer. Examples:
+Set the value of the given socket option. The needed symbolic constants are defined in the socket module (`SO_*` etc.). In the case of Sigfox the values are always an integer. Examples:
 
 ```python
 # wait for a downlink after sending the uplink packet
@@ -201,7 +204,7 @@ If the socket is set to blocking, your code will be wait until the socket comple
 
 ### Sigfox Downlink
 
-A Sigfox capable Pycom devices (SiPy) can both send and receive data from the Sigfox network. To receive data, a message must first be sent up to Sigfox, requesting a downlink message. This can be done by passing a True argument into the setsockopt() method.
+A Sigfox capable Pycom devices (SiPy) can both send and receive data from the Sigfox network. To receive data, a message must first be sent up to Sigfox, requesting a downlink message. This can be done by passing a `True` argument into the `setsockopt()` method.
 
 ```python
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, True)

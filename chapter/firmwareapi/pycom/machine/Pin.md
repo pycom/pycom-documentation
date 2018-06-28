@@ -5,14 +5,14 @@ A pin is the basic object to control I/O pins (also known as GPIO - general-purp
 ```python
 from machine import Pin
 
-# initialize ``P9`` in gpio mode and make it an output
+# initialize `P9` in gpio mode and make it an output
 p_out = Pin('P9', mode=Pin.OUT)
 p_out.value(1)
 p_out.value(0)
 p_out.toggle()
 p_out(True)
 
-# make ``P10`` an input with the pull-up enabled
+# make `P10` an input with the pull-up enabled
 p_in = Pin('P10', mode=Pin.IN, pull=Pin.PULL_UP)
 p_in() # get value, 0 or 1
 ```
@@ -21,7 +21,7 @@ p_in() # get value, 0 or 1
 
 #####<class><i>class</i> machine.Pin(id, ...)</class>
 
-Create a new Pin object associated with the string id. If additional arguments are given, they are used to initialise the pin. See <function>pin.init()</function>.
+Create a new Pin object associated with the string `id`. If additional arguments are given, they are used to initialise the pin. See <function>pin.init()</function>.
 
 ```python
 from machine import Pin
@@ -34,17 +34,17 @@ p = Pin('P10', mode=Pin.OUT, pull=None, alt=-1)
 
 Initialise the pin:
 
-- ``mode`` can be one of:
+- `mode` can be one of:
 	- <constant>Pin.IN</constant> - input pin.
 	- <constant>Pin.OUT</constant> - output pin in push-pull mode.
 	- <constant>Pin.OPEN_DRAIN</constant> - input or output pin in open-drain mode.
-- ``pull`` can be one of:
-	- ``None`` - no pull up or down resistor.
+- `pull` can be one of:
+	- `None` - no pull up or down resistor.
 	- <constant>Pin.PULL_UP</constant> - pull up resistor enabled.
 	- <constant>Pin.PULL_DOWN</constant> - pull down resistor enabled.
-- ``alt`` is the id of the alternate function.
+- `alt` is the id of the alternate function.
 
-Returns: ``None``.
+Returns: `None`.
 
 #####<function>pin.id()</function>
 
@@ -86,29 +86,29 @@ Get or set the pin pull.
 
 Get or set the pin hold. You can apply a hold to a pin by passing `True` (or
 clear it by passing `False`). When a pin is held, its value cannot be changed by
-using  ``Pin.value()`` or ``Pin.toggle()`` until the hold is released. This Can
+using  `Pin.value()` or `Pin.toggle()` until the hold is released. This Can
 be used to retain the pin state through a core reset and system reset triggered
  by watchdog time-out or Deep-sleep events. Only pins in the RTC power domain
- can retain their value through deep sleep or reset. These are:  `P2`, `P3`,
-`P4`, `P6`, `P8`, `P9`, `P10`, `P13`, `P14`, `P15`, `P16`, `P17`, `P18`, `P19`,
-`P20`, `P21`, `P22`, and `P23`.
+ can retain their value through deep sleep or reset. These are: `P2, P3,
+P4, P6, P8, P9, P10, P13, P14, P15, P16, P17, P18, P19,
+P20, P21, P22, P23`.
 
 
 #####<function>pin.callback(trigger, handler=None, arg=None)</function>
 
 Set a callback to be triggered when the input level at the pin changes.
 
-- trigger is the type of event that triggers the callback. Possible values are:
+- `trigger` is the type of event that triggers the callback. Possible values are:
 	- <constant>Pin.IRQ_FALLING</constant> interrupt on falling edge.
 	- <constant>Pin.IRQ_RISING</constant> interrupt on rising edge.
 	- <constant>Pin.IRQ_LOW_LEVEL</constant> interrupt on low level.
 	- <constant>Pin.IRQ_HIGH_LEVEL</constant> interrupt on high level.
 
-The values can be OR-ed together, for instance trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING
+The values can be OR-ed together, for instance `trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING`
 
-- handler is the function to be called when the event happens. This function will receive one argument. Set handler to None to disable it.
+- `handler` is the function to be called when the event happens. This function will receive one argument. Set `handler` to `None` to disable it.
 
-- arg is an optional argument to pass to the callback. If left empty or set to None, the function will receive the Pin object that triggered it.
+- `arg` is an optional argument to pass to the callback. If left empty or set to `None`, the function will receive the Pin object that triggered it.
 
 Example:
 
@@ -126,7 +126,6 @@ p_in.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING, pin_handler)
 For more information on how Pycom’s products handle interrupts, see [here](../../../toolsandfeatures/notes.md).
 {% endhint %}
 
-
 ### Attributes
 
 #####<class><i>class</i> pin.exp_board</class>
@@ -140,7 +139,7 @@ Pin.exp_board.G16.id()
 ```
 
 #####<class><i>class</i>  pin.module</class>
-Contains all ``Pin`` objects supported by the module. Examples:
+Contains all `Pin` objects supported by the module. Examples:
 
 ```python
 Pin.module.P9

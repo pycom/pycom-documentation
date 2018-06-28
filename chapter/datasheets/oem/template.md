@@ -13,7 +13,7 @@ The specsheet of the {{module}} is available as a <a href="../downloads/{{module
 
 The drawings for the {{module}} is available as a <a href="../downloads/{{module|lower}}-drawing.pdf" target="_blank">PDF File</a>.
 
-Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK,MOSI,MISO) and I2C (SDA,SCL) are defaults and can be changed in Software.
+Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
 
 {% if module=="G01" %}
 ###AT Commands
@@ -24,7 +24,7 @@ The AT commands for the Sequans Monarch modem on the {{module}} are available in
 
 ## Tutorials
 Tutorials on how to the {{ module }} module can be found in the
-[examples]() section of this documentation. The following tutorials might be of
+[examples](../../tutorials/README.md) section of this documentation. The following tutorials might be of
 specific interest for the {{ module }}:
 
 - [WiFi connection](../../tutorials/all/wlan.md)

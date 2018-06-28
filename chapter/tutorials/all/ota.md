@@ -5,30 +5,30 @@ while it is still running, we call this an "over the air" (OTA) update. The
 [pycom](../../firmwareapi/pycom/pycom.md) library provides several functions to
 achieve this. This example will demonstrate how you could potentially use this
 functionality to update deployed devices. The full source code of this example
-can be found [here.](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA)
+can be found [here](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA).
 
 # Method
 Here we will describe one possible update methodology you could use that is
 implemented by this example.
 
 Imagine you a smart metering company and you wish to roll out an update for your
-pycom based smart meter. These meters usually send data back via LoRa.
+Pycom based smart meter. These meters usually send data back via LoRa.
 Unfortunately LoRa downlink messages have a very limited size and several hundred
 if not thousand would be required to upload a complete firmware image. To get
 around this you can have your devices sending their regular data via LoRa and
 when they receive a special command via a downlink message, the devices will
-connect to a wifi network. It is unfeasible to ask customers to allow your
+connect to a WiFi network. It is unfeasible to ask customers to allow your
 device to connect to their home network so instead this network could be provided
 by a vehicle. This vehicle will travel around a certain geographic area in which
 the devices have been sent the special downlink message to initiate the update.
 The devices will look for the WiFi network being broadcast by the vehicle and
-connect.The devices will then connect to a server running on this WiFi network.
+connect. The devices will then connect to a server running on this WiFi network.
 This server (also shown in this example) will generate manifest files that
 instruct the device on what it should update, and where to get the update data
 from.
 
 # Server
-Code available [here.](https://github.com/pycom/pycom-libraries/blob/master/examples/OTA/OTA_server.py)
+Code available [here](https://github.com/pycom/pycom-libraries/blob/master/examples/OTA/OTA_server.py).
 
 This script runs a HTTP server on port `8000` that provisions over the air
 (OTA) update manifests in JSON format as well as serving the update content.
@@ -67,11 +67,11 @@ This script should be run in a directory that contains every version of the
   (http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html).
   They should contain the entire file system of the end device for the
   corresponding version number.
-- Firmware: These files should be named in the format "firmare_VERSION.bin",
+- Firmware: These files should be named in the format `firmare_VERSION.bin`,
   where VERSION is a a version number compatible with the python
   LooseVersion versioning scheme
   (http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html).
-  This file should be in the format of the appimg.bin created by the pycom
+  This file should be in the format of the `appimg.bin` created by the Pycom
   firmware build scripts.
 
 ## How to use
@@ -80,12 +80,13 @@ Once the directory has been setup as described above you simply need to start
 this script using python3. Once started this script will run a HTTP server on
 port `8000` (this can be changed by changing the PORT variable). This
 server will serve all the files in directory as expected along with one
-additional special file, "manifest.json". This file does not exist on the
+additional special file, `manifest.json`. This file does not exist on the
 file system but is instead generated when requested and contains the required
 changes to bring the end device from its current version to the latest
 available version. You can see an example of this by pointing your web
 browser at:
-  http://127.0.0.1:8000/manifest.json?current_ver=1.0.0
+
+`http://127.0.0.1:8000/manifest.json?current_ver=1.0.0`
 
 The `current_ver` field at the end of the URL should be set to the current
 firmware version of the end device. The generated manifest will contain lists
@@ -119,7 +120,8 @@ like:
    ],
    "version": "1.0.1b"
 }
- ```
+```
+
 The manifest contains the following fields:
 - `delete`: A list of paths to files which are no longer needed
 - `firmware`: The URL and SHA1 hash of the firmware image
@@ -137,13 +139,14 @@ this update
 
 In order for the URL's to be properly formatted you are required to send a
 "host" header along with your HTTP get request e.g:
+
 ```
 GET /manifest.json?current_ver=1.0.0 HTTP/1.0\r\nHost: 192.168.1.144:8000\r\n\r\n
 ```
 
 # Client Library
-A micropyton library for interfacing with the server described above is
-available [here.](https://github.com/pycom/pycom-libraries/blob/master/examples/OTA/1.0.0/flash/lib/OTA.py)
+A MicroPyton library for interfacing with the server described above is
+available [here](https://github.com/pycom/pycom-libraries/blob/master/examples/OTA/1.0.0/flash/lib/OTA.py).
 
 This library is split into two layers. The top level `OTA` class implements
 all the high level functionality such as parsing the JSON file, making back
@@ -170,14 +173,14 @@ out any code relating to LoRa. Leaving just the `WiFiOTA` initialisation and the
 `ota.connect()` and `ota.update()`
 {% endhint %}
 
-```
+```python
 from network import LoRa, WLAN
 import socket
 import time
 from OTA import WiFiOTA
 from time import sleep
 import pycom
-import binascii
+import ubinascii
 
 from config import WIFI_SSID, WIFI_PW, SERVER_IP
 
@@ -195,11 +198,11 @@ ota = WiFiOTA(WIFI_SSID,
 w = WLAN()
 w.deinit()
 
-# Initialize LoRa in LORAWAN mode.
+# Initialise LoRa in LORAWAN mode.
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
-app_eui = binascii.unhexlify('70B3D57ED0008CD6')
-app_key = binascii.unhexlify('B57F36D88691CEC5EE8659320169A61C')
+app_eui = ubinascii.unhexlify('70B3D57ED0008CD6')
+app_key = ubinascii.unhexlify('B57F36D88691CEC5EE8659320169A61C')
 
 # join a network using OTAA (Over the Air Activation)
 lora.join(activation=LoRa.OTAA, auth=(app_eui, app_key), timeout=0)

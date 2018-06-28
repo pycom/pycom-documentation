@@ -1,5 +1,5 @@
 # RMT
-Detailed information about this class can be found in [``RMT``](../../firmwareapi/pycom/machine/RMT.md).
+Detailed information about this class can be found in [`RMT`](../../firmwareapi/pycom/machine/RMT.md).
 
 The RMT (Remote Control) peripheral of the ESP32 is primarily designed to send
 and receive infrared remote control signals that use on-off-keying of a carrier
@@ -11,15 +11,15 @@ pin (*Note:* Pins `P13` -`P18` can only be used as inputs).
 
 
 | Channel | Resolution | Maximum Pulse Width |
-|-|-|-|-|
+|---------|------------|---------------------|
 | 0 <td colspan=3> Used by on-board LED
-| 1 <td colspan=3> Used by pycom.pulses_get()
-| 2 | 100nS | 3.2768 ms
-| 3 | 100nS | 3.2768 ms
-| 4 | 1000nS | 32.768 ms
-| 5 | 1000nS | 32.768 ms
-| 6 | 3125nS | 102.4  ms
-| 7 | 3125nS | 102.4  ms
+| 1 <td colspan=3> Used by `pycom.pulses_get()`
+|    2    |    100nS   | 3.2768 ms
+|    3    |    100nS   | 3.2768 ms
+|    4    |   1000nS   | 32.768 ms
+|    5    |   1000nS   | 32.768 ms
+|    6    |   3125nS   | 102.4  ms
+|    7    |   3125nS   | 102.4  ms
 
 
 ## Transmitting
@@ -30,6 +30,7 @@ is 1000 nano seconds, the given values are interpreted accordingly.
 
 In this first example, we define the signal as a tuple of binary values that
 define the shape of the desired signal along with the duration of a bit.
+
 ```python
 from machine import RMT
 # Map RMT channel 4 to P21, when the RMT is idle, it will output LOW
@@ -41,11 +42,12 @@ data = (1,0,1,1,1,0,1,0,1)
 duration = 10000
 rmt.pulses_send(duration, data)
 ```
-![Waveform of example 1](../../../img/tutorials/RMT/RMT_EX_1.png)
 
+![Waveform of example 1](../../../img/tutorials/RMT/RMT_EX_1.png)
 
 In this example we define the signal by a tuple of durations and what state the
 signal starts in.
+
 ```python
 from machine import RMT
 # Map RMT channel 4 to P21, when the RMT is idle, it will output LOW
@@ -60,12 +62,13 @@ duration = (8000,11000,8000,11000,6000,13000,6000,3000,8000)
 # toggle state between each duration
 rmt.pulses_send(duration, start_level=RMT.HIGH)
 ```
-![Waveform of example 2](../../../img/tutorials/RMT/RMT_EX_2.png)
 
+![Waveform of example 2](../../../img/tutorials/RMT/RMT_EX_2.png)
 
 This third example, is a combination of the above two styles of defining a
 signal. Each pulse has a defined duration as well as a state. This is useful
 if you don't always want the signal to toggle state.
+
 ```python
 from machine import RMT
 # Map RMT channel 4 to P21, when the RMT is idle, it will output LOW
@@ -77,9 +80,11 @@ data = (1,0,1,1,0,1)
 duration = (400,200,100,300,200,400)
 rmt.pulses_send(duration, data)
 ```
+
 ![Waveform of example 3](../../../img/tutorials/RMT/RMT_EX_3.png)
 
 The following example creates an RMT object on channel 4 and configures it for transmission with carrier modulation.
+
 ```python
 from machine import RMT
 rmt = RMT(channel=4,
@@ -91,13 +96,12 @@ data = (1,0,1)
 duration = 10000
 rmt.pulses_send(duration, data)
 ```
+
 ![Waveform of example 4](../../../img/tutorials/RMT/RMT_EX_4.png)
-
-
 
 The following example creates an RMT object on channel 2, configures it for receiving, then waits for the first, undefined number of pulses without timeout
 
-```py
+```python
 from machine import RMT
 rmt = machine.RMT(channel=2)
 rmt.init(gpio="P21", rx_idle_threshold=1000)
@@ -128,12 +132,10 @@ rmt.init()
 data = rmt.pulses_get(timeout=500)
 ```
 
-
 The following example creates an RMT object on channel 2, configures it for receiving, filters out pulses with width < 20*100 nano seconds, then waits for 100 pulses
 
-```py
+```python
 from machine import RMT
-
 
 rmt = machine.RMT(channel=2,  # Resolution = 100ns
                   gpio="P21",

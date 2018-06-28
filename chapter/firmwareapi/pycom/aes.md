@@ -30,11 +30,11 @@ Create an AES object that will let you encrypt and decrypt messages.
 
 The arguments are:
 
-- ``key`` (byte string) is the secret key to use. It must be 16 (AES-128), 24 (AES-192), or 32 (AES-256) bytes long.
-- ``mode`` is the chaining mode to use for encryption and decryption. Default is <constant>AES.MODE_ECB</constant>.
-- ``IV`` (byte string) initialisation vector. Should be 16 bytes long. It is ignored in modes <constant>AES.MODE_ECB</constant> and <constant>AES.MODE_CRT</constant>.
-- ``counter`` (byte string) used only for <constant>AES.MODE_CTR</constant>. Should be 16 bytes long. Should not be reused.
-- ``segment_size`` is the number of bits ``plaintext`` and ``ciphertext`` are segmented in. Is only used in <constant>AES.MODE_CFB</constant>. Supported values are <constant>AES.SEGMENT_8</constant> and <constant>AES.SEGMENT_128</constant>.
+- `key` (byte string) is the secret key to use. It must be 16 (AES-128), 24 (AES-192), or 32 (AES-256) bytes long.
+- `mode` is the chaining mode to use for encryption and decryption. Default is <constant>AES.MODE_ECB</constant>.
+- `IV` (byte string) initialisation vector. Should be 16 bytes long. It is ignored in modes <constant>AES.MODE_ECB</constant> and <constant>AES.MODE_CRT</constant>.
+- `counter` (byte string) used only for <constant>AES.MODE_CTR</constant>. Should be 16 bytes long. Should not be reused.
+- `segment_size` is the number of bits `plaintext` and `ciphertext` are segmented in. Is only used in <constant>AES.MODE_CFB</constant>. Supported values are <constant>AES.SEGMENT_8</constant> and <constant>AES.SEGMENT_128</constant>.
 
 ### Methods
 
@@ -58,7 +58,7 @@ Cipher-Block Chaining. An Initialisation Vector (IV) is required.
 
 <constant>AES.MODE_CFB</constant>
 
-Cipher feedback. ``plaintext`` and ``ciphertext`` are processed in segments of segment_size bits. Works a stream cipher.
+Cipher feedback. `plaintext` and `ciphertext` are processed in segments of `segment_size` bits. Works a stream cipher.
 
 <constant>AES.MODE_CTR</constant>
 

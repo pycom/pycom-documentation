@@ -1,10 +1,10 @@
 # LoPy to LoPy
 
-This example show how to connect two LoPys \(nodes\) via raw LoRa.
+This example show how to connect two LoPys (nodes) via raw LoRa.
 
 ### Node A
 
-```py
+```python
 from network import LoRa
 import socket
 import time
@@ -21,7 +21,7 @@ while True:
 
 ### Node B
 
-```py
+```python
 from network import LoRa
 import socket
 import time
@@ -33,6 +33,3 @@ while True:
     s.send('Ping')
     time.sleep(5)
 ```
-
-
-

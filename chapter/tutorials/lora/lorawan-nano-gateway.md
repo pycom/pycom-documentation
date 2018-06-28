@@ -1,13 +1,12 @@
 # LoRaWAN Nano-Gateway
 This example allows to connect a LoPy to a LoRaWAN network such as The Things Network (TTN) or Loriot to be used as a nano-gateway.
 
-This example uses settings specifically for connecting to The Things Network within the European 868 MHz region. For another usage, please see the ``config.py`` file for relevant sections that need changing.
+This example uses settings specifically for connecting to The Things Network within the European 868 MHz region. For another usage, please see the `config.py` file for relevant sections that need changing.
 
 Up to date versions of these snippets can be found at the following [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway). For more information and discussion about this code, see this forum [post](https://forum.pycom.io/topic/810/new-firmware-release-1-6-7-b1-lorawan-nano-gateway-with-ttn-example).
 
 ### Nano-Gateway
-The Nano-Gateway code is split into 3 files, ``main.py``, ``config.py`` and ``nanogateway.py``. These are used to configure and specify how the gateway will connect to a preferred network and how it can act as packet forwarder.
-
+The Nano-Gateway code is split into 3 files, `main.py`, `config.py` and `nanogateway.py`. These are used to configure and specify how the gateway will connect to a preferred network and how it can act as packet forwarder.
 
 #### Gateway ID
 
@@ -15,16 +14,16 @@ Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit 
 
 ```python
 from network import WLAN
-import binascii
+import ubinascii
 wl = WLAN()
-binascii.hexlify(wl.mac())[:6] + 'FFFE' + binascii.hexlify(wl.mac())[6:]
+ubinascii.hexlify(wl.mac())[:6] + 'FFFE' + ubinascii.hexlify(wl.mac())[6:]
 ```
 
 The result will by something like `b'240ac4FFFE008d88'` where `240ac4FFFE008d88` is your Gateway ID to be used in your network provider configuration.
 
 
-### Main (main.py)
-This file runs at boot and calls the library and ``config.py`` files to initalise the nano-gateway. Once configuration is set, the nano-gateway is then started.
+### Main (`main.py`)
+This file runs at boot and calls the library and `config.py` files to initialise the nano-gateway. Once configuration is set, the nano-gateway is then started.
 
 ```python
 """ LoPy LoRaWAN Nano Gateway example usage """
@@ -50,7 +49,7 @@ if __name__ == '__main__':
     input()
 ```
 
-### Configuration (config.py)
+### Configuration (`config.py`)
 
 This file contains settings for the server and network it is connecting to. Depending on the nano-gateway region and provider (TTN, Loriot, etc.) these will vary. The provided example will work with The Things Network (TTN) in the European, 868Mhz, region.
 
@@ -88,7 +87,7 @@ LORA_NODE_DR = 5
 # LORA_NODE_DR = 3                    
 ```
 
-### Library (nanogateway.py)
+### Library (`nanogateway.py`)
 The nano-gateway library controls all of the packet generation and forwarding for the LoRa data. This does not require any user configuration and the latest version of this code should be downloaded from the Pycom [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway).
 
 ```python
@@ -98,7 +97,7 @@ from network import WLAN
 from network import LoRa
 from machine import Timer
 import os
-import binascii
+import ubinascii
 import machine
 import json
 import time
@@ -184,7 +183,7 @@ class NanoGateway:
         self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.sock.setblocking(False)
 
-        # Push the first time immediatelly
+        # Push the first time immediately
         self._push_data(self._make_stat_packet())
 
         # Create the alarms
@@ -241,13 +240,13 @@ class NanoGateway:
         RX_PK["rxpk"][0]["datr"] = self._sf_to_dr(sf)
         RX_PK["rxpk"][0]["rssi"] = rssi
         RX_PK["rxpk"][0]["lsnr"] = float(snr)
-        RX_PK["rxpk"][0]["data"] = binascii.b2a_base64(rx_data)[:-1]
+        RX_PK["rxpk"][0]["data"] = ubinascii.b2a_base64(rx_data)[:-1]
         RX_PK["rxpk"][0]["size"] = len(rx_data)
         return json.dumps(RX_PK)
 
     def _push_data(self, data):
         token = os.urandom(2)
-        packet = bytes([PROTOCOL_VERSION]) + token + bytes([PUSH_DATA]) + binascii.unhexlify(self.id) + data
+        packet = bytes([PROTOCOL_VERSION]) + token + bytes([PUSH_DATA]) + ubinascii.unhexlify(self.id) + data
         with self.udp_lock:
             try:
                 self.sock.sendto(packet, self.server_ip)
@@ -256,7 +255,7 @@ class NanoGateway:
 
     def _pull_data(self):
         token = os.urandom(2)
-        packet = bytes([PROTOCOL_VERSION]) + token + bytes([PULL_DATA]) + binascii.unhexlify(self.id)
+        packet = bytes([PROTOCOL_VERSION]) + token + bytes([PULL_DATA]) + ubinascii.unhexlify(self.id)
         with self.udp_lock:
             try:
                 self.sock.sendto(packet, self.server_ip)
@@ -266,7 +265,7 @@ class NanoGateway:
     def _ack_pull_rsp(self, token, error):
         TX_ACK_PK["txpk_ack"]["error"] = error
         resp = json.dumps(TX_ACK_PK)
-        packet = bytes([PROTOCOL_VERSION]) + token + bytes([PULL_ACK]) + binascii.unhexlify(self.id) + resp
+        packet = bytes([PROTOCOL_VERSION]) + token + bytes([PULL_ACK]) + ubinascii.unhexlify(self.id) + resp
         with self.udp_lock:
             try:
                 self.sock.sendto(packet, self.server_ip)
@@ -314,7 +313,7 @@ class NanoGateway:
                     if t_us < 0:
                         t_us += 0xFFFFFFFF
                     if t_us < 20000000:
-                        self.uplink_alarm = Timer.Alarm(handler=lambda x: self._send_down_link(binascii.a2b_base64(tx_pk["txpk"]["data"]),
+                        self.uplink_alarm = Timer.Alarm(handler=lambda x: self._send_down_link(ubinascii.a2b_base64(tx_pk["txpk"]["data"]),
                                                                                               tx_pk["txpk"]["tmst"] - 10, tx_pk["txpk"]["datr"],
                                                                                               int(tx_pk["txpk"]["freq"] * 1000000)), us=t_us)
                     else:
@@ -343,7 +342,7 @@ To set up the gateway with The Things Network (TTN), navigate to their website a
 Once an account has been registered, the nano-gateway can then be registered. To do this, navigate to the TTN Console web page.
 
 ### Registering the Gateway
-Inside the TTN Console, there are two options, ``applications`` and ``gateways``. Select ``gateways`` and then click on ``register gateway``. This will allow for the set up and registration of a new nano-gateway.
+Inside the TTN Console, there are two options, `applications` and `gateways`. Select `gateways` and then click on `register gateway`. This will allow for the set up and registration of a new nano-gateway.
 
 <p align="center"><img src ="../../../img/ttn-2.png" width="500"></p>
 
@@ -354,22 +353,22 @@ These are unique to each gateway, location and country specific frequency. Pleas
 
 ** You need to tick the "I'm using the legacy packet forwarder" to enable the right settings.** This is because the Nano-Gateway uses the 'de facto' standard Semtech UDP protocol.
 
-| Option            | Value                               |
-|-------------------|-------------------------------------|
-| Protocol          | Packet Forwarder                    |
-| Gateway EUI       | User Defined (must match config.py) |
-| Description       | User Defined                        |
-| Frequency Plan    | Select Country (e.g. EU - 868 MHz)  |
-| Location          | User Defined                        |
-| Antenna Placement | Indoor or Outdoor                   |
+| Option            | Value                                 |
+|-------------------|---------------------------------------|
+| Protocol          | Packet Forwarder                      |
+| Gateway EUI       | User Defined (must match `config.py`) |
+| Description       | User Defined                          |
+| Frequency Plan    | Select Country (e.g. EU - 868 MHz)    |
+| Location          | User Defined                          |
+| Antenna Placement | Indoor or Outdoor                     |
 
-The Gateway EUI should match your Gateway ID from the config.py file. We suggest you follow the procedure described near the top of this document to create your own unique Gateway ID.
+The Gateway EUI should match your Gateway ID from the `config.py` file. We suggest you follow the procedure described near the top of this document to create your own unique Gateway ID.
 
-Once these settings have been applied, click ``Register Gateway``. A Gateway Overview page will appear, with the configuration settings showing. Next click on the ``Gateway Settings`` and configure the Router address to match that of the gateway (default: router.eu.thethings.network).
+Once these settings have been applied, click `Register Gateway`. A Gateway Overview page will appear, with the configuration settings showing. Next click on the `Gateway Settings` and configure the Router address to match that of the gateway (default: `router.eu.thethings.network`).
 
 <p align="center"><img src ="../../../img/ttn-4.png" width="500"></p>
 
-The ``Gateway`` should now be configured. Next, one or more nodes can now be configured to use the nano-gateway and TTN applications may be built.
+The `Gateway` should now be configured. Next, one or more nodes can now be configured to use the nano-gateway and TTN applications may be built.
 
 ### LoPy Node
 There are two methods of connecting LoPy devices to the nano-gateway, Over the Air Activation (OTAA) and Activation By Personalisation (ABP). The code and instructions for registering these methods are shown below, followed by instruction for how to connect them to an application on TTN.
@@ -386,7 +385,7 @@ When the LoPy connects an application (via TTN) using OTAA, the network configur
 
 from network import LoRa
 import socket
-import binascii
+import ubinascii
 import struct
 import time
 
@@ -394,9 +393,9 @@ import time
 lora = LoRa(mode=LoRa.LORAWAN)
 
 # create an OTA authentication params
-dev_eui = binascii.unhexlify('AABBCCDDEEFF7778') # these settings can be found from TTN
-app_eui = binascii.unhexlify('70B3D57EF0003BFD') # these settings can be found from TTN
-app_key = binascii.unhexlify('36AB7625FE77776881683B495300FFD6') # these settings can be found from TTN
+dev_eui = ubinascii.unhexlify('AABBCCDDEEFF7778') # these settings can be found from TTN
+app_eui = ubinascii.unhexlify('70B3D57EF0003BFD') # these settings can be found from TTN
+app_key = ubinascii.unhexlify('36AB7625FE77776881683B495300FFD6') # these settings can be found from TTN
 
 # set the 3 default channels to the same frequency (must be before sending the OTAA join request)
 lora.add_channel(0, frequency=868100000, dr_min=0, dr_max=5)
@@ -448,19 +447,19 @@ Using ABP join mode requires the user to define the following values and input t
 
 from network import LoRa
 import socket
-import binascii
+import ubinascii
 import struct
 import time
 
-# Initialize LoRa in LORAWAN mode.
+# Initialise LoRa in LORAWAN mode.
 lora = LoRa(mode=LoRa.LORAWAN)
 
 # create an ABP authentication params
-dev_addr = struct.unpack(">l", binascii.unhexlify('2601147D'))[0] # these settings can be found from TTN
-nwk_swkey = binascii.unhexlify('3C74F4F40CAE2221303BC24284FCF3AF') # these settings can be found from TTN
-app_swkey = binascii.unhexlify('0FFA7072CC6FF69A102A0F39BEB0880F') # these settings can be found from TTN
+dev_addr = struct.unpack(">l", ubinascii.unhexlify('2601147D'))[0] # these settings can be found from TTN
+nwk_swkey = ubinascii.unhexlify('3C74F4F40CAE2221303BC24284FCF3AF') # these settings can be found from TTN
+app_swkey = ubinascii.unhexlify('0FFA7072CC6FF69A102A0F39BEB0880F') # these settings can be found from TTN
 
-# join a network using ABP (Activation By Personalization)
+# join a network using ABP (Activation By Personalisation)
 lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))
 
 # remove all the non-default channels
@@ -496,42 +495,42 @@ for i in range (200):
 Now that the gateway & nodes have been setup, a TTN Application can be built; i.e. what happens to the LoRa data once it is received by TTN. There are a number of different setups/systems that can be used, however the following example demonstrates the HTTP request integration.
 
 ### Registering an Application
-Selecting the ``Applications`` tab at the top of the TTN console, will bring up a screen for registering applications. Click register and a new page, similar to the one below, will open.
+Selecting the `Applications` tab at the top of the TTN console, will bring up a screen for registering applications. Click register and a new page, similar to the one below, will open.
 
 <p align="center"><img src ="../../../img/ttn-5.png" width="500"></p>
 
-Enter a unique ``Application ID`` as well as a Description & Handler Registration.
+Enter a unique `Application ID` as well as a Description & Handler Registration.
 
 Now the LoPy nodes must be registered to send data up to the new Application.
 
 #### Registering Devices (LoPy)
-To connect nodes to the nano-gateway, devices need to be added to the application. To do this, navigate to the ``Devices`` tab on the ``Application`` home page and click the ``Register Device`` button.
+To connect nodes to the nano-gateway, devices need to be added to the application. To do this, navigate to the `Devices` tab on the `Application` home page and click the `Register Device` button.
 
 <p align="center"><img src ="../../../img/ttn-6.png" width="500"></p>
 
-In the ``Register Device`` panel, complete the forms for the ``Device ID`` and the ``Device EUI``. The ``Device ID`` is user specified and is unique to the device in this application. The ``Device EUI`` is also user specified but must consist of exactly 8 bytes, given in hexadecimal.
+In the `Register Device` panel, complete the forms for the `Device ID` and the `Device EUI`. The `Device ID` is user specified and is unique to the device in this application. The `Device EUI` is also user specified but must consist of exactly 8 bytes, given in hexadecimal.
 
-Once the device has been added, change the ``Activation Method`` between ``OTAA`` and ``ABP`` depending on user preference. This option can be found under the Settings tab.
+Once the device has been added, change the `Activation Method` between `OTAA` and `ABP` depending on user preference. This option can be found under the Settings tab.
 
 #### Adding Application Integrations
-Now that the data is arriving on the TTN Backend, TTN can be managed as to where data should be delivered to. To do this, use the ``Integrations`` tab within the new Application’s settings.
+Now that the data is arriving on the TTN Backend, TTN can be managed as to where data should be delivered to. To do this, use the `Integrations` tab within the new Application’s settings.
 
 <p align="center"><img src ="../../../img/ttn-7.png" width="500"></p>
 
-Upon clicking ``add integration``, a screen with 4 different options will appear. These have various functionality and more information about them can be found on the TTN website/documentation.
+Upon clicking `add integration`, a screen with 4 different options will appear. These have various functionality and more information about them can be found on the TTN website/documentation.
 
-For this example, use the ``HTTP Integration`` to forward the LoRaWAN Packets to a remote server/address.
+For this example, use the `HTTP Integration` to forward the LoRaWAN Packets to a remote server/address.
 
 <p align="center"><img src ="../../../img/ttn-8.png" width="500"></p>
 
-Click ``HTTP Integration`` to connect up an endpoint that can receive the data.
+Click `HTTP Integration` to connect up an endpoint that can receive the data.
 
-For testing, a website called [RequestBin](https://requestb.in/) may be used to receive the data that TTN forwards (via POST Request). To set this up, navigate to [RequestBin](https://requestb.in/) and click the ``Create a RequestBin``.
+For testing, a website called [RequestBin](https://requestb.in/) may be used to receive the data that TTN forwards (via POST Request). To set this up, navigate to [RequestBin](https://requestb.in/) and click the `Create a RequestBin`.
 
 <p align="center"><img src ="../../../img/ttn-9.png" width="500"></p>
 
-Copy the URL that is generated and past this into the ``URL`` form under the ``Application Settings``.
+Copy the URL that is generated and past this into the `URL` form under the `Application Settings`.
 
 <p align="center"><img src ="../../../img/ttn-10.png" width="500"></p>
 
-This is the address that TTN will forward data onto. As soon as a LoPy starts sending messages, TTN will forward these onto ``RequestBin`` and they will appear at the unique ``RequestBin URL``.
+This is the address that TTN will forward data onto. As soon as a LoPy starts sending messages, TTN will forward these onto `RequestBin` and they will appear at the unique `RequestBin URL`.

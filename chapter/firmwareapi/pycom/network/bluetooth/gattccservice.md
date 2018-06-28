@@ -5,7 +5,7 @@ The following class allows control over Client services.
 
 #####<function>service.isprimary()</function>
 
-Returns ``True`` if the service is a primary one. ``False`` otherwise.
+Returns `True` if the service is a primary one. `False` otherwise.
 
 #####<function>service.uuid()</function>
 

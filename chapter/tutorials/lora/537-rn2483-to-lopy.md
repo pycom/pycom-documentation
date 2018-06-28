@@ -16,18 +16,19 @@ radio set bw 125
 radio set sync 12
 radio set prlen 8
 
-# Transmit via radio tx: 
+# Transmit via radio tx:
 radio tx 48656c6C6F  #(should send ‘Hello’)
 ```
 
 ### LoPy
 
-```py
+```python
 from network import LoRa
 import socket
 
-lora = LoRa(mode=LoRa.LORA, frequency= 868000000, bandwidth=LoRa.BW_125KHZ, sf=7, preamble=8, coding_rate=LoRa.CODING_4_5, 
-    power_mode=LoRa.ALWAYS_ON, tx_iq=False, rx_iq=False, public=False)
+lora = LoRa(mode=LoRa.LORA, frequency= 868000000, bandwidth=LoRa.BW_125KHZ, sf=7, preamble=8,
+    coding_rate=LoRa.CODING_4_5, power_mode=LoRa.ALWAYS_ON,
+    tx_iq=False, rx_iq=False, public=False)
 
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 
@@ -35,6 +36,3 @@ s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 while(True):
     s.recv(64)
 ```
-
-
-

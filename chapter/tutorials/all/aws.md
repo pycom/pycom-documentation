@@ -1,6 +1,6 @@
 # Amazon Web Services
 
-The AWS IoT platform enables devices to connect to the Amazon cloud and lets applications in the cloud interact with Internet-connected things. Common IoT applications either collect and process telemetry from devices or enable users to control a device remotely. Things report their state by publishing messages, in JSON format, on MQTT topics. 
+The AWS IoT platform enables devices to connect to the Amazon cloud and lets applications in the cloud interact with Internet-connected things. Common IoT applications either collect and process telemetry from devices or enable users to control a device remotely. Things report their state by publishing messages, in JSON format, on MQTT topics.
 
 For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/developerguide/iot-dg.pdf).
 
@@ -15,24 +15,24 @@ For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/d
 - Click on the device that has been created
 - On the Details page, in the left navigation pane, choose <a href="../../../img/aws-4.png" target="_blank">Security</a>
 - On the Certificates page, choose Create certificate
-- Download all the certificates, then press the Activate and the Attach a Policy buttons. <a href="../../../img/aws-5.png" target="_blank">See image</a> 
-- Click on the Create New Policy button 
-- On the <a href="../../../img/aws-6.png" target="_blank">Create Policy</a> page, choose a policy name and the actions to authorize.
+- Download all the certificates, then press the Activate and the Attach a Policy buttons. <a href="../../../img/aws-5.png" target="_blank">See image</a>
+- Click on the Create New Policy button
+- On the <a href="../../../img/aws-6.png" target="_blank">Create Policy</a> page, choose a policy name and the actions to authorise.
 - Go to the certificates page, click on the three dots of your certificate and attach the policy to the certificate as shown in the <a href="../../../img/aws-7.png" target="_blank">diagram</a>
 
 ### Setting up the device (Pycom device):
 
 - Download the latest sample code from the Pycom [GitHub Repository](https://github.com/pycom/aws-pycom).
-- Connect to the device via ftp and put the root CA certificate, the client certificate (*.pem.crt) and the private key (*.private.pem.key) in the /flash/cert folder.
-- Update the config file with your wifi settings, the <a href="../../../img/aws-8.png" target="_blank">AWS Host</a> and the certificate paths. 
-- Put the config.py and the main.py in the device flash
+- Connect to the device via FTP and put the root CA certificate, the client certificate (`*.pem.crt`) and the private key (`*.private.pem.key`) in the `/flash/cert` folder.
+- Update the config file with your WiFi settings, the <a href="../../../img/aws-8.png" target="_blank">AWS Host</a> and the certificate paths.
+- Put the `config.py` and the `main.py` in the device flash
 
-### Configuration (config.py):
+### Configuration (`config.py`):
 
-This file contains the wifi, certificate paths and application specific settings that need to be updated by the user.
+This file contains the WiFi, certificate paths and application specific settings that need to be updated by the user.
 
 ```python
-# wifi configuration
+# WiFi configuration
 WIFI_SSID = 'my_wifi_ssid'
 WIFI_PASS = 'my_wifi_password'
 
@@ -72,12 +72,12 @@ LAST_WILL_MSG = 'To All: Last will message'
 #MQTT_OPER_TIMEOUT = 5
 ```
 
-### Subscibe / Publish (main.py)
+### Subscibe / Publish (`main.py`)
 
-To subsribe to a topic:
-- Go to the AWS Iot page, click on manage and choose your device 
-- From the left hand side, choose Activity and then click MQTT client. 
-- Choose the <a href="../../../img/aws-9.png" target="_blank">topic name</a> you entered in the configuration file. 
+To subscribe to a topic:
+- Go to the AWS Iot page, click on manage and choose your device
+- From the left hand side, choose Activity and then click MQTT client.
+- Choose the <a href="../../../img/aws-9.png" target="_blank">topic name</a> you entered in the configuration file.
 - Messages should be published as shown in the <a href="../../../img/aws-10.png" target="_blank">diagram</a>
 
 ```python
@@ -116,7 +116,7 @@ while loopCount < 8:
 	time.sleep(5.0)
 ```
 
-### Shadow updater (main.py)
+### Shadow updater (`main.py`)
 
 ```python
 # user specified callback functions
@@ -164,7 +164,7 @@ while True:
     time.sleep(5)
 ```
 
-### Delta Listener (main.py)
+### Delta Listener (`main.py`)
 
 ```python
 # Custom Shadow callback

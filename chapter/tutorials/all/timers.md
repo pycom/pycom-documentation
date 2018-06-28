@@ -1,5 +1,5 @@
 # Timers
-Detailed information about this class can be found in [``Timer``]().
+Detailed information about this class can be found in [`Timer`](/chapter/firmwareapi/pycom/machine/Timer.html).
 
 ### Chronometer
 The Chronometer can be used to measure how much time has elapsed in a block of code. The following example uses a simple stopwatch.
@@ -43,6 +43,7 @@ class Clock:
 
 clock = Clock()
 ```
+
 {% hint style='info' %}
-There are no restrictions to what can be done in an interrupt. For example, it is possible to even do network requests with an interrupt. However, it is important to keep in mind that interrupts are handled sequentially, so it’s good practice to keep them short. More information can be found in [``Interrupt Handling``]().
+There are no restrictions to what can be done in an interrupt. For example, it is possible to even do network requests with an interrupt. However, it is important to keep in mind that interrupts are handled sequentially, so it’s good practice to keep them short. More information can be found in [`Interrupt Handling`]().
 {% endhint %}

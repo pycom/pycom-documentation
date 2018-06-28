@@ -18,7 +18,7 @@ while(True):
 
 ### Drivers for the BH1750FVI
 
-Place this sample code into a file named bh1750fvi.py. This can then be imported as a library.
+Place this sample code into a file named `bh1750fvi.py`. This can then be imported as a library.
 
 ```python
 # Simple driver for the BH1750FVI digital light sensor

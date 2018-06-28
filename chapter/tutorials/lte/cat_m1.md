@@ -7,7 +7,7 @@ compatibility. Instructions for this can be found [here](firmware.md).
 
 The LTE Cat M1 service gives full IP access through the cellular modem.
 
-Once the lte.connect() function has completed all the IP socket functions - including SSL - will be routed through this connection. This mean any code using WLAN can be adapted to Cat M1 by simply adding the connection setup step first and disconnect after.
+Once the `lte.connect()` function has completed all the IP socket functions - including SSL - will be routed through this connection. This mean any code using WLAN can be adapted to Cat M1 by simply adding the connection setup step first and disconnect after.
 
 For example to connect over LTE Cat M1 to Google's web server over secure SSL:
 
@@ -38,8 +38,6 @@ lte.dettach()
 
 This also applies to our MQTT and AWS examples.
 
-
-**IMPORTANT:** Once the LTE radio is initialized, it must be de-initialized before going to deepsleep in order to ensure
-minimum power consumption. This is required due to the LTE radio being powered independently and allowing use cases which require the system to be taken out from deepsleep by an event from the LTE network (data or SMS received for instance).
+**IMPORTANT:** Once the LTE radio is initialised, it must be de-initialised before going to deepsleep in order to ensure minimum power consumption. This is required due to the LTE radio being powered independently and allowing use cases which require the system to be taken out from deepsleep by an event from the LTE network (data or SMS received for instance).
 
 When using the expansion board and the FiPy together, the RTS/CTS jumpers **MUST** be removed as those pins are being used by the LTE radio. Keeping those jumpers in place will lead to erratic operation and higher current consumption specially while in deepsleep.

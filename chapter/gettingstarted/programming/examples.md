@@ -30,16 +30,16 @@ else:
 
 Loops are another important feature of any programming language. This allows you to cycle your code and repeat functions/assignments/etc.
 
-For loops allow you to control how many times a block of code runs for within a range.
+`for` loops allow you to control how many times a block of code runs for within a range.
 
 ```python
 x = 0
-for y in range(0,9):
+for y in range(0, 9):
     x += 1
 print(x)
 ```
 
-While loops are similar to For loops, however they allow you to run a loop until a specific conditional is true/false. In this case, the loop checks if x is less than 9 each time the loop passes.
+`while` loops are similar to `for` loops, however they allow you to run a loop until a specific conditional is `true/false`. In this case, the loop checks if `x` is less than `9` each time the loop passes.
 
 ```python
 x = 0
@@ -50,7 +50,7 @@ print(x)
 
 ### Functions
 
-Functions are blocks of code that are referred to by name. Data can be passed into it to be operated on (i.e., the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
+Functions are blocks of code that are referred to by name. Data can be passed into it to be operated on (i.e. the parameters) and can optionally return data (the return value). All data that is passed to a function is explicitly passed.
 
 The function below takes two numbers and adds them together, outputting the result.
 
@@ -58,7 +58,7 @@ The function below takes two numbers and adds them together, outputting the resu
 def add(number1, number2):
     return number1 + number2
 
-add(1,2) # expect a result of 3
+add(1, 2) # expect a result of 3
 ```
 
 The next function takes an input name and returns a string containing a welcome phrase.
@@ -73,8 +73,7 @@ welcome("Alex") # expect "Hello, Alex!"
 
 ### Data Structures
 
-Python has a number of different data structures for storing and manipulating variables. The main difference (regarding data structures) between C and Python is that Python manages memory for you. This means there’s no need to declare the sizes of
-lists, dictionaries, strings, etc.
+Python has a number of different data structures for storing and manipulating variables. The main difference (regarding data structures) between C and Python is that Python manages memory for you. This means there’s no need to declare the sizes of lists, dictionaries, strings, etc.
 
 #### Lists
 A data structure that holds an ordered collection (sequence) of items.
@@ -101,5 +100,5 @@ print(pycom_devices[0]) # expect 'wipy'
 ```
 
 {% hint style='tip' %}
-For more Python examples, check out these [tutorials](https://www.tutorialspoint.com/python3/). Be aware of the implementation differences between Micropython and Python 3.5.
+For more Python examples, check out these [tutorials](https://www.tutorialspoint.com/python3/). Be aware of the implementation differences between MicroPython and Python 3.5.
 {% endhint %}

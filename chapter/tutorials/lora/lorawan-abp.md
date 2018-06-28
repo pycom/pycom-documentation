@@ -6,10 +6,10 @@ The example below attempts to get any data received after sending the frame. Kee
 ```python
 from network import LoRa
 import socket
-import binascii
+import ubinascii
 import struct
 
-# Initialize LoRa in LORAWAN mode.
+# Initialise LoRa in LORAWAN mode.
 # Please pick the region that matches where you are using the device:
 # Asia = LoRa.AS923
 # Australia = LoRa.AU915
@@ -19,8 +19,8 @@ lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 # create an ABP authentication params
 dev_addr = struct.unpack(">l", binascii.unhexlify('00000005'))[0]
-nwk_swkey = binascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
-app_swkey = binascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
+nwk_swkey = ubinascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
+app_swkey = ubinascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
 
 # join a network using ABP (Activation By Personalization)
 lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))

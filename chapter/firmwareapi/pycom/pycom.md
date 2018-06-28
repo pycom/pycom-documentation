@@ -1,5 +1,5 @@
-# module pycom – Pycom Device Features
-The pycom module contains functions to control specific features of the pycom devices, such as the heartbeat RGB LED.
+# pycom – Pycom Device Features
+The `pycom` module contains functions to control specific features of the Pycom devices, such as the heartbeat RGB LED.
 
 ### Quick Usage Example
 
@@ -16,7 +16,7 @@ pycom.rgbled(0xff00)    # make the LED light up in green color
 
 #####<function>pycom.heartbeat([enable])</function>
 
-Get or set the state (enabled or disabled) of the heartbeat LED. Accepts and returns boolean values (True or False).
+Get or set the state (enabled or disabled) of the heartbeat LED. Accepts and returns boolean values (`True` or `False`).
 
 #####<function>pycom.heartbeat_on_boot([enable])</function>
 
@@ -26,7 +26,7 @@ next boot, it does not stop the already running heartbeat.
 
 #####<function>pycom.rgbled(color)</function>
 
-Set the colour of the RGB LED. The color is specified as 24 bit value representing red, green and blue, where the red colour is represented by the 8 most significant bits. For instance, passing the value ``0x00FF00`` will light up the LED in a very bright green.
+Set the colour of the RGB LED. The colour is specified as 24 bit value representing red, green and blue, where the red colour is represented by the 8 most significant bits. For instance, passing the value `0x00FF00` will light up the LED in a very bright green.
 
 #####<function>pycom.nvs_set(key, value)</function>
 
@@ -49,7 +49,7 @@ import pycom
 pulses = pycom.nvs_get('count')
 ```
 
-If a non-existing key is given the returned value will be ``None``.
+If a non-existing key is given the returned value will be `None`.
 
 #####<function>pycom.nvs_erase(key)</function>
 
@@ -61,7 +61,7 @@ Erase the entire NVRAM memory area.
 
 #####<function>pycom.wifi_on_boot([enable])</function>
 
-Get or set the WiFi on boot flag. When this flag is set to True, the AP with the default ssid ('lopy-wlan-xxx' for example) will be enabled as part of the boot process. If the flag is set to False, the module will boot with WiFi disabled until it's enabled by the script via the ``WLAN`` class. This setting is stored in non-volatile memory which preserves it across resets and power cycles. Example:
+Get or set the WiFi on boot flag. When this flag is set to `True`, the AP with the default SSID (`lopy-wlan-xxx` for example) will be enabled as part of the boot process. If the flag is set to False, the module will boot with WiFi disabled until it's enabled by the script via the `WLAN` class. This setting is stored in non-volatile memory which preserves it across resets and power cycles. Example:
 
 ```python
 import pycom
@@ -69,14 +69,12 @@ import pycom
 pycom.wifi_on_boot(True)   # enable WiFi on boot
 
 pycom.wifi_on_boot()       # get the wifi on boot flag
-
 ```
 
 #####<function>pycom.wdt_on_boot([enable])</function>
 
-Enables the WDT at boot time with the timeout in ms set by the function ``wdt_on_boot_timeout``.
-If this flag is set, the application needs to reconfigure the WDT with a new timeout and feed it regilarly to
-avoid a reset.
+Enables the WDT at boot time with the timeout in ms set by the function `wdt_on_boot_timeout`.
+If this flag is set, the application needs to reconfigure the WDT with a new timeout and feed it regularly to avoid a reset.
 
 ```python
 import pycom
@@ -84,7 +82,6 @@ import pycom
 pycom.wdt_on_boot(True)     # enable WDT on boot
 
 pycom.wdt_on_boot()         # get the WDT on boot flag
-
 ```
 
 #####<function>pycom.wdt_on_boot_timeout([timeout])</function>
@@ -97,15 +94,16 @@ import pycom
 pycom.wdt_on_boot_timeout(10000)     # set the timeout to 5000ms
 
 pycom.wdt_on_boot_timeout()         # get the WDT timeout value
-
 ```
 
 #####<function>pycom.pulses_get(pin, timeout)</function>  
 
-Return a list of pulses at pin. The methods scans for transitions at pin and returns a list of tuples, each telling the pin value and the duration in microseconds of that value.  pin is a pin object, which must have set
-to INP or OPEN_DRAIN mode. The scan stops if not transitions occurs within timeout milliseconds.
+Return a list of pulses at `pin`. The methods scans for transitions at `pin` and returns a list of tuples, each telling the pin value and the duration in microseconds of that value. `pin` is a pin object, which must have set
+to `INP` or `OPEN_DRAIN` mode. The scan stops if not transitions occurs within `timeout` milliseconds.
+
 Example:
-```
+
+```python
 # get the raw data from a DHT11/DHT22/AM2302 sensor
 from machine import Pin
 from pycom import pulses_get
@@ -121,12 +119,12 @@ data = pulses_get(pin, 100)
 #####<function>pycom.ota_start()</function>  
 #####<function>pycom.ota_write(buffer)</function>  
 #####<function>pycom.ota_finish()</function>  
-Perform a firmware update. These methods are internally used by a firmware update though ftp. The update starts with a call to ota_start(), followed by a series of
-calls to ota_write(buffer), and is terminated with ota_finish().
-After reset, the new image gets active. buffer shall hold the image data to be written, in arbitrary sizes. A block size of 4096 is recommended.
+Perform a firmware update. These methods are internally used by a firmware update though FTP. The update starts with a call to `ota_start()`, followed by a series of
+calls to `ota_write(buffer)`, and is terminated with `ota_finish()`.
+After reset, the new image gets active. `buffer` shall hold the image data to be written, in arbitrary sizes. A block size of 4096 is recommended.
 
 Example:
-```
+```python
 # Firmware update by reading the image from the SD card
 #
 from pycom import ota_start, ota_write, ota_finish
@@ -154,5 +152,6 @@ with open(APPIMG, "rb") as f:
             break
     ota_finish()
 ```
+
 Instead of reading the data to be written from a file, it can obviously also be received from a server using any suitable protocol, without the need to store
 it in the devices file system.

@@ -1,6 +1,6 @@
 # class WDT – Watchdog Timer
 
-The WDT is used to restart the system when the application crashes and ends up into a non recoverable state. After enabling, the application must “feed” the watchdog periodically to prevent it from expiring and resetting the system.
+The WDT is used to restart the system when the application crashes and ends up into a non recoverable state. After enabling, the application must "feed" the watchdog periodically to prevent it from expiring and resetting the system.
 
 ### Quick Usage Example
 
@@ -14,7 +14,7 @@ wdt.feed()
 
 #####<class><i>class</i> machine.WDT(id=0, timeout)</class>
 
-Create a WDT object and start it. The id can only be 0. See the init method for the parameters of initialisation.
+Create a WDT object and start it. The `id` can only be `0`. See the init method for the parameters of initialisation.
 
 ### Methods
 

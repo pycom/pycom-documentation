@@ -1,14 +1,14 @@
 # Introduction to MicroPython
 
-Our boards work with [MicroPython](https://micropython.org/); a Python 3.5 implementation that is optimised to run on microcontrollers. This allows for much faster and more simple development process than using C.
+Our boards work with [MicroPython](https://micropython.org/); a Python 3.5 implementation that is optimised to run on micro controllers. This allows for much faster and more simple development process than using C.
 
 <p align="center"><img src ="../../../img/micropython.jpg" width="250"></p>
 
 ### Booting into MicroPython
 
-When booting, two files are executed automatically: first **boot.py** and then **main.py**. These are placed in the /flash folder on the board. Any other files or libraries can be placed here as well, and can be included or used from boot.py or main.py.
+When booting, two files are executed automatically: first **`boot.py`** and then **`main.py`**. These are placed in the `/flash` folder on the board. Any other files or libraries can be placed here as well, and can be included or used from `boot.py` or `main.py`.
 
-The folder structure in /flash looks like the picture below. The files can be managed either using FTP or using the Pymakr Plugin.
+The folder structure in `/flash` looks like the picture below. The files can be managed either using FTP or using the Pymakr Plugin.
 
 <p align="center"><img src ="../../../img/mp-filestructure.png" width="250"></p>
 

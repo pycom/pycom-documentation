@@ -1,11 +1,11 @@
 # LoRa Module to Module Connection
 
-This example shows how to connect two Pycode LoRa capable modules \(nodes\)
+This example shows how to connect two Pycode LoRa capable modules (nodes)
 via raw LoRa.
 
 ### Node A
 
-```py
+```python
 from network import LoRa
 import socket
 import time
@@ -27,7 +27,7 @@ while True:
 
 ### Node B
 
-```py
+```python
 from network import LoRa
 import socket
 import time

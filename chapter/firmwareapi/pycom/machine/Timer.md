@@ -4,8 +4,8 @@ Timers can be used for a great variety of tasks, like measuring time spans or be
 
 These two concepts are grouped into two different subclasses:
 
-``Chrono``: used to measure time spans.
-``Alarm``: to get interrupted after a specific interval.
+`Chrono`: used to measure time spans.
+`Alarm`: to get interrupted after a specific interval.
 
 {% hint style='tip' %}
 You can create as many of these objects as needed.
@@ -21,16 +21,16 @@ Create a chronometer object.
 
 Create an Alarm object.
 
-- ``handler``: will be called after the interval has elapsed. If set to None, the alarm will be disabled after creation.
-- ``arg``: an optional argument can be passed to the callback handler function. If None is specified, the function will receive the object that triggered the alarm.
-s, ms, us: the interval can be specified in seconds (float), miliseconds (integer) or microseconds (integer). Only one at a time can be specified.
-- ``periodic``: an alarm can be set to trigger repeatedly by setting this parameter to True.
+- `handler`: will be called after the interval has elapsed. If set to `None`, the alarm will be disabled after creation.
+- `arg`: an optional argument can be passed to the callback handler function. If `None` is specified, the function will receive the object that triggered the alarm.
+- `s, ms, us`: the interval can be specified in seconds (float), miliseconds (integer) or microseconds (integer). Only one at a time can be specified.
+- `periodic`: an alarm can be set to trigger repeatedly by setting this parameter to `True`.
 
 ### Methods
 
 #####<function>Timer.sleep_us()</function>
 
-Delay for a given number of microseconds, should be positive or 0 (for speed, the condition is not enforced). Internally it uses the same timer as the other elements of the Timer class. It compensates for the calling overhead, so for example, 100 us should be really close to 100us. For times bigger than 10,000 us it releases the GIL to let other threads run, so exactitude is not guaranteed for delays longer than that.
+Delay for a given number of microseconds, should be positive or 0 (for speed, the condition is not enforced). Internally it uses the same timer as the other elements of the `Timer` class. It compensates for the calling overhead, so for example, 100us should be really close to 100us. For times bigger than 10,000us it releases the GIL to let other threads run, so exactitude is not guaranteed for delays longer than that.
 
 # class Chrono
 
@@ -56,7 +56,7 @@ Get the elapsed time in seconds.
 
 #####<function>chrono.read_ms()</function>
 
-Get the elapsed time in miliseconds.
+Get the elapsed time in milliseconds.
 
 #####<function>chrono.read_us()</function>
 
@@ -88,9 +88,9 @@ class Alarm – get interrupted after a specific interval
 
 #####<function>alarm.callback(handler, * , arg=None)</function>
 
-Specify a callback handler for the alarm. If set to None, the alarm will be disabled.
+Specify a callback handler for the alarm. If set to `None`, the alarm will be disabled.
 
-An optional argument arg can be passed to the callback handler function. If None is specified, the function will receive the object that triggered the alarm.
+An optional argument `arg` can be passed to the callback handler function. If `None` is specified, the function will receive the object that triggered the alarm.
 
 #####<function>alarm.cancel()</function>
 

@@ -31,11 +31,11 @@ can = CAN(0, mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))    # pin ord
 
 Initialize the CAN controller. The arguments are:
 
-- ``mode`` can take either <constant>CAN.NORMAL</constant> or <constant>CAN.SILENT</constant>. Silent mode is useful for sniffing the bus.
-- ``baudrate`` setups the bus speed. Acceptable values are between 1 and 1000000.
-- ``frame_format`` defines the frame format to be accepted by the receiver. Useful for filtering frames based on the identifier length. Can tale either <constant>CAN.FORMAT_STD</constant> or <constant>CAN.FORMAT_EXT</constant> or <constant>CAN.FORMAT_BOTH</constant>. If <constant>CAN.FORMAT_STD</constant> is selected, extended frames won't be received and viceversa.
-- ``rx_queue_len`` defines the number of messages than can be queued by the receiver. Due to CAN being a high traffic bus, large values are recommended (>= 128), otherwise messages will be dropped specially when no filtering is applied.
-- ``pins`` selects the Tx and Rx pins (in that order).
+- `mode` can take either <constant>CAN.NORMAL</constant> or <constant>CAN.SILENT</constant>. Silent mode is useful for sniffing the bus.
+- `baudrate` sets up the bus speed. Acceptable values are between 1 and 1000000.
+- `frame_format` defines the frame format to be accepted by the receiver. Useful for filtering frames based on the identifier length. Can tale either <constant>CAN.FORMAT_STD</constant> or <constant>CAN.FORMAT_EXT</constant> or <constant>CAN.FORMAT_BOTH</constant>. If <constant>CAN.FORMAT_STD</constant> is selected, extended frames won't be received and vice-versa.
+- `rx_queue_len` defines the number of messages than can be queued by the receiver. Due to CAN being a high traffic bus, large values are recommended (>= 128), otherwise messages will be dropped specially when no filtering is applied.
+- `pins` selects the `Tx` and `Rx` pins (in that order).
 
 #####<function>can.deinit()</function>
 
@@ -50,10 +50,10 @@ can.deinit()
 
 Send a CAN frame on the bus
 
-- ``id`` is the identifier of the message.
-- ``data`` can take up to 8 bytes. It must be left empty is the message to be sent is a remote request (rtr=True).
-- ``rtr`` set it to false to send a remote request.
-- ``extnted`` specifies if the message identifier width should be 11bit (standard) or 29bit (extended).
+- `id` is the identifier of the message.
+- `data` can take up to 8 bytes. It must be left empty is the message to be sent is a remote request (rtr=True).
+- `rtr` set it to false to send a remote request.
+- `extnted` specifies if the message identifier width should be 11bit (standard) or 29bit (extended).
 
 Can be used like:
 
@@ -63,17 +63,16 @@ can.send(id=0x0020, data=bytes([0x01, 0x02, 0x03, 0x04, 0x05]), extended=True)  
 can.send(id=0x010, data=bytes([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08])) # sends 8 bytes with an standard identifier
 
 can.send(id=0x012, rtr=True)         # sends a remote request for message id=0x12
-
 ```
 
 #####<function>can.recv(timeout=0)</function>
 
 Get a message from the receive queue, and optionally specify a timeout value in
-**s** (can be a floating point value e.g. `0.2`). This function returns ``None``
+**s** (can be a floating point value e.g. `0.2`). This function returns `None`
 if no messages available. If a message is present, it will be returned as a
 named tuple with the following form:
 
-``(id, data, rtr, extended)``
+`(id, data, rtr, extended)`
 
 ```python
 >>> can.recv()
@@ -84,13 +83,12 @@ named tuple with the following form:
 
 Specify a software filter accepting only the messages that pass the filter test.
 
-
 There are 3 possible filter modes:
 - <constant>CAN.FILTER_LIST</constant> allows to pass the list of IDs that should be accepted.
 - <constant>CAN.FILTER_RANGE</constant> allows to pass a list or tuple of ID ranges that should be accepted.
-- <constant>CAN.FILTER_MASK</constant> allows to pass a list of tuples of the form: ``(filer, mask)``.
+- <constant>CAN.FILTER_MASK</constant> allows to pass a list of tuples of the form: `(filer, mask)`.
 
-With software filters all messages in the bus are received by the CAN controller but only the matching ones are passed to the RX queue. This means that the queue won't be filled up with non relevant messages, but the interrupt overhead will remain as normal. The ``filter_list`` can contain up to 32 elements.
+With software filters all messages in the bus are received by the CAN controller but only the matching ones are passed to the RX queue. This means that the queue won't be filled up with non relevant messages, but the interrupt overhead will remain as normal. The `filter_list` can contain up to 32 elements.
 
 For example:
 
@@ -135,7 +133,7 @@ can.callback(handler=can_cb, trigger=CAN.RX_FRAME)
 
 #####<function>can.events()</function>
 
-This method returns a value with bits sets (if any) indicating the events that have occured in the bus. Please note that by calling this function the internal events registry is cleared automatically, therefore calling it immediately for a second time will most likely return a value of 0.
+This method returns a value with bits sets (if any) indicating the events that have occurred in the bus. Please note that by calling this function the internal events registry is cleared automatically, therefore calling it immediately for a second time will most likely return a value of 0.
 
 
 ### Constants

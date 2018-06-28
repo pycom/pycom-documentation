@@ -16,9 +16,9 @@ characteristic.value() # get characteristic value
 
 Creates a callback that will be executed when any of the triggers occurs. The arguments are:
 
-- ``trigger`` can be either <constant>Bluetooth.CHAR_READ_EVENT</constant> or <constant>Bluetooth.CHAR_WRITE_EVENT</constant>.
-- ``handler`` is the function that will be executed when the callback is triggered.
-- ``arg`` is the argument that gets passed to the callback. If nothing is given, the characteristic object that owns the callback will be used.
+- `trigger` can be either <constant>Bluetooth.CHAR_READ_EVENT</constant> or <constant>Bluetooth.CHAR_WRITE_EVENT</constant>.
+- `handler` is the function that will be executed when the callback is triggered.
+- `arg` is the argument that gets passed to the callback. If nothing is given, the characteristic object that owns the callback will be used.
 
 An example of how this could be implemented can be seen in the <function>characteristic.events()</function> section.
 

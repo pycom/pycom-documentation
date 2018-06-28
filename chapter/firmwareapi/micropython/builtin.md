@@ -1,7 +1,6 @@
 # Builtin Functions
 All builtin functions are described here. They are also available via [builtins](/chapter/firmwareapi/micropython/builtin.md) module.
 
-
 #####<function>abs()</function>
 
 <br>

@@ -2,7 +2,7 @@
 
 At present, basic BLE functionality is available. More features will be implemented in the near future, such as pairing. This page will be updated in line with these features.
 
-Full info on ``bluetooth`` can be found within bluetooth page of the Firmware API Reference.
+Full info on `bluetooth` can be found within bluetooth page of the Firmware API Reference.
 
 ### Scan for BLE Devices
 
@@ -10,7 +10,7 @@ Scan for all of the advertising devices within range of the scanning device.
 
 ```python
 bluetooth.start_scan(10)        # starts scanning and stop after 10 seconds
-bluetooth.start_scan(-1)        # starts scanning indefenitely until bluetooth.stop_scan() is called
+bluetooth.start_scan(-1)        # starts scanning indefinitely until bluetooth.stop_scan() is called
 ```
 
 ### Raw Data from a BLE Device
@@ -29,7 +29,7 @@ Connecting to a device that is sending advertisements.
 
 ```python
 from network import Bluetooth
-import binascii
+import ubinascii
 bluetooth = Bluetooth()
 
 # scan until we can connect to any BLE device around
@@ -45,11 +45,11 @@ while True:
             bluetooth.start_scan(-1)
             continue
         break
-print("Connected to device with addr = {}".format(binascii.hexlify(adv.mac)))
+print("Connected to device with addr = {}".format(ubinascii.hexlify(adv.mac)))
 ```
 
 ### Connect to a BLE Device and Retrieve Data
-Connecting to a device named ‘Heart Rate’ and receiving data from it’s services.
+Connecting to a device named 'Heart Rate' and receiving data from it’s services.
 
 ```python
 from network import Bluetooth
@@ -82,10 +82,10 @@ while True:
 ```
 
 ### Retrieve the Name & Manufacturer from a BLE Device
-Using resolve_adv_data() to attempt to retrieve the name and manufacturer data from the advertiser.
+Using `resolve_adv_data()` to attempt to retrieve the name and manufacturer data from the advertiser.
 
 ```python
-import binascii
+import ubinascii
 from network import Bluetooth
 bluetooth = Bluetooth()
 
@@ -100,5 +100,5 @@ while bluetooth.isscanning():
 
         if mfg_data:
             # try to get the manufacturer data (Apple's iBeacon data is sent here)
-            print(binascii.hexlify(mfg_data))
+            print(ubinascii.hexlify(mfg_data))
 ```

@@ -10,12 +10,12 @@ Convert binary data to hexadecimal representation. Returns bytes string.
 {% hint style='info' %}
 Difference to CPython
 
-If additional argument, sep is supplied, it is used as a separator between hexadecimal values.
+If additional argument, `sep` is supplied, it is used as a separator between hexadecimal values.
 {% endhint %}
 
 #####<function>ubinascii.unhexlify(data)</function>
 
-Convert hexadecimal data to binary representation. Returns bytes string. (i.e. inverse of hexlify)
+Convert hexadecimal data to binary representation. Returns bytes string. (i.e. inverse of `hexlify`)
 
 #####<function>ubinascii.a2b_base64(data)</function>
 

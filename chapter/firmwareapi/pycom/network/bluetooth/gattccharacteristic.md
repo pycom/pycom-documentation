@@ -13,7 +13,7 @@ Returns the instance ID of the service.
 
 #####<function>characteristic.properties()</function>
 
-Returns an integer indicating the properties of the characteristic. Properties are represented by bit values that can be ORed together. See the constants section for more details.
+Returns an integer indicating the properties of the characteristic. Properties are represented by bit values that can be OR-ed together. See the constants section for more details.
 
 #####<function>characteristic.read()</function>
 
@@ -21,7 +21,7 @@ Read the value of the characteristic, sending a request to the GATT server. Retu
 
 #####<function>characteristic.value()</function>
 
-Returns the locally stored value of the characteristic whithout sending a read request to the GATT server. If the characteristic value hasn't been read from the GATT server yet, the value returned will be 0.
+Returns the locally stored value of the characteristic without sending a read request to the GATT server. If the characteristic value hasn't been read from the GATT server yet, the value returned will be 0.
 
 #####<function>characteristic.write(value)</function>
 
@@ -35,6 +35,6 @@ characteristic.write(b'x0f')
 
 This method allows to register for notifications on the characteristic.
 
-- ``trigger`` can must be <constant>Bluetooth.CHAR_NOTIFY_EVENT</constant>.
-- ``handler`` is the function that will be executed when the callback is triggered.
-- ``arg`` is the argument that gets passed to the callback. If nothing is given, the characteristic object that owns the callback will be used.
+- `trigger` can must be <constant>Bluetooth.CHAR_NOTIFY_EVENT</constant>.
+- `handler` is the function that will be executed when the callback is triggered.
+- `arg` is the argument that gets passed to the callback. If nothing is given, the characteristic object that owns the callback will be used.

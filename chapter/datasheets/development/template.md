@@ -14,7 +14,6 @@
 **Getting Started** [Click Here](../../gettingstarted/connection/{{module|lower}}.md)
 {% endif %}
 
-
 ## Pinout
 The pinout of the {{module}} is available as a
 <a href="../downloads/{{module | lower}}-pinout.pdf" target="_blank">PDF File</a>.
@@ -27,7 +26,7 @@ and I2C (SDA,SCL) are defaults and can be changed in Software.
 {% endhint %}
 
 {% if module=="WiPy3" %}
-##Differences from WiPy 2.0
+## Differences from WiPy 2.0
  - Deep sleep current draw fixed, now only 19.7µA
  - Upgraded RAM from 512KB to 4MB
  - Upgraded External FLASH from 4MB to 8MB
@@ -89,7 +88,7 @@ is between 7uA and 10uA depending on the wake sources configured.
 {% endif %}
 
 {% if module=="GPy" or module=="FiPy" %}
-###AT Commands
+### AT Commands
 
 The AT commands for the Sequans Monarch modem on the {{module}} are available in a
 <a href="../downloads/Monarch_4G-EZ_LR5110_ATCommands_ReferenceManual_Rev3_NOCONFIDENTIAL.pdf">PDF file</a>.

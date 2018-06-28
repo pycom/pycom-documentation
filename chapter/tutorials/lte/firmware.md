@@ -15,7 +15,7 @@ file via the updater tool as well.
 Before proceeding you will need:
  - Pycom cellular enabled module (GPy, FiPy, G01)
  - FAT32 formatted microSD card (with at least 6MB of free space)
- - A Pycom expansion board or shield (or a microSD card socket breakout board)
+ - A Pycom Expansion Board or shield (or a microSD card socket breakout board)
 
 ## Usage
 
@@ -37,8 +37,8 @@ or
 Next you need to download the firmware file from
 [here](https://software.pycom.io/downloads/sequans.html). You will need to place
 the firmware on a FAT32 formatted microSD card, then insert the SD card into a
-expansion board, pytrack, pysense or pyscan. Power-up the system and connect to
-the interactive REPL and runn the following code:
+Expansion Board, Pytrack, Pysense or Pyscan. Power-up the system and connect to
+the interactive REPL and run the following code:
 
 ```python
 import sqnsupgrade
@@ -49,7 +49,7 @@ The whole process can take between 2 and 3 minutes and at some points it will
 seem to stall, this is normal, just be patience. You should see an output like
 this:
 
-```bash
+```
 <<< Welcome to the SQN3330 firmware updater >>>
 Entering recovery mode
 Resetting.
@@ -71,12 +71,14 @@ LR6.0.0.0-35351
 OK
 ```
 
+{% hint style='danger' %}
 DO NOT disconnect power while the upgrade process is taking place, wait for it
-to finish!. If the module get's stuck in here:
+to finish!
+{% endhint %}
 
-```bash
+If the module get's stuck in here for more than 1 minute while upgrading to the NB-IoT firmware, you can cycle
+power and retry. In this case it is safe.
+
+```
 Sending 4560505 bytes: [##                                      ]   6%
 ```
-
-For more than 1 minute while upgrading to the NB-IoT firmware, you can cycle
-power and retry. In this case it is safe.

@@ -1,7 +1,7 @@
 # array – Arrays of Numeric Data
 See Python array for more information.
 
-Supported format codes: ``b``, ``B``, ``h``, ``H``, ``i``, ``I``, ``l``, ``L``, ``q``, ``Q``, ``f``, ``d`` (the latter 2 depending on the floating-point support).
+Supported format codes: `b, B, h, H, i, I, l, L, q, Q, f, d` (the latter 2 depending on the floating-point support).
 
 ### Classes
 #####<class><i>class</i> array.array(typecode[, iterable])</class>

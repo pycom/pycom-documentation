@@ -9,7 +9,7 @@ In order to retrieve the current WLAN instance, run:
 >>> wlan = WLAN() # we call the constructor without params
 ```
 
-The current mode (WLAN.AP after power up) may be checked by running:
+The current mode (`WLAN.AP` after power up) may be checked by running:
 
 ```python
 >>> wlan.mode()
@@ -19,12 +19,12 @@ The current mode (WLAN.AP after power up) may be checked by running:
 When changing the WLAN mode, if following the instructions below, the WLAN connection to the Pycom device will be broken. This means commands will not run interactively over WiFi.
 
 **There are two ways around this:**
-1. Put this setup code into the boot.py file of the Pycom device so that it gets executed automatically after reset.
+1. Put this setup code into the `boot.py` file of the Pycom device so that it gets executed automatically after reset.
 2. Duplicate the REPL on UART. This way commands can be run via Serial USB.
 {% endhint %}
 
 ### Connecting to a Router
-The WLAN network class always boots in WLAN.AP mode; to connect it to an existing network, the WiFi class must be configured as a station:
+The WLAN network class always boots in `WLAN.AP` mode; to connect it to an existing network, the WiFi class must be configured as a station:
 
 ```python
 from network import WLAN
@@ -46,7 +46,7 @@ for net in nets:
 ```
 
 ### Assigning a Static IP Address at Boot Up
-If the users wants their device to connect to a home router upon boot up, using with a fixed IP address, use the following script as ``/flash/boot.py``:
+If the users wants their device to connect to a home router upon boot up, using with a fixed IP address, use the following script as `/flash/boot.py`:
 
 ```python
 import machine
@@ -70,7 +70,7 @@ Notice how we check for the reset cause and the connection status, this is cruci
 {% endhint %}
 
 ### Multiple Networks using a Static IP Address
-The following script holds a list with nets and an optional list of wlan_config to set a fixed IP
+The following script holds a list with nets and an optional list of `wlan_config` to set a fixed IP
 
 ```python
 import os
@@ -118,7 +118,7 @@ if machine.reset_cause() != machine.SOFT_RESET:
 
 #### Connecting with EAP-TLS:
 
-Before connecting, obtain and copy the public and private keys to the device, e.g. under location ``/flash/cert``. If it is required to validate the server’s public key, an appropriate CA certificate (chain) must also be provided.
+Before connecting, obtain and copy the public and private keys to the device, e.g. under location `/flash/cert`. If it is required to validate the server’s public key, an appropriate CA certificate (chain) must also be provided.
 
 ```python
 from network import WLAN
@@ -129,7 +129,7 @@ wlan.connect(ssid='mywifi', auth=(WLAN.WPA2_ENT,), identity='myidentity', ca_cer
 
 #### Connecting with EAP-PEAP or EAP-TTLS:
 
-In case of EAP-PEAP (or EAP-TTLS), the client key and certificate are not necessary, only a username and password pair. IIf it is required to validate the server’s public key, an appropiate CA certificate (chain) must also be provided.
+In case of EAP-PEAP (or EAP-TTLS), the client key and certificate are not necessary, only a username and password pair. If it is required to validate the server’s public key, an appropriate CA certificate (chain) must also be provided.
 
 ```python
 from network import WLAN

@@ -1,5 +1,5 @@
 # class Server
-The Server class controls the behaviour and the configuration of the FTP and telnet services running on the Pycom Device. Any changes performed using this class’ methods will affect both.
+The `Server` class controls the behaviour and the configuration of the FTP and telnet services running on the Pycom device. Any changes performed using this class’ methods will affect both.
 
 Example:
 
@@ -27,12 +27,12 @@ server.isrunning() # check whether the server is running or not
 
 #####<class><i>class</i> network.Server(id, ...)</class>
 
-Create a server instance, see ``init`` for parameters of initialisation.
+Create a server instance, see `init` for parameters of initialisation.
 
 ### Methods
 #####<function>server.init(* , login=('micro', 'python'), timeout=300)</function>
 
-Init (and effectively start the server). Optionally a new ``user``, ``password`` and ``timeout`` (in seconds) can be passed.
+Init (and effectively start the server). Optionally a new `user`, `password` and `timeout` (in seconds) can be passed.
 
 #####<function>server.deinit()</function>
 
@@ -44,4 +44,4 @@ Get or set the server timeout.
 
 #####<function>server.isrunning()</function>
 
-Returns ``True`` if the server is running (connected or accepting connections), ``False`` otherwise.
+Returns `True` if the server is running (connected or accepting connections), `False` otherwise.

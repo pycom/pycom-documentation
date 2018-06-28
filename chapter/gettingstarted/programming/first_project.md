@@ -13,12 +13,12 @@ make the on-board RGB LED flash various colours.
    open the directory you created in step 1
 
   {% hint style='tip' %}
-  If you are using atom, it is important to check at this point that atom has
+  If you are using Atom, it is important to check at this point that Atom has
   successfully identified the project. The name of the directory you created in
   step 1 (`RGB-Blink` in this case) should be shown in the Pymakr pane like so:
   <p align="center"><img src ="/img/tutorials/first/atom_project.png" width="600"></p>
   If this is not the case you can press `alt-ctrl-r` on Windows/Linux or
-  `ctrl-alt-cmd-l` on Mac OS, in order to reload Atom and fix the issue.
+  `ctrl-alt-cmd-l` on macOS, in order to reload Atom and fix the issue.
   {% endhint %}
 
 4. Now that you have a project created, we need to add some files to it. A
@@ -47,13 +47,13 @@ standard MicroPython project has the following structure:
   For this example, you will just need to create a `main.py` file.
 
 Now that the project structure is setup, you may wish to configure project
-specific settings for Pymakr e.g. Which serial port to use. On atom you need to
-click the `^` button on the pymakr pane, then click `Project Settings`. On
-visual studio code you need to click the `All commands` button on the bottom of
+specific settings for Pymakr e.g. Which serial port to use. On Atom you need to
+click the `^` button on the Pymakr pane, then click `Project Settings`. On
+Visual Studio Code you need to click the `All commands` button on the bottom of
 the windows, then click ` Pymakr > Project Settings`. This creates a file called
 `pymakr.conf` inside your project and populates it with default settings copied
 over from your global settings. A detailed explanation of these settings can be
-found [here.](/chapter/pymakr/settings.md)
+found [here](/chapter/pymakr/settings.md).
 
 ## Controlling the on-board LED
 
@@ -65,7 +65,7 @@ find out more about these in the
 [API documentation](/chapter/firmwareapi/README.md). For this example you will
 need to open the `main.py` file and add the following code:
 
-```
+```python
 import pycom
 import time
 ```
@@ -80,21 +80,21 @@ your module has powered up and started correctly. Before we can change the
 colour of this LED we need to disable this heart beat. Below your imports you
 will need to add the following:
 
-```
+```python
 pycom.heartbeat(False)
 ```
 
-Now its time to test your code. On the Pymakr pane/bottom of the window you will
+Now it's time to test your code. On the Pymakr pane/bottom of the window you will
 see a `run` button. (If you haven't connected to your device yet, you will need
 to do that first). When you click the run button, the code in the currently
-open file will be executed on the device, would permanently copying it to the
+open file will be executed on the device, but it won't copy it to the
 device. After running this code, you should see that that on-board LED stops
 blinking blue.
 
 Now that we can confirm the device is connected and Pymakr is able to run code
 on it, we can complete our script to blink the LED like so:
 
-```
+```python
 import pycom
 import time
 
@@ -119,7 +119,7 @@ to the interactive REPL.
 
 In the previous section we got code running on on your Pycom module using the
 `run` feature of Pymakr. This is useful for quick testing but has a couple of
-drawbacks. Firstly the code does not remain on the device permanently, if you
+drawbacks. Firstly the code does not remain on the device permanently. If you
 reboot the device, it will no longer be running your code. Secondly, it will
 only work if you are using libraries built into the firmware. If you need any
 extra libraries, these need to be copied to the device first. This is where the
@@ -130,10 +130,10 @@ even between reboots, and allows you to use libraries from the `lib` folder in
 your project.
 
 If you need to remove files from your device you have two options, either
-connect via FTP and manage your files that way or format the device's interal
+connect via FTP and manage your files that way or format the device's internal
 flash like so:
 
-```
+```python
 import os
 os.mkfs('/flash')
 ```

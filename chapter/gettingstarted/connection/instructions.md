@@ -19,9 +19,7 @@ pins should now no longer be visible.
 <p align="center"><img src ="../img/Expansion_Board_2_{{ module }}.png" style="max-height: 400px;"></p>
 
 {% content "exp3" %}
-- Before connecting your module to a expansion board 3.0, you should update
-  the firmware on the expansion board 3.0. Instructions on how to do this can be
-  found [here](../../pytrackpysense/installation/firmware.md).
+- Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
 {% if module=="FiPy" %}
 - When using the expansion board with a {{module}}, you will need to remove the
 CTS and RTS jumpers as these interfere with communication with the cellular
@@ -30,7 +28,7 @@ modem.
 - Look for the reset button on the module (located at a corner of the board,
   next to the LED).
 - Locate the USB connector on the expansion board.
-- Insert the {{ module }} module on the the expansion board with the reset button
+- Insert the {{ module }} module on the Expansion Board with the reset button
 pointing towards the USB connector. It should firmly click into place and the
 pins should now no longer be visible.
 
@@ -56,7 +54,7 @@ LED blinking blue. This indicates the device is powered up and running.
 
 {% content "diy" %}
 - Firstly you will need to connect power to your {{ module }}. You will need to
-supply `3.5v`-`5.5v` to the `Vin` pin. **Note:** Do *not* feed `3.3v`directly to
+supply `3.5v`-`5.5v` to the `Vin` pin. **Note:** Do *not* feed `3.3v` directly to
 the `3.3v` supply pin, this will damage the regulator.
 - The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the
 {{ module }} respectively. **Note:** Please ensure you have the signal level of
@@ -68,52 +66,48 @@ button between the two to make this simpler.
 <p align="center"><img src ="../img/UART_{{ module }}.png" style="max-height: 400px;"></p>
 
 {% content "wifi" %}
-
 **Note:** This method of connection is not recommended for first time users.
 It is possible to lock yourself out of the device, requiring a USB connection.
 
- - In order to access the {{module}} via WiFi you only need to provide `3.5v` - `5.5v` on
+ - In order to access the {{ module }} via WiFi you only need to provide `3.5v` - `5.5v` on
 the `Vin` pin of the {{ module }}:
-<p align="center"><img src ="../img/Bare_{{module}}.png" style="max-height: 400px;"></p>
+<p align="center"><img src ="../img/Bare_{{ module }}.png" style="max-height: 400px;"></p>
 
-- By default, when the {{module}} boots, it will create a WiFi access point with
+- By default, when the {{ module }} boots, it will create a WiFi access point with
 the following credentials:
-
-<p align="center">SSID: `{{ module | lower}}-wlan`</p>
-
-<p align="center">password: `www.pycom.io`</p>
+  - SSID: `{{ module | lower }}-wlan`
+  - password: `www.pycom.io`
 
  - Once connected to this network you will be able to access the telnet and FTP
-servers running on the {{module}}. For both of these the login details are:
-
-<p align="center">username: `micro`</p>
-
-<p align="center">password: `python`</p>
+servers running on the {{ module }}. For both of these the login details are:
+  - username: `micro`
+  - password: `python`
 
 {% endtabs %}
 
 ## Antennas
 
 {% if module=="LoPy" or module=="SiPy" or module=="LoPy4" or module=="FiPy" %}
-
 {% if module=="LoPy" %}
-{% set comm="LoRa" %}
+  {% set comm="LoRa" %}
 {% elif module=="SiPy" %}
-{% set comm="Sigfox" %}
+  {% set comm="Sigfox" %}
 {% else %}
-{% set comm="LoRa/Sigfox" %}
+  {% set comm="LoRa/Sigfox" %}
 {% endif %}
 
 ### {{ comm }}
+{% hint style='danger' %}
 If you intend on using the {{ comm }} connectivity of the {{ module }} you **must**
 connect a {{ comm }} antenna to your {{ module }} before trying to use
 {{ comm }} otherwise you risk damaging the device.
+{% endhint %}
 
 {% if module=="LoPy" or module=="FiPy"%}
-{% hint style='danger' %}
-The {{ module }} only supports LoRa on the 868MHz or 915MHz bands. It does not
-support 433MHz. For this you will require a LoPy4.
-{% endhint %}
+  {% hint style='danger' %}
+  The {{ module }} only supports LoRa on the 868MHz or 915MHz bands. It does not
+  support 433MHz. For this you will require a LoPy4.
+  {% endhint %}
 {% endif %}
 
 {% if module=="LoPy4"%}
@@ -151,7 +145,7 @@ connector on the
 {% endif %}
 
 ### WiFi/Bluetooth (optional)
-All pycom modules, including the {{ module }}, come with a on-board WiFi antenna
+All Pycom modules, including the {{ module }}, come with a on-board WiFi antenna
 as well as a U.FL connector for an external antenna. The external antenna is
 optional and only required if you need better performance or are mounting the
 {{ module }} in such a way that the WiFi signal is blocked. Switching between
@@ -172,9 +166,9 @@ more information on acquiring a LTE CAT-M1/NB-IoT enabled nano SIM.
 
 {% endif %}
 {% if module=="LoPy" or module=="SiPy" or module=="WiPy" %}
-## Deepsleep current issue
+## Deep Sleep current issue
 
-The LoPy, SiPy and WiPy 2.0 experience an issue where the modules maintain a
+The LoPy, SiPy, and WiPy 2.0 experience an issue where the modules maintain a
 high current consumption in deep sleep mode. This issue has been resolved in
 all newer products. The cause for this issue is the DC to DC switch mode
 converter remains in a high performance mode even when the device is in deep

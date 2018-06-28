@@ -2,7 +2,7 @@
 
 To update the firmware on the Pysense/Pytrack/Pyscan/Expansion Board v3, please
 see the following instructions. The firmware of Pysense/Pytrack/Pyscan/Expansion
-Board v3 can be updated via the USB port using the terminal tool, DFU-util.
+Board v3 can be updated via the USB port using the terminal tool, `DFU-util`.
 
 The latest firmware DFU file can be downloaded from the links below:
 
@@ -28,13 +28,13 @@ driver is required. Below, the USB Product ID is depicted for each case.
 
 ##### Mac OS
 
-If using ``homebrew``:
+If using `homebrew`:
 
 ```bash
 $ brew install dfu-util
 ```
 
-If using ``MacPorts``:
+If using `MacPorts`:
 
 ```bash
 port install libusb dfu-util
@@ -65,7 +65,7 @@ $ sudo pacman -Sy dfu-util
 - [DFU-util v0.9](http://dfu-util.sourceforge.net/releases/dfu-util-0.9-win64.zip) – Tool to upload the firmware to the Pytrack/Pysense
 - [Zadig](http://zadig.akeo.ie/) – Installer tool for the Pytrack/Pysense board DFU Firmware
 
-To uploaded the latest DFU firmware to the Pytrack/Pysense, **first install the DFU drivers** to the host computer. Open Zadig and select ``libusbK`` as the driver.
+To uploaded the latest DFU firmware to the Pytrack/Pysense, **first install the DFU drivers** to the host computer. Open Zadig and select `libusbK` as the driver.
 
 To install the drivers, the Pytrack/Pysense board must be in DFU-mode:
 
@@ -74,21 +74,21 @@ To install the drivers, the Pytrack/Pysense board must be in DFU-mode:
 3. Connect the USB cable
 4. Keep the button pressed for at least one second
 5. Release the button. When the board is connected in DFU-mode, it will be in this state for 7 seconds.
-6. Click the “Install Driver” button immediately. If the driver was unsuccessful, repeat from step 1.
-   - *Here the USB ID has to be the DFU-bootloader one (0xF014 for Pytrack or 0xF011 for Pysense).*
+6. Click the`“Install Driver` button immediately. If the driver was unsuccessful, repeat from step 1.
+   - *Here the USB ID has to be the DFU-bootloader one (`0xF014 `for Pytrack or `0xF011` for Pysense).*
    - *This is a successful DFU driver installation for Pytrack:*
 
 <p align="center"><img src ="../../../img/pytrack_dfu_mode_zadig.png" width="800"></p>
 
-Open the command prompt and navigate to the directory where the DFU-util and the firmware was downloaded (must be in same directory). Repeat the procedure to get the board in DFU-mode and run the command below but replace ``X.X.X`` with the firmware version and replace pysense with pytrack if it is the pytrack that is to be updated (e.g: ``pytrack_0.0.8.dfu``):
+Open the command prompt and navigate to the directory where the DFU-util and the firmware was downloaded (must be in same directory). Repeat the procedure to get the board in DFU-mode and run the command below but replace `X.X.X` with the firmware version and replace Pysense with Pytrack if it is the Pytrack that is to be updated (e.g: `pytrack_0.0.8.dfu`):
 
 ```bash
 dfu-util-static.exe -D pysense_X.X.X.dfu
 ```
 
-If the update was successful, a message, “Done!” should appear in the bottom of the command prompt.
+If the update was successful, a message,"Done!" should appear in the bottom of the command prompt.
 
-**Double-check Serial USB (CDC) driver is installed in Application mode:** if, by mistake, the libusbk driver was installed while the USB ID is the Application mode (0xF013 for Pytrack or 0xF012 for Pysense), then the ``Serial USB (CDC)`` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
+**Double-check Serial USB (CDC) driver is installed in Application mode:** if, by mistake, the `libusbk` driver was installed while the USB ID is the Application mode (`0xF013` for Pytrack or `0xF012` for Pysense), then the `Serial USB (CDC)` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
 
 <p align="center"><img src ="../../../img/pytrack_app_mode_zadig.png" width="800"></p>
 
@@ -97,7 +97,7 @@ If the update was successful, a message, “Done!” should appear in the bottom
 To enter update mode follow these steps:
 
 1. Unplug the device
-2. Press the button and keep it held (on the Expansion Board the "S1" button)
+2. Press the button and keep it held (on the Expansion Board the `S1` button)
 3. Plug in the USB cable to the host computer and wait 1 second before releasing the button
 4. After this you will have approximately 7 seconds to run the DFU-util tool
 
@@ -144,6 +144,6 @@ Using `lsusb` command, the Pytrack/Pysense device should be visible in both norm
 
 For exemple, a Pytrack board is visible as either:
 - `Bus 020 Device 004: ID 04d8:f014 Microchip Technology Inc. Application Specific Device`
-  - this is bootloader mode (f014 is USB PID), active just for 7-8 seconds, if the reset button was just  pressed before plugging USB connector.
+  - this is bootloader mode (`f014` is USB PID), active just for 7-8 seconds, if the reset button was just  pressed before plugging USB connector.
 - `Bus 020 Device 005: ID 04d8:f013 Microchip Technology Inc. Pytrack Serial: Pyabcde0`
-  - this is normal, application mode (f013 is USB PID), this means the bootloader verified application partition and it boot-up correctly.
+  - this is normal, application mode (`f013` is USB PID), this means the bootloader verified application partition and it boot-up correctly.

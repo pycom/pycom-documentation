@@ -16,7 +16,7 @@ print(rtc.now())
 
 #####<class><i>class</i> machine.RTC(id=0, ...)</class>
 
-Create an RTC object. See init for parameters of initialisation.:
+Create an RTC object. See init for parameters of initialisation.
 
 ```python
 # id of the RTC may be set if multiple are connected. Defaults to id = 0.
@@ -27,10 +27,10 @@ rtc = RTC(id=0)
 
 #####<function>rtc.init(datetime=None, source=RTC.INTERNAL_RC)</function>
 
-Initialize the RTC. The arguments are:
+Initialise the RTC. The arguments are:
 
-- ``datetime`` when passed it sets the current time. It is a tuple of the form: (year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]]).
-- ``source`` selects the oscillator that drives the RTC. The options are <constant>RTC.INTERNAL_RC</constant> and <constant>RTC.XTAL_32KHZ</constant>
+- `datetime` when passed it sets the current time. It is a tuple of the form: ``(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])``.
+- `source` selects the oscillator that drives the RTC. The options are <constant>RTC.INTERNAL_RC</constant> and <constant>RTC.XTAL_32KHZ</constant>
 
 For example:
 
@@ -40,12 +40,12 @@ rtc.init((2017, 2, 28, 10, 30, 0, 0, 0))
 ```
 
 {% hint style='info' %}
-tzinfo is ignored by this method. Use ``time.timezone`` to achieve similar results.
+`tzinfo` is ignored by this method. Use `time.timezone` to achieve similar results.
 {% endhint %}
 
 #####<function>rtc.now()</function>
 
-Get get the current datetime tuple:
+Get get the current `datetime` tuple:
 
 ```python
 # returns datetime tuple
@@ -56,8 +56,8 @@ rtc.now()
 
 Set up automatic fetch and update the time using NTP (SNTP).
 
-- ``server`` is the URL of the NTP server. Can be set to None to disable the periodic updates.
-- ``update_period`` is the number of seconds between updates. Shortest period is 15 seconds.
+- `server` is the URL of the NTP server. Can be set to `None` to disable the periodic updates.
+- `update_period` is the number of seconds between updates. Shortest period is 15 seconds.
 
 Can be used like:
 
@@ -67,7 +67,7 @@ rtc.ntp_sync("pool.ntp.org") # this is an example. You can select a more specifi
 
 #####<function>rtc.synced()</function>
 
-Returns True if the last ntp_sync has been completed, False otherwise:
+Returns `True` if the last `ntp_sync` has been completed, `False` otherwise:
 
 ```python
 rtc.synced()
@@ -76,4 +76,4 @@ rtc.synced()
 ### Constants
 <constant>RTC.INTERNAL_RC</constant> <constant>RTC.XTAL_32KHZ</constant>
 
-clock source
+Clock source

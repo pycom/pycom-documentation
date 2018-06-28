@@ -4,17 +4,17 @@ The GATT Client is the device that requests data from the server, otherwise know
 
 #####<function>connection.disconnect()</function>
 
-Closes the BLE connection. Returns ``None``.
+Closes the BLE connection. Returns `None`.
 
 #####<function>connection.isconnected()</function>
 
-Returns ``True`` if the connection is still open. ``False`` otherwise.
+Returns `True` if the connection is still open. `False` otherwise.
 
 Example:
 
 ```python
 from network import Bluetooth
-import binascii
+import ubinascii
 bluetooth = Bluetooth()
 
 # scan until we can connect to any BLE device around
@@ -30,7 +30,7 @@ while True:
             bluetooth.start_scan(-1)
             continue
         break
-print("Connected to device with addr = {}".format(binascii.hexlify(adv.mac)))
+print("Connected to device with addr = {}".format(ubinascii.hexlify(adv.mac)))
 ```
 
 #####<function>connection.services()</function>

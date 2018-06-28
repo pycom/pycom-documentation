@@ -37,4 +37,4 @@ Return hash for all data passed through hash, as a bytes object. After this meth
 
 #####<function>hash.hexdigest()</function>
 
-This method is NOT implemented. Use ``ubinascii.hexlify(hash.digest())`` to achieve a similar effect.
+This method is NOT implemented. Use `ubinascii.hexlify(hash.digest())` to achieve a similar effect.

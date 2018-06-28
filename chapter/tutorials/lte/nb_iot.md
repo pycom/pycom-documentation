@@ -16,7 +16,7 @@ Full support for Huawei is planned for early Q2 2018.
 
 # NB-IoT usage:
 
-for example with Vodafone:
+Example with Vodafone:
 
 ```python
 from network import LTE
@@ -39,7 +39,7 @@ while not lte.isconnected():
 # now use socket as usual...
 ```
 
-**IMPORTANT:** Once the LTE radio is initialized, it must be de-nitialized
+**IMPORTANT:** Once the LTE radio is initialised, it must be de-initialised
 before going to deepsleep in order to ensure minimum power consumption. This is
 required due to the LTE radio being powered independently and allowing use cases
 which require the system to be taken out from deepsleep by an event from the LTE

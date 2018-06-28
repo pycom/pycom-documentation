@@ -1,15 +1,14 @@
 # Command Line Update Utility
 
 ### Windows
-After installing the [Windows version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=win32&redirect=true) of the updater tool, the CLI tool pycom-fwtool-cli.exe can be found here:
+After installing the [Windows version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=win32&redirect=true) of the updater tool, the CLI tool `pycom-fwtool-cli.exe` can be found here:
 
-32-Bit Windows: ``C:\Program Files\Pycom\Pycom Firmware Update\``
+- 32-Bit Windows: `C:\Program Files\Pycom\Pycom Firmware Update\`
+- 64-Bit Windows: `C:\Program Files (x86)\Pycom\Pycom Firmware Update\`
 
-64-Bit Windows: ``C:\Program Files (x86)\Pycom\Pycom Firmware Update\``
 
-
-### Mac
-In order to get access to the CLI tool on Mac, you will need to right click on
+### macOS
+In order to get access to the CLI tool on macOS, you will need to right click on
 the [Mac version](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=macos&redirect=true) of the updater tool and click `Show Package Contents`, then navigate to `Contents/Resources`, here you will find the `pycom-fwtool-cli`.
 
 
@@ -82,8 +81,8 @@ The parameter `-r, --reset` has been added as a courtesy for users of 3rd party 
 `-v / --verbose` : show verbose output from esptool.
 `-d / --debug`   : show debug output from fwtool.
 `-q / --quiet`   : suppress most output, used for scripting
-`-p / --port`    : specifies the serial port to be used. Can also be set via **environment variable ESPPORT** 
-`-s / --speed`   : specifies the serial speed to be used. Can also be set via **environment variable ESPBAUD** 
+`-p / --port`    : specifies the serial port to be used. Can also be set via **environment variable ESPPORT**
+`-s / --speed`   : specifies the serial speed to be used. Can also be set via **environment variable ESPBAUD**
 `-c / --continuation` : continue previous connection in FTDI mode. This allows running multiple commands sequentially without having to reset the module. This option is ignored in PIC mode as the module can be reset via the serial connection.
 `-x / --noexit`  : This will prevent the PIC from leaving firmware update mode.
 `--ftdi`         : This will force the CLI updater to run in FTDI mode.
@@ -94,7 +93,7 @@ The parameter `-r, --reset` has been added as a courtesy for users of 3rd party 
 ## Commands
 ###  list                
 Get list of available serial ports ports.
-```
+```bash
 usage: pycom-fwtool-cli list [-h]
 
 optional arguments:
@@ -102,12 +101,13 @@ optional arguments:
 ```
 
 **Example:**
-On MacOS:
-```
-$pycom-fwtool-cli  list
+On macOS:
+```bash
+$ pycom-fwtool-cli  list
 /dev/cu.usbmodemPy343431  [Pytrack] [USB VID:PID=04D8:F013 SER=Py343434 LOCATION=20-2]
 /dev/cu.Bluetooth-Incoming-Port  [n/a] [n/a]
 ```
+
 On Windows:
 ```
 COM6  [Pytrack] [USB VID:PID=04D8:F013 SER=Py343434 LOCATION=20-2]
@@ -116,17 +116,18 @@ COM6  [Pytrack] [USB VID:PID=04D8:F013 SER=Py343434 LOCATION=20-2]
 {% hint style='info' %}
 This is the only command that does not require any additional parameters.
 
-All other commands require that **the serial port is specified either through the -p / --port option or through environment variable ESPPORT**
-You can optionally specify the speed either through -s / --speed or via environment variable ESPBAUD. The default speed is 921600. The maximum speed for read operations on PIC based expansion boards & shields is 230400. The speed will be reduced automatically if necessary.
+All other commands require that **the serial port is specified either through the `-p` / `--port` option or through environment variable `ESPPORT`**
+You can optionally specify the speed either through `-s` / `--speed` or via environment variable `ESPBAUD`. The default speed is `921600`. The maximum speed for read operations on PIC based expansion boards & shields is `230400`. The speed will be reduced automatically if necessary.
 
 ### Special note for Expansion Board 2.0
 
-You will need to have a **jumper wire** connected between`P2`and`GND`to use any of the commands below. You will also need to **press the reset button** either before running each command or at least before running the first command. To avoid having to press the reset button again after each command, you can use the -c / --continuation option. The first command connecting to the device **MUST NOT** use the -c / --continuation option. This is to make sure a program called _stub_ is uploaded onto the device. This _stub_ cannot be uploaded more than once, so you need to tell the cli tool that the _stub_ is already running, which is done through using the -c / --continuation option.
+You will need to have a **jumper wire** connected between `G23` and `GND` to use any of the commands below. You will also need to **press the reset button** either before running each command or at least before running the first command. To avoid having to press the reset button again after each command, you can use the `-c` / `--continuation` option. The first command connecting to the device **MUST NOT** use the `-c` / `--continuation` option. This is to make sure a program called `_stub_` is uploaded onto the device. This `_stub_` cannot be uploaded more than once, so you need to tell the cli tool that the `_stub_` is already running, which is done through using the `-c` / `--continuation` option.
 {% endhint %}
 
 
-###  chip_id             
+### chip_id             
 Shows the unique ID of the ESP32 on the connected module.
+
 ```
 usage: pycom-fwtool-cli  -p PORT exit [-h]
 
@@ -134,7 +135,7 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
-###  wmac                
+### wmac                
 Shows the WiFi MAC of the connected module.
 
 ```
@@ -144,7 +145,7 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
-###  smac                
+### smac                
 Shows the LPWAN MAC of the connected module.
 
 ```
@@ -154,7 +155,7 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
-###  sigfox              
+### sigfox              
 Show sigfox details
 
 ```
@@ -164,7 +165,7 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
-###  exit                
+### exit                
 If a Pysense/Pytrack/Expansion 3 has previously been left in firmware update mode by using
 the `-x` option, this command can be used to exit the firmware update mode.
 
@@ -175,9 +176,10 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
-###  flash               
-Writes firmware image to flash, must be as a tar(.gz) file as provided by Pycom.
+### flash               
+Writes firmware image to flash, must be as a `.tar(.gz)` file as provided by Pycom.
 These files can be found on [GitHub](https://github.com/pycom/pycom-micropython-sigfox/releases).
+
 ```
 usage: pycom-fwtool-cli  -p PORT flash [-h] [-t TAR]
 
@@ -186,7 +188,7 @@ optional arguments:
   -t TAR, --tar TAR  perform the upgrade from a tar[.gz] file
 ```
 
-###  copy               
+### copy               
 Read/Write flash memory partition from/to local file
 
 ```
@@ -202,9 +204,9 @@ optional arguments:
   -r, --restore         restore partition from binary file
   -b, --backup          backup partition to binary file (default)
 
- ```
+```
 
-###  write               
+### write               
 Write to a specific location in flash memory.
 
 ```
@@ -215,10 +217,10 @@ optional arguments:
   -a ADDRESS, --address ADDRESS
                         address to write to
   --contents CONTENTS   contents of the memory to write (base64)
- ```
+```
 
-###  wifi               
-Get/Set default WIFI parameters.
+### wifi               
+Get/Set default WiFi parameters.
 
 ```
 usage: pycom-fwtool-cli wifi [-h] [--ssid SSID] [--pwd PWD] [--wob [WOB]]
@@ -229,9 +231,9 @@ optional arguments:
   --pwd PWD    Set Wifi PWD
   --wob [WOB]  Set Wifi on boot
 
- ```
+```
 
-###  pybytes               
+### pybytes               
 Read/Write pybytes configuration.
 
 ```
@@ -247,15 +249,17 @@ optional arguments:
   --extraprefs EXTRAPREFS
                         Set extra preferences
 
- ```
+```
+
 {% hint style='info' %}
-Note: The local pybytes_config.json file is overwritten when making any modifications using this command (requires Pybytes firmware 1.17.5.b6 or higher and Firmware updater 1.14.3).
+Note: The local `pybytes_config.json` file is overwritten when making any modifications using this command (requires Pybytes firmware `1.17.5.b6` or higher and Firmware updater `1.14.3`).
 {% endhint %}
 
 
-###  cb                  
+### cb                  
 Read/Write config block (LPMAC, Sigfox PAC & ID, etc.). You can find the
 structure of this block [here.](https://github.com/pycom/pycom-micropython-sigfox/blob/master/esp32/pycom_config.h#L24)
+
 ```
 usage: pycom-fwtool-cli  -p PORT cb [-h] [-f FILE] [-b] [-r]
 
@@ -270,13 +274,14 @@ If neither `-b` or `-r` is provided, the command will default to backup. If no
 file name is provided, `<WMAC>.cb` is used.
 
 To backup your config block:
-``$pycom-fwtool-cli  -p PORT cb``
+`$pycom-fwtool-cli  -p PORT cb`
 
 To restore your config block:
-``$pycom-fwtool-cli  -p PORT cb -r -f backup.cb``
+`$pycom-fwtool-cli  -p PORT cb -r -f backup.cb`
 
-###  nvs                 
+### nvs                 
 Read/Write non-volatile storage.
+
 ```
 usage: pycom-fwtool-cli  -p PORT nvs [-h] [-f FILE] [-b] [-r]
 
@@ -286,19 +291,20 @@ optional arguments:
   -b, --backup          backup cb partition to file
   -r, --restore         restore cb partition from file
 ```
+
 If neither `-b` or `-r` is provided, the command will default to backup. If no
 file name is provided, `<WMAC>.nvs` is used.
 
 To backup your NVS:
-``$pycom-fwtool-cli  -p PORT nvs``
+`$pycom-fwtool-cli  -p PORT nvs`
 
 To restore your NVS:
-``$pycom-fwtool-cli  -p PORT nvs -r -f backup.nvs``
+`$pycom-fwtool-cli  -p PORT nvs -r -f backup.nvs`
 
-
-###  ota    
+### ota
 Read/Write ota block, this contains data relating to OTA updates such as the
 hash of the OTA firmware.
+
 ```
 usage: pycom-fwtool-cli  ota [-h] [-f FILE] [-b] [-r]
 
@@ -313,12 +319,12 @@ If neither `-b` nor `-r` is provided, the command will default to backup. If no
 file name is provided, `<WMAC>.ota` is used.
 
 To backup your OTA block:
-``$pycom-fwtool-cli  -p PORT ota``
+`$pycom-fwtool-cli  -p PORT ota`
 
 To restore your OTA block:
-``$pycom-fwtool-cli  -p PORT ota -r -f backup.ota``
+`$pycom-fwtool-cli  -p PORT ota -r -f backup.ota`
 
-###  lpwan               
+### lpwan               
 Get/Set LPWAN parameters saved to non-volatile storage. Please see
 [here](../firmwareapi/pycom/network/lora.md##loranvramsave) for more details.
 
@@ -332,9 +338,10 @@ optional arguments:
   --lora_region    Output only LORA region
 ```
 
-###  erase_fs            
+### erase_fs            
 Erase flash file system area. This is useful if some code running on the device
-is reventing access to the REPL.
+is preventing access to the REPL.
+
 ```
 usage: pycom-fwtool-cli  -p PORT erase_fs [-h]
 
@@ -342,7 +349,7 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
-###  erase_all           
+### erase_all           
 Erase entire flash, only use this if you are sure you know what you are doing.
 This will remove your devices lpwan mac addresses etc.
 
@@ -352,4 +359,3 @@ usage: pycom-fwtool-cli erase_all [-h]
 optional arguments:
   -h, --help  show this help message and exit
 ```
-

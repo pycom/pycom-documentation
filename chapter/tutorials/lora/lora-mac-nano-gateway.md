@@ -39,7 +39,7 @@ while (True):
         lora_sock.send(ack_pkg)
 ```
 
-The ``_LORA_PKG_FORMAT`` is used as a method of identifying the different devices within a network. The ``_LORA_PKG_ACK_FORMAT`` is a simple ``ack`` package as a response to the nodes package.
+The `_LORA_PKG_FORMAT` is used as a method of identifying the different devices within a network. The `_LORA_PKG_ACK_FORMAT` is a simple `ack` package as a response to the nodes package.
 
 ### Node
 
@@ -92,13 +92,13 @@ while(True):
     time.sleep(5)
 ```
 
-The node is always sending packages and waiting for the ack from the gateway.
+The node is always sending packages and waiting for the `ack` from the gateway.
 
 {% hint style='info' %}
 To adapt this code to user specific needs:
 
-- Put a max waiting time for the ack to arrive and resend the package or mark it as invalid
-- Increase the package size changing the ``_LORA_PKG_FORMAT`` to 'BH%ds'. The H will allow the keeping of 2 bytes for size (for more information about [struct format](https://docs.python.org/2/library/struct.html#format-characters))
+- Put a max waiting time for the `ack` to arrive and resend the package or mark it as invalid
+- Increase the package size changing the `_LORA_PKG_FORMAT` to `BH%ds`. The `H` will allow the keeping of 2 bytes for size (for more information about [struct format](https://docs.python.org/2/library/struct.html#format-characters))
 - Reduce the package size with bitwise manipulation
 - Reduce the message size (for this demo, a string) to something more useful for specific development
 {% endhint %}

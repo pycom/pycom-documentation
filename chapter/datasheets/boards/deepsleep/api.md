@@ -2,7 +2,7 @@
 
 This chapter describes the library which controls the Deep Sleep Shield. This includes the controls for external interrupts and timer setup of the deep sleep functionality.
 
-To use this library, please upload the associated [Deep Sleep Library](https://github.com/pycom/pycom-libraries/tree/master/deepsleep) to ``/lib`` on the target Pycom Device.
+To use this library, please upload the associated [Deep Sleep Library](https://github.com/pycom/pycom-libraries/tree/master/deepsleep) to `/lib` on the target Pycom device.
 
 ### Quick Example
 
@@ -46,43 +46,43 @@ ds = DeepSleep()
 
 #####<function>deepsleep.enable_auto_poweroff()</function>
 
-This method allows for a critical battery voltage to be set. For example, if the external power source (e.g. LiPo Cell) falls below 3.3V, turn off the Pycom Device. This is intended to protect the hardware from under voltage.
+This method allows for a critical battery voltage to be set. For example, if the external power source (e.g. LiPo Cell) falls below `3.3V`, turn off the Pycom device. This is intended to protect the hardware from under voltage.
 
 #####<function>deepsleep.enable_pullups(pins)</function>
 
-This method allows for pullup pins to be enabled. For example, if an external trigger occurs, wake the Pycom Device from Deep Sleep. ``pins`` may be passed into the method as a list, i.e. ``['P17', 'P18']``.
+This method allows for pull-up pins to be enabled. For example, if an external trigger occurs, wake the Pycom device from Deep Sleep. `pins` may be passed into the method as a list, i.e. `['P17', 'P18']`.
 
 #####<function>deepsleep.disable_pullups(pins)</function>
 
-This method allows for pullup pins to be disabled. For example, if an external trigger occurs, wake the Pycom Device from Deep Sleep. ``pins`` may be passed into the method as a list, i.e. ``['P17', 'P18']``.
+This method allows for pull-up pins to be disabled. For example, if an external trigger occurs, wake the Pycom device from Deep Sleep. `pins` may be passed into the method as a list, i.e. `['P17', 'P18']`.
 
 #####<function>deepsleep.enable_wake_on_raise(pins)</function>
 
-This method allows for pullup pins to trigger on a rising voltage. For example, if an external rising voltage triggers occurs, wake the Pycom Device from Deep Sleep. ``pins`` may be passed into the method as a list, i.e. ``['P17', 'P18']``.
+This method allows for pull-up pins to trigger on a rising voltage. For example, if an external rising voltage triggers occurs, wake the Pycom device from Deep Sleep. `pins` may be passed into the method as a list, i.e. `['P17', 'P18']`.
 
 #####<function>deepsleep.disable_wake_on_raise(pins)</function>
 
-This method allows for disabling pullup pins that trigger on a rising voltage. ``pins`` may be passed into the method as a list, i.e. ``['P17', 'P18']``.
+This method allows for disabling pull-up pins that trigger on a rising voltage. `pins` may be passed into the method as a list, i.e. `['P17', 'P18']`.
 
 #####<function>deepsleep.enable_wake_on_fall(pins)</function>
 
-This method allows for pullup pins to trigger on a falling voltage. For example, if an external falling voltage triggers occurs, wake the Pycom Device from Deep Sleep. ``pins`` may be passed into the method as a list, i.e. ``['P17', 'P18']``.
+This method allows for pull-up pins to trigger on a falling voltage. For example, if an external falling voltage triggers occurs, wake the Pycom device from Deep Sleep. `pins` may be passed into the method as a list, i.e. `['P17', 'P18']`.
 
 #####<function>deepsleep.disable_wake_on_fall(pins)</function>
 
-This method allows for disabling pullup pins that trigger on a falling voltage. ``pins`` may be passed into the method as a list, i.e. ``['P17', 'P18']``.
+This method allows for disabling pull-up pins that trigger on a falling voltage. `pins` may be passed into the method as a list, i.e. `['P17', 'P18']`.
 
 #####<function>deepsleep.get_wake_status()</function>
 
-This method returns the status of the pins at wakeup from deep sleep. The method returns a ``dict`` with the states of ``wake``, ``P10``, ``P17``,``P18``.
+This method returns the status of the pins at wakeup from deep sleep. The method returns a `dict` with the states of `wake`, `P10`, `P17`, `P18`.
 
 #####<function>deepsleep.set_min_voltage_limit(value)</function>
 
-This method relates to the enable_auto_poweroff method and allows the user to specify the minimum power off voltage as a value.
+This method relates to the `enable_auto_poweroff` method and allows the user to specify the minimum power off voltage as a value.
 
 #####<function>deepsleep.go_to_sleep(seconds)</function>
 
-This method sends the board into deep sleep for a period of ``seconds`` or until an external interrupt has triggered (see ``set_pullups``).
+This method sends the board into deep sleep for a period of `seconds` or until an external interrupt has triggered (see `set_pullups`).
 
 #####<function>deepsleep.hw_reset()</function>
 

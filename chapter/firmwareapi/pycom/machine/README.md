@@ -1,6 +1,6 @@
 # module machine
 
-The ``machine`` module contains specific functions related to the board.
+The `machine` module contains specific functions related to the board.
 
 #### Quick Usage Example
 
@@ -26,11 +26,11 @@ Get the reset cause. See constants for the possible return values.
 
 #####<function>machine.disable_irq()</function>
 
-Disable interrupt requests. Returns and integer representing the previous IRQ state. This return value can be passed to enable_irq to restore the IRQ to its original state.
+Disable interrupt requests. Returns and integer representing the previous IRQ state. This return value can be passed to `enable_irq` to restore the IRQ to its original state.
 
 #####<function>machine.enable_irq([state])</function>
 
-Enable interrupt requests. The most common use of this function is to pass the value returned by disable_irq to exit a critical section. Another options is to enable all interrupts which can be achieved by calling the function with no parameters.
+Enable interrupt requests. The most common use of this function is to pass the value returned by `disable_irq` to exit a critical section. Another options is to enable all interrupts which can be achieved by calling the function with no parameters.
 
 ### Power Functions
 
@@ -50,22 +50,22 @@ The products with LTE connectivity (FiPy, GPy, G01), require the LTE radio to be
 
 #####<function>machine.pin_deepsleep_wakeup(pins, mode, enable_pull)</function>
 
-Configure pins to wake up from deep sleep mode. The pins which have this capability are: P2, P3, P4, P6, P8 to P10 and P13 to P23.
+Configure pins to wake up from deep sleep mode. The pins which have this capability are: `P2, P3, P4, P6, P8 to P10 and P13 to P23`.
 
 The arguments are:
 
-- ``pins`` a list or tuple containing the GPIO to setup for deepsleep wakeup.
-- ``mode`` selects the way the configure GPIOs can wake up the module. The possible values are: machine.WAKEUP_ALL_LOW and machine.WAKEUP_ANY_HIGH.
-- ``enable_pull`` if set to True keeps the pull up or pull down resistors enabled during deep sleep. If this variable is set to True, then ULP or capactive touch wakeup cannot be used in combination with GPIO wakeup.
+- `pins` a list or tuple containing the `GPIO` to setup for deepsleep wakeup.
+- `mode` selects the way the configure `GPIO`s can wake up the module. The possible values are: `machine.WAKEUP_ALL_LOW` and `machine.WAKEUP_ANY_HIGH`.
+- `enable_pull` if set to `True` keeps the pull up or pull down resistors enabled during deep sleep. If this variable is set to `True`, then `ULP` or capacitive touch wakeup cannot be used in combination with `GPIO` wakeup.
 
 #####<function>machine.wake_reason()</function>
 
-Get the wake reason. See constants for the possible return values. Returns a tuple of the form: (wake_reason, gpio_list). When the wakeup reason is either GPIO or touch pad, then the second element of the tuple is a list with GPIOs that generated the wakeup.
+Get the wake reason. See constants for the possible return values. Returns a tuple of the form: `(wake_reason, gpio_list)`. When the wakeup reason is either GPIO or touch pad, then the second element of the tuple is a list with GPIOs that generated the wakeup.
 
 #####<function>machine.remaining_sleep_time()</function>
 
 Returns the remaining timer duration (in milliseconds) if the ESP32 is woken up
-from deep sleep by something other than the timer. For Example if you set the
+from deep sleep by something other than the timer. For example, if you set the
 timer for 30 seconds (30000 ms) and it wakes up after 10 seconds then this
 function will return `20000`.
 
@@ -73,9 +73,9 @@ function will return `20000`.
 
 #####<function>machine.main(filename)</function>
 
-Set the filename of the main script to run after boot.py is finished. If this function is not called then the default file main.py will be executed.
+Set the `filename` of the main script to run after `boot.py` is finished. If this function is not called then the default file `main.py` will be executed.
 
-It only makes sense to call this function from within boot.py.
+It only makes sense to call this function from within `boot.py`.
 
 #####<function>machine.rng()</function>
 
@@ -86,7 +86,7 @@ Return a 24-bit software generated random number.
 Returns a byte string with a unique identifier of a board/SoC. It will vary from a board/SoC instance to another, if underlying hardware allows. Length varies by hardware (so use substring of a full value if you expect a short ID). In some MicroPython ports, ID corresponds to the network MAC address.
 
 {% hint style='info' %}
-Use ``ubinascii.hexlify()`` to convert the byte string to hexadecimal form for ease of manipulation and use elsewhere.
+Use `ubinascii.hexlify()` to convert the byte string to hexadecimal form for ease of manipulation and use elsewhere.
 {% endhint %}
 
 #####<function>machine.info()</function>
