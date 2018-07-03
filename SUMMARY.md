@@ -195,6 +195,7 @@
 * [8.3 Add a device to Pybytes](chapter/pybytes/connect/intro.md)
     * [8.3.1 Connect to Pybytes: Quick Add](chapter/pybytes/connect/quick.md)
     * [8.3.2 Connect to Pybytes: Flash Pybytes library manually](chapter/pybytes/connect/flash.md)
+    * [8.3.3 Add Sigfox device](chapter/pybytes/connect/sigfox.md)
 * [8.4 Visualise data from your device](chapter/pybytes/dashboard/intro.md)
 
 ## 9. Documentation Notes
