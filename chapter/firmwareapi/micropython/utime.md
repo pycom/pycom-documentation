@@ -78,3 +78,7 @@ Returns the number of seconds, as an integer, since the Epoch, assuming that und
 #####<function>utime.timezone([secs])</function>
 
 Set or get the timezone offset, in seconds. If `secs` is not provided, it returns the current value.
+
+{% hint style='info' %}
+In MicroPython, `time.timezone` works the opposite way to Python. In [Python](https://docs.python.org/3/library/time.html#time.timezone), to get the local time, you write `local_time = utc - timezone`, while in MicroPython it is `local_time = utc + timezone`.
+{% endhint %}
