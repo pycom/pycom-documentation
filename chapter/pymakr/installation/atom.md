@@ -21,8 +21,8 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure
 it for first time use. Please follow these steps:
 
 1. Connect your Pycom device to your computer via USB. If you are using an
-expansion board, and have just finished a firmware upgrade, be sure to **Remove
- the wire between GND and G23** and reset your device by pressing the button.
+Expansion Board 2.0, and have just finished a firmware upgrade, be sure to **remove
+ the wire between GND and G23** and reset your device by pressing the button. Note: you don't need the wire for Expansion Board 3.0
 2. Open Atom and ensure that the Pymakr Plugin has correctly installed.
 <p align="center"><img src ="../../../img/atom/atom_config_step_2.png" width="600"></p>
 3. Open the Pymakr console by clicking the `^` button, located in the lower right side of the Atom window.
