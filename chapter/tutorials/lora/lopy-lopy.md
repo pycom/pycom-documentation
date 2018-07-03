@@ -10,7 +10,7 @@ import socket
 import time
 
 print("Node A")
-print("initializing program")
+print("initialising program")
 lora = LoRa(mode=LoRa.LORA, frequency=863000000)
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 s.setblocking(False)
@@ -29,7 +29,7 @@ import socket
 import time
 
 print("Node B")
-print("initializing program")
+print("initialising program")
 lora = LoRa(mode=LoRa.LORA, frequency=863000000)
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 s.setblocking(False)
