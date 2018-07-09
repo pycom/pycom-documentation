@@ -188,7 +188,8 @@
     * [7.3.1 Expansion Board 3.0](ref://chapter/datasheets/downloads/expansion3-specsheet.pdf)
     * [7.3.2 Pytrack](ref://chapter/datasheets/downloads/pytrack-specsheet.pdf)
     * [7.3.3 Pysense](ref://chapter/datasheets/downloads/pysense-specsheet.pdf)
-    * [7.3.4 Expansion Board 2.0](ref://chapter/datasheets/downloads/expansion2-specsheet.pdf)
+    * [7.3.4 Pyscan](ref://chapter/datasheets/downloads/pyscan-specsheet.pdf)
+    * [7.3.5 Expansion Board 2.0](ref://chapter/datasheets/downloads/expansion2-specsheet.pdf)
 
 ## 8. Pybytes
 * [8.1 Introduction](chapter/pybytes/README.md)
