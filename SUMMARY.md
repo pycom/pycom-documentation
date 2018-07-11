@@ -40,7 +40,7 @@
 * [2.2 Tools/Features](chapter/pymakr/toolsfeatures.md)
 * [2.3 Settings](chapter/pymakr/settings.md)
 
-## 3. Pysense & Pytrack
+## 3. Pytrack, Pysense, Pyscan
 * [3.1 Introduction](chapter/pytrackpysense/README.md)
 * [3.2 Installing Software](chapter/pytrackpysense/installation/README.md)
     * [3.2.1 Updating Firmware](chapter/pytrackpysense/installation/firmware.md)
@@ -49,7 +49,8 @@
 * [3.3 API Reference](chapter/pytrackpysense/apireference/README.md)
     * [3.3.1 Pytrack](chapter/pytrackpysense/apireference/pytrack.md)
     * [3.3.2 Pysense](chapter/pytrackpysense/apireference/pysense.md)
-    * [3.3.3 Sleep](chapter/pytrackpysense/apireference/sleep.md)
+    * [3.3.4 Pyscan](chapter/pytrackpysense/apireference/pyscan.md)
+    * [3.3.5 Sleep](chapter/pytrackpysense/apireference/sleep.md)
 
 ## 4. Tutorials & Examples
 * [4.1 Introduction](chapter/tutorials/README.md)
@@ -88,6 +89,7 @@
     * [4.5.3 Modem Firmware Update](chapter/tutorials/lte/firmware.md)
 * [4.6 Pytrack Examples](chapter/tutorials/pytrack/README.md)
 * [4.7 Pysense Examples](chapter/tutorials/pysense/README.md)
+* [4.8 Pyscan Examples](chapter/tutorials/pyscan/README.md)
 
 ## 5. Firmware & API Reference
 * [5.1 Introduction](chapter/firmwareapi/README.md)

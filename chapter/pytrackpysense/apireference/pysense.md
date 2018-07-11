@@ -1,6 +1,6 @@
 # Pysense API
 
-This chapter describes the various libraries which are designed for the Pysense Board. This includes details about the various methods and classes available for each of the Pysense’s sensors.
+This chapter describes the various libraries which are designed for the Pysense board. This includes details about the various methods and classes available for each of the Pysense’s sensors.
 
 ### 3-Axis Accelerometer (LIS2HH12)
 
@@ -47,17 +47,19 @@ Read the light levels of both `LTR329ALS01` sensors. Returns a **tuple** with tw
 
 The following arguments may be passed into the constructor.
 
-**gain**
+**`gain`**
 
-<argument>ALS_GAIN_1X</argument>, <argument>ALS_GAIN_2X</argument>, <argument>ALS_GAIN_4X</argument>, <argument>ALS_GAIN_8X</argument>, <argument>ALS_GAIN_48X</argument>, <argument>ALS_GAIN_96X</argument>
+<constant>ALS_GAIN_1X</constant> <constant>ALS_GAIN_2X</constant> <constant>ALS_GAIN_4X</constant> <constant>ALS_GAIN_8X</constant> <constant>ALS_GAIN_48X</constant> <constant>ALS_GAIN_96X</constant>
 
-**integration**
+<br/>
+**`integration`**
 
-<argument>ALS_INT_50</argument>, <argument>ALS_INT_100</argument>, <argument>ALS_INT_150</argument>, <argument>ALS_INT_200</argument>, <argument>ALS_INT_250</argument>, <argument>ALS_INT_300</argument>, <argument>ALS_INT_350</argument>, <argument>ALS_INT_400</argument>
+<constant>ALS_INT_50</constant> <constant>ALS_INT_100</constant> <constant>ALS_INT_150</constant> <constant>ALS_INT_200</constant> <constant>ALS_INT_250</constant> <constant>ALS_INT_300</constant> <constant>ALS_INT_350</constant> <constant>ALS_INT_400</constant>
 
-**rate**
+<br/>
+**`rate`**
 
-<argument>ALS_RATE_50</argument>, <argument>ALS_RATE_100</argument>, <argument>ALS_RATE_200</argument>, <argument>ALS_RATE_500</argument>, <argument>ALS_RATE_1000</argument>, <argument>ALS_RATE_2000</argument>
+<constant>ALS_RATE_50</constant> <constant>ALS_RATE_100</constant> <constant>ALS_RATE_200</constant> <constant>ALS_RATE_500</constant> <constant>ALS_RATE_1000</constant> <constant>ALS_RATE_2000</constant>
 
 ---
 
@@ -80,7 +82,7 @@ Read the relative humidity of the `SI7006A20`. Returns a **float** with the perc
 
 Read the external temperature of the `SI7006A20`. Returns a **float** with the temperature.
 
-***
+---
 
 ### Barometric Pressure Sensor with Altimeter (MPL3115A2)
 
@@ -109,9 +111,9 @@ Read the temperature of the `MPL3115A2`. Returns a **float** with the temperatur
 
 The following arguments may be passed into the constructor.
 
-**mode**
+**`mode`**
 
-<argument>PRESSURE</argument>, <argument>ALTITUDE</argument>
+<constant>PRESSURE</constant> <constant>ALTITUDE</constant>
 
 ---
 
