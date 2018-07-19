@@ -205,7 +205,7 @@
 * [9.1 Introduction](chapter/docnotes/README.md)
 * [9.2 Syntax](chapter/docnotes/syntax.md)
 * [9.3 REPL vs Scripts](chapter/docnotes/replscript.md)
-* [9.4 Mesh Networks](chapter/tutorials/lora/lora-mesh.md)
+* [9.4 Mesh Networks](chapter/docnotes/lora-mesh.md)
 
 ## 10. Advanced Topics
 * [10.1 Firmware Downgrade](chapter/advance/downgrade.md)
