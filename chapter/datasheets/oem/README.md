@@ -12,4 +12,4 @@ This section contains all of the datasheets for the Pycom OEM Devices. This incl
 
   [6.2.5 L01 OEM Baseboard Reference](./l01_reference.md)
 
-  [6.2.6 Universal OEM Baseboard Reference](./universal_reference.md) 
+  [6.2.6 Universal OEM Baseboard Reference](./universal_reference.md)  
