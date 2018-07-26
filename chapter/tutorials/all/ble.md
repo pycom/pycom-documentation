@@ -2,15 +2,15 @@
 
 At present, basic BLE functionality is available. More features will be implemented in the near future, such as pairing. This page will be updated in line with these features.
 
-Full info on `bluetooth` can be found within bluetooth page of the Firmware API Reference.
+Full info on `bluetooth` can be found within [Bluetooth page](/chapter/firmwareapi/pycom/network/bluetooth/) of the Firmware API Reference.
 
 ### Scan for BLE Devices
 
 Scan for all of the advertising devices within range of the scanning device.
 
 ```python
-bluetooth.start_scan(10)        # starts scanning and stop after 10 seconds
-bluetooth.start_scan(-1)        # starts scanning indefinitely until bluetooth.stop_scan() is called
+bluetooth.start_scan(10)  # starts scanning and stop after 10 seconds
+bluetooth.start_scan(-1)  # starts scanning indefinitely until bluetooth.stop_scan() is called
 ```
 
 ### Raw Data from a BLE Device
@@ -18,8 +18,10 @@ A quick usage example that scans and prints the raw data from advertisements.
 
 ```python
 from network import Bluetooth
+
 bluetooth = Bluetooth()
 bluetooth.start_scan(-1)    # start scanning with no timeout
+
 while True:
     print(bluetooth.get_adv())
 ```

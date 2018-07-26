@@ -25,7 +25,7 @@ Read the current roll from the `LIS2HH12`. Returns a **float** in degrees in the
 
 Read the current pitch from the `LIS2HH12`. Returns a **float** in degrees in the range -90 to 90. Once the board tilts beyond this range the values will repeat. This is due to a lack of yaw measurement, making it not possible to know the exact orientation of the board.
 
-***
+---
 
 ### GPS with GLONASS (Quectel L76-L GNSS)
 

@@ -8,6 +8,7 @@ To use this library, please upload the associated [Deep Sleep Library](https://g
 
 ```python
 from deepsleep import DeepSleep
+import deepsleep
 
 ds = DeepSleep()
 
@@ -15,9 +16,9 @@ ds = DeepSleep()
 wake_s = ds.get_wake_status()
 print(wake_s)
 
-if wake_s['wake'] == DeepSleep.PIN_WAKE:
+if wake_s['wake'] == deepsleep.PIN_WAKE:
     print("Pin wake up")
-elif wake_s['wake'] == DeepSleep.TIMER_WAKE:
+elif wake_s['wake'] == deepsleep.TIMER_WAKE:
     print("Timer wake up")
 else:  # deepsleep.POWER_ON_WAKE:
     print("Power ON reset")

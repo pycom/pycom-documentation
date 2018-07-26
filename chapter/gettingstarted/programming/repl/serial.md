@@ -66,3 +66,5 @@ similar name
 2. Next click the `Serial` radio button on the right and enter the associated
 COM port (e.g. `COM4`) in the `Serial Line` box
 3. Finally, click the `Open` button
+
+<p align="center"><img src ="../../../../img/putty.png" width="500"></p>

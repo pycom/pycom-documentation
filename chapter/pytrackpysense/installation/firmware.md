@@ -15,7 +15,7 @@ Board v3 require a Serial USB CDC driver, in DFU, bootloader mode, the DFU
 driver is required. Below, the USB Product ID is depicted for each case.
 
 | Board    | DFU bootloader (update mode) | Application firmware (normal mode) |
-|---------|:--------------:|:--------------------:|
+|----------|:--------------:|:--------------------:|
 | Pytrack            |      `0xF014`    |        `0xF013`        |
 | Pysense            |      `0xF011`    |        `0xF012`        |
 | Pyscan             |      `0xEF37`    |        `0xEF38`        |
@@ -26,7 +26,7 @@ driver is required. Below, the USB Product ID is depicted for each case.
 
 ### Installing the DFU-util Tools
 
-##### Mac OS
+##### macOS
 
 If using `homebrew`:
 

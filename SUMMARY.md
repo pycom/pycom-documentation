@@ -40,7 +40,7 @@
 * [2.2 Tools/Features](chapter/pymakr/toolsfeatures.md)
 * [2.3 Settings](chapter/pymakr/settings.md)
 
-## 3. Pysense & Pytrack
+## 3. Pytrack, Pysense, Pyscan
 * [3.1 Introduction](chapter/pytrackpysense/README.md)
 * [3.2 Installing Software](chapter/pytrackpysense/installation/README.md)
     * [3.2.1 Updating Firmware](chapter/pytrackpysense/installation/firmware.md)
@@ -49,7 +49,8 @@
 * [3.3 API Reference](chapter/pytrackpysense/apireference/README.md)
     * [3.3.1 Pytrack](chapter/pytrackpysense/apireference/pytrack.md)
     * [3.3.2 Pysense](chapter/pytrackpysense/apireference/pysense.md)
-    * [3.3.3 Sleep](chapter/pytrackpysense/apireference/sleep.md)
+    * [3.3.4 Pyscan](chapter/pytrackpysense/apireference/pyscan.md)
+    * [3.3.5 Sleep](chapter/pytrackpysense/apireference/sleep.md)
 
 ## 4. Tutorials & Examples
 * [4.1 Introduction](chapter/tutorials/README.md)
@@ -87,6 +88,7 @@
     * [4.5.3 Modem Firmware Update](chapter/tutorials/lte/firmware.md)
 * [4.6 Pytrack Examples](chapter/tutorials/pytrack/README.md)
 * [4.7 Pysense Examples](chapter/tutorials/pysense/README.md)
+* [4.8 Pyscan Examples](chapter/tutorials/pyscan/README.md)
 
 ## 5. Firmware & API Reference
 * [5.1 Introduction](chapter/firmwareapi/README.md)
@@ -187,7 +189,8 @@
     * [7.3.1 Expansion Board 3.0](ref://chapter/datasheets/downloads/expansion3-specsheet.pdf)
     * [7.3.2 Pytrack](ref://chapter/datasheets/downloads/pytrack-specsheet.pdf)
     * [7.3.3 Pysense](ref://chapter/datasheets/downloads/pysense-specsheet.pdf)
-    * [7.3.4 Expansion Board 2.0](ref://chapter/datasheets/downloads/expansion2-specsheet.pdf)
+    * [7.3.4 Pyscan](ref://chapter/datasheets/downloads/pyscan-specsheet.pdf)
+    * [7.3.5 Expansion Board 2.0](ref://chapter/datasheets/downloads/expansion2-specsheet.pdf)
 
 ## 8. Pybytes
 * [8.1 Introduction](chapter/pybytes/README.md)
@@ -202,6 +205,7 @@
 * [9.1 Introduction](chapter/docnotes/README.md)
 * [9.2 Syntax](chapter/docnotes/syntax.md)
 * [9.3 REPL vs Scripts](chapter/docnotes/replscript.md)
+* [9.4 Mesh Networks](chapter/docnotes/mesh-networks.md)
 
 ## 10. Advanced Topics
 * [10.1 Firmware Downgrade](chapter/advance/downgrade.md)

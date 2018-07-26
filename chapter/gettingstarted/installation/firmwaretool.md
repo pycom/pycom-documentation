@@ -9,8 +9,8 @@ Here are the download links to the update tool. Please download the appropriate 
 - [Linux](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) (requires `dialog` and `python-serial` package)
 
 {% hint style='info' %}
-Previous versions of firmware are available for download on the
-**[Pycom forum](https://forum.pycom.io/topic/517/downgrading-firmware-advanced-users)**.
+Previous versions of firmware are available for download
+**[here](/chapter/advance/downgrade.html)**.
 {% endhint %}
 
 ### Updating Device Firmware
@@ -42,9 +42,9 @@ When using a Pysense/Pytrack/Pyscan/Expansion Board 3.0 to update your module
 you are not required to make a connection between `G23` and `GND`, the
 Pysense/Pytrack/Pyscan/Expansion Board 3.0 will do this automatically.
 
-1. Before connecting your module to a Pysense/Pytrack/Pyscan/Expansion Board 3.0
+1. Before connecting your module to a Pysense/Pytrack
    board, you should update the firmware on the
-   Pysense/Pytrack/Pyscan/Expansion Board 3.0. Instructions on how to do this
+   Pysense/Pytrack. Instructions on how to do this
    can be found [here](../../pytrackpysense/installation/firmware.md).
 2. Disconnect your device from your computer
 3. Insert module into Expansion Board
