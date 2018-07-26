@@ -1,8 +1,8 @@
 # Add Sigfox device
 
 {% hint style='danger' %}
-Before you start you need to register your Sigfox account at **[Sigfox backend](../../gettingstarted/registration/sigfox.md)**.
-You need Pycom device with Sigfox connectivity to get your Sigfox account.
+Before you start you need to create Sigfox account.
+You need Pycom device with Sigfox to get your Sigfox account. **[Follow these instructions](../../gettingstarted/registration/sigfox.md)** first please.
 {% endhint %}
 
 ## Create Sigfox API credentials
@@ -22,11 +22,29 @@ Copy *Login* and *Password* to the clipboard.
 
 <p align="center"><img src ="../../../img/pybytes/sigfox/apiAccessKeys.png"></p>
 
-Paste *Login* and *Password* to the Pybytes Sigfox credentials page.
+In Pybytes go to Settings &rarr; Sigfox API or [follow this link](https://pybytes.pycom.io/settings/sigfox-credentials) then paste in the form.
 
 <p align="center"><img src ="../../../img/pybytes/sigfox/pybytesSigfoxCredentials.png"></p>
 
-## Add Sigfox device in Pybytes
+## Sigfox account types
+
+### Sigfox DevKit contracts
+
+Every Pycom device with Sigfox connectivity comes with Sigfox DevKit account.
+You are provided with one year of free connectivity for your device. This is great for prototyping.
+
+For every new device you would need to repeat [Sigfox activation procedure](../../gettingstarted/registration/sigfox.md)
+
+
+Downside is that for every device you want to add to Pybytes,
+
+* you cannot use just Pybytes to add new devices
+* every device is added new Device
+
+### Sigfox custom contracts
+
+* paid
+* use just Pybytes to quickly add new Sigfox devices
 
 1. Create Sigfox device (Lopy4, SiPy, FiPy) in Pybytes
 2. Activate device with the firmware updater.
