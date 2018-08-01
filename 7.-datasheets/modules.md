@@ -1,10 +1,16 @@
 # 7.1 Development Modules
 
-* [7.1.1 WiPy 2.0](ref://../downloads/wipy2-specsheet.pdf)
-* [7.1.2 WiPy 3.0](ref://../downloads/wipy3-specsheet.pdf)
-* [7.1.3 LoPy](ref://../downloads/lopy-specsheet.pdf)
-* [7.1.4 LoPy 4](ref://../downloads/lopy4-specsheet.pdf)
-* [7.1.5 SiPy](ref://../downloads/sipy-specsheet.pdf)
-* [7.1.6 GPy](ref://../downloads/gpy-specsheet.pdf)
-* [7.1.7 FiPy](ref://../downloads/fipy-specsheet.pdf)
+{% file src="../.gitbook/assets/wipy2-specsheet.pdf" caption="WiPy 2.0" %}
+
+{% file src="../.gitbook/assets/wipy3-specsheet.pdf" caption="WiPy 3.0" %}
+
+{% file src="../.gitbook/assets/lopy-specsheet.pdf" caption="LoPy" %}
+
+{% file src="../.gitbook/assets/lopy4-specsheet.pdf" caption="LoPy 4" %}
+
+{% file src="../.gitbook/assets/sipy-specsheet.pdf" caption="SiPy" %}
+
+{% file src="../.gitbook/assets/gpy-specsheet.pdf" caption="GPy" %}
+
+{% file src="../.gitbook/assets/fipy-specsheet.pdf" caption="FiPy" %}
 

@@ -1,7 +1,10 @@
 # 7.2 OEM Modules
 
-* [7.2.1 W01](ref://../downloads/w01-specsheet.pdf)
-* [7.2.2 L01](ref://../downloads/l01-specsheet.pdf)
-* [7.2.3 L04](ref://../downloads/l04-specsheet.pdf)
-* [7.2.4 G01](ref://../downloads/g01-specsheet.pdf)
+{% file src="../.gitbook/assets/w01-specsheet.pdf" caption="W01" %}
+
+{% file src="../.gitbook/assets/l01-specsheet.pdf" caption="L01" %}
+
+{% file src="../.gitbook/assets/l04-specsheet.pdf" caption="L04" %}
+
+{% file src="../.gitbook/assets/g01-specsheet.pdf" caption="G01" %}
 

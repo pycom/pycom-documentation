@@ -1,9 +1,12 @@
 # 7.3 Expansion Boards and Shields
 
-* [7.3.1 Expansion Board 3.0](ref://../downloads/expansion3-specsheet.pdf)
-* [7.3.2 Pytrack](ref://../downloads/pytrack-specsheet.pdf)
-* [7.3.3 Pysense](ref://../downloads/pysense-specsheet.pdf)
-* [7.3.4 Expansion Board 2.0](ref://../downloads/expansion2-specsheet.pdf)
+{% file src="../.gitbook/assets/expansion3-specsheet.pdf" caption="Expansion Board 3.0" %}
 
+{% file src="../.gitbook/assets/pytrack-specsheet.pdf" caption="Pytrack" %}
 
+{% file src="../.gitbook/assets/pysense-specsheet.pdf" caption="Pysense" %}
+
+{% file src="../.gitbook/assets/pyscan-specsheet.pdf" caption="Pyscan" %}
+
+{% file src="../.gitbook/assets/expansion2-specsheet.pdf" caption="Expansion Board 2.0" %}
 
