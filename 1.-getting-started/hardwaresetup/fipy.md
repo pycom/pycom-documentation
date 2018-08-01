@@ -98,3 +98,5 @@ If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the FiPy you wil
 
 ![](../../.gitbook/assets/sim_fipy.png)
 
+
+
