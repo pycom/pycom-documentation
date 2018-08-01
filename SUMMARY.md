@@ -15,7 +15,7 @@
   * [1.1.2 LoPy4](1.-getting-started/hardwaresetup/lopy4.md)
   * [1.1.1 SiPy](1.-getting-started/hardwaresetup/sipy.md)
   * [1.1.1 GPy](1.-getting-started/hardwaresetup/gpy.md)
-  * [1.1.1 FiPy](1.-getting-started/hardwaresetup/fipy.md)
+  * [1.1.5 FiPy](1.-getting-started/hardwaresetup/fipy.md)
   * [1.1.1 WiPy](1.-getting-started/hardwaresetup/wipy.md)
 * [1.2 Software](1.-getting-started/installingsoftware/README.md)
   * [1.2.1 Drivers](1.-getting-started/installingsoftware/drivers.md)
