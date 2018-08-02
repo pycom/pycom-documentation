@@ -38,10 +38,7 @@ A terminal emulator is needed to open the connection from Windows; the easiest o
 To use PuTTY the serial port \(COM port\) in which the Pycom device is connected, must be located. In Windows, this information can be found from the 'Device Manager' program.
 
 1. Open the Windows start menu and search for 'Device Manager'
-2. The COM port for the Pycom device will be listed as 'USB Serial Device' or a
-
-   similar name
-
+2. The COM port for the Pycom device will be listed as 'USB Serial Device' or a similar name
 3. Copy/Write down the associated COM port \(e.g. `COM4`\)
 
 ### Using Putty

@@ -12,11 +12,11 @@ In case you want to extend Pybytes library you can flash Pybytes library manuall
 
 At the last step of the "Add Device" process:
 
-![](../../.gitbook/assets/7.png)
+![](../../.gitbook/assets/7%20%281%29.png)
 
 1. Download the [firmware updater](https://pycom.io/downloads/) for your operating system;
 
-   ![](../../.gitbook/assets/8.png)
+![](../../.gitbook/assets/8%20%281%29.png)
 
 2. Copy the device token.
 
@@ -26,26 +26,29 @@ Install the Firmware updater on your computer.
 
 1. Start the `Firmware updater`;
 
-   ![](../../.gitbook/assets/1.png)
+![](../../.gitbook/assets/1%20%281%29.png)
 
-   ![](../../.gitbook/assets/2.png)
+![](../../.gitbook/assets/2.png)
 
 2. Select your device serial port \(Make sure your device is connected to your computer\);
+
 3. Mark the options "Erase flash file system" and "Force update Pybytes registration";
 
-   ![](../../.gitbook/assets/3.png)
+![](../../.gitbook/assets/3.png)
 
 4. Paste your device token from Pybytes;
 
-   ![](../../.gitbook/assets/5.gif)
+![](../../.gitbook/assets/5%20%281%29.gif)
 
 5. The firmware updater will update the device's firmware.
 
-   ![](../../.gitbook/assets/6.png)
+![](../../.gitbook/assets/6.png)
 
-   ![](../../.gitbook/assets/7%20%281%29.png)
+![](../../.gitbook/assets/7.png)
 
 ## Next step: Set up your device's dashboard!
 
 Now it's time to display data from your device into Pybytes dashboard. You can check more about it [here!](../intro-2.md)
+
+{% page-ref page="../intro-2.md" %}
 

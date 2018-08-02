@@ -27,37 +27,17 @@ s.connect(socket.getaddrinfo('www.micropython.org', 80)[0][-1])
 
 ## Exceptions
 
-socket.errorsocket.timeout
+`socket.error`, `socket.timeout`
 
 ## Constants
 
-socket.AF\_INETsocket.AF\_LORA
-
-### Family types
-
-socket.SOCK\_STREAMsocket.SOCK\_DGRAMsocket.SOCK\_RAW
-
-### Socket types
-
-socket.IPPROTO\_UDPsocket.IPPROTO\_TCP
-
-### Socket protocols
-
-socket.SOL\_SOCKETsocket.SOL\_LORAsocket.SOL\_SIGFOX
-
-### Socket options layers
-
-socket.SO\_REUSEADDR
-
-### IP socket options
-
-socket.SO\_CONFIRMEDsocket.SO\_DR
-
-### LoRa socket options
-
-socket.SO\_RXsocket.SO\_TX\_REPEATsocket.SO\_OOBsocket.SO\_BIT
-
-### Sigfox socket options
+* Family types: `socket.AF_INET`, `socket.AF_LORA`
+* Socket types: `socket.SOCK_STREAM`, `socket.SOCK_DGRAM`, `socket.SOCK_RAW`
+* Socket protocols: `socket.IPPROTO_UDP`, `socket.IPPROTO_TCP`
+* Socket options layers: `socket.SOL_SOCKET`, `socket.SOL_LORA`, `socket.SOL_SIGFOX`
+* IP socket options: `socket.SO_REUSEADDR`
+* LoRa socket options: `socket.SO_CONFIRMED`, `socket.SO_DR`
+* Sigfox socket options: `socket.SO_RX`, `socket.SO_TX_REPEAT`, `socket.SO_OOB`, `socket.SO_BIT`
 
 ## class Socket
 
@@ -142,7 +122,7 @@ Closing the file object returned by `makefile()` WILL close the original socket 
 
 ### socket.read\(size\)
 
-Read up to size bytes from the socket. Return a bytes object. If `size` is not given, it behaves just like socket.readall\(\), see below.
+Read up to size bytes from the socket. Return a bytes object. If `size` is not given, it behaves just like [`socket.readall()`](usocket.md#socket-readall), see below.
 
 ### socket.readall\(\)
 

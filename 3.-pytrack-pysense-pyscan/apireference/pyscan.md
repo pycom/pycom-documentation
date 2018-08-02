@@ -41,11 +41,11 @@ Returns `0` for failure, otherwise the number of bytes received.
 
 #### MFRC630.mfrc630\_MF\_auth\(uid, key\_type, block\)
 
-Perform a MIFARE authentication procedure. This function is a higher-level wrapper around the MF authenticate command. The result of the authentication is checked to identify whether it appears to have succeeded. The key must be loaded into the key buffer with MFRC630.mfrc630\_cmd\_load\_key\(key\).
+Perform a MIFARE authentication procedure. This function is a higher-level wrapper around the MF authenticate command. The result of the authentication is checked to identify whether it appears to have succeeded. The key must be loaded into the key buffer with `MFRC630.mfrc630_cmd_load_key(key)`.
 
-Once authenticated, the authentication MUST be stopped manually by calling the mfrc630\_MF\_deauth\(\) function or otherwise disabling the `Crypto1 ON` bit in the status register.
+Once authenticated, the authentication MUST be stopped manually by calling the `mfrc630_MF_deauth()` function or otherwise disabling the `Crypto1 ON` bit in the status register.
 
-* `key_type` The MIFARE key A or B \(MFRC630\_MF\_AUTH\_KEY\_A or MFRC630\_MF\_AUTH\_KEY\_B\) to use
+* `key_type` The MIFARE key A or B \(`MFRC630_MF_AUTH_KEY_A` or `MFRC630_MF_AUTH_KEY_B`\) to use
 * `block` The block to authenticate
 * `uid` The authentication procedure required the first four bytes of the card's UID to authenticate
 
@@ -59,9 +59,7 @@ Disables MIFARE authentication. Disable the `Crypto1` bit from the status regist
 
 Send `WUPA` and `REQA`. Returns the response byte, the answer to request `A` byte \(`ATQA`\), or `0` in case of no answer.
 
-`instruction`
-
-MFRC630\_ISO14443\_CMD\_WUPAMFRC630\_ISO14443\_CMD\_REQA
+* instruction: `MFRC630_ISO14443_CMD_WUPA`, `MFRC630_ISO14443_CMD_REQA`
 
 #### MFRC630.mfrc630\_iso14443a\_select\(uid\)
 

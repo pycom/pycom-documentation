@@ -32,11 +32,9 @@ SSL sockets inherit all methods and from the standard sockets, see the `usocket`
 
 ## Exceptions
 
-ssl.SSLError
+`ssl.SSLError`
 
 ## Constants
 
-ssl.CERT\_NONEssl.CERT\_OPTIONALssl.CERT\_REQUIRED
-
-Supported values in `cert_reqs`
+* `ssl.CERT_NONE`, `ssl.CERT_OPTIONAL`, `ssl.CERT_REQUIRED`: Supported values in `cert_reqs`
 

@@ -4,7 +4,7 @@ This module provides functions to wait for events on streams \(select streams wh
 
 ## Pyboard specifics
 
-Polling is an efficient way of waiting for read/write activity on multiple objects. Current objects that support polling are: pyb.UART, pyb.USB\_VCP.
+Polling is an efficient way of waiting for read/write activity on multiple objects. Current objects that support polling are: `pyb.UART`, `pyb.USB_VCP`.
 
 ## Functions
 
@@ -18,11 +18,11 @@ Wait for activity on a set of objects.
 
 This function is provided for compatibility and is not efficient. Usage of `Poll` is recommended instead.
 
-### class Poll
+## class Poll
 
-## Methods
+### Methods
 
-### poll.register\(obj\[, eventmask\]\)
+#### poll.register\(obj\[, eventmask\]\)
 
 Register `obj` for polling. `eventmask` is logical OR of:
 
@@ -33,15 +33,15 @@ Register `obj` for polling. `eventmask` is logical OR of:
 
   `eventmask` defaults to `select.POLLIN | select.POLLOUT`.
 
-### poll.unregister\(obj\)
+#### poll.unregister\(obj\)
 
 Unregister `obj` from polling.
 
-### poll.modify\(obj, eventmask\)
+#### poll.modify\(obj, eventmask\)
 
 Modify the `eventmask` for `obj`.
 
-### poll.poll\(\[timeout\]\)
+#### poll.poll\(\[timeout\]\)
 
 Wait for at least one of the registered objects to become ready. Returns list of \(`obj`, `event`, ...\) tuples, `event` element specifies which events happened with a stream and is a combination of `select.POLL*` constants described above. There may be other elements in tuple, depending on a platform and version, so don’t assume that its size is 2. In case of timeout, an empty list is returned.
 

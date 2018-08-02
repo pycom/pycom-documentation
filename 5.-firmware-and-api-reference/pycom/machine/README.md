@@ -94,13 +94,13 @@ Returns the high water mark of the stack associated with various system tasks, i
 
 ### Reset Causes
 
-machine.PWRON\_RESETmachine.HARD\_RESETmachine.WDT\_RESETmachine.DEEPSLEEP\_RESETmachine.SOFT\_RESETmachine.BROWN\_OUT\_RESET
+`machine.PWRON_RESET`, `machine.HARD_RESET`, `machine.WDT_RESET,` `machine.DEEPSLEEP_RESET`, `machine.SOFT_RESET`, `machine.BROWN_OUT_RESET`
 
 ### Wake Reasons
 
-machine.PWRON\_WAKEmachine.PIN\_WAKEmachine.RTC\_WAKEmachine.ULP\_WAKE
+`machine.PWRON_WAKE`, `machine.PIN_WAKE`, `machine.RTC_WAKE`, `machine.ULP_WAKE`
 
 ### Pin Wakeup Modes
 
-machine.WAKEUP\_ALL\_LOWmachine.WAKEUP\_ANY\_HIGH
+`machine.WAKEUP_ALL_LOW`, `machine.WAKEUP_ANY_HIGH`
 

@@ -11,7 +11,7 @@ uart = UART(1, 9600)                         # init with given baudrate
 uart.init(9600, bits=8, parity=None, stop=1) # init with given parameters
 ```
 
-Bits can be `5, 6, 7, 8`. Parity can be `None`, UART.EVEN or UART.ODD. Stop can be `1, 1.5 or 2`.
+Bits can be `5, 6, 7, 8`. Parity can be `None`, `UART.EVEN` or `UART.ODD`. Stop can be `1, 1.5 or 2`.
 
 A UART object acts like a stream object therefore reading and writing is done using the standard stream methods:
 
@@ -130,11 +130,8 @@ Waits at most `timeout_ms` for the last Tx transaction to complete. Returns `Tru
 
 ## Constants
 
-UART.EVENUART.ODD
+* Parity types \(along with `None`\): `UART.EVEN`, `UART.ODD`
+* IRQ trigger sources: `UART.RX_ANY`
 
-Parity types \(along with `None`\)
 
-UART.RX\_ANY
-
-IRQ trigger sources
 

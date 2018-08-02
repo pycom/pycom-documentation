@@ -43,13 +43,15 @@ Return the thread stack size \(in bytes\) used when creating new threads. The op
 
 ## Objects
 
-\_thread.LockType
+### \_thread.LockType
 
 This is the type of lock objects.
 
-## class Lock – used for synchronisation between threads
+## class Lock
 
-## Methods
+Used for synchronisation between threads
+
+### Methods
 
 Lock objects have the following methods:
 

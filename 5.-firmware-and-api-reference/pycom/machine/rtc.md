@@ -75,7 +75,5 @@ rtc.synced()
 
 ## Constants
 
-RTC.INTERNAL\_RCRTC.XTAL\_32KHZ
-
-Clock source
+* Clock source: `RTC.INTERNAL_RC`, `RTC.XTAL_32KHZ`
 

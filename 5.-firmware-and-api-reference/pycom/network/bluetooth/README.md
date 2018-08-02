@@ -62,7 +62,7 @@ bluetooth = Bluetooth()
 * `mode` currently the only supported mode is `Bluetooth.BLE`
 * `antenna` selects between the internal and the external antenna. Can be either
 
-  Bluetooth.INT\_ANT, Bluetooth.EXT\_ANT.
+  `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`.
 
   With our development boards it defaults to using the internal antenna, but in
 
@@ -78,7 +78,7 @@ Disables the Bluetooth radio.
 
 ### bluetooth.start\_scan\(timeout\)
 
-Starts performing a scan listening for BLE devices sending advertisements. This function always returns immediately, the scanning will be performed on the background. The return value is `None`. After starting the scan the function get\_adv\(\) can be used to retrieve the advertisements messages from the FIFO. The internal FIFO has space to cache 16 advertisements.
+Starts performing a scan listening for BLE devices sending advertisements. This function always returns immediately, the scanning will be performed on the background. The return value is `None`. After starting the scan the function `get_adv()` can be used to retrieve the advertisements messages from the FIFO. The internal FIFO has space to cache 16 advertisements.
 
 The arguments are:
 
@@ -107,7 +107,7 @@ Gets an named tuple with the advertisement data received during the scanning. Th
 * `addr_type` is the address type. See the constants section below for more details.
 * `adv_type` is the advertisement type received. See the constants section below fro more details.
 * `rssi` is signed integer with the signal strength of the advertisement.
-* `data` contains the complete 31 bytes of the advertisement message. In order to parse the data and get the specific types, the method resolve\_adv\_data\(\) can be used.
+* `data` contains the complete 31 bytes of the advertisement message. In order to parse the data and get the specific types, the method `resolve_adv_data()` can be used.
 
 Example for getting `mac` address of an advertiser:
 
@@ -167,11 +167,11 @@ bluetooth.connect('112233eeddff') # mac address is accepted as a string
 
 Creates a callback that will be executed when any of the triggers occurs. The arguments are:
 
-* `trigger` can be either Bluetooth.NEW\_ADV\_EVENT, Bluetooth.CLIENT\_CONNECTED or Bluetooth.CLIENT\_DISCONNECTED
+* `trigger` can be either `Bluetooth.NEW_ADV_EVENT`, `Bluetooth.CLIENT_CONNECTED`, or `Bluetooth.CLIENT_DISCONNECTED`
 * `handler` is the function that will be executed when the callback is triggered.
 * `arg` is the argument that gets passed to the callback. If nothing is given the bluetooth object itself is used.
 
-An example of how this may be used can be seen in the bluetooth.events\(\) method.
+An example of how this may be used can be seen in the [`bluetooth.events()`](./#bluetooth-events) method.
 
 ### bluetooth.events\(\)
 
@@ -216,7 +216,7 @@ bluetooth.set_advertisement(name="advert", manufacturer_data="lopy_v1")
 
 ### bluetooth.advertise\(\[Enable\]\)
 
-Start or stop sending advertisements. The set\_advertisement\(\) method must have been called prior to this one.
+Start or stop sending advertisements. The `set_advertisement()` method must have been called prior to this one.
 
 ### bluetooth.service\(uuid, \* , isprimary=True, nbr\_chars=1, start=True\)
 
@@ -239,31 +239,11 @@ Closes the BLE connection with the client.
 
 ## Constants
 
-### Bluetooth mode
-
-Bluetooth.BLE
-
-### Advertisement type
-
-Bluetooth.CONN\_ADVBluetooth.CONN\_DIR\_ADVBluetooth.DISC\_ADVBluetooth.NON\_CONN\_ADVBluetooth.SCAN\_RSP
-
-### Address type
-
-Bluetooth.PUBLIC\_ADDRBluetooth.RANDOM\_ADDRBluetooth.PUBLIC\_RPA\_ADDRBluetooth.RANDOM\_RPA\_ADDR
-
-### Advertisement data type
-
-Bluetooth.ADV\_FLAGBluetooth.ADV\_16SRV\_PARTBluetooth.ADV\_T16SRV\_CMPLBluetooth.ADV\_32SRV\_PARTBluetooth.ADV\_32SRV\_CMPLBluetooth.ADV\_128SRV\_PARTBluetooth.ADV\_128SRV\_CMPLBluetooth.ADV\_NAME\_SHORTBluetooth.ADV\_NAME\_CMPLBluetooth.ADV\_TX\_PWRBluetooth.ADV\_DEV\_CLASSBluetooth.ADV\_SERVICE\_DATABluetooth.ADV\_APPEARANCEBluetooth.ADV\_ADV\_INTBluetooth.ADV\_32SERVICE\_DATABluetooth.ADV\_128SERVICE\_DATABluetooth.ADV\_MANUFACTURER\_DATA
-
-### Characteristic properties \(bit values that can be combined\)
-
-Bluetooth.PROP\_BROADCASTBluetooth.PROP\_READBluetooth.PROP\_WRITE\_NRBluetooth.PROP\_WRITEBluetooth.PROP\_NOTIFYBluetooth.PROP\_INDICATEBluetooth.PROP\_AUTHBluetooth.PROP\_EXT\_PROP
-
-### Characteristic callback events
-
-Bluetooth.CHAR\_READ\_EVENTBluetooth.CHAR\_WRITE\_EVENTBluetooth.NEW\_ADV\_EVENTBluetooth.CLIENT\_CONNECTEDBluetooth.CLIENT\_DISCONNECTEDBluetooth.CHAR\_NOTIFY\_EVENT
-
-### Antenna type
-
-Bluetooth.INT\_ANTBluetooth.EXT\_ANT
+* Bluetooth mode: `Bluetooth.BLE`
+* Advertisement type: `Bluetooth.CONN_ADV`, `Bluetooth.CONN_DIR_ADV`, `Bluetooth.DISC_ADV`, `Bluetooth.NON_CONN_ADV`, `Bluetooth.SCAN_RSP`
+* Address type: `Bluetooth.PUBLIC_ADDR`, `Bluetooth.RANDOM_ADDR`, `Bluetooth.PUBLIC_RPA_ADDR`, `Bluetooth.RANDOM_RPA_ADDR`
+* Advertisement data type: `Bluetooth.ADV_FLAG`, `Bluetooth.ADV_16SRV_PART`, `Bluetooth.ADV_T16SRV_CMPL`, `Bluetooth.ADV_32SRV_PART`, `Bluetooth.ADV_32SRV_CMPL`, `Bluetooth.ADV_128SRV_PART`, `Bluetooth.ADV_128SRV_CMPL`, `Bluetooth.ADV_NAME_SHORT`, `Bluetooth.ADV_NAME_CMPL`, `Bluetooth.ADV_TX_PWR`, `Bluetooth.ADV_DEV_CLASS`, `Bluetooth.ADV_SERVICE_DATA`, `Bluetooth.ADV_APPEARANCE`, `Bluetooth.ADV_ADV_INT`, `Bluetooth.ADV_32SERVICE_DATA`, `Bluetooth.ADV_128SERVICE_DATA`, `Bluetooth.ADV_MANUFACTURER_DATA`
+* Characteristic properties \(bit values that can be combined\): `Bluetooth.PROP_BROADCAST`, `Bluetooth.PROP_READ`, `Bluetooth.PROP_WRITE_NR`, `Bluetooth.PROP_WRITE`, `Bluetooth.PROP_NOTIFY`, `Bluetooth.PROP_INDICATE`, `Bluetooth.PROP_AUTH`, `Bluetooth.PROP_EXT_PROP`
+* Characteristic callback events: `Bluetooth.CHAR_READ_EVENT`, `Bluetooth.CHAR_WRITE_EVENT`, `Bluetooth.NEW_ADV_EVENT`, `Bluetooth.CLIENT_CONNECTED`, `Bluetooth.CLIENT_DISCONNECTED`, `Bluetooth.CHAR_NOTIFY_EVENT`
+* Antenna type: `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
 

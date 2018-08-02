@@ -6,7 +6,7 @@ This module provides native support for cryptographic algorithms. It’s loosely
 
 * [class AES](../pycom/aes.md) - Advanced Encryption Standard
 
-  **Methods**
+## **Methods**
 
 ### crypto.getrandbits\(bits\)
 

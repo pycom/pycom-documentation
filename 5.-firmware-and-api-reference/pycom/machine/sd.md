@@ -35,7 +35,7 @@ f.close()
 
 ### class machine.SD\(id, ...\)
 
-Create a SD card object. See sd.init\(\) for parameters if initialisation.
+Create a SD card object. See [`sd.init()`](sd.md#sd-init-id-0) for parameters if initialisation.
 
 ## Methods
 

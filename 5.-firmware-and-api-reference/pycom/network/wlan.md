@@ -50,13 +50,13 @@ Set or get the WiFi network processor configuration.
 
 Arguments are:
 
-* `mode` can be either WLAN.STA, WLAN.AP or WLAN.STA\_AP.
-* `ssid` is a string with the SSID name. Only needed when mode is WLAN.AP.
-* `auth` is a tuple with \(sec, key\). Security can be `None`, WLAN.WEP, WLAN.WPA or WLAN.WPA2. The key is a string with the network password. If `sec` is WLAN.WEP the key must be a string representing hexadecimal values \(e.g. `ABC1DE45BF`\). Only needed when mode is WLAN.AP.
-* `channel` a number in the range 1-11. Only needed when mode is WLAN.AP.
+* `mode` can be either `WLAN.STA`, `WLAN.AP`, or `WLAN.STA_AP`.
+* `ssid` is a string with the SSID name. Only needed when mode is `WLAN.AP`.
+* `auth` is a tuple with \(sec, key\). Security can be `None`, `WLAN.WEP`, `WLAN.WPA`, or `WLAN.WPA2`. The key is a string with the network password. If `sec` is `WLAN.WEP` the key must be a string representing hexadecimal values \(e.g. `ABC1DE45BF`\). Only needed when mode is `WLAN.AP`.
+* `channel` a number in the range 1-11. Only needed when mode is `WLAN.AP`.
 * `antenna` selects between the internal and the external antenna. Can be either
 
-  WLAN.INT\_ANT, WLAN.EXT\_ANT.
+  `WLAN.INT_ANT`, `WLAN.EXT_ANT`.
 
   With our development boards it defaults to using the internal antenna, but in
 
@@ -64,8 +64,8 @@ Arguments are:
 
   used for other things.
 
-* `power_save` enables or disables power save functions in STA mode.
-* `hidden` only valid in WLAN.AP mode to create an access point with a hidden SSID when set to `True`.
+* `power_save` enables or disables power save functions in `STA` mode.
+* `hidden` only valid in `WLAN.AP` mode to create an access point with a hidden SSID when set to `True`.
 
 For example, you can do:
 
@@ -74,7 +74,7 @@ For example, you can do:
 wlan.init(mode=WLAN.AP, ssid='wipy-wlan', auth=(WLAN.WPA2,'www.wipy.io'), channel=7, antenna=WLAN.INT_ANT)
 ```
 
-or:
+or
 
 ```python
 # configure as an station
@@ -89,7 +89,7 @@ Disables the WiFi radio.
 
 Connect to a wifi access point using the given SSID, and other security parameters.
 
-* `auth` is a tuple with `(sec, key)`. Security can be `None`, WLAN.WEP, WLAN.WPA, WLAN.WPA2 or WLAN.WPA2\_ENT. The key is a string with the network password. If `sec` is WLAN.WEP the key must be a string representing hexadecimal values \(e.g. `ABC1DE45BF`\). If `sec` is WLAN.WPA2\_ENT then the `auth` tuple can have either 3 elements: `(sec, username, password)`, or just 1: `(sec,)`. When passing the 3 element tuple, the`keyfile` and `certifle` arguments must not be given.
+* `auth` is a tuple with `(sec, key)`. Security can be `None`, `WLAN.WEP`, `WLAN.WPA`, `WLAN.WPA2` or `WLAN.WPA2_ENT`. The key is a string with the network password. If `sec` is `WLAN.WEP` the key must be a string representing hexadecimal values \(e.g. `ABC1DE45BF`\). If `sec` is `WLAN.WPA2_ENT` then the `auth` tuple can have either 3 elements: `(sec, username, password)`, or just 1: `(sec,)`. When passing the 3 element tuple, the`keyfile` and `certifle` arguments must not be given.
 * `bssid` is the MAC address of the AP to connect to. Useful when there are several APs with the same SSID.
 * `timeout` is the maximum time in milliseconds to wait for the connection to succeed.
 * `ca_certs` is the path to the CA certificate. This argument is not mandatory.
@@ -97,7 +97,7 @@ Connect to a wifi access point using the given SSID, and other security paramete
   `keyfile` is the path to the client key. Only used if `username` and `password` are not part of the `auth` tuple.
 
 * `certfile` is the path to the client certificate. Only used if `username` and `password` are not part of the `auth` tuple.
-* `identity` is only used in case of WLAN.WPA2\_ENT security.
+* `identity` is only used in case of `WLAN.WPA2_ENT` security.
 
 ### wlan.scan\(\)
 
@@ -151,15 +151,9 @@ Get a 6-byte long `bytes` object with the WiFI MAC address.
 
 ## Constants
 
-WLAN.STAWLAN.APWLAN.STA\_AP
+* WLAN mode: `WLAN.STA`, `WLAN.AP`, `WLAN.STA_AP`
+* WLAN network security: `WLAN.WEP`, `WLAN.WPA`, `WLAN.WPA2`, `WLAN.WPA2_ENT`
+* Antenna type: `WLAN.INT_ANT`, `WLAN.EXT_ANT`
 
-WLAN mode
 
-WLAN.WEPWLAN.WPAWLAN.WPA2WLAN.WPA2\_ENT
-
-WLAN network security
-
-WLAN.INT\_ANTWLAN.EXT\_ANT
-
-Antenna type
 

@@ -8,33 +8,36 @@ In Pybytes, go to `Devices` Page:
 
 1. Click on `Add Device`.
 
-   ![](../../.gitbook/assets/1.jpg)
+![](../../.gitbook/assets/1%20%281%29.jpg)
 
 2. Select your device \(e.g., WiPy, LoPy, SiPy, etc.\);
 
-   ![](../../.gitbook/assets/2.jpg)
+![](../../.gitbook/assets/2%20%281%29.jpg)
 
 3. Select your shield \(e.g., PySense, PyTrack, PyScan or other\);
 
-   ![](../../.gitbook/assets/3.jpg)
+![](../../.gitbook/assets/3.jpg)
 
 4. Select your network option;
 
-   ![](../../.gitbook/assets/4.jpg)
+![](../../.gitbook/assets/4.jpg)
 
 5. Enter a unique name and the network credentials \(SSID and password\) for your device;
 
-   ![](../../.gitbook/assets/5.jpg)
+![](../../.gitbook/assets/5%20%281%29.jpg)
 
 ## Step 2: Connect your device to Pybytes
 
 At the end of the "Add Device" wizard, Pybytes will give you two options for you to connect your device to Pybytes:
 
-![](../../.gitbook/assets/7.png)
+![](../../.gitbook/assets/7%20%281%29.png)
 
-Select how you would like to connect your device to Pybytes: 1. [CONNECT YOUR DEVICE _QUICKLY \(RECOMMENDED\)_](quick.md) 2. [CONNECT YOUR DEVICE _BY FLASHING PYBYTES LIBRARY_](flash.md)
+Select how you would like to connect your device to Pybytes:
+
+1. [CONNECT YOUR DEVICE _QUICKLY \(RECOMMENDED\)_](quick.md)
+2. [CONNECT YOUR DEVICE _BY FLASHING PYBYTES LIBRARY_](flash.md)
 
 {% hint style="info" %}
-From firmware 1.16.x onwards all Pycom devices come with Pybytes library build-in `/frozen` folder. That means that you can choose between adding your device quickly with the firmware updater or you can flash Pybytes library manually.
+From firmware 1.16.x onwards all Pycom devices come with Pybytes library built-in `/frozen` folder. That means that you can choose between adding your device quickly with the firmware updater or you can flash Pybytes library manually.
 {% endhint %}
 

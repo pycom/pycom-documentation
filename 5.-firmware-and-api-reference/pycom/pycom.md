@@ -66,7 +66,6 @@ Get or set the WiFi on boot flag. When this flag is set to `True`, the AP with t
 import pycom
 
 pycom.wifi_on_boot(True)   # enable WiFi on boot
-
 pycom.wifi_on_boot()       # get the wifi on boot flag
 ```
 
@@ -78,7 +77,6 @@ Enables the WDT at boot time with the timeout in ms set by the function `wdt_on_
 import pycom
 
 pycom.wdt_on_boot(True)     # enable WDT on boot
-
 pycom.wdt_on_boot()         # get the WDT on boot flag
 ```
 
@@ -90,8 +88,7 @@ Sets or gets the WDT on boot timeout in milliseconds. The minimum value is 5000 
 import pycom
 
 pycom.wdt_on_boot_timeout(10000)     # set the timeout to 5000ms
-
-pycom.wdt_on_boot_timeout()         # get the WDT timeout value
+pycom.wdt_on_boot_timeout()          # get the WDT timeout value
 ```
 
 ### pycom.pulses\_get\(pin, timeout\)

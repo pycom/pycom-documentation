@@ -10,18 +10,7 @@ If this is your first time using a Pycom module we highly recommend you read thr
 
 Once you are familiar with MicroPython and Pymakr, the recommended way of uploading code to your module, you can explore the pages below. These will discuss in greater detail the various mechanisms for running code on your device as well as how to recover it if something goes wrong.
 
-* [**REPL:**](repl/) The REPL \(Read Evaluate Print Loop\)
-
-  is an interactive terminal that allows you to type in and test your code
-
-  directly on the device, just like interactive python interpreter. It can be
-
-  accessed via [UART](repl/serial.md) or
-
-  [Telnet](repl/telnet.md). This is accessed easiest by using Pymakr
-
-  but if you wish to use other tools, this page will explain how.
-
+* [**REPL:**](repl/) The REPL \(Read Evaluate Print Loop\) is an interactive terminal that allows you to type in and test your code directly on the device, just like interactive python interpreter. It can be accessed via [UART](repl/serial.md) or [Telnet](repl/telnet.md). This is accessed easiest by using Pymakr but if you wish to use other tools, this page will explain how.
 * [**FTP:**](ftp.md) All Pycom modules start up with a WiFi access point enabled, and a simple FTP server running on it. Once connected to the WiFi network, you can use FTP to transfer files over to your device wirelessly. This can be very useful if you do not have physical access to your device.
 * [**Safe Boot:**](safeboot.md) It is possible that some code you upload to your module will prevent you accessing the REPL or FTP server, preventing you from updating your scripts. This guide will detail how to safe boot your module and how to remove the offending scripts from it.
 

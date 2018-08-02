@@ -71,7 +71,7 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 ### Lora/Sigfox
 
-{% hint style="info" %}
+{% hint style="danger" %}
 If you intend on using the LoRa/Sigfox connectivity of the FiPy you **must** connect a LoRa/Sigfox antenna to your FiPy before trying to use LoRa/Sigfox otherwise you risk damaging the device.
 {% endhint %}
 

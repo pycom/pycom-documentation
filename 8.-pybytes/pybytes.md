@@ -1,6 +1,6 @@
 # 8.1 Introduction
 
-[![](../.gitbook/assets/pybyteslogo.png)](http://pybytes.io/)
+![](../.gitbook/assets/pybyteslogo.png)
 
 ## What is Pybytes?
 

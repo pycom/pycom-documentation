@@ -33,5 +33,5 @@ After your device was flashed with Pybytes firmware in automatically start addin
 
 ## Troubleshooting
 
-[Disengage Sigfox sequence number](../../../4.-tutorials-and-examples/sigfox/disengage_seq_num.md)
+[Disengage Sigfox sequence number](../../../4.-tutorials-and-examples/sigfox.md#disengage-sequence-number)
 

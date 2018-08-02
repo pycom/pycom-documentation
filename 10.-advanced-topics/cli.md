@@ -299,9 +299,9 @@ optional arguments:
 
 If neither `-b` or `-r` is provided, the command will default to backup. If no file name is provided, `<WMAC>.nvs` is used.
 
-To backup your NVS: `$pycom-fwtool-cli -p PORT nvs`
+To backup your NVS: `$ pycom-fwtool-cli -p PORT nvs`
 
-To restore your NVS: `$pycom-fwtool-cli -p PORT nvs -r -f backup.nvs`
+To restore your NVS: `$ pycom-fwtool-cli -p PORT nvs -r -f backup.nvs`
 
 #### ota
 

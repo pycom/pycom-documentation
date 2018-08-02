@@ -1,4 +1,4 @@
-# 4.5.3 Modem Firmware Update
+# 4.5.4 Modem Firmware Update
 
 ## Description
 
@@ -54,7 +54,7 @@ OK
 ```
 
 {% hint style="danger" %}
-DO NOT disconnect power while the upgrade process is taking place, wait for it to finish!
+**DO NOT DISCONNECT** power while the upgrade process is taking place, wait for it to finish!
 {% endhint %}
 
 If the module get's stuck in here for more than 1 minute while upgrading to the NB-IoT firmware, you can cycle power and retry. In this case it is safe.

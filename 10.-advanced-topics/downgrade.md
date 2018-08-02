@@ -15,7 +15,9 @@ You can obtain previous firmware versions here:
 * [FiPy](https://software.pycom.io/downloads/FiPy.html)
 * [LoPy4](https://software.pycom.io/downloads/LoPy4.html)
 
-**Note:** Prior to version `1.16.0.b1` the firmware for modules with LoRa functionality was frequency specific. From `1.16.0.b1` and onward, the firmware is region agnostic and this can either be set programatically or via the config block \(see [here](cli.md#lpwan)\).
+{% hint style="info" %}
+Prior to version `1.16.0.b1` the firmware for modules with LoRa functionality was frequency specific. From `1.16.0.b1` and onward, the firmware is region agnostic and this can either be set programatically or via the config block \(see [here](cli.md#lpwan)\).
+{% endhint %}
 
 ## GUI
 

@@ -18,22 +18,13 @@ This is simplified version of a function which appears in the traceback module i
 
 ## Constants
 
-sys.argv
+* `sys.argv`: A mutable list of arguments the current program was started with.
+* `sys.byteorder`: The byte order of the system \("little" or "big"\).
+* `sys.implementation`: Object with information about the current Python implementation. For MicroPython, it has following attributes:
+  * _name_ - string "micropython"
+  * _version_ - tuple \(major, minor, micro\), e.g. \(1, 7, 0\)
 
-A mutable list of arguments the current program was started with.
-
-sys.byteorder
-
-The byte order of the system \("little" or "big"\).
-
-sys.implementation
-
-Object with information about the current Python implementation. For MicroPython, it has following attributes:
-
-* _name_ - string "micropython"
-* _version_ - tuple \(major, minor, micro\), e.g. \(1, 7, 0\)
-
-  This object is the recommended way to distinguish MicroPython from other Python implementations \(note that it still may not exist in the very minimal ports\).
+    This object is the recommended way to distinguish MicroPython from other Python implementations \(note that it still may not exist in the very minimal ports\).
 
 {% hint style="info" %}
 Difference to CPython
@@ -41,9 +32,7 @@ Difference to CPython
 CPython mandates more attributes for this object, but the actual useful bare minimum is implemented in MicroPython.
 {% endhint %}
 
-sys.maxsize
-
-Maximum value which a native integer type can hold on the current platform, or maximum value representable by MicroPython integer type, if it’s smaller than platform max value \(that is the case for MicroPython ports without long int support\).
+* `sys.maxsize`: Maximum value which a native integer type can hold on the current platform, or maximum value representable by MicroPython integer type, if it’s smaller than platform max value \(that is the case for MicroPython ports without long int support\).
 
 This attribute is useful for detecting "bitness" of a platform \(32-bit vs 64-bit, etc.\). It’s recommended to not compare this attribute to some value directly, but instead count number of bits in it:
 
@@ -62,35 +51,12 @@ else:
     # "> 32", "> 64" style of comparisons.
 ```
 
-sys.modules
-
-Dictionary of loaded modules. On some ports, it may not include builtin modules.
-
-sys.path
-
-A mutable list of directories to search for imported modules.
-
-sys.platform
-
-The platform that MicroPython is running on. For OS/RTOS ports, this is usually an identifier of the OS, e.g. `linux`. For baremetal ports, it is an identifier of a board, e.g. `pyboard` for the original MicroPython reference board. It thus can be used to distinguish one board from another. If you need to check whether your program runs on MicroPython \(vs other Python implementation\), use `sys.implementation` instead.
-
-sys.stderr
-
-Standard error stream.
-
-sys.stdin
-
-Standard input stream.
-
-sys.stdout
-
-Standard output stream.
-
-sys.version
-
-Python language version that this implementation conforms to, as a string.
-
-sys.version\_info
-
-Python language version that this implementation conforms to, as a tuple of ints.
+* `sys.modules`: Dictionary of loaded modules. On some ports, it may not include builtin modules.
+* `sys.path`: A mutable list of directories to search for imported modules.
+* `sys.platform`: The platform that MicroPython is running on. For OS/RTOS ports, this is usually an identifier of the OS, e.g. `linux`. For baremetal ports, it is an identifier of a board, e.g. `pyboard` for the original MicroPython reference board. It thus can be used to distinguish one board from another. If you need to check whether your program runs on MicroPython \(vs other Python implementation\), use `sys.implementation` instead.
+* `sys.stderr`: Standard error stream.
+* `sys.stdin`: Standard input stream.
+* `sys.stdout`: Standard output stream.
+* `sys.version`: Python language version that this implementation conforms to, as a string.
+* `sys.version_info`: Python language version that this implementation conforms to, as a tuple of ints.
 

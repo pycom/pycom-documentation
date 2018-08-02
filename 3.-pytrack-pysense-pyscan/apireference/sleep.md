@@ -59,7 +59,7 @@ Returns the last wakeup reason. Possible values are:
 # WAKE_REASON_INT_PIN = 8       # INT pin
 ```
 
-_Note: the_ `WAKE_REASON_INT_PIN` _can be used if the PIC\_RC1 pin \(pin\#6 on External IO Header\) is toggled._
+_Note: the `WAKE_REASON_INT_PIN` can be used if the `PIC_RC1` pin \(pin\#6 on External IO Header\) is toggled._
 
 As in the above example, this method should be called at the beginning of the script, to find out the reset \(wakeup\) reason.
 

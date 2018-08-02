@@ -18,7 +18,7 @@ The Pytrack is has a number of features including GPS, 3-Axis Accelerometer and 
 * GPS and GLONASS \([L76-L](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/pytrackpysense/apireference/pytrack.html)\)
 * MicroSD Card Reader
 
-All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at P22 \(SDA\) and P21 \(SCL\).
+All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `P22` \(SDA\) and `P21` \(SCL\).
 
 ## Pysense
 

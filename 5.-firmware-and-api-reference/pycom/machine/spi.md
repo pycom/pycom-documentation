@@ -81,15 +81,7 @@ Write from `write_buf` and read into `read_buf`. Both buffers must have the same
 
 ## Constants
 
-SPI.MASTER
-
-For initialising the SPI bus to master
-
-SPI.MSB
-
-Set the first bit to be the most significant bit
-
-SPI.LSB
-
-Set the first bit to be the least significant bit
+* For initialising the SPI bus to master: `SPI.MASTER`
+* Set the first bit to be the most significant bit: `SPI.MSB`
+* Set the first bit to be the least significant bit: `SPI.LSB`
 

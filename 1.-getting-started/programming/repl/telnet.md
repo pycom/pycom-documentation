@@ -31,10 +31,7 @@ Upon connection, the telnet program will prompt for the `username` and `password
 
 A terminal emulator is needed to open a telnet connection from Windows; the easiest option is to download the free program, [PuTTY](http://www.putty.org/).
 
-1. With PuTTY open, select telnet as connection type and leave the default port
-
-   \(`23`\)
-
+1. With PuTTY open, select telnet as connection type and leave the default port \(`23`\)
 2. Next enter the IP address of the Pycom device \(e.g. `192.168.4.1`\)
 3. Finally click `Open`
 

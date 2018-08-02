@@ -46,19 +46,9 @@ Read the light levels of both `LTR329ALS01` sensors. Returns a **tuple** with tw
 
 The following arguments may be passed into the constructor.
 
-`gain`
-
-ALS\_GAIN\_1XALS\_GAIN\_2XALS\_GAIN\_4XALS\_GAIN\_8XALS\_GAIN\_48XALS\_GAIN\_96X
-
-  
- `integration`
-
-ALS\_INT\_50ALS\_INT\_100ALS\_INT\_150ALS\_INT\_200ALS\_INT\_250ALS\_INT\_300ALS\_INT\_350ALS\_INT\_400
-
-  
- `rate`
-
-ALS\_RATE\_50ALS\_RATE\_100ALS\_RATE\_200ALS\_RATE\_500ALS\_RATE\_1000ALS\_RATE\_2000
+* gain: `ALS_GAIN_1X`,`ALS_GAIN_2X`, `ALS_GAIN_4X`, `ALS_GAIN_8X`, `ALS_GAIN_48X`, `ALS_GAIN_96X`
+* integration: `ALS_INT_50`, `ALS_INT_100`, `ALS_INT_150`, `ALS_INT_200`, `ALS_INT_250`, `ALS_INT_300`, `ALS_INT_350`, `ALS_INT_400`
+* rate: `ALS_RATE_50`, `ALS_RATE_100`, `ALS_RATE_200`, `ALS_RATE_500`, `ALS_RATE_1000`, `ALS_RATE_2000`
 
 ## Humidity and Temperature Sensor \(SI7006A20\)
 
@@ -108,9 +98,7 @@ Read the temperature of the `MPL3115A2`. Returns a **float** with the temperatur
 
 The following arguments may be passed into the constructor.
 
-`mode`
-
-PRESSUREALTITUDE
+* mode: `PRESSURE`, `ALTITUDE`
 
 {% hint style="info" %}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)

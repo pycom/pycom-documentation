@@ -36,7 +36,7 @@ characteristic.write(b'x0f')
 
 This method allows to register for notifications on the characteristic.
 
-* `trigger` can must be Bluetooth.CHAR\_NOTIFY\_EVENT.
+* `trigger` can must be `Bluetooth.CHAR_NOTIFY_EVENT`.
 * `handler` is the function that will be executed when the callback is triggered.
 * `arg` is the argument that gets passed to the callback. If nothing is given, the characteristic object that owns the callback will be used.
 

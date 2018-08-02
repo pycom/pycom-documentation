@@ -97,7 +97,5 @@ Duplicate the terminal \(the REPL\) on the passed stream-like object. The given 
 
 ## Constants
 
-uos.sep
-
-Separation character used in paths
+* `uos.sep`: Separation character used in paths
 

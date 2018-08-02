@@ -8,7 +8,7 @@ Enable automatic garbage collection.
 
 ### gc.disable\(\)
 
-Disable automatic garbage collection. Heap memory can still be allocated, and garbage collection can still be initiated manually using gc.collect\(\).
+Disable automatic garbage collection. Heap memory can still be allocated, and garbage collection can still be initiated manually using `gc.collect()`.
 
 ### gc.collect\(\)
 

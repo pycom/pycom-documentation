@@ -37,13 +37,13 @@ p = Pin('P10', mode=Pin.OUT, pull=None, alt=-1)
 Initialise the pin:
 
 * `mode` can be one of:
-  * Pin.IN - input pin.
-  * Pin.OUT - output pin in push-pull mode.
-  * Pin.OPEN\_DRAIN - input or output pin in open-drain mode.
+  * `Pin.IN` - input pin.
+  * `Pin.OUT` - output pin in push-pull mode.
+  * `Pin.OPEN_DRAIN` - input or output pin in open-drain mode.
 * `pull` can be one of:
   * `None` - no pull up or down resistor.
-  * Pin.PULL\_UP - pull up resistor enabled.
-  * Pin.PULL\_DOWN - pull down resistor enabled.
+  * `Pin.PULL_UP` - pull up resistor enabled.
+  * `Pin.PULL_DOWN` - pull down resistor enabled.
 * `alt` is the id of the alternate function.
 
 Returns: `None`.
@@ -71,7 +71,7 @@ pin = Pin('P12', mode=Pin.IN, pull=Pin.PULL_UP)
 pin()   # fast method to get the value
 ```
 
-See pin.value\(\) for more details.
+See `pin.value()` for more details.
 
 ### pin.toggle\(\)
 
@@ -94,10 +94,10 @@ Get or set the pin hold. You can apply a hold to a pin by passing `True` \(or cl
 Set a callback to be triggered when the input level at the pin changes.
 
 * `trigger` is the type of event that triggers the callback. Possible values are:
-  * Pin.IRQ\_FALLING interrupt on falling edge.
-  * Pin.IRQ\_RISING interrupt on rising edge.
-  * Pin.IRQ\_LOW\_LEVEL interrupt on low level.
-  * Pin.IRQ\_HIGH\_LEVEL interrupt on high level.
+  * `Pin.IRQ_FALLING` interrupt on falling edge.
+  * `Pin.IRQ_RISING` interrupt on rising edge.
+  * `Pin.IRQ_LOW_LEVEL` interrupt on low level.
+  * `Pin.IRQ_HIGH_LEVEL` interrupt on high level.
 
 The values can be OR-ed together, for instance `trigger=Pin.IRQ_FALLING | Pin.IRQ_RISING`
 
@@ -146,11 +146,6 @@ Pin.module.P9.id()
 
 The following constants are used to configure the pin objects. Note that not all constants are available on all ports.
 
-Pin.INPin.OUTPin.OPEN\_DRAIN
-
-Selects the pin mode.
-
-Pin.PULL\_UPPin.PULL\_DOWN
-
-Enables the pull up or pull down resistor.
+* Selects the pin mode: `Pin.IN`, `Pin.OUT`, `Pin.OPEN_DRAIN`
+* Enables the pull up or pull down resistor: `Pin.PULL_UP`, `Pin.PULL_DOWN`
 

@@ -17,11 +17,11 @@ characteristic.value() # get characteristic value
 
 Creates a callback that will be executed when any of the triggers occurs. The arguments are:
 
-* `trigger` can be either Bluetooth.CHAR\_READ\_EVENT or Bluetooth.CHAR\_WRITE\_EVENT.
+* `trigger` can be either `Bluetooth.CHAR_READ_EVENT` or `Bluetooth.CHAR_WRITE_EVENT`.
 * `handler` is the function that will be executed when the callback is triggered.
 * `arg` is the argument that gets passed to the callback. If nothing is given, the characteristic object that owns the callback will be used.
 
-An example of how this could be implemented can be seen in the characteristic.events\(\) section.
+An example of how this could be implemented can be seen in the [`characteristic.events()` ](gattscharacteristic.md#characteristic-events)section.
 
 ## characteristic.events\(\)
 

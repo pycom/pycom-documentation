@@ -122,7 +122,7 @@ The return value is the number of bytes written.
 
 ## Constants
 
-I2C.MASTER
+#### `I2C.MASTER`
 
 Used to initialise the bus to master mode.
 

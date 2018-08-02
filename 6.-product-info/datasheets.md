@@ -23,8 +23,10 @@ The follow pages contain all information relating to each product, for examples:
 
 ## Shields and Expansion boards
 
-* [Expansion Board 2.0](boards/expansion2.md)
+* [Expansion Board 3.0](boards/expansion3.md)
 * [Pysense](boards/pysense.md)
 * [Pytrack](boards/pytrack.md)
+* [Pyscan](boards/pyscan.md)
 * [Deep Sleep Shield](boards/deepsleep/)
+* [Expansion Board 2.0](boards/expansion2.md)
 

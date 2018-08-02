@@ -14,47 +14,51 @@ This guide will take you through how to setup your first project with Pymakr and
 
 3. Once the text editor has loaded you will need to click `File` &gt; `Open`, and open the directory you created in step 1
 
-   If you are using Atom, it is important to check at this point that Atom has successfully identified the project. The name of the directory you created in step 1 \(`RGB-Blink` in this case\) should be shown in the Pymakr pane like so:
+{% hint style="info" %}
+If you are using Atom, it is important to check at this point that Atom has successfully identified the project. The name of the directory you created in step 1 \(`RGB-Blink` in this case\) should be shown in the Pymakr pane like so:
 
-   ![](../../.gitbook/assets/atom_project.png) If this is not the case you can press `alt-ctrl-r` on Windows/Linux or `ctrl-alt-cmd-l` on macOS, in order to reload Atom and fix the issue.
+![](../../.gitbook/assets/atom_project.png)
+
+If this is not the case you can press `alt-ctrl-r` on Windows/Linux or `ctrl-alt-cmd-l` on macOS, in order to reload Atom and fix the issue.
+{% endhint %}
 
 4. Now that you have a project created, we need to add some files to it. A standard MicroPython project has the following structure:
 
-   ```text
-   RGB-Blink
-   |-lib
-   |  |- some_library.py
-   |-boot.py
-   |-main.py
-   ```
+```text
+RGB-Blink
+|-lib
+|  |- some_library.py
+|-boot.py
+|-main.py
+```
 
-   * `boot.py` This is the first script that runs on your module when it
+* `boot.py` This is the first script that runs on your module when it
 
-     turns on. This is often used to connect a module a a WiFi network so that
+  turns on. This is often used to connect a module a a WiFi network so that
 
-     Telnet and FTP can be used without connecting to the WiFi AP created by the
+  Telnet and FTP can be used without connecting to the WiFi AP created by the
 
-     module and not cluttering up the `main.py` file. As a beginner you do not
+  module and not cluttering up the `main.py` file. As a beginner you do not
 
-     need to use a `boot.py`.
+  need to use a `boot.py`.
 
-   * `main.py` This script runs directly after `boot.py` and should contain
+* `main.py` This script runs directly after `boot.py` and should contain
 
-     the main code you wish to run on your device.
+  the main code you wish to run on your device.
 
-   * `lib` It is often a good idea to split out re-usable code into libraries.
+* `lib` It is often a good idea to split out re-usable code into libraries.
 
-     If you want to create or use libraries created by others, you will need to
+  If you want to create or use libraries created by others, you will need to
 
-     create a `lib` directory and put the library files in this. It is important
+  create a `lib` directory and put the library files in this. It is important
 
-     that you put `.py` files directly into `lib` rather than creating a directory
+  that you put `.py` files directly into `lib` rather than creating a directory
 
-     tree. By default MicroPython will not detect any libraries within
+  tree. By default MicroPython will not detect any libraries within
 
-     sub-directories.
+  sub-directories.
 
-   For this example, you will just need to create a `main.py` file.
+For this example, you will just need to create a `main.py` file.
 
 Now that the project structure is setup, you may wish to configure project specific settings for Pymakr e.g. Which serial port to use. On Atom you need to click the `^` button on the Pymakr pane, then click `Project Settings`. On Visual Studio Code you need to click the `All commands` button on the bottom of the windows, then click `Pymakr > Project Settings`. This creates a file called `pymakr.conf` inside your project and populates it with default settings copied over from your global settings. A detailed explanation of these settings can be found [here](../../2.-pymakr-plugin/settings.md).
 

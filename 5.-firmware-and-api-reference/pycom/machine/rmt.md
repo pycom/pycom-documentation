@@ -40,7 +40,7 @@ data = rmt.recv_pulses()
 
 ## Constructors
 
-class machine.RMT\(channel,...\)
+#### class machine.RMT\(channel,...\)
 
 Construct an RMT object on the given channel. `channel` can be 2-7. With no additional parameters, the RMT object is created but not initialised. If extra arguments are given, the RMT is initialised for transmission or reception. See `init` for parameters of initialisation. The resolution which a pulse can be sent/received depends on the selected channel:
 
@@ -57,7 +57,7 @@ Construct an RMT object on the given channel. `channel` can be 2-7. With no addi
 
 ## Methods
 
-rmt.init\(gpio, rx\_idle\_threshold, rx\_filter\_threshold, tx\_idle\_level, tx\_carrier\)
+#### rmt.init\(gpio, rx\_idle\_threshold, rx\_filter\_threshold, tx\_idle\_level, tx\_carrier\)
 
 Initialise the RMT peripheral with the given parameters:
 
@@ -75,7 +75,7 @@ The `tx_carrier` parameter is a tuple with the following structure:
 * `carrier_duty_percent` is the duty percent of the carrier's signal, can be 0%-100%.
 * `carrier_level` is the level of the pulse to modulate, can be RMT.HIGH or RMT.LOW.
 
-rmt.deinit\(\)
+#### rmt.deinit\(\)
 
 Deinitialise the RMT object.
 
@@ -83,7 +83,7 @@ Deinitialise the RMT object.
 If an RMT object needs to be reconfigured from RX/TX to TX/RX, then either first `deinit()` must be called or the `init()` again with the desired configuration.
 {% endhint %}
 
-rmt.pulses\_get\(pulses, timeout\)
+#### rmt.pulses\_get\(pulses, timeout\)
 
 Reads in pulses from the GPIO pin.
 
@@ -101,7 +101,7 @@ Reads in pulses from the GPIO pin.
 
   indefinitely.
 
-Return value: Tuple of items with the following structure: \(level, duration\):
+Return value: Tuple of items with the following structure: `(level, duration)`:
 
 * `level` represents the level of the received bit/pulse, can be 0 or 1.
 * `duration` represents the duration of the received pulse, the time unit \(resolution\) depends on the selected channel.
@@ -110,7 +110,7 @@ Return value: Tuple of items with the following structure: \(level, duration\):
 Maximum of 128 pulses can be received in a row without receiving "idle" signal. If the incoming pulse sequence contains more than 128 pulses the rest is dropped and the receiver waits for another sequence of pulses. The `pulses_get` function can be called to receive more than 128 pulses, however the above mentioned limitation should be kept in mind when evaluating the received data.
 {% endhint %}
 
-rmt.pulses\_send\(duration, data, start\_level\)
+#### rmt.pulses\_send\(duration, data, start\_level\)
 
 Generates pulses as defined by the parameters below
 
@@ -130,7 +130,5 @@ Generates pulses as defined by the parameters below
 
 ## Constants
 
-RMT.LOWRMT.HIGH
-
-Defines the level of the pulse.
+* Define the level of the pulse: `RMT.LOW`, `RMT.HIGH`
 

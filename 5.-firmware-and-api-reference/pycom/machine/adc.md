@@ -43,9 +43,9 @@ Disable the ADC block.
 Create an analog pin.
 
 * `pin` is a keyword-only string argument. Valid pins are `P13` to `P20`.
-* `attn` is the attenuation level. The supported values are: ADC.ATTN\_0DB ADC.ATTN\_2\_5DB ADC.ATTN\_6DB ADC.ATTN\_11DB
+* `attn` is the attenuation level. The supported values are: `ADC.ATTN_0DB`, `ADC.ATTN_2_5DB`, `ADC.ATTN_6DB`, `ADC.ATTN_11DB`
 
-Returns an instance of ADCChannel. Example:
+Returns an instance of `ADCChannel`. Example:
 
 ```python
 # enable an ADC channel on P16
@@ -62,9 +62,7 @@ Connects the internal `1.1v` to external `GPIO`. It can only be connected to `P2
 
 ### Constants
 
-ADC.ATTN\_0DBADC.ATTN\_2\_5DBADC.ATTN\_6DBADC.ATTN\_11DB
-
-ADC channel attenuation values
+* ADC channel attenuation values: `ADC.ATTN_0DB`, `ADC.ATTN_2_5DB`, `ADC.ATTN_6DB`, `ADC.ATTN_11DB`
 
 ## class ADCChannel
 

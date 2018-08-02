@@ -35,14 +35,15 @@ _\(note: the Application EUI produced by this script is not guaranteed to be uni
 
 To use the script make sure you are using Python 3.6 on your computer and run it \(on your computer, _not_ on the Pycom board\) as:
 
-`python generate_keys.py 1`
+```bash
+python generate_keys.py 1
+```
 
 The output will be similar to:
 
 ```text
 AppEUI: 70b3d54923e36a89
-AppKeys:
-78fe712d96f46784a98b574a8cd616fe
+AppKeys: 78fe712d96f46784a98b574a8cd616fe
 ```
 
 If you are registering multiple devices you can generate more Applications Keys by changing `1` to your desired number of devices.
@@ -54,7 +55,7 @@ Follow "Importer des capteurs" under "Statuc do Parc" and select "Provisioning U
 
 ![](../../../.gitbook/assets/objeniousprovision1.jpg)
 
-Once there give your device a name and enter the DevEUI, AppEUI and AppKey obtained from the steps above:
+Once there give your device a name and enter the DevEUI, AppEUI, and AppKey obtained from the steps above:
 
 ![](../../../.gitbook/assets/objeniousprovision2.jpg)
 

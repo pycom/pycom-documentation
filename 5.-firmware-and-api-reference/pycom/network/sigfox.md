@@ -66,8 +66,8 @@ Set the Sigfox radio configuration.
 
 The arguments are:
 
-* `mode` can be either Sigfox.SIGFOX or Sigfox.FSK. Sigfox.SIGFOX uses the Sigfox modulation and protocol while Sigfox.FSK allows to create point to point communication between 2 Devices using FSK modulation.
-* `rcz` takes the following values: Sigfox.RCZ1, Sigfox.RCZ2, Sigfox.RCZ3, Sigfox.RCZ4. The `rcz` argument is only required if the mode is Sigfox.SIGFOX.
+* `mode` can be either `Sigfox.SIGFOX` or `Sigfox.FSK`. `Sigfox.SIGFOX` uses the Sigfox modulation and protocol while `Sigfox.FSK` allows to create point to point communication between 2 Devices using FSK modulation.
+* `rcz` takes the following values: `Sigfox.RCZ1`, `Sigfox.RCZ2`, `Sigfox.RCZ3`, `Sigfox.RCZ4`. The `rcz` argument is only required if the mode is `Sigfox.SIGFOX`.
 * `frequency` sets the frequency value in `FSK` mode. Can take values between 863 and 928 MHz.
 
 {% hint style="info" %}
@@ -92,11 +92,11 @@ Returns a byte object with the 8-Byte bytes object with the Sigfox PAC.
 
 {% hint style="info" %}
 To return human-readable values you should import `ubinascii` and convert binary values to hexidecimal representation. For example:
-{% endhint %}
 
 ```python
 print(ubinascii.hexlify(sigfox.mac()))
 ```
+{% endhint %}
 
 ### sigfox.frequencies\(\)
 
@@ -116,13 +116,14 @@ sigfox.public_key()
 
 ## Constants
 
-sigfox.SIGFOX sigfox.FSK Sigfox radio mode. SIGFOX to specify usage of the Sigfox Public Network. `FSK` to specify device to device communication.
-
-sigfox.RCZ1 sigfox.RCZ2 sigfox.RCZ3 sigfox.RCZ4 Sigfox zones.
-
-* `RCZ1` to specify Europe, Oman & South Africa.
-* `RCZ2` for the USA, Mexico & Brazil. RCZ3 for Japan.
-* `RCZ4` for Australia, New Zealand, Singapore, Taiwan, Hong Kong, Colombia & Argentina.
+* Sigfox radio mode: `sigfox.SIGFOX`, `sigfox.FSK` .
+  * `SIGFOX` to specify usage of the Sigfox Public Network.
+  * `FSK` to specify device to device communication.
+* Sigfox zones: `sigfox.RCZ1`, `sigfox.RCZ2`, `sigfox.RCZ3`, `sigfox.RCZ4`
+  * `RCZ1` to specify Europe, Oman & South Africa.
+  * `RCZ2` for the USA, Mexico & Brazil.
+  * `RCZ3` for Japan.
+  * `RCZ4` for Australia, New Zealand, Singapore, Taiwan, Hong Kong, Colombia & Argentina.
 
 ## Working with Sigfox Sockets
 

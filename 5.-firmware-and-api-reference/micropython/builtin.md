@@ -2,125 +2,125 @@
 
 All builtin functions are described here. They are also available via [builtins](builtin.md) module.
 
-## abs\(\)
+abs\(\)
 
-## all\(\)
+all\(\)
 
-## any\(\)
+any\(\)
 
-## bin\(\)
+bin\(\)
 
-## class bool
+class bool
 
-## class bytearray
+class bytearray
 
-## class bytes
+class bytes
 
-## callable\(\)
+callable\(\)
 
-## chr\(\)
+chr\(\)
 
-## class method\(\)
+class method\(\)
 
-## compile\(\)
+compile\(\)
 
-## class complex
+class complex
 
-## class dict
+class dict
 
-## dir\(\)
+dir\(\)
 
-## divmod\(\)
+divmod\(\)
 
-## enumerate\(\)
+enumerate\(\)
 
-## eval\(\)
+eval\(\)
 
-## exec\(\)
+exec\(\)
 
-## filter\(\)
+filter\(\)
 
-## class float
+class float
 
-## class frozenset
+class frozenset
 
-## getattr\(\)
+getattr\(\)
 
-## globals\(\)
+globals\(\)
 
-## hasattr\(\)
+hasattr\(\)
 
-## hash\(\)
+hash\(\)
 
-## hex\(\)
+hex\(\)
 
-## id\(\)
+id\(\)
 
-## input\(\)
+input\(\)
 
-## class int
+class int
 
-## isinstance\(\)
+isinstance\(\)
 
-## issubclass\(\)
+issubclass\(\)
 
-## iter\(\)
+iter\(\)
 
-## len\(\)
+len\(\)
 
-## class list
+class list
 
-## locals\(\)
+locals\(\)
 
-## map\(\)
+map\(\)
 
-## max\(\)
+max\(\)
 
-## class memoryview
+class memoryview
 
-## min\(\)
+min\(\)
 
-## next\(\)
+next\(\)
 
-## class object
+class object
 
-## oct\(\)
+oct\(\)
 
-## open\(\)
+open\(\)
 
-## ord\(\)
+ord\(\)
 
-## pow\(\)
+pow\(\)
 
-## print\(\)
+print\(\)
 
-## property\(\)
+property\(\)
 
-## range\(\)
+range\(\)
 
-## repr\(\)
+repr\(\)
 
-## reversed\(\)
+reversed\(\)
 
-## round\(\)
+round\(\)
 
-## class set
+class set
 
-## setattr\(\)
+setattr\(\)
 
-## sorted\(\)
+sorted\(\)
 
-## staticmethod\(\)
+staticmethod\(\)
 
-## class str
+class str
 
-## sum\(\)
+sum\(\)
 
-## super\(\)
+super\(\)
 
-## class tuple
+class tuple
 
-## type\(\)
+type\(\)
 
-## zip\(\)
+zip\(\)
 

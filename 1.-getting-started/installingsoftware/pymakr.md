@@ -10,3 +10,5 @@ To make it as easy as possible Pycom has developed a plugin for two popular text
 
 {% page-ref page="../../2.-pymakr-plugin/installation/vscode.md" %}
 
+
+

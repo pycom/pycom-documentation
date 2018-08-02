@@ -33,18 +33,13 @@ Initialize the CAN controller. The arguments are:
 
 * `mode` can take either CAN.NORMAL or CAN.SILENT. Silent mode is useful for sniffing the bus.
 * `baudrate` sets up the bus speed. Acceptable values are between 1 and 1000000.
-* `frame_format` defines the frame format to be accepted by the receiver. Useful for filtering frames based on the identifier length. Can tale either CAN.FORMAT\_STD or CAN.FORMAT\_EXT or CAN.FORMAT\_BOTH. If CAN.FORMAT\_STD is selected, extended frames won't be received and vice-versa.
+* `frame_format` defines the frame format to be accepted by the receiver. Useful for filtering frames based on the identifier length. Can tale either `CAN.FORMAT_STD`, `CAN.FORMAT_EXT`, `CAN.FORMAT_BOTH`. If `CAN.FORMAT_STD` is selected, extended frames won't be received and vice-versa.
 * `rx_queue_len` defines the number of messages than can be queued by the receiver. Due to CAN being a high traffic bus, large values are recommended \(&gt;= 128\), otherwise messages will be dropped specially when no filtering is applied.
 * `pins` selects the `Tx` and `Rx` pins \(in that order\).
 
 ### can.deinit\(\)
 
 Disables the CAN bus.
-
-```python
-# disable the CAN bus
-can.deinit()
-```
 
 ### can.send\(id, \* , data=None, rtr=False, extended=False\)
 
@@ -82,9 +77,9 @@ Specify a software filter accepting only the messages that pass the filter test.
 
 There are 3 possible filter modes:
 
-* CAN.FILTER\_LIST allows to pass the list of IDs that should be accepted.
-* CAN.FILTER\_RANGE allows to pass a list or tuple of ID ranges that should be accepted.
-* CAN.FILTER\_MASK allows to pass a list of tuples of the form: `(filer, mask)`.
+* `CAN.FILTER_LIST` allows to pass the list of IDs that should be accepted.
+* `CAN.FILTER_RANGE` allows to pass a list or tuple of ID ranges that should be accepted.
+* `CAN.FILTER_MASK` allows to pass a list of tuples of the form: `(filter, mask)`.
 
 With software filters all messages in the bus are received by the CAN controller but only the matching ones are passed to the RX queue. This means that the queue won't be filled up with non relevant messages, but the interrupt overhead will remain as normal. The `filter_list` can contain up to 32 elements.
 
@@ -105,11 +100,11 @@ can.soft_filter(None)   # disable soft filters, all messages are accepted
 Set a callback to be triggered when any of this 3 events are present:
 
 * trigger is the type of event that triggers the callback. Possible values are:
-  * CAN.RX\_FRAME interrupt whenever a new frame is received.
-  * CAN.RX\_FIFO\_NOT\_EMPTY interrupt when a frame is received on an empty FIFO.
-  * CAN.RX\_FIFO\_OVERRUN interrupt when a message is received and the FIFO is full.
+  * `CAN.RX_FRAME` interrupt whenever a new frame is received.
+  * `CAN.RX_FIFO_NOT_EMPTY` interrupt when a frame is received on an empty FIFO.
+  * `CAN.RX_FIFO_OVERRUN` interrupt when a message is received and the FIFO is full.
 
-The values can be OR-ed together, for instance trigger=CAN.RX\_FRAME \| CAN.RX\_FIFO\_OVERRUN
+The values can be OR-ed together, for instance `trigger=CAN.RX_FRAME | CAN.RX_FIFO_OVERRUN`
 
 * handler is the function to be called when the event happens. This function will receive one argument. Set handler to None to disable the callback.
 * arg is an optional argument to pass to the callback. If left empty or set to None, the function will receive the CAN object that triggered it.
@@ -133,5 +128,5 @@ This method returns a value with bits sets \(if any\) indicating the events that
 
 ## Constants
 
-CAN.NORMALCAN.SILENTCAN.FORMAT\_STDCAN.FORMAT\_EXTCAN.FORMAT\_BOTHCAN.RX\_FRAMECAN.RX\_FIFO\_NOT\_EMPTYCAN.RX\_FIFO\_OVERRUNCAN.FILTER\_LISTCAN.FILTER\_RANGECAN.FILTER\_MASK
+`CAN.NORMAL`, `CAN.SILENT`, `CAN.FORMAT_STD`, `CAN.FORMAT_EXT`, `CAN.FORMAT_BOTH`, `CAN.RX_FRAME`, `CAN.RX_FIFO_NOT_EMPTY`, `CAN.RX_FIFO_OVERRUN`, `CAN.FILTER_LIST`, `CAN.FILTER_RANGE`, `CAN.FILTER_MASK`
 
