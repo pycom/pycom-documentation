@@ -19,7 +19,7 @@ In order to fix this you can safe boot your module. This will prevent `boot.py` 
 Pin `P12` released during:
 
 | 1st 3 secs window | 2nd 3 secs window |
-| :---: | :---: |
+| :--- | :--- |
 | Disable `boot.py` and `main.py` | same as previous but using previous OTA firmware |
 
 The selection made during safe boot is not persistent, therefore after the next normal reset, the latest firmware will proceed to run again.

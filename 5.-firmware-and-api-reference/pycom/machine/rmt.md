@@ -45,7 +45,7 @@ data = rmt.recv_pulses()
 Construct an RMT object on the given channel. `channel` can be 2-7. With no additional parameters, the RMT object is created but not initialised. If extra arguments are given, the RMT is initialised for transmission or reception. See `init` for parameters of initialisation. The resolution which a pulse can be sent/received depends on the selected channel:
 
 | Channel | Resolution | Maximum Pulse Width |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | 0  Used by on-board LED |  |  |
 | 1  Used by `pycom.pulses_get()` |  |  |
 | 2 | 100nS | 3.2768 ms |

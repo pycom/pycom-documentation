@@ -53,7 +53,7 @@ These are unique to each gateway, location and country specific frequency. Pleas
 **You need to tick the "I'm using the legacy packet forwarder" to enable the right settings.** This is because the Nano-Gateway uses the 'de facto' standard Semtech UDP protocol.
 
 | Option | Value |
-| --- | --- |
+| :--- | :--- |
 | Protocol | Packet Forwarder |
 | Gateway EUI | User Defined \(must match `config.py`\) |
 | Description | User Defined |

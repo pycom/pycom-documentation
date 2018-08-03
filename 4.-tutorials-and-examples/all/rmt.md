@@ -7,7 +7,7 @@ The RMT \(Remote Control\) peripheral of the ESP32 is primarily designed to send
 The RMT has 7 channels, of which 5 are available and can be mapped to any GPIO pin \(_Note:_ Pins `P13` -`P18` can only be used as inputs\).
 
 | Channel | Resolution | Maximum Pulse Width |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | 0  Used by on-board LED |  |  |
 | 1  Used by `pycom.pulses_get()` |  |  |
 | 2 | 100nS | 3.2768 ms |

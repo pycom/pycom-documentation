@@ -4,7 +4,7 @@
 
 ## About
 
-* [Preface](about/readme.md)
+* [Preface](about/about.md)
 * [Pycom Products](about/products.md)
 
 ## 1. Getting Started
