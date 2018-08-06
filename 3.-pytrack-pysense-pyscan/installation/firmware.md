@@ -96,11 +96,15 @@ To enter update mode follow these steps:
 3. Plug in the USB cable to the host computer and wait 1 second before releasing the button
 4. After this you will have approximately 7 seconds to run the DFU-util tool
 
-### MacOS and Linux:
+### macOS and Linux:
 
 ```bash
 $ dfu-util -D pytrack_0.0.8.dfu
 ```
+
+{% hint style="info" %}
+You might need to run `dfu-util` as `sudo`. In that case, you will need to enter your password.
+{% endhint %}
 
 An output, similar to the one below, will appear upon successful installation:
 
