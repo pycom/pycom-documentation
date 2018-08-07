@@ -25,9 +25,9 @@ If you require a reference board for the G01, only this design is suitable. The 
 
 ## Layout
 
-The layout of the OEM baseboard reference is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/oem-universal-layout.pdf).
+The layout of the OEM baseboard reference is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/oem-universal-layout.pdf)
 
-[![](../../.gitbook/assets/oem-universal-layout.png)](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/oem-universal-layout.pdf)
+![](../../.gitbook/assets/oem-universal-layout%20%281%29.png)
 
 ## Schematic
 

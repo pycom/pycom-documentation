@@ -25,9 +25,9 @@ If you require a reference board for the L04 or G01, this design is **not** suit
 
 ## Layout
 
-The layout of the L01 baseboard reference is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/l01-oem-layout.pdf).
+The layout of the L01 baseboard reference is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/l01-oem-layout.pdf)
 
-[![](../../.gitbook/assets/l01-oem-layout.png)](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/l01-oem-layout.pdf)
+![](../../.gitbook/assets/l01-oem-layout%20%281%29.png)
 
 ## Schematic
 

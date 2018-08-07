@@ -12,8 +12,8 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 | [![](../.gitbook/assets/sipy%20%281%29.png)  SiPy](../6.-product-info/development/sipy.md) | ✔ | ✔ |  | ✔ |  |
 | [![](../.gitbook/assets/gpy.png)  GPy](../6.-product-info/development/gpy.md) | ✔ | ✔ |  |  | ✔ |
 | [![](../.gitbook/assets/lopy.png)  LoPy](../6.-product-info/development/lopy.md) | ✔ | ✔ | ✔ |  |  |
-| [![](../.gitbook/assets/lopy4%20%281%29.png)  LoPy4](../6.-product-info/development/lopy4.md) | ✔ | ✔ | ✔ | ✔ |  |
-| [![](../.gitbook/assets/fipy%20%281%29.png)  FiPy](../6.-product-info/development/fipy.md) | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [![](../.gitbook/assets/lopy4%20%282%29.png)  LoPy4](../6.-product-info/development/lopy4.md) | ✔ | ✔ | ✔ | ✔ |  |
+| [![](../.gitbook/assets/fipy%20%282%29.png)  FiPy](../6.-product-info/development/fipy.md) | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Antennas [![](../.gitbook/assets/wifi_ant.png)  External WiFi/BT   Antenna Kit](https://pycom.io/product/external-wifi-antenna/)[![](../.gitbook/assets/lora_ant.png)  LoRa & Sigfox   Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [![](../.gitbook/assets/lte_ant.png)  LTE-M   Antenna Kit](https://pycom.io/product/lte-m-antenna-kit/) |  |  |  |  |
 
 ## Accessories
@@ -32,7 +32,7 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 
 | OEM Module | [![](../.gitbook/assets/oem_l01_ref.png)  L01/W01 Reference Board](../6.-product-info/oem/l01_reference.md) | [![](../.gitbook/assets/oem_universal_ref.png)  Universal Reference Board](../6.-product-info/oem/universal_reference.md) |
 | :--- | :--- | :--- |
-| [![](../.gitbook/assets/w01.png)  W01](../6.-product-info/oem/w01.md) | ✔ | ✔ |
+| [![](../.gitbook/assets/w01%20%281%29.png)  W01](../6.-product-info/oem/w01.md) | ✔ | ✔ |
 | [![](../.gitbook/assets/l01.png)  L01](../6.-product-info/oem/l01.md) | ✔ | ✔ |
 | [![](../.gitbook/assets/l04.png)  L04](../6.-product-info/oem/l04.md) |  | ✔ |
 | [![](../.gitbook/assets/g01.png)  G01](../6.-product-info/oem/g01.md) |  | ✔ |

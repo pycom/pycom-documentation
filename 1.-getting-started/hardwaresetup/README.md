@@ -4,7 +4,7 @@ This chapter of the documentation will show you how to connect you Pycom module.
 
 [![](../../.gitbook/assets/wipy.png)](wipy.md)
 
-[![](../../.gitbook/assets/lopy%20%281%29.png)](lopy.md)
+[![](../../.gitbook/assets/lopy%20%282%29.png)](lopy.md)
 
 [![](../../.gitbook/assets/lopy4.png)](lopy4.md)
 
