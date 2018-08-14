@@ -4,9 +4,11 @@
 
 ## Pinout
 
-The pinout of the Expansion Board is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/expansion2-pinout.pdf).
+The pinout of the Expansion Board is available as a PDF File
 
-[![](../../.gitbook/assets/expansion2-pinout.png)](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/expansion2-pinout.pdf)
+{% file src="../../.gitbook/assets/expansion2-pinout.pdf" caption="Expansion Board 2 Pinout" %}
+
+![](../../.gitbook/assets/expansion2-pinout%20%281%29.png)
 
 {% hint style="danger" %}
 Be gentle when plugging/unplugging from the USB connector. Whilst the USB connector is soldered and is relatively strong, if it breaks off it can be very difficult to fix.
@@ -18,5 +20,7 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board 
 
 ## Specsheets
 
-The specsheet of the Expansion Board is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/expansion2-specsheet.pdf).
+The specsheet of the Expansion Board is available as a PDF File.
+
+{% file src="../../.gitbook/assets/expansion2-specsheet.pdf" caption="Expansion Board 2 Datasheet" %}
 

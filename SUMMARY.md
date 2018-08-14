@@ -4,7 +4,6 @@
 
 ## About
 
-* [Preface](about/about.md)
 * [Pycom Products](about/products.md)
 
 ## 1. Getting Started
@@ -188,7 +187,7 @@
 ## 8. Pybytes
 
 * [8.1 Introduction](8.-pybytes/pybytes.md)
-* [8.2 Getting Started](8.-pybytes/intro.md)
+* [8.2 Getting Started with Pybytes](8.-pybytes/intro.md)
 * [8.3 Add a device to Pybytes](8.-pybytes/intro-1/README.md)
   * [8.3.1 Connect to Pybytes: Quick Add](8.-pybytes/intro-1/quick.md)
   * [8.3.2 Connect to Pybytes: Flash Pybytes library manually](8.-pybytes/intro-1/flash.md)

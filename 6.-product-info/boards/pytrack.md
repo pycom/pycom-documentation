@@ -4,9 +4,11 @@
 
 ## Pinout
 
-The pinout of the Pytrack is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/pytrack-pinout.pdf).
+The pinout of the Pytrack is available as a PDF File
 
-[![](../../.gitbook/assets/pytrack-pinout.png)](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/pytrack-pinout.pdf)
+{% file src="../../.gitbook/assets/pytrack-pinout.pdf" caption="Pytrack Pinout" %}
+
+![](../../.gitbook/assets/pytrack-pinout%20%281%29.png)
 
 ## Battery Charger
 
@@ -14,5 +16,7 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 
 ## Specsheets
 
-The specsheet of the Pytrack is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/pytrack-specsheet.pdf).
+The specsheet of the Pytrack is available as a PDF File.
+
+{% file src="../../.gitbook/assets/pytrack-specsheet \(1\).pdf" caption="Pytrack Datasheet" %}
 

@@ -61,7 +61,7 @@ Pybytes library is written to `/flash` folder and will take precedence over buil
 
 ## Next step: Set up your device's dashboard!
 
-Now it's time to display data from your device into Pybytes dashboard. You can check more about it [here!](../intro-2.md)
+Now it's time to display data from your device into Pybytes dashboard.
 
 {% page-ref page="../intro-2.md" %}
 

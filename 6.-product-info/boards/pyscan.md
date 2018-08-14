@@ -4,10 +4,12 @@
 
 ## Pyscan Libraries
 
-* Pyscan libraries to use the RFID/NFC reader are located here: [https://github.com/pycom/pycom-libraries/tree/master/pyscan](https://github.com/pycom/pycom-libraries/tree/master/pyscan)
-* The accelerometer library is here: [https://github.com/pycom/pycom-libraries/blob/master/pytrack/lib/LIS2HH12.py](https://github.com/pycom/pycom-libraries/blob/master/pytrack/lib/LIS2HH12.py)
+* Pyscan libraries to use the RFID/NFC reader are located [here](https://github.com/pycom/pycom-libraries/tree/master/pyscan)
+* The accelerometer library is [here](https://github.com/pycom/pycom-libraries/blob/master/pytrack/lib/LIS2HH12.py)
 
+{% hint style="info" %}
 For the time being, we recommend to upload the `MFRC630.mpy` file via FTP due to current limitations of Pymakr that will be fixed shortly.
+{% endhint %}
 
 Libraries for the rest of the components will be added soon.
 
@@ -19,13 +21,17 @@ Libraries for the rest of the components will be added soon.
 
 ## Driver
 
-The Windows 7 driver for Pyscan is located in: [https://docs.pycom.io/chapter/pytrackpysense/installation/drivers.html](https://docs.pycom.io/chapter/pytrackpysense/installation/drivers.html) For other Operating Systems there's no driver required.
+The Windows 7 driver for Pyscan is located [here](../../3.-pytrack-pysense-pyscan/installation/firmware.md).
+
+For other Operating Systems there's no driver required.
 
 ## Pinout
 
-The pinout of the Pyscan is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/pyscan-pinout.pdf).
+The pinout of the Pyscan is available as a PDF File
 
-[![](../../.gitbook/assets/pyscan-pinout.png)](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/pyscan-pinout.pdf)
+{% file src="../../.gitbook/assets/pyscan-pinout.pdf" caption="Pyscan Pinout" %}
+
+![](../../.gitbook/assets/pyscan-pinout%20%281%29.png)
 
 ## Battery Charger
 
@@ -33,5 +39,7 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 
 ## Specsheets
 
-The specsheet of the Pyscan is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/pyscan-specsheet.pdf).
+The specsheet of the Pyscan is available as a PDF File.
+
+{% file src="../../.gitbook/assets/pyscan-specsheet.pdf" caption="Pyscan Datasheet" %}
 

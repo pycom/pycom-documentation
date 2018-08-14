@@ -1,4 +1,4 @@
-# 8.2 Getting Started
+# 8.2 Getting Started with Pybytes
 
 Follow these steps to create a Pybytes account:
 
@@ -11,5 +11,9 @@ Follow these steps to create a Pybytes account:
 
 ## Go Invent!
 
-Now it's time to explore Pybytes. You can start by connecting your Pycom board to Pybytes. [Check here!](intro-1/)
+Now it's time to explore Pybytes. You can start by connecting your Pycom board to Pybytes.
+
+{% page-ref page="intro-1/" %}
+
+
 

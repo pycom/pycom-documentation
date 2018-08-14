@@ -25,15 +25,21 @@ If you require a reference board for the L04 or G01, this design is **not** suit
 
 ## Layout
 
-The layout of the L01 baseboard reference is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/l01-oem-layout.pdf)
+The layout of the L01 baseboard reference is available as a PDF File
+
+{% file src="../../.gitbook/assets/l01-oem-layout.pdf" caption="L01 OEM Layout" %}
 
 ![](../../.gitbook/assets/l01-oem-layout%20%281%29.png)
 
 ## Schematic
 
-The schematic of the L01 baseboard reference is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/l01-oem-schematic.pdf).
+The schematic of the L01 baseboard reference is available as a PDF File.
+
+{% file src="../../.gitbook/assets/l01-oem-schematic.pdf" caption="L01 OEM Schematic" %}
 
 ## Altium Project and Gerber Files
 
-The Altium Project and Gerber files are also available as a [ZIP File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/l01-oem-baseboard-ref.zip).
+The Altium Project and Gerber files are also available as a ZIP File.
+
+{% file src="../../.gitbook/assets/l01-oem-baseboard-ref.zip" caption="L01 OEM Altium Project and Gerber Files" %}
 

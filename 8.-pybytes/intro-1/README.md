@@ -35,7 +35,12 @@ At the end of the "Add Device" wizard, Pybytes will give you two options for you
 Select how you would like to connect your device to Pybytes:
 
 1. [CONNECT YOUR DEVICE _QUICKLY \(RECOMMENDED\)_](quick.md)
+
+{% page-ref page="quick.md" %}
+
 2. [CONNECT YOUR DEVICE _BY FLASHING PYBYTES LIBRARY_](flash.md)
+
+{% page-ref page="flash.md" %}
 
 {% hint style="info" %}
 From firmware 1.16.x onwards all Pycom devices come with Pybytes library built-in `/frozen` folder. That means that you can choose between adding your device quickly with the firmware updater or you can flash Pybytes library manually.

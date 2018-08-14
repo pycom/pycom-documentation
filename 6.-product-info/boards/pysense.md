@@ -4,9 +4,11 @@
 
 ## Pinout
 
-The pinout of the Pysense is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/pysense-pinout.pdf).
+The pinout of the Pysense is available as a PDF File
 
-[![](../../.gitbook/assets/pysense-pinout.png)](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/pysense-pinout.pdf)
+{% file src="../../.gitbook/assets/pysense-pinout.pdf" caption="Pysense Pinout" %}
+
+![](../../.gitbook/assets/pysense-pinout%20%281%29.png)
 
 ## Battery Charger
 
@@ -14,5 +16,7 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 
 ## Specsheets
 
-The specsheet of the Pysense is available as a [PDF File](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/datasheets/downloads/pysense-specsheet.pdf).
+The specsheet of the Pysense is available as a PDF File.
+
+{% file src="../../.gitbook/assets/pysense-specsheet.pdf" caption="Pysense Datasheet" %}
 
