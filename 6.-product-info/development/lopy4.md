@@ -8,7 +8,9 @@
 
 ## Pinout
 
-The pinout of the LoPy4 is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/lopy4-pinout.pdf)
+The pinout of the LoPy4 is available as a PDF File
+
+{% file src="../../.gitbook/assets/lopy4-pinout.pdf" caption="LoPy4 Pinout" %}
 
 ![](../../.gitbook/assets/lopy4-pinout.png)
 
@@ -18,7 +20,9 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 
 ## Datasheet
 
-The datasheet of the LoPy4 is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/lopy4-specsheet.pdf).
+The datasheet of the LoPy4 is available as a PDF File.
+
+{% file src="../../.gitbook/assets/lopy4-specsheet \(1\).pdf" caption="LoPy4 Datasheet" %}
 
 ## Notes
 
@@ -34,11 +38,11 @@ The `Vin` pin on the LoPy4 can be supplied with a voltage ranging from `3.5v` to
 
 ## Tutorials
 
-Tutorials on how to the LoPy4 module can be found in the [examples](https://docs.pycom.io/chapter/tutorials/) section of this documentation. The following tutorials might be of specific interest for the LoPy4:
+Tutorials on how to the LoPy4 module can be found in the [examples](../../4.-tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the LoPy4:
 
-* [WiFi connection](https://docs.pycom.io/chapter/tutorials/all/wlan.html)
-* [LoRaWAN node](https://docs.pycom.io/chapter/tutorials/lora/lorawan-otaa.html)
-* [LoRaWAN nano gateway](https://docs.pycom.io/chapter/tutorials/lora/lorawan-nano-gateway.html)
-* [Sigfox](https://docs.pycom.io/chapter/tutorials/sigfox/)
-* [BLE](https://docs.pycom.io/chapter/tutorials/all/ble.html)
+* [WiFi connection](../../4.-tutorials-and-examples/all/wlan.md)
+* [LoRaWAN node](../../4.-tutorials-and-examples/lora/lorawan-abp.md)
+* [LoRaWAN nano gateway](../../4.-tutorials-and-examples/lora/lorawan-nano-gateway.md)
+* [Sigfox](../../4.-tutorials-and-examples/sigfox.md)
+* [BLE](../../4.-tutorials-and-examples/all/ble.md)
 

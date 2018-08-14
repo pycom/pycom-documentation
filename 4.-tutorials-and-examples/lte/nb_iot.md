@@ -10,7 +10,7 @@ As shipped, Pycom modules only support CAT-M1, in order to use NB-IoT you need t
 
 At the moment the NB-IoT firmware supplied by Sequans only support Ericsson base stations configured for In-Band mode. Standalone and guard-band modes will be supported in a later release. Support for Huawei base stations is also limited and only lab testing with Huawei eNodeB is recommended at the moment. Full support for Huawei is planned for early Q2 2018.
 
-## NB-IoT usage:
+## NB-IoT usage
 
 Example with Vodafone:
 

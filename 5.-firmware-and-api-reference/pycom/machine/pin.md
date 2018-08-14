@@ -23,7 +23,7 @@ p_in() # get value, 0 or 1
 
 ### class machine.Pin\(id, ...\)
 
-Create a new Pin object associated with the string `id`. If additional arguments are given, they are used to initialise the pin. See pin.init\(\).
+Create a new Pin object associated with the string `id`. If additional arguments are given, they are used to initialise the pin. [See pin.init\(\)](pin.md#pin-init-mode-pull-alt)
 
 ```python
 from machine import Pin
@@ -87,7 +87,9 @@ Get or set the pin pull.
 
 ### pin.hold\(\[hold\]\)
 
-Get or set the pin hold. You can apply a hold to a pin by passing `True` \(or clear it by passing `False`\). When a pin is held, its value cannot be changed by using `Pin.value()` or `Pin.toggle()` until the hold is released. This Can be used to retain the pin state through a core reset and system reset triggered by watchdog time-out or Deep-sleep events. Only pins in the RTC power domain can retain their value through deep sleep or reset. These are: `P2, P3, P4, P6, P8, P9, P10, P13, P14, P15, P16, P17, P18, P19, P20, P21, P22, P23`.
+Get or set the pin hold. You can apply a hold to a pin by passing `True` \(or clear it by passing `False`\). When a pin is held, its value cannot be changed by using `Pin.value()` or `Pin.toggle()` until the hold is released. This Can be used to retain the pin state through a core reset and system reset triggered by watchdog time-out or Deep-sleep events. Only pins in the RTC power domain can retain their value through deep sleep or reset.
+
+These are: `P2, P3, P4, P6, P8, P9, P10, P13, P14, P15, P16, P17, P18, P19, P20, P21, P22, P23`
 
 ### pin.callback\(trigger, handler=None, arg=None\)
 

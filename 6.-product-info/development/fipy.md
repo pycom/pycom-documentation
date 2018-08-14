@@ -8,7 +8,9 @@
 
 ## Pinout
 
-The pinout of the FiPy is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/fipy-pinout.pdf)
+The pinout of the FiPy is available as a PDF File
+
+{% file src="../../.gitbook/assets/fipy-pinout.pdf" caption="FiPy Pinout" %}
 
 ![](../../.gitbook/assets/fipy-pinout.png)
 
@@ -18,7 +20,13 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 
 ## Datasheet
 
-The datasheet of the FiPy is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/fipy-specsheet.pdf).
+The datasheet of the FiPy is available as a PDF File.
+
+{% file src="../../.gitbook/assets/fipy-specsheet \(1\).pdf" caption="FiPy Datasheet" %}
+
+The drawing of the LTE-M antenna is available as a PDF File.
+
+{% file src="../../.gitbook/assets/lte-m-antenna-drawing.pdf" caption="LTE-M Antenna Drawing" %}
 
 ## Notes
 
@@ -34,17 +42,19 @@ The `Vin` pin on the FiPy can be supplied with a voltage ranging from `3.5v` to 
 
 ### AT Commands
 
-The AT commands for the Sequans Monarch modem on the FiPy are available in a [PDF file](https://docs.pycom.io/chapter/datasheets/downloads/Monarch_4G-EZ_LR5110_ATCommands_ReferenceManual_Rev3_NOCONFIDENTIAL.pdf).
+The AT commands for the Sequans Monarch modem on the FiPy are available in a PDF file.
+
+{% file src="../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential \(2\).pdf" caption="AT Commands for Sequans" %}
 
 ## Tutorials
 
-Tutorials on how to the FiPy module can be found in the [examples](https://docs.pycom.io/chapter/tutorials/) section of this documentation. The following tutorials might be of specific interest for the FiPy:
+Tutorials on how to the FiPy module can be found in the [examples](../../4.-tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the FiPy:
 
-* [WiFi connection](https://docs.pycom.io/chapter/tutorials/all/wlan.html)
-* [LoRaWAN node](https://docs.pycom.io/chapter/tutorials/lora/lorawan-otaa.html)
-* [LoRaWAN nano gateway](https://docs.pycom.io/chapter/tutorials/lora/lorawan-nano-gateway.html)
-* [Sigfox](https://docs.pycom.io/chapter/tutorials/sigfox/)
-* [LTE CAT-M1](https://docs.pycom.io/chapter/tutorials/lte/cat_m1.html)
-* [NB-IoT](https://docs.pycom.io/chapter/tutorials/lte/nb_iot.html)
-* [BLE](https://docs.pycom.io/chapter/tutorials/all/ble.html)
+* [WiFi connection](../../4.-tutorials-and-examples/all/wlan.md)
+* [LoRaWAN node](../../4.-tutorials-and-examples/lora/lorawan-abp.md)
+* [LoRaWAN nano gateway](../../4.-tutorials-and-examples/lora/lorawan-nano-gateway.md)
+* [Sigfox](../../4.-tutorials-and-examples/sigfox.md)
+* [LTE CAT-M1](../../4.-tutorials-and-examples/lte/cat_m1.md)
+* [NB-IoT](../../4.-tutorials-and-examples/lte/nb_iot.md)
+* [BLE](../../4.-tutorials-and-examples/all/ble.md)
 

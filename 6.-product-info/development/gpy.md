@@ -8,7 +8,9 @@
 
 ## Pinout
 
-The pinout of the GPy is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/gpy-pinout.pdf)
+The pinout of the GPy is available as a PDF File
+
+{% file src="../../.gitbook/assets/gpy-pinout.pdf" caption="GPy Pinout" %}
 
 ![](../../.gitbook/assets/gpy-pinout.png)
 
@@ -18,9 +20,13 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 
 ## Datasheet
 
-The datasheet of the GPy is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/gpy-specsheet.pdf).
+The datasheet of the GPy is available as a PDF File.
 
-The drawing of the LTE-M antenna is available as a [PDF File](../downloads/lte-m-antenna-drawing.pdf).
+{% file src="../../.gitbook/assets/gpy-specsheet.pdf" caption="GPy Datasheet" %}
+
+The drawing of the LTE-M antenna is available as a PDF File.
+
+{% file src="../../.gitbook/assets/lte-m-antenna-drawing.pdf" caption="LTE-M Antenna Drawing" %}
 
 ## Notes
 
@@ -38,12 +44,14 @@ The `Vin` pin on the GPy can be supplied with a voltage ranging from `3.5v` to `
 
 The AT commands for the Sequans Monarch modem on the GPy are available in a [PDF file](https://docs.pycom.io/chapter/datasheets/downloads/Monarch_4G-EZ_LR5110_ATCommands_ReferenceManual_Rev3_NOCONFIDENTIAL.pdf).
 
+{% file src="../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential \(1\).pdf" caption="AT Commands for Sequans" %}
+
 ## Tutorials
 
-Tutorials on how to the GPy module can be found in the [examples](https://docs.pycom.io/chapter/tutorials/) section of this documentation. The following tutorials might be of specific interest for the GPy:
+Tutorials on how to the GPy module can be found in the [examples](../../4.-tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the GPy:
 
-* [WiFi connection](https://docs.pycom.io/chapter/tutorials/all/wlan.html)
-* [LTE CAT-M1](https://docs.pycom.io/chapter/tutorials/lte/cat_m1.html)
-* [NB-IoT](https://docs.pycom.io/chapter/tutorials/lte/nb_iot.html)
-* [BLE](https://docs.pycom.io/chapter/tutorials/all/ble.html)
+* [WiFi connection](../../4.-tutorials-and-examples/all/wlan.md)
+* [LTE CAT-M1](../../4.-tutorials-and-examples/lte/cat_m1.md)
+* [NB-IoT](../../4.-tutorials-and-examples/lte/nb_iot.md)
+* [BLE](../../4.-tutorials-and-examples/all/ble.md)
 

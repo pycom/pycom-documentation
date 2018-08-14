@@ -2,7 +2,7 @@
 
 ## Overview
 
-Pycom modules come with the ability to update the devices firmware, while it is still running, we call this an "over the air" \(OTA\) update. The [pycom](../../5.-firmware-and-api-reference/pycom/pycom.md) library provides several functions to achieve this. This example will demonstrate how you could potentially use this functionality to update deployed devices. The full source code of this example can be found [here](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA).
+Pycom modules come with the ability to update the devices firmware, while it is still running, we call this an "over the air" \(OTA\) update. The [`pycom`](../../5.-firmware-and-api-reference/pycom/pycom.md) library provides several functions to achieve this. This example will demonstrate how you could potentially use this functionality to update deployed devices. The full source code of this example can be found [here](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA).
 
 ## Method
 
@@ -53,13 +53,7 @@ The top level directory that contains this script can contain one of two things:
 
   corresponding version number.
 
-* Firmware: These files should be named in the format `firmare_VERSION.bin`,
-
-  where VERSION is a a version number compatible with the python
-
-  LooseVersion versioning scheme
-
-  \([http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html](http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html)\).
+* Firmware: These files should be named in the format `firmare_VERSION.bin`, where VERSION is a a version number compatible with the python LooseVersion versioning scheme \([http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html](http://epydoc.sourceforge.net/stdlib/distutils.version.LooseVersion-class.html)\).
 
   This file should be in the format of the `appimg.bin` created by the Pycom
 

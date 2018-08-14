@@ -8,7 +8,9 @@
 
 ## Pinout
 
-The pinout of the WiPy2 is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/wipy2-pinout.pdf).
+The pinout of the WiPy2 is available as a PDF File.
+
+{% file src="../../.gitbook/assets/wipy2-pinout.pdf" caption="WiPy 2 Pinout" %}
 
 ![](../../.gitbook/assets/wipy2-pinout.png)
 
@@ -18,7 +20,9 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 
 ## Datasheet
 
-The datasheet of the WiPy2 is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/wipy2-specsheet.pdf).
+The datasheet of the WiPy2 is available as a PDF File.
+
+{% file src="../../.gitbook/assets/wipy2-specsheet.pdf" caption="WiPy 2 Datasheet" %}
 
 ## Notes
 
@@ -32,12 +36,12 @@ The `Vin` pin on the WiPy2 can be supplied with a voltage ranging from `3.5v` to
 
 ### Deep Sleep
 
-Due to a couple issues with the WiPy2 design the module draws more current than it should while in deep sleep. The DC-DC switching regulator always stays in high performance mode which is used to provide the lowest possible output ripple when the modules is in use. In this mode, it draws a quiescent current of 10mA. When the regulator is put into ECO mode, the quiescent current goes down to 10uA. Unfortunately, the pin used to control this mode is out of the RTC domain, and therefore not usable during deep sleep. This causes the regulator to always stay in PWM mode, keeping its quiescent current at 10mA. Alongside this the flash chip doesn't enter power down mode because the CS pin is floating during deep sleep. This causes the flash chip to consume around 2mA of current. To work around this issue a ["deep sleep shield"](https://docs.pycom.io/chapter/datasheets/boards/deepsleep.html) is available that attaches to the module and allows power to be cut off from the device. The device can then be re-enabled either on a timer or via pin interrupt. With the deep sleep shield the current consumption during deep sleep is between 7uA and 10uA depending on the wake sources configured.
+Due to a couple issues with the WiPy2 design the module draws more current than it should while in deep sleep. The DC-DC switching regulator always stays in high performance mode which is used to provide the lowest possible output ripple when the modules is in use. In this mode, it draws a quiescent current of 10mA. When the regulator is put into ECO mode, the quiescent current goes down to 10uA. Unfortunately, the pin used to control this mode is out of the RTC domain, and therefore not usable during deep sleep. This causes the regulator to always stay in PWM mode, keeping its quiescent current at 10mA. Alongside this the flash chip doesn't enter power down mode because the CS pin is floating during deep sleep. This causes the flash chip to consume around 2mA of current. To work around this issue a ["deep sleep shield"](../boards/deepsleep/) is available that attaches to the module and allows power to be cut off from the device. The device can then be re-enabled either on a timer or via pin interrupt. With the deep sleep shield the current consumption during deep sleep is between 7uA and 10uA depending on the wake sources configured.
 
 ## Tutorials
 
-Tutorials on how to the WiPy2 module can be found in the [examples](https://docs.pycom.io/chapter/tutorials/) section of this documentation. The following tutorials might be of specific interest for the WiPy2:
+Tutorials on how to the WiPy2 module can be found in the [examples](../../4.-tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the WiPy2:
 
-* [WiFi connection](https://docs.pycom.io/chapter/tutorials/all/wlan.html)
-* [BLE](https://docs.pycom.io/chapter/tutorials/all/ble.html)
+* [WiFi connection](../../4.-tutorials-and-examples/all/wlan.md)
+* [BLE](../../4.-tutorials-and-examples/all/ble.md)
 

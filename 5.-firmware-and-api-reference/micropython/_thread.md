@@ -55,7 +55,7 @@ Used for synchronisation between threads
 
 Lock objects have the following methods:
 
-### lock.acquire\(waitflag=1, timeout=-1\)
+#### lock.acquire\(waitflag=1, timeout=-1\)
 
 Without any optional argument, this method acquires the lock unconditionally, if necessary waiting until it is released by another thread \(only one thread at a time can acquire a lock — that’s their reason for existence\).
 
@@ -65,11 +65,11 @@ If the floating-point timeout argument is present and positive, it specifies the
 
 The return value is `True` if the lock is acquired successfully, `False` if not.
 
-### lock.release\(\)
+#### lock.release\(\)
 
 Releases the lock. The lock must have been acquired earlier, but not necessarily by the same thread.
 
-### lock.locked\(\)
+#### lock.locked\(\)
 
 Return the status of the lock: `True` if it has been acquired by some thread, `False` if not.
 

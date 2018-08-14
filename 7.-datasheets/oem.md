@@ -4,7 +4,7 @@
 
 {% file src="../.gitbook/assets/l01-specsheet.pdf" caption="L01" %}
 
-{% file src="../.gitbook/assets/l04-specsheet.pdf" caption="L04" %}
+{% file src="../.gitbook/assets/l04-specsheet \(1\).pdf" caption="L04" %}
 
-{% file src="../.gitbook/assets/g01-specsheet.pdf" caption="G01" %}
+{% file src="../.gitbook/assets/g01-specsheet \(1\).pdf" caption="G01" %}
 

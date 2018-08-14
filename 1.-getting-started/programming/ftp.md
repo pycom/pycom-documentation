@@ -8,7 +8,7 @@ The file system is accessible via the native FTP server running on each Pycom de
 * username: `micro`
 * password: `python`
 
-See [network.server](../../5.-firmware-and-api-reference/pycom/network/wlan.md) for information on how to change the defaults. The recommended clients are:
+See [network.server](../../5.-firmware-and-api-reference/pycom/network/server.md) for information on how to change the defaults. The recommended clients are:
 
 * macOS/Linux: default FTP client
 * Windows: Filezilla and FireFTP

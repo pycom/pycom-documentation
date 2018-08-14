@@ -11,7 +11,7 @@ Terminate current program with a given exit code. Underlyingly, this function ra
 Print exception with a traceback to a file-like object file \(or `sys.stdout` by default\).
 
 {% hint style="info" %}
-Difference to CPython
+**Difference to CPython**
 
 This is simplified version of a function which appears in the traceback module in CPython. Unlike `traceback.print_exception()`, this function takes just exception value instead of exception type, exception value, and traceback object; file argument should be positional; further arguments are not supported. CPython-compatible traceback module can be found in `micropython-lib`.
 {% endhint %}
@@ -27,7 +27,7 @@ This is simplified version of a function which appears in the traceback module i
     This object is the recommended way to distinguish MicroPython from other Python implementations \(note that it still may not exist in the very minimal ports\).
 
 {% hint style="info" %}
-Difference to CPython
+**Difference to CPython**
 
 CPython mandates more attributes for this object, but the actual useful bare minimum is implemented in MicroPython.
 {% endhint %}

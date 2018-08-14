@@ -39,7 +39,7 @@ Changes made to files won’t be automatically uploaded to the board upon restar
 
 Pymakr Plugin supports user projects, allowing for pre-configured settings such as default serial address/credentials, files to be ignored and folders to sync.
 
-### pymakr.conf
+## pymakr.conf
 
 Pymakr Plugin supports local project settings using a file called `pymakr.conf`. This can be used to store the default serial address of a device, which files to ignore and other settings. An example `pymakr.conf` is shown below:
 
@@ -66,15 +66,15 @@ Library files should be placed into the `lib` folder, certificates into the `cer
 
 Clicking the `More` button within the Pymakr Plugin allows for some additional features. See the options below for specific functionality.
 
-#### Get Firmware Version
+### Get Firmware Version
 
 Retrieves the firmware version of the Pycom device connected to the Pymakr Plugin instance.
 
-#### Get WiFi AP SSID
+### Get WiFi AP SSID
 
 Retrieves the default WiFi Access Point SSID of the Pycom device connected to the Pymakr Plugin instance.
 
-#### Get Serial Ports
+### Get Serial Ports
 
 Retrieves the various serial ports that are available to the Pymakr Plugin instance.
 

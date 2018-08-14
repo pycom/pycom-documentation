@@ -10,7 +10,9 @@
 
 ## Pinout
 
-The pinout of the WiPy3 is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/wipy3-pinout.pdf).
+The pinout of the WiPy3 is available as a PDF File.
+
+{% file src="../../.gitbook/assets/wipy3-pinout.pdf" caption="WiPy3 Pinout" %}
 
 ![](../../.gitbook/assets/wipy3-pinout.png)
 
@@ -27,7 +29,9 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 
 ## Datasheet
 
-The datasheet of the WiPy3 is available as a [PDF File](https://docs.pycom.io/chapter/datasheets/downloads/wipy3-specsheet.pdf).
+The datasheet of the WiPy3 is available as a PDF File.
+
+{% file src="../../.gitbook/assets/wipy3-specsheet.pdf" caption="WiPy3 Datasheet" %}
 
 ## Notes
 
@@ -43,8 +47,8 @@ The `Vin` pin on the WiPy3 can be supplied with a voltage ranging from `3.5v` to
 
 ## Tutorials
 
-Tutorials on how to the WiPy3 module can be found in the [examples](https://docs.pycom.io/chapter/tutorials/) section of this documentation. The following tutorials might be of specific interest for the WiPy3:
+Tutorials on how to the WiPy3 module can be found in the [examples](../../4.-tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the WiPy3:
 
-* [WiFi connection](https://docs.pycom.io/chapter/tutorials/all/wlan.html)
-* [BLE](https://docs.pycom.io/chapter/tutorials/all/ble.html)
+* [WiFi connection](../../4.-tutorials-and-examples/all/wlan.md)
+* [BLE](../../4.-tutorials-and-examples/all/ble.md)
 
