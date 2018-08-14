@@ -1,4 +1,4 @@
-# 1.3.4.1 Serial USB
+# 1.3.4.1 Serial USB \(UART\)
 
 To use the REPL, a Pycom device must be connected to the host computer with a USB connection either to an Expansion Board or to serial converter \(a diagram of how to do this can be found the the [getting started](../../gettingstarted.md) page for your module\).
 

@@ -26,7 +26,7 @@
   * [1.3.2 MicroPython Examples](1.-getting-started/programming/examples.md)
   * [1.3.3 Your first Pymakr project](1.-getting-started/programming/first_project.md)
   * [1.3.4 REPL](1.-getting-started/programming/repl/README.md)
-    * [1.3.4.1 Serial USB](1.-getting-started/programming/repl/serial.md)
+    * [1.3.4.1 Serial USB \(UART\)](1.-getting-started/programming/repl/serial.md)
     * [1.3.4.2 Telnet](1.-getting-started/programming/repl/telnet.md)
   * [1.3.5 FTP](1.-getting-started/programming/ftp.md)
   * [1.3.6 Safe boot](1.-getting-started/programming/safeboot.md)
