@@ -28,15 +28,15 @@ In Pybytes go to Settings → Sigfox API or [follow this link](https://pybytes.p
 
 ### Sigfox DevKit contracts
 
-Read more how to use Sigfox with [devKit contract](sigfoxdevkit.md).
+Read more how to use Sigfox with [devKit contract](devkit.md).
 
-{% page-ref page="sigfoxdevkit.md" %}
+{% page-ref page="devkit.md" %}
 
 ### Sigfox custom contracts
 
-Read more how to use Sigfox with [Custom contract](sigfoxdevkit.md).
+Read more how to use Sigfox with [Custom contract](devkit.md).
 
-{% page-ref page="sigfoxcustomcontract.md" %}
+{% page-ref page="custom.md" %}
 
 
 

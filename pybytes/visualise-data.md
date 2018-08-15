@@ -3,7 +3,7 @@
 In this section, we will explain to you how to create widgets for data visualisation and set up your device's dashboard on Pybytes.
 
 {% hint style="info" %}
-We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](intro-1/). After your done with that, you can proceed to the next example.
+We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](add-device/). After your done with that, you can proceed to the next example.
 {% endhint %}
 
 ## Step 1: Set up your application \(main.py\)

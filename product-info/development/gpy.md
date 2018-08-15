@@ -48,10 +48,10 @@ The AT commands for the Sequans Monarch modem on the GPy are available in a [PDF
 
 ## Tutorials
 
-Tutorials on how to the GPy module can be found in the [examples](../../tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the GPy:
+Tutorials on how to the GPy module can be found in the [examples](../../tutorials-and-examples/introduction.md) section of this documentation. The following tutorials might be of specific interest for the GPy:
 
 * [WiFi connection](../../tutorials-and-examples/all/wlan.md)
-* [LTE CAT-M1](../../tutorials-and-examples/lte/cat_m1.md)
-* [NB-IoT](../../tutorials-and-examples/lte/nb_iot.md)
+* [LTE CAT-M1](../../tutorials-and-examples/lte/cat-m1.md)
+* [NB-IoT](../../tutorials-and-examples/lte/nb-iot.md)
 * [BLE](../../tutorials-and-examples/all/ble.md)
 

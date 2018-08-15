@@ -16,14 +16,14 @@
   * [1.1.4 GPy](getting-started/hardwaresetup/gpy.md)
   * [1.1.5 FiPy](getting-started/hardwaresetup/fipy.md)
   * [1.1.6 WiPy](getting-started/hardwaresetup/wipy.md)
-* [1.2 Software](getting-started/installingsoftware/README.md)
-  * [1.2.1 Drivers](getting-started/installingsoftware/drivers.md)
-  * [1.2.2 Updating Firmware](getting-started/installingsoftware/firmwaretool.md)
-  * [1.2.3 Pymakr](getting-started/installingsoftware/pymakr.md)
+* [1.2 Software](getting-started/software/README.md)
+  * [1.2.1 Drivers](getting-started/software/drivers.md)
+  * [1.2.2 Updating Firmware](getting-started/software/firmwaretool.md)
+  * [1.2.3 Pymakr](getting-started/software/pymakr.md)
 * [1.3 Programming the modules](getting-started/programming/README.md)
   * [1.3.1 Introduction to MicroPython](getting-started/programming/micropython.md)
   * [1.3.2 MicroPython Examples](getting-started/programming/examples.md)
-  * [1.3.3 Your first Pymakr project](getting-started/programming/first_project.md)
+  * [1.3.3 Your first Pymakr project](getting-started/programming/first-project.md)
   * [1.3.4 REPL](getting-started/programming/repl/README.md)
     * [1.3.4.1 Serial USB \(UART\)](getting-started/programming/repl/serial.md)
     * [1.3.4.2 Telnet REPL](getting-started/programming/repl/telnet.md)
@@ -38,15 +38,15 @@
 
 ## 2. Pymakr Plugin
 
-* [2.1 Installation](pymakr-plugin/installation/README.md)
-  * [2.1.1 Atom](pymakr-plugin/installation/atom.md)
-  * [2.1.2 Visual Studio Code](pymakr-plugin/installation/vscode.md)
-* [2.2 Tools/Features](pymakr-plugin/toolsfeatures.md)
-* [2.3 Settings](pymakr-plugin/settings.md)
+* [2.1 Installation](pymakr/installation/README.md)
+  * [2.1.1 Atom](pymakr/installation/atom.md)
+  * [2.1.2 Visual Studio Code](pymakr/installation/vscode.md)
+* [2.2 Tools/Features](pymakr/features.md)
+* [2.3 Settings](pymakr/settings.md)
 
 ## 3. Pytrack, Pysense, Pyscan
 
-* [3.1 Introduction](pytrack-pysense-pyscan/pytrackpysense.md)
+* [3.1 Introduction](pytrack-pysense-pyscan/introduction.md)
 * [3.2 Installing Software](pytrack-pysense-pyscan/installation/README.md)
   * [3.2.1 Updating Firmware](pytrack-pysense-pyscan/installation/firmware.md)
   * [3.2.2 Installing Drivers - Windows 7](pytrack-pysense-pyscan/installation/drivers.md)
@@ -59,7 +59,7 @@
 
 ## 4. Tutorials & Examples
 
-* [4.1 Introduction](tutorials-and-examples/tutorials.md)
+* [4.1 Introduction](tutorials-and-examples/introduction.md)
 * [4.2 All Pycom Device Examples](tutorials-and-examples/all/README.md)
   * [4.2.1 REPL](tutorials-and-examples/all/repl.md)
   * [4.2.2 WLAN](tutorials-and-examples/all/wlan.md)
@@ -84,11 +84,11 @@
   * [4.3.4 LoRa-MAC Nano-Gateway](tutorials-and-examples/lora/lora-mac-nano-gateway.md)
   * [4.3.5 LoPy to LoPy](tutorials-and-examples/lora/module-module.md)
   * [4.3.6 LoRaWAN Nano-Gateway](tutorials-and-examples/lora/lorawan-nano-gateway.md)
-  * [4.3.7 RN2483 to LoPy](tutorials-and-examples/lora/537-rn2483-to-lopy.md)
+  * [4.3.7 RN2483 to LoPy](tutorials-and-examples/lora/rn2483-to-lopy.md)
 * [4.4 Sigfox Examples](tutorials-and-examples/sigfox.md)
 * [4.5 LTE Examples](tutorials-and-examples/lte/README.md)
-  * [4.5.1 CAT-M1](tutorials-and-examples/lte/cat_m1.md)
-  * [4.5.2 NB-IoT](tutorials-and-examples/lte/nb_iot.md)
+  * [4.5.1 CAT-M1](tutorials-and-examples/lte/cat-m1.md)
+  * [4.5.2 NB-IoT](tutorials-and-examples/lte/nb-iot.md)
   * [4.5.3 Module IMEI](tutorials-and-examples/lte/imei.md)
   * [4.5.4 Modem Firmware Update](tutorials-and-examples/lte/firmware.md)
 * [4.6 Pytrack Examples](tutorials-and-examples/pytrack.md)
@@ -97,7 +97,7 @@
 
 ## 5. Firmware & API Reference
 
-* [5.1 Introduction](firmware-and-api-reference/firmwareapi.md)
+* [5.1 Introduction](firmware-and-api-reference/introduction.md)
 * [5.2 Pycom Modules](firmware-and-api-reference/pycom/README.md)
   * [5.2.1 machine](firmware-and-api-reference/pycom/machine/README.md)
     * [5.2.1.1 ADC](firmware-and-api-reference/pycom/machine/adc.md)
@@ -152,7 +152,7 @@
 
 ## 6. Product Info
 
-* [6.0 Introduction](product-info/datasheets.md)
+* [6.0 Introduction](product-info/introduction.md)
 * [6.1 Development Modules](product-info/development/README.md)
   * [6.1.1 WiPy 2.0](product-info/development/wipy2.md)
   * [6.1.2 WiPy 3.0](product-info/development/wipy3.md)
@@ -180,25 +180,25 @@
 
 ## 7. Datasheets
 
-* [7.1 Development Modules](datasheets/modules.md)
+* [7.1 Development Modules](datasheets/development.md)
 * [7.2 OEM Modules](datasheets/oem.md)
 * [7.3 Expansion Boards and Shields](datasheets/boards.md)
 
 ## 8. Pybytes
 
-* [8.1 Introduction](pybytes/pybytes.md)
-* [8.2 Getting Started with Pybytes](pybytes/intro.md)
-* [8.3 Add a device to Pybytes](pybytes/intro-1/README.md)
-  * [8.3.1 Connect to Pybytes: Quick Add](pybytes/intro-1/quick.md)
-  * [8.3.2 Connect to Pybytes: Flash Pybytes library manually](pybytes/intro-1/flash.md)
-  * [8.3.3 Add Sigfox device](pybytes/intro-1/sigfox/README.md)
-    * [8.3.3.1 DevKit contract](pybytes/intro-1/sigfox/sigfoxdevkit.md)
-    * [8.3.3.2 Custom contract](pybytes/intro-1/sigfox/sigfoxcustomcontract.md)
-* [8.4 Visualise data from your device](pybytes/intro-2.md)
+* [8.1 Introduction](pybytes/introduction.md)
+* [8.2 Getting Started with Pybytes](pybytes/getting-started.md)
+* [8.3 Add a device to Pybytes](pybytes/add-device/README.md)
+  * [8.3.1 Connect to Pybytes: Quick Add](pybytes/add-device/quick.md)
+  * [8.3.2 Connect to Pybytes: Flash Pybytes library manually](pybytes/add-device/flash.md)
+  * [8.3.3 Add Sigfox device](pybytes/add-device/sigfox/README.md)
+    * [8.3.3.1 DevKit contract](pybytes/add-device/sigfox/devkit.md)
+    * [8.3.3.2 Custom contract](pybytes/add-device/sigfox/custom.md)
+* [8.4 Visualise data from your device](pybytes/visualise-data.md)
 
 ## 9. Documentation Notes
 
-* [9.1 Introduction](documentation-notes/docnotes.md)
+* [9.1 Introduction](documentation-notes/introduction.md)
 * [9.2 Syntax](documentation-notes/syntax.md)
 * [9.3 REPL vs Scripts](documentation-notes/replscript.md)
 * [9.4 Mesh Networks](documentation-notes/mesh-networks.md)

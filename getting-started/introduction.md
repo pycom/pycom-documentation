@@ -8,7 +8,7 @@ So, you've decided to order a Pycom development module. Firstly we would like to
 
 In the first part of this getting started guide, we will take you through setting up your device. Firstly we will cover how to connect the module to your computer either via USB or WiFi. Secondly we will explain how to connect various accessories such as antennas or SIM cards to your module.
 
-## [Step 2: Setting up your computer](installingsoftware/)
+## [Step 2: Setting up your computer](software/)
 
 Now that your module is successfully connected, you will need to install some software on your computer to interface with it. The second part of this guide will guide you through installing drivers; performing firmware updates for your module/accessories to ensure you have the most stable and feature packed version; and how to setup the software use to program the device.
 

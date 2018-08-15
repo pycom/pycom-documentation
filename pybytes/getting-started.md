@@ -13,7 +13,7 @@ Follow these steps to create a Pybytes account:
 
 Now it's time to explore Pybytes. You can start by connecting your Pycom board to Pybytes.
 
-{% page-ref page="intro-1/" %}
+{% page-ref page="add-device/" %}
 
 
 

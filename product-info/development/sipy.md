@@ -40,7 +40,7 @@ Due to a couple issues with the SiPy design the module draws more current than i
 
 ## Tutorials
 
-Tutorials on how to the SiPy module can be found in the [examples](../../tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the SiPy:
+Tutorials on how to the SiPy module can be found in the [examples](../../tutorials-and-examples/introduction.md) section of this documentation. The following tutorials might be of specific interest for the SiPy:
 
 * [WiFi connection](../../tutorials-and-examples/all/wlan.md)
 * [Sigfox](../../tutorials-and-examples/sigfox.md)

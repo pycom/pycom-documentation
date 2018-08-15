@@ -50,5 +50,5 @@ Install the Firmware updater on your computer.
 
 Now it's time to display data from your device into Pybytes dashboard.
 
-{% page-ref page="../intro-2.md" %}
+{% page-ref page="../visualise-data.md" %}
 

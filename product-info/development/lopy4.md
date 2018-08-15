@@ -38,7 +38,7 @@ The `Vin` pin on the LoPy4 can be supplied with a voltage ranging from `3.5v` to
 
 ## Tutorials
 
-Tutorials on how to the LoPy4 module can be found in the [examples](../../tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the LoPy4:
+Tutorials on how to the LoPy4 module can be found in the [examples](../../tutorials-and-examples/introduction.md) section of this documentation. The following tutorials might be of specific interest for the LoPy4:
 
 * [WiFi connection](../../tutorials-and-examples/all/wlan.md)
 * [LoRaWAN node](../../tutorials-and-examples/lora/lorawan-abp.md)

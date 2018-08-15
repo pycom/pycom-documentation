@@ -40,7 +40,7 @@ Due to a couple issues with the WiPy2 design the module draws more current than 
 
 ## Tutorials
 
-Tutorials on how to the WiPy2 module can be found in the [examples](../../tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the WiPy2:
+Tutorials on how to the WiPy2 module can be found in the [examples](../../tutorials-and-examples/introduction.md) section of this documentation. The following tutorials might be of specific interest for the WiPy2:
 
 * [WiFi connection](../../tutorials-and-examples/all/wlan.md)
 * [BLE](../../tutorials-and-examples/all/ble.md)

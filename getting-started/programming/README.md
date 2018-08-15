@@ -6,7 +6,7 @@ If this is your first time using a Pycom module we highly recommend you read thr
 
 * [**Introduction to MicroPython:**](micropython.md) This page will explain what Micropython is and its relation to Python.
 * [**MicroPython Examples:**](examples.md) We also recommend you browse these short MicroPython examples to familiarise yourself with its syntax. This is not meant as a comprehensive guide to MicroPython programming but rather a reference to those who already know programming. If you are new to python, or programming all together, we highly recommend searching the internet for Python tutorials. There are many very good tutorials available for free and the skills you learn will be easily transferable to our platform.
-* [**Your first Pymakr project:**](first_project.md) Once you understand what MicroPython is, this guide will take you through setting up your first Pymakr project to blink the on-board RGB LED. This guide will explain the structure of a MicroPython project as well as how to upload it to your module.
+* [**Your first Pymakr project:**](first-project.md) Once you understand what MicroPython is, this guide will take you through setting up your first Pymakr project to blink the on-board RGB LED. This guide will explain the structure of a MicroPython project as well as how to upload it to your module.
 
 Once you are familiar with MicroPython and Pymakr, the recommended way of uploading code to your module, you can explore the pages below. These will discuss in greater detail the various mechanisms for running code on your device as well as how to recover it if something goes wrong.
 

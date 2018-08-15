@@ -48,13 +48,13 @@ The AT commands for the Sequans Monarch modem on the FiPy are available in a PDF
 
 ## Tutorials
 
-Tutorials on how to the FiPy module can be found in the [examples](../../tutorials-and-examples/tutorials.md) section of this documentation. The following tutorials might be of specific interest for the FiPy:
+Tutorials on how to the FiPy module can be found in the [examples](../../tutorials-and-examples/introduction.md) section of this documentation. The following tutorials might be of specific interest for the FiPy:
 
 * [WiFi connection](../../tutorials-and-examples/all/wlan.md)
 * [LoRaWAN node](../../tutorials-and-examples/lora/lorawan-abp.md)
 * [LoRaWAN nano gateway](../../tutorials-and-examples/lora/lorawan-nano-gateway.md)
 * [Sigfox](../../tutorials-and-examples/sigfox.md)
-* [LTE CAT-M1](../../tutorials-and-examples/lte/cat_m1.md)
-* [NB-IoT](../../tutorials-and-examples/lte/nb_iot.md)
+* [LTE CAT-M1](../../tutorials-and-examples/lte/cat-m1.md)
+* [NB-IoT](../../tutorials-and-examples/lte/nb-iot.md)
 * [BLE](../../tutorials-and-examples/all/ble.md)
 
