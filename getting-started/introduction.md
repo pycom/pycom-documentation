@@ -4,7 +4,7 @@ So, you've decided to order a Pycom development module. Firstly we would like to
 
 ![](../.gitbook/assets/getting_started.png)
 
-## [Step 1: Setting up the hardware](hardwaresetup/)
+## [Step 1: Setting up the hardware](hardware/)
 
 In the first part of this getting started guide, we will take you through setting up your device. Firstly we will cover how to connect the module to your computer either via USB or WiFi. Secondly we will explain how to connect various accessories such as antennas or SIM cards to your module.
 
