@@ -8,7 +8,7 @@
 
 ## 1. Getting Started
 
-* [1.0 Introduction](getting-started/gettingstarted.md)
+* [1.0 Introduction](getting-started/introduction.md)
 * [1.1 Hardware Setup](getting-started/hardwaresetup/README.md)
   * [1.1.1 LoPy](getting-started/hardwaresetup/lopy.md)
   * [1.1.2 LoPy4](getting-started/hardwaresetup/lopy4.md)

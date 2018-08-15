@@ -5,7 +5,7 @@ Welcome to the Pycom documentation site. The documentation is split into 5 secti
 To get started, read through the Getting Started Guide then feel free to jump straight into the tutorials and examples in Tutorials & Examples to begin building your projects.
 
 * [Products](about/products.md)
-* [Getting Started](getting-started/gettingstarted.md)
+* [Getting Started](getting-started/introduction.md)
 * [Tutorials](tutorials-and-examples/tutorials.md)
 * [Product Info](product-info/datasheets.md)
 * [API Documentation](firmware-and-api-reference/firmwareapi.md)
