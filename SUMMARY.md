@@ -213,3 +213,7 @@
 
 * [11.1 License](license/license.md)
 
+## Have a question?
+
+* [Ask on the Forum](https://forum.pycom.io)
+
