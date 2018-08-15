@@ -1,4 +1,4 @@
-# 8.3.1 Connect to Pybytes: Quick Add
+# 7.3.1 Connect to Pybytes: Quick Add
 
 ## Connecting a device to Pybytes quickly by using the Firmware Updater
 

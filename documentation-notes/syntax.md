@@ -1,4 +1,4 @@
-# 9.2 Syntax
+# 8.2 Syntax
 
 The Pycom documentation follows standard Python Library format using the popular Sphinx Docs tool. There are some notable points regarding the syntax of classes, methods and constants. Please see the notes below and familiarise yourself with the specific details before reviewing the documentation.
 

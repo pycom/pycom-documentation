@@ -1,4 +1,4 @@
-# 8.3.2 Connect to Pybytes: Flash Pybytes library manually
+# 7.3.2 Connect to Pybytes: Flash Pybytes library manually
 
 ## Connecting a device to Pybytes by flashing Pybytes library manually
 

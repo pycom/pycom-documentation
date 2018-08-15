@@ -1,6 +1,6 @@
 # 4.2.12 Timers
 
-Detailed information about this class can be found in [`Timer`](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/firmwareapi/pycom/machine/Timer.html).
+Detailed information about this class can be found in [`Timer`](../../firmware-and-api-reference/pycom/machine/timer.md).
 
 ## Chronometer
 
@@ -48,6 +48,6 @@ clock = Clock()
 ```
 
 {% hint style="info" %}
-There are no restrictions to what can be done in an interrupt. For example, it is possible to even do network requests with an interrupt. However, it is important to keep in mind that interrupts are handled sequentially, so it’s good practice to keep them short. More information can be found in [`Interrupt Handling`](timers.md).
+There are no restrictions to what can be done in an interrupt. For example, it is possible to even do network requests with an interrupt. However, it is important to keep in mind that interrupts are handled sequentially, so it’s good practice to keep them short. More information can be found in [`Interrupt Handling`](../../firmware-and-api-reference/notes.md#interrupt-handling).
 {% endhint %}
 

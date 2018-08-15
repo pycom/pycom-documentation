@@ -1,4 +1,4 @@
-# 8.3.3.1 DevKit contract
+# 7.3.3.1 DevKit contract
 
 Every Sigfox Pycom device comes with free Sigfox connectivity - Sigfox DevKit contract. It provides one year of Sigfox connectivity. This is great for prototyping.
 

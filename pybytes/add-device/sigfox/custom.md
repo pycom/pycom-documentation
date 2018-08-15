@@ -1,4 +1,4 @@
-# 8.3.3.2 Custom contract
+# 7.3.3.2 Custom contract
 
 For building Sigfox application on Pybytes we recommend to [buy Sigfox contract](https://buy.sigfox.com/).
 

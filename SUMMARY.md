@@ -2,10 +2,6 @@
 
 * [Introduction](README.md)
 
-## About
-
-* [Pycom Products](about/products.md)
-
 ## 1. Getting Started
 
 * [1.0 Introduction](getting-started/introduction.md)
@@ -35,6 +31,7 @@
   * [1.4.3 LoRaWAN](getting-started/registration/lora/README.md)
     * [1.4.3.1 The Things Network](getting-started/registration/lora/ttn.md)
     * [1.4.3.2 Objenious](getting-started/registration/lora/objenious.md)
+* [Pycom Products](products.md)
 
 ## 2. Pymakr Plugin
 
@@ -149,6 +146,7 @@
   * [5.3.18 ustruct](firmware-and-api-reference/micropython/ustruct.md)
   * [5.3.19 \_thread](firmware-and-api-reference/micropython/_thread.md)
   * [5.3.20 Builtin](firmware-and-api-reference/micropython/builtin.md)
+* [5.4 Notes](firmware-and-api-reference/notes.md)
 
 ## 6. Product Info
 
@@ -178,42 +176,33 @@
     * [6.3.6.1 Deep Sleep API](product-info/boards/deepsleep/api.md)
 * [6.4 Notes](product-info/notes.md)
 
-## 7. Datasheets
+## 7. Pybytes
 
-* [7.1 Development Modules](datasheets/development.md)
-* [7.2 OEM Modules](datasheets/oem.md)
-* [7.3 Expansion Boards and Shields](datasheets/boards.md)
+* [7.1 Introduction](pybytes/introduction.md)
+* [7.2 Getting Started with Pybytes](pybytes/getting-started.md)
+* [7.3 Add a device to Pybytes](pybytes/add-device/README.md)
+  * [7.3.1 Connect to Pybytes: Quick Add](pybytes/add-device/quick.md)
+  * [7.3.2 Connect to Pybytes: Flash Pybytes library manually](pybytes/add-device/flash.md)
+  * [7.3.3 Add Sigfox device](pybytes/add-device/sigfox/README.md)
+    * [7.3.3.1 DevKit contract](pybytes/add-device/sigfox/devkit.md)
+    * [7.3.3.2 Custom contract](pybytes/add-device/sigfox/custom.md)
+* [7.4 Visualise data from your device](pybytes/visualise-data.md)
 
-## 8. Pybytes
+## 8. Documentation Notes
 
-* [8.1 Introduction](pybytes/introduction.md)
-* [8.2 Getting Started with Pybytes](pybytes/getting-started.md)
-* [8.3 Add a device to Pybytes](pybytes/add-device/README.md)
-  * [8.3.1 Connect to Pybytes: Quick Add](pybytes/add-device/quick.md)
-  * [8.3.2 Connect to Pybytes: Flash Pybytes library manually](pybytes/add-device/flash.md)
-  * [8.3.3 Add Sigfox device](pybytes/add-device/sigfox/README.md)
-    * [8.3.3.1 DevKit contract](pybytes/add-device/sigfox/devkit.md)
-    * [8.3.3.2 Custom contract](pybytes/add-device/sigfox/custom.md)
-* [8.4 Visualise data from your device](pybytes/visualise-data.md)
+* [8.1 Introduction](documentation-notes/introduction.md)
+* [8.2 Syntax](documentation-notes/syntax.md)
+* [8.3 REPL vs Scripts](documentation-notes/replscript.md)
+* [8.4 Mesh Networks](documentation-notes/mesh-networks.md)
 
-## 9. Documentation Notes
+## 9. Advanced Topics
 
-* [9.1 Introduction](documentation-notes/introduction.md)
-* [9.2 Syntax](documentation-notes/syntax.md)
-* [9.3 REPL vs Scripts](documentation-notes/replscript.md)
-* [9.4 Mesh Networks](documentation-notes/mesh-networks.md)
-
-## 10. Advanced Topics
-
-* [10.1 Firmware Downgrade](advanced-topics/downgrade.md)
-* [10.2 CLI Updater](advanced-topics/cli.md)
-* [10.3 SecureBoot and Encryption](advanced-topics/encryption.md)
-
-## 11. License
-
-* [11.1 License](license/license.md)
+* [9.1 Firmware Downgrade](advanced-topics/downgrade.md)
+* [9.2 CLI Updater](advanced-topics/cli.md)
+* [9.3 SecureBoot and Encryption](advanced-topics/encryption.md)
 
 ## Have a question?
 
 * [Ask on the Forum](https://forum.pycom.io)
+* [License](license.md)
 

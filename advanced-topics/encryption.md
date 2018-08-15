@@ -1,4 +1,4 @@
-# 10.3 SecureBoot and Encryption
+# 9.3 SecureBoot and Encryption
 
 ## Summary
 

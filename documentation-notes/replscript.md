@@ -1,4 +1,4 @@
-# 9.3 REPL vs Scripts
+# 8.3 REPL vs Scripts
 
 Users of this documentation should be aware that examples given in the docs are under the expectation that they are being executed using the MicroPython REPL. This means that when certain functions are called, their output may not necessarily be printed to the console if they are run from a script. When using the REPL many classes/functions automatically produce a printed output displaying the return value of the function to the console. The code snippet below demonstrates some examples of classes/functions that might display this behaviour.
 
