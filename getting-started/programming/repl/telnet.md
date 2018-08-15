@@ -1,4 +1,4 @@
-# 1.3.4.2 Telnet REPL
+# Telnet REPL
 
 Pycom devices also support a connection via `telnet`, using the device's on board WiFi/WLAN. Connect to the device's WiFi Access Point \(AP\) and using the following credentials to connect to the AP. The WiFi `SSID` will appear upon powering on a Pycom Device for the first time \(e.g. `lopy-`\). To re-enable this feature at a later date, please see [network.WLAN](../../../firmware-and-api-reference/pycom/network/wlan.md).
 

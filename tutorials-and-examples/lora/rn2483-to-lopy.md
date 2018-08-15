@@ -1,4 +1,4 @@
-# 4.3.7 RN2483 to LoPy
+# RN2483 to LoPy
 
 This example shows how to send data between a Microchip RN2483 and a LoPy via raw LoRa.
 

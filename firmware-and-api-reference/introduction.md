@@ -1,4 +1,4 @@
-# 5.1 Introduction
+# Introduction
 
 This chapter describes modules \(function and class libraries\) that are built into MicroPython. There are a number of categories for the available modules:
 

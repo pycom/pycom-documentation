@@ -1,4 +1,4 @@
-# 5.3.15 uhashlib
+# uhashlib
 
 This module implements binary data hashing algorithms. MD5 and SHA are supported. By limitations in the hardware, only one active hashing operation is supported at a time.
 

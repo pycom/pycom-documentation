@@ -1,4 +1,4 @@
-# 6.1.7 FiPy
+# FiPy
 
 ![](../../.gitbook/assets/fipy%20%281%29.png)
 

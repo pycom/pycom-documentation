@@ -1,4 +1,4 @@
-# 4.8 Pyscan Examples
+# Pyscan Examples
 
 This basic example shows how to read an NFC card and authenticate it using a pre-defined access list.
 

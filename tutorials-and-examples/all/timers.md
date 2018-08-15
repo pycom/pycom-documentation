@@ -1,4 +1,4 @@
-# 4.2.12 Timers
+# Timers
 
 Detailed information about this class can be found in [`Timer`](../../firmware-and-api-reference/pycom/machine/timer.md).
 

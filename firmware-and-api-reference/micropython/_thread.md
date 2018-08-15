@@ -1,4 +1,4 @@
-# 5.3.19 \_thread
+# \_thread
 
 This module provides low-level primitives for working with multiple threads \(also called light-weight processes or tasks\) — multiple threads of control sharing their global data space. For synchronisation, simple locks \(also called mutexes or binary semaphores\) are provided.
 

@@ -1,4 +1,4 @@
-# 5.2.1.8 UART
+# UART
 
 UART implements the standard UART/USART duplex serial communications protocol. At the physical level it consists of 2 lines: RXD and TXD. The unit of communication is a character \(not to be confused with a string character\) which can be 5, 6, 7 or 8 bits wide.
 

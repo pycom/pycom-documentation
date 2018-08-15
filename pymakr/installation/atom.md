@@ -1,4 +1,4 @@
-# 2.1.1 Atom
+# Atom
 
 For beginners, users getting started with MicroPython & Pycom as well as Atom text editor users, we recommend the **Pymakr Plugin for Atom**. This section will help you get started using the Atom Text Editor & Pymakr Plugin.
 

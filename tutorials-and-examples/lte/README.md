@@ -1,4 +1,4 @@
-# 4.5 LTE Examples
+# LTE Examples
 
 The following tutorials demonstrate the use of the LTE CAT-M1 and NB-IoT functionality on cellular enabled Pycom modules.
 

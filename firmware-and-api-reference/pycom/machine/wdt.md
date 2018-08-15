@@ -1,4 +1,4 @@
-# 5.2.1.9 WDT
+# WDT
 
 The WDT is used to restart the system when the application crashes and ends up into a non recoverable state. After enabling, the application must "feed" the watchdog periodically to prevent it from expiring and resetting the system.
 

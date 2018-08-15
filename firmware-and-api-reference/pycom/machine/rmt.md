@@ -7,7 +7,7 @@ search:
     - Pulse
 ---
 
-# 5.2.1.13 RMT
+# RMT
 
 The RMT \(Remote Control\) module is primarily designed to send and receive infrared remote control signals that use on-off-keying of a carrier frequency, but due to its design it can be used to generate various types of signals.
 

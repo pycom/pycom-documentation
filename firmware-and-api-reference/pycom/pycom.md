@@ -1,4 +1,4 @@
-# 5.2.4 pycom
+# pycom
 
 The `pycom` module contains functions to control specific features of the Pycom devices, such as the heartbeat RGB LED.
 

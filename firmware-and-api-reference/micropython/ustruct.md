@@ -1,4 +1,4 @@
-# 5.3.18 ustruct
+# ustruct
 
 See Python [struct](https://docs.python.org/3/library/struct.html) for more information.
 

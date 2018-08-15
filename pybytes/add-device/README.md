@@ -1,4 +1,4 @@
-# 7.3 Add a device to Pybytes
+# Add a device to Pybytes
 
 In this section, we will explain to you how to add a device to Pybytes
 

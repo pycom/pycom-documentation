@@ -1,4 +1,4 @@
-# 2.1 Installation
+# Installation
 
 ![](../../.gitbook/assets/pymakr-logo%20%281%29.png)
 

@@ -1,4 +1,4 @@
-# 4.2.14 Modbus
+# Modbus
 
 Modbus is a messaging protocol that defines the packet structure for transferring data between devices in a master/slave architecture. The protocol is independent of the transmission medium and is usually transmitted over TCP \(MODBUS TCP\) or serial communication \(MODBUS RTU\). Modbus is intended as a request/reply protocol and delivers services specified by function codes. The function code in the request tells the addressed slave what kind of action to perform. The function codes most commonly supported by devices are listed below.
 

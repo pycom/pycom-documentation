@@ -1,4 +1,4 @@
-# 5.2.1 machine
+# machine
 
 The `machine` module contains specific functions related to the board.
 

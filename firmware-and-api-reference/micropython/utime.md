@@ -1,4 +1,4 @@
-# 5.3.14 utime
+# utime
 
 The `utime` module provides functions for getting the current time and date, measuring time intervals, and for delays.
 

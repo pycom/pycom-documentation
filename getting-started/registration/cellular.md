@@ -1,4 +1,4 @@
-# 1.4.2 Cellular
+# Cellular
 
 In order to use your GPy/FiPy on a cellular network you are required to get a SIM card from a local provider. _Note:_ This might differ from a standard SIM you can buy in a store, our devices do not support standard LTE.
 

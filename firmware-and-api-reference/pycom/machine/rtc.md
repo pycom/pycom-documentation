@@ -1,4 +1,4 @@
-# 5.2.1.6 RTC
+# RTC
 
 The RTC is used to keep track of the date and time.
 

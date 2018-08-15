@@ -1,4 +1,4 @@
-# 4.3.3 LoRaWAN with ABP
+# LoRaWAN with ABP
 
 ABP stands for Authentication By Personalisation. It means that the encryption keys are configured manually on the device and can start sending frames to the Gateway without needing a 'handshake' procedure to exchange the keys \(such as the one performed during an OTAA join procedure\).
 

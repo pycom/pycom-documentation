@@ -1,4 +1,4 @@
-# 1.1.5 FiPy
+# FiPy
 
 ## Basic connection
 

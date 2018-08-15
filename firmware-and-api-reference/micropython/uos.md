@@ -1,4 +1,4 @@
-# 5.3.4 uos
+# uos
 
 The `uos` module contains functions for filesystem access and `urandom` function.
 

@@ -1,4 +1,4 @@
-# 4.2.3 Bluetooth
+# Bluetooth
 
 At present, basic BLE functionality is available. More features will be implemented in the near future, such as pairing. This page will be updated in line with these features.
 

@@ -1,4 +1,4 @@
-# 5.2.3 AES
+# AES
 
 AES \(Advanced Encryption Standard\) is a symmetric block cipher standardised by NIST. It has a fixed data block size of 16 bytes. Its keys can be 128, 192, or 256 bits long.
 

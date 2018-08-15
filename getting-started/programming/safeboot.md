@@ -1,4 +1,4 @@
-# 1.3.6 Safe boot
+# Safe boot
 
 If powering up normally or upon pressing the reset button, a Pycom module will boot into standard mode; the `boot.py` file will be executed first, followed by `main.py`. It is possible to alter the boot procedure of the module by tying certain pins `high` or `low` when the module boots.
 

@@ -1,4 +1,4 @@
-# 5.2.2.3.1 GATT
+# GATT
 
 GATT stands for the Generic Attribute Profile and it defines the way that two Bluetooth Low Energy devices communicate between each other using concepts called Services and Characteristics. GATT uses a data protocol known as the Attribute Protocol \(ATT\), which is used to store/manage Services, Characteristics and related data in a lookup table.
 

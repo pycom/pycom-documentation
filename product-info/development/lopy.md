@@ -1,4 +1,4 @@
-# 6.1.3 LoPy
+# LoPy
 
 ![](../../.gitbook/assets/lopy%20%281%29.png)
 

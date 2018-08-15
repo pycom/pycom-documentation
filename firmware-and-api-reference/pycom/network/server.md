@@ -1,4 +1,4 @@
-# 5.2.2.2 Server
+# Server
 
 The `Server` class controls the behaviour and the configuration of the FTP and telnet services running on the Pycom device. Any changes performed using this class’ methods will affect both.
 

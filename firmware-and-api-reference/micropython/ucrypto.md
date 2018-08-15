@@ -1,4 +1,4 @@
-# 5.3.17 ucrypto
+# ucrypto
 
 This module provides native support for cryptographic algorithms. It’s loosely based on PyCrypto.
 

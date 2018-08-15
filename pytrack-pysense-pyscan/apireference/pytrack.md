@@ -1,4 +1,4 @@
-# 3.3.1 Pytrack
+# Pytrack
 
 This chapter describes the various libraries which are designed for the Pytrack board. This includes details about the various methods and classes available for each of the Pytrack’s sensors.
 

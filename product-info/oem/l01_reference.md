@@ -1,4 +1,4 @@
-# 6.2.5 L01 OEM Baseboard Reference
+# L01 OEM Baseboard Reference
 
 ![](../../.gitbook/assets/l01-reference.png)
 

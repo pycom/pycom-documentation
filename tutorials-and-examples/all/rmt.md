@@ -1,4 +1,4 @@
-# 4.2.16 RMT
+# RMT
 
 Detailed information about this class can be found in [`RMT`](../../firmware-and-api-reference/pycom/machine/rmt.md).
 

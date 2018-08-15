@@ -1,4 +1,4 @@
-# 1.4.3.1 The Things Network
+# The Things Network
 
 In order to use The Things Network \(TTN\) you should navigate to their website and create/register an account. Enter a username and an email address to verify with their platform.
 

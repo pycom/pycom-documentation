@@ -1,4 +1,4 @@
-# 5.2.1.3 I2C
+# I2C
 
 I2C is a two-wire protocol for communicating between devices. At the physical level it consists of 2 wires: SCL and SDA, the clock and data lines respectively.
 

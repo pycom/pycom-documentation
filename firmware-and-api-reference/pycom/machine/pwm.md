@@ -1,4 +1,4 @@
-# 5.2.1.5 PWM
+# PWM
 
 ## class PWM – Pulse Width Modulation
 

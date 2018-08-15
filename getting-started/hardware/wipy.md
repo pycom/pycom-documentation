@@ -1,4 +1,4 @@
-# 1.1.6 WiPy
+# WiPy
 
 ## Basic connection
 

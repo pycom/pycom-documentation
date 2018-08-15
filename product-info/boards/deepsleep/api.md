@@ -1,4 +1,4 @@
-# 6.3.6.1 Deep Sleep API
+# Deep Sleep API
 
 This chapter describes the library which controls the Deep Sleep Shield. This includes the controls for external interrupts and timer setup of the deep sleep functionality.
 

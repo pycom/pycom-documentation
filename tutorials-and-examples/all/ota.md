@@ -1,4 +1,4 @@
-# 4.2.15 OTA update
+# OTA update
 
 ## Overview
 

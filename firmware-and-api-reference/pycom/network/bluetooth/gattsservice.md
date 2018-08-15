@@ -1,4 +1,4 @@
-# 5.2.2.3.5 GATTSService
+# GATTSService
 
 The GATT Server allows the device to act as a peripheral and hold its own ATT lookup data, server & characteristic definitions. In this mode, the device acts as a slave and a master must initiate a request.
 

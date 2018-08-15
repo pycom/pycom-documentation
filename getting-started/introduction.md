@@ -1,4 +1,4 @@
-# 1.0 Introduction
+# Introduction
 
 So, you've decided to order a Pycom development module. Firstly we would like to congratulate you in making an excellent decision. If you haven't yet placed your order we highly recommend you check out the [products](../products.md) page before you place your order to ensure you know which accessories you might require.
 

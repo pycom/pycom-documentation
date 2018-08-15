@@ -1,4 +1,4 @@
-# 1.2.3 Pymakr
+# Pymakr
 
 ![](../../.gitbook/assets/pymakr-logo%20%281%29.png)
 

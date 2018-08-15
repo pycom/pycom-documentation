@@ -1,4 +1,4 @@
-# 4.2.4 HTTPS
+# HTTPS
 
 Basic connection using `ssl.wrap_socket()`.
 

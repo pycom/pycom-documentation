@@ -1,4 +1,4 @@
-# 5.2.2.1 WLAN
+# WLAN
 
 This class provides a driver for the WiFi network processor in the module. Example usage:
 

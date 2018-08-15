@@ -1,4 +1,4 @@
-# 4.5.4 Modem Firmware Update
+# Modem Firmware Update
 
 ## Description
 

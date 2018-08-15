@@ -1,4 +1,4 @@
-# 1.4 Device Registration
+# Device Registration
 
 Some of our devices require registration before you can utilise specific features such as certain types of networking. Please see the list below for setup guides to ensure that your device is registered and activated on the various platforms required to access all of the available features.
 

@@ -1,4 +1,4 @@
-# 9.3 SecureBoot and Encryption
+# SecureBoot and Encryption
 
 ## Summary
 

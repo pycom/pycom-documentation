@@ -6,7 +6,7 @@ search:
     - ADCChannel
 ---
 
-# 5.2.1.1 ADC
+# ADC
 
 ## class ADC – Analog to Digital Conversion
 

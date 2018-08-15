@@ -1,4 +1,4 @@
-# 4.3.1 LoRa-MAC \(Raw LoRa\)
+# LoRa-MAC \(Raw LoRa\)
 
 Basic LoRa connection example, sending and receiving data. In LoRa-MAC mode the LoRaWAN layer is bypassed and the radio is used directly. The data sent is not formatted or encrypted in any way, and no addressing information is added to the frame.
 

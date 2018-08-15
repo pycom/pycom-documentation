@@ -1,4 +1,4 @@
-# 1.1.3 SiPy
+# SiPy
 
 ## Basic connection
 

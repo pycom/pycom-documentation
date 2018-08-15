@@ -1,4 +1,4 @@
-# 5.2.1.7 SPI
+# SPI
 
 SPI is a serial protocol that is driven by a master. At the physical level there are 3 lines: SCK, MOSI, MISO.
 

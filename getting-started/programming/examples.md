@@ -1,4 +1,4 @@
-# 1.3.2 MicroPython Examples
+# MicroPython Examples
 
 To get you started with Python \(MicroPython\) syntax, we've provided you with a number of code examples.
 

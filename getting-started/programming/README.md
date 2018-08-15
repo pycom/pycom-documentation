@@ -1,4 +1,4 @@
-# 1.3 Programming the modules
+# Programming the modules
 
 Now that you have connected and updated your pycom module and installed all the required software on your computer, we can begin programming your Pycom module.
 

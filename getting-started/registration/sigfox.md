@@ -1,4 +1,4 @@
-# 1.4.1 Sigfox
+# Sigfox
 
 Before you start, update your device to the latest firmware. Select _stable_ firmware in Firmware updater. After firmware update is done, _Sigfox ID_ and _Sigfox PAC_ were assigned to your device.
 

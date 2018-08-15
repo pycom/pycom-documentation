@@ -1,4 +1,4 @@
-# 3.3.4 Pyscan
+# Pyscan
 
 This chapter describes the various libraries which are designed for the Pyscan board. This includes details about the various methods and classes available for each of the Pyscan’s sensors.
 

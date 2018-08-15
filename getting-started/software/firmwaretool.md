@@ -1,4 +1,4 @@
-# 1.2.2 Updating Firmware
+# Updating Firmware
 
 We strongly recommend you to upgrade your firmware to the latest version as we are constantly making improvements and adding new features to the devices.
 

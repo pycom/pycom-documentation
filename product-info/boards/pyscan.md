@@ -1,4 +1,4 @@
-# 6.3.4 Pyscan
+# Pyscan
 
 ![](../../.gitbook/assets/pyscan-new.png)
 

@@ -1,4 +1,4 @@
-# 4.2.8 I2C
+# I2C
 
 The following example receives data from a light sensor using I2C. Sensor used is the BH1750FVI Digital Light Sensor.
 

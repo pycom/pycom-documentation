@@ -1,32 +1,48 @@
-# 6.0 Introduction
+# Introduction
 
 The follow pages contain all information relating to each product, for examples: pinouts, spec sheets, relevant examples and notes.
 
 ## Development Modules
 
-* [WiPy 2.0](development/wipy2.md)
-* [WiPy 3.0](development/wipy3.md)
-* [SiPy](development/sipy.md)
-* [LoPy](development/lopy.md)
-* [LoPy4](development/lopy4.md)
-* [GPy](development/gpy.md)
-* [FiPy](development/fipy.md)
+{% page-ref page="development/wipy2.md" %}
+
+{% page-ref page="development/wipy3.md" %}
+
+{% page-ref page="development/lopy.md" %}
+
+{% page-ref page="development/lopy4.md" %}
+
+{% page-ref page="development/sipy.md" %}
+
+{% page-ref page="development/gpy.md" %}
+
+{% page-ref page="development/fipy.md" %}
 
 ## OEM modules
 
-* [W01](oem/w01.md)
-* [L01](oem/l01.md)
-* [L04](oem/l04.md)
-* [G01](oem/g01.md)
-* [L01/W01 Reference Board](oem/l01_reference.md)
-* [Universal Reference Board](oem/universal_reference.md)
+{% page-ref page="oem/w01.md" %}
 
-## Shields and Expansion boards
+{% page-ref page="oem/l01.md" %}
 
-* [Expansion Board 3.0](boards/expansion3.md)
-* [Pysense](boards/pysense.md)
-* [Pytrack](boards/pytrack.md)
-* [Pyscan](boards/pyscan.md)
-* [Deep Sleep Shield](boards/deepsleep/)
-* [Expansion Board 2.0](boards/expansion2.md)
+{% page-ref page="oem/g01.md" %}
+
+{% page-ref page="oem/l01\_reference.md" %}
+
+{% page-ref page="oem/universal\_reference.md" %}
+
+## Expansion Boards and Shields
+
+{% page-ref page="boards/expansion3.md" %}
+
+{% page-ref page="boards/pytrack.md" %}
+
+{% page-ref page="boards/pysense.md" %}
+
+{% page-ref page="boards/pyscan.md" %}
+
+{% page-ref page="boards/expansion2.md" %}
+
+{% page-ref page="boards/deepsleep/" %}
+
+
 

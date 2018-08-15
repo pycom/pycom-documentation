@@ -1,4 +1,4 @@
-# 1.3.1 Introduction to MicroPython
+# Introduction to MicroPython
 
 Our boards work with [MicroPython](https://micropython.org/); a Python 3.5 implementation that is optimised to run on micro controllers. This allows for much faster and more simple development process than using C.
 

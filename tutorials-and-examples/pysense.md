@@ -1,4 +1,4 @@
-# 4.7 Pysense Examples
+# Pysense Examples
 
 ## Accelerometer
 

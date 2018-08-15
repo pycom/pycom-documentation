@@ -1,4 +1,4 @@
-# 4.4 Sigfox Examples
+# Sigfox Examples
 
 Before you start, make sure that your device was registered with [Sigfox](../getting-started/registration/sigfox.md).
 

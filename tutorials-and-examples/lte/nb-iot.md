@@ -1,4 +1,4 @@
-# 4.5.2 NB-IoT
+# NB-IoT
 
 ## LTE class for Narrow Band IoT
 

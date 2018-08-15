@@ -1,4 +1,4 @@
-# 4.2.13 PIR Sensor
+# PIR Sensor
 
 This code reads PIR sensor triggers from this simple [PIR sensor](https://www.kiwi-electronics.nl/PIR-Motion-Sensor) and sends an HTTP request for every trigger, in this case to a [Domoticz](https://domoticz.com/) installation. When motion is constantly detected, this PIR sensor keeps the pin high, in which case this code will keep sending HTTP requests every 10 seconds \(configurable with the hold\_time variable\).
 

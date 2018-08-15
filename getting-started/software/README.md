@@ -1,4 +1,4 @@
-# 1.2 Software
+# Software
 
 To get you up and running, Pycom provides a suite of tools to assist with developing and programming your Pycom Devices:
 

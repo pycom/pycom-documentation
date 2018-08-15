@@ -1,4 +1,4 @@
-# 3.2.2 Installing Drivers - Windows 7
+# Installing Drivers - Windows 7
 
 Pytrack and Pysense will work out of the box for Windows 8/10/+, macOS as well as Linux. If using Windows 7, drivers to support the boards will need to be installed.
 

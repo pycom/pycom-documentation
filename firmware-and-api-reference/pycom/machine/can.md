@@ -1,4 +1,4 @@
-# 5.2.1.12 CAN
+# CAN
 
 The CAN class supports the full CAN 2.0 specification with standard and extended frames, as well as acceptance filtering.
 

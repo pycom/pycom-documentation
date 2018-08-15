@@ -1,4 +1,4 @@
-# 5.3.2 uctypes
+# uctypes
 
 This module implements "foreign data interface" for MicroPython. The idea behind it is similar to CPython’s `ctypes` modules, but the actual API is different, streamlined and optimised for small size. The basic idea of the module is to define data structure layout with about the same power as the C language allows, and the access it using familiar dot-syntax to reference sub-fields.
 

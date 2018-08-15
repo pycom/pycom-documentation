@@ -1,4 +1,4 @@
-# 5.3.11 ure
+# ure
 
 This module implements regular expression operations. Regular expression syntax supported is a subset of CPython re module \(and actually is a subset of POSIX extended regular expressions\).
 

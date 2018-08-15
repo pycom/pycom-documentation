@@ -1,4 +1,4 @@
-# 6.4 Notes
+# Notes
 
 ## Powering with an external power source
 

@@ -1,4 +1,4 @@
-# 4.2.1 REPL
+# REPL
 
 Using the Pymakr Plugin, open and connect a device or use serial terminal \(PuTTY, screen, picocom, etc\). Upon connecting, there should be a blank screen with a flashing cursor. Press Enter and a MicroPython prompt should appear, i.e. `>>>`. Let’s make sure it is working with the obligatory test:
 

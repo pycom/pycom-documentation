@@ -1,4 +1,4 @@
-# 3.1 Introduction
+# Introduction
 
 In addition to the Expansion Board, Pycom also offers three additional sensor boards, which are ideal for quickly building a fully functioning IoT solution! Whether the application is environment sensing or asset tracking, these additional boards support a variety of sensors.
 

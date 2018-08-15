@@ -1,4 +1,4 @@
-# 4.2.7 ADC
+# ADC
 
 This example is a simple ADC sample. For more information please see [`ADC`](../../firmware-and-api-reference/pycom/machine/adc.md).
 

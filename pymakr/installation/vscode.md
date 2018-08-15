@@ -1,4 +1,4 @@
-# 2.1.2 Visual Studio Code
+# Visual Studio Code
 
 Pycom also supports Microsoft's Visual Studio Code IDE platform with the Pymakr Plugin. To download Visual Studio Code, navigate to [VS Code](https://code.visualstudio.com/).
 

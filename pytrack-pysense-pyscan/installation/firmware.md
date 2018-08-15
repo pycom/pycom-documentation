@@ -1,4 +1,4 @@
-# 3.2.1 Updating Firmware
+# Updating Firmware
 
 To update the firmware on the Pysense/Pytrack/Pyscan/Expansion Board v3, please see the following instructions. The firmware of Pysense/Pytrack/Pyscan/Expansion Board v3 can be updated via the USB port using the terminal tool, `DFU-util`.
 

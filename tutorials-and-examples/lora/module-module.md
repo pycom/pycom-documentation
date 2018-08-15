@@ -1,4 +1,4 @@
-# 4.3.5 LoPy to LoPy
+# LoPy to LoPy
 
 This example shows how to connect two Pycode LoRa capable modules \(nodes\) via raw LoRa.
 

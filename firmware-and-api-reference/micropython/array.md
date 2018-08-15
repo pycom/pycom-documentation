@@ -1,4 +1,4 @@
-# 5.3.5 array
+# array
 
 See [Python array](https://docs.python.org/3/library/array.html) for more information.
 

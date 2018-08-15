@@ -1,4 +1,4 @@
-# 5.2.1.2 DAC
+# DAC
 
 The DAC is used to output analog values \(a specific voltage\) on pin `P22` or pin `P21`. The voltage will be between `0` and `3.3V`.
 

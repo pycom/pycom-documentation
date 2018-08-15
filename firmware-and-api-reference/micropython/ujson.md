@@ -1,4 +1,4 @@
-# 5.3.10 ujson
+# ujson
 
 This modules allows to convert between Python objects and the JSON data format.
 

@@ -1,4 +1,4 @@
-# 6.1.6 GPy
+# GPy
 
 ![](../../.gitbook/assets/gpy%20%281%29.png)
 

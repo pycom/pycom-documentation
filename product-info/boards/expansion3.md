@@ -1,4 +1,4 @@
-# 6.3.1 Expansion Board 3.0
+# Expansion Board 3.0
 
 ![](../../.gitbook/assets/expansion3.png)
 

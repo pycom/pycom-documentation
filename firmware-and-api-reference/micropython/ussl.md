@@ -1,4 +1,4 @@
-# 5.3.16 ussl
+# ussl
 
 This module provides access to Transport Layer Security \(often known as "Secure Sockets Layer"\) encryption and peer authentication facilities for network sockets, both client-side and server-side.
 

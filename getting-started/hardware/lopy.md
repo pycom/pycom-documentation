@@ -1,4 +1,4 @@
-# 1.1.1 LoPy
+# LoPy
 
 ## Basic connection
 

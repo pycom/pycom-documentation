@@ -1,4 +1,4 @@
-# 1.3.3 Your first Pymakr project
+# Your first Pymakr project
 
 This guide will take you through how to setup your first project with Pymakr and make the on-board RGB LED flash various colours.
 

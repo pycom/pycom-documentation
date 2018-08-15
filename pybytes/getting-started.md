@@ -1,4 +1,4 @@
-# 7.2 Getting Started with Pybytes
+# Getting Started with Pybytes
 
 Follow these steps to create a Pybytes account:
 

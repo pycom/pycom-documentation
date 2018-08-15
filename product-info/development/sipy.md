@@ -1,4 +1,4 @@
-# 6.1.5 SiPy
+# SiPy
 
 ![](../../.gitbook/assets/sipy%20%282%29.png)
 

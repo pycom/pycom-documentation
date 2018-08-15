@@ -1,4 +1,4 @@
-# 1.1.2 LoPy4
+# LoPy 4
 
 ## Basic connection
 

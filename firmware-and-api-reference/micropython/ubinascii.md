@@ -1,4 +1,4 @@
-# 5.3.9 ubinascii
+# ubinascii
 
 This module implements conversions between binary data and various encodings of it in ASCII form \(in both directions\).
 

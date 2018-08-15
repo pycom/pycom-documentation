@@ -1,4 +1,4 @@
-# 5.2.1.10 Timer
+# Timer
 
 ## class Timer – Measure Time and Set Alarms
 

@@ -1,4 +1,4 @@
-# 5.3.13 select
+# select
 
 This module provides functions to wait for events on streams \(select streams which are ready for operations\).
 

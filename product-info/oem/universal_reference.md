@@ -1,4 +1,4 @@
-# 6.2.6 Universal OEM Baseboard Reference
+# Universal OEM Baseboard Reference
 
 ![](../../.gitbook/assets/universal_reference.png)
 

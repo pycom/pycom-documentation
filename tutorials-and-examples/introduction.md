@@ -1,4 +1,4 @@
-# 4.1 Introduction
+# Introduction
 
 ![](../.gitbook/assets/tutorialsicon.png)
 

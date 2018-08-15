@@ -1,4 +1,4 @@
-# 5.2.2.5 Sigfox
+# Sigfox
 
 Sigfox is a Low Power Wide Area Network protocol that enables remote devices to connect using ultra-narrow band, UNB technology. The protocol is bi-directional, messages can both be sent up to and down from the Sigfox servers.
 

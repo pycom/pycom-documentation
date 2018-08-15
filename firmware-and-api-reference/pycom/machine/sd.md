@@ -1,4 +1,4 @@
-# 5.2.1.11 SD
+# SD
 
 The SD card class allows to configure and enable the memory card module of your Pycom module and automatically mount it as `/sd` as part of the file system. There is a single pin combination that can be used for the SD card, and the current implementation only works in 1-bit mode. The pin connections are as follows:
 

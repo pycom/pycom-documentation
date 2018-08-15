@@ -1,4 +1,4 @@
-# 5.2.1.4 Pin
+# Pin
 
 A pin is the basic object to control I/O pins \(also known as GPIO - general-purpose input/output\). It has methods to set the mode of the pin \(input, output, etc\) and methods to get and set the digital logic level. For analog control of a pin, see the ADC class.
 

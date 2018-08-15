@@ -1,4 +1,4 @@
-# 9.1 Firmware Downgrade
+# Firmware Downgrade
 
 The firmware upgrade tool usually updates your device to the latest available firmware version. If you require to downgrade your device to a previous firmware there are two methods to achieve this.
 

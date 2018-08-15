@@ -1,4 +1,4 @@
-# 5.3.12 usocket
+# usocket
 
 This module provides access to the BSD socket interface.
 

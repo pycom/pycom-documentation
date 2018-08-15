@@ -1,4 +1,4 @@
-# 6.3.3 Pysense
+# Pysense
 
 ![](../../.gitbook/assets/pysense.png)
 

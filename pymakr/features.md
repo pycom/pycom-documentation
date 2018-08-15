@@ -1,4 +1,4 @@
-# 2.2 Tools/Features
+# Tools/Features
 
 ## Console \(REPL\)
 

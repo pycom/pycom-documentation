@@ -1,4 +1,4 @@
-# 4.3.6 LoRaWAN Nano-Gateway
+# LoRaWAN Nano-Gateway
 
 This example allows to connect a LoPy to a LoRaWAN network such as The Things Network \(TTN\) or Loriot to be used as a nano-gateway.
 

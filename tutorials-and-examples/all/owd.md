@@ -1,4 +1,4 @@
-# 4.2.9 Onewire Driver
+# Onewire Driver
 
 This tutorial explains how to connect and read data from a DS18x20 temperature sensor. The onewire library is also available at the [pycom-libraries](https://github.com/pycom/pycom-libraries/tree/master/lib/onewire) GitHub Repository.
 

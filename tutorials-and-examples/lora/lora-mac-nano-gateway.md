@@ -1,4 +1,4 @@
-# 4.3.4 LoRa-MAC Nano-Gateway
+# LoRa-MAC Nano-Gateway
 
 This example allows a raw LoRa connection between two LoPys \(nodes\) to a single LoPy acting as a Nano-Gateway.
 

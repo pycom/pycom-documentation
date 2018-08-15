@@ -1,4 +1,4 @@
-# 1.1.4 GPy
+# GPy
 
 ## Basic connection
 

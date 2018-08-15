@@ -1,4 +1,4 @@
-# 9.2 CLI Updater
+# CLI Updater
 
 ## Command Line Update Utility
 

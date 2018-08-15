@@ -1,4 +1,4 @@
-# 3.2.3 Installing Libraries
+# Installing Libraries
 
 To utilise the sensors on the Pytrack and Pysense, Pycom has written libraries to make reading to/from the various sensors accessible via an API. These libraries reside at the Pycom GitHub repository and the latest versions can be found under the releases page.
 

@@ -1,4 +1,4 @@
-# 5.3.6 cmath
+# cmath
 
 The `cmath` module provides some basic mathematical functions for working with complex numbers. Floating point support required for this module.
 

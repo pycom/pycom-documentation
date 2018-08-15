@@ -1,4 +1,4 @@
-# 6.1.1 WiPy 2.0
+# WiPy 2.0
 
 ![](../../.gitbook/assets/wipy2%20%281%29.png)
 

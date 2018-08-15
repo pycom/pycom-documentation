@@ -1,4 +1,4 @@
-# 3.3.5 Sleep
+# Sleep
 
 This chapter describes the various methods for sleep and wakeup which are embedded in Pytrack and Pysense libraries. Both Pytrack and Pysense have the same methods, although the appropriate class, either `pytrack` or `pysense`, has to be instantiated.
 

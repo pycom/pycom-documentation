@@ -1,4 +1,4 @@
-# 4.2.5 MQTT
+# MQTT
 
 MQTT is a lightweight messaging protocol that is ideal for sending small packets of data to and from IoT devices via WiFi.
 

@@ -1,4 +1,4 @@
-# 4.5.1 CAT-M1
+# CAT-M1
 
 {% hint style="info" %}
 Please ensure you have the latest Sequans modem firmware for the best network compatibility. Instructions for this can be found [here](firmware.md).

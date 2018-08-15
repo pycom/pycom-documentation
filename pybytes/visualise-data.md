@@ -1,4 +1,4 @@
-# 7.4 Visualise data from your device
+# Visualise data from your device
 
 In this section, we will explain to you how to create widgets for data visualisation and set up your device's dashboard on Pybytes.
 

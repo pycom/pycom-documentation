@@ -1,4 +1,4 @@
-# 5.3 MicroPython Modules
+# MicroPython Modules
 
 The following list contains the standard Python libraries, MicroPython-specific libraries and Pycom specific modules that are available on the Pycom devices.
 

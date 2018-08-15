@@ -1,4 +1,4 @@
-# 4.2.2 WLAN
+# WLAN
 
 The WLAN is a system feature of all Pycom devices, therefore it is enabled by default.
 

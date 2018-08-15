@@ -1,4 +1,4 @@
-# 7.1 Introduction
+# Introduction
 
 ![](../.gitbook/assets/pybyteslogo.png)
 

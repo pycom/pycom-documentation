@@ -1,4 +1,4 @@
-# 3.3.2 Pysense
+# Pysense
 
 This chapter describes the various libraries which are designed for the Pysense board. This includes details about the various methods and classes available for each of the Pysense’s sensors.
 
