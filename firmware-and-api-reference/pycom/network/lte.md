@@ -19,7 +19,7 @@ The Sequans modem used on Pycom's cellular enabled modules can only work in one 
 
 The AT commands for the Sequans Monarch modem on the GPy/FiPy are available in a PDF file.
 
-{% file src="../../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential.pdf" %}
+{% file src="../../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential.pdf" caption="AT Commands for Sequans" %}
 
 ## Constructors
 
