@@ -42,15 +42,26 @@ Returns CPU frequency in hertz.
 
 Gates the clock to the CPU, useful to reduce power consumption at any time during short or long periods. Peripherals continue working and execution resumes as soon as any interrupt is triggered \(on many ports this includes system timer interrupt occurring at regular intervals on the order of millisecond\).
 
+#### machine.sleep\(\[time\_ms\], resume\_wifi\_ble\)
+
+Sets the device in to light sleep mode , where in this mode digital peripherals, most of the RAM, and CPUs are clock-gated, and supply voltage is reduced. Upon exit from light sleep, peripherals and CPUs resume operation, their internal state is preserved.
+
+* `time_ms` is the time in milliseconds that the device should wakeup after, if no time is given the device will sleep until the next reset cycle unless another wakeup source is configured.
+* `resume_wifi_ble` is a boolean value that enables or disable restoring after wakeup any WiFi or BLE connection that was interrupted by light sleep.
+* `True` Enable WiFi/BLE connections restoration
+* `False` Disable Wifi/BLE connections restoration, default option is Disabled.
+
+_Note: in light sleep mode LoRa/Lte modems are stopped and have to be re-initialized after wakeup._
+
 #### machine.deepsleep\(\[time\_ms\]\)
 
 Stops the CPU and all peripherals, including the networking interfaces \(except for LTE\). Execution is resumed from the main script, just as with a reset. If a value in milliseconds is given then the device will wake up after that period of time, otherwise it will remain in deep sleep until the reset button is pressed.
 
 The products with LTE connectivity \(FiPy, GPy, G01\), require the LTE radio to be disabled separately via the LTE class before entering deepsleep. This is required due to the LTE radio being powered independently and allowing use cases which require the system to be taken out from deepsleep by an event from the LTE network \(data or SMS received for instance\).
 
-#### machine.pin\_deepsleep\_wakeup\(pins, mode, enable\_pull\)
+#### machine.pin\_sleep\_wakeup\(pins, mode, enable\_pull\)
 
-Configure pins to wake up from deep sleep mode. The pins which have this capability are: `P2, P3, P4, P6, P8 to P10 and P13 to P23`.
+Configure pins to wake up from deep/light sleep mode. The pins which have this capability are: `P2, P3, P4, P6, P8 to P10 and P13 to P23`.
 
 The arguments are:
 

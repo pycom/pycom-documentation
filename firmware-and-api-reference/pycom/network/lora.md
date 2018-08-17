@@ -371,6 +371,34 @@ Remove the LoRaWAN state \(joined status, network keys, packet counters, etc\) f
 lora.nvram_erase()
 ```
 
+### lora.nvram\_erase\(\)
+
+Remove the LoRaWAN state \(joined status, network keys, packet counters, etc\) from non-volatile memory.
+
+```python
+lora.nvram_erase()
+```
+
+### lora.mesh\(\)
+
+Enable the Mesh network. Only after Mesh enabling the `lora.cli()` and `socket` can be used.
+
+```python
+lora.mesh()
+```
+
+### lora.cli\(\)
+
+Send OpenThread CLI commands, the list is [here](https://github.com/openthread/openthread/blob/master/src/cli/README.md). The output is multiline string, having as line-endings the `\r\n`.
+
+```bash
+>>> print(lora.cli("ipaddr"))
+fdde:ad00:beef:0:0:ff:fe00:fc00
+fdde:ad00:beef:0:0:ff:fe00:e800
+fdde:ad00:beef:0:e1f0:783c:1e8f:c763
+fe80:0:0:0:2c97:cb65:3219:c86
+```
+
 ## Constants
 
 * LoRa stack mode: `LoRa.LORA`, `LoRa.LORAWAN`
@@ -382,6 +410,10 @@ lora.nvram_erase()
 * LoRaWAN device class: `LoRa.CLASS_A`, `LoRa.CLASS_C`
 * LoRaWAN regions: `LoRa.AS923`, `LoRa.AU915`, `LoRa.EU868`, `LoRa.US915`
 
+## Exceptions
+
+`LoRa.timeout`
+
 ## Working with LoRa and LoRaWAN Sockets
 
 LoRa sockets are created in the following way:
@@ -392,6 +424,12 @@ s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 ```
 
 And they must be created after initialising the LoRa network card.
+
+LoRa-Mesh socket is created, if the Mesh was enabled before \(`lora.mesh()` was called\).
+
+{% hint style="info" %}
+The LoRa-Mesh socket supports only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
+{% endhint %}
 
 LoRa sockets support the following standard methods from the socket module:
 
@@ -427,6 +465,16 @@ or
 
 ```python
 s.send('Hello')
+```
+
+### socket.sendto\(bytes,\(ip, port\)\)
+
+This is supported only by the LoRa Mesh socket.
+
+Usage:
+
+```python
+s.sendto('Hello', ('fdde:ad00:beef:0:0:ff:fe00:e800', 1234))
 ```
 
 ### socket.recv\(bufsize\)

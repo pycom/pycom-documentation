@@ -151,3 +151,13 @@ with open(APPIMG, "rb") as f:
 
 Instead of reading the data to be written from a file, it can obviously also be received from a server using any suitable protocol, without the need to store it in the devices file system.
 
+### pycom.bootmgr\(boot\_partition=pycom.FACTORY, fs\_type=FAT, safeboot=False, reset=False\)
+
+* `boot_partition` This is to set the partition to boot from , this could be set to either `pycom.FACTORY` or `pycom.OTA_0`
+* `fs_type` This is to set the filesystem to use for the flash memory \(`/flash`\). This could be set to `pycom.FAT` for FAT16 or `pycom.LittleFS` for LittleFS filesystem.
+
+  _Note: When the firmware is built with option_ `FS_USE_LITTLEFS` _the file system for_ `/flash` _is forced to be LittleFS._
+
+* `safeboot` Enable or Disable safemoot mode.
+* `reset` Set `True` to reset target after updating the `bootmgr` options , `False` for not resetting.
+
