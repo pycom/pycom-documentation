@@ -241,6 +241,10 @@ s.recv(32)
 
 To communicate between two Sigfox capable devices, it may be used in FSK mode. Two devices are required to be set to the same frequency, both using FSK.
 
+{% hint style="info" %}
+`Sigfox.FSK` mode is not supported on LoPy 4 and FiPy.
+{% endhint %}
+
 **Device 1**:
 
 ```python
