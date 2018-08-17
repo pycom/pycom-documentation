@@ -58,6 +58,10 @@ sigfox = Sigfox(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1)
 sigfox = Sigfox(mode=Sigfox.FSK, frequency=912000000)
 ```
 
+{% hint style="info" %}
+`Sigfox.FSK` mode is not supported on LoPy 4 and FiPy.
+{% endhint %}
+
 ## Methods
 
 ### sigfox.init\(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1, \* , frequency=None\)
@@ -66,9 +70,9 @@ Set the Sigfox radio configuration.
 
 The arguments are:
 
-* `mode` can be either `Sigfox.SIGFOX` or `Sigfox.FSK`. `Sigfox.SIGFOX` uses the Sigfox modulation and protocol while `Sigfox.FSK` allows to create point to point communication between 2 Devices using FSK modulation.
+* `mode` can be either `Sigfox.SIGFOX` or `Sigfox.FSK`. `Sigfox.SIGFOX` uses the Sigfox modulation and protocol while `Sigfox.FSK` allows to create point to point communication between 2 Devices using FSK modulation. _Note: `Sigfox.FSK` mode is not supported on LoPy 4 and FiPy._
 * `rcz` takes the following values: `Sigfox.RCZ1`, `Sigfox.RCZ2`, `Sigfox.RCZ3`, `Sigfox.RCZ4`. The `rcz` argument is only required if the mode is `Sigfox.SIGFOX`.
-* `frequency` sets the frequency value in `FSK` mode. Can take values between 863 and 928 MHz.
+* `frequency` sets the frequency value in `FSK` mode. Can take values between 863 and 928 MHz. 
 
 {% hint style="info" %}
 The SiPy comes in 2 different hardware flavours: a +14dBm Tx power version which can only work with `RCZ1` and `RCZ3` and a +22dBm version which works exclusively on `RCZ2` and `RCZ4`.
