@@ -15,7 +15,7 @@ See [network.server](../../../firmware-and-api-reference/pycom/network/server.md
 
 ## All platforms
 
-By far the easiest way to access the Telnet REPL is via the our [Pymakr plug-in](../../../pymakr/installation/) for Atom and Visual Studio Code. This adds a pane to the bottom of the editors that allows you to directly access the REPL and any output from the device. Detailed instructions on how to setup Pymakr can be found [here](../../../pymakr/installation/).
+By far the easiest way to access the Telnet REPL is via the our [Pymakr plug-in](../../../pymakr-plugin/installation/) for Atom and Visual Studio Code. This adds a pane to the bottom of the editors that allows you to directly access the REPL and any output from the device. Detailed instructions on how to setup Pymakr can be found [here](../../../pymakr-plugin/installation/).
 
 ## macOS and Linux
 

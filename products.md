@@ -1,18 +1,20 @@
 # Pycom Products
 
+## Pycom Products
+
 Below you will find tables of all Pycom products. These tables illustrate the functionality of our various products, their compatibility with each other, as well as what accessories are required to utilise certain functionality.
 
 ## Development Boards
 
 | Module | WiFi | Bluetooth | LoRa | Sigfox | LTE CAT-M1NB-IoT |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| [WiPy 3.0](product-info/development/wipy3.md) | ✔ | ✔ |  |  |  |
+| [ WiPy 3.0](product-info/development/wipy3.md) | ✔ | ✔ |  |  |  |
 | [SiPy](product-info/development/sipy.md) | ✔ | ✔ |  | ✔ |  |
 | [GPy](product-info/development/gpy.md) | ✔ | ✔ |  |  | ✔ |
 | [LoPy](product-info/development/lopy.md) | ✔ | ✔ | ✔ |  |  |
 | [LoPy4](product-info/development/lopy4.md) | ✔ | ✔ | ✔ | ✔ |  |
 | [FiPy](product-info/development/fipy.md) | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Antennas  | [External WiFi/BT Antenna Kit](https://pycom.io/product/external-wifi-antenna/) | [External WiFi/BT Antenna Kit](https://pycom.io/product/external-wifi-antenna/) | [LoRa & Sigfox Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [LoRa & Sigfox Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [LTE-M Antenna Kit](https://pycom.io/product/lte-m-antenna-kit/) |
+| Antennas | [External WiFi/BT Antenna Kit](https://pycom.io/product/external-wifi-antenna/) | [External WiFi/BT Antenna Kit](https://pycom.io/product/external-wifi-antenna/) | [LoRa & Sigfox Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [LoRa & Sigfox Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [LTE-M Antenna Kit](https://pycom.io/product/lte-m-antenna-kit/) |
 
 ## Accessories
 
@@ -34,6 +36,4 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 | [L01](product-info/oem/l01.md) | ✔ | ✔ |
 | [L04](product-info/oem/l04.md) |  | ✔ |
 | [G01](product-info/oem/g01.md) |  | ✔ |
-
-
 

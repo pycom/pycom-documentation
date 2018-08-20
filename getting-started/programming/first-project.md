@@ -60,7 +60,7 @@ RGB-Blink
 
 For this example, you will just need to create a `main.py` file.
 
-Now that the project structure is setup, you may wish to configure project specific settings for Pymakr e.g. Which serial port to use. On Atom you need to click the `^` button on the Pymakr pane, then click `Project Settings`. On Visual Studio Code you need to click the `All commands` button on the bottom of the windows, then click `Pymakr > Project Settings`. This creates a file called `pymakr.conf` inside your project and populates it with default settings copied over from your global settings. A detailed explanation of these settings can be found [here](../../pymakr/settings.md).
+Now that the project structure is setup, you may wish to configure project specific settings for Pymakr e.g. Which serial port to use. On Atom you need to click the `^` button on the Pymakr pane, then click `Project Settings`. On Visual Studio Code you need to click the `All commands` button on the bottom of the windows, then click `Pymakr > Project Settings`. This creates a file called `pymakr.conf` inside your project and populates it with default settings copied over from your global settings. A detailed explanation of these settings can be found [here](../../pymakr-plugin/settings.md).
 
 ## Controlling the on-board LED
 

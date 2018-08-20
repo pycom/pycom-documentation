@@ -38,3 +38,7 @@ The specsheet of the Expansion Board is available as a PDF File.
 
   a Pycom module, the module will enter safe boot.
 
+## Troubleshooting
+
+* If PIC stays in bootloader mode, the [`dfu-util` update](../../pytrack-pysense-pyscan/installation/firmware.md) should be performed
+

@@ -29,7 +29,7 @@ You can also download _Pybytes library_ at the device's settings page:
 ### Step 2. Flash your device with Pymakr
 
 {% hint style="info" %}
-In case you haven't installed Pymakr plugin, follow [these instructions](../../pymakr/installation/atom.md).
+In case you haven't installed Pymakr plugin, follow [these instructions](../../pymakr-plugin/installation/atom.md).
 {% endhint %}
 
 1. Connect your device to your computer with USB cable.

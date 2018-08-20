@@ -35,11 +35,11 @@
 
 ## Pymakr Plugin
 
-* [Installation](pymakr/installation/README.md)
-  * [Atom](pymakr/installation/atom.md)
-  * [Visual Studio Code](pymakr/installation/vscode.md)
-* [Tools/Features](pymakr/features.md)
-* [Settings](pymakr/settings.md)
+* [Installation](pymakr-plugin/installation/README.md)
+  * [Atom](pymakr-plugin/installation/atom.md)
+  * [Visual Studio Code](pymakr-plugin/installation/vscode.md)
+* [Tools/Features](pymakr-plugin/features.md)
+* [Settings](pymakr-plugin/settings.md)
 
 ## Pytrack, Pysense, Pyscan
 
@@ -204,5 +204,5 @@
 ## Have a question?
 
 * [Ask on the Forum](https://forum.pycom.io)
-* [License](license.md)
+* [License](have-a-question/license.md)
 

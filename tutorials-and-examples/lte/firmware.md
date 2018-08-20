@@ -20,7 +20,7 @@ Before proceeding you will need:
 If your module is running the factory LTE chip firmware, you **MUST** first perform an update to the latest CAT-M1 firmware before trying to upgrade to the NB-IoT firmware. Skipping this step will cause your radio to become unresponsive and it will require access to the test points in order to re-flash the firmware.
 {% endhint %}
 
-Firstly, you will need to download the required library files from [here](https://github.com/pycom/pycom-libraries/tree/master/lib/sqnsupgrade). You will need to place these in a directory called "lib" just like any other libraries. This can be done using either [FTP](../../getting-started/programming/ftp.md) or [Pymakr](../../pymakr/installation/)
+Firstly, you will need to download the required library files from [here](https://github.com/pycom/pycom-libraries/tree/master/lib/sqnsupgrade). You will need to place these in a directory called "lib" just like any other libraries. This can be done using either [FTP](../../getting-started/programming/ftp.md) or [Pymakr](../../pymakr-plugin/installation/)
 
 Next you need to download the firmware file from [here](https://software.pycom.io/downloads/sequans.html). You will need to place the firmware on a FAT32 formatted microSD card, then insert the SD card into a Expansion Board, Pytrack, Pysense or Pyscan. Power-up the system and connect to the interactive REPL and run the following code:
 
