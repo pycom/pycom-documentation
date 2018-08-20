@@ -1,6 +1,6 @@
 # Pysense
 
-![](../../.gitbook/assets/pysense.png)
+![](../../.gitbook/assets/pysense%20%281%29.png)
 
 ## Pinout
 
@@ -8,7 +8,7 @@ The pinout of the Pysense is available as a PDF File
 
 {% file src="../../.gitbook/assets/pysense-pinout.pdf" caption="Pysense Pinout" %}
 
-![](../../.gitbook/assets/pysense-pinout%20%281%29.png)
+![](../../.gitbook/assets/pysense-pinout-1.png)
 
 ## Battery Charger
 

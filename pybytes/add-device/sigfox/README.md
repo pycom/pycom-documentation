@@ -10,7 +10,7 @@ Once you have you account setup and are logged in Sigfox backend, you need to cr
 
 Click on GROUP → &lt;your\_company\_name&gt; → API ACCESS → New
 
-![](../../../.gitbook/assets/apiaccess.png)
+![](../../../.gitbook/assets/apiaccess%20%281%29.png)
 
 In the form chose arbitrary _name_, select Profiles `DEVICE MANAGER [R]` and `DEVICE MANAGER [W]`. Then click on Ok.
 
@@ -37,6 +37,4 @@ Read more how to use Sigfox with [devKit contract](devkit.md).
 Read more how to use Sigfox with [Custom contract](devkit.md).
 
 {% page-ref page="custom.md" %}
-
-
 

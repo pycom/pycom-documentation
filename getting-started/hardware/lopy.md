@@ -2,25 +2,19 @@
 
 ## Basic connection
 
-{% tabs %}
-{% tab title="Exp Board 2.0" %}
 * Look for the reset button on the module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the expansion board.
 * Insert the LoPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
 ![](../../.gitbook/assets/expansion_board_2_lopy.png)
-{% endtab %}
 
-{% tab title="Exp Board 3.0" %}
 * Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrack-pysense-pyscan/installation/firmware.md).
 * Look for the reset button on the module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the expansion board.
 * Insert the LoPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
 ![](../../.gitbook/assets/expansion_board_3_lopy.png)
-{% endtab %}
 
-{% tab title="Pytrack/Pysense/Pyscan" %}
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrack-pysense-pyscan/installation/firmware.md).
 * Look for the reset button on the LoPy module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
@@ -29,9 +23,7 @@
 ![](../../.gitbook/assets/pysense_lopy.png)
 
 ![](../../.gitbook/assets/pytrack_lopy.png)
-{% endtab %}
 
-{% tab title="USB UART Adapter" %}
 * Firstly you will need to connect power to your LoPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
 {% hint style="danger" %}
@@ -47,9 +39,7 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 * In order to put the LoPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 
 ![](../../.gitbook/assets/uart_lopy.png)
-{% endtab %}
 
-{% tab title="WiFi" %}
 **Note:** This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
 
 * In order to access the LoPy via WiFi you only need to provide `3.5v` - `5.5v` on the `Vin` pin of the LoPy:
@@ -62,8 +52,6 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 * Once connected to this network you will be able to access the telnet and FTP servers running on the LoPy. For both of these the login details are:
   * username: `micro`
   * password: `python`
-{% endtab %}
-{% endtabs %}
 
 ## Antennas
 
@@ -95,6 +83,4 @@ All Pycom modules, including the LoPy, come with a on-board WiFi antenna as well
 ## Deep Sleep current issue
 
 The LoPy, SiPy, and WiPy 2.0 experience an issue where the modules maintain a high current consumption in deep sleep mode. This issue has been resolved in all newer products. The cause for this issue is the DC to DC switch mode converter remains in a high performance mode even when the device is in deep sleep. The flash memory chip also does not power down. A more detailed explanation can be found [here.](https://forum.pycom.io/topic/1022/root-causes-of-high-deep-sleep-current)
-
-
 

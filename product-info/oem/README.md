@@ -12,5 +12,3 @@ This section contains all of the datasheets for the Pycom OEM Devices. This incl
 
 {% page-ref page="universal\_reference.md" %}
 
-
-

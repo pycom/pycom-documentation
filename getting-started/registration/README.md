@@ -6,9 +6,9 @@ Some of our devices require registration before you can utilise specific feature
 
 [![](../../.gitbook/assets/lorawan_logo.png)](lora/)
 
- [![](../../.gitbook/assets/image.png)](cellular.md)
+[![](../../.gitbook/assets/image.png)](cellular.md)
 
-[![](../../.gitbook/assets/image%20%281%29.png)](cellular.md)
+[![](../../.gitbook/assets/image-1.png)](cellular.md)
 
 {% hint style="info" %}
 **Not all Pycom devices require activation**; most features work immediately out of the box!

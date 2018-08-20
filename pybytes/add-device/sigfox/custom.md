@@ -29,7 +29,7 @@ Detailed steps which are same for all devices are [**described here**](../quick.
 
 After your device was flashed with Pybytes firmware in automatically start adding itself to Sigfox backend.
 
-![](../../../.gitbook/assets/sigfoxcustomcontractstatus.png)
+![](../../../.gitbook/assets/sigfoxcustomcontractstatus%20%281%29.png)
 
 ## Troubleshooting
 

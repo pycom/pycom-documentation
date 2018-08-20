@@ -1,7 +1,5 @@
 # WiPy 3.0
 
-## 
-
 ![](../../.gitbook/assets/wipy3.png)
 
 **Store**: [Buy Here](http://www.pycom.io/wipy-3)

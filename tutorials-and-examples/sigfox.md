@@ -12,17 +12,15 @@ You can use the `Disengage sequence number` button on the device information or 
 
 Issues with the sequence number can occur when a lot of messages are sent when outside of Sigfox coverage for instance.
 
-Firstly you will need to log into the [Sigfox Backend](https://backend.sigfox.com), navigate to device, and click on the Sigfox ID of the affected SiPy. 
+Firstly you will need to log into the [Sigfox Backend](https://backend.sigfox.com), navigate to device, and click on the Sigfox ID of the affected SiPy.
 
-![](../.gitbook/assets/seq_dis_1%20%281%29.png)
+![](../.gitbook/assets/seq_dis_1-1.png)
 
 You should now see the Information page with an entry `Device Type:` followed by a link. Please follow the link
 
-![screenshot of sigfox ID](../.gitbook/assets/seq_dis_2.png)
+![screenshot of sigfox ID](../.gitbook/assets/seq_dis_2%20%281%29.png)
 
 Finally, on this page click on `Disengage sequence number` button in the upper right corner.
 
 ![screenshot of sigfox ID](../.gitbook/assets/seq_dis_3.png)
-
-
 

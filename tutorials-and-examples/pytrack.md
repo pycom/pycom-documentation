@@ -4,5 +4,3 @@ Both the Pysense and Pytrack use the same accelerometer. Please see the [Pysense
 
 {% page-ref page="pysense.md" %}
 
-
-

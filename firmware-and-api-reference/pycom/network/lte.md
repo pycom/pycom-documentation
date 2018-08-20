@@ -23,7 +23,7 @@ The AT commands for the Sequans Monarch modem on the GPy/FiPy are available in a
 
 ## Constructors
 
-#### class network.LTE\(id=0, ...\)
+### class network.LTE\(id=0, ...\)
 
 Create and configure a LTE object. See init for params of configuration.
 
@@ -34,27 +34,27 @@ lte = LTE()
 
 ## Methods
 
-#### lte.init\(\*, carrier=None\)
+### lte.init\(\*, carrier=None\)
 
 This method is used to set up the LTE subsystem. After a `deinit()` this method can take several seconds to return waiting for the LTE modem to start-up. Optionally specify a carrier name. The available options are: `verizon, at&t, standard`. `standard` is generic for any carrier, and it's also the option used when no arguments are given.
 
-#### lte.deinit\(\)
+### lte.deinit\(\)
 
 Disables LTE modem completely. This reduces the power consumption to the minimum. Call this before entering deepsleep.
 
-#### lte.attach\(\*, band=None\)
+### lte.attach\(\*, band=None\)
 
 Enable radio functionality and attach to the LTE Cat M1 network authorised by the inserted SIM card. Optionally specify the band to scan for networks. If no band \(or `None`\) is specified, all 6 bands will be scanned. The possible values for the band are: `3, 4, 12, 13, 20 and 28`.
 
-#### lte.isattached\(\)
+### lte.isattached\(\)
 
 Returns `True` if the cellular mode is attached to the network. `False` otherwise.
 
-#### lte.dettach\(\)
+### lte.dettach\(\)
 
 Detach the modem from the LTE Cat M1 and disable the radio functionality.
 
-#### lte.connect\(\*, cid=1\)
+### lte.connect\(\*, cid=1\)
 
 Start a data session and obtain and IP address. Optionally specify a CID \(Connection ID\) for the data session. The arguments are:
 
@@ -81,15 +81,15 @@ while not lte.isconnected():
 # Now use sockets as usual...
 ```
 
-#### lte.isconnected\(\)
+### lte.isconnected\(\)
 
 Returns `True` if there is an active LTE data session and IP address has been obtained. `False` otherwise.
 
-#### lte.disconnect\(\)
+### lte.disconnect\(\)
 
 End the data session with the network.
 
-#### lte.send\_at\_cmd\(cmd\)
+### lte.send\_at\_cmd\(cmd\)
 
 Send an AT command directly to the modem. Returns the raw response from the modem as a string object. **IMPORTANT:** If a data session is active \(i.e. the modem is _connected_\), sending the AT commands requires to pause and then resume the data session. This is all done automatically, but makes the whole request take around 2.5 seconds.
 
@@ -111,15 +111,15 @@ send_at_cmd_pretty('AT!="showphy"')     # get the PHY status
 send_at_cmd_pretty('AT!="fsm"')         # get the System FSM
 ```
 
-#### lte.imei\(\)
+### lte.imei\(\)
 
 Returns a string object with the IMEI number of the LTE modem.
 
-#### lte.iccid\(\)
+### lte.iccid\(\)
 
 Returns a string object with the ICCID number of the SIM card.
 
-#### lte.reset\(\)
+### lte.reset\(\)
 
 Perform a hardware reset on the cellular modem. This function can take up to 5 seconds to return as it waits for the modem to shutdown and reboot.
 

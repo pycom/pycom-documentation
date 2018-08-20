@@ -14,5 +14,3 @@ This section contains all of the datasheets for the Pycom Expansion Boards and S
 
 {% page-ref page="deepsleep/" %}
 
-
-

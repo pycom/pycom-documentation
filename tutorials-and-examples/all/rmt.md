@@ -9,7 +9,7 @@ The RMT has 7 channels, of which 5 are available and can be mapped to any GPIO p
 | Channel | Resolution | Maximum Pulse Width |
 | :--- | :--- | :--- |
 | 0 | Used by on-board LED |  |
-| 1  | Used by `pycom.pulses_get()` |  |
+| 1 | Used by `pycom.pulses_get()` |  |
 | 2 | 100nS | 3.2768 ms |
 | 3 | 100nS | 3.2768 ms |
 | 4 | 1000nS | 32.768 ms |
@@ -35,7 +35,7 @@ duration = 10000
 rmt.pulses_send(duration, data)
 ```
 
-![Waveform of example 1](../../.gitbook/assets/rmt_ex_1.png)
+![Waveform of example 1](../../.gitbook/assets/rmt_ex_1%20%281%29.png)
 
 In this example we define the signal by a tuple of durations and what state the signal starts in.
 
@@ -70,7 +70,7 @@ duration = (400,200,100,300,200,400)
 rmt.pulses_send(duration, data)
 ```
 
-![Waveform of example 3](../../.gitbook/assets/rmt_ex_3.png)
+![Waveform of example 3](../../.gitbook/assets/rmt_ex_3%20%281%29.png)
 
 The following example creates an RMT object on channel 4 and configures it for transmission with carrier modulation.
 

@@ -2,7 +2,7 @@
 
 Our boards work with [MicroPython](https://micropython.org/); a Python 3.5 implementation that is optimised to run on micro controllers. This allows for much faster and more simple development process than using C.
 
-![](../../.gitbook/assets/micropython.jpg)
+![](../../.gitbook/assets/micropython%20%281%29.jpg)
 
 ## Booting into MicroPython
 
@@ -10,7 +10,7 @@ When booting, two files are executed automatically: first `boot.py` and then `ma
 
 The folder structure in `/flash` looks like the picture below. The files can be managed either using FTP or using the Pymakr Plugin.
 
-![](../../.gitbook/assets/mp-filestructure.png)
+![](../../.gitbook/assets/mp-filestructure%20%281%29.png)
 
 ## Tips & Tricks
 

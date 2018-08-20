@@ -1,6 +1,6 @@
 # Pyscan
 
-![](../../.gitbook/assets/pyscan-new.png)
+![](../../.gitbook/assets/pyscan-new%20%281%29.png)
 
 ## Pyscan Libraries
 
@@ -31,7 +31,7 @@ The pinout of the Pyscan is available as a PDF File
 
 {% file src="../../.gitbook/assets/pyscan-pinout.pdf" caption="Pyscan Pinout" %}
 
-![](../../.gitbook/assets/pyscan-pinout%20%281%29.png)
+![](../../.gitbook/assets/pyscan-pinout-1.png)
 
 ## Battery Charger
 

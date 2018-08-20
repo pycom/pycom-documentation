@@ -1,6 +1,6 @@
 # FiPy
 
-![](../../.gitbook/assets/fipy%20%281%29.png)
+![](../../.gitbook/assets/fipy-1.png)
 
 **Store**: [Buy Here](http://www.pycom.io/fipy)
 
@@ -22,7 +22,7 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 
 The datasheet of the FiPy is available as a PDF File.
 
-{% file src="../../.gitbook/assets/fipy-specsheet \(1\).pdf" caption="FiPy Datasheet" %}
+{% file src="../../.gitbook/assets/fipy-specsheet-1.pdf" caption="FiPy Datasheet" %}
 
 The drawing of the LTE-M antenna is available as a PDF File.
 
@@ -44,7 +44,7 @@ The `Vin` pin on the FiPy can be supplied with a voltage ranging from `3.5v` to 
 
 The AT commands for the Sequans Monarch modem on the FiPy are available in a PDF file.
 
-{% file src="../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential \(2\).pdf" caption="AT Commands for Sequans" %}
+{% file src="../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential-2.pdf" caption="AT Commands for Sequans" %}
 
 ## Tutorials
 

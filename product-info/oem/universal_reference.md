@@ -1,6 +1,6 @@
 # Universal OEM Baseboard Reference
 
-![](../../.gitbook/assets/universal_reference.png)
+![](../../.gitbook/assets/universal_reference%20%281%29.png)
 
 The universal OEM reference board is a reference design suitable W01, L01, L04 and G01 OEM modules, making it possible to have a single PCB design that can accommodate all our OEM modules.
 
@@ -29,7 +29,7 @@ The layout of the OEM baseboard reference is available as a PDF File
 
 {% file src="../../.gitbook/assets/oem-universal-layout.pdf" caption="OEM Layout" %}
 
-![](../../.gitbook/assets/oem-universal-layout%20%281%29.png)
+![](../../.gitbook/assets/oem-universal-layout-1.png)
 
 ## Schematic
 

@@ -46,7 +46,7 @@ Please ensure that there is an antenna connected to your device before sending/r
 
 ## Constructors
 
-#### class network.Sigfox\(id=0, ...\)
+### class network.Sigfox\(id=0, ...\)
 
 Create and configure a Sigfox object. See init for params of configuration. Examples:
 
@@ -64,13 +64,13 @@ sigfox = Sigfox(mode=Sigfox.FSK, frequency=912000000)
 
 ## Methods
 
-#### sigfox.init\(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1, \* , frequency=None\)
+### sigfox.init\(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1, \* , frequency=None\)
 
 Set the Sigfox radio configuration.
 
 The arguments are:
 
-* `mode` can be either `Sigfox.SIGFOX` or `Sigfox.FSK`. `Sigfox.SIGFOX` uses the Sigfox modulation and protocol while `Sigfox.FSK` allows to create point to point communication between 2 Devices using FSK modulation. _Note: `Sigfox.FSK` mode is not supported on LoPy 4 and FiPy._
+* `mode` can be either `Sigfox.SIGFOX` or `Sigfox.FSK`. `Sigfox.SIGFOX` uses the Sigfox modulation and protocol while `Sigfox.FSK` allows to create point to point communication between 2 Devices using FSK modulation. _Note:_ `Sigfox.FSK` _mode is not supported on LoPy 4 and FiPy._
 * `rcz` takes the following values: `Sigfox.RCZ1`, `Sigfox.RCZ2`, `Sigfox.RCZ3`, `Sigfox.RCZ4`. The `rcz` argument is only required if the mode is `Sigfox.SIGFOX`.
 * `frequency` sets the frequency value in `FSK` mode. Can take values between 863 and 928 MHz. 
 
@@ -78,19 +78,19 @@ The arguments are:
 The SiPy comes in 2 different hardware flavours: a +14dBm Tx power version which can only work with `RCZ1` and `RCZ3` and a +22dBm version which works exclusively on `RCZ2` and `RCZ4`.
 {% endhint %}
 
-#### sigfox.mac\(\)
+### sigfox.mac\(\)
 
 Returns a byte object with the 8-Byte MAC address of the Sigfox radio.
 
-#### sigfox.id\(\)
+### sigfox.id\(\)
 
 Returns a byte object with the 4-Byte bytes object with the Sigfox ID.
 
-#### sigfox.rssi\(\)
+### sigfox.rssi\(\)
 
 Returns a signed integer with indicating the signal strength value of the last received packet.
 
-#### sigfox.pac\(\)
+### sigfox.pac\(\)
 
 Returns a byte object with the 8-Byte bytes object with the Sigfox PAC.
 
@@ -102,11 +102,11 @@ print(ubinascii.hexlify(sigfox.mac()))
 ```
 {% endhint %}
 
-#### sigfox.frequencies\(\)
+### sigfox.frequencies\(\)
 
 Returns a tuple of the form: `(uplink_frequency_hz, downlink_frequency_hz)`
 
-#### sigfox.public\_key\(\[public\]\)
+### sigfox.public\_key\(\[public\]\)
 
 Sets or gets the public key flag. When called passing a `True` value the Sigfox public key will be used to encrypt the packets. Calling it without arguments returns the state of the flag.
 
@@ -142,11 +142,11 @@ And they must be created after initialising the Sigfox network card.
 
 Sigfox sockets support the following standard methods from the `socket` module:
 
-#### socket.close\(\)
+### socket.close\(\)
 
 Use it to close an existing socket.
 
-#### socket.send\(bytes\)
+### socket.send\(bytes\)
 
 In Sigfox mode the maximum data size is 12 bytes. In FSK the maximum is 64.
 
@@ -158,7 +158,7 @@ s.send(bytes([1, 2, 3]))
 s.send('Hello')
 ```
 
-#### socket.recv\(bufsize\)
+### socket.recv\(bufsize\)
 
 This method can be used to receive a Sigfox downlink or FSK message.
 
@@ -167,7 +167,7 @@ This method can be used to receive a Sigfox downlink or FSK message.
 s.recv(64)
 ```
 
-#### socket.setsockopt\(level, optname, value\)
+### socket.setsockopt\(level, optname, value\)
 
 Set the value of the given socket option. The needed symbolic constants are defined in the socket module \(`SO_*` etc.\). In the case of Sigfox the values are always an integer. Examples:
 

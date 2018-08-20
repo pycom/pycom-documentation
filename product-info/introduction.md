@@ -44,5 +44,3 @@ The follow pages contain all information relating to each product, for examples:
 
 {% page-ref page="boards/deepsleep/" %}
 
-
-

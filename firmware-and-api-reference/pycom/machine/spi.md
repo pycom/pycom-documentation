@@ -41,13 +41,13 @@ spi.write_readinto(bytes([0x01, 0x02, 0x03, 0x04, 0x05]), rbuf) # send a receive
 
 ## Constructors
 
-#### class machine.SPI\(id, ...\)
+### class machine.SPI\(id, ...\)
 
 Construct an SPI object on the given bus. `id` can be only 0. With no additional parameters, the SPI object is created but not initialised \(it has the settings from the last initialisation of the bus, if any\). If extra arguments are given, the bus is initialised. See init for parameters of initialisation.
 
 ## Methods
 
-#### spi.init\(mode, baudrate=1000000, \* , polarity=0, phase=0, bits=8, firstbit=SPI.MSB, pins=\(CLK, MOSI, MISO\)\)
+### spi.init\(mode, baudrate=1000000, \* , polarity=0, phase=0, bits=8, firstbit=SPI.MSB, pins=\(CLK, MOSI, MISO\)\)
 
 Initialise the SPI bus with the given parameters:
 
@@ -59,23 +59,23 @@ Initialise the SPI bus with the given parameters:
 * `firstbit` can be SPI.MSB or SPI.LSB.
 * `pins` is an optional tuple with the pins to assign to the SPI bus. If the pins argument is not given the default pins will be selected \(`P10` as CLK,`P11` as MOSI and `P14` as MISO\). If pins is passed as None then no pin assignment will be made.
 
-#### spi.deinit\(\)
+### spi.deinit\(\)
 
 Turn off the SPI bus.
 
-#### spi.write\(buf\)
+### spi.write\(buf\)
 
 Write the data contained in `buf`. Returns the number of bytes written.
 
-#### spi.read\(nbytes, \* , write=0x00\)
+### spi.read\(nbytes, \* , write=0x00\)
 
 Read the `nbytes` while writing the data specified by `write`. Returns the bytes read.
 
-#### spi.readinto\(buf, \* , write=0x00\)
+### spi.readinto\(buf, \* , write=0x00\)
 
 Read into the buffer specified by `buf` while writing the data specified by `write`. Return the number of bytes read.
 
-#### spi.write\_readinto\(write\_buf, read\_buf\)
+### spi.write\_readinto\(write\_buf, read\_buf\)
 
 Write from `write_buf` and read into `read_buf`. Both buffers must have the same length. Returns the number of bytes written
 

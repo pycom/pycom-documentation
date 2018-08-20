@@ -6,23 +6,23 @@ Please follow these steps to install the Pymakr Plugin:
 
 1. Ensure that you have Atom installed and open.
 
-![](../../.gitbook/assets/atom_setup_step_1%20%281%29.png)
+![](../../.gitbook/assets/atom_setup_step_1-1.png)
 
-2. Navigate to the Install page, via `Atom > Preferences > Install`
+1. Navigate to the Install page, via `Atom > Preferences > Install`
 
-![](../../.gitbook/assets/atom_setup_step_2%20%281%29.png)
+![](../../.gitbook/assets/atom_setup_step_2-1.png)
 
-3. Search for `Pymakr` and select the official Pycom Pymakr Plugin.
+1. Search for `Pymakr` and select the official Pycom Pymakr Plugin.
 
-![](../../.gitbook/assets/atom_setup_step_3%20%281%29.png)
+![](../../.gitbook/assets/atom_setup_step_3-1.png)
 
-4. You should now see and click the Install button. This will download and install the Pymakr Plugin.
+1. You should now see and click the Install button. This will download and install the Pymakr Plugin.
 
-![](../../.gitbook/assets/atom_setup_step_4%20%281%29.png)
+![](../../.gitbook/assets/atom_setup_step_4-1.png)
 
-5. That’s it! You’ve installed the Pymakr Plugin for Atom.
+1. That’s it! You’ve installed the Pymakr Plugin for Atom.
 
-![](../../.gitbook/assets/atom_setup_step_5%20%281%29.png)
+![](../../.gitbook/assets/atom_setup_step_5-1.png)
 
 ## Connecting via Serial USB
 
@@ -34,27 +34,27 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 2. Open Atom and ensure that the Pymakr Plugin has correctly installed.
 
-![](../../.gitbook/assets/atom_config_step_2%20%281%29.png)
+![](../../.gitbook/assets/atom_config_step_2-1.png)
 
-3. Open the Pymakr console by clicking the `^` button, located in the lower right side of the Atom window.
+1. Open the Pymakr console by clicking the `^` button, located in the lower right side of the Atom window.
 
-![](../../.gitbook/assets/atom_config_step_3.png)
+![](../../.gitbook/assets/atom_config_step_3%20%281%29.png)
 
-4. Click, `More` followed by `Get Serial Ports`. This will copy the serial address of your expansion board to your clipboard.
+1. Click, `More` followed by `Get Serial Ports`. This will copy the serial address of your expansion board to your clipboard.
 
 ![](../../.gitbook/assets/atom_config_step_4.png)
 
-5. Navigate to `Settings > Global Settings`
+1. Navigate to `Settings > Global Settings`
 
 ![](../../.gitbook/assets/atom_config_step_5.png)
 
-6. Paste the serial address you copied earlier into the text field `Device Address`
+1. Paste the serial address you copied earlier into the text field `Device Address`
 
-![](../../.gitbook/assets/atom_config_step_6.png)
+![](../../.gitbook/assets/atom_config_step_6%20%281%29.png)
 
-7. Press connect and the Pymakr console should show three arrows `>>>`, indicating that you are connected
+1. Press connect and the Pymakr console should show three arrows `>>>`, indicating that you are connected
 
-![](../../.gitbook/assets/atom_config_step_7.png)
+![](../../.gitbook/assets/atom_config_step_7%20%281%29.png)
 
 These settings can also be applied on a per project basis by clicking `Settings` then `Project Settings`. This will open a JSON file which you can edit to enter your desired settings.
 
@@ -75,5 +75,5 @@ After installing the Pymakr Plugin, a device may be connected via the telnet int
 4. The default username and password are `micro` and `python`, respectively.
 5. Click `Connect` in the Pymakr pane, Pymakr will now connect via telnet.
 
-![](../../.gitbook/assets/pymakr-plugin-settings%20%281%29.png)
+![](../../.gitbook/assets/pymakr-plugin-settings-1.png)
 

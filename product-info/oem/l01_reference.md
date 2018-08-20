@@ -1,6 +1,6 @@
 # L01 OEM Baseboard Reference
 
-![](../../.gitbook/assets/l01-reference.png)
+![](../../.gitbook/assets/l01-reference%20%281%29.png)
 
 The L01 OEM reference board is a reference design suitable L01 as well as W01 making it possible to have a single PCB design that can accommodate both OEM modules.
 
@@ -29,7 +29,7 @@ The layout of the L01 baseboard reference is available as a PDF File
 
 {% file src="../../.gitbook/assets/l01-oem-layout.pdf" caption="L01 OEM Layout" %}
 
-![](../../.gitbook/assets/l01-oem-layout%20%281%29.png)
+![](../../.gitbook/assets/l01-oem-layout-1.png)
 
 ## Schematic
 

@@ -6,7 +6,7 @@ But every device you want to add to Pybytes you need register on Sigfox backend.
 
 After you add your Sigfox credentials to Pybytes you can see DevKit contract type is selected as default \(on page Settings → Sigfox API\).
 
-![](../../../.gitbook/assets/pybytesdevkit.png)
+![](../../../.gitbook/assets/pybytesdevkit%20%281%29.png)
 
 ## Add your device to Pybytes
 

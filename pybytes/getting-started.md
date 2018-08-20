@@ -15,5 +15,3 @@ Now it's time to explore Pybytes. You can start by connecting your Pycom board t
 
 {% page-ref page="add-device/" %}
 
-
-

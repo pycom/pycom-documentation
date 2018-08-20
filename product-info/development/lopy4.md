@@ -1,6 +1,6 @@
 # LoPy 4
 
-![](../../.gitbook/assets/lopy4%20%281%29.png)
+![](../../.gitbook/assets/lopy4-1.png)
 
 **Store**: [Buy Here](http://www.pycom.io/lopy4)
 
@@ -22,7 +22,7 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 
 The datasheet of the LoPy4 is available as a PDF File.
 
-{% file src="../../.gitbook/assets/lopy4-specsheet \(1\).pdf" caption="LoPy4 Datasheet" %}
+{% file src="../../.gitbook/assets/lopy4-specsheet-1.pdf" caption="LoPy4 Datasheet" %}
 
 ## Notes
 

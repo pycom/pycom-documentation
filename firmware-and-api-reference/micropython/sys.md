@@ -2,11 +2,11 @@
 
 ## Methods
 
-#### sys.exit\(retval=0\)
+### sys.exit\(retval=0\)
 
 Terminate current program with a given exit code. Underlyingly, this function raise as `SystemExit` exception. If an argument is given, its value given as an argument to `SystemExit`.
 
-#### sys.print\_exception\(exc, file=sys.stdout\)
+### sys.print\_exception\(exc, file=sys.stdout\)
 
 Print exception with a traceback to a file-like object file \(or `sys.stdout` by default\).
 

@@ -42,12 +42,12 @@ _thread.start_new_thread(send_env_data, ())
 1. Upload the code into your device. Now your device is sending data to Pybytes.
 
 {% hint style="info" %}
+
 In this code, we're calling the function `pybytes.send_virtual_pin_value(persistent, pin, value))` to communicate with Pybytes. This function is part of the Pybytes library, and it has three arguments: `persistent`, `pin` and `value`.
 
 * `persistent` denotes information that is infrequently accessed and not likely to be modified;
 * `pin` represents which virtual pin is receiving data;
 * `value` is the value being attributed to that particular pin.
-{% endhint %}
 
 ## Step 2: Add a signal from your device
 
@@ -55,23 +55,23 @@ Go to Pybytes.
 
 1. On `Devices` page select a device;
 
-![](../.gitbook/assets/01.gif)
+![](../.gitbook/assets/01%20%281%29.gif)
 
-2. On your device's page click on `Data` tab.
+1. On your device's page click on `Data` tab.
 
-![](../.gitbook/assets/02%20%281%29.png)
+![](../.gitbook/assets/02-1.png)
 
-3. Click on the `Define New Signal` button.
+1. Click on the `Define New Signal` button.
 
-![](../.gitbook/assets/03%20%281%29.png)
+![](../.gitbook/assets/03-1.png)
 
-4. Define the new signal by entering a number, a name, a data type and a unit. Finally, click on the button `Define`.
+1. Define the new signal by entering a number, a name, a data type and a unit. Finally, click on the button `Define`.
 
-![](../.gitbook/assets/04%20%281%29.gif)
+![](../.gitbook/assets/04-1.gif)
 
-5. Your signal was added!
+1. Your signal was added!
 
-![](../.gitbook/assets/05.png)
+![](../.gitbook/assets/05%20%281%29.png)
 
 {% hint style="info" %}
 The name and unit are labels used to identify your signal inside Pybytes \(In this example we defined `Sinwave` as the name of the signal and `Rad` as the unit\).
@@ -87,27 +87,27 @@ The datatype also has to match the variable used as argument on `pybytes.send_vi
 
 ![](../.gitbook/assets/01.png)
 
-2. Click on the button `Create a new display`.
+1. Click on the button `Create a new display`.
 
-![](../.gitbook/assets/02-1.png)
+![](../.gitbook/assets/02-1%20%281%29.png)
 
-3. Select the type of visualisation \(e.g. Bar chart or Line chart\).
+1. Select the type of visualisation \(e.g. Bar chart or Line chart\).
 
 ![](../.gitbook/assets/03.gif)
 
-4. You can adjust the parameters of your widget at `Settings`. After, click on the button `Create`.
+1. You can adjust the parameters of your widget at `Settings`. After, click on the button `Create`.
 
-![](../.gitbook/assets/04%20%281%29.png)
+![](../.gitbook/assets/04-1.png)
 
-5. Your widget was created. Now, add your widget to your device's dashboard. Click on the button `Edit` on your widget.
+1. Your widget was created. Now, add your widget to your device's dashboard. Click on the button `Edit` on your widget.
 
 ![](../.gitbook/assets/05-1.png)
 
-6. Mark the checkbox `Display on Dashboard` at `Settings`. Finally, click on the button `Save`.
+1. Mark the checkbox `Display on Dashboard` at `Settings`. Finally, click on the button `Save`.
 
 ![](../.gitbook/assets/06.gif)
 
-7. Click on the tab `Dashboard`. Your widget was successfully added there!
+1. Click on the tab `Dashboard`. Your widget was successfully added there!
 
 ![](../.gitbook/assets/07.png)
 
@@ -115,13 +115,13 @@ The datatype also has to match the variable used as argument on `pybytes.send_vi
 
 1. Click on the button `Organise`. Now the dashboard's grid will enter the edit mode and allow you to resize and reposition its widgets.
 
-![](../.gitbook/assets/edit-mode.gif)
+![](../.gitbook/assets/edit-mode%20%281%29.gif)
 
-2. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button `Save` to save this action.
+1. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button `Save` to save this action.
 
-![](../.gitbook/assets/02%20%281%29.gif)
+![](../.gitbook/assets/02-1.gif)
 
-3. Change the widget's position by drag-and-dropping it over the grid. After, click on the button `Save` to save this action.
+1. Change the widget's position by drag-and-dropping it over the grid. After, click on the button `Save` to save this action.
 
 ![](../.gitbook/assets/03-1.gif)
 

@@ -26,7 +26,7 @@ print(original)
 
 ## Constructors
 
-#### class ucrypto.AES\(key, mode, IV, \* , counter, segment\_size\)
+### class ucrypto.AES\(key, mode, IV, \* , counter, segment\_size\)
 
 Create an AES object that will let you encrypt and decrypt messages.
 
@@ -40,11 +40,11 @@ The arguments are:
 
 ## Methods
 
-#### ucrypto.encrypt\(\)
+### ucrypto.encrypt\(\)
 
 Encrypt data with the key and the parameters set at initialisation.
 
-#### ucrypto.decrypt\(\)
+### ucrypto.decrypt\(\)
 
 Decrypt data with the key and the parameters set at initialisation.
 

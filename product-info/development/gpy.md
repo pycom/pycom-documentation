@@ -1,6 +1,6 @@
 # GPy
 
-![](../../.gitbook/assets/gpy%20%281%29.png)
+![](../../.gitbook/assets/gpy-1.png)
 
 **Store**: [Buy Here](http://www.pycom.io/gpy)
 
@@ -44,7 +44,7 @@ The `Vin` pin on the GPy can be supplied with a voltage ranging from `3.5v` to `
 
 The AT commands for the Sequans Monarch modem on the GPy are available in a [PDF file](https://docs.pycom.io/chapter/datasheets/downloads/Monarch_4G-EZ_LR5110_ATCommands_ReferenceManual_Rev3_NOCONFIDENTIAL.pdf).
 
-{% file src="../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential \(1\).pdf" caption="AT Commands for Sequans" %}
+{% file src="../../.gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential-1.pdf" caption="AT Commands for Sequans" %}
 
 ## Tutorials
 

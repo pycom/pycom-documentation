@@ -1,6 +1,6 @@
 # LoPy
 
-![](../../.gitbook/assets/lopy%20%281%29.png)
+![](../../.gitbook/assets/lopy-1.png)
 
 **Store**: [Buy Here](http://www.pycom.io/lopy)
 

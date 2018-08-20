@@ -16,14 +16,13 @@ The current mode \(`WLAN.AP` after power up\) may be checked by running:
 ```
 
 {% hint style="danger" %}
+
 When changing the WLAN mode, if following the instructions below, the WLAN connection to the Pycom device will be broken. This means commands will not run interactively over WiFi.
 
 **There are two ways around this:**
 
 1. Put this setup code into the `boot.py` file of the Pycom device so that it gets executed automatically after reset.
-
 2. Duplicate the REPL on UART. This way commands can be run via Serial USB.
-{% endhint %}
 
 ## Connecting to a Router
 

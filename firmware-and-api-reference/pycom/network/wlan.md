@@ -34,7 +34,7 @@ print(wlan.ifconfig())
 
 ## Constructors
 
-#### class network.WLAN\(id=0, ...\)
+### class network.WLAN\(id=0, ...\)
 
 Create a WLAN object, and optionally configure it. See [`init`](wlan.md#wlan-init-mode-ssid-none-auth-none-channel-1-antenna-none-power_save-false-hidden-false) for params of configuration.
 
@@ -44,7 +44,7 @@ The WLAN constructor is special in the sense that if no arguments besides the `i
 
 ## Methods
 
-#### wlan.init\(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False\)
+### wlan.init\(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False\)
 
 Set or get the WiFi network processor configuration.
 
@@ -76,11 +76,11 @@ or
 wlan.init(mode=WLAN.STA)
 ```
 
-#### wlan.deinit\(\)
+### wlan.deinit\(\)
 
 Disables the WiFi radio.
 
-#### wlan.connect\(ssid, \* , auth=None, bssid=None, timeout=None, ca\_certs=None, keyfile=None, certfile=None, identity=None\)
+### wlan.connect\(ssid, \* , auth=None, bssid=None, timeout=None, ca\_certs=None, keyfile=None, certfile=None, identity=None\)
 
 Connect to a wifi access point using the given SSID, and other security parameters.
 
@@ -98,19 +98,19 @@ Connect to a wifi access point using the given SSID, and other security paramete
 The ESP32 only handles certificates with `pkcs8` format \(but not the "Traditional SSLeay RSAPrivateKey" format\). The private key should be RSA coded with 2048 bits at maximum.
 {% endhint %}
 
-#### wlan.scan\(\)
+### wlan.scan\(\)
 
 Performs a network scan and returns a list of named tuples with `(ssid, bssid, sec, channel, rssi)`. Note that channel is always `None` since this info is not provided by the WiPy.
 
-#### wlan.disconnect\(\)
+### wlan.disconnect\(\)
 
 Disconnect from the WiFi access point.
 
-#### wlan.isconnected\(\)
+### wlan.isconnected\(\)
 
 In case of STA mode, returns `True` if connected to a WiFi access point and has a valid IP address. In AP mode returns `True` when a station is connected, `False` otherwise.
 
-#### wlan.ifconfig\(id=0, config=\['dhcp' or configtuple\]\)
+### wlan.ifconfig\(id=0, config=\['dhcp' or configtuple\]\)
 
 When `id` is 0, the configuration will be get/set on the Station interface. When `id` is 1 the configuration will be done for the AP interface.
 
@@ -124,27 +124,27 @@ If the 4-tuple config is given then a static IP is configured. For instance:
 wlan.ifconfig(config=('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))
 ```
 
-#### wlan.mode\(\[mode\]\)
+### wlan.mode\(\[mode\]\)
 
 Get or set the WLAN mode.
 
-#### wlan.ssid\(\[ssid\]\)
+### wlan.ssid\(\[ssid\]\)
 
 Get or set the SSID when in AP mode.
 
-#### wlan.auth\(\[auth\]\)
+### wlan.auth\(\[auth\]\)
 
 Get or set the authentication type when in AP mode.
 
-#### wlan.channel\(\[channel\]\)
+### wlan.channel\(\[channel\]\)
 
 Get or set the channel \(only applicable in AP mode\).
 
-#### wlan.antenna\(\[antenna\]\)
+### wlan.antenna\(\[antenna\]\)
 
 Get or set the antenna type \(external or internal\).
 
-#### wlan.mac\(\)
+### wlan.mac\(\)
 
 Get a 6-byte long `bytes` object with the WiFI MAC address.
 
@@ -153,6 +153,4 @@ Get a 6-byte long `bytes` object with the WiFI MAC address.
 * WLAN mode: `WLAN.STA`, `WLAN.AP`, `WLAN.STA_AP`
 * WLAN network security: `WLAN.WEP`, `WLAN.WPA`, `WLAN.WPA2`, `WLAN.WPA2_ENT`
 * Antenna type: `WLAN.INT_ANT`, `WLAN.EXT_ANT`
-
-
 

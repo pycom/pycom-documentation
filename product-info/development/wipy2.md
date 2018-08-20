@@ -1,6 +1,6 @@
 # WiPy 2.0
 
-![](../../.gitbook/assets/wipy2%20%281%29.png)
+![](../../.gitbook/assets/wipy2-1.png)
 
 **Store**: Discontinued, See [WiPy3](https://docs.pycom.io/chapter/datasheets/development/wipy3.html)
 

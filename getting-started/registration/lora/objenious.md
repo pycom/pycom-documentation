@@ -57,5 +57,5 @@ Follow "Importer des capteurs" under "Statuc do Parc" and select "Provisioning U
 
 Once there give your device a name and enter the DevEUI, AppEUI, and AppKey obtained from the steps above:
 
-![](../../../.gitbook/assets/objeniousprovision2.jpg)
+![](../../../.gitbook/assets/objeniousprovision2%20%281%29.jpg)
 

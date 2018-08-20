@@ -1,6 +1,6 @@
 # Expansion Board 3.0
 
-![](../../.gitbook/assets/expansion3.png)
+![](../../.gitbook/assets/expansion3%20%281%29.png)
 
 ## Pinout
 
@@ -8,7 +8,7 @@ The pinout of the Expansion Board is available as a PDF File
 
 {% file src="../../.gitbook/assets/expansion3-pinout.pdf" caption="Expansion Board 3 Pinout" %}
 
-![](../../.gitbook/assets/expansion3-pinout%20%281%29.png)
+![](../../.gitbook/assets/expansion3-pinout-1.png)
 
 {% hint style="danger" %}
 Be gentle when plugging/unplugging from the USB connector. Whilst the USB connector is soldered and is relatively strong, if it breaks off it can be very difficult to fix.
@@ -22,7 +22,7 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board 
 
 The specsheet of the Expansion Board is available as a PDF File.
 
-{% file src="../../.gitbook/assets/expansion3-specsheet \(1\).pdf" caption="Expansion Board 3 Datasheet" %}
+{% file src="../../.gitbook/assets/expansion3-specsheet-1.pdf" caption="Expansion Board 3 Datasheet" %}
 
 ## Differences between v2.0 and v3.0
 

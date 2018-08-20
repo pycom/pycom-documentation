@@ -1,6 +1,6 @@
 # SiPy
 
-![](../../.gitbook/assets/sipy%20%282%29.png)
+![](../../.gitbook/assets/sipy-2.png)
 
 **Store**: [Buy Here](http://www.pycom.io/sipy)
 
@@ -45,6 +45,4 @@ Tutorials on how to the SiPy module can be found in the [examples](../../tutoria
 * [WiFi connection](../../tutorials-and-examples/all/wlan.md)
 * [Sigfox](../../tutorials-and-examples/sigfox.md)
 * [BLE](../../tutorials-and-examples/all/ble.md)
-
-
 
