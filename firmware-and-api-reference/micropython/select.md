@@ -6,13 +6,13 @@ This module provides functions to wait for events on streams \(select streams wh
 
 Polling is an efficient way of waiting for read/write activity on multiple objects. Current objects that support polling are: `pyb.UART`, `pyb.USB_VCP`.
 
-## Functions
+## Methods
 
-### select.poll\(\)
+#### select.poll\(\)
 
 Create an instance of the `Poll` class.
 
-### select.select\(rlist, wlist, xlist\[, timeout\]\)
+#### select.select\(rlist, wlist, xlist\[, timeout\]\)
 
 Wait for activity on a set of objects.
 

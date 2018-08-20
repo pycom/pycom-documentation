@@ -2,9 +2,9 @@
 
 This module provides access to Transport Layer Security \(often known as "Secure Sockets Layer"\) encryption and peer authentication facilities for network sockets, both client-side and server-side.
 
-## Functions
+## Methods
 
-### ssl.wrap\_socket\(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ca\_certs=None\)
+#### ssl.wrap\_socket\(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ca\_certs=None\)
 
 Takes an instance `sock` of `socket.socket`, and returns an instance of ssl.SSLSocket, a subtype of `socket.socket`, which wraps the underlying socket in an SSL context. Example:
 

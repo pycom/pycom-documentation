@@ -8,7 +8,7 @@ This module provides native support for cryptographic algorithms. It’s loosely
 
 ## **Methods**
 
-### crypto.getrandbits\(bits\)
+#### crypto.getrandbits\(bits\)
 
 Returns a bytes object filled with random bits obtained from the hardware random number generator.
 

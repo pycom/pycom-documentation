@@ -34,11 +34,11 @@ At the end of the "Add Device" wizard, Pybytes will give you two options for you
 
 Select how you would like to connect your device to Pybytes:
 
-1. [CONNECT YOUR DEVICE _QUICKLY \(RECOMMENDED\)_](quick.md)
+1. [Connect your device quickly \(Recommended\)](quick.md)
 
 {% page-ref page="quick.md" %}
 
-2. [CONNECT YOUR DEVICE _BY FLASHING PYBYTES LIBRARY_](flash.md)
+2. [Connect your device by flashing Pybytes Library](flash.md)
 
 {% page-ref page="flash.md" %}
 

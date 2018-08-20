@@ -4,7 +4,9 @@ The smallest concept in GATT is the Characteristic, which encapsulates a single 
 
 The following class allows you to manage Server characteristics.
 
-## characteristic.value\(\[value\]\)
+## Methods
+
+#### characteristic.value\(\[value\]\)
 
 Gets or sets the value of the characteristic. Can take an integer, a string or a bytes object.
 
@@ -13,7 +15,7 @@ characteristic.value(123) # set characteristic value to an integer with the valu
 characteristic.value() # get characteristic value
 ```
 
-## characteristic.callback\(trigger=None, handler=None, arg=None\)
+#### characteristic.callback\(trigger=None, handler=None, arg=None\)
 
 Creates a callback that will be executed when any of the triggers occurs. The arguments are:
 
@@ -23,7 +25,7 @@ Creates a callback that will be executed when any of the triggers occurs. The ar
 
 An example of how this could be implemented can be seen in the [`characteristic.events()` ](gattscharacteristic.md#characteristic-events)section.
 
-## characteristic.events\(\)
+#### characteristic.events\(\)
 
 Returns a value with bit flags identifying the events that have occurred since the last call. Calling this function clears the events.
 

@@ -8,8 +8,8 @@ The RMT has 7 channels, of which 5 are available and can be mapped to any GPIO p
 
 | Channel | Resolution | Maximum Pulse Width |
 | :--- | :--- | :--- |
-| 0  Used by on-board LED |  |  |
-| 1  Used by `pycom.pulses_get()` |  |  |
+| 0 | Used by on-board LED |  |
+| 1  | Used by `pycom.pulses_get()` |  |
 | 2 | 100nS | 3.2768 ms |
 | 3 | 100nS | 3.2768 ms |
 | 4 | 1000nS | 32.768 ms |

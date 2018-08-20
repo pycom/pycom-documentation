@@ -19,31 +19,31 @@ for i in range(2):
     _thread.start_new_thread(th_func, (i + 1, i))
 ```
 
-## Functions
+## Methods
 
-### \_thread.start\_new\_thread\(function, args\[, kwargs\]\)
+#### \_thread.start\_new\_thread\(function, args\[, kwargs\]\)
 
 Start a new thread and return its identifier. The thread executes the function with the argument list args \(which must be a tuple\). The optional `kwargs` argument specifies a dictionary of keyword arguments. When the function returns, the thread silently exits. When the function terminates with an unhandled exception, a stack trace is printed and then the thread exits \(but other threads continue to run\).
 
-### \_thread.exit\(\)
+#### \_thread.exit\(\)
 
 Raise the `SystemExit` exception. When not caught, this will cause the thread to exit silently.
 
-### \_thread.allocate\_lock\(\)
+#### \_thread.allocate\_lock\(\)
 
 Return a new lock object. Methods of locks are described below. The lock is initially unlocked.
 
-### \_thread.get\_ident\(\)
+#### \_thread.get\_ident\(\)
 
 Return the `thread identifier` of the current thread. This is a nonzero integer. Its value has no direct meaning; it is intended as a magic cookie to be used e.g. to index a dictionary of thread-specific data. Thread identifiers may be recycled when a thread exits and another thread is created.
 
-### \_thread.stack\_size\(\[size\]\)
+#### \_thread.stack\_size\(\[size\]\)
 
 Return the thread stack size \(in bytes\) used when creating new threads. The optional size argument specifies the stack size to be used for subsequently created threads, and must be `0` \(use platform or configured default\) or a positive integer value of at least `4096` \(4KiB\). 4KiB is currently the minimum supported stack size value to guarantee sufficient stack space for the interpreter itself.
 
 ## Objects
 
-### \_thread.LockType
+#### \_thread.LockType
 
 This is the type of lock objects.
 

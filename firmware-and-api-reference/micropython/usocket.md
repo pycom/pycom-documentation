@@ -8,13 +8,13 @@ See corresponding CPython module for comparison.
 
 Functions below which expect a network address, accept it in the format of `(ipv4_address, port)`, where `ipv4_address` is a string with dot-notation numeric IPv4 address, e.g. `8.8.8.8`, and port is integer port number in the range 1-65535. Note the domain names are not accepted as `ipv4_address`, they should be resolved first using `socket.getaddrinfo()`.
 
-## Functions
+## Methods
 
-### socket.socket\(socket.AF\_INET, socket.SOCK\_STREAM, socket.IPPROTO\_TCP\)
+#### socket.socket\(socket.AF\_INET, socket.SOCK\_STREAM, socket.IPPROTO\_TCP\)
 
 Create a new socket using the given address family, socket type and protocol number.
 
-### socket.getaddrinfo\(host, port\)
+#### socket.getaddrinfo\(host, port\)
 
 Translate the host/port argument into a sequence of 5-tuples that contain all the necessary arguments for creating a socket connected to that service. The list of 5-tuples has following structure:
 

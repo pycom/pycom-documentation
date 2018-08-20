@@ -6,15 +6,17 @@ Services are used to categorise data up into specific chunks of data known as ch
 
 The following class allows control over Server services.
 
-## service.start\(\)
+## Methods
+
+#### service.start\(\)
 
 Starts the service if not already started.
 
-## service.stop\(\)
+#### service.stop\(\)
 
 Stops the service if previously started.
 
-## service.characteristic\(uuid, \* , permissions, properties, value\)
+#### service.characteristic\(uuid, \* , permissions, properties, value\)
 
 Creates a new characteristic on the service. Returns an object of the class `GATTSCharacteristic`. The arguments are:
 

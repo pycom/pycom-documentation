@@ -26,25 +26,25 @@ server.isrunning() # check whether the server is running or not
 
 ## Constructors
 
-### class network.Server\(id, ...\)
+#### class network.Server\(id, ...\)
 
 Create a server instance, see `init` for parameters of initialisation.
 
 ## Methods
 
-### server.init\(\* , login=\('micro', 'python'\), timeout=300\)
+#### server.init\(\* , login=\('micro', 'python'\), timeout=300\)
 
 Init \(and effectively start the server\). Optionally a new `user`, `password` and `timeout` \(in seconds\) can be passed.
 
-### server.deinit\(\)
+#### server.deinit\(\)
 
 Stop the server.
 
-### server.timeout\(\[timeout\_in\_seconds\]\)
+#### server.timeout\(\[timeout\_in\_seconds\]\)
 
 Get or set the server timeout.
 
-### server.isrunning\(\)
+#### server.isrunning\(\)
 
 Returns `True` if the server is running \(connected or accepting connections\), `False` otherwise.
 
