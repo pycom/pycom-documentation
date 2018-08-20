@@ -4,7 +4,7 @@ The math module provides some basic mathematical functions for working with floa
 
 ## Functions
 
-### math.acos\(x\)
+#### math.acos\(x\)
 
 Return the inverse cosine of `x`.
 
