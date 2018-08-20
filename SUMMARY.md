@@ -200,9 +200,9 @@
 * [Firmware Downgrade](advanced-topics/downgrade.md)
 * [CLI Updater](advanced-topics/cli.md)
 * [SecureBoot and Encryption](advanced-topics/encryption.md)
+* [License](license.md)
 
 ## Have a question?
 
 * [Ask on the Forum](https://forum.pycom.io)
-* [License](license.md)
 
