@@ -204,5 +204,5 @@
 ## Have a question?
 
 * [Ask on the Forum](https://forum.pycom.io)
-* [License](license.md)
+* [License](have-a-question/license.md)
 
