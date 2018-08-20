@@ -85,6 +85,10 @@ print("  %f seconds in the last lap" % (total - lap))
 class Alarm – get interrupted after a specific interval
 ```
 
+## class Alarm
+
+Used to get interrupted after a specific interval.
+
 ### Methods
 
 #### alarm.callback\(handler, \* , arg=None\)

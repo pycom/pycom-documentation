@@ -1,6 +1,6 @@
 # micropython
 
-## Methosd
+## Methods
 
 #### micropython.alloc\_emergency\_exception\_buf\(size\)
 

@@ -13,7 +13,7 @@ pycom.heartbeat()       # get the heartbeat state
 pycom.rgbled(0xff00)    # make the LED light up in green color
 ```
 
-## Functions
+## Methods
 
 #### pycom.heartbeat\(\[enable\]\)
 

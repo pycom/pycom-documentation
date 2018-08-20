@@ -2,7 +2,7 @@
 
 The math module provides some basic mathematical functions for working with floating-point numbers. Floating point support required for this module.
 
-## Functions
+## Methods
 
 #### math.acos\(x\)
 
