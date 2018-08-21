@@ -20,9 +20,11 @@ At the last step of the "Add Device" process:
 
 You can also download _Pybytes library_ at the device's settings page:
 
-1. Navigate to your device in Pybytes;
-2. On your device's page click on settings tab;
-3. Click on the button _Download_ at Pybytes library;
+2. Navigate to your device in Pybytes;
+
+3. On your device's page click on settings tab;
+
+4. Click on the button _Download_ at Pybytes library;
 
 ![](../../.gitbook/assets/pybytes-library-download%20%281%29.gif)
 

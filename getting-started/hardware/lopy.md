@@ -24,11 +24,7 @@
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrack-pysense-pyscan/installation/firmware.md).
 * Look for the reset button on the LoPy module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
-* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
-
-![](../../.gitbook/assets/pysense_lopy.png)
-
-![](../../.gitbook/assets/pytrack_lopy.png)
+* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIq_ZvQtB3k9-QzXSEi%2FPysense_LoPy.png?generation=1534772084691543&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIq_aBQabbigN5pR8W2%2FPytrack_LoPy.png?generation=1534772068406423&alt=media)
 {% endtab %}
 
 {% tab title="USB UART Adapter" %}

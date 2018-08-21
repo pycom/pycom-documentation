@@ -24,11 +24,7 @@
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrack-pysense-pyscan/installation/firmware.md).
 * Look for the reset button on the WiPy module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
-* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
-
-![](../../.gitbook/assets/pysense_wipy.png)
-
-![](../../.gitbook/assets/pytrack_wipy.png)
+* Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqfutE_BZ6gjVdmiv0%2FPysense_WiPy.png?generation=1534772071067482&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqfvoSjvxTIwgw2MSg%2FPytrack_WiPy.png?generation=1534772075484372&alt=media)
 {% endtab %}
 
 {% tab title="USB UART Adapter" %}

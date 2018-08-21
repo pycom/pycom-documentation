@@ -10,19 +10,19 @@ In Pybytes, go to `Devices` Page:
 
 ![](../../.gitbook/assets/1-1.jpg)
 
-1. Select your device \(e.g., WiPy, LoPy, SiPy, etc.\);
+2. Select your device \(e.g., WiPy, LoPy, SiPy, etc.\);
 
 ![](../../.gitbook/assets/2-1.jpg)
 
-1. Select your shield \(e.g., PySense, PyTrack, PyScan or other\);
+3. Select your shield \(e.g., PySense, PyTrack, PyScan or other\);
 
 ![](../../.gitbook/assets/3%20%281%29.jpg)
 
-1. Select your network option;
+4. Select your network option;
 
 ![](../../.gitbook/assets/4%20%281%29.jpg)
 
-1. Enter a unique name and the network credentials \(SSID and password\) for your device;
+5. Enter a unique name and the network credentials \(SSID and password\) for your device;
 
 ![](../../.gitbook/assets/5-1.jpg)
 
@@ -38,7 +38,7 @@ Select how you would like to connect your device to Pybytes:
 
 {% page-ref page="quick.md" %}
 
-1. [Connect your device by flashing Pybytes Library](flash.md)
+2. [Connect your device by flashing Pybytes Library](flash.md)
 
 {% page-ref page="flash.md" %}
 
