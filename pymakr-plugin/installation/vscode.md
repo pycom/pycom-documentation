@@ -10,19 +10,19 @@ Please follow these steps to install the Pymakr VSCode Extension:
 
 ![](../../.gitbook/assets/vsc_setup_step_1-1.png)
 
-1. Navigate to the Extensions page, using the 5th button in the left navigation
+2. Navigate to the Extensions page, using the 5th button in the left navigation
 
 ![](../../.gitbook/assets/vsc_setup_step_2-1.png)
 
-1. Search for `Pymakr` and click the install button next to it.
+3. Search for `Pymakr` and click the install button next to it.
 
 ![](../../.gitbook/assets/vsc_setup_step_3.png)
 
-1. Within a few minutes, a reload button should appear. Press it to reload VSCode.
+4. Within a few minutes, a reload button should appear. Press it to reload VSCode.
 
 ![](../../.gitbook/assets/vsc_setup_step_4.png)
 
-1. That’s it! You’ve installed the Pymakr Extension for VSCode
+5. That’s it! You’ve installed the Pymakr Extension for VSCode
 
 ![](../../.gitbook/assets/vsc_setup_step_5%20%281%29.png)
 
@@ -40,23 +40,23 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 ![](../../.gitbook/assets/vsc_config_step_1-1.png)
 
-1. Click `All commands` on the bottom of the Visual Studio Code window
+3. Click `All commands` on the bottom of the Visual Studio Code window
 
 ![](../../.gitbook/assets/vsc_config_step_2-1.png)
 
-1. In the list that appears, click `Pymakr > Extra > List Serial Ports`
+4. In the list that appears, click `Pymakr > Extra > List Serial Ports`
 
 ![](../../.gitbook/assets/vsc_config_step_3-1.png)
 
-1. This will list the available serial ports. If Pymakr is able to auto-detect which to use, this will be copied to your clipboard. If not please manually copy the correct serial port.
+5. This will list the available serial ports. If Pymakr is able to auto-detect which to use, this will be copied to your clipboard. If not please manually copy the correct serial port.
 
 ![](../../.gitbook/assets/vsc_config_step_4.png)
 
-1. Once again click `All commands`, then click `Pymakr > Global Settings`. This will open a JSON file. Paste the serial address you copied earlier into the field `address` and save the file.
+6. Once again click `All commands`, then click `Pymakr > Global Settings`. This will open a JSON file. Paste the serial address you copied earlier into the field `address` and save the file.
 
 ![](../../.gitbook/assets/vsc_config_step_5-1.png)
 
-1. Finally close the JSON file, click `All commands`, then `Pymakr > Connect` to connect your device. The Pymakr console should show three arrows `>>>`, indicating that you are connected
+7. Finally close the JSON file, click `All commands`, then `Pymakr > Connect` to connect your device. The Pymakr console should show three arrows `>>>`, indicating that you are connected
 
 ![](../../.gitbook/assets/vsc_config_step_6%20%281%29.png)
 

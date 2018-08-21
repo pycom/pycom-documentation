@@ -96,4 +96,11 @@ while(True):
 The node is always sending packages and waiting for the `ack` from the gateway.
 
 {% hint style="info" %}
+To adapt this code to user specific needs:
+
+* Put a max waiting time for the `ack` to arrive and resend the package or mark it as invalid
+* Increase the package size changing the `_LORA_PKG_FORMAT` to `BH%ds`. The `H` will allow the keeping of 2 bytes for size \(for more information about [struct format](https://docs.python.org/2/library/struct.html#format-characters)\)
+* Reduce the package size with bitwise manipulation
+* Reduce the message size \(for this demo, a string\) to something more useful for specific development
+{% endhint %}
 

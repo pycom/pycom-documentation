@@ -51,7 +51,7 @@ For various other complete LoRa examples, check here for additional examples.
 
 ## Constructors
 
-### class network.LoRa\(id=0, ...\)
+#### class network.LoRa\(id=0, ...\)
 
 Create and configure a LoRa object. See init for params of configuration.
 
@@ -61,7 +61,7 @@ lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 ## Methods
 
-### lora.init\(mode, \* ,region=LoRa.EU868, frequency=868000000, tx\_power=14, bandwidth=LoRa.BW\_125KHZ, sf=7, preamble=8, coding\_rate=LoRa.CODING\_4\_5, power\_mode=LoRa.ALWAYS\_ON, tx\_iq=False, rx\_iq=False, adr=False, public=True, tx\_retries=1, device\_class=LoRa.CLASS\_A\)
+#### lora.init\(mode, \* ,region=LoRa.EU868, frequency=868000000, tx\_power=14, bandwidth=LoRa.BW\_125KHZ, sf=7, preamble=8, coding\_rate=LoRa.CODING\_4\_5, power\_mode=LoRa.ALWAYS\_ON, tx\_iq=False, rx\_iq=False, adr=False, public=True, tx\_retries=1, device\_class=LoRa.CLASS\_A\)
 
 This method is used to set the LoRa subsystem configuration and to specific raw LoRa or LoRaWAN.
 
@@ -101,7 +101,7 @@ or
 lora.init(mode=LoRa.LORAWAN)
 ```
 
-### lora.join\(activation, auth, \* ,timeout=None, dr=None\)
+#### lora.join\(activation, auth, \* ,timeout=None, dr=None\)
 
 Join a LoRaWAN network. Internally the stack will automatically retry every 15 seconds until a Join Accept message is received.
 
@@ -178,7 +178,7 @@ app_swkey = ubinascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
 lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))
 ```
 
-### lora.bandwidth\(\[bandwidth\]\)
+#### lora.bandwidth\(\[bandwidth\]\)
 
 Get or set the bandwidth in raw LoRa mode \(`LoRa.LORA`\). Can be either `LoRa.BW_125KHZ` \(0\), `LoRa.BW_250KHZ` \(1\) or `LoRa.BW_500KHZ` \(2\):
 
@@ -190,7 +190,7 @@ lora.bandwidth()
 lora.bandwidth(LoRa.BW_125KHZ)
 ```
 
-### lora.frequency\(\[frequency\]\)
+#### lora.frequency\(\[frequency\]\)
 
 Get or set the frequency in raw LoRa mode \(`LoRa.LORA`\). The allowed range is between `863000000` and `870000000` Hz for the 868 MHz band version or between `902000000` and `928000000` Hz for the 915 MHz band version.
 
@@ -202,7 +202,7 @@ lora.frequency()
 lora.frequency(868000000)
 ```
 
-### lora.coding\_rate\(\[coding\_rate\]\)
+#### lora.coding\_rate\(\[coding\_rate\]\)
 
 Get or set the coding rate in raw LoRa mode \(`LoRa.LORA`\). The allowed values are: `LoRa.CODING_4_5` \(1\), `LoRa.CODING_4_6` \(2\), `LoRa.CODING_4_7` \(3\) and `LoRa.CODING_4_8` \(4\).
 
@@ -214,7 +214,7 @@ lora.coding_rate()
 lora.coding_rate(LoRa.CODING_4_5)
 ```
 
-### lora.preamble\(\[preamble\]\)
+#### lora.preamble\(\[preamble\]\)
 
 Get or set the number of preamble symbols in raw LoRa mode \(`LoRa.LORA`\):
 
@@ -226,7 +226,7 @@ lora.preamble()
 lora.preamble(LoRa.CODING_4_5)
 ```
 
-### lora.sf\(\[sf\]\)
+#### lora.sf\(\[sf\]\)
 
 Get or set the spreading factor value in raw LoRa mode \(`LoRa.LORA`\). The minimum value is 7 and the maximum is 12:
 
@@ -238,11 +238,11 @@ lora.sf()
 lora.sf(7)
 ```
 
-### lora.power\_mode\(\[power\_mode\]\)
+#### lora.power\_mode\(\[power\_mode\]\)
 
 Get or set the power mode in raw LoRa mode \(`LoRa.LORA`\). The accepted values are: `LoRa.ALWAYS_ON`, `LoRa.TX_ONLY`, and `LoRa.SLEEP`:
 
-### lora.stats\(\)
+#### lora.stats\(\)
 
 Return a named tuple with useful information from the last received LoRa or LoRaWAN packet. The named tuple has the following form:
 
@@ -267,11 +267,11 @@ Where:
 * `tx_counter` is the number of packets transmitted.
 * `tx_frequency` is the frequency used for the last transmission.
 
-### lora.has\_joined\(\)
+#### lora.has\_joined\(\)
 
 Returns `True` if a LoRaWAN network has been joined. `False` otherwise.
 
-### lora.add\_channel\(index, \* , frequency, dr\_min, dr\_max\)
+#### lora.add\_channel\(index, \* , frequency, dr\_min, dr\_max\)
 
 Add a LoRaWAN channel on the specified `index`. If there’s already a channel with that index it will be replaced with the new one.
 
@@ -288,7 +288,7 @@ Examples:
 lora.add_channel(index=0, frequency=868000000, dr_min=5, dr_max=6)
 ```
 
-### lora.remove\_channel\(index\)
+#### lora.remove\_channel\(index\)
 
 Removes the channel from the specified `index`. On the 868MHz band the channels 0 to 2 cannot be removed, they can only be replaced by other channels using the `lora.add_channel` method. A way to remove all channels except for one is to add the same channel, 3 times on indexes 0, 1 and 2. An example can be seen below:
 
@@ -298,11 +298,11 @@ lora.remove_channel()
 
 On the 915MHz band there are no restrictions around this.
 
-### lora.mac\(\)
+#### lora.mac\(\)
 
 Returns a byte object with the 8-Byte MAC address of the LoRa radio.
 
-### lora.callback\(trigger, handler=None, arg=None\)
+#### lora.callback\(trigger, handler=None, arg=None\)
 
 Specify a callback handler for the LoRa radio. The `trigger` types are `LoRa.RX_PACKET_EVENT`, `LoRa.TX_PACKET_EVENT`, and `LoRa.TX_FAILED_EVENT`
 
@@ -310,7 +310,7 @@ The `LoRa.RX_PACKET_EVENT` event is raised for every received packet. The `LoRa.
 
 An example of how this callback functions can be seen the in method [`lora.events()`](lora.md#lora-events).
 
-### lora.ischannel\_free\(rssi\_threshold\)
+#### lora.ischannel\_free\(rssi\_threshold\)
 
 This method is used to check for radio activity on the current LoRa channel, and if the `rssi` of the measured activity is lower than the `rssi_threshold` given, the return value will be `True`, otherwise `False`. Example:
 
@@ -318,7 +318,7 @@ This method is used to check for radio activity on the current LoRa channel, and
 lora.ischannel_free(-100)
 ```
 
-### lora.set\_battery\_level\(level\)
+#### lora.set\_battery\_level\(level\)
 
 Set the battery level value that will be sent when the LoRaWAN MAC command that retrieves the battery level is received. This command is sent by the network and handled automatically by the LoRaWAN stack. The values should be according to the LoRaWAN specification:
 
@@ -330,7 +330,7 @@ Set the battery level value that will be sent when the LoRaWAN MAC command that 
 lora.set_battery_level(127) # 50% battery
 ```
 
-### lora.events\(\)
+#### lora.events\(\)
 
 This method returns a value with bits sets \(if any\) indicating the events that have triggered the callback. Please note that by calling this function the internal events registry is cleared automatically, therefore calling it immediately for a second time will most likely return a value of 0.
 
@@ -347,7 +347,7 @@ def lora_cb(lora):
 lora.callback(trigger=(LoRa.RX_PACKET_EVENT | LoRa.TX_PACKET_EVENT), handler=lora_cb)
 ```
 
-### lora.nvram\_save\(\)
+#### lora.nvram\_save\(\)
 
 Save the LoRaWAN state \(joined status, network keys, packet counters, etc\) in non-volatile memory in order to be able to restore the state when coming out of deepsleep or a power cycle.
 
@@ -355,7 +355,7 @@ Save the LoRaWAN state \(joined status, network keys, packet counters, etc\) in 
 lora.nvram_save()
 ```
 
-### lora.nvram\_restore\(\)
+#### lora.nvram\_restore\(\)
 
 Restore the LoRaWAN state \(joined status, network keys, packet counters, etc\) from non-volatile memory. State must have been previously stored with a call to `nvram_save` before entering deepsleep. This is useful to be able to send a LoRaWAN message immediately after coming out of deepsleep without having to join the network again. This can only be used if the current region matches the one saved.
 
@@ -363,7 +363,7 @@ Restore the LoRaWAN state \(joined status, network keys, packet counters, etc\) 
 lora.nvram_restore()
 ```
 
-### lora.nvram\_erase\(\)
+#### lora.nvram\_erase\(\)
 
 Remove the LoRaWAN state \(joined status, network keys, packet counters, etc\) from non-volatile memory.
 
@@ -395,7 +395,7 @@ And they must be created after initialising the LoRa network card.
 
 LoRa sockets support the following standard methods from the socket module:
 
-### socket.close\(\)
+#### socket.close\(\)
 
 Usage:
 
@@ -403,7 +403,7 @@ Usage:
 s.close()
 ```
 
-### socket.bind\(port\_number\)
+#### socket.bind\(port\_number\)
 
 Usage:
 
@@ -415,7 +415,7 @@ s.bind(1)
 The `bind()` method is only applicable when the radio is configured in `LoRa.LORAWAN` mode.
 {% endhint %}
 
-### socket.send\(bytes\)
+#### socket.send\(bytes\)
 
 Usage:
 
@@ -429,7 +429,7 @@ or
 s.send('Hello')
 ```
 
-### socket.recv\(bufsize\)
+#### socket.recv\(bufsize\)
 
 Usage:
 
@@ -437,7 +437,7 @@ Usage:
 s.recv(128)
 ```
 
-### socket.recvfrom\(bufsize\)
+#### socket.recvfrom\(bufsize\)
 
 This method is useful to know the destination port number of the message received. Returns a tuple of the form: `(data, port)`
 
@@ -447,7 +447,7 @@ Usage:
 s.recvfrom(128)
 ```
 
-### socket.setsockopt\(level, optname, value\)
+#### socket.setsockopt\(level, optname, value\)
 
 Set the value of the given socket option. The needed symbolic constants are defined in the socket module \(`SO_*` etc.\). In the case of LoRa the values are always integers. Examples:
 
@@ -466,7 +466,7 @@ s.setsockopt(socket.SOL_LORA, socket.SO_CONFIRMED, True)
 Socket options are only applicable when the LoRa radio is used in LoRa.LORAWAN mode. When using the radio in LoRa.LORA mode, use the class methods to change the spreading factor, bandwidth and coding rate to the desired values.
 {% endhint %}
 
-### socket.settimeout\(value\)
+#### socket.settimeout\(value\)
 
 Sets the socket timeout value in seconds. Accepts floating point values.
 
@@ -476,7 +476,7 @@ Usage:
 s.settimeout(5.5)
 ```
 
-### socket.setblocking\(flag\)
+#### socket.setblocking\(flag\)
 
 Usage:
 

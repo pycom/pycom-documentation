@@ -18,7 +18,7 @@ At the last step of the "Add Device" process:
 
 ![](../../.gitbook/assets/8-1.png)
 
-1. Copy the device token.
+2. Copy the device token.
 
 ### Step 2: Firmware updater
 
@@ -30,16 +30,17 @@ Install the Firmware updater on your computer.
 
 ![](../../.gitbook/assets/2%20%281%29.png)
 
-1. Select your device serial port \(Make sure your device is connected to your computer\);
-2. Mark the options "Erase flash file system" and "Force update Pybytes registration";
+2. Select your device serial port \(Make sure your device is connected to your computer\);
+
+3. Mark the options "Erase flash file system" and "Force update Pybytes registration";
 
 ![](../../.gitbook/assets/3.png)
 
-1. Paste your device token from Pybytes;
+4. Paste your device token from Pybytes;
 
 ![](../../.gitbook/assets/5-1.gif)
 
-1. The firmware updater will update the device's firmware.
+5. The firmware updater will update the device's firmware.
 
 ![](../../.gitbook/assets/6%20%281%29.png)
 

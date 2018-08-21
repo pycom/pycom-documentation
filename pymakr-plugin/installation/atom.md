@@ -8,19 +8,19 @@ Please follow these steps to install the Pymakr Plugin:
 
 ![](../../.gitbook/assets/atom_setup_step_1-1.png)
 
-1. Navigate to the Install page, via `Atom > Preferences > Install`
+2. Navigate to the Install page, via `Atom > Preferences > Install`
 
 ![](../../.gitbook/assets/atom_setup_step_2-1.png)
 
-1. Search for `Pymakr` and select the official Pycom Pymakr Plugin.
+3. Search for `Pymakr` and select the official Pycom Pymakr Plugin.
 
 ![](../../.gitbook/assets/atom_setup_step_3-1.png)
 
-1. You should now see and click the Install button. This will download and install the Pymakr Plugin.
+4. You should now see and click the Install button. This will download and install the Pymakr Plugin.
 
 ![](../../.gitbook/assets/atom_setup_step_4-1.png)
 
-1. That’s it! You’ve installed the Pymakr Plugin for Atom.
+5. That’s it! You’ve installed the Pymakr Plugin for Atom.
 
 ![](../../.gitbook/assets/atom_setup_step_5-1.png)
 
@@ -36,23 +36,23 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 ![](../../.gitbook/assets/atom_config_step_2-1.png)
 
-1. Open the Pymakr console by clicking the `^` button, located in the lower right side of the Atom window.
+3. Open the Pymakr console by clicking the `^` button, located in the lower right side of the Atom window.
 
 ![](../../.gitbook/assets/atom_config_step_3%20%281%29.png)
 
-1. Click, `More` followed by `Get Serial Ports`. This will copy the serial address of your expansion board to your clipboard.
+4. Click, `More` followed by `Get Serial Ports`. This will copy the serial address of your expansion board to your clipboard.
 
 ![](../../.gitbook/assets/atom_config_step_4.png)
 
-1. Navigate to `Settings > Global Settings`
+5. Navigate to `Settings > Global Settings`
 
 ![](../../.gitbook/assets/atom_config_step_5.png)
 
-1. Paste the serial address you copied earlier into the text field `Device Address`
+6. Paste the serial address you copied earlier into the text field `Device Address`
 
 ![](../../.gitbook/assets/atom_config_step_6%20%281%29.png)
 
-1. Press connect and the Pymakr console should show three arrows `>>>`, indicating that you are connected
+7. Press connect and the Pymakr console should show three arrows `>>>`, indicating that you are connected
 
 ![](../../.gitbook/assets/atom_config_step_7%20%281%29.png)
 

@@ -21,7 +21,7 @@ ubinascii.hexlify(b'12345') # Script will not return any the console
 
 In order to use these functions that do not print out any values, you will need to either wrap them in a `print()` statement or assign them to variables and call them later when you wish to use them.
 
-### For example:
+For example:
 
 ```python
 # immediately print to console when using a script

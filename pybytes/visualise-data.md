@@ -6,7 +6,7 @@ In this section, we will explain to you how to create widgets for data visualisa
 We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](add-device/). After your done with that, you can proceed to the next example.
 {% endhint %}
 
-## Step 1: Set up your application \(main.py\)
+## Step 1: Set up your application \(`main.py`\)
 
 The first step is to have an application running on your device. The application in this example sends data from a vector every 10 seconds to Pybytes.
 
@@ -39,7 +39,7 @@ def send_env_data():
 _thread.start_new_thread(send_env_data, ())
 ```
 
-1. Upload the code into your device. Now your device is sending data to Pybytes.
+3. Upload the code into your device. Now your device is sending data to Pybytes.
 
 {% hint style="info" %}
 
@@ -57,19 +57,19 @@ Go to Pybytes.
 
 ![](../.gitbook/assets/01%20%281%29.gif)
 
-1. On your device's page click on `Data` tab.
+2. On your device's page click on `Data` tab.
 
 ![](../.gitbook/assets/02-1.png)
 
-1. Click on the `Define New Signal` button.
+3. Click on the `Define New Signal` button.
 
 ![](../.gitbook/assets/03-1.png)
 
-1. Define the new signal by entering a number, a name, a data type and a unit. Finally, click on the button `Define`.
+4. Define the new signal by entering a number, a name, a data type and a unit. Finally, click on the button `Define`.
 
 ![](../.gitbook/assets/04-1.gif)
 
-1. Your signal was added!
+5. Your signal was added!
 
 ![](../.gitbook/assets/05%20%281%29.png)
 
@@ -87,27 +87,27 @@ The datatype also has to match the variable used as argument on `pybytes.send_vi
 
 ![](../.gitbook/assets/01.png)
 
-1. Click on the button `Create a new display`.
+2. Click on the button `Create a new display`.
 
 ![](../.gitbook/assets/02-1%20%281%29.png)
 
-1. Select the type of visualisation \(e.g. Bar chart or Line chart\).
+3. Select the type of visualisation \(e.g. Bar chart or Line chart\).
 
 ![](../.gitbook/assets/03.gif)
 
-1. You can adjust the parameters of your widget at `Settings`. After, click on the button `Create`.
+4. You can adjust the parameters of your widget at `Settings`. After, click on the button `Create`.
 
 ![](../.gitbook/assets/04-1.png)
 
-1. Your widget was created. Now, add your widget to your device's dashboard. Click on the button `Edit` on your widget.
+5. Your widget was created. Now, add your widget to your device's dashboard. Click on the button `Edit` on your widget.
 
 ![](../.gitbook/assets/05-1.png)
 
-1. Mark the checkbox `Display on Dashboard` at `Settings`. Finally, click on the button `Save`.
+6. Mark the checkbox `Display on Dashboard` at `Settings`. Finally, click on the button `Save`.
 
 ![](../.gitbook/assets/06.gif)
 
-1. Click on the tab `Dashboard`. Your widget was successfully added there!
+7. Click on the tab `Dashboard`. Your widget was successfully added there!
 
 ![](../.gitbook/assets/07.png)
 
@@ -117,11 +117,11 @@ The datatype also has to match the variable used as argument on `pybytes.send_vi
 
 ![](../.gitbook/assets/edit-mode%20%281%29.gif)
 
-1. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button `Save` to save this action.
+2. Resize a widget by clicking on the triangle icon at the bottom right corner of the widget and drag the cursor over the grid. After, click on the button `Save` to save this action.
 
 ![](../.gitbook/assets/02-1.gif)
 
-1. Change the widget's position by drag-and-dropping it over the grid. After, click on the button `Save` to save this action.
+3. Change the widget's position by drag-and-dropping it over the grid. After, click on the button `Save` to save this action.
 
 ![](../.gitbook/assets/03-1.gif)
 

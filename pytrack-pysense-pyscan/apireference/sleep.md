@@ -44,11 +44,11 @@ py.go_to_sleep()
 
 ## Methods
 
-### pytrack.get\_sleep\_remaining\(\)
+#### pytrack.get\_sleep\_remaining\(\)
 
 In the event of a sleep session that was awoken by an asynchronous event \(Accelerometer, INT pin or Reset button\) the approximate sleep remaining interval \(expressed in **seconds**\) can be found out. The user has to manually use `setup_sleep()` to configure the next sleep interval.
 
-### pytrack.get\_wake\_reason\(\)
+#### pytrack.get\_wake\_reason\(\)
 
 Returns the last wakeup reason. Possible values are:
 
@@ -63,13 +63,13 @@ _Note: the_ `WAKE_REASON_INT_PIN` _can be used if the_ `PIC_RC1` _pin \(pin\#6 o
 
 As in the above example, this method should be called at the beginning of the script, to find out the reset \(wakeup\) reason.
 
-### pytrack.go\_to\_sleep\(\[gps=True\]\)
+#### pytrack.go\_to\_sleep\(\[gps=True\]\)
 
 Puts the board in sleep mode, for the duration, which has to be set previously with `pytrack.setup_sleep(timout_sec)`. The optional boolean parameter sets the GPS state during sleep.
 
 MicroPython code, which is after this function, is not executed, as wakeup will restart MicroPython.
 
-### pytrack.setup\_int\_wake\_up\(rising, falling\]\)
+#### pytrack.setup\_int\_wake\_up\(rising, falling\]\)
 
 Enables as wakeup source, the accelerometer INT pin \(PIC - RA5\). The boolean parameters will indicate rising edge \(activity detection\) and/or falling edge \(inactivity detection\) is configured.
 
@@ -89,11 +89,11 @@ py.setup_int_wake_up(True, True)
 acc.enable_activity_interrupt(2000, 200)
 ```
 
-### pytrack.setup\_int\_pin\_wake\_up\(\[rising\_edge = True\]\)
+#### pytrack.setup\_int\_pin\_wake\_up\(\[rising\_edge = True\]\)
 
 Enables as wakeup source, the INT pic \(PIC - RC1, pin\#6 on External IO Header\). Either rising or falling edge has to be set, by default it's rising edge.
 
-### pytrack.setup\_sleep\(time\_seconds\)
+#### pytrack.setup\_sleep\(time\_seconds\)
 
 Sets the sleep interval, specified in seconds. The actual sleep will be started by calling `go_to_sleep()` method.
 

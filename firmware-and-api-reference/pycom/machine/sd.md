@@ -33,17 +33,17 @@ f.close()
 
 ## Constructors
 
-### class machine.SD\(id, ...\)
+#### class machine.SD\(id, ...\)
 
 Create a SD card object. See [`sd.init()`](sd.md#sd-init-id-0) for parameters if initialisation.
 
 ## Methods
 
-### sd.init\(id=0\)
+#### sd.init\(id=0\)
 
 Enable the SD card.
 
-### sd.deinit\(\)
+#### sd.deinit\(\)
 
 Disable the SD card.
 

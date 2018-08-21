@@ -14,7 +14,7 @@ print(rtc.now())
 
 ## Constructors
 
-### class machine.RTC\(id=0, ...\)
+#### class machine.RTC\(id=0, ...\)
 
 Create an RTC object. See init for parameters of initialisation.
 
@@ -25,11 +25,11 @@ rtc = RTC(id=0)
 
 ## Methods
 
-### rtc.init\(datetime=None, source=RTC.INTERNAL\_RC\)
+#### rtc.init\(datetime=None, source=RTC.INTERNAL\_RC\)
 
 Initialise the RTC. The arguments are:
 
-* `datetime` when passed it sets the current time. It is a tuple of the form: `(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])`.
+* `datetime` when passed it sets the current time. It is a tuple of the form: `(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])`
 * `source` selects the oscillator that drives the RTC. The options are RTC.INTERNAL\_RC and RTC.XTAL\_32KHZ
 
 For example:
@@ -43,7 +43,7 @@ rtc.init((2017, 2, 28, 10, 30, 0, 0, 0))
 `tzinfo` is ignored by this method. Use `time.timezone` to achieve similar results.
 {% endhint %}
 
-### rtc.now\(\)
+#### rtc.now\(\)
 
 Get get the current `datetime` tuple:
 
@@ -52,7 +52,7 @@ Get get the current `datetime` tuple:
 rtc.now()
 ```
 
-### rtc.ntp\_sync\(server, \* , update\_period=3600\)
+#### rtc.ntp\_sync\(server, \* , update\_period=3600\)
 
 Set up automatic fetch and update the time using NTP \(SNTP\).
 
@@ -65,7 +65,7 @@ Can be used like:
 rtc.ntp_sync("pool.ntp.org") # this is an example. You can select a more specific server according to your geographical location
 ```
 
-### rtc.synced\(\)
+#### rtc.synced\(\)
 
 Returns `True` if the last `ntp_sync` has been completed, `False` otherwise:
 

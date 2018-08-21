@@ -77,35 +77,35 @@ Note that bitfield operations are independent of target byte endianness, in part
 
 ## Module Contents
 
-### class uctypes.struct\(addr, descriptor, layout\_type=NATIVE\)
+#### class uctypes.struct\(addr, descriptor, layout\_type=NATIVE\)
 
 Instantiate a "foreign data structure" object based on structure address in memory, descriptor \(encoded as a dictionary\), and layout type \(see below\).
 
-### uctypes.LITTLE\_ENDIAN
+#### uctypes.LITTLE\_ENDIAN
 
 Layout type for a little-endian packed structure. \(Packed means that every field occupies exactly as many bytes as defined in the descriptor, i.e. the alignment is 1\).
 
-### uctypes.BIG\_ENDIAN
+#### uctypes.BIG\_ENDIAN
 
 Layout type for a big-endian packed structure.
 
-### uctypes.NATIVE
+#### uctypes.NATIVE
 
 Layout type for a native structure - with data endianness and alignment conforming to the ABI of the system on which MicroPython runs.
 
-### uctypes.sizeof\(struct\)
+#### uctypes.sizeof\(struct\)
 
 Return size of data structure in bytes. Argument can be either structure class or specific instantiated structure object \(or its aggregate field\).
 
-### uctypes.addressof\(obj\)
+#### uctypes.addressof\(obj\)
 
 Return address of an object. Argument should be bytes, `bytearray` or other object supporting buffer protocol \(and address of this buffer is what actually returned\).
 
-### uctypes.bytes\_at\(addr, size\)
+#### uctypes.bytes\_at\(addr, size\)
 
 Capture memory at the given address and size as bytes object. As bytes object is immutable, memory is actually duplicated and copied into bytes object, so if memory contents change later, created object retains original value.
 
-### uctypes.bytearray\_at\(addr, size\)
+#### uctypes.bytearray\_at\(addr, size\)
 
 Capture memory at the given address and size as `bytearray` object. Unlike `bytes_at()` function above, memory is captured by reference, so it can be both written too, and you will access current value at the given memory address.
 

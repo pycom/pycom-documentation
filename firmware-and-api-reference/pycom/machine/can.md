@@ -16,7 +16,7 @@ can.recv()
 
 ## Constructors
 
-### class machine.CAN\(bus=0, ...\)
+#### class machine.CAN\(bus=0, ...\)
 
 Create an CAN object. See init for parameters of initialisation.:
 
@@ -27,7 +27,7 @@ can = CAN(0, mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))    # pin ord
 
 ## Methods
 
-### can.init\(mode=CAN.NORMAL, baudrate=500000, \*, frame\_format=CAN.FORMAT\_STD, rx\_queue\_len=128, pins=\('P22', 'P23'\)\)
+#### can.init\(mode=CAN.NORMAL, baudrate=500000, \*, frame\_format=CAN.FORMAT\_STD, rx\_queue\_len=128, pins=\('P22', 'P23'\)\)
 
 Initialize the CAN controller. The arguments are:
 
@@ -37,11 +37,11 @@ Initialize the CAN controller. The arguments are:
 * `rx_queue_len` defines the number of messages than can be queued by the receiver. Due to CAN being a high traffic bus, large values are recommended \(&gt;= 128\), otherwise messages will be dropped specially when no filtering is applied.
 * `pins` selects the `Tx` and `Rx` pins \(in that order\).
 
-### can.deinit\(\)
+#### can.deinit\(\)
 
 Disables the CAN bus.
 
-### can.send\(id, \* , data=None, rtr=False, extended=False\)
+#### can.send\(id, \* , data=None, rtr=False, extended=False\)
 
 Send a CAN frame on the bus
 
@@ -60,7 +60,7 @@ can.send(id=0x010, data=bytes([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08]))
 can.send(id=0x012, rtr=True)         # sends a remote request for message id=0x12
 ```
 
-### can.recv\(timeout=0\)
+#### can.recv\(timeout=0\)
 
 Get a message from the receive queue, and optionally specify a timeout value in **s** \(can be a floating point value e.g. `0.2`\). This function returns `None` if no messages available. If a message is present, it will be returned as a named tuple with the following form:
 
@@ -71,7 +71,7 @@ Get a message from the receive queue, and optionally specify a timeout value in 
 (id=0x012, data=b'123', rtr=False, extended=False)
 ```
 
-### can.soft\_filter\(mode, filter\_list\)
+#### can.soft\_filter\(mode, filter\_list\)
 
 Specify a software filter accepting only the messages that pass the filter test.
 
@@ -95,7 +95,7 @@ can.soft_filter(CAN.FILTER_MASK, [(0x100, 0x7FF), (0x200, 0x7FC)]) # more of the
 can.soft_filter(None)   # disable soft filters, all messages are accepted
 ```
 
-### can.callback\(trigger, handler=None, arg=None\)
+#### can.callback\(trigger, handler=None, arg=None\)
 
 Set a callback to be triggered when any of this 3 events are present:
 
@@ -122,7 +122,7 @@ def can_cb(can_o):
 can.callback(handler=can_cb, trigger=CAN.RX_FRAME)
 ```
 
-### can.events\(\)
+#### can.events\(\)
 
 This method returns a value with bits sets \(if any\) indicating the events that have occurred in the bus. Please note that by calling this function the internal events registry is cleared automatically, therefore calling it immediately for a second time will most likely return a value of 0.
 
