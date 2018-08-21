@@ -2,19 +2,25 @@
 
 ## Basic connection
 
+{% tabs %}
+{% tab title="Exp Board 2.0" %}
 * Look for the reset button on the module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the expansion board.
 * Insert the WiPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
 ![](../../.gitbook/assets/expansion_board_2_wipy.png)
+{% endtab %}
 
+{% tab title="Exp Board 3.0" %}
 * Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrack-pysense-pyscan/installation/firmware.md).
 * Look for the reset button on the module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the expansion board.
 * Insert the WiPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
 ![](../../.gitbook/assets/expansion_board_3_wipy.png)
+{% endtab %}
 
+{% tab title="Pytrack/Pysense/Pyscan" %}
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrack-pysense-pyscan/installation/firmware.md).
 * Look for the reset button on the WiPy module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
@@ -23,7 +29,9 @@
 ![](../../.gitbook/assets/pysense_wipy.png)
 
 ![](../../.gitbook/assets/pytrack_wipy.png)
+{% endtab %}
 
+{% tab title="USB UART Adapter" %}
 * Firstly you will need to connect power to your WiPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
 {% hint style="danger" %}
@@ -39,7 +47,9 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 * In order to put the WiPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 
 ![](../../.gitbook/assets/uart_wipy.png)
+{% endtab %}
 
+{% tab title="WiFi" %}
 **Note:** This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
 
 * In order to access the WiPy via WiFi you only need to provide `3.5v` - `5.5v` on the `Vin` pin of the WiPy:
@@ -52,6 +62,8 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 * Once connected to this network you will be able to access the telnet and FTP servers running on the WiPy. For both of these the login details are:
   * username: `micro`
   * password: `python`
+{% endtab %}
+{% endtabs %}
 
 ## Antennas
 
