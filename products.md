@@ -26,7 +26,7 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 | [IP67 Case \(universal\)](https://pycom.io/product/universal-ip67-case/) | ✔ | ✔ | ✔ | ✔ |
 | LiPo Battery \(user-supplied\) | ✔ | ✔ | ✔ | ✔ |
 | Micro USB Cable  Required \(user-supplied\) | ✔ | ✔ | ✔ | ✔ |
-| Pyscan Modules [OLED Module](https://pycom.io/product/oled-screen/)[2MP Camera](https://pycom.io/product/2mp-camera/)[Barcode Reader](https://pycom.io/product/barcode-reader)[Fingerprint Scanner](https://pycom.io/product/fingerprint-scanner/)[IR Image Sensor](https://pycom.io/product/infared-image-sensor/) | ✔ |  |  |  |
+| Pyscan Modules[OLED Module](https://pycom.io/product/oled-screen/)[2MP Camera](https://pycom.io/product/2mp-camera/)[Barcode Reader](https://pycom.io/product/barcode-reader)[Fingerprint Scanner](https://pycom.io/product/fingerprint-scanner/)[IR Image Sensor](https://pycom.io/product/infared-image-sensor/) |  |  |  | ✔ |
 
 ## OEM Modules
 
