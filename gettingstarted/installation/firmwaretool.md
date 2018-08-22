@@ -40,7 +40,7 @@ If you are having any issues, make sure the **TX and RX jumpers** are present on
 When using a Pysense/Pytrack/Pyscan/Expansion Board 3.0 to update your module you are not required to make a connection between `G23` and `GND`, the Pysense/Pytrack/Pyscan/Expansion Board 3.0 will do this automatically.
 {% endhint %}
 
-1. Before connecting your module to a Pysense/Pytrack board, you should update the firmware on the Pysense/Pytrack. Instructions on how to do this can be found [here](../../pytrack-pysense-pyscan/installation/firmware.md).
+1. Before connecting your module to a Pysense/Pytrack board, you should update the firmware on the Pysense/Pytrack. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
 2. Disconnect your device from your computer
 3. Insert module into Expansion Board
 4. Reconnect the board via USB to your computer

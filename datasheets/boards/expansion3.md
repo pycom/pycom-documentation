@@ -40,5 +40,5 @@ The specsheet of the Expansion Board is available as a PDF File.
 
 ## Troubleshooting
 
-* If PIC stays in bootloader mode, the [`dfu-util` update](../../pytrack-pysense-pyscan/installation/firmware.md) should be performed
+* If PIC stays in bootloader mode, the [`dfu-util` update](../../pytrackpysense/installation/firmware.md) should be performed
 

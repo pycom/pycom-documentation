@@ -21,7 +21,7 @@ Libraries for the rest of the components will be added soon.
 
 ## Driver
 
-The Windows 7 driver for Pyscan is located [here](../../pytrack-pysense-pyscan/installation/firmware.md).
+The Windows 7 driver for Pyscan is located [here](../../pytrackpysense/installation/firmware.md).
 
 For other Operating Systems there's no driver required.
 

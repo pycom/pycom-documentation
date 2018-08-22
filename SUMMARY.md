@@ -43,16 +43,16 @@
 
 ## Pytrack, Pysense, Pyscan
 
-* [Introduction](pytrack-pysense-pyscan/introduction.md)
-* [Installing Software](pytrack-pysense-pyscan/installation/README.md)
-  * [Updating Firmware](pytrack-pysense-pyscan/installation/firmware.md)
-  * [Installing Drivers - Windows 7](pytrack-pysense-pyscan/installation/drivers.md)
-  * [Installing Libraries](pytrack-pysense-pyscan/installation/libraries.md)
-* [API Reference](pytrack-pysense-pyscan/apireference/README.md)
-  * [Pytrack](pytrack-pysense-pyscan/apireference/pytrack.md)
-  * [Pysense](pytrack-pysense-pyscan/apireference/pysense.md)
-  * [Pyscan](pytrack-pysense-pyscan/apireference/pyscan.md)
-  * [Sleep](pytrack-pysense-pyscan/apireference/sleep.md)
+* [Introduction](pytrackpysense/introduction.md)
+* [Installing Software](pytrackpysense/installation/README.md)
+  * [Updating Firmware](pytrackpysense/installation/firmware.md)
+  * [Installing Drivers - Windows 7](pytrackpysense/installation/drivers.md)
+  * [Installing Libraries](pytrackpysense/installation/libraries.md)
+* [API Reference](pytrackpysense/apireference/README.md)
+  * [Pytrack](pytrackpysense/apireference/pytrack.md)
+  * [Pysense](pytrackpysense/apireference/pysense.md)
+  * [Pyscan](pytrackpysense/apireference/pyscan.md)
+  * [Sleep](pytrackpysense/apireference/sleep.md)
 
 ## Tutorials & Examples
 
