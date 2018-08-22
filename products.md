@@ -8,17 +8,17 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 
 | Module | WiFi | Bluetooth | LoRa | Sigfox | LTE CAT-M1NB-IoT |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| [ WiPy 3.0](product-info/development/wipy3.md) | ✔ | ✔ |  |  |  |
-| [SiPy](product-info/development/sipy.md) | ✔ | ✔ |  | ✔ |  |
-| [GPy](product-info/development/gpy.md) | ✔ | ✔ |  |  | ✔ |
-| [LoPy](product-info/development/lopy.md) | ✔ | ✔ | ✔ |  |  |
-| [LoPy4](product-info/development/lopy4.md) | ✔ | ✔ | ✔ | ✔ |  |
-| [FiPy](product-info/development/fipy.md) | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [ WiPy 3.0](datasheets/development/wipy3.md) | ✔ | ✔ |  |  |  |
+| [SiPy](datasheets/development/sipy.md) | ✔ | ✔ |  | ✔ |  |
+| [GPy](datasheets/development/gpy.md) | ✔ | ✔ |  |  | ✔ |
+| [LoPy](datasheets/development/lopy.md) | ✔ | ✔ | ✔ |  |  |
+| [LoPy4](datasheets/development/lopy4.md) | ✔ | ✔ | ✔ | ✔ |  |
+| [FiPy](datasheets/development/fipy.md) | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Antennas | [External WiFi/BT Antenna Kit](https://pycom.io/product/external-wifi-antenna/) | [External WiFi/BT Antenna Kit](https://pycom.io/product/external-wifi-antenna/) | [LoRa & Sigfox Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [LoRa & Sigfox Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [LTE-M Antenna Kit](https://pycom.io/product/lte-m-antenna-kit/) |
 
 ## Accessories
 
-| Accessory | [Expansion Board](product-info/boards/expansion3.md) | [Pysense](product-info/boards/pysense.md) | [Pytrack](product-info/boards/pytrack.md) | [Pyscan](product-info/boards/pyscan.md) |
+| Accessory | [Expansion Board](datasheets/boards/expansion3.md) | [Pysense](datasheets/boards/pysense.md) | [Pytrack](datasheets/boards/pytrack.md) | [Pyscan](datasheets/boards/pyscan.md) |
 | :--- | :--- | :--- | :--- | :--- |
 | [PyCase](https://pycom.io/product/pycase/) | ✔ |  |  |  |
 | [IP67 Case for Expansion Board](https://pycom.io/product/ip67-expansion-board-case/) | ✔ |  |  |  |
@@ -30,10 +30,10 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 
 ## OEM Modules
 
-| OEM Module | [L01/W01 Reference Board](product-info/oem/l01_reference.md) | [Universal Reference Board](product-info/oem/universal_reference.md) |
+| OEM Module | [L01/W01 Reference Board](datasheets/oem/l01_reference.md) | [Universal Reference Board](datasheets/oem/universal_reference.md) |
 | :--- | :--- | :--- |
-| [W01](product-info/oem/w01.md) | ✔ | ✔ |
-| [L01](product-info/oem/l01.md) | ✔ | ✔ |
-| [L04](product-info/oem/l04.md) |  | ✔ |
-| [G01](product-info/oem/g01.md) |  | ✔ |
+| [W01](datasheets/oem/w01.md) | ✔ | ✔ |
+| [L01](datasheets/oem/l01.md) | ✔ | ✔ |
+| [L04](datasheets/oem/l04.md) |  | ✔ |
+| [G01](datasheets/oem/g01.md) |  | ✔ |
 
