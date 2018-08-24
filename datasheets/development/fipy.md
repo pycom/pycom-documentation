@@ -4,7 +4,7 @@
 
 **Store**: [Buy Here](http://www.pycom.io/fipy)
 
-**Getting Started:** [Click Here](https://docs.pycom.io/chapter/gettingstarted/connection/fipy.html)
+**Getting Started:** [Click Here](../../gettingstarted/connection/fipy.md)
 
 ## Pinout
 

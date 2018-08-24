@@ -12,7 +12,7 @@
 {% endtab %}
 
 {% tab title="Exp Board 3.0" %}
-* Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](https://pycom.gitbook.io/dan-sbook/pytrack-pysense-pyscan/installation/firmware).
+* Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
 * Look for the reset button on the module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the expansion board.
 * Insert the LoPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
@@ -21,7 +21,7 @@
 {% endtab %}
 
 {% tab title="Pytrack/Pysense/Pyscan" %}
-* Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](https://pycom.gitbook.io/dan-sbook/pytrack-pysense-pyscan/installation/firmware).
+* Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
 * Look for the reset button on the LoPy module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
 * Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
