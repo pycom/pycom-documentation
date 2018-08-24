@@ -44,7 +44,7 @@ The WLAN constructor is special in the sense that if no arguments besides the `i
 
 ## Methods
 
-#### wlan.init\(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False\)
+#### wlan.init\(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False, bandwidth=HT40\)
 
 Set or get the WiFi network processor configuration.
 
@@ -61,6 +61,7 @@ Arguments are:
 
 * `power_save` enables or disables power save functions in `STA` mode.
 * `hidden` only valid in `WLAN.AP` mode to create an access point with a hidden SSID when set to `True`.
+* `bandwidth` is the Bandwidth to use, either 20MHz or 40 MHz , use `HT20` or `HT40`
 
 For example, you can do:
 
@@ -80,7 +81,7 @@ wlan.init(mode=WLAN.STA)
 
 Disables the WiFi radio.
 
-#### wlan.connect\(ssid, \* , auth=None, bssid=None, timeout=None, ca\_certs=None, keyfile=None, certfile=None, identity=None\)
+#### wlan.connect\(ssid, \* , auth=None, bssid=None, timeout=None, ca\_certs=None, keyfile=None, certfile=None, identity=None, hostname=None\)
 
 Connect to a wifi access point using the given SSID, and other security parameters.
 
@@ -93,6 +94,7 @@ Connect to a wifi access point using the given SSID, and other security paramete
 * `keyfile` is the path to the client key. Only used if `username` and `password` are not part of the `auth` tuple.
 * `certfile` is the path to the client certificate. Only used if `username` and `password` are not part of the `auth` tuple.
 * `identity` is only used in case of `WLAN.WPA2_ENT` security. Needed by the server.
+* `hostname` is the name of the host connecting to the AP. Max length of name string is 32 Bytes
 
 {% hint style="info" %}
 The ESP32 only handles certificates with `pkcs8` format \(but not the "Traditional SSLeay RSAPrivateKey" format\). The private key should be RSA coded with 2048 bits at maximum.
@@ -148,9 +150,18 @@ Get or set the antenna type \(external or internal\).
 
 Get a 6-byte long `bytes` object with the WiFI MAC address.
 
+#### wlan.bandwidth\(\)
+
+Set the bandwidth of the wifi, either 20 MHz or 40 MHz can be configured, use constants `HT20` or `HT40`
+
+#### wlan.hostname\(\)
+
+Set the Host name of the device connecting to the AP in case of Wifi `mode=WLAN.STA`, in case of `mode=WLAN.AP` this is the name of the host hosting the AP. Max length of name string is 32 Bytes
+
 ## Constants
 
 * WLAN mode: `WLAN.STA`, `WLAN.AP`, `WLAN.STA_AP`
 * WLAN network security: `WLAN.WEP`, `WLAN.WPA`, `WLAN.WPA2`, `WLAN.WPA2_ENT`
 * Antenna type: `WLAN.INT_ANT`, `WLAN.EXT_ANT`
+* WLAN Bandwidth: `WLAN.HT20`, `WLAN.HT40`
 

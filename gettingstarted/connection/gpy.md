@@ -41,6 +41,8 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 {% endhint %}
 
 * In order to put the GPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
+
+![](../../.gitbook/assets/uart_gpy.png)
 {% endtab %}
 
 {% tab title="WiFi" %}

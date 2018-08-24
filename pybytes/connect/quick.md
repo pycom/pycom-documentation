@@ -30,7 +30,7 @@ Install the Firmware updater on your computer.
 
 ![](../../.gitbook/assets/2%20%281%29.png)
 
-2. Select your device serial port \(Make sure your device is connected to your computer\);
+2 .Select your device serial port \(Make sure your device is connected to your computer\);
 
 3. Mark the options "Erase flash file system" and "Force update Pybytes registration";
 

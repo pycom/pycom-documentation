@@ -6,7 +6,7 @@ In this section, we will explain to you how to create widgets for data visualisa
 We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](connect/). After your done with that, you can proceed to the next example.
 {% endhint %}
 
-## Step 1: Set up your application \(`main.py`\)
+## Step 1: Set up your application \(main.py\)
 
 The first step is to have an application running on your device. The application in this example sends data from a vector every 10 seconds to Pybytes.
 

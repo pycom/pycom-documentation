@@ -155,9 +155,10 @@ while bluetooth.isscanning():
             print(ubinascii.hexlify(mfg_data))
 ```
 
-#### bluetooth.connect\(mac\_addr\)
+#### bluetooth.connect\(mac\_addr, timeout=None\)
 
-Opens a BLE connection with the device specified by the `mac_addr` argument. This function blocks until the connection succeeds or fails. If the connections succeeds it returns a object of type `GATTCConnection`.
+* `mac_addr` is the address of the remote device to connect
+* `timeout` specifies the amount of time in milliseconds to wait for the connection process to finish. If not given then no timeout is applied The function blocks until the connection succeeds or fails \(raises OSError\) or the given `timeout` expires \(raises `Bluetooth.timeout TimeoutError`\). If the connections succeeds it returns a object of type `GATTCConnection`.
 
 ```python
 bluetooth.connect('112233eeddff') # mac address is accepted as a string
@@ -246,4 +247,8 @@ Closes the BLE connection with the client.
 * Characteristic properties \(bit values that can be combined\): `Bluetooth.PROP_BROADCAST`, `Bluetooth.PROP_READ`, `Bluetooth.PROP_WRITE_NR`, `Bluetooth.PROP_WRITE`, `Bluetooth.PROP_NOTIFY`, `Bluetooth.PROP_INDICATE`, `Bluetooth.PROP_AUTH`, `Bluetooth.PROP_EXT_PROP`
 * Characteristic callback events: `Bluetooth.CHAR_READ_EVENT`, `Bluetooth.CHAR_WRITE_EVENT`, `Bluetooth.NEW_ADV_EVENT`, `Bluetooth.CLIENT_CONNECTED`, `Bluetooth.CLIENT_DISCONNECTED`, `Bluetooth.CHAR_NOTIFY_EVENT`
 * Antenna type: `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
+
+## Exceptions
+
+* `Bluetooth.timeout`
 

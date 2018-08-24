@@ -32,7 +32,7 @@ SSL sockets inherit all methods and from the standard sockets, see the `usocket`
 
 ## Exceptions
 
-* `ssl.SSLError`
+`ssl.SSLError`
 
 ## Constants
 

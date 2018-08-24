@@ -87,9 +87,25 @@ uos.unmount(path)
 
 Unmounts a previously mounted block device from the given path.
 
-#### uos.mkfs\(block\_device or path\)
+#### uos.mkfat\(block\_device\)
 
-Formats the specified path, must be either `/flash` or `/sd`. A block device can also be passed like an SD object before being mounted.
+Instantiate a VFS \(Virtual File System\) object with underlying FAT file system.
+
+Example:
+
+```python
+from machine import SD
+import os
+sd = SD()
+vfs = os.mkfat(sd)	# Creating a VFS 
+vfs.mkfs(sd)     	# Formating the SD card
+# Now we can use normal os mount
+os.mount(vfs, '/sd')
+```
+
+#### uos.fsformat\(path\)
+
+Formats the block device mounted under the input path, must be either `/flash` or `/sd`
 
 #### uos.dupterm\(stream\_object\)
 

@@ -29,7 +29,7 @@ rtc = RTC(id=0)
 
 Initialise the RTC. The arguments are:
 
-* `datetime` when passed it sets the current time. It is a tuple of the form: `(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])`
+* `datetime` when passed it sets the current time. It is a tuple of the form: `(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])`.
 * `source` selects the oscillator that drives the RTC. The options are RTC.INTERNAL\_RC and RTC.XTAL\_32KHZ
 
 For example:
@@ -71,6 +71,24 @@ Returns `True` if the last `ntp_sync` has been completed, `False` otherwise:
 
 ```python
 rtc.synced()
+```
+
+#### rtc.memory\(\[data\]\)
+
+Reads RTC memory contents or write data in passed Buffer in to RTC memory
+
+Example:
+
+```python
+rtc = RTC()
+rtc.memory(b'10101010') # writes data in RTC memory
+rtc.memory()
+```
+
+Output:
+
+```python
+b'10101010'
 ```
 
 ## Constants
