@@ -8,7 +8,7 @@ Please follow the instructions below to install the required drivers.
 
 Please download the driver software from the link below.
 
-[Pytrack/Pysense/Pyscan/Expansion board 3 Driver](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/pytrackpysense/installation/pycom.inf)
+[Pytrack/Pysense/Pyscan/Expansion Board 3 Driver](https://github.com/pycom/pycom-documentation/blob/master/pytrackpysense/installation/pycom.inf)
 
 ## Installation
 

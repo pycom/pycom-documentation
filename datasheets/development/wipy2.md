@@ -2,9 +2,9 @@
 
 ![](../../.gitbook/assets/wipy2-1.png)
 
-**Store**: Discontinued, See [WiPy3](https://docs.pycom.io/chapter/datasheets/development/wipy3.html)
+**Store**: Discontinued, See [WiPy3](wipy3.md)
 
-**Getting Started:** [Click Here](https://docs.pycom.io/chapter/gettingstarted/connection/wipy.html)
+**Getting Started:** [Click Here](../../gettingstarted/connection/wipy.md)
 
 ## Pinout
 

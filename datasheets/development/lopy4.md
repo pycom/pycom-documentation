@@ -4,7 +4,7 @@
 
 **Store**: [Buy Here](http://www.pycom.io/lopy4)
 
-**Getting Started:** [Click Here](https://docs.pycom.io/chapter/gettingstarted/connection/lopy4.html)
+**Getting Started:** [Click Here](../../gettingstarted/connection/lopy4.md)
 
 ## Pinout
 

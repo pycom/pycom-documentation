@@ -4,7 +4,7 @@
 
 **Store**: [Buy Here](http://www.pycom.io/sipy)
 
-**Getting Started:** [Click Here](https://docs.pycom.io/chapter/gettingstarted/connection/sipy.html)
+**Getting Started:** [Click Here](../../gettingstarted/connection/sipy.md)
 
 ## Pinout
 

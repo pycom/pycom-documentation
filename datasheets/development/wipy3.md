@@ -4,7 +4,7 @@
 
 **Store**: [Buy Here](http://www.pycom.io/wipy-3)
 
-**Getting Started:** [Click Here](https://docs.pycom.io/chapter/gettingstarted/connection/wipy.html)
+**Getting Started:** [Click Here](../../gettingstarted/connection/wipy.md)
 
 ## Pinout
 
