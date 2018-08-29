@@ -1,65 +1,112 @@
+---
+description: Sequans LTE modem upgrade steps
+---
+
 # Modem Firmware Update
 
-## Description
+There are 2 ways to upgrade the firmware on the LTE modem: via an SD card or via UART serial interface \(Windows, Linux, or macOS\)
 
-The Sequans Monarch SQN3330 cellular radio found on the Pycom FiPy, GPy and GO1 modules requires a different firmware to operate in CAT-M1 or NB-IoT mode.
-
-This page will explain the process to upgrade the firmware of the cellular radio The process involves streaming the firmware file from the ESP32 to the SQN3330. Currently, the file has to be stored in a micro SD card first so that the ESP32 can access it easily. We are current working to add support for streaming the file via the updater tool as well.
-
-## Requirements
-
-Before proceeding you will need:
-
-* Pycom cellular enabled module \(GPy, FiPy, G01\)
-* FAT32 formatted microSD card \(with at least 6MB of free space\)
-* A Pycom Expansion Board or shield \(or a microSD card socket breakout board\)
-
-## Usage
-
-{% hint style="danger" %}
-If your module is running the factory LTE chip firmware, you **MUST** first perform an update to the latest CAT-M1 firmware before trying to upgrade to the NB-IoT firmware. Skipping this step will cause your radio to become unresponsive and it will require access to the test points in order to re-flash the firmware.
+{% hint style="info" %}
+This article is only related to [GPy](../../datasheets/development/gpy.md), [FiPy](../../datasheets/development/fipy.md), and [G01](../../datasheets/oem/g01.md) boards
 {% endhint %}
 
-Firstly, you will need to download the required library files from [here](https://github.com/pycom/pycom-libraries/tree/master/lib/sqnsupgrade). You will need to place these in a directory called "lib" just like any other libraries. This can be done using either [FTP](../../gettingstarted/programming/ftp.md) or [Pymakr](../../pymakr/installation/)
+Before going into details of this method, please do the following:
 
-Next you need to download the firmware file from [here](https://software.pycom.io/downloads/sequans.html). You will need to place the firmware on a FAT32 formatted microSD card, then insert the SD card into a Expansion Board, Pytrack, Pysense or Pyscan. Power-up the system and connect to the interactive REPL and run the following code:
+1. [Upgrade Pycom Firmware Updater tool to the latest version](../../gettingstarted/installation/firmwaretool.md)
+2. [Upgrade firmware](../../gettingstarted/installation/firmwaretool.md#updating-device-firmware) to latest `stable` version \(`v1.18.1`\)
+
+## Via SD card
+
+First, you need to get the firmware image files downloaded onto your FAT32 formatted SD card. You can find the different versions of the firmware here: [https://github.com/pycom/sqnsupgrade/tree/master/fw](https://github.com/pycom/sqnsupgrade/tree/master/fw)
+
+You will find 2 types of files for firmware: `.dup` and `updater.elf`. You will need the `updater.elf` file only for the first time you do this upgrade.
+
+Once you've downloaded the firmware files onto the SD card, insert it in your board and run the following commands:
 
 ```python
 import sqnsupgrade
-sqnsupgrade.run(path_to_firmware, 921600)   # path_to_firmware example: '/sd/FIPY_NB1_35351.dup'
+sqnsupgrade.run('<Path_to_dup_file_on_SD>','<Path_to_dot_elf_on_SD')
 ```
 
-The whole process can take between 2 and 3 minutes and at some points it will seem to stall, this is normal, just be patience. You should see an output like this:
+Once the update is finished successfully, you will have a summary of the new updated versions, something like this:
 
 ```text
-<<< Welcome to the SQN3330 firmware updater >>>
-Entering recovery mode
-Resetting.
-
-Starting STP (DO NOT DISCONNECT POWER!!!)
-STP started
-Session opened: version 1, max transfer 8192 bytes
-Sending 4560505 bytes: [########################################] 100%
-Code download done, returning to user mode
-Resetting (DO NOT DISCONNECT POWER!!!).
-.........
-Deploying the upgrade (DO NOT DISCONNECT POWER!!!)...
-Resetting (DO NOT DISCONNECT POWER!!!)..
-...
-Upgrade completed!
-Here is the current firmware version:
-UE6.0.0.0-ER7
-LR6.0.0.0-35351
-OK
+SYSTEM VERSION
+==============
+      FIRMWARE VERSION
+        Bootloader0  : 5.1.1.0 [33080]
+        Bootloader1  : 5.1.1.0 [38638]
+        Bootloader2* : 5.1.1.0 [38638]
+        NV Info      : 1.1,0,0
+        Software     : 5.1.1.0 [38638] by robot-soft at 2018-08-20 09:51:46
+        UE           : 5.0.0.0d
+      COMPONENTS
+        ZSP0         : 1.0.99-13604
+        ZSP1         : 1.0.99-12341
 ```
 
-{% hint style="danger" %}
-**DO NOT DISCONNECT** power while the upgrade process is taking place, wait for it to finish!
-{% endhint %}
+## Via UART Serial Interface
 
-If the module get's stuck in here for more than 1 minute while upgrading to the NB-IoT firmware, you can cycle power and retry. In this case it is safe.
+If you don't want to use an SD card to hold the firmware images, you can directly use the existing UART interface you have with the board to load these firmware files from your computer.
+
+In that case, you need to **run upgrade scripts from both your board and your computer**.
+
+### **Commands to be run on the board**
+
+```python
+import sqnsupgrade
+sqnsupgrade.uart(True)
+```
+
+After this command is executed a message will be displayed asking you to close the port
 
 ```text
-Sending 4560505 bytes: [##                                      ]   6%
+Going into MIRROR mode... please close this terminal to resume the upgrade via UART
 ```
+
+You should close the terminal and run the following commands from your computer:
+
+### **Commands to be run on your** computer
+
+Please note that you need to do these steps **before running the script on your computer:**
+
+* Have [Python 3](https://docs.python-guide.org/starting/installation/) installed on your computer
+* Install [`Pyserial`](https://github.com/pyserial/pyserial#installation) package for Python 3 using [pip](https://pip.pypa.io/en/stable/installing/)
+
+Now, you have to download the Sequans upgrade scripts from GitHub: [https://github.com/pycom/sqnsupgrade](https://github.com/pycom/sqnsupgrade.git)
+
+Go to the directory and run the following commands in terminal:
+
+```python
+$ python3
+Python 3.6.5 (default, Apr 25 2018, 14:23:58)
+[GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>> import sqnsupgrade
+>>> sqnsupgrade.run('Serial_Port', './fw/<file>.dup', './fw/updater.elf')
+```
+
+Once the update is finished successfully, you will have a summary of the new updated versions, something like this:
+
+```text
+SYSTEM VERSION
+==============
+      FIRMWARE VERSION
+        Bootloader0  : 5.1.1.0 [33080]
+        Bootloader1  : 5.1.1.0 [38638]
+        Bootloader2* : 5.1.1.0 [38638]
+        NV Info      : 1.1,0,0
+        Software     : 5.1.1.0 [38638] by robot-soft at 2018-08-20 09:51:46
+        UE           : 5.0.0.0d
+      COMPONENTS
+        ZSP0         : 1.0.99-13604
+        ZSP1         : 1.0.99-12341
+```
+
+## **Retrying process**
+
+In case of any failure or interruption to the process of LTE modem upgrade, you can repeat the same steps **after doing a hard reset to the board \(i.e. disconnecting power and connect again\), normal reset is not enough.**
+
+In case of upgrade via UART, there is a change to the command that you should run on the board. Instead of `sqnsupgrade.uart(True)`, you should use `sqnsupgrade.uart(True, retry=True)`
 
