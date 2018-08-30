@@ -52,14 +52,14 @@ To flash the CAT-M1 firmware onto your device:
 
 ```python
 import sqnsupgrade
-sqnsupgrade.run('/sd/CATM1-38638.dup','/sd/updater.elf')
+sqnsupgrade.run('/sd/CATM1-38638.dup', '/sd/updater.elf')
 ```
 
-To flash the NB-IOT firmware onto your device:
+To flash the NB-IoT firmware onto your device:
 
 ```python
 import sqnsupgrade
-sqnsupgrade.run('/sd/NB1-37781.dup','/sd/updater.elf')
+sqnsupgrade.run('/sd/NB1-37781.dup', '/sd/updater.elf')
 ```
 
 Please note you can directly flash the desired firmware onto your module, it is not necessary to upgrade to the latest CAT-M1 firmware before switching to NB-IoT.
