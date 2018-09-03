@@ -5,4 +5,4 @@ structure:
   summary: SUMMARY.md
 ​
 redirects:
-  chapter/products: products.md
+  chapter/products: ./products.md
