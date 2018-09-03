@@ -144,7 +144,7 @@ You will need the following software installed on your computer:
 1. [Python 3](https://www.python.org/downloads), if it's not directly available through your OS distributor
 2. [PySerial](https://pythonhosted.org/pyserial/pyserial.html#installation)
 
-You will also need to download the following Python scripts: [https://github.com/pycom/pycom-libraries/lib/sqnsupgrade](https://github.com/pycom/pycom-libraries/lib/sqnsupgrade)
+You will also need to download the following Python scripts: [https://github.com/pycom/pycom-libraries/tree/master/lib/sqnsupgrade](https://github.com/pycom/pycom-libraries/tree/master/lib/sqnsupgrade)
 
 First, you need to prepare your modem for upgrade mode by using the following commands:
 
