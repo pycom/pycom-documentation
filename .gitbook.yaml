@@ -7,3 +7,4 @@ structure:
 redirects:
   chapter/products: ./products.md
   chapter/gettingstarted: ./gettingstarted/introduction.md
+  chapter/pymakr/settings: ./pymakr/settings.md
