@@ -5,9 +5,9 @@ Welcome to the Pycom documentation site. We recommend reading through all the se
 To get started, read through the Getting Started Guide then feel free to jump straight into the tutorials and examples in Tutorials & Examples to begin building your projects.
 
 * [Products](products.md)
-* [Getting Started](getting-started/introduction.md)
-* [Tutorials](tutorials-and-examples/introduction.md)
-* [Product Info](product-info/introduction.md)
-* [API Documentation](firmware-and-api-reference/introduction.md)
+* [Getting Started](gettingstarted/introduction.md)
+* [Tutorials](tutorials/introduction.md)
+* [Product Info](datesheets/introduction.md)
+* [API Documentation](firmwareapi/introduction.md)
 * [Pybytes](pybytes/introduction.md)
 

@@ -1,7 +1,7 @@
 # Add Sigfox device
 
 {% hint style="danger" %}
-Before you start you need to create Sigfox account. You need Pycom device with Sigfox to get your Sigfox account. [**Follow these instructions**](../../../getting-started/registration/sigfox.md).
+Before you start you need to create Sigfox account. You need Pycom device with Sigfox to get your Sigfox account. [**Follow these instructions**](../../../gettingstarted/registration/sigfox.md).
 {% endhint %}
 
 ## Create Sigfox API credentials
