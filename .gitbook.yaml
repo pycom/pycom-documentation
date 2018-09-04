@@ -1,8 +1,8 @@
 root: ./
 
 structure:
-  readme: README: ./
-  summary: SUMMARY: ./
+  readme: README.md
+  summary: SUMMARY.md
 
 redirects:
   chapter/products: ./products
