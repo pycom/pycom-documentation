@@ -10,7 +10,3 @@ To get started, read through the Getting Started Guide then feel free to jump st
 * [Product Info](datasheets/introduction.md)
 * [API Documentation](firmwareapi/introduction.md)
 * [Pybytes](pybytes/introduction.md)
-
-{% hint style="info" %}
-If you've been redirected here from a link, check if it contains `/chapter`. If yes, by removing that part, you'll get to the correct page. We have migrated our documentation which has changed the path of the pages.
-{% endhint %}
