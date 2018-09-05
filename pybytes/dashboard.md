@@ -42,12 +42,12 @@ _thread.start_new_thread(send_env_data, ())
 3. Upload the code into your device. Now your device is sending data to Pybytes.
 
 {% hint style="info" %}
-
 In this code, we're calling the function `pybytes.send_virtual_pin_value(persistent, pin, value))` to communicate with Pybytes. This function is part of the Pybytes library, and it has three arguments: `persistent`, `pin` and `value`.
 
 * `persistent` denotes information that is infrequently accessed and not likely to be modified;
 * `pin` represents which virtual pin is receiving data;
-* `value` is the value being attributed to that particular pin.
+* `value` is the value being attributed to that particular pin
+{% endhint %}
 
 ## Step 2: Add a signal from your device
 
