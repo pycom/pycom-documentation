@@ -20,6 +20,10 @@ The Pytrack is has a number of features including GPS, 3-Axis Accelerometer and 
 
 All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `P22` \(SDA\) and `P21` \(SCL\).
 
+You can find the datasheet and more info here:
+
+{% page-ref page="../datasheets/boards/pytrack.md" %}
+
 ## Pysense
 
 Pysense is a sensor packed version of the Expansion Board, intended for use in environment sensing applications such as temperature, humidity monitoring, and light sensing.
@@ -40,6 +44,10 @@ The Pysense is packed with a number of sensors and hardware, see the list below 
 
 All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `GPI09` \(SDA\) and `GPI08` \(SCL\).
 
+You can find the datasheet and more info here:
+
+{% page-ref page="../datasheets/boards/pysense.md" %}
+
 ## Pyscan
 
 Pyscan is a RFID-NFC enabled version of the Expansion Board, intended for use in scanning applications, such as RFID/NFC readers.
@@ -59,4 +67,8 @@ The Pyscan is packed with a number of sensors and hardware, see the list below f
 * Ultra low power operation \(~1uA in deep sleep\)
 
 All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `P22` \(SDA\) and `P21` \(SCL\).
+
+You can find the datasheet and more info here:
+
+{% page-ref page="../datasheets/boards/pyscan.md" %}
 
