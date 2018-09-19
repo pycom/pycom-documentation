@@ -8,6 +8,7 @@ redirects:
   chapter/products: ./products.md
 
   chapter/gettingstarted: ./gettingstarted/introduction.md
+  getting-started/introduction: ./gettingstarted/introduction.md
   chapter/gettingstarted/introduction: ./gettingstarted/introduction.md
   chapter/gettingstarted/hardwaresetup: ./gettingstarted/connection/README.md
   chapter/gettingstarted/connection/lopy: ./gettingstarted/connection/lopy.md
