@@ -31,7 +31,7 @@
   * [Cellular](gettingstarted/registration/cellular.md)
   * [LoRaWAN](gettingstarted/registration/lora/README.md)
     * [The Things Network](gettingstarted/registration/lora/ttn.md)
-    * [Objenious](gettingstarted/registration/lora/objenious.md)
+    * [Senet](gettingstarted/registration/lora/senet.md)
 
 ## Pymakr Plugin
 
@@ -205,4 +205,3 @@
 ## Have a question?
 
 * [Ask on the Forum](https://forum.pycom.io)
-
