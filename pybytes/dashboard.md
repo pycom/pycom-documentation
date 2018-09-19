@@ -14,18 +14,18 @@ The first step is to have an application running on your device. The application
 2. Insert the following code on your `main.py`;
 
 ```python
-# # Import what is necessary to create a thread
+# Import what is necessary to create a thread
 import _thread
 from time import sleep
 
-# # Increment index used to scan each point from vector sensors_data
+# Increment index used to scan each point from vector sensors_data
 def inc(index, vector):
     if index < len(vector)-1:
         return index+1
     else:
         return 0
 
-# # Define your thread's behaviour, here it's a loop sending sensors data every 10 seconds
+# Define your thread's behaviour, here it's a loop sending sensors data every 10 seconds
 def send_env_data():
     idx = 0
     sensors_data = [0, -0.2, -0.5, -0.7, -0.8, -0.9, -0.9, -0.9, -0.8, -0.6, -0.4, -0.2, 0, 0.3, 0.5, 0.7, 0.8, 0.9, 0.9, 0.9, 0.8, 0.6, 0.4, 0.1]
@@ -35,7 +35,7 @@ def send_env_data():
         idx = inc(idx, sensors_data)
         sleep(10)
 
-# # Start your thread
+# Start your thread
 _thread.start_new_thread(send_env_data, ())
 ```
 
