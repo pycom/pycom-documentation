@@ -21,7 +21,7 @@ You can find the different versions of firmwares available here: [https://softwa
 
 There are two packages available, one for the latest CAT-M1 firmware, and another for the latest NB-IoT firmware.
 
-After unpacking the zip archive, you will find each firmware packages contains two files, one being the firmware file \(`CATM1-38638.dup` or `NB1-37781.dup`\) and the `updater.elf` file, which is required when using the "recovery" firmware update method or if a previous upgrade failed and the modem is in recovery mode.
+After unpacking the zip archive, you will find each firmware packages contains two files, one being the firmware file \(e.g. `CATM1-38638.dup` or `NB1-37781.dup`\) and the `updater.elf` file, which is required when using the "recovery" firmware update method or if a previous upgrade failed and the modem is in recovery mode.
 
 Please note that the `updater.elf` file is only around 300K so you can also store it inside the flash file system of the module. The firmware dup files will NOT fit into the available `/flash` file system on the module, so you either need to use an SD card or upload it directly from your computer.
 
