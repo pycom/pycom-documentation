@@ -22,7 +22,7 @@ All of the included sensors are connected to the Pycom device via the I2C interf
 
 You can find the datasheet and more info here:
 
-{% page-ref page="../datasheets/boards/pytrack.md" %}
+{% page-ref page="../product-info/boards/pytrack.md" %}
 
 ## Pysense
 
@@ -46,7 +46,7 @@ All of the included sensors are connected to the Pycom device via the I2C interf
 
 You can find the datasheet and more info here:
 
-{% page-ref page="../datasheets/boards/pysense.md" %}
+{% page-ref page="../product-info/boards/pysense.md" %}
 
 ## Pyscan
 
@@ -70,5 +70,5 @@ All of the included sensors are connected to the Pycom device via the I2C interf
 
 You can find the datasheet and more info here:
 
-{% page-ref page="../datasheets/boards/pyscan.md" %}
+{% page-ref page="../product-info/boards/pyscan.md" %}
 

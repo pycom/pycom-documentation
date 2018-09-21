@@ -2,7 +2,7 @@
 
 At present, basic BLE functionality is available. More features will be implemented in the near future, such as pairing. This page will be updated in line with these features.
 
-Full info on `bluetooth` can be found within [Bluetooth page](../../firmwareapi/pycom/network/bluetooth/) of the Firmware API Reference.
+Full info on `bluetooth` can be found within [Bluetooth page]() of the Firmware API Reference.
 
 ## Scan for BLE Devices
 

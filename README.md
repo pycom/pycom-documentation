@@ -7,7 +7,7 @@ To get started, read through the Getting Started Guide then feel free to jump st
 * [Products](products.md)
 * [Getting Started](gettingstarted/introduction.md)
 * [Tutorials](tutorials/introduction.md)
-* [Product Info](datasheets/introduction.md)
+* [Product Info](product-info/introduction.md)
 * [API Documentation](firmwareapi/introduction.md)
 * [Pybytes](pybytes/introduction.md)
 
