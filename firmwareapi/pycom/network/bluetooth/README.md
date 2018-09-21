@@ -159,7 +159,7 @@ while bluetooth.isscanning():
 
 Opens a BLE connection with the device specified by the `mac_addr` argument. This function blocks until the connection succeeds or fails. If the connections succeeds it returns a object of type `GATTCConnection`.
 
-Connections are initiated by the central device. There is a maximum of 7 simultaneous connections.
+Connections are initiated by the central device. There is a maximum of 4 simultaneous connections.
 
 ```python
 bluetooth.connect('112233eeddff') # mac address is accepted as a string
