@@ -2,7 +2,31 @@
 
 Before you start, make sure that your device was registered with [Sigfox](../gettingstarted/registration/sigfox.md).
 
-The following tutorials demonstrate how to register and get started with the SiPy. The SiPy can be configured for operation in various countries based upon specified RCZ zones \(see the `Sigfox` class for more info\). The SiPy supports both uplink and downlink `Sigfox` messages as well as device to device communication via its FSK Mode `Sigfox`.
+The following tutorials demonstrate how to register and get started with the SiPy. The board can be configured for operation in various countries based upon specified RCZ zones \(see the `Sigfox` class for more info\). The SiPy, LoPy 4, and FiPy supports both uplink and downlink `Sigfox` messages as well as device to device communication via its FSK Mode `Sigfox`.
+
+```python
+from network import Sigfox
+import socket
+​
+# init Sigfox for RCZ1 (Europe)
+sigfox = Sigfox(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1)
+​
+# create a Sigfox socket
+s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
+​
+# make the socket blocking
+s.setblocking(True)
+​
+# configure it as uplink only
+s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
+​
+# send some bytes
+s.send(bytes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
+```
+
+{% hint style="danger" %}
+Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use \(e.g. without an antenna\), may damage the device.
+{% endhint %}
 
 ## Disengage Sequence Number
 
