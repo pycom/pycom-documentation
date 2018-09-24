@@ -44,7 +44,7 @@ The WLAN constructor is special in the sense that if no arguments besides the `i
 
 ## Methods
 
-#### wlan.init\(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False, bandwidth=HT40\)
+##### wlan.init(mode, * , ssid=None, auth=None, channel=1, antenna=None, power_save=False, hidden=False, bandwidth=HT40, max\_tx\_pwr=20, country=CN)
 
 Set or get the WiFi network processor configuration.
 
@@ -62,6 +62,10 @@ Arguments are:
 * `power_save` enables or disables power save functions in `STA` mode.
 * `hidden` only valid in `WLAN.AP` mode to create an access point with a hidden SSID when set to `True`.
 * `bandwidth` is the Bandwidth to use, either 20MHz or 40 MHz , use `HT20` or `HT40`
+
+- ``max_tx_pwr`` is the maximum WiFi Tx power allowed. see `WLAN.max_tx_power()` for more details
+
+- ``country`` tuple representing the country configuration parameters. see `WLAN.country()` for more details
 
 For example, you can do:
 
@@ -100,9 +104,46 @@ Connect to a wifi access point using the given SSID, and other security paramete
 The ESP32 only handles certificates with `pkcs8` format \(but not the "Traditional SSLeay RSAPrivateKey" format\). The private key should be RSA coded with 2048 bits at maximum.
 {% endhint %}
 
-#### wlan.scan\(\)
+##### wlan.scan([ssid=NULL, bssid=NULL, channel=0, show_hidden=False, type=WLAN.SCAN\_ACTIVE, scantime=120ms])
 
-Performs a network scan and returns a list of named tuples with `(ssid, bssid, sec, channel, rssi)`. Note that channel is always `None` since this info is not provided by the WiPy.
+Performs a network scan and returns a list of named tuples with (ssid, bssid, sec, channel, rssi). When no config args passed scan will be performed with default configurations.
+
+Note: For Fast scan mode ssid/bssid and channel should be 
+
+- ``ssid`` : If the SSID is not NULL, it is only the AP with the same SSID that can be scanned.
+
+- ``bssid`` : If the BSSID is not NULL, it is only the AP with the same BSSID that can be scanned. The bssid is given as 6 Hexadecimal bytes literals (i.e b'\xff\xff\xff\xff\xff\xff')
+
+- ``channel`` : If “channel” is 0, there will be an all-channel scan; otherwise, there will be a specific-channel scan.
+
+- ``show_hidden`` : If “show_hidden” is 0, the scan ignores the AP with a hidden SSID; otherwise, the scan considers the hidden AP a normal one.
+
+- ``type`` : If “type” is `WLAN.SCAN_ACTIVE`, the scan is “active”; otherwise, it is a “passive” one.
+
+	- Active Scan is performed by sending a probe request. The default scan is an active scan
+
+	- Passive Scan sends no probe request. Just switch to the specific channel and wait for a beacon. 
+
+- ``scantime`` : 
+
+	This field is used to control how long the scan dwells on each channel.
+ 	For passive scans, scantime=[int] designates the dwell time for each channel.
+ 
+	For active scans, dwell times for each channel are listed below. 
+	scantime is given as a tuple for min and max times (min,max)
+
+	{% hint style='danger' %}
+	
+	min=0, max=0: scan dwells on each channel for 120 ms.
+	
+	min>0, max=0: scan dwells on each channel for 120 ms.
+	
+	min=0, max>0: scan dwells on each channel for max ms.
+	
+	min>0, max>0: The minimum time the scan dwells on each channel is min ms. If no AP is found during this time frame, the scan switches to the next channel. Otherwise, the scan dwells on the channel for max ms.If you want to improve the performance of the the scan, you can try to modify these two parameters.
+	
+{% endhint %}
+
 
 #### wlan.disconnect\(\)
 
@@ -132,23 +173,55 @@ Get or set the WLAN mode.
 
 #### wlan.ssid\(\[ssid\]\)
 
-Get or set the SSID when in AP mode.
+Get or set the SSID (Set SSID of AP).
 
+In case if mode = `WLAN.STA` this method can get the ssid of AP the board is connected to.
+
+In case of mode = `WLAN.AP` this method can get the ssid of the board's own AP.
+
+In case of mode = `WLAN.STA_AP` this method can get the ssid of board's own AP plus the AP the STA is connected to in form of a tuple:
+
+ _\<SSID of connected AP, SSID of own AP\>_
+ 
+ 
 #### wlan.auth\(\[auth\]\)
 
 Get or set the authentication type when in AP mode.
 
-#### wlan.channel\(\[channel\]\)
+#### wlan.channel\(\[channel, sec_chn\]\)
 
-Get or set the channel \(only applicable in AP mode\).
+*In AP mode:*
+
+Get or set the wifi channel
+
+*In STA mode:*
+
+``channel``: is the primary channel to listen to.
+
+``sec_chn`` : Only in case of Bandwidth = HT40 this should specify the position of the secondary channel weather above or below primary channel.
+`WLAN.SEC_CHN_POS_ABOVE` or `WLAN.SEC_CHN_POS_BELOW`
+
+_Note: Setting Channel in STA mode is only Allowed in Promiscuous mode_
 
 #### wlan.antenna\(\[antenna\]\)
 
 Get or set the antenna type \(external or internal\).
 
-#### wlan.mac\(\)
+#### wlan.mac\([mac, mode]\)
 
-Get a 6-byte long `bytes` object with the WiFI MAC address.
+when no arguments are passed a 6-byte long `bytes` tuple object with the WiFI MAC address of both Wifi Station mode and Acces Point mode
+
+``mac``: a 6 bytes bytearray mac address
+
+``mode``: The Interface to set the given MAC address to `WLAN.STA` or `WLAN.AP`
+
+Ex: To set the mac address of Wifi Station mode:
+
+```python
+wlan.mac(bytearray([0xAE, 0x77, 0x88, 0x99, 0x22, 0x44]), WLAN.STA)
+```
+
+_Note: STA and AP cannot have the Same Mac Address_ 
 
 #### wlan.bandwidth\(\)
 
@@ -158,10 +231,80 @@ Set the bandwidth of the wifi, either 20 MHz or 40 MHz can be configured, use co
 
 Set the Host name of the device connecting to the AP in case of Wifi `mode=WLAN.STA`, in case of `mode=WLAN.AP` this is the name of the host hosting the AP. Max length of name string is 32 Bytes
 
+#### wlan.ap\_sta\_list()
+
+Gets an info list of all stations connected to the board's AP.
+
+Info returned is a list of tuples containning ([mac address of connected STA], [average rssi value], [Wlan protocol enabled by STA]).
+
+Protocol types are either : `WLAN.PHY_11_B`, `WLAN.PHY_11_G`, `WLAN.PHY_11_N` or `WLAN.PHY_LOW_RATE`
+
+#### wlan.max\_tx\_power([power])
+
+Gets or Sets the maximum allowable transmission power for wifi.
+
+Packets of different rates are transmitted in different powers according to the configuration in phy init data. This API only sets maximum WiFi transmiting power. If this API is called, the transmiting power of every packet will be less than or equal to the value set by this API. Default is Level 0.
+
+Values passed in power are mapped to transmit power levels as follows:
+
+- \[78, 127\]: level0
+- \[76, 77\]: level1
+- \[74, 75\]: level2
+- \[68, 73\]: level3
+- \[60, 67\]: level4
+- \[52, 59\]: level5
+- \[44, 51\]: level5 - 2dBm
+- \[34, 43\]: level5 - 4.5dBm
+- \[28, 33\]: level5 - 6dBm
+- \[20, 27\]: level5 - 8dBm
+- \[8, 19\]: level5 - 11dBm
+- \[-128, 7\]: level5 - 14dBm
+
+#### wlan.country([country, schan, nchan, max\_tx\_pwr, policy])
+
+Gets or set s Country configuration parameters for wifi.
+
+- ``country`` That is the country name code , it is max 2 characters string representing the country eg: "CN" for china nad "NL" for Netherlands
+
+- ``scahn`` is the start channel number, in scan process scanning will be performed starting from this channels till the total number of channels. it should be less than or equal 14.
+
+- ``nchan`` is the total number of channels in the specified country. maximum is 14
+
+- ``max_tx_pwr`` Maximum transmission power allowed. see `WLAN.max_tx_power()` for more details.
+
+- ``policy`` Is the method when setting country configuration for `WLAN.COUNTRY_POL_AUTO` in STA mode the wifi will aquire the same country config of the connected AP, for `WLAN.COUNTRY_POL_MAN` the configured country parameters will take effect regardless of Connected AP.
+
+#### wlan.joined\_ap\_info()
+
+Returns a tuple with (bssid, ssid, primary channel, rssi, Authorization method, wifi standard used) of the connected AP in case of STA mode. 
+
+#### wlan.wifi_protocol([(bool PHY11__B, bool PHY11\_G, bool PHY11\_N)])
+
+Sets or gets Wifi Protocol supported.
+
+#### wlan.send\_raw(Buffer, interface=STA, use_sys_seq=True)
+
+Send raw data through the Wifi Interface.
+
+``Buffer``: Buffer of bytes object Containning Data to be transmitted. Data should not be greater than 1500 nor smaller than 24.
+
+``interface``: The Interface to use for transmitting Data AP or STA in case the mode used is APSTA. other wise the interface currently active will be used.
+
+``use_sys_seq``: `True` to use the systems next sequance number for sending the data, `False` for keeping the sequance number in the given raw data buffer unchanged.
+
+
 ## Constants
 
 * WLAN mode: `WLAN.STA`, `WLAN.AP`, `WLAN.STA_AP`
 * WLAN network security: `WLAN.WEP`, `WLAN.WPA`, `WLAN.WPA2`, `WLAN.WPA2_ENT`
 * Antenna type: `WLAN.INT_ANT`, `WLAN.EXT_ANT`
 * WLAN Bandwidth: `WLAN.HT20`, `WLAN.HT40`
+
+* WLAN protocol: `WLAN.PHY_11_B`, `WLAN.PHY_11_G`, `WLAN.PHY_11_N`, `WLAN.PHY_LOW_RATE`
+
+* Scan Type: `WLAN.SCAN_ACTIVE` `WLAN.SCAN_PASSIVE`
+
+
+* WLAN country config policy: `WLAN.COUNTRY_POL_AUTO`, `WLAN.COUNTRY_POL_MAN`
+* Secondary Channel position: `WLAN.SEC_CHN_POS_ABOVE`, `WLAN.SEC_CHN_POS_BELOW`
 
