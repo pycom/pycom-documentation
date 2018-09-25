@@ -18,6 +18,8 @@ Please download the driver software from the link below.
 
 [Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver \(save the file to your computer\)](https://raw.githubusercontent.com/pycom/pycom-documentation/master/pytrackpysense/installation/pycom.inf)
 
+{% file src="../../.gitbook/assets/pycom.inf" caption="Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver" %}
+
 ### Installation
 
 First navigate open the Windows start menu and search/navigate to \`Device Manager. You should see your Pytrack/Pysense in the dropdown under **other devices**.
