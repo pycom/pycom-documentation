@@ -18,6 +18,10 @@ Be gentle when plugging/unplugging from the USB connector. Whilst the USB connec
 
 The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, the Expansion Board will charge the battery \(if connected\). When the `CHG` jumper is present the battery will be charged at `450mA`. If this value is too high for your application, removing the jumper lowers the charge current to `100mA`.
 
+{% hint style="info" %}
+To use the battery, pull `P8/G15` high \(connect to `3v3`\). If you want to use the SD card as well, use a 10k pull-up.
+{% endhint %}
+
 ## Specsheets
 
 The specsheet of the Expansion Board is available as a PDF File.
