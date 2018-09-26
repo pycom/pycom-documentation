@@ -201,8 +201,12 @@
 * [CLI Updater](advance/cli.md)
 * [SecureBoot and Encryption](advance/encryption.md)
 
+## Documents
+
+* [Certificates](documents/certificates.md)
+* [License](documents/license.md)
+
 ## Have a question?
 
 * [Ask on the Forum](https://forum.pycom.io)
-* [License](have-a-question/license.md)
 
