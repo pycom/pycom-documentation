@@ -148,6 +148,32 @@ redirects:
   chapter/firmwareapi/micropython/builtin: ./firmwareapi/micropython/builtin.md
   chapter/firmwareapi/notes: ./firmwareapi/notes.md
 
+  chapter/product-info: ./datasheets/introduction.md
+  chapter/product-info/development: ./datasheets/development/README.md
+  chapter/product-info/development/wipy2: ./datasheets/development/wipy2.md
+  chapter/product-info/development/wipy3: ./datasheets/development/wipy3.md
+  chapter/product-info/development/lopy: ./datasheets/development/lopy.md
+  chapter/product-info/development/lopy4: ./datasheets/development/lopy4.md
+  chapter/product-info/development/sipy: ./datasheets/development/sipy.md
+  chapter/product-info/development/gpy: ./datasheets/development/gpy.md
+  chapter/product-info/development/fipy: ./datasheets/development/fipy.md
+  chapter/product-info/oem: ./datasheets/oem/README.md
+  chapter/product-info/oem/w01: ./datasheets/oem/w01.md
+  chapter/product-info/oem/l01: ./datasheets/oem/l01.md
+  chapter/product-info/oem/l04: ./datasheets/oem/l04.md
+  chapter/product-info/oem/g01: ./datasheets/oem/g01.md
+  chapter/product-info/oem/l01_reference: ./datasheets/oem/l01_reference.md
+  chapter/product-info/oem/universal_reference: ./datasheets/oem/universal_reference.md
+  chapter/product-info/boards: ./datasheets/boards/README.md
+  chapter/product-info/boards/expansion3: ./datasheets/boards/expansion3.md
+  chapter/product-info/boards/pytrack: ./datasheets/boards/pytrack.md
+  chapter/product-info/boards/pysense: ./datasheets/boards/pysense.md
+  chapter/product-info/boards/pyscan: ./datasheets/boards/pyscan.md
+  chapter/product-info/boards/expansion2: ./datasheets/boards/expansion2.md
+  chapter/product-info/boards/deepsleep: ./datasheets/boards/deepsleep/README.md
+  chapter/product-info/boards/deepsleep/api: ./datasheets/boards/deepsleep/api.md
+  chapter/product-info/notes: ./datasheets/notes.md
+
   chapter/datasheets: ./datasheets/introduction.md
   chapter/datasheets/development: ./datasheets/development/README.md
   chapter/datasheets/development/wipy2: ./datasheets/development/wipy2.md
