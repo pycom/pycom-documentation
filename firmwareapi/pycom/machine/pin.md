@@ -44,6 +44,8 @@ Initialise the pin:
   * `None` - no pull up or down resistor.
   * `Pin.PULL_UP` - pull up resistor enabled.
   * `Pin.PULL_DOWN` - pull down resistor enabled.
+* `*`
+  * Pin value: `0` or `1`
 * `alt` is the id of the alternate function.
 
 Returns: `None`.
