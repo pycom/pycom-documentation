@@ -32,6 +32,7 @@
   * [LoRaWAN](gettingstarted/registration/lora/README.md)
     * [The Things Network](gettingstarted/registration/lora/ttn.md)
     * [Senet](gettingstarted/registration/lora/senet.md)
+* [Troubleshooting Guide](gettingstarted/troubleshooting-guide.md)
 
 ## Pymakr Plugin
 
