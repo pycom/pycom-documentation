@@ -4,8 +4,6 @@ This chapter of the documentation will show you how to connect you Pycom module.
 
 {% page-ref page="lopy.md" %}
 
-{% page-ref page="lopy4.md" %}
-
 {% page-ref page="sipy.md" %}
 
 {% page-ref page="gpy.md" %}

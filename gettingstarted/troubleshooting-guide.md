@@ -1,7 +1,3 @@
----
-description: This page is work in progress
----
-
 # Troubleshooting Guide
 
 ## How to ask for help

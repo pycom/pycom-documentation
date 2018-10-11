@@ -2,32 +2,23 @@
 
 ## Basic connection
 
-{% tabs %}
-{% tab title="Exp Board 2.0" %}
 * Look for the reset button on the module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the expansion board.
 * Insert the LoPy4 module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
 ![](../../.gitbook/assets/expansion_board_2_lopy4.png)
-{% endtab %}
 
-{% tab title="Exp Board 3.0" %}
 * Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
 * Look for the reset button on the module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the expansion board.
 * Insert the LoPy4 module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
 ![](../../.gitbook/assets/expansion_board_3_lopy4.png)
-{% endtab %}
 
-{% tab title="Pytrack/Pysense/Pyscan" %}
 * Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrackpysense/installation/firmware.md).
 * Look for the reset button on the LoPy4 module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
 * Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible. ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqbk7blltxqNtvQzH_%2FPysense_LoPy4.png?generation=1534772087747503&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqblUw130dL1aMAkLT%2FPytrack_LoPy4.png?generation=1534772079835788&alt=media)
-{% endtab %}
-
-{% tab title="USB UART Adapter" %}
 * Firstly you will need to connect power to your LoPy4. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
 {% hint style="danger" %}
@@ -43,9 +34,7 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 * In order to put the LoPy4 into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 
 ![](../../.gitbook/assets/uart_lopy4.png)
-{% endtab %}
 
-{% tab title="WiFi" %}
 **Note:** This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
 
 * In order to access the LoPy4 via WiFi you only need to provide `3.5v` - `5.5v` on the `Vin` pin of the LoPy4:
@@ -58,8 +47,6 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 * Once connected to this network you will be able to access the telnet and FTP servers running on the LoPy4. For both of these the login details are:
   * username: `micro`
   * password: `python`
-{% endtab %}
-{% endtabs %}
 
 ## Antennas
 
