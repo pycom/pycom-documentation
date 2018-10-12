@@ -18,6 +18,15 @@ Always provide these details when asking for help. This helps us understand your
 
 If you're trying to update to the latest `development` firmware, make sure you use the development release of the Firmware Updater.
 
+#### My module is recognised as the wrong type
+
+Open a support ticket with the details and send us the result of this code:
+
+```python
+import machine, binascii                                                     
+binascii.hexlify(machine.unique_id())
+```
+
 ## Pymakr
 
 Make sure you have the latest version of Pymakr and [Atom](https://atom.io)/[VSCode](https://code.visualstudio.com) installed.
