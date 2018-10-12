@@ -35,7 +35,7 @@ Initialise the RTC. The arguments are:
 For example:
 
 ```python
-# for 2nd of February 2017 at 10:30am (TZ 0)
+# for 28th of February 2017 at 10:30am (TZ 0)
 rtc.init((2017, 2, 28, 10, 30, 0, 0, 0))
 ```
 
