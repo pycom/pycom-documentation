@@ -31,7 +31,7 @@ s.connect(socket.getaddrinfo('www.micropython.org', 80)[0][-1])
 
 ## Constants
 
-* Family types: `socket.AF_INET`, `socket.AF_LORA`
+* Family types: `socket.AF_INET`, `socket.AF_LORA`, `socket.AF_SIGFOX`
 * Socket types: `socket.SOCK_STREAM`, `socket.SOCK_DGRAM`, `socket.SOCK_RAW`
 * Socket protocols: `socket.IPPROTO_UDP`, `socket.IPPROTO_TCP`
 * Socket options layers: `socket.SOL_SOCKET`, `socket.SOL_LORA`, `socket.SOL_SIGFOX`
