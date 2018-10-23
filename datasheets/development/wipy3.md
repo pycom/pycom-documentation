@@ -2,7 +2,7 @@
 
 ![](../../.gitbook/assets/wipy3.png)
 
-**Store**: [Buy Here](http://www.pycom.io/wipy-3)
+**Store**: [Buy Here](https://pycom.io/product/wipy-3-0/)
 
 **Getting Started:** [Click Here](../../gettingstarted/connection/wipy.md)
 

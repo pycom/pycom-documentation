@@ -77,7 +77,7 @@ All Pycom modules, including the GPy, come with a on-board WiFi antenna as well 
 
 ![](../../.gitbook/assets/wifi_pigtail_ant_gpy.png)
 
-### SIM card {#sim-card}
+### SIM card <a id="sim-card"></a>
 
 If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the GPy you will need to insert a SIM card into your GPy. It should be noted that the GPy does not support regular LTE connectivity and you may require a special SIM. It is best to contact your local cellular providers for more information on acquiring a LTE CAT-M1/NB-IoT enabled nano SIM.
 

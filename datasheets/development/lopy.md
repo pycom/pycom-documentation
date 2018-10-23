@@ -2,7 +2,7 @@
 
 ![](../../.gitbook/assets/lopy-1.png)
 
-**Store**: [Buy Here](http://www.pycom.io/lopy)
+**Store**: [Buy Here](https://pycom.io/product/lopy)
 
 **Getting Started:** [Click Here](../../gettingstarted/connection/lopy.md)
 
