@@ -2,7 +2,7 @@
 
 ![](../../.gitbook/assets/fipy-1.png)
 
-**Store**: [Buy Here](http://www.pycom.io/fipy)
+**Store**: [Buy Here](https://pycom.io/product/fipy/)
 
 **Getting Started:** [Click Here](../../gettingstarted/connection/fipy.md)
 

@@ -2,7 +2,7 @@
 
 ![](../../.gitbook/assets/gpy-1.png)
 
-**Store**: [Buy Here](http://www.pycom.io/gpy)
+**Store**: [Buy Here](https://pycom.io/product/gpy)
 
 **Getting Started:** [Click Here](../../gettingstarted/connection/gpy.md)
 

@@ -2,7 +2,7 @@
 
 ![](../../.gitbook/assets/sipy-2.png)
 
-**Store**: [Buy Here](http://www.pycom.io/sipy)
+**Store**: [Buy Here](https://pycom.io/product/sipy)
 
 **Getting Started:** [Click Here](../../gettingstarted/connection/sipy.md)
 
