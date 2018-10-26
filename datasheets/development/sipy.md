@@ -1,6 +1,6 @@
 # SiPy
 
-![](../../.gitbook/assets/sipy-2.png)
+\*\*\*\*![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86n8h-hb1oh1idwb-sipy-2.png) ****
 
 **Store**: [Buy Here](https://pycom.io/product/sipy)
 

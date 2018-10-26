@@ -1,6 +1,6 @@
 # WiPy 2.0
 
-![](../../.gitbook/assets/wipy2-1.png)
+\*\*\*\*![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83ftusu7mke5ppmd-wipy2-1.png) ****
 
 **Store**: Discontinued, See [WiPy3](wipy3.md)
 

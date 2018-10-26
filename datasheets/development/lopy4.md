@@ -1,6 +1,6 @@
 # LoPy 4
 
-![](../../.gitbook/assets/lopy4-1.png)
+\*\*\*\*![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn85npgnazxzxyv-nu-lopy4-1.png) ****
 
 **Store**: [Buy Here](https://pycom.io/product/lopy4/)
 
