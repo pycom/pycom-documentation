@@ -1,8 +1,8 @@
 # Pysense
 
-![](../../.gitbook/assets/pysense%20%281%29.png)
+![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83hclnq-gurt2p_m-pysense.png) 
 
-## Datasheets
+## Datasheet
 
 The datasheet of the Pysense is available as a PDF File.
 

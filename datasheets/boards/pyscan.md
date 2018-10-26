@@ -1,8 +1,8 @@
 # Pyscan
 
-![](../../.gitbook/assets/pyscan-new%20%281%29.png)
+![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83hfia61dsuyojco-pyscan-new.png) 
 
-## Datasheets
+## Datasheet
 
 The datasheet of the Pyscan is available as a PDF File.
 

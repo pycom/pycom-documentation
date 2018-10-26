@@ -1,6 +1,6 @@
 # Expansion Board 3.0
 
-![](../../.gitbook/assets/expansion3%20%281%29.png)
+## ![](../../.gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn82uldmpus0lnq1kx-expansion3.png) 
 
 ## Datasheet
 
