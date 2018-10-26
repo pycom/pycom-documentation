@@ -2,6 +2,12 @@
 
 ![](../../.gitbook/assets/expansion3%20%281%29.png)
 
+## Datasheet
+
+The datasheet of the Expansion Board is available as a PDF File.
+
+{% file src="../../.gitbook/assets/expansion3-specsheet-1.pdf" caption="Expansion Board 3 Datasheet" %}
+
 ## Pinout
 
 The pinout of the Expansion Board is available as a PDF File
@@ -21,12 +27,6 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board 
 {% hint style="info" %}
 To use the battery, pull `P8/G15` high \(connect to `3v3`\). If you want to use the SD card as well, use a 10k pull-up.
 {% endhint %}
-
-## Specsheets
-
-The specsheet of the Expansion Board is available as a PDF File.
-
-{% file src="../../.gitbook/assets/expansion3-specsheet-1.pdf" caption="Expansion Board 3 Datasheet" %}
 
 ## Differences between v2.0 and v3.0
 

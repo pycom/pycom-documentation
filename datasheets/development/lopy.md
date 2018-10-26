@@ -6,6 +6,12 @@
 
 **Getting Started:** [Click Here](../../gettingstarted/connection/lopy.md)
 
+## Datasheet
+
+The datasheet of the LoPy is available as a PDF File.
+
+{% file src="../../.gitbook/assets/lopy-specsheet.pdf" caption="LoPy Datasheet" %}
+
 ## Pinout
 
 The pinout of the LoPy is available as a PDF File
@@ -17,12 +23,6 @@ The pinout of the LoPy is available as a PDF File
 {% hint style="info" %}
 Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed in Software.
 {% endhint %}
-
-## Datasheet
-
-The datasheet of the LoPy is available as a PDF File.
-
-{% file src="../../.gitbook/assets/lopy-specsheet.pdf" caption="LoPy Datasheet" %}
 
 ## Notes
 

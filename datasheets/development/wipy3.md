@@ -6,6 +6,12 @@
 
 **Getting Started:** [Click Here](../../gettingstarted/connection/wipy.md)
 
+## Datasheet
+
+The datasheet of the WiPy3 is available as a PDF File.
+
+{% file src="../../.gitbook/assets/wipy3-specsheet.pdf" caption="WiPy3 Datasheet" %}
+
 ## Pinout
 
 The pinout of the WiPy3 is available as a PDF File.
@@ -24,12 +30,6 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 * Upgraded RAM from 512KB to 4MB
 * Upgraded External FLASH from 4MB to 8MB
 * Antenna select pin moved from GPIO16 to GPIO21 \(P12\)
-
-## Datasheet
-
-The datasheet of the WiPy3 is available as a PDF File.
-
-{% file src="../../.gitbook/assets/wipy3-specsheet.pdf" caption="WiPy3 Datasheet" %}
 
 ## Notes
 

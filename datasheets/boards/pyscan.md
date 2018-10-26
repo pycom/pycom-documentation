@@ -2,6 +2,12 @@
 
 ![](../../.gitbook/assets/pyscan-new%20%281%29.png)
 
+## Datasheets
+
+The datasheet of the Pyscan is available as a PDF File.
+
+{% file src="../../.gitbook/assets/pyscan-specsheet.pdf" caption="Pyscan Datasheet" %}
+
 ## Pyscan Libraries
 
 * Pyscan libraries to use the RFID/NFC reader are located [here](https://github.com/pycom/pycom-libraries/tree/master/pyscan)
@@ -37,9 +43,5 @@ The pinout of the Pyscan is available as a PDF File
 
 The board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, it will charge the battery \(if connected\).
 
-## Specsheets
 
-The specsheet of the Pyscan is available as a PDF File.
-
-{% file src="../../.gitbook/assets/pyscan-specsheet.pdf" caption="Pyscan Datasheet" %}
 
