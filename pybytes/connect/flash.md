@@ -31,7 +31,7 @@ You can also download _Pybytes library_ at the device's settings page:
 ### Step 2. Flash your device with Pymakr
 
 {% hint style="info" %}
-In case you haven't installed Pymakr plugin, follow [these instructions](../../pymakr/installation/atom.md).
+In case you haven't installed Pymakr plugin, follow [these instructions](../../pymakr-plugin/installation/atom.md).
 {% endhint %}
 
 1. Connect your device to your computer with USB cable.
@@ -52,7 +52,7 @@ In case you haven't installed Pymakr plugin, follow [these instructions](../../p
 
    Like deviceToken or WiFi credentials. You can change e.g. your WiFy password here.
 
-6. Put your device in [safe boot mode](../../gettingstarted/programming/safeboot.md).
+6. Put your device in [safe boot mode](../../getting-started/programming/safeboot.md).
 7. Upload code to your device by clicking on _Upload_ button in Pymakr.
 
    After all Pybytes library files are uploaded to device, device will restart and will connect to Pybytes.
