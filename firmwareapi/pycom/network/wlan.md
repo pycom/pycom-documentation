@@ -272,6 +272,41 @@ Send raw data through the Wifi Interface.
 
 `use_sys_seq`: `True` to use the systems next sequance number for sending the data, `False` for keeping the sequance number in the given raw data buffer unchanged.
 
+### wlan.callback(trigger, handler=Null, arg=Null)
+
+Register a user callback function ``handler`` to be called once any of the ``trigger`` events occures optionally with a passed ``arg``.
+by default the wlan obj is passed as arg to the handler.
+To unregister the callback you can call the ``wlan.callback`` function with empty `handler` and `arg` parameters.
+
+For trigger events see `Constants` section.
+
+### wlan.promiscuous([bool])
+
+- To enable Promiscuous mode `WLAN.promiscuous(True)` should be called, and `WLAN.promiscuous(False)` for disabling
+
+- To get current mode setting call function with empty args
+
+Note: 
+
+- Promiscuous mode should be enabled for Wifi packets types Events to be triggered
+
+- for changing wifi channel via `wlan.channel()` promiscuous mode should be enabled.
+
+### wlan.events()
+
+This function will return an integer object as mask for triggered events.
+
+### wlan.wifi\_packet()
+
+This function will return a tuble with Wifi packet info captured in promiscuous mode.
+
+### wlan.ctrl\_pkt\_filter([int])
+
+This function is used to set the filter mask for Wifi control packets in promiscuous mode.
+for Filter masks, see `Constants` section.
+
+To get the current Filter mask, call the function with empty args.
+
 ## Constants
 
 * WLAN mode: `WLAN.STA`, `WLAN.AP`, `WLAN.STA_AP`
@@ -282,4 +317,38 @@ Send raw data through the Wifi Interface.
 * Scan Type: `WLAN.SCAN_ACTIVE` `WLAN.SCAN_PASSIVE`
 * WLAN country config policy: `WLAN.COUNTRY_POL_AUTO`, `WLAN.COUNTRY_POL_MAN`
 * Secondary Channel position: `WLAN.SEC_CHN_POS_ABOVE`, `WLAN.SEC_CHN_POS_BELOW`
+* Wlan callback triggers:
 
+  `WLAN.EVENT_PKT_MGMT`: Managment packet recieved in promiscuous mode.
+  
+  `WLAN.EVENT_PKT_CTRL`: Control Packet recieved in promiscuous mode
+  
+  `WLAN.EVENT_PKT_DATA`: Data packet recieved in promiscuous mode
+  
+  `WLAN.EVENT_PKT_DATA_MPDU`: MPDU data packet recieved in promiscuous mode
+  
+  `WLAN.EVENT_PKT_DATA_AMPDU`: AMPDU data packet recieved in promiscuous mode
+  
+  `WLAN.EVENT_PKT_MISC`: misc paket recieved in promiscuous mode.
+  
+  `WLAN.EVENT_PKT_ANY`: Any packet recieved in promiscuous mode.
+  
+* Control packet filters in promiscuous mode:
+
+  `WLAN.FILTER_CTRL_PKT_ALL`: Filter all Control packets
+  
+  `WLAN.FILTER_CTRL_PKT_WRAPPER`: Filter control wrapper packets
+  
+  `WLAN.FILTER_CTRL_PKT_BAR`: Filter Control BAR packets
+  
+  `WLAN.FILTER_CTRL_PKT_BA`: Filter Control BA packets
+  
+  `WLAN.FILTER_CTRL_PKT_PSPOLL`: Filter Control PSPOLL Packets
+  
+  `WLAN.FILTER_CTRL_PKT_CTS`: Filter Control CTS packets
+  
+  `WLAN.FILTER_CTRL_PKT_ACK`: Filter Control ACK packets
+  
+  `WLAN.FILTER_CTRL_PKT_CFEND`: Filter Control CFEND Packets
+  
+  `WLAN.FILTER_CTRL_PKT_CFENDACK`: Filter Control CFENDACK Packets 
