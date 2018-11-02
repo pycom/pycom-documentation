@@ -76,6 +76,14 @@ or
 wlan.init(mode=WLAN.STA)
 ```
 
+{% hint style="info" %}
+To use an external antenna, set `P12 as output pin.`
+
+```python
+Pin('P12', mode=Pin.OUT)(True)
+```
+{% endhint %}
+
 #### wlan.deinit\(\)
 
 Disables the WiFi radio.
@@ -143,6 +151,14 @@ Get or set the channel \(only applicable in AP mode\).
 #### wlan.antenna\(\[antenna\]\)
 
 Get or set the antenna type \(external or internal\).
+
+{% hint style="info" %}
+To use an external antenna, set `P12 as output pin.`
+
+```python
+Pin('P12', mode=Pin.OUT)(True)
+```
+{% endhint %}
 
 #### wlan.mac\(\)
 

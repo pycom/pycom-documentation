@@ -66,6 +66,14 @@ bluetooth = Bluetooth()
 
 Initialises and enables the Bluetooth radio in BLE mode.
 
+{% hint style="info" %}
+To use an external antenna, set `P12 as output pin.`
+
+```python
+Pin('P12', mode=Pin.OUT)(True)
+```
+{% endhint %}
+
 ### bluetooth.deinit\(\)
 
 Disables the Bluetooth radio.
