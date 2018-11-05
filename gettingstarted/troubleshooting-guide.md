@@ -27,6 +27,12 @@ import machine, binascii
 binascii.hexlify(machine.unique_id())
 ```
 
+## Connecting  to the module
+
+#### Module stuck in bootloader mode
+
+Normally, the firmware updater switches back to application mode at the end of an upgrade. If that doesn't happen for some reason, re-plugging the USB cable also puts the device back into application mode.
+
 ## Pymakr
 
 Make sure you have the latest version of Pymakr and [Atom](https://atom.io)/[VSCode](https://code.visualstudio.com) installed.
