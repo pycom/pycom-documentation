@@ -188,6 +188,8 @@
     * [DevKit contract](pybytes/connect/sigfox/devkit.md)
     * [Custom contract](pybytes/connect/sigfox/custom.md)
 * [Visualise data from your device](pybytes/dashboard.md)
+* [Integrations](pybytes/integrations/README.md)
+  * [Amazon IoT](pybytes/integrations/amazon-iot.md)
 
 ## Documentation Notes
 
