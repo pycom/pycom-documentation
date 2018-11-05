@@ -1,8 +1,6 @@
 # Amazon IoT
 
-Whenever one of your integrated devices sends a message to our broker, we republish the binary payload to the endpoint specified for its integration. In order to save the data received by AWS, [you must set up a rule](https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html). You can also test that everything's working with the [AWS IoT MQTT client](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html).
-
-**Warning**: do not delete AWS things or groups directly from AWS user interface, otherwise the integration with Pybytes will stop working. Always use Pybytes interface to delete AWS things or groups.
+Whenever one of your integrated devices sends a message to our broker, we republish the binary payload to the endpoint specified for its integration.
 
 ## Integrate your devices
 
@@ -22,3 +20,18 @@ Whenever one of your integrated devices sends a message to our broker, we republ
 
 ![](../../.gitbook/assets/04_aws_integration.png)
 
+5. The corresponding AWS Thing and AWS Group has been created as well, you just have to [log in to the console](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin) and choose the same region of your devices from the topbar. You'll be able to explore groups and things' details.
+
+![](../../.gitbook/assets/05_aws_integration.png)
+
+6. The device's name is specified as an attribute of the thing.
+
+![](../../.gitbook/assets/06_aws_integration.png)
+
+
+## Final considerations
+
+In order to save the data received by AWS, [you must set up a rule](https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html). You can also test that everything's working with the [AWS IoT MQTT client](https://docs.aws.amazon.com/iot/latest/developerguide/view-mqtt-messages.html).
+Please notice that it's not possible to download the private key from AWS once it has been generated, by the way we securely store it inside our database. We may consider to allow its download in the future, so that you could also directly send your device to AWS, by passing Pybytes.
+
+**Warning**: do not delete AWS things or groups directly from AWS user interface, otherwise the integration with Pybytes will stop working. Always use Pybytes interface to delete AWS things or groups.
