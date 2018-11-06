@@ -151,7 +151,7 @@
   * [Builtin](firmwareapi/micropython/builtin.md)
 * [Notes](firmwareapi/notes.md)
 
-## Product Info
+## Product Info, Datasheets
 
 * [Introduction](datasheets/introduction.md)
 * [Development Modules](datasheets/development/README.md)
