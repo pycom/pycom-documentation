@@ -80,13 +80,18 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
       <td style="text-align:left">✔</td>
     </tr>
     <tr>
-      <td style="text-align:left">
+     <td style="text-align:left">
         <p>Pyscan Modules</p>
-        <p>OLED Module - Coming soon</p>
-        <p>2MP Camera - Coming soon</p>
-        <p>Barcode Reader - Coming soon</p>
-        <p>Fingerprint Scanner - Coming soon</p>
-        <p>IR Image Sensor - Coming soon</p>
+        <p><a href="https://pycom.io/product/oled-screen/">OLED Module</a>
+        </p>
+        <p><a href="https://pycom.io/product/2mp-camera/">2MP Camera</a>
+        </p>
+        <p><a href="https://pycom.io/product/barcode-reader">Barcode Reader</a>
+        </p>
+        <p><a href="https://pycom.io/product/fingerprint-scanner/">Fingerprint Scanner</a>
+        </p>
+        <p><a href="https://pycom.io/product/infared-image-sensor/">IR Image Sensor</a>
+        </p>
       </td>
       <td style="text-align:left"></td>
       <td style="text-align:left"></td>
