@@ -8,79 +8,48 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 
 | Module | WiFi | Bluetooth | LoRa | Sigfox | LTE CAT-M1NB-IoT |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| [ WiPy 3.0](datasheets/development/wipy3.md) | ✔ | ✔ |  |  |  |
-| [SiPy](datasheets/development/sipy.md) | ✔ | ✔ |  | ✔ |  |
-| [GPy](datasheets/development/gpy.md) | ✔ | ✔ |  |  | ✔ |
-| [LoPy](datasheets/development/lopy.md) | ✔ | ✔ | ✔ |  |  |
-| [LoPy4](datasheets/development/lopy4.md) | ✔ | ✔ | ✔ | ✔ |  |
-| [FiPy](datasheets/development/fipy.md) | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [ WiPy 3.0](product-info-datasheets/development/wipy3.md) | ✔ | ✔ |  |  |  |
+| [SiPy](product-info-datasheets/development/sipy.md) | ✔ | ✔ |  | ✔ |  |
+| [GPy](product-info-datasheets/development/gpy.md) | ✔ | ✔ |  |  | ✔ |
+| [LoPy](product-info-datasheets/development/lopy.md) | ✔ | ✔ | ✔ |  |  |
+| [LoPy4](product-info-datasheets/development/lopy4.md) | ✔ | ✔ | ✔ | ✔ |  |
+| [FiPy](product-info-datasheets/development/fipy.md) | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Antennas | [External WiFi/BT Antenna Kit](https://pycom.io/product/external-wifi-antenna/) | [External WiFi/BT Antenna Kit](https://pycom.io/product/external-wifi-antenna/) | [LoRa & Sigfox Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [LoRa & Sigfox Antenna Kit](https://pycom.io/product/lora-antenna-kit/) | [LTE-M Antenna Kit](https://pycom.io/product/lte-m-antenna-kit/) |
 
 ## Accessories
 
+| Accessory | [Expansion Board](product-info-datasheets/boards/expansion3.md) | [Pysense](product-info-datasheets/boards/pysense.md) | [Pytrack](product-info-datasheets/boards/pytrack.md) | [Pyscan](product-info-datasheets/boards/pyscan.md) |
+| :--- | :--- | :--- | :--- | :--- |
+
+
+| [PyCase](https://pycom.io/product/pycase/) | ✔ |  |  |  |
+| :--- | :--- | :--- | :--- | :--- |
+
+
+| [IP67 Case for Expansion Board](https://pycom.io/product/ip67-expansion-board-case/) | ✔ |  |  |  |
+| :--- | :--- | :--- | :--- | :--- |
+
+
+| [IP67 Case for Pysense/Pytrack/Pyscan](https://pycom.io/product/ip67-case/) |  | ✔ | ✔ | ✔ |
+| :--- | :--- | :--- | :--- | :--- |
+
+
+| [IP67 Case \(universal\)](https://pycom.io/product/universal-ip67-case/) | ✔ | ✔ | ✔ | ✔ |
+| :--- | :--- | :--- | :--- | :--- |
+
+
+| LiPo Battery \(user-supplied\) | ✔ | ✔ | ✔ | ✔ |
+| :--- | :--- | :--- | :--- | :--- |
+
+
+| Micro USB Cable Required \(user-supplied\) | ✔ | ✔ | ✔ | ✔ |
+| :--- | :--- | :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Accessory</th>
-      <th style="text-align:left"><a href="datasheets/boards/expansion3.md">Expansion Board</a>
-      </th>
-      <th style="text-align:left"><a href="datasheets/boards/pysense.md">Pysense</a>
-      </th>
-      <th style="text-align:left"><a href="datasheets/boards/pytrack.md">Pytrack</a>
-      </th>
-      <th style="text-align:left"><a href="datasheets/boards/pyscan.md">Pyscan</a>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><a href="https://pycom.io/product/pycase/">PyCase</a>
-      </td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="https://pycom.io/product/ip67-expansion-board-case/">IP67 Case for Expansion Board</a>
-      </td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="https://pycom.io/product/ip67-case/">IP67 Case for Pysense/Pytrack/Pyscan</a>
-      </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="https://pycom.io/product/universal-ip67-case/">IP67 Case (universal)</a>
-      </td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">LiPo Battery (user-supplied)</td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Micro USB Cable Required (user-supplied)</td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-      <td style="text-align:left">✔</td>
-    </tr>
-    <tr>
-     <td style="text-align:left">
+      <th style="text-align:left">
         <p>Pyscan Modules</p>
         <p><a href="https://pycom.io/product/oled-screen/">OLED Module</a>
         </p>
@@ -92,19 +61,18 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
         </p>
         <p><a href="https://pycom.io/product/infared-image-sensor/">IR Image Sensor</a>
         </p>
-      </td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">✔</td>
+      </th>
+      <th style="text-align:left"></th>
+      <th style="text-align:left"></th>
+      <th style="text-align:left"></th>
+      <th style="text-align:left">✔</th>
     </tr>
-  </tbody>
-</table>## OEM Modules
-
-| OEM Module | [L01/W01 Reference Board](datasheets/oem/l01_reference.md) | [Universal Reference Board](datasheets/oem/universal_reference.md) |
+  </thead>
+  <tbody></tbody>
+</table>| OEM Module | [L01/W01 Reference Board](product-info-datasheets/oem/l01_reference.md) | [Universal Reference Board](product-info-datasheets/oem/universal_reference.md) |
 | :--- | :--- | :--- |
-| [W01](datasheets/oem/w01.md) | ✔ | ✔ |
-| [L01](datasheets/oem/l01.md) | ✔ | ✔ |
-| [L04](datasheets/oem/l04.md) |  | ✔ |
-| [G01](datasheets/oem/g01.md) |  | ✔ |
+| [W01](product-info-datasheets/oem/w01.md) | ✔ | ✔ |
+| [L01](product-info-datasheets/oem/l01.md) | ✔ | ✔ |
+| [L04](product-info-datasheets/oem/l04.md) |  | ✔ |
+| [G01](product-info-datasheets/oem/g01.md) |  | ✔ |
 

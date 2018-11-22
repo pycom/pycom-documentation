@@ -5,10 +5,10 @@ Welcome to the Pycom documentation site. We recommend reading through all the se
 To get started, read through the Getting Started Guide then feel free to jump straight into the tutorials and examples in Tutorials & Examples to begin building your projects.
 
 * [Products](products.md)
-* [Getting Started](gettingstarted/introduction.md)
-* [Pymakr](pymakr/installation/)
-* [Tutorials](tutorials/introduction.md)
-* [API Documentation](firmwareapi/introduction.md)
-* [Product Info](datasheets/introduction.md)
+* [Getting Started](getting-started/introduction.md)
+* [Pymakr](pymakr-plugin/installation/)
+* [Tutorials](tutorials-and-examples/introduction.md)
+* [API Documentation](firmware-and-api-reference/introduction.md)
+* [Product Info](product-info-datasheets/introduction.md)
 * [Pybytes](pybytes/introduction.md)
 
