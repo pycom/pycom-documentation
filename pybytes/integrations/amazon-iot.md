@@ -1,6 +1,6 @@
 # Amazon IoT
 
-Whenever one of your integrated devices sends a message to our broker, we republish the binary payload to the endpoint specified for its integration.
+Whenever one of your integrated devices sends a signal to our broker, we republish the binary payload to the endpoint specified for its integration.
 
 ## Integrate your devices
 
