@@ -1,3 +1,7 @@
+# At this moment deprecated in favor of <a target="_blank" href="https://github.com/pycom/pydocs">pydocs</a>.
+
+This project is based on Gitbook, new docs are based on Github pages.
+
 # Introduction
 
 Welcome to the Pycom documentation site. We recommend reading through all the sections to familiarise yourself with the various tools and features available to you to help you develop on your Pycom module.
