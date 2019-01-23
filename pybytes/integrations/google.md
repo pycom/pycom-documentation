@@ -22,7 +22,7 @@ Whenever one of your integrated devices sends a signal to our broker, we republi
 
 ![Step 1: project ID and region](../../.gitbook/assets/04_google_integration.png)
 
-7. The following step allows you to create a new registry or select an existing one. Whenever you choose a registry, the corresponding topics will be loaded in the dropdown menu below. This is required by Google, but it's different from the topics used by the integration to publish payloads to Google cloud.
+7. The following step allows you to create a new registry or select an existing one. Whenever you choose a registry, the corresponding topics will be loaded in the dropdown menu below. This is required by Google, but it's different from the topics used by the integration to publish payloads to Google cloud. For further information, [please read this section](https://cloud.google.com/iot/docs/how-tos/mqtt-bridge#publishing_telemetry_events).
 
 ![Step 2: registry and topic](../../.gitbook/assets/05_google_integration.png)
 
