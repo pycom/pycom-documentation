@@ -34,7 +34,7 @@ Whenever one of your integrated devices sends a signal to our broker, we republi
 
 ![Successfully integrated](../../.gitbook/assets/07_google_integration.png)
 
-If you access the registry on Google cloud, you'll the just created device there as well.
+If you access the registry on Google cloud, you'll be able to see the just created device there as well.
 
 ![Google registry's devices view](../../.gitbook/assets/08_google_integration.png)
 
