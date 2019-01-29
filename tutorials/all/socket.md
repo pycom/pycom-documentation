@@ -48,6 +48,8 @@ while True:
     c = c+1
 ```
 
+### Using a client with non-blocking sockets
+
 The following example sets up a client which can connect to a server with 2 non-blocking sockets, create a new thread to handle the non-blocking sockets.
 
 ```python
@@ -135,3 +137,109 @@ for s in socket_list:
 _thread.start_new_thread(socket_thread, (p,))
 ```
 
+### Connecting to a server with non-blocking SSL wrapped socket
+
+```python
+
+import socket
+import ssl
+import _thread
+import time
+import uerrno
+import uselect
+
+# Helper function for doing the handshake
+def handshake_helper(sock):
+
+    while True:
+        time.sleep_ms(1)
+        try:
+            # Perform the handshake
+            sock.do_handshake()
+            return
+        except ssl.SSLError as e:
+            # For now raise any other errors then TIMEOUT...
+            if e.args[0] != ssl.SSL_TIMEOUT:
+                raise
+
+def socket_thread(p):
+
+    while True:
+        # Wait for any action to happen infinitely
+        l = p.poll()
+
+        # Start processing the actions happened
+        for t in l:
+            # First element of the returned tuple is the socket itself
+            sock = t[0]
+            # Second element of the returned tuple is the events happened
+            event = t[1]
+
+            # If any error or connection drop happened close the socket
+            if(event & uselect.POLLERR or event & uselect.POLLHUP):
+                p.unregister(sock)
+                sock.close()
+
+            # If any new data is received then get it
+            elif(event & uselect.POLLIN):
+                # If any error occurs during receiving here, do "nothing", poll() will return with error event, close the socket there
+                try:
+                    r = sock.recv(1)
+                    # If recv() returns with 0 the other end closed the connection
+                    if len(r) == 0:
+                        p.unregister(sock)
+                        sock.close()
+                    else:
+                        # Do something with the received data...
+                        print("Data received: " + str(r))
+                except:
+                    pass
+
+            # If the socket is writable then we may expect it is connected, do handshake and send some data
+            elif(event & uselect.POLLOUT):
+
+                try:
+                    # Performing the SSL handshake
+                    handshake_helper(sock)
+                except:
+                    # An error happened, close the socket, unregister it from poll
+                    p.unregister(sock)
+                    sock.close()
+
+                # If any error occurs during sending here, do "nothing", poll() will return with error event, close the socket there
+                try:
+                    sock.send("Data to send")
+                    # We only want to send one message on this socket, in the future wait only for new incoming messages
+                    p.modify(sock, uselect.POLLIN | uselect.POLLHUP | uselect.POLLERR)
+                except:
+                    pass
+
+
+# Create and wrap the socket
+s = socket.socket()
+ssl_socket = ssl.wrap_socket(s, keyfile="/flash/cert/my_private_key.pem",
+                                certfile="/flash/cert/my_public_key.pem",
+                                server_side=False,
+                                cert_reqs=ssl.CERT_REQUIRED,
+                                ca_certs="/flash/cert/my_CA_cert.pem"
+                            )
+# Set the wrapped socket to non-blocking
+ssl_socket.setblocking(False)
+# Create a new poll object
+p = uselect.poll()
+# Register the wrapped socket into the poll object, wait only for write and error events
+p.register(ssl_socket, uselect.POLLOUT | uselect.POLLHUP | uselect.POLLERR)
+
+ # Try to connect to the server
+try:
+    ssl_socket.connect(socket.getaddrinfo("192.168.0.234", 6543)[0][-1])
+except OSError as e:
+    # In case of non-blocking socket the connect() raises eception of EINPROGRESS what is expected
+    if e.args[0] != uerrno.EINPROGRESS:
+        # Raise all other errors
+        raise
+
+# Start the thread which takes care of the non-blocking socket through the created poll object
+_thread.start_new_thread(socket_thread, (p))
+
+```

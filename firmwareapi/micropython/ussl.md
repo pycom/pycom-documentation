@@ -37,4 +37,5 @@ SSL sockets inherit all methods and from the standard sockets, see the `usocket`
 ## Constants
 
 * `ssl.CERT_NONE`, `ssl.CERT_OPTIONAL`, `ssl.CERT_REQUIRED`: Supported values in `cert_reqs`
+* `ssl.SSL_TIMEOUT`: raised by a "wrapped" socket when socket.do_handshake() is called
 

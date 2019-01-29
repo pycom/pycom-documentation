@@ -146,3 +146,8 @@ Write the buffer of bytes to the socket.
 
 Return value: number of bytes written.
 
+#### socket.do_handshake\(\)
+
+Perform the SSL handshake on the previously "wrapped" socket with ssl.wrap_socket().
+COuld be used when the socket is non-blocking and the SSL handshake is not performed during connect().
+
