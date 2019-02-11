@@ -122,7 +122,8 @@
       * [GATTCCharacteristic](firmwareapi/pycom/network/bluetooth/gattccharacteristic.md)
       * [GATTSService](firmwareapi/pycom/network/bluetooth/gattsservice.md)
       * [GATTSCharacteristic](firmwareapi/pycom/network/bluetooth/gattscharacteristic.md)
-    * [LoRa](firmwareapi/pycom/network/lora.md)
+    * [LoRa](firmwareapi/pycom/network/lora/README.md)
+      * [Pymesh](firmwareapi/pycom/network/lora/pymesh.md)
     * [Sigfox](firmwareapi/pycom/network/sigfox.md)
     * [LTE](firmwareapi/pycom/network/lte.md)
   * [AES](firmwareapi/pycom/aes.md)
@@ -210,4 +211,3 @@
 ## Have a question?
 
 * [Ask on the Forum](https://forum.pycom.io)
-
