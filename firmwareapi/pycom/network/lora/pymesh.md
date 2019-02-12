@@ -75,7 +75,7 @@ More info: https://openthread.io/guides/thread-primer/node-roles-and-types
 
 #### mesh.single\(\)
 
-Returns `True` if this node is the only Leader or Router in the current Mesh network. In other words, returns `True`, if all the other nodes, within the same Pymesh, are just Children.
+Returns `True` if this node is the only Leader or Router in the current Mesh network. In other words, returns `True`, if this is the only Router or Leader node in the current Pymesh.
 
 ```python
 >>> pymesh.single()
@@ -123,7 +123,7 @@ More info: https://openthread.io/guides/thread-primer/ipv6-addressing
 
 #### mesh.neighbors\(\)
 
-Returns a list with tuples containing information about neighbors, ie. the other nodes from Pymesh having direct radio link.
+Returns a list with tuples containing information about neighbors, ie. all other nodes that have a direct radio connection to the calling node.
 
 For each neighbor the following properties are returned:
 * mac - LoRa MAC address.
@@ -164,7 +164,7 @@ For each Router the following properties are returned:
 
 #### mesh.leader\(\)
 
-Returns information about Leader, or more generaly about current Pymesh.
+Returns information about Leader of the current Pymesh. can be called 
 
 The following details are returned:
 * part_id - partition id, the Pymesh internal network address.
@@ -240,7 +240,7 @@ Leader Router ID: 51
 
 ## Working with Pymesh LoRa Sockets
 
-Pymesh supports only UDP sockets (not-acknoledged). They are created in the following way:
+Pymesh supports only UDP sockets (not-acknowledged). They are created in the following way:
 
 ```python
 import socket
