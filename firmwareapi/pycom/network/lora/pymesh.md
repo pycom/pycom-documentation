@@ -75,7 +75,7 @@ More info: https://openthread.io/guides/thread-primer/node-roles-and-types
 
 #### mesh.single\(\)
 
-Returns `True` if this node is the only Leader or Router in the current Mesh network. In other words, returns `True`, if this is the only Router or Leader node in the current Pymesh.
+Returns `True` if this node is the only Leader or Router in the current Mesh network. 
 
 ```python
 >>> pymesh.single()
