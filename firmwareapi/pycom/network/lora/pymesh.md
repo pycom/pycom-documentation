@@ -164,7 +164,7 @@ For each Router the following properties are returned:
 
 #### mesh.leader\(\)
 
-Returns information about Leader of the current Pymesh. can be called 
+Returns information about Leader of the current Pymesh. can be called from any connected node. 
 
 The following details are returned:
 * part_id - partition id, the Pymesh internal network address.
