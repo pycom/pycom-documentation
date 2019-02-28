@@ -38,21 +38,43 @@ lte = LTE()
 
 This method is used to set up the LTE subsystem. After a `deinit()` this method can take several seconds to return waiting for the LTE modem to start-up. Optionally specify a carrier name. The available options are: `verizon, at&t, standard`. `standard` is generic for any carrier, and it's also the option used when no arguments are given.
 
-#### lte.deinit\(\)
+#### lte.deinit\(detach=True, reset = False\)
 
 Disables LTE modem completely. This reduces the power consumption to the minimum. Call this before entering deepsleep.
 
-#### lte.attach\(\*, band=None\)
+- `detach` : detach from network.
 
-Enable radio functionality and attach to the LTE Cat M1 network authorised by the inserted SIM card. Optionally specify the band to scan for networks. If no band \(or `None`\) is specified, all 6 bands will be scanned. The possible values for the band are: `3, 4, 12, 13, 20 and 28`.
+- `reset` : reset LTE modem.
+
+#### lte.attach\(\*, band=None, apn=None, cid=None, type=LTE.IP, legacyattach=True\)
+
+Enable radio functionality and attach to the LTE network authorised by the inserted SIM card. Optionally specify:
+ 
+- `band` : to scan for networks. If no band \(or `None`\) is specified, all 8 bands will be scanned. The possible values for the band are: `3, 4, 5, 8, 12, 13, 20 and 28`.
+ 
+- `apn` : Specify the APN (Access point Name).
+
+- `cid` : connection ID, see `LTE.connect()`. when the ID is set here it will be remembered when doint connect so no need to specify again
+
+- `type` : PDP context type either `LTE.IP` or `LTE.IPV4V6`. These are options to specify PDP type ‘Packet Data protocol’ either IP [Internet Protocol] or IPV4V6 ver4,6 , that depends actually on what does the Network support.
+
+- `legacyattach` : When kept = True the API `LTE.isattached()` will return True when attached to the Network AND Network registration status is home or roaming, when flag is False, API `LTE.isattached()` will return True when attached to the Network only.
+
+---
+*NOTE* :
+When carrier is specified in `LTE()` or `LTE.init()` (eg. `lte = LTE(carrier=verizon)`) No need to specify band, apn or type these parameters are already programmed in to the LTE modem for each carrier.
+
+--- 
 
 #### lte.isattached\(\)
 
 Returns `True` if the cellular mode is attached to the network. `False` otherwise.
 
-#### lte.dettach\(\)
+#### lte.detach\(reset=False\)
 
 Detach the modem from the LTE Cat M1 and disable the radio functionality.
+
+- `reset` : set to True to reset the LTE modem.
 
 #### lte.connect\(\*, cid=1\)
 
@@ -89,7 +111,7 @@ Returns `True` if there is an active LTE data session and IP address has been ob
 
 End the data session with the network.
 
-#### lte.send\_at\_cmd\(cmd\)
+#### lte.send\_at\_cmd\(cmd, delay=10000\)
 
 Send an AT command directly to the modem. Returns the raw response from the modem as a string object. **IMPORTANT:** If a data session is active \(i.e. the modem is _connected_\), sending the AT commands requires to pause and then resume the data session. This is all done automatically, but makes the whole request take around 2.5 seconds.
 
@@ -111,6 +133,8 @@ send_at_cmd_pretty('AT!="showphy"')     # get the PHY status
 send_at_cmd_pretty('AT!="fsm"')         # get the System FSM
 ```
 
+- `delay` : specify maximum Timeout in ms to wait response from modem.
+
 #### lte.imei\(\)
 
 Returns a string object with the IMEI number of the LTE modem.
@@ -123,3 +147,42 @@ Returns a string object with the ICCID number of the SIM card.
 
 Perform a hardware reset on the cellular modem. This function can take up to 5 seconds to return as it waits for the modem to shutdown and reboot.
 
+#### lte.pppsuspend\(\)
+
+Suspend PPP session with LTE modem. this function can be used when needing to send AT commands which is not supported in PPP mode.
+
+#### lte.pppresume\(\)
+
+Resumes PPP session with LTE modem.
+
+#### lte.factory\_reset\(\)
+
+Reset modem configuration to Factory settings.
+
+#### lte.modem\_upgrade\_mode\(\)
+ 
+ Puts the modem in to modem upgrade mode and bridging LTE modem UART port to FiPy/GPy UART0 to enable upgrading Firmware over USB port.
+ 
+ ---
+ *NOTE* :
+ In this mode all All tasks on the board are halted and a reset is required to regain functionality.
+ ---
+
+#### lte.reconnect\_uart\(\)
+
+Reconnect esp32 UART 2 to LTE modem UART port.
+
+#### lte.ue\_coverage\(\)
+
+Check Network Coverage for UE device (i.e LTE modem).
+
+`True`: There is Network Coverage.
+
+`False`: No Netwok Coverage.
+
+
+## Constants
+
+- `LTE.IP` : Internet Protocol IP
+
+- `LTE.IPV4V6` : Internet protocol ver. 4/6

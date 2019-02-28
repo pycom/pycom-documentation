@@ -146,3 +146,21 @@ Write the buffer of bytes to the socket.
 
 Return value: number of bytes written.
 
+#### socket.dnsserver(*, dnsIndex, ip_addr)
+ 
+When no arguments are passed this function returns the configured DNS servers Primary (Index=0) and backup (Index = 1)
+to set primary and Backup DNS servers specify the Index and Ip Address.
+
+Example:
+
+```
+>>> socket.dnsserver()
+('10.0.0.1', '8.8.8.8')
+```
+Setting DNS servers:
+
+```
+>>> socket.dnsserver(1, '0.0.0.0')
+>>> socket.dnsserver()
+('10.0.0.1', '0.0.0.0')
+```
