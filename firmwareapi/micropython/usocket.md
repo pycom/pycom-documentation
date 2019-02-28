@@ -151,3 +151,21 @@ Return value: number of bytes written.
 Perform the SSL handshake on the previously "wrapped" socket with ssl.wrap_socket().
 COuld be used when the socket is non-blocking and the SSL handshake is not performed during connect().
 
+#### socket.dnsserver(*, dnsIndex, ip_addr)
+ 
+When no arguments are passed this function returns the configured DNS servers Primary (Index=0) and backup (Index = 1)
+to set primary and Backup DNS servers specify the Index and Ip Address.
+
+Example:
+
+```
+>>> socket.dnsserver()
+('10.0.0.1', '8.8.8.8')
+```
+Setting DNS servers:
+
+```
+>>> socket.dnsserver(1, '0.0.0.0')
+>>> socket.dnsserver()
+('10.0.0.1', '0.0.0.0')
+```
