@@ -1,3 +1,8 @@
+{% hint style="info" %}
+    These API's are currently only available in the latest RC builds.
+{% endhint %}
+
+
 # Pymesh - LoRa Mesh
 
 This class provides Pymesh - LoRa Mesh protocol compliant for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating Pymesh initialisation and basic usage:
@@ -75,7 +80,7 @@ More info: https://openthread.io/guides/thread-primer/node-roles-and-types
 
 #### mesh.single\(\)
 
-Returns `True` if this node is the only Leader or Router in the current Mesh network. 
+Returns `True` if this node is the only Leader or Router in the current Mesh network.
 
 ```python
 >>> pymesh.single()
@@ -164,7 +169,7 @@ For each Router the following properties are returned:
 
 #### mesh.leader\(\)
 
-Returns information about Leader of the current Pymesh. can be called from any connected node. 
+Returns information about Leader of the current Pymesh. can be called from any connected node.
 
 The following details are returned:
 * part_id - partition id, the Pymesh internal network address.
@@ -176,36 +181,65 @@ The following details are returned:
 (part_id=828258, mac=72340172838076676, rloc16=52224)
 ```
 
-#### mesh.rx_cb\(handler\)
+#### mesh.rx_cb\(handler, argument\)
 
-Specify the callback handler executed when a new packet was received.
+Specify the callback handler executed ( with parameter `argument`) when a new packet was received, on **any opened socket** (in case multiple sockets are opened). At this moment, in the callback handler, the right socket
+has to be checked for incoming data.
+
+Please check the following callback example.
 
 ```python
-def receive_all_data(self):
-    """ receives all packages on socket """
-
+# handler responsible for receiving packets on UDP Pymesh socket
+def receive_pack(sockets):
+    # listen for incoming packets on all sockets
     while True:
-        rcv_data, rcv_addr = sock.recvfrom(512)
-        if len(rcv_data) == 0:
-            break  # out of while, no packet
+        is_new_data = False
+        for sock in sockets:
+            # check if data received on all sockets
+            rcv_data, rcv_addr = sock.recvfrom(128)
+            if len(rcv_data) > 0:
+                is_new_data = True
+                break # out of for sock
+        if not is_new_data:
+            break # out of while True
         rcv_ip = rcv_addr[0]
         rcv_port = rcv_addr[1]
-        print('Incomming %d bytes from %s (port %d):' %
-              (len(rcv_data), rcv_ip, rcv_port))
+        print('Incomming %d bytes from %s (port %d)'%(len(rcv_data), rcv_ip, rcv_port))
+
+        #check if data is for the external of the Pymesh (for The Cloud)
+        if rcv_data[0] == BORDER_ROUTER_MAGIC_BYTE and len(rcv_data) >= struct.calcsize(BORDER_ROUTER_HEADER_FORMAT):
+            br_header = struct.unpack(BORDER_ROUTER_HEADER_FORMAT, rcv_data)
+            print("IP dest: %x:%x:%x:%x:%x:%x:%x:%x (port %d)"%(
+                br_header[1],br_header[2],br_header[3],br_header[4],
+                br_header[5],br_header[6],br_header[7],br_header[8], br_header[9]))
+            rcv_data = rcv_data[struct.calcsize(BORDER_ROUTER_HEADER_FORMAT):]
+
         print(rcv_data)
 
+        # send some ACK
+        if  not rcv_data.startswith("ACK"):
+            print("Sent ACK back")
+            sock.sendto('ACK', (rcv_ip, rcv_port))
+
+# create the list of sockets
+sockets = []
+sockets.append(eid_socket)
+sockets.append(br_socket)
+
 # set RX callback
-pymesh.rx_cb(receive_all_data)
+mesh.mesh.rx_cb(receive_pack, sockets)
 ```
 
-#### mesh.border_router\(ipv6_net_address, preference_level\)
+#### mesh.border_router\([ipv6_net_address, preference_level]\)
 
-Sets as Border Router the current node, by specifying the external IPv6 network address(prefix), which should be used for any IPv6 packet to be sent outside of Pymesh. The parameters details are:
+Gets or sets as Border Router the current node, by specifying the external IPv6 network address (prefix), which should be used for any IPv6 packet to be sent outside of Pymesh. The parameters details are:
 * ipv6_net_address
  * has to be a valid IPv6 network address containing IP and mask, for ex `"2001:cafe:cafe:cafe::/64"`.
  * all the nodes from the Pymesh will receive a random additional IPv6 unicast address, from this network address.
  * a IPv6 packet which has as destination this prefix, will be routed to this node.
+  * the UDP datagram has a custom header: MAGIC byte (`0xBB`), then 16 bytes of IPv6 destination and 2 bytes port number.
  * to actually catch this IPv6 packet, a socket has to be created on a port.
+ * please check the Pymesh example, to see how a UDP packet for external network is being handled.
 * preference_level - should be a value (-1: low, 0: normal, 1: high)
   * in case multiple Border Routers are being declared with the same prefix and the same path cost, the one with the highest preference is used.
 
@@ -216,10 +250,36 @@ Sets as Border Router the current node, by specifying the external IPv6 network 
 # setting Border Router
 >>> pymesh.border_router("2001:cafe:cafe:cafe::/64", 0)
 0
-#checking a new IPv6 address is assigned
+# checking a new IPv6 address is assigned
 >>> pymesh.ipaddr()
 ['2001:cafe:cafe:cafe:a5d2:6934:9acd:66b3', 'fdde:ad00:beef:0:0:ff:fe00:fc00', 'fdde:ad00:beef:0:0:ff:fe00:cc00', 'fdde:ad00:beef:0:86c3:6130:98cc:6633', 'fe80:0:0:0:301:101:101:104']
+# list the BR entries
+>>> mesh.mesh.border_router()
+[(net='2001:dead:beef:cafe::/64', preference=0)]
 >>>
+```
+
+#### mesh.border_router_del\(ipv6_net_address\)
+
+Removes a Border Router entry, by specifying the external IPv6 network address (prefix), which should be used for any IPv6 packet to be sent outside of Pymesh. The parameter is the same as for `mesh.border_router(ipv6_net_address, preference_level)`.
+
+This will remove all IPv6 unicast from all Mesh nodes, which previously set an IPv6 with BR prefix.
+
+```python
+# BR entry
+>>> mesh.mesh.border_router()
+[(net='2001:dead:beef:caff::/64', preference=1)]
+# checking the BR IPv6 unicast address with BR prefix
+>>> pymesh.ipaddr()
+['2001:dead:beef:caff:2291:48a4:5229:94ca', 'fdde:ad00:beef:0:0:ff:fe00:6800', 'fdde:ad00:beef:0:4623:91c8:64b2:d9ec', 'fe80:0:0:0:200:0:0:8']
+# remove the BR entry
+>>> mesh.mesh.border_router_del('2001:dead:beef:caff::/64')
+# verify, no more BR entry
+>>> mesh.mesh.border_router()
+[]
+# verify, no more IPv6 with BR prefix
+>>> mesh.ipaddr()
+['fdde:ad00:beef:0:0:ff:fe00:6800', 'fdde:ad00:beef:0:4623:91c8:64b2:d9ec', 'fe80:0:0:0:200:0:0:8']
 ```
 
 #### mesh.cli\(\)
@@ -247,7 +307,9 @@ import socket
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 ```
 
-Pymesh socket is created, if the Mesh was enabled before \(`lora.Mesh()` was called\).
+Multiple sockets (maximum 3) can be created, being bind on a certain IPv6 unicast and port number.
+
+Pymesh sockets is created, if the Mesh was enabled before \(`lora.Mesh()` was called\).
 
 {% hint style="info" %}
 The Pymesh sockets supports only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
@@ -266,13 +328,19 @@ s.close()
 ```
 
 #### socket.bind\(port\_number\)
-
-Binds (links) an UDP port number (values 1024 to 63535), with the Pymesh network interface (implicitly `"::"` - all IPv6 unicast addresses).
+#### socket.bind\(\(ipv6_string, port\_number\)\)
+Binds (links) an socket with an UDP port number (values 1024 to 63535), with or without an IPv6 interface.
+By default, if just `port_number` is used, then it binds the socket with all IPv6 unicast addresses; it's equivalent with `"::"`as for the `ipv6_string`.
 
 Usage:
 
 ```python
-s.bind(1234)
+# binding socket with all IPv6 interfaces, like "::"
+>>> s.bind(1234)
+>>> mesh.ipaddr()
+['fdde:ad00:beef:0:0:ff:fe00:6800', 'fdde:ad00:beef:0:4623:91c8:64b2:d9ec', 'fe80:0:0:0:200:0:0:8']
+# binding the socket on a specific pair IPv6 and port number
+>>> s.bind(('fdde:ad00:beef:0:4623:91c8:64b2:d9ec', 1235))
 ```
 
 #### socket.sendto\(bytes,\(ip, port\)\)
