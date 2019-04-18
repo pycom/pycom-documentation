@@ -24,7 +24,7 @@ while not wlan.isconnected():
     machine.idle()
 print("Connected to WiFi\n")
 
-client = MQTTClient("device_id", "io.adafruit.com",user="your_username", password="your_api_key", port=1883)
+client = MQTTClient(mqtt_download_topic="your_username/feds/lights",client_id="device_id", server="io.adafruit.com",user="your_username", password="your_api_key", port=1883)
 
 client.set_callback(sub_cb)
 client.connect()
