@@ -84,6 +84,8 @@
   * [LoRaWAN Nano-Gateway](tutorials/lora/lorawan-nano-gateway.md)
   * [RN2483 to LoPy](tutorials/lora/rn2483-to-lopy.md)
   * [LoRa Mesh](tutorials/lora/lora-mesh.md)
+  * [PyMesh Border Router](tutorials/lora/pymesh-br.md)
+  
 * [Sigfox Examples](tutorials/sigfox.md)
 * [LTE Examples](tutorials/lte/README.md)
   * [CAT-M1](tutorials/lte/cat-m1.md)
