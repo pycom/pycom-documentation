@@ -208,7 +208,7 @@ redirects:
   chapter/pybytes/connect/sigfox/sigfox: ./pybytes/connect/sigfox/README.md
   chapter/pybytes/connect/sigfox/sigfoxDevKit: ./pybytes/connect/sigfox/devkit.md
   chapter/pybytes/connect/sigfox/sigfoxCustomContract: ./pybytes/connect/sigfox/custom.md
-  chapter/pybytes/dashboard/intro: ./pybytes/dashboard
+  chapter/pybytes/dashboard/intro: ./pybytes/dashboard.md
 
   chapter/docnotes: ./docnotes/introduction.md
   chapter/docnotes/syntax: ./docnotes/syntax.md
