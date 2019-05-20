@@ -114,11 +114,11 @@ redirects:
   chapter/firmwareapi/pycom/network/server: ./firmwareapi/pycom/network/server.md
   chapter/firmwareapi/pycom/network/bluetooth: ./firmwareapi/pycom/network/bluetooth/README.md
   chapter/firmwareapi/pycom/network/bluetooth/gatt: ./firmwareapi/pycom/network/bluetooth/gatt.md
-  firmwareapi/pycom/network/bluetooth/gattcconnection: chapter/./firmwareapi/pycom/network/bluetooth/gattcconnection.md
-  firmwareapi/pycom/network/bluetooth/gattccservice: chapter/./firmwareapi/pycom/network/bluetooth/gattccservice.md
-  firmwareapi/pycom/network/bluetooth/gattccharacteristic: chapter/./firmwareapi/pycom/network/bluetooth/gattccharacteristic.md
+  chapter/firmwareapi/pycom/network/bluetooth/gattcconnection: ./firmwareapi/pycom/network/bluetooth/gattcconnection.md
+  chapter/firmwareapi/pycom/network/bluetooth/gattccservice: ./firmwareapi/pycom/network/bluetooth/gattccservice.md
+  chapter/firmwareapi/pycom/network/bluetooth/gattccharacteristic: ./firmwareapi/pycom/network/bluetooth/gattccharacteristic.md
   chapter/firmwareapi/pycom/network/bluetooth/gattsservice: ./firmwareapi/pycom/network/bluetooth/gattsservice.md
-  firmwareapi/pycom/network/bluetooth/gattscharacteristic: chapter/./firmwareapi/pycom/network/bluetooth/gattscharacteristic.md
+  chapter/firmwareapi/pycom/network/bluetooth/gattscharacteristic: ./firmwareapi/pycom/network/bluetooth/gattscharacteristic.md
   chapter/firmwareapi/pycom/network/lora: ./firmwareapi/pycom/network/lora.md
   chapter/firmwareapi/pycom/network/sigfox: ./firmwareapi/pycom/network/sigfox.md
   chapter/firmwareapi/pycom/network/lte: ./firmwareapi/pycom/network/lte.md
@@ -218,5 +218,3 @@ redirects:
   chapter/advance/downgrade: ./advance/downgrade.md
   chapter/advance/cli: ./advance/cli.md
   chapter/advance/encryption: ./advance/encryption.md
-
-  chapter/license: ./license.md
