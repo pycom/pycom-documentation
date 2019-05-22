@@ -76,7 +76,7 @@
   * [RMT](tutorials/all/rmt.md)
   * [Socket](tutorials/all/socket.md)
   * [Touch](tutorials/all/touch.md)
-  
+
 * [LoRa Examples](tutorials/lora/README.md)
   * [LoRa-MAC \(Raw LoRa\)](tutorials/lora/lora-mac.md)
   * [LoRaWAN with OTAA](tutorials/lora/lorawan-otaa.md)
@@ -87,7 +87,8 @@
   * [RN2483 to LoPy](tutorials/lora/rn2483-to-lopy.md)
   * [LoRa Mesh](tutorials/lora/lora-mesh.md)
   * [PyMesh Border Router](tutorials/lora/pymesh-br.md)
-  
+  * [PyMesh Security](tutorials/lora/pymesh-security.md)
+
 * [Sigfox Examples](tutorials/sigfox.md)
 * [LTE Examples](tutorials/lte/README.md)
   * [CAT-M1](tutorials/lte/cat-m1.md)
