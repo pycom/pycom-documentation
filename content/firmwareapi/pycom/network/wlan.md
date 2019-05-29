@@ -328,9 +328,18 @@ This function is used to set the filter mask for Wifi control packets in promisc
 
 To get the current Filter mask, call the function with empty args.
 
-### wlan.smartConfig()
+### wlan.smartConfig\(\)
 
-Start Smart Config process for provessioning Wifi ssid/pwd
+Start SmartConfig operation, the smartConfig is a provisioning technique that enables setting Wifi credentials for station mode wirelessly via mobile app.
+
+####Steps:
+- call **wlan.smartConfig()** \(if smartConfig is not enabled on boot or you want to restart smartConfig\)
+- Use mobile App (ESP touch or Pycom App) to set ssid and password for the AP 
+- You can register a callback to be triggered when smart Config is Finesed successfuly or timedout.
+
+### wlan.Connected\_ap\_pwd()
+
+Get the password of AP the Device is connected to.
 
 ## Constants
 
