@@ -15,11 +15,11 @@ pycom.rgbled(0xff00)    # make the LED light up in green color
 
 ## Methods
 
-#### pycom.heartbeat\(\[enable\]\)
+#### pycom.heartbeat\(\[boolean\]\)
 
 Get or set the state \(enabled or disabled\) of the heartbeat LED. Accepts and returns boolean values \(`True` or `False`\).
 
-#### pycom.heartbeat\_on\_boot\(\[enable\]\)
+#### pycom.heartbeat\_on\_boot\(\[boolean\]\)
 
 Allows you permanently disable or enable the heartbeat LED. Once this setting is set, it will persist between reboots. Note, this only comes into effect on the next boot, it does not stop the already running heartbeat.
 
@@ -58,9 +58,11 @@ Erase the given key from the NVRAM memory area.
 
 Erase the entire NVRAM memory area.
 
-#### pycom.wifi\_on\_boot\(\[enable\]\)
+#### pycom.wifi\_on\_boot\(\[boolean\]\)
 
-Get or set the WiFi on boot flag. When this flag is set to `True`, the AP with the default SSID \(`lopy-wlan-xxx` for example\) will be enabled as part of the boot process. If the flag is set to False, the module will boot with WiFi disabled until it's enabled by the script via the `WLAN` class. This setting is stored in non-volatile memory which preserves it across resets and power cycles. Example:
+Get or set the WiFi on boot flag. When this flag is set to `True`, The Wifi will be enabled according to the other wifi settings eg (ssid\_sta, pwd\_sta, ssid\_ap, pwd\_ap). when `False` the Wifi module will be disabled untill enabled directly via WLAN class.
+
+This setting is stored in non-volatile memory which preserves it across resets and power cycles. Example:
 
 ```python
 import pycom
@@ -69,16 +71,34 @@ pycom.wifi_on_boot(True)   # enable WiFi on boot
 pycom.wifi_on_boot()       # get the wifi on boot flag
 ```
 
-#### pycom.wdt\_on\_boot\(\[enable\]\)
+#### pycom.wifi\_ssid\_sta\([ssid]\)
 
-Enables the WDT at boot time with the timeout in ms set by the function `wdt_on_boot_timeout`. If this flag is set, the application needs to reconfigure the WDT with a new timeout and feed it regularly to avoid a reset.
+Get or set the ssid of the Access point the device should connect to on startup.
+This setting is stored in non-volatile memory which preserves it across resets and power cycles
 
-```python
-import pycom
+#### pycom.wifi\_ssid\_ap\([ssid]\)
 
-pycom.wdt_on_boot(True)     # enable WDT on boot
-pycom.wdt_on_boot()         # get the WDT on boot flag
-```
+Get or set the ssid of the Access point that should be started by the device at startup, if not set and startup Wifi mode is AP the default AP name \(\<Board\_Name\>-wlan-\<last\_4\_digits\_mac\>\) will be used.This setting is stored in non-volatile memory which preserves it across resets and power cycles
+
+#### pycom.wifi\_pwd\_sta\([key]\)
+
+Get or set the Password of the Access point the device should connect to on startup, leave the password unset if the AP is open.This setting is stored in non-volatile memory which preserves it across resets and power cycles
+
+#### pycom.wifi\_pwd\_ap\([key]\)
+
+Get or set the Password of the Access point that should be started by the device at startup, leave unset if the AP should be open.This setting is stored in non-volatile memory which preserves it across resets and power cycles
+
+#### pycom.smart\_config\_on\_boot\([boolean]\)
+
+Read or (Enable/Disable) SmartConfig functionality on startup, this flag will be reset after successful completion of the smartConfig process after startup.This setting is stored in non-volatile memory which preserves it across resets and power cycles
+
+#### pycom.smart\_config\_on\_boot\([boolean]\)
+
+Read or (Enable/Disable) SmartConfig functionality on startup, this flag will be reset after successful completion of the smartConfig process after startup.This setting is stored in non-volatile memory which preserves it across resets and power cycles
+
+#### pycom.wifi\_mode\_on\_boot\(\[boolean\]\)
+
+Set or get the Wifi Mode at startup , `WLAN.STA`, `WLAN.AP` or `WLAN.APSTA`.This setting is stored in non-volatile memory which preserves it across resets and power cycles
 
 #### pycom.wdt\_on\_boot\_timeout\(\[timeout\]\)
 
@@ -89,6 +109,18 @@ import pycom
 
 pycom.wdt_on_boot_timeout(10000)     # set the timeout to 5000ms
 pycom.wdt_on_boot_timeout()          # get the WDT timeout value
+```
+
+#### pycom.wdt\_on\_boot\(\[enable\]\)
+
+Enables the WDT at boot time with the timeout in ms set by the function `wdt_on_boot_timeout`. If this flag is set, the application needs to reconfigure the WDT with a new timeout and feed it regularly to avoid a reset
+
+
+```python
+import pycom
+
+pycom.wdt_on_boot(True)     # enable WDT on boot
+pycom.wdt_on_boot()         # get the WDT on boot flag
 ```
 
 #### pycom.pulses\_get\(pin, timeout\)
