@@ -1,0 +1,13 @@
+{{ define "main" }}
+<v-card>
+  <v-card-text>
+  {{ partial "breadcrumb_recursive.html" (dict "menu" .Site.Menus.main "page" . ) }}
+    <h1 class="mt-0 pt-0">{{- .Title -}}</h1>
+    {{- .Content -}}
+    </v-card-text>
+</v-card>
+    <p>&nbsp;</p>
+    {{ partial "prev_next.html" (dict "menu" .Site.Menus.main "page" . ) }}
+    <v-spacer/>
+
+{{ end }}

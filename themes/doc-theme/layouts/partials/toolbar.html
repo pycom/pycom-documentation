@@ -1,0 +1,33 @@
+<v-toolbar
+  app
+  fixed
+  scroll-off-screen
+  height=68
+  class="pr-3 pl-2"
+  dark
+  style="background-color: #171730"
+>
+<!-- style="background-color: #171730"  -->
+  <v-toolbar-title style="width: 260px; " class="ml-4 pl-0  pt-2 text-xs-center hidden-sm-and-down">
+    <v-img height=48 width=190  src="/logo.svg" class="">
+  </v-toolbar-title>
+
+    <v-btn icon @click.stop="drawer = !drawer" style="z-index: 1200;">
+      <v-icon>toc</v-icon>
+    </v-btn>
+    <span class="beba" style="font-size: 1.6rem; opacity: 0.85;">
+        {{ .Page.Title }}
+    </span>
+
+
+  <v-spacer></v-spacer>
+  <div style="width: 210px; background-color: ">
+  <v-select :items="branches" v-model="branch" width=120 class="mono">
+    </div>
+  </v-select>
+  {{- if gt .WordCount 400 -}}
+  <v-btn icon   ref="tocBtn" @click.stop="drawer2 = !drawer2" >
+    <v-icon style="color: rgb(23, 255, 189);">more_vert</v-icon>
+  </v-btn>
+  {{ end }}
+</v-toolbar>

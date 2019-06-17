@@ -1,0 +1,32 @@
+{{ $page := .page }}
+{{ $pURL := .page.URL }}
+<ul class="lefttree ">
+{{ range .menu }}
+  {{ $iz := eq  $page.URL .URL}}
+  {{ $haz := in  $page.URL .URL}}
+  {{ $phaz := $page.HasMenuCurrent "main" .}}
+  {{ $subheading := ne .Parent "" }}
+  {{ if .HasChildren  }}
+
+  {{ if true }}
+    <li class="lefttree {{ if or $iz $haz }}padleft hot{{ end }}" >
+      <a href="{{ .URL | relURL }}" class="{{ if or $iz $haz }}hot{{end}} {{ if  $subheading }}mono{{ end }}"> {{ .Pre }} {{ .Name }}</a>
+      {{ end }}
+      {{ if or $iz $haz $phaz }}
+        {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page) }}
+      {{ end }}
+
+      {{ if or $iz $haz $phaz}}
+    </li>
+      {{ end }}
+
+  {{ else }}
+
+
+    <li class="lefttree {{ if $haz }}hot{{end}}">
+      <a href="{{ .URL | relURL }}" class="{{ if $iz }}hot{{end}} {{ if  $subheading }}mono{{ end }}">{{ .Name }}</a>
+    </li>
+
+  {{ end }}
+{{ end }}
+</ul>
