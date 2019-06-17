@@ -1,11 +1,13 @@
 ---
-title: "Introduction"
+title: "Datasheets"
 aliases:
     - datasheets/introduction.html
     - datasheets/introduction.md
     - product-info
     - chapter/datasheets
 ---
+
+
 The follow pages contain all information relating to each product, for examples: pinouts, spec sheets, relevant examples and notes.
 
 ## Development Modules
@@ -20,7 +22,7 @@ The follow pages contain all information relating to each product, for examples:
 
 {{% refname "development/sipy.md" %}}
 
-{{% refname "development/gpy.md" %}}
+{{% refname "development/gpy/" %}}
 
 {{% refname "development/fipy.md" %}}
 
@@ -49,4 +51,3 @@ The follow pages contain all information relating to each product, for examples:
 {{% refname "boards/expansion2.md" %}}
 
 {{% refname "boards/deepsleep/" %}}
-

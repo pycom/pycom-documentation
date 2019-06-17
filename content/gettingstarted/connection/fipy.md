@@ -38,13 +38,13 @@ aliases:
 {% tab title="USB UART Adapter" %}
 * Firstly you will need to connect power to your FiPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 Do **not** feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
 {{< /hint >}}
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the FiPy respectively.
 
-{{{% hint style="warning" %}}}
+{{% hint style="warning" %}}
 Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
 {{< /hint >}}
 
@@ -73,11 +73,11 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 ### Lora/Sigfox
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 If you intend on using the LoRa/Sigfox connectivity of the FiPy you **must** connect a LoRa/Sigfox antenna to your FiPy before trying to use LoRa/Sigfox otherwise you risk damaging the device.
 {{< /hint >}}
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The FiPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 433MHz. For this you will require a LoPy4.
 {{< /hint >}}
 
@@ -92,7 +92,7 @@ The FiPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 4
 
 ### LTE Cat-M1/NB-IoT
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the FiPy you **must** connect a LTE CAT-M1/NB-IoT antenna to your FiPy before trying to use LTE Cat-M1 or NB-IoT otherwise you risk damaging the device.
 {{< /hint >}}
 

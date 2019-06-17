@@ -20,7 +20,7 @@ The current mode (`WLAN.AP` after power up) may be checked by running:
 >>> wlan.mode()
 ```
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 
 When changing the WLAN mode, if following the instructions below, the WLAN connection to the Pycom device will be broken. This means commands will not run interactively over WiFi.
 
@@ -73,7 +73,7 @@ if not wlan.isconnected():
         machine.idle() # save power while waiting
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Notice how we check for the reset cause and the connection status, this is crucial in order to be able to soft reset the LoPy during a telnet session without breaking the connection.
 {{< /hint >}}
 

@@ -123,7 +123,7 @@ p_in = Pin('P10', mode=Pin.IN, pull=Pin.PULL_UP)
 p_in.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING, pin_handler)
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 For more information on how Pycom's products handle interrupts, see [here](/../notes.md#interrupt-handling).
 {{< /hint >}}
 

@@ -30,7 +30,7 @@ Upon exiting `screen`, press `CTRL-A CTRL-\`. If the keyboard does not support t
 
 This will allow screen to exited by pressing `CTRL-A Q`.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 On Linux, `picocom` or `minicom` may be used instead of `screen`. The usb serial address might also be listed as `/dev/ttyUSB01` or a higher increment for `ttyUSB`. Additionally, the elevated permissions to access the device (e.g. group uucp/dialout or use `sudo`) may be required.
 {{< /hint >}}
 

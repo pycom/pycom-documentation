@@ -12,7 +12,7 @@ Some of our devices require registration before you can utilise specific feature
 
 [![](/gitbook/assets/image-1.png)](cellular)
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 **Not all Pycom devices require activation**; most features work immediately out of the box!
 {{< /hint >}}
 

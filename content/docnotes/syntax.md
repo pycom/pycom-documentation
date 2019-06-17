@@ -94,7 +94,7 @@ The `constants` section of a library within the docs refers to specific values f
 I2C.MASTER()
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Be aware that you can only reference these constants upon importing and constructing a object from a library.
 {{< /hint >}}
 

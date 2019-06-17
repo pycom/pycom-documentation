@@ -107,7 +107,7 @@ To enter update mode follow these steps:
 $ dfu-util -D pytrack_0.0.8.dfu
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 You might need to run `dfu-util` as `sudo`. In that case, you will need to enter your password.
 {{< /hint >}}
 

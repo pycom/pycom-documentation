@@ -99,7 +99,7 @@ Reads the channels value and converts it into a voltage (in millivolts)
 
 Converts the provided value into a voltage (in millivolts) in the same way voltage does.
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 ADC pin input range is `0-1.1V`. This maximum value can be increased up to `3.3V` using the highest attenuation of `11dB`. **Do not exceed the maximum of 3.3V**, to avoid damaging the device.
 {{< /hint >}}
 

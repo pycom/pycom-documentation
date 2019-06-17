@@ -7,7 +7,7 @@ aliases:
 ---
 Sigfox is a Low Power Wide Area Network protocol that enables remote devices to connect using ultra-narrow band, UNB technology. The protocol is bi-directional, messages can both be sent up to and down from the Sigfox servers.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 When operating in `RCZ2` and `RCZ4` the module can only send messages on the default macro-channel (this is due to Sigfox network limitations). Therefore, the device needs to reset automatically to the default macro-channel after every 2 transmissions. However, due to FCC duty cycle limitations, there must a minimum of a 20s delay after resetting to the default macro-channel. Our API takes care of this, (and in real life applications you should not be in the need to send Sigfox messages that often), so it will wait for the necessary amount of time to make sure that the duty cycle restrictions are fulfilled.
 
 This means that if you run a piece of test code like:
@@ -45,7 +45,7 @@ s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 s.send(bytes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
 ```
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use (e.g. without an antenna), may damage the device.
 {{< /hint >}}
 
@@ -63,7 +63,7 @@ sigfox = Sigfox(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1)
 sigfox = Sigfox(mode=Sigfox.FSK, frequency=912000000)
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 `Sigfox.FSK` mode is not supported on LoPy 4 and FiPy.
 {{< /hint >}}
 
@@ -79,7 +79,7 @@ The arguments are:
 * `rcz` takes the following values: `Sigfox.RCZ1`, `Sigfox.RCZ2`, `Sigfox.RCZ3`, `Sigfox.RCZ4`. The `rcz` argument is only required if the mode is `Sigfox.SIGFOX`.
 * `frequency` sets the frequency value in `FSK` mode. Can take values between 863 and 928 MHz. 
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The SiPy comes in 2 different hardware flavours: a +14dBm Tx power version which can only work with `RCZ1` and `RCZ3` and a +22dBm version which works exclusively on `RCZ2` and `RCZ4`.
 {{< /hint >}}
 
@@ -99,7 +99,7 @@ Returns a signed integer with indicating the signal strength value of the last r
 
 Returns a byte object with the 8-Byte bytes object with the Sigfox PAC.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 To return human-readable values you should import `ubinascii` and convert binary values to hexidecimal representation. For example:
 
 ```python
@@ -246,7 +246,7 @@ s.recv(32)
 
 To communicate between two Sigfox capable devices, it may be used in FSK mode. Two devices are required to be set to the same frequency, both using FSK.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 `Sigfox.FSK` mode is not supported on LoPy 4 and FiPy.
 {{< /hint >}}
 
@@ -278,7 +278,7 @@ while True:
   print(s.recv(64))
 ```
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 Remember to use the correct frequency for your region (868 MHz for Europe, 912 MHz for USA, etc.)
 {{< /hint >}}
 

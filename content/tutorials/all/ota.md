@@ -128,7 +128,7 @@ A MicroPyton library for interfacing with the server described above is availabl
 
 This library is split into two layers. The top level `OTA` class implements all the high level functionality such as parsing the JSON file, making back copies of files being updated incase the update fails, etc. The layer of the library is agnostic to your chosen transport method. Below this is the `WiFiOTA` class. This class implements the actual transport mechanism of how the device fetches the files and update manifest (via WiFi as the class name suggests). The reason for this split is so that the high level functionality can be reused regardless of what transport mechanism you end up using. This could be implemented on top of Bluetooth for example, or the sever changed from HTTP to FTP.
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 Although the above code is functional, it is provided only as an example of how an end user might implement a OTA update mechanism. It is not 100% feature complete e.g. even though it does backup previous versions of files, the roll back procedure is not implemented. This is left of the end user to do.
 {{< /hint >}}
 
@@ -136,7 +136,7 @@ Although the above code is functional, it is provided only as an example of how 
 
 Below is am example implementing the methodology previously explained in this tutorial to initiate an OTA update.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The example below will only work on a Pycom device with LoRa capabilities. If want to test it out on a device without LoRa functionality then simply comment out any code relating to LoRa. Leaving just the `WiFiOTA` initialisation and they `ota.connect()` and `ota.update()`
 {{< /hint >}}
 

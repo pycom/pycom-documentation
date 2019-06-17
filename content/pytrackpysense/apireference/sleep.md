@@ -102,7 +102,7 @@ Enables as wakeup source, the INT pic (PIC - RC1, pin\#6 on External IO Header).
 
 Sets the sleep interval, specified in seconds. The actual sleep will be started by calling `go_to_sleep()` method.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)
 {{< /hint >}}
 

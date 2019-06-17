@@ -15,7 +15,7 @@ The user can do whatever is required inside of the callback, such as creating ne
 
 Currently, there are 2 classes that support interrupts; the [`Alarm`](pycom/machine/timer.md#class-timer-alarm-handler-none-s-ms-us-arg-none-periodic-false) and [`Pin`](pycom/machine/pin) classes. Both classes provide the `.callback()` method that enables the interrupt and registers the given handler. For more details about interrupt usage along with examples, please visit their respective sections.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Currently the interrupt system can queue up to **16 interrupts**.
 {{< /hint >}}
 

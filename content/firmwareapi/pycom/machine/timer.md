@@ -13,7 +13,7 @@ These two concepts are grouped into two different subclasses:
 
 `Chrono`: used to measure time spans. `Alarm`: to get interrupted after a specific interval.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 You can create as many of these objects as needed.
 {{< /hint >}}
 
@@ -126,7 +126,7 @@ class Clock:
 clock = Clock()
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 For more information on how Pycom's products handle interrupts, see [notes](/../notes.md#interrupt-handling).
 {{< /hint >}}
 

@@ -20,7 +20,7 @@ After you add your Sigfox credentials to Pybytes you can see DevKit contract typ
    1. Select Pybytes firmware
    2. Paste your device token to firmware updater
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Detailed steps which are same for all devices are [**described here**](/quick).
 {{< /hint >}}
 

@@ -2,23 +2,22 @@
 title: ""
 aliases:
 ---
+
+# datasheets
+
 The follow pages contain all information relating to each product, for examples: pinouts, spec sheets, relevant examples and notes.
 
 ## Development Modules
 
-{{% refname "development/wipy2.md" %}}
+ {{% refname "/datasheets/development/wipy2" %}}
+ {{% refname "/datasheets/development/wipy3" %}}
+ {{% refname "/datasheets/development/lopy" %}}
+ {{% refname "/datasheets/development/lopy4" %}}
+ {{% refname "/datasheets/development/sipy" %}}
+ {{% refname "/datasheets/development/gpy" %}}
 
-{{% refname "development/wipy3.md" %}}
 
-{{% refname "development/lopy.md" %}}
 
-{{% refname "development/lopy4.md" %}}
-
-{{% refname "development/sipy.md" %}}
-
-{{% refname "development/gpy.md" %}}
-
-{{% refname "development/fipy.md" %}}
 
 ## OEM modules
 
@@ -45,4 +44,3 @@ The follow pages contain all information relating to each product, for examples:
 {{% refname "boards/expansion2.md" %}}
 
 {{% refname "boards/deepsleep/" %}}
-

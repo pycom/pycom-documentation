@@ -26,7 +26,7 @@ The console can be used to run any python code, also functions or loops.
 
 Use `print()` to output contents of variables to the console for you to read. Returned values from functions will also be displayed if they are not caught in a variable. This will not happen for code running from the main or boot files. Here you need to use `print()` to output to the console.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Note that after writing or pasting any indented code like a function or a while loop, the user will have to press enter up to three times to tell MicroPython the code is to be closed (this is standard MicroPython & Python behaviour).
 
 Also be aware that code written into the REPL is not saved after the device is powered off/on again.
@@ -36,7 +36,7 @@ Also be aware that code written into the REPL is not saved after the device is p
 
 To test code on a device, create a new `.py` file or open an existing one, type the desired code, save the file and then press the `Run` button. This will run the code directly onto the Pycom board and output the results of the script to the REPL.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Changes made to files won't be automatically uploaded to the board upon restarting or exiting the `Run` feature, as the Pycom board will not store this code. In order to push the code permanently to a device, use the `Upload` feature.
 {{< /hint >}}
 

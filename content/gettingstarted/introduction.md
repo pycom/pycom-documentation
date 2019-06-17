@@ -28,7 +28,7 @@ Now that you have a connected module and all the required software installed it 
 
 Now that you familiar with programming your device you will no doubt be keen to get it connected to one of the advertised wireless networks. This usually requires some registration. This step will detail how to get registered and connected to various wireless networks.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 You can navigate through this guide using the arrow buttons at the bottom of the page.
 {{< /hint >}}
 

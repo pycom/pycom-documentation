@@ -5,7 +5,7 @@ aliases:
     - tutorials/lte/cat-m1.md
     - chapter/tutorials/lte/cat-m1
 ---
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Please ensure you have the latest Sequans modem firmware for the best network compatibility. Instructions for this can be found [here](firmware).
 {{< /hint >}}
 

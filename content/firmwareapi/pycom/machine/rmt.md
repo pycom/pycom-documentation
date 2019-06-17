@@ -84,7 +84,7 @@ The `tx_carrier` parameter is a tuple with the following structure:
 
 Deinitialise the RMT object.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 If an RMT object needs to be reconfigured from RX/TX to TX/RX, then either first `deinit()` must be called or the `init()` again with the desired configuration.
 {{< /hint >}}
 
@@ -111,7 +111,7 @@ Return value: Tuple of items with the following structure: `(level, duration)`:
 * `level` represents the level of the received bit/pulse, can be 0 or 1.
 * `duration` represents the duration of the received pulse, the time unit (resolution) depends on the selected channel.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Maximum of 128 pulses can be received in a row without receiving "idle" signal. If the incoming pulse sequence contains more than 128 pulses the rest is dropped and the receiver waits for another sequence of pulses. The `pulses_get` function can be called to receive more than 128 pulses, however the above mentioned limitation should be kept in mind when evaluating the received data.
 {{< /hint >}}
 

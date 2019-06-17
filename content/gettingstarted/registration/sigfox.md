@@ -43,7 +43,7 @@ You should see green microchip if you entered correct _Sigfox ID_ and _Sigfox PA
 
 Then provide the required information including email address and complete registration.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 When registering your other devices (not your first device), you already have created Sigfox Account before. Be sure you are login with your Sigfox account. In that way all of your devices will be added to same Sigfox Account.
 {{< /hint >}}
 

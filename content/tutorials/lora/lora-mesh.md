@@ -28,7 +28,7 @@ This example shows how to:
   * sending packets to all neighbors
 * toggle LED as packet/ping is received.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The LoRa-Mesh socket supports only the following socket methods: `close()`, `bind()`, `sendto()`, and `recvfrom()`.
 {{< /hint >}}
 

@@ -43,7 +43,7 @@ print(wlan.ifconfig())
 
 Create a WLAN object, and optionally configure it. See [`init`](wlan.md#wlan-init-mode-ssid-none-auth-none-channel-1-antenna-none-power_save-false-hidden-false) for params of configuration.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The WLAN constructor is special in the sense that if no arguments besides the `id` are given, it will return the already existing WLAN instance without re-configuring it. This is because WLAN is a system feature of the WiPy. If the already existing instance is not initialised it will do the same as the other constructors an will initialise it with default values.
 {{< /hint >}}
 
@@ -103,7 +103,7 @@ Connect to a wifi access point using the given SSID, and other security paramete
 * `identity` is only used in case of `WLAN.WPA2_ENT` security. Needed by the server.
 * `hostname` is the name of the host connecting to the AP. Max length of name string is 32 Bytes
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The ESP32 only handles certificates with `pkcs8` format (but not the "Traditional SSLeay RSAPrivateKey" format). The private key should be RSA coded with 2048 bits at maximum.
 {{< /hint >}}
 

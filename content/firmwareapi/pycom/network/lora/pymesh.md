@@ -315,7 +315,7 @@ Multiple sockets (maximum 3) can be created, being bind on a certain IPv6 unicas
 
 Pymesh sockets is created, if the Mesh was enabled before (`lora.Mesh()` was called).
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The Pymesh sockets supports only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
 {{< /hint >}}
 

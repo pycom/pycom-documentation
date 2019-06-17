@@ -19,7 +19,7 @@ This guide will take you through how to setup your first project with Pymakr and
 
 3. Once the text editor has loaded you will need to click `File` &gt; `Open`, and open the directory you created in step 1
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 If you are using Atom, it is important to check at this point that Atom has successfully identified the project. The name of the directory you created in step 1 (`RGB-Blink` in this case) should be shown in the Pymakr pane like so:
 
 ![](/gitbook/assets/atom_project.png)

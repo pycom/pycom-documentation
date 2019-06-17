@@ -1,4 +1,4 @@
 {{ $p := .Get 0 }}
 {{ with .Page.GetPage $p }}
-  <a href="{{ .URL }}">{{ .Title }}</a>
+  <a href="{{ $p }}">{{ .Title }}</a>
 {{ end }}

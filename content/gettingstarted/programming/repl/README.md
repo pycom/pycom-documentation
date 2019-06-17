@@ -14,7 +14,7 @@ The REPL includes the following features:
 * Halt any executing code: with `Ctrl-C`
 * Copy/paste code or output: `Ctrl-C` and `Ctrl-V`
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 There are a number of useful shortcuts for interacting with the MicroPython REPL. See below for the key combinations;
 
 * `Ctrl-A` on a blank line will enter raw REPL mode. This is similar to permanent paste mode, except that characters are not echoed back.

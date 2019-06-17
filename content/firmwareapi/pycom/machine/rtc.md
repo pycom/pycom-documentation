@@ -44,7 +44,7 @@ For example:
 rtc.init((2017, 2, 28, 10, 30, 0, 0, 0))
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 `tzinfo` is ignored by this method. Use `time.timezone` to achieve similar results.
 {{< /hint >}}
 

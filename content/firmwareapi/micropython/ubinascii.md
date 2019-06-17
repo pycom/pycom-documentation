@@ -13,7 +13,7 @@ This module implements conversions between binary data and various encodings of 
 
 Convert binary data to hexadecimal representation. Returns bytes string.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 **Difference to CPython**
 
 If additional argument, `sep` is supplied, it is used as a separator between hexadecimal values.

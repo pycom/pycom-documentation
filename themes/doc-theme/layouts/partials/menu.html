@@ -5,7 +5,7 @@
   class="lighten-4 pt-0"
   style="overflow-y: hidden; overflow-x: hidden;"
 >
-    <v-container style="height: 68px; background-color: rgb(23, 23, 48);" class="dark mb-0 pb-1 pt-3 elevation-5 " >
+    <v-container style="height: 68px; background-color: rgb(23, 23, 48);" class="dark mb-0 pb-1 pt-3 elevation-5">
         <v-img height=48 width=190  src="/logo.svg">
     </v-container>
 
@@ -33,23 +33,10 @@
 
     <v-divider class="grey lighten-1  mr-2 ml-2 mb-4"></v-divider>
 
-<!--
-  <v-toolbar floating light class="grey lighten-4"  style="width: 272px;">
-  <v-text-field
-  style="width: 228px;"
-    flat
-
-    hide-details
-    prepend-inner-icon="search"
-    label="Search"
-    class="hidden-sm-and-down"
-  ></v-text-field>
-</v-toolbar>
-  -->
-
 
     <p class="ml-3">
-       <a href="/" class="beba" style="color: #1E1E3C;" ><v-icon style="color: #1E1E3C;" >home</v-icon> Table of content</a>
+       <a href="/" class="beba" style="color: #1E1E3C; text-decoration: none!important;" >
+         <v-icon style="color: #1E1E3C;" >home</v-icon> Table of content</a>
     <p>
 
     {{ partial "menu_recursive.html" (dict "menu" .Site.Menus.main "page" . ) }}

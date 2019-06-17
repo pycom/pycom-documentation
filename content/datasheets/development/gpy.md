@@ -4,6 +4,7 @@ aliases:
     - datasheets/development/gpy.html
     - datasheets/development/gpy.md
     - product-info/development/gpy
+    - datasheets/development/gpy
     - chapter/datasheets/development/gpy
 ---
 ![](/gitbook/assets/gpy-1.png)
@@ -20,7 +21,7 @@ The pinout of the GPy is available as a PDF File
 
 ![](/gitbook/assets/gpy-pinout.png)
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
 {{< /hint >}}
 
@@ -60,4 +61,3 @@ Tutorials on how to the GPy module can be found in the [examples](/../tutorials/
 * [LTE CAT-M1](/../tutorials/lte/cat-m1)
 * [NB-IoT](/../tutorials/lte/nb-iot)
 * [BLE](/../tutorials/all/ble)
-

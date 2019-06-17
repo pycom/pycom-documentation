@@ -102,7 +102,7 @@ Because the encryption is done based on the physical flash address, there are 2 
 * `gpy.bin_enc_0x10000` which has to be written at default factory address: `0x10000`
 * `gpy.bin_enc_0x1A0000` which has to be written at the `ota_0` partition address (`0x1A0000`)
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Hint: on MicroPython interface, the method `pycom.ota_slot()` responds with the address of the next OTA partition available (either `0x10000` or `0x1A0000`).
 {{< /hint >}}
 

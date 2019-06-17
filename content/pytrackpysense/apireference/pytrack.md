@@ -47,7 +47,7 @@ Creates a `L76GNSS` object, that will return values for longitude and latitude. 
 
 Read the longitude and latitude from the `L76GNSS`. Returns a **tuple** with the longitude and latitude. With `debug` set to `True` the output from the GPS is verbose.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)
 {{< /hint >}}
 

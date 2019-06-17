@@ -100,7 +100,7 @@ while(True):
 
 The node is always sending packages and waiting for the `ack` from the gateway.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 To adapt this code to user specific needs:
 
 * Put a max waiting time for the `ack` to arrive and resend the package or mark it as invalid

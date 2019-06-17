@@ -88,16 +88,14 @@ p {
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
     background-color: transparent;
 }
-/** this gives correct offset when link to anchors */
+/** this gives correct offset when link to anchors
 *[id]:before {
   display: block;
   content: " ";
-  margin-top: -75px;
-  height: 75px;
   visibility: hidden;
+  z-index: 0;
 }
-
-
+*/
 
 a, li.lefttree > a {
   text-decoration: none;

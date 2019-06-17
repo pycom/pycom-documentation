@@ -70,7 +70,7 @@ optional arguments:
 
 ## How to use the Parameters
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The CLI tool uses a combination of global and command specific parameters. The **order of parameters** is **important** to avoid ambiguity.
 
 `pycom-fwtool-cli [global parameters] [command] [command parameters]`
@@ -123,7 +123,7 @@ On Windows:
 COM6  [Pytrack] [USB VID:PID=04D8:F013 SER=Py343434 LOCATION=20-2]
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 This is the only command that does not require any additional parameters.
 
 All other commands require that **the serial port is specified either through the** `-p` **/** `--port` **option or through environment variable** `ESPPORT` You can optionally specify the speed either through `-s` / `--speed` or via environment variable `ESPBAUD`. The default speed is `921600`. The maximum speed for read operations on PIC based expansion boards & shields is `230400`. The speed will be reduced automatically if necessary.
@@ -264,7 +264,7 @@ optional arguments:
                         Set extra preferences
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Note: The local `pybytes_config.json` file is overwritten when making any modifications using this command (requires Pybytes firmware `1.17.5.b6` or higher and Firmware updater `1.14.3`).
 {{< /hint >}}
 

@@ -20,7 +20,7 @@ The pinout of the WiPy2 is available as a PDF File.
 
 ![](/gitbook/assets/wipy2-pinout.png)
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
 {{< /hint >}}
 

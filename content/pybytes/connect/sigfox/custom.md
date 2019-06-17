@@ -28,7 +28,7 @@ and select Sigfox device type which is associated with Sigfox custom contract.
    1. Select Pybytes firmware
    2. Paste your device token to firmware updater
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Detailed steps which are same for all devices are [**described here**](/quick).
 {{< /hint >}}
 

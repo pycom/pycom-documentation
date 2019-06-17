@@ -5,11 +5,11 @@ aliases:
     - tutorials/lte/firmware.md
     - chapter/tutorials/lte/firmware
 ---
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 This article is only related to GPy, FiPy, and G01 boards
 {{< /hint >}}
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 **Important**: When upgrading your modem for the first time, even if you have updated it in the past with the old firmware update method, you **MUST** use the "recovery" upgrade method described below. Otherwise you will risk breaking your module
 {{< /hint >}}
 
@@ -104,7 +104,7 @@ SYSTEM VERSION
     ZSP1         : 1.0.99-12341
 ```
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 
 After you have updated your modem once using the recovery method, you can now flash your modem again using just the `CATM1-38638.dup` or `NB1-37781.dup` file without specifying the `updater.elf` file. However, should the upgrade fail, your modem may end up in recovery mode and you will need the `updater.elf` file again. The updater will check for this and prompt you if using the `updater.elf` file is necessary.
 

@@ -12,11 +12,11 @@ The GPy and FiPy support both new LTE-M protocols:
 * **Cat-M1**: also known as **LTE-M** defines a 1.4 MHz radio channel size and about 375 kbps of throughput. It is optimised for coverage and long battery life, outperforming 2G/GPRS, while being similar to previous LTE standards.
 * **Cat-NB1** also known as **NB-IoT**, defines a 200 kHz radio channel size and around 60 kbps of uplink speed. It's optimised for ultra low throughput and specifically designed for IoT devices with a very long battery life. NB-IoT shares some features with LTE such as operating in licensed spectrum, but it's a very different protocol. It should be noted that NB-IoT has many restrictions as does not offer full IP connectivity and does not support mobility. When moving between cells, you will need to reconnect.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 **Please note:** The GPy and FiPy only support the two protocols above and are not compatible with older LTE standards.
 {{< /hint >}}
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The Sequans modem used on Pycom's cellular enabled modules can only work in one of these modes at a time. In order to switch between the two protocols you need to flash a different firmware to the Sequans modem. Instructions for this can be found [here](/../../tutorials/lte/firmware).
 {{< /hint >}}
 

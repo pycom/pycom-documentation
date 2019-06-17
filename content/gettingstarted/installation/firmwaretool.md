@@ -13,7 +13,7 @@ Here are the download links to the update tool. Please download the appropriate 
 * [macOS](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=macos&redirect=true) (10.11 or Higher)
 * [Linux](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) (requires `dialog` and `python-serial` package)
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Previous versions of firmware are available for download [**here**](/../advance/downgrade).
 {{< /hint >}}
 
@@ -41,7 +41,7 @@ If you are having any issues, make sure the **TX and RX jumpers** are present on
 {% endtab %}
 
 {% tab title=" Pysense/Pytrack/Pyscan/Expansion Board 3.0" %}
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 When using a Pysense/Pytrack/Pyscan/Expansion Board 3.0 to update your module you are not required to make a connection between `G23` and `GND`, the Pysense/Pytrack/Pyscan/Expansion Board 3.0 will do this automatically.
 {{< /hint >}}
 

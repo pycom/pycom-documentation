@@ -25,7 +25,7 @@ Add as many or as few of the libraries that are required.
 
 In addition to the Pysense or Pytrack specific libraries, you also need to upload the `pycoproc.py` file from the `_lib/pycoproc_` folder inside the libraries archive.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The Pytrack and Pysense boards behave the same as the Expansion Board. `Upload`, `Run` and upload code to Pycom modules via the Pymakr Plugin, in exactly the same process.
 {{< /hint >}}
 

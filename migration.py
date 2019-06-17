@@ -276,6 +276,7 @@ load_sumary()
 parse_files()
 write_all_front_matters()
 
+# things to check manually: 404.txt
 # ({{% ref page="../dashboard.md" %}})
 # {% content "fifth" %}
 # {% content "first" %}
@@ -294,3 +295,4 @@ write_all_front_matters()
 # {% tabs first="Exp Board 2.0", second="Exp Board 3.0", third="Pytrack/Pysense/Pyscan", fourth="USB UART Adapter", fifth="Wifi" %}
 # {{% /hint %}}
 # {{% hint style="info" %}}
+# {{ file }}

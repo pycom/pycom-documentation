@@ -7,7 +7,7 @@ aliases:
 ---
 AES (Advanced Encryption Standard) is a symmetric block cipher standardised by NIST. It has a fixed data block size of 16 bytes. Its keys can be 128, 192, or 256 bits long.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 AES is implemented using the ESP32 hardware module.
 {{< /hint >}}
 
@@ -61,7 +61,7 @@ Decrypt data with the key and the parameters set at initialisation.
 * `AES.MODE_CTR`:  Counter mode. Each message block is associated to a counter which must be unique across all messages that get encrypted with the same key.
 * `AES.SEGMENT_8`, `AES.SEGMENT_128`: Length of the segment for `AES.MODE_CFB`
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 To avoid security issues, IV should always be a random number and should never be reused to encrypt two different messages. The same applies to the counter in CTR mode. You can use `crypto.getrandbits()` for this purpose.
 {{< /hint >}}
 

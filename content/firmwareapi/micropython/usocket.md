@@ -58,7 +58,7 @@ Sockets are automatically closed when they are garbage-collected, but it is reco
 
 Bind the `socket` to `address`. The socket must not already be bound. The `address` parameter must be a tuple containing the IP address and the port.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 In the case of LoRa sockets, the address parameter is simply an integer with the port number, for instance: `s.bind(1)`
 {{< /hint >}}
 
@@ -119,7 +119,7 @@ Return a file object associated with the socket. The exact returned type depends
 
 The socket must be in blocking mode; it can have a timeout, but the file object's internal buffer may end up in a inconsistent state if a timeout occurs.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 **Difference to CPython**
 
 Closing the file object returned by `makefile()` **WILL** close the original socket as well.

@@ -2,7 +2,7 @@
 <v-card>
   <v-card-text>
   {{ partial "breadcrumb_recursive.html" (dict "menu" .Site.Menus.main "page" . ) }}
-    <h1>{{- .Title -}}</h1>
+    {{ if .Title }}<h1>{{- .Title -}}</h1>{{ end }}
       {{- .Content -}}
     <ul>
       {{ if lt .WordCount 10 }}
@@ -16,4 +16,7 @@
   </v-card-text>
 </v-card>
 <p>&nbsp;</p>
-{{ partial "prev_next.html" (dict "menu" .Site.Menus.main "page" . ) }}{{ end }}
+{{ partial "prev_next.html" (dict "menu" .Site.Menus.main "page" . ) }}
+
+
+{{ end }}

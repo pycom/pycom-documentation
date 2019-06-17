@@ -3,7 +3,7 @@ title: "Add Sigfox device"
 aliases:
     - chapter/pybytes/connect/sigfox/sigfox
 ---
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 Before you start you need to create Sigfox account. You need Pycom device with Sigfox to get your Sigfox account. [**Follow these instructions**](/../../gettingstarted/registration/sigfox).
 {{< /hint >}}
 

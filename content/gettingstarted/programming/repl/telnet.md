@@ -40,7 +40,7 @@ A terminal emulator is needed to open a telnet connection from Windows; the easi
 2. Next enter the IP address of the Pycom device (e.g. `192.168.4.1`)
 3. Finally click `Open`
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 When using a Pycom device with a personal, home or office WiFi access point, the telnet connection may still be used. In this instance, the user will need to determine the Pycom device's local IP address and substitute this for `192.168.4.1`, referred to in the earlier sections.
 {{< /hint >}}
 

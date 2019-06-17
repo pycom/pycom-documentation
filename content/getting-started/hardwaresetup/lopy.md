@@ -38,13 +38,13 @@ aliases:
 {% tab title="USB UART Adapter" %}
 * Firstly you will need to connect power to your LoPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 Do _not_ feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
 {{< /hint >}}
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the LoPy respectively.
 
-{{{% hint style="warning" %}}}
+{{% hint style="warning" %}}
 Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
 {{< /hint >}}
 
@@ -73,11 +73,11 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 ### Lora
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 If you intend on using the LoRa connectivity of the LoPy you **must** connect a LoRa antenna to your LoPy before trying to use LoRa otherwise you risk damaging the device.
 {{< /hint >}}
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 The LoPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 433MHz. For this you will require a LoPy4.
 {{< /hint >}}
 

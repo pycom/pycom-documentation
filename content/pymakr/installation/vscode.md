@@ -67,7 +67,7 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 These settings can also be applied on a per project basis by clicking `All commands` then `Pymakr > Project Settings`. This will open a JSON file which you can edit to enter your desired settings for the currently open project.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 This process is easiest with either a Pycom Expansion Board or a Pytrack/Pysense as the addresses are automatically selected. For external products such as FTDI USB Serial Cables, the serial address may need to be copied manually. Additionally, the reset button on the device may also need to be pressed before a connection message appears.
 {{< /hint >}}
 

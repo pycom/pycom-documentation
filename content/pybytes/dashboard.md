@@ -7,7 +7,7 @@ aliases:
 ---
 In this section, we will explain to you how to create widgets for data visualisation and set up your device's dashboard on Pybytes.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](connect/). After your done with that, you can proceed to the next example.
 {{< /hint >}}
 
@@ -46,7 +46,7 @@ _thread.start_new_thread(send_env_data, ())
 
 3. Upload the code into your device. Now your device is sending data to Pybytes.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 
 In this code, we're calling the function `pybytes.send_virtual_pin_value(persistent, pin, value))` to communicate with Pybytes. This function is part of the Pybytes library, and it has three arguments: `persistent`, `pin` and `value`.
 
@@ -78,7 +78,7 @@ Go to Pybytes.
 
 ![](/gitbook/assets/05%20%281%29.png)
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 The name and unit are labels used to identify your signal inside Pybytes (In this example we defined `Sinwave` as the name of the signal and `Rad` as the unit).
 
 The signal number has to match the pin number that you defined on `pybytes.send_virtual_pin_value` function call, inside your `main.py` code (In this example we defined `pin = 1`);

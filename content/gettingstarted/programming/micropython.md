@@ -23,7 +23,7 @@ Micropython shares majority of the same syntax as Python 3.5. The intention of t
 
 Micropython also has a number of Micropython specific libraries for accessing hardware level features. Specifics relating to those libraries can be found in the Firmware API Reference section of this documentation.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 Micropython, unlike C/C++ or Arduino, **does not use braces {} to indicate blocks of code** specified for class and function definitions or flow control. Blocks of code are denoted by line indentation, which is strictly enforced.
 
 The number of spaces in the indentation is variable but all statements within a block must be indented the same amount.

@@ -45,7 +45,7 @@ Select how you would like to connect your device to Pybytes:
 
 {{% refname "flash.md" %}}
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 From firmware 1.16.x onwards all Pycom devices come with Pybytes library built-in `/frozen` folder. That means that you can choose between adding your device quickly with the firmware updater or you can flash Pybytes library manually.
 {{< /hint >}}
 

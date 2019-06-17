@@ -38,13 +38,13 @@ aliases:
 {% tab title="USB UART Adapter" %}
 * Firstly you will need to connect power to your GPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 Do **not** feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
 {{< /hint >}}
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the GPy respectively.
 
-{{{% hint style="warning" %}}}
+{{% hint style="warning" %}}
 Please ensure you have the signal level of the UART adapter set to `3.3v` before connecting it.
 {{< /hint >}}
 
@@ -73,7 +73,7 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 ### LTE Cat-M1/NB-IoT
 
-{{{% hint style="danger" %}}}
+{{% hint style="danger" %}}
 If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the GPy you **must** connect a LTE CAT-M1/NB-IoT antenna to your GPy before trying to use LTE Cat-M1 or NB-IoT otherwise you risk damaging the device.
 {{< /hint >}}
 

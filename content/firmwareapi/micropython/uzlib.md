@@ -19,7 +19,7 @@ Return decompressed data as bytes. wbits is DEFLATE dictionary window size used 
 
 Create a `stream` wrapper which allows transparent decompression of compressed data in another stream. This allows to process compressed streams with data larger than available heap size. In addition to values described in `decompress()`, wbits may take values 24..31 (16 + 8..15), meaning that input stream has gzip header.
 
-{{{% hint style="info" %}}}
+{{% hint style="info" %}}
 **Difference to CPython**
 
 This class is MicroPython extension. It's included on provisional basis and may be changed considerably or removed in later versions.
