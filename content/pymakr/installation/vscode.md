@@ -5,6 +5,7 @@ aliases:
     - pymakr/installation/vscode.md
     - chapter/pymakr/installation/vscode
 ---
+
 Pycom also supports Microsoft's Visual Studio Code IDE platform with the Pymakr Plugin. To download Visual Studio Code, navigate to [VS Code](https://code.visualstudio.com/).
 
 You will also need NodeJS installed on your PC. Please download the latest LTS version available [from the NodeJS website.](https://nodejs.org/)

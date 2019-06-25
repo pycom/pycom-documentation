@@ -5,10 +5,6 @@ aliases:
     - firmwareapi/pycom/network/lora/pymesh.md
 ---
 
-
-
-# Pymesh - LoRa Mesh
-
 This class provides Pymesh - LoRa Mesh protocol compliant for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating Pymesh initialisation and basic usage:
 
 ```python

@@ -5,6 +5,9 @@ aliases:
     - tutorials/lora/lorawan-nano-gateway.md
     - chapter/tutorials/lora/lorawan-nano-gateway
 ---
+
+# LoRaWAN Nano-Gateway
+
 This example allows to connect a LoPy to a LoRaWAN network such as The Things Network (TTN) or Loriot to be used as a nano-gateway.
 
 This example uses settings specifically for connecting to The Things Network within the European 868 MHz region. For another usage, please see the `config.py` file for relevant sections that need changing.
@@ -20,6 +23,7 @@ The Nano-Gateway code is split into 3 files, `main.py`, `config.py` and `nanogat
 Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit hexadecimal number (called a EUI-64). The recommended practice is to produce this ID from your board by expanding the WiFi MAC address (a 48-bit number, called MAC-48). You can obtain that by running this code prior to configuration:
 
 ```python
+
 from network import WLAN
 import ubinascii
 wl = WLAN()
@@ -33,6 +37,7 @@ The result will by something like `b'240ac4FFFE008d88'` where `240ac4FFFE008d88`
 This file runs at boot and calls the library and `config.py` files to initialise the nano-gateway. Once configuration is set, the nano-gateway is then started.
 
 ```python
+
 """ LoPy LoRaWAN Nano Gateway example usage """
 
 import config
@@ -65,6 +70,7 @@ The Gateway ID is generated in the script using the process described above.
 **Please change the WIFI\_SSID and WIFI\_PASS variables to match your desired WiFi network**
 
 ```python
+
 """ LoPy LoRaWAN Nano Gateway configuration options """
 
 import machine
@@ -99,6 +105,7 @@ LORA_NODE_DR = 5
 The nano-gateway library controls all of the packet generation and forwarding for the LoRa data. This does not require any user configuration and the latest version of this code should be downloaded from the Pycom [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway).
 
 ```python
+
 """ LoPy Nano Gateway class """
 
 from network import WLAN
@@ -392,6 +399,7 @@ It's important that the following code examples (also on GitHub) are used to con
 When the LoPy connects an application (via TTN) using OTAA, the network configuration is derived automatically during a handshake between the LoPy and network server. Note that the network keys derived using the OTAA methodology are specific to the device and are used to encrypt and verify transmissions at the network level.
 
 ```python
+
 """ OTAA Node example compatible with the LoPy Nano Gateway """
 
 from network import LoRa
@@ -456,6 +464,7 @@ Using ABP join mode requires the user to define the following values and input t
 * Network Session Key
 
 ```python
+
 """ ABP Node example compatible with the LoPy Nano Gateway """
 
 from network import LoRa
@@ -542,7 +551,7 @@ For this example, use the `HTTP Integration` to forward the LoRaWAN Packets to a
 
 Click `HTTP Integration` to connect up an endpoint that can receive the data.
 
-For testing, a website called [RequestBin](https://requestb.in/) may be used to receive the data that TTN forwards (via POST Request). To set this up, navigate to [RequestBin](https://requestb.in/) and click the `Create a RequestBin`.
+For testing, a website called [RequestBin](https://requestbin.com/), may be used to receive the data that TTN forwards (via POST Request). To set this up, navigate to [RequestBin](https://requestbin.com/) and click the `Create a RequestBin`.
 
 ![](/gitbook/assets/ttn-9%20%281%29.png)
 
@@ -551,4 +560,3 @@ Copy the URL that is generated and past this into the `URL` form under the `Appl
 ![](/gitbook/assets/ttn-10%20%281%29.png)
 
 This is the address that TTN will forward data onto. As soon as a LoPy starts sending messages, TTN will forward these onto `RequestBin` and they will appear at the unique `RequestBin URL`.
-

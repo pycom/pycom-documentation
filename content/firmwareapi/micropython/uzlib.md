@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "uzlib"
 aliases:
     - firmwareapi/micropython/uzlib.html
     - firmwareapi/micropython/uzlib.md
@@ -24,4 +24,3 @@ Create a `stream` wrapper which allows transparent decompression of compressed d
 
 This class is MicroPython extension. It's included on provisional basis and may be changed considerably or removed in later versions.
 {{< /hint >}}
-

@@ -5,9 +5,11 @@ aliases:
     - tutorials/all/rgbled.md
     - chapter/tutorials/all/rgbled
 ---
+
 By default the heartbeat LED flashes in blue colour once every 4s to signal that the system is alive. This can be overridden through the `pycom` module.
 
 ```python
+
 import pycom
 
 pycom.heartbeat(False)
@@ -19,6 +21,7 @@ The heartbeat LED is also used to indicate that an error was detected.
 The following piece of code uses the RGB LED to make a traffic light that runs for 10 cycles.
 
 ```python
+
 import pycom
 import time
 

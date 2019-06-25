@@ -6,6 +6,7 @@ aliases:
     - product-info/notes
     - chapter/datasheets/notes
 ---
+
 ## Powering with an external power source
 
 The devices can be powered by a battery or other external power source.

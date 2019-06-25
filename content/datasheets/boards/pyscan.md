@@ -6,7 +6,14 @@ aliases:
     - product-info/boards/pyscan
     - chapter/datasheets/boards/pyscan
 ---
-![](/gitbook/assets/pyscan-new%20%281%29.png)
+
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83hfia61dsuyojco-pyscan-new.png)
+
+## Datasheet
+
+The datasheet of the Pyscan is available as a PDF File.
+
+<a href="/gitbook/assets/pyscan-specsheet.pdf" target="_blank"> Pyscan Datasheet </a>
 
 ## Pyscan Libraries
 
@@ -27,7 +34,7 @@ Libraries for the rest of the components will be added soon.
 
 ## Driver
 
-The Windows 7 driver for Pyscan is located [here](/../pytrackpysense/installation/firmware).
+The Windows 7 driver for Pyscan is located [here](/pytrackpysense/installation/firmware).
 
 For other Operating Systems there's no driver required.
 
@@ -35,7 +42,7 @@ For other Operating Systems there's no driver required.
 
 The pinout of the Pyscan is available as a PDF File
 
-{% file src="/gitbook/assets/pyscan-pinout.pdf" caption="Pyscan Pinout" %}
+<a href="/gitbook/assets/pyscan-pinout.pdf" target="_blank"> Pyscan Pinout </a>
 
 ![](/gitbook/assets/pyscan-pinout-1.png)
 
@@ -43,9 +50,12 @@ The pinout of the Pyscan is available as a PDF File
 
 The board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, it will charge the battery (if connected).
 
-## Specsheets
 
-The specsheet of the Pyscan is available as a PDF File.
 
-{% file src="/gitbook/assets/pyscan-specsheet.pdf" caption="Pyscan Datasheet" %}
 
+## Mechanical Dimensionsde
+![](/gitbook/assets/pyscan_V0.7_20180416_MecahnicalDimensions.png)
+
+## 3D model for case design
+
+* Please see the <a href="/gitbook/assets/PyScan_v0.7.step" target="_blank"> 3D model </a> (step format)

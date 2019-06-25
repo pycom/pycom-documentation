@@ -1,74 +1,49 @@
 ---
-title: "Connect to Pybytes: Flash Pybytes library manually"
+title: "Flash Pybytes-library (advanced)"
 aliases:
     - pybytes/connect/flash.html
     - pybytes/connect/flash.md
     - chapter/pybytes/connect/flash
 ---
-## Connecting a device to Pybytes by flashing Pybytes library manually
 
-In this section, we will explain to you how to connect your device to Pybytes by flashing Pybytes library manually.
+In this section, we will explain to you how to connect your device to Pybytes by flashing the Pybytes library.
+Use this, if you want to have full control over the Pybytes library on your device.
 
 {{% hint style="info" %}}
-From firmware 1.16.x onwards all Pycom devices come with Pybytes library build-in `/frozen` folder. That means that you can add your device quickly without the need of flashing Pybytes library manually. [Click here for more information.](quick)
+Pybytes firmware already contains [Pybytes library](https://github.com/pycom/pycom-micropython-sigfox/tree/pybytes-master/esp32/frozen/Base). That means that you can [add your device quickly](../quick) without the need of flashing Pybytes library.
 {{< /hint >}}
 
-### Step 1: Download your Pybytes Library
+### Step 1: Flash stable firmware to your device with Pycom firmware updater tool
+1. Open Pycom firmware updater tool
+2. Select a stable firmware
+3. Click on continue
 
-At the last step of the "Add Device" process:
+Here's more information about [firmware updates](/gettingstarted/installation/firmwaretool).
 
-![](/gitbook/assets/pybyteslib-box-1.gif)
+### Step 2: Download your Pybytes Library
 
-1. Click on download "Pybytes library"
-
-![](/gitbook/assets/pybytes-library-wizard%20%281%29.png)
-
-You can also download _Pybytes library_ at the device's settings page:
+You can download _Pybytes library_ at the device's settings page:
 
 2. Navigate to your device in Pybytes;
 
-3. On your device's page click on settings tab;
+3. Click on the settings tab;
 
-4. Click on the button _Download_ at Pybytes library;
+4. Click on the _Download_ button at Pybytes library section;
 
-![](/gitbook/assets/pybytes-library-download%20%281%29.gif)
+![](/gitbook/assets/pybytes/flash-pybytes-library/settingsTab.png)
 
-### Step 2. Flash your device with Pymakr
-
-{{% hint style="info" %}}
-In case you haven't installed Pymakr plugin, follow [these instructions](/../pymakr/installation/atom).
-{{< /hint >}}
-
-1. Connect your device to your computer with USB cable.
-2. Extract download Pybytes library and open extracted folder with Atom.
-3. Get your device serial port: in Pymakr plugin click on _More_ &gt; _get serial ports_
-4. Paste your device's serial port to `pymakr.conf` file:
-
-   ```text
-    {
-        "address": "PASTE_YOUR_SERIAL_PORT_HERE",
-        "username": "micro",
-        "password": "python",
-        "sync_folder": "flash"
-    }
-   ```
-
-5. Checkout your `flash/pybytes_config.json` file. It will be pre-filled with your information from Pybytes
-
-   Like deviceToken or WiFi credentials. You can change e.g. your WiFy password here.
-
-6. Put your device in [safe boot mode](/../gettingstarted/programming/safeboot).
-7. Upload code to your device by clicking on _Upload_ button in Pymakr.
-
-   After all Pybytes library files are uploaded to device, device will restart and will connect to Pybytes.
+### Step 3. Flash your device with Pymakr
 
 {{% hint style="info" %}}
-Pybytes library is written to `/flash` folder and will take precedence over build in firmware libraries in `/frozen` folder.
+In case you haven't installed Pymakr plugin, follow [these instructions](/pymakr/installation/atom).
+We recommend to install Pymakr in Atom.
 {{< /hint >}}
 
-## Next step: Set up your device's dashboard!
+1. Connect your device to the computer with a USB cable.
+2. Open zip archive of Pybytes library and extract a containing folder.
+3. Check your `flash/pybytes_config.json` file. It should be pre-filled with your Pybytes credentials (deviceToken, WiFi credentials, ...)
+3. Open Pybytes library folder as a project folder in Atom.
+4. Click on the Connect button in Pymakr. Pymakr should connect to your device.
+7. Upload code to your device by clicking on the _Upload_ button in Pymakr.
 
-Now it's time to display data from your device into Pybytes dashboard.
-
-{{% refname "../dashboard.md" %}}
-
+   After all the Pybytes library files are uploaded to your device, the device will restart and connect to Pybytes.

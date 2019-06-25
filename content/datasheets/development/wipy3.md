@@ -6,17 +6,29 @@ aliases:
     - product-info/development/wipy3
     - chapter/datasheets/development/wipy3
 ---
-![](/gitbook/assets/wipy3.png)
 
-**Store**: [Buy Here](http://www.pycom.io/wipy-3)
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86pdzbdvrponxeg6-wipy3.png)
 
-**Getting Started:** [Click Here](/../gettingstarted/connection/wipy)
+{{% hint style="info" %}}
+ Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
+{{< /hint >}}
+
+
+**Store**: [Buy Here](https://pycom.io/product/wipy-3-0/)
+
+**Getting Started:** [Click Here](/gettingstarted/connection/wipy)
+
+## Datasheet
+
+The datasheet of the WiPy3 is available as a PDF File.
+
+<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy3.0_v2.pdf" target="_blank"> WiPy3 Datasheet </a>
 
 ## Pinout
 
 The pinout of the WiPy3 is available as a PDF File.
 
-{% file src="/gitbook/assets/wipy3-pinout.pdf" caption="WiPy3 Pinout" %}
+<a href="/gitbook/assets/wipy3-pinout.pdf" target="_blank"> WiPy3 Pinout </a>
 
 ![](/gitbook/assets/wipy3-pinout.png)
 
@@ -30,12 +42,6 @@ Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) 
 * Upgraded RAM from 512KB to 4MB
 * Upgraded External FLASH from 4MB to 8MB
 * Antenna select pin moved from GPIO16 to GPIO21 (P12)
-
-## Datasheet
-
-The datasheet of the WiPy3 is available as a PDF File.
-
-{% file src="/gitbook/assets/wipy3-specsheet.pdf" caption="WiPy3 Datasheet" %}
 
 ## Notes
 
@@ -51,8 +57,7 @@ The `Vin` pin on the WiPy3 can be supplied with a voltage ranging from `3.5v` to
 
 ## Tutorials
 
-Tutorials on how to the WiPy3 module can be found in the [examples](/../tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the WiPy3:
+Tutorials on how to the WiPy3 module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the WiPy3:
 
-* [WiFi connection](/../tutorials/all/wlan)
-* [BLE](/../tutorials/all/ble)
-
+* [WiFi connection](/tutorials/all/wlan)
+* [BLE](/tutorials/all/ble)

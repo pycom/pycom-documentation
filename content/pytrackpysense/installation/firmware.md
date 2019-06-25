@@ -5,13 +5,21 @@ aliases:
     - pytrackpysense/installation/firmware.md
     - chapter/pytrackpysense/installation/firmware
 ---
+
 To update the firmware on the Pysense/Pytrack/Pyscan/Expansion Board v3, please see the following instructions. The firmware of Pysense/Pytrack/Pyscan/Expansion Board v3 can be updated via the USB port using the terminal tool, `DFU-util`.
 
 The latest firmware DFU file can be downloaded from the links below:
 
 * [Pytrack DFU](https://software.pycom.io/findupgrade?key=pytrack.dfu&type=all&redirect=true)
 * [Pysense DFU](https://software.pycom.io/findupgrade?key=pysense.dfu&type=all&redirect=true)
-* [Expansion Board DFU](https://software.pycom.io/findupgrade?key=expansion3.dfu&type=all&redirect=true)
+* [Expansion Board DFU v3.0](https://software.pycom.io/findupgrade?key=expansion3.dfu&type=all&redirect=true)
+* [Expansion Board DFU v3.1](https://software.pycom.io/findupgrade?key=expansion31.dfu&type=all&redirect=true)
+
+
+{{% hint style="info" %}}
+  Make sure to choose the correct firmware version for your expansion board. both 3.0 and 3.1 versions have version numbers in the silkscreen on the back of the board. See the image below for examples highlighted in Red
+  ![](/gitbook/assets/expansion_board_version.png)
+{{< /hint >}}
 
 While in the normal, application mode, the Pysense/Pytrack/Pyscan/Expansion Board v3 require a Serial USB CDC driver, in DFU, bootloader mode, the DFU driver is required. Below, the USB Product ID is depicted for each case.
 

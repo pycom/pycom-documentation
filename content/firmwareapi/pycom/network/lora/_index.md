@@ -1,6 +1,7 @@
 ---
 title: "LoRa"
 aliases:
+  - /firmwareapi/pycom/network/lora.md
 ---
 This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
 
@@ -310,7 +311,7 @@ Specify a callback handler for the LoRa radio. The `trigger` types are `LoRa.RX_
 
 The `LoRa.RX_PACKET_EVENT` event is raised for every received packet. The `LoRa.TX_PACKET_EVENT` event is raised as soon as the packet transmission cycle ends, which includes the end of the receive windows (even if a downlink is received, the `LoRa.TX_PACKET_EVENT` will come last). In the case of non-confirmed transmissions, this will occur at the end of the receive windows, but, in the case of confirmed transmissions, this event will only be raised if the `ack` is received. If the `ack` is not received `LoRa.TX_FAILED_EVENT` will be raised after the number of `tx_retries` configured have been performed.
 
-An example of how this callback functions can be seen the in method [`lora.events()`](lora.md#lora-events).
+An example of how this callback functions can be seen the in method [`lora.events()`](../lora#lora-events).
 
 #### lora.ischannel\_free(rssi\_threshold)
 
@@ -533,4 +534,3 @@ Usage:
 ```python
 s.setblocking(True)
 ```
-

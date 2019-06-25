@@ -5,6 +5,7 @@ aliases:
     - pytrackpysense/installation/drivers.md
     - chapter/pytrackpysense/installation/drivers
 ---
+
 Pytrack and Pysense will work out of the box for Windows 8/10/+, macOS as well as Linux. If using Windows 7, drivers to support the boards will need to be installed.
 
 Please follow the instructions below to install the required drivers.

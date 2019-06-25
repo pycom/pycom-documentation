@@ -5,8 +5,9 @@ aliases:
     - tutorials/lte/cat-m1.md
     - chapter/tutorials/lte/cat-m1
 ---
+
 {{% hint style="info" %}}
-Please ensure you have the latest Sequans modem firmware for the best network compatibility. Instructions for this can be found [here](firmware).
+Please ensure you have the latest Sequans modem firmware for the best network compatibility. Instructions for this can be found [here](../firmware).
 {{< /hint >}}
 
 The LTE Cat M1 service gives full IP access through the cellular modem.
@@ -16,6 +17,7 @@ Once the `lte.connect()` function has completed all the IP socket functions - in
 For example to connect over LTE Cat M1 to Google's web server over secure SSL:
 
 ```python
+
 import socket
 import ssl
 import time
@@ -45,4 +47,3 @@ This also applies to our MQTT and AWS examples.
 **IMPORTANT:** Once the LTE radio is initialised, it must be de-initialised before going to deepsleep in order to ensure minimum power consumption. This is required due to the LTE radio being powered independently and allowing use cases which require the system to be taken out from deepsleep by an event from the LTE network (data or SMS received for instance).
 
 When using the expansion board and the FiPy together, the RTS/CTS jumpers **MUST** be removed as those pins are being used by the LTE radio. Keeping those jumpers in place will lead to erratic operation and higher current consumption specially while in deepsleep.
-

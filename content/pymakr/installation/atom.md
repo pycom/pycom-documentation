@@ -5,6 +5,7 @@ aliases:
     - pymakr/installation/atom.md
     - chapter/pymakr/installation/atom
 ---
+
 For beginners, users getting started with MicroPython & Pycom as well as Atom text editor users, we recommend the **Pymakr Plugin for Atom**. This section will help you get started using the Atom Text Editor & Pymakr Plugin.
 
 Please follow these steps to install the Pymakr Plugin:

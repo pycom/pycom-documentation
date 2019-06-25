@@ -41,7 +41,7 @@ print(wlan.ifconfig())
 
 ### class network.WLAN(id=0, ...)
 
-Create a WLAN object, and optionally configure it. See [`init`](wlan.md#wlan-init-mode-ssid-none-auth-none-channel-1-antenna-none-power_save-false-hidden-false) for params of configuration.
+Create a WLAN object, and optionally configure it. See [`init`](../wlan#wlan-init-mode-ssid-none-auth-none-channel-1-antenna-none-power_save-false-hidden-false) for params of configuration.
 
 {{% hint style="info" %}}
 The WLAN constructor is special in the sense that if no arguments besides the `id` are given, it will return the already existing WLAN instance without re-configuring it. This is because WLAN is a system feature of the WiPy. If the already existing instance is not initialised it will do the same as the other constructors an will initialise it with default values.
@@ -350,4 +350,3 @@ To get the current Filter mask, call the function with empty args.
   `WLAN.FILTER_CTRL_PKT_CFEND`: Filter Control CFEND Packets
 
   `WLAN.FILTER_CTRL_PKT_CFENDACK`: Filter Control CFENDACK Packets
-

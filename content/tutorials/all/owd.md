@@ -5,11 +5,13 @@ aliases:
     - tutorials/all/owd.md
     - chapter/tutorials/all/owd
 ---
+
 This tutorial explains how to connect and read data from a DS18x20 temperature sensor. The onewire library is also available at the [pycom-libraries](https://github.com/pycom/pycom-libraries/tree/master/lib/onewire) GitHub Repository.
 
 ## Basic usage
 
 ```python
+
 import time
 from machine import Pin
 from onewire import DS18X20
@@ -29,6 +31,7 @@ while True:
 ## Library
 
 ```python
+
 #!/usr/bin/env python3
 
 """

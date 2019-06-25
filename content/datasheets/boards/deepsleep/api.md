@@ -6,6 +6,7 @@ aliases:
     - product-info/boards/deepsleep/api
     - chapter/datasheets/boards/deepsleep/api
 ---
+
 This chapter describes the library which controls the Deep Sleep Shield. This includes the controls for external interrupts and timer setup of the deep sleep functionality.
 
 To use this library, please upload the associated [Deep Sleep Library](https://github.com/pycom/pycom-libraries/tree/master/deepsleep) to `/lib` on the target Pycom device.
@@ -13,6 +14,8 @@ To use this library, please upload the associated [Deep Sleep Library](https://g
 ## Quick Example
 
 ```python
+
+
 from deepsleep import DeepSleep
 import deepsleep
 
@@ -46,6 +49,7 @@ The Deep Sleep Shield allows for waking up via a user trigger and also via an ex
 Creates a DeepSleep object, that will control the board's sleep features. For example;
 
 ```python
+
 ds = DeepSleep()
 ```
 
@@ -98,4 +102,3 @@ This method resets the PIC controller and resets it to the state previous to the
 {{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Pycom Libraries](https://github.com/pycom/pycom-libraries) GitHub repository.
 {{< /hint >}}
-

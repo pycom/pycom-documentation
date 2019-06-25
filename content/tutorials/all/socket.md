@@ -1,10 +1,10 @@
 ---
-title: "Socket"
+title: ""
 aliases:
-    - tutorials/all/socket.html
-    - tutorials/all/socket.md
-    - chapter/tutorials/all/socket
+    - tutorials/all/Socket.html
+    - tutorials/all/Socket.md
 ---
+
 Detailed information about this class can be found in [usocket]().
 
 ### Setting up a server with blocking sockets
@@ -12,6 +12,7 @@ Detailed information about this class can be found in [usocket]().
 The following example sets up a server which can accept 5 connections in parallel, create a new thread for each connected client, receives and sends back data then close the socket.
 
 ```python
+
 import usocket
 import _thread
 import time
@@ -58,6 +59,7 @@ while True:
 The following example sets up a client which can connect to a server with 2 non-blocking sockets, create a new thread to handle the non-blocking sockets.
 
 ```python
+
 import socket
 import _thread
 import time
@@ -145,6 +147,7 @@ _thread.start_new_thread(socket_thread, (p,))
 ### Connecting to a server with non-blocking SSL wrapped socket
 
 ```python
+
 
 import socket
 import ssl

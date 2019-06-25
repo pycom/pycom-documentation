@@ -5,6 +5,7 @@ aliases:
     - pytrackpysense/apireference/pytrack.md
     - chapter/pytrackpysense/apireference/pytrack
 ---
+
 This chapter describes the various libraries which are designed for the Pytrack board. This includes details about the various methods and classes available for each of the Pytrack's sensors.
 
 ## 3-Axis Accelerometer (LIS2HH12)

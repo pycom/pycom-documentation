@@ -5,14 +5,6 @@ aliases:
     - firmwareapi/pycom/machine/rmt.md
     - chapter/firmwareapi/pycom/machine/rmt
 ---
-  keywords:
-    - RMT
-    - Remote
-    - Remote Controller
-    - Pulse
----
-
-# RMT
 
 The RMT (Remote Control) module is primarily designed to send and receive infrared remote control signals that use on-off-keying of a carrier frequency, but due to its design it can be used to generate various types of signals.
 
@@ -132,4 +124,3 @@ Generates pulses as defined by the parameters below
 ## Constants
 
 * Define the level of the pulse: `RMT.LOW`, `RMT.HIGH`
-

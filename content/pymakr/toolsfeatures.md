@@ -5,11 +5,13 @@ aliases:
     - pymakr/toolsfeatures.md
     - chapter/pymakr/toolsfeatures
 ---
+
 ## Console (REPL)
 
 MicroPython has an interactive code tool known as the REPL (Read Evaluate Print Line). The REPL allows you to run code on your device, line by line. To begin coding, go to the Pymakr Plugin Console and start typing your code. Start by making the LED change colour.
 
 ```python
+
 import pycom           # we need this module to control the LED
 
 pycom.heartbeat(False) # disable the blue blinking
@@ -19,6 +21,7 @@ pycom.rgbled(0x00ff00) # make the LED light up green in colour
 You can change the colour by adjusting the hex RGB value.
 
 ```python
+
 pycom.rgbled(0xff0000) # now make the LED light up red in colour
 ```
 

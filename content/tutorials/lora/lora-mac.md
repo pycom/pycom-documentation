@@ -5,11 +5,13 @@ aliases:
     - tutorials/lora/lora-mac.md
     - chapter/tutorials/lora/lora-mac
 ---
+
 Basic LoRa connection example, sending and receiving data. In LoRa-MAC mode the LoRaWAN layer is bypassed and the radio is used directly. The data sent is not formatted or encrypted in any way, and no addressing information is added to the frame.
 
 For the example below, you will need two LoPys. A `while` loop with a random delay time is used to minimise the chances of the 2 LoPy's transmitting at the same time. Run the code below on the 2 LoPy modules and you will see the word 'Hello' being received on both sides.
 
 ```python
+
 from network import LoRa
 import socket
 import machine

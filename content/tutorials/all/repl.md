@@ -5,9 +5,11 @@ aliases:
     - tutorials/all/repl.md
     - chapter/tutorials/all/repl
 ---
+
 Using the Pymakr Plugin, open and connect a device or use serial terminal (PuTTY, screen, picocom, etc). Upon connecting, there should be a blank screen with a flashing cursor. Press Enter and a MicroPython prompt should appear, i.e. `>>>`. Let's make sure it is working with the obligatory test:
 
 ```python
+
 >>> print("Hello LoPy!")
 Hello LoPy!
 ```
@@ -21,6 +23,7 @@ If this is not working, try either a hard reset or a soft reset; see below.
 Here are some other example, utilising the device's hardware features:
 
 ```python
+
 >>> from machine import Pin
 >>> led = Pin('G16', mode=Pin.OUT, value=1)
 >>> led(0)
@@ -39,6 +42,7 @@ Here are some other example, utilising the device's hardware features:
 If something goes wrong, the device can be reset with two methods. The first is to press `CTRL-D` at the MicroPython prompt, which will perform a soft reset. A message, as following, will appear:
 
 ```python
+
 >>>
 PYB: soft reboot
 MicroPython v1.4.6-146-g1d8b5e5 on 2016-10-21; LoPy with ESP32

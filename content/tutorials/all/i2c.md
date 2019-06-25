@@ -5,9 +5,11 @@ aliases:
     - tutorials/all/i2c.md
     - chapter/tutorials/all/i2c
 ---
+
 The following example receives data from a light sensor using I2C. Sensor used is the BH1750FVI Digital Light Sensor.
 
 ```python
+
 import time
 from machine import I2C
 import bh1750fvi
@@ -26,6 +28,7 @@ while(True):
 Place this sample code into a file named `bh1750fvi.py`. This can then be imported as a library.
 
 ```python
+
 # Simple driver for the BH1750FVI digital light sensor
 
 class BH1750FVI:
@@ -53,6 +56,7 @@ class BH1750FVI:
 This is the same code, with added LoRa connectivity, sending the lux value from the light sensor to another LoRa enabled device.
 
 ```python
+
 import socket
 import time
 import pycom

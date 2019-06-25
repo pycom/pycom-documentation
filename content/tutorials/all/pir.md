@@ -5,11 +5,13 @@ aliases:
     - tutorials/all/pir.md
     - chapter/tutorials/all/pir
 ---
+
 This code reads PIR sensor triggers from this simple [PIR sensor](https://www.kiwi-electronics.nl/PIR-Motion-Sensor) and sends an HTTP request for every trigger, in this case to a [Domoticz](https://domoticz.com/) installation. When motion is constantly detected, this PIR sensor keeps the pin high, in which case this code will keep sending HTTP requests every 10 seconds (configurable with the hold\_time variable).
 
 ## Main (`main.py`)
 
 ```python
+
 import time
 from network import WLAN
 from machine import Pin
@@ -53,6 +55,7 @@ print("Exited main loop")
 For more WiFi scripts, see the wlan step by step tutorial.
 
 ```python
+
 import os
 import machine
 
@@ -99,6 +102,7 @@ if machine.reset_cause() != machine.SOFT_RESET:
 ## Domoticz Wrapper (`domoticz.py`)
 
 ```python
+
 import socket
 class Domoticz:
 

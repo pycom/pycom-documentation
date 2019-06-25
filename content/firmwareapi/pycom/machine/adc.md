@@ -5,11 +5,6 @@ aliases:
     - firmwareapi/pycom/machine/adc.md
     - chapter/firmwareapi/pycom/machine/adc
 ---
-  keywords:
-    - ADC
-    - Analog
-    - ADCChannel
----
 
 # ADC
 
@@ -102,4 +97,3 @@ Converts the provided value into a voltage (in millivolts) in the same way volta
 {{% hint style="danger" %}}
 ADC pin input range is `0-1.1V`. This maximum value can be increased up to `3.3V` using the highest attenuation of `11dB`. **Do not exceed the maximum of 3.3V**, to avoid damaging the device.
 {{< /hint >}}
-

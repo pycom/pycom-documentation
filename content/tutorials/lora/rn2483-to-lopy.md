@@ -5,6 +5,7 @@ aliases:
     - tutorials/lora/rn2483-to-lopy.md
     - chapter/tutorials/lora/rn2483-to-lopy
 ---
+
 This example shows how to send data between a Microchip RN2483 and a LoPy via raw LoRa.
 
 ## RN2483
@@ -28,6 +29,7 @@ radio tx 48656c6C6F  #(should send ‘Hello')
 ## LoPy
 
 ```python
+
 from network import LoRa
 import socket
 

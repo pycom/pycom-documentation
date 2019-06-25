@@ -5,6 +5,7 @@ aliases:
     - tutorials/all/mqtt.md
     - chapter/tutorials/all/mqtt
 ---
+
 MQTT is a lightweight messaging protocol that is ideal for sending small packets of data to and from IoT devices via WiFi.
 
 The broker used in this example is the [IO Adafruit](https://io.adafruit.com) platform, which is free and allows for tinkering with MQTT.
@@ -14,6 +15,7 @@ Visit [IO Adafruit](https://io.adafruit.com) and create an account. You'll need 
 This example will send a message to a topic on the Adafruit MQTT broker and then also subscribe to the same topic, in order to show how to use the subscribe functionality.
 
 ```python
+
 from mqtt import MQTTClient
 from network import WLAN
 import machine

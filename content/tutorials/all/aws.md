@@ -5,9 +5,10 @@ aliases:
     - tutorials/all/aws.md
     - chapter/tutorials/all/aws
 ---
+
 The AWS IoT platform enables devices to connect to the Amazon cloud and lets applications in the cloud interact with Internet-connected things. Common IoT applications either collect and process telemetry from devices or enable users to control a device remotely. Things report their state by publishing messages, in JSON format, on MQTT topics.
 
-For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/developerguide/iot-dg.pdf).
+For more information see this <a href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-dg.pdf" target="_blank"> PDF File </a>.
 
 ## Getting Started with AWS IoT
 
@@ -37,6 +38,7 @@ For more information see this [PDF File](http://docs.aws.amazon.com/iot/latest/d
 This file contains the WiFi, certificate paths and application specific settings that need to be updated by the user.
 
 ```python
+
 # WiFi configuration
 WIFI_SSID = 'my_wifi_ssid'
 WIFI_PASS = 'my_wifi_password'
@@ -87,6 +89,7 @@ To subscribe to a topic:
 * Messages should be published as shown in the [diagram](https://github.com/pycom/pycom-docs/tree/37661883902849b1a931ee273a23ae8e0f3d773e/img/aws-10.png)
 
 ```python
+
 # user specified callback function
 def customCallback(client, userdata, message):
     print("Received a new message: ")
@@ -125,6 +128,7 @@ while loopCount < 8:
 ### Shadow updater (`main.py`)
 
 ```python
+
 # user specified callback functions
 def customShadowCallback_Update(payload, responseStatus, token):
     if responseStatus == "timeout":
@@ -173,6 +177,7 @@ while True:
 ### Delta Listener (`main.py`)
 
 ```python
+
 # Custom Shadow callback
 def customShadowCallback_Delta(payload, responseStatus, token):
     payloadDict = json.loads(payload)

@@ -28,7 +28,7 @@ p_in() # get value, 0 or 1
 
 #### class machine.Pin(id, ...)
 
-Create a new Pin object associated with the string `id`. If additional arguments are given, they are used to initialise the pin. [See pin.init()](pin.md#pin-init-mode-pull-alt)
+Create a new Pin object associated with the string `id`. If additional arguments are given, they are used to initialise the pin. [See pin.init()](../pin#pin-init-mode-pull-alt)
 
 ```python
 from machine import Pin
@@ -124,7 +124,7 @@ p_in.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING, pin_handler)
 ```
 
 {{% hint style="info" %}}
-For more information on how Pycom's products handle interrupts, see [here](/../notes.md#interrupt-handling).
+For more information on how Pycom's products handle interrupts, see [here](../../../notes.md#interrupt-handling).
 {{< /hint >}}
 
 ## Attributes
@@ -155,4 +155,3 @@ The following constants are used to configure the pin objects. Note that not all
 
 * Selects the pin mode: `Pin.IN`, `Pin.OUT`, `Pin.OPEN_DRAIN`
 * Enables the pull up or pull down resistor: `Pin.PULL_UP`, `Pin.PULL_DOWN`
-

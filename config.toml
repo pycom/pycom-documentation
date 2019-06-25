@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://development.pycom.io/"
 languageCode = "en-us"
 title = "documentation"
 uglyurls = false
@@ -951,8 +951,8 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "uzlib"
-    url = "/firmwareapi/micropython/ustruct/uzlib/"
-    identifier = "firmwareapi@micropython@ustruct@uzlib"
+    url = "/firmwareapi/micropython/uzlib/"
+    identifier = "firmwareapi@micropython@uzlib"
     parent = "firmwareapi@micropython@ustruct"
     weight = 10
 
@@ -993,7 +993,7 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "WiPy 2.0"
-    url = "development/wipy2"
+    url = "/datasheets/development/wipy2/"
     identifier = "datasheets@development@wipy2"
     parent = "datasheets@development"
     weight = 10

@@ -1,45 +1,55 @@
 ---
-title: "PyMesh Border Router"
+title: "Pymesh Border Router"
 aliases:
     - tutorials/lora/pymesh-br.html
     - tutorials/lora/pymesh-br.md
 ---
 
-
-
-# Pymesh - Border Router
-
 The following script exemplifies the declaration of a Border Router inside Pymesh.
 
 The Border Router is a role of a Pymesh node that can forward the Pymesh internal data to the Cloud.  This is accomplished with the following steps:
-* declare the BR network address prefix, like `2001:dead:beef:cafe::/64`.
- * in this particular script, as example the node which has LoRa MAC as value `8` will set BR interface.
- * in a more practical usecase, the BR should be enabled if Wifi/BLE/Cellular connections are setup.
-* all the nodes within the Pymesh will create a random IPv6 unicast address with this prefix.
-* if a node sends data to an IPv6 which is external (like `1:2:3::4`), this UDP datagram will be routed to the BR.
-* BR will receive the UDP datagrams for external with an appended header, which contains:
- * MAGIC byte: `0xBB`
- * IPv6 destination as bytearray (16 bytes)
- * port destination as 2 bytes (1-65535 values).
-* the IPv6 destination is important so BR could actually route (forward) the UDP datagram content to the right interface (Wifi/BLE/cellular).
+
+- declare the BR network address prefix, like `2001:dead:beef:cafe::/64`.
+ - in this particular script, as example the node which has LoRa MAC as value `8` will set BR interface.
+ - in a more practical usecase, the BR should be enabled if Wifi/BLE/Cellular connections are setup.
+
+- all the nodes within the Pymesh will create a random IPv6 unicast address with this prefix.
+
+- if a node sends data to an IPv6 which is external (like `1:2:3::4`), this UDP datagram will be routed to the BR.
+
+- BR will receive the UDP datagrams for external with an appended header, which contains:
+ - MAGIC byte: `0xBB`
+ - IPv6 destination as bytearray (16 bytes)
+ - port destination as 2 bytes (1-65535 values).
+- the IPv6 destination is important so BR could actually route (forward) the UDP datagram content to the right interface (Wifi/BLE/cellular).
 
 After this script is executed, some example of testing:
-* send data to the cloud
- * `eid_socket.sendto("01234567890123456789", ("1::2", 1235))``
-* send data to the EID ipv6 of another Node inside Pymesh
- * `eid_socket.sendto("0123456789", ("fdde:ad00:beef:0:4623:91c8:64b2:d9ec", 1235))``
-* send data to the Leader
- * `eid_socket.sendto("0123456789", ("fdde:ad00:beef:0:0:ff:fe00:fc00", 1235))`
-* send data to the RLOC of another Node inside Pymesh
- * `eid_socket.sendto("0123456789", ("fdde:ad00:beef:0:0:ff:fe00:6800", 1235))`
+
+- send data to the cloud
+
+  `eid_socket.sendto("01234567890123456789", ("1::2", 1235))`
+
+- send data to the EID ipv6 of another Node inside Pymesh
+
+ `eid_socket.sendto("0123456789", ("fdde:ad00:beef:0:4623:91c8:64b2:d9ec", 1235))`
+ 
+- send data to the Leader
+
+ `eid_socket.sendto("0123456789", ("fdde:ad00:beef:0:0:ff:fe00:fc00", 1235))`
+
+- send data to the RLOC of another Node inside Pymesh
+
+ `eid_socket.sendto("0123456789", ("fdde:ad00:beef:0:0:ff:fe00:6800", 1235))`
 
 
-**Border Router example**
 
-* Source: [https://github.com/pycom/pycom-libraries/blob/master/lib/lora_mesh/main_border_router.py](https://github.com/pycom/pycom-libraries/blob/master/lib/lora_mesh/main_border_router.py)
-* `Loramesh` micropython library is available at [https://github.com/pycom/pycom-libraries/blob/master/lib/lora\_mesh/loramesh.py](https://github.com/pycom/pycom-libraries/blob/master/lib/lora_mesh/loramesh.py).
+## Border Router example
+
+- Source: [https://github.com/pycom/pycom-libraries/blob/master/lib/lora_mesh/main_border_router.py](https://github.com/pycom/pycom-libraries/blob/master/lib/lora_mesh/main_border_router.py)
+- `Loramesh` micropython library is available at [https://github.com/pycom/pycom-libraries/blob/master/lib/lora\_mesh/loramesh.py](https://github.com/pycom/pycom-libraries/blob/master/lib/lora_mesh/loramesh.py).
 
 ```python
+
 from network import LoRa
 import ubinascii
 from loramesh import Loramesh

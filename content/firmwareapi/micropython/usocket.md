@@ -127,7 +127,7 @@ Closing the file object returned by `makefile()` **WILL** close the original soc
 
 #### socket.read(size)
 
-Read up to size bytes from the socket. Return a bytes object. If `size` is not given, it behaves just like [`socket.readall()`](usocket.md#socket-readall), see below.
+Read up to size bytes from the socket. Return a bytes object. If `size` is not given, it behaves just like [`socket.readall()`](../usocket#socket-readall), see below.
 
 #### socket.readall()
 
@@ -157,7 +157,7 @@ Perform the SSL handshake on the previously "wrapped" socket with ssl.wrap_socke
 COuld be used when the socket is non-blocking and the SSL handshake is not performed during connect().
 
 #### socket.dnsserver(*, dnsIndex, ip_addr)
- 
+
 When no arguments are passed this function returns the configured DNS servers Primary (Index=0) and backup (Index = 1)
 to set primary and Backup DNS servers specify the Index and Ip Address.
 

@@ -5,6 +5,7 @@ aliases:
     - tutorials/lora/lora-mac-nano-gateway.md
     - chapter/tutorials/lora/lora-mac-nano-gateway
 ---
+
 This example allows a raw LoRa connection between two LoPys (nodes) to a single LoPy acting as a Nano-Gateway.
 
 For more information and discussions about this code, see this forum [post](https://forum.pycom.io/topic/236/lopy-nano-gateway).
@@ -12,6 +13,7 @@ For more information and discussions about this code, see this forum [post](http
 ## Gateway Code
 
 ```python
+
 import socket
 import struct
 from network import LoRa
@@ -50,6 +52,7 @@ The `_LORA_PKG_FORMAT` is used as a method of identifying the different devices 
 ## Node
 
 ```python
+
 import os
 import socket
 import time

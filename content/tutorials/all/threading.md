@@ -5,9 +5,11 @@ aliases:
     - tutorials/all/threading.md
     - chapter/tutorials/all/threading
 ---
+
 MicroPython supports spawning threads by the `_thread` module. The following example demonstrates the use of this module. A thread is simply defined as a function that can receive any number of parameters. Below 3 threads are started, each one perform a print at a different interval.
 
 ```python
+
 import _thread
 import time
 
@@ -23,6 +25,7 @@ for i in range(3):
 ## Using Locks:
 
 ```python
+
 import _thread
 
 a_lock = _thread.allocate_lock()

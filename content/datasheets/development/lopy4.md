@@ -6,29 +6,36 @@ aliases:
     - product-info/development/lopy4
     - chapter/datasheets/development/lopy4
 ---
-![](/gitbook/assets/lopy4-1.png)
 
-**Store**: [Buy Here](http://www.pycom.io/lopy4)
+![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn85npgnazxzxyv-nu-lopy4-1.png)
 
-**Getting Started:** [Click Here](/../gettingstarted/connection/lopy4)
+
+{{% hint style="info" %}}
+ Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
+{{< /hint >}}
+
+
+**Store**: [Buy Here](https://pycom.io/product/lopy4/)
+
+**Getting Started:** [Click Here](/gettingstarted/connection/lopy4)
+
+## Datasheet
+
+The datasheet of the LoPy4 is available as a PDF File.
+
+<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy4_v2.pdf" target="_blank"> LoPy4 Datasheet </a>
 
 ## Pinout
 
 The pinout of the LoPy4 is available as a PDF File
 
-{% file src="/gitbook/assets/lopy4-pinout.pdf" caption="LoPy4 Pinout" %}
+<a href="/gitbook/assets/lopy4-pinout.pdf" target="_blank"> LoPy4 Pinout </a>
 
 ![](/gitbook/assets/lopy4-pinout.png)
 
 {{% hint style="info" %}}
 Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
 {{< /hint >}}
-
-## Datasheet
-
-The datasheet of the LoPy4 is available as a PDF File.
-
-{% file src="/gitbook/assets/lopy4-specsheet-1.pdf" caption="LoPy4 Datasheet" %}
 
 ## Notes
 
@@ -44,11 +51,10 @@ The `Vin` pin on the LoPy4 can be supplied with a voltage ranging from `3.5v` to
 
 ## Tutorials
 
-Tutorials on how to the LoPy4 module can be found in the [examples](/../tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the LoPy4:
+Tutorials on how to the LoPy4 module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the LoPy4:
 
-* [WiFi connection](/../tutorials/all/wlan)
-* [LoRaWAN node](/../tutorials/lora/lorawan-abp)
-* [LoRaWAN nano gateway](/../tutorials/lora/lorawan-nano-gateway)
-* [Sigfox](/../tutorials/sigfox)
-* [BLE](/../tutorials/all/ble)
-
+* [WiFi connection](/tutorials/all/wlan)
+* [LoRaWAN node](/tutorials/lora/lorawan-abp)
+* [LoRaWAN nano gateway](/tutorials/lora/lorawan-nano-gateway)
+* [Sigfox](/tutorials/sigfox)
+* [BLE](/tutorials/all/ble)

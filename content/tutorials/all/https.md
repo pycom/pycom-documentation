@@ -5,9 +5,11 @@ aliases:
     - tutorials/all/https.md
     - chapter/tutorials/all/https
 ---
+
 Basic connection using `ssl.wrap_socket()`.
 
 ```python
+
 import socket
 import ssl
 
@@ -21,6 +23,7 @@ Below is an example using certificates with the blynk cloud.
 Certificate was downloaded from the blynk examples [folder](https://github.com/wipy/wipy/tree/master/examples/blynk) and placed in `/flash/cert/` on the device.
 
 ```python
+
 import socket
 import ssl
 
@@ -29,5 +32,4 @@ ss = ssl.wrap_socket(s, cert_reqs=ssl.CERT_REQUIRED, ca_certs='/flash/cert/ca.pe
 ss.connect(socket.getaddrinfo('cloud.blynk.cc', 8441)[0][-1])
 ```
 
-For more info, check the [`ssl`](/../firmwareapi/micropython/ussl) module in the API reference.
-
+For more info, check the [`ssl`](/firmwareapi/micropython/ussl) module in the API reference.

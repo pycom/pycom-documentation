@@ -5,6 +5,7 @@ aliases:
     - pytrackpysense/apireference/sleep.md
     - chapter/pytrackpysense/apireference/sleep
 ---
+
 This chapter describes the various methods for sleep and wakeup which are embedded in Pytrack and Pysense libraries. Both Pytrack and Pysense have the same methods, although the appropriate class, either `pytrack` or `pysense`, has to be instantiated.
 
 ## Quick Usage Example
@@ -12,6 +13,7 @@ This chapter describes the various methods for sleep and wakeup which are embedd
 The following example is also available at [Sleep Wakeup Example Libraries GitHub repository](https://github.com/pycom/pycom-libraries/blob/master/examples/accelerometer_wake/main.py)
 
 ```python
+
 #from pytrack import Pytrack
 from pysense import Pysense
 from LIS2HH12 import LIS2HH12
@@ -81,6 +83,7 @@ Enables as wakeup source, the accelerometer INT pin (PIC - RA5). The boolean par
 **The accelerometer (class** `LIS2HH12`**)** has to be also configured for a certain acceleration threshold and duration. Code snippet:
 
 ```python
+
 from pytrack import Pytrack
 from LIS2HH12 import LIS2HH12
 
@@ -101,6 +104,8 @@ Enables as wakeup source, the INT pic (PIC - RC1, pin\#6 on External IO Header).
 #### pytrack.setup\_sleep(time\_seconds)
 
 Sets the sleep interval, specified in seconds. The actual sleep will be started by calling `go_to_sleep()` method.
+
+Warning: When running via the repl calling `setup_sleep()` will hang/crash the repl. this is not the case for scripts uploaded to the board.
 
 {{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)

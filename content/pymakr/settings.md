@@ -5,6 +5,7 @@ aliases:
     - pymakr/settings.md
     - chapter/pymakr/settings
 ---
+
 Below you will find a description of the various settings available for Pymakr.
 
 ## address
