@@ -1,0 +1,38 @@
+{{ $page := .page }}
+  {{ $prev := . }}
+
+{{ range .menu }}
+
+  {{ $iz := eq  $page.URL .URL}}
+  {{ $haz := in  $page.URL .URL}}
+
+  {{ $shownext := false }}
+
+  {{ if .HasChildren }}
+      {{ if or $iz $haz }}
+
+      <a href="{{ .URL | relURL }}" class="bread {{ if or $iz $haz }}hot{{end}}"> {{ .Pre }} {{ .Name }}</a>
+        {{ if not $iz }}>{{ end }}
+      {{ end }}
+          {{ partial "breadcrumb_recursive.html" (dict "menu" .Children "page" $page) }}
+    {{ if or $iz $haz }}
+
+
+    {{ end }}
+
+  {{ else }}
+    {{ if or $iz $haz }}
+
+      <a href="{{ .URL | relURL }}" class="bread">{{ .Name }} </a>
+
+      {{ end }}
+
+      {{ if $iz }}
+      {{ $prev.URL }}
+
+        {{ end }}
+
+  {{ $prev := . }}
+  {{ end }}
+
+{{ end }}

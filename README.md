@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 # At this moment deprecated in favor of <a target="_blank" href="https://github.com/pycom/pydocs">pydocs</a>.
 
 This project is based on Gitbook, new docs are based on Github pages.
 
 # Introduction
+=======
+# run locally
+>>>>>>> publish
 
-Welcome to the Pycom documentation site. We recommend reading through all the sections to familiarise yourself with the various tools and features available to you to help you develop on your Pycom module.
+```
+brew install hugo
+hugo serve
+```
 
-To get started, read through the Getting Started Guide then feel free to jump straight into the tutorials and examples in Tutorials & Examples to begin building your projects.
+# Workflow
 
+<<<<<<< HEAD
 * [Products](products.md)
 * [Getting Started](getting-started/introduction.md)
 * [Pymakr](pymakr-plugin/installation/)
@@ -15,4 +23,37 @@ To get started, read through the Getting Started Guide then feel free to jump st
 * [API Documentation](firmware-and-api-reference/introduction.md)
 * [Product Info](product-info-datasheets/introduction.md)
 * [Pybytes](pybytes/introduction.md)
+=======
+- Make PR using Master branch
+- PR get merged on master
+- Then merge publish with master
+>>>>>>> publish
 
+```
+git commit -m "section: commit message"
+git push origin master
+git checkout publish
+git merge master
+git push origin publish
+```
+
+# some infos:
+
+- assets are in ./static directory, a directory aliased at /
+- css in /themes/doc-theme/static/doc-theme.css
+- SUMMARY.md is in config.toml
+
+
+# help
+
+- gohugo.io
+
+
+# detect broken links
+
+```
+wget -o 404.txt -r  --spider http://localhost:1313
+```
+
+A webhook has been installed on the publish branch to:
+- https://publish.d1rmdw1xyxqk1e.amplifyapp.com/

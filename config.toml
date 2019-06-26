@@ -1,0 +1,1293 @@
+baseURL = "https://development.pycom.io/"
+languageCode = "en-us"
+title = "documentation"
+uglyurls = false
+sectionPagesMenu = "main"
+PygmentsCodeFences = true
+# see https://help.farbox.com/pygments.html for available pygments
+PygmentsStyle = "friendly"
+theme = "doc-theme"
+
+[menu]
+
+[[menu.main]]
+    name = "Pycom Products"
+    url = "/products/"
+    identifier = "products"
+    weight = 30
+
+# *** Getting Started
+[[menu.main]]
+    name = "Getting Started"
+    url = "/gettingstarted/"
+    identifier = "gettingstarted"
+    weight = 40
+
+[[menu.main]]
+    name = "Hardware Setup"
+    url = "/gettingstarted/connection/"
+    identifier = "gettingstarted@connection"
+    parent = "gettingstarted"
+    weight = 10
+
+[[menu.main]]
+    name = "LoPy"
+    url = "/gettingstarted/connection/lopy/"
+    identifier = "gettingstarted@connection@lopy"
+    parent = "gettingstarted@connection"
+    weight = 10
+
+[[menu.main]]
+    name = "LoPy 4"
+    url = "/gettingstarted/connection/lopy4/"
+    identifier = "gettingstarted@connection@lopy4"
+    parent = "gettingstarted@connection"
+    weight = 20
+
+[[menu.main]]
+    name = "SiPy"
+    url = "/gettingstarted/connection/sipy/"
+    identifier = "gettingstarted@connection@sipy"
+    parent = "gettingstarted@connection"
+    weight = 30
+
+[[menu.main]]
+    name = "GPy"
+    url = "/gettingstarted/connection/gpy/"
+    identifier = "gettingstarted@connection@gpy"
+    parent = "gettingstarted@connection"
+    weight = 40
+
+[[menu.main]]
+    name = "FiPy"
+    url = "/gettingstarted/connection/fipy/"
+    identifier = "gettingstarted@connection@fipy"
+    parent = "gettingstarted@connection"
+    weight = 50
+
+[[menu.main]]
+    name = "WiPy"
+    url = "/gettingstarted/connection/wipy/"
+    identifier = "gettingstarted@connection@wipy"
+    parent = "gettingstarted@connection"
+    weight = 60
+
+[[menu.main]]
+    name = "Software"
+    url = "/gettingstarted/installation/"
+    identifier = "gettingstarted@installation"
+    parent = "gettingstarted"
+    weight = 20
+
+[[menu.main]]
+    name = "Drivers"
+    url = "/gettingstarted/installation/drivers/"
+    identifier = "gettingstarted@installation@drivers"
+    parent = "gettingstarted@installation"
+    weight = 10
+
+[[menu.main]]
+    name = "Updating Firmware"
+    url = "/gettingstarted/installation/firmwaretool/"
+    identifier = "gettingstarted@installation@firmwaretool"
+    parent = "gettingstarted@installation"
+    weight = 20
+
+[[menu.main]]
+    name = "Pymakr"
+    url = "/gettingstarted/installation/pymakr/"
+    identifier = "gettingstarted@installation@pymakr"
+    parent = "gettingstarted@installation"
+    weight = 30
+
+[[menu.main]]
+    name = "Programming the modules"
+    url = "/gettingstarted/programming/"
+    identifier = "gettingstarted@programming"
+    parent = "gettingstarted"
+    weight = 30
+
+[[menu.main]]
+    name = "Introduction to MicroPython"
+    url = "/gettingstarted/programming/micropython/"
+    identifier = "gettingstarted@programming@micropython"
+    parent = "gettingstarted@programming"
+    weight = 10
+
+[[menu.main]]
+    name = "MicroPython Examples"
+    url = "/gettingstarted/programming/examples/"
+    identifier = "gettingstarted@programming@examples"
+    parent = "gettingstarted@programming"
+    weight = 20
+
+[[menu.main]]
+    name = "Your first Pymakr project"
+    url = "/gettingstarted/programming/first-project/"
+    identifier = "gettingstarted@programming@first-project"
+    parent = "gettingstarted@programming"
+    weight = 30
+
+[[menu.main]]
+    name = "REPL"
+    url = "/gettingstarted/programming/repl/"
+    identifier = "gettingstarted@programming@repl"
+    parent = "gettingstarted@programming"
+    weight = 40
+
+[[menu.main]]
+    name = "Serial USB (UART)"
+    url = "/gettingstarted/programming/repl/serial/"
+    identifier = "gettingstarted@programming@repl@serial"
+    parent = "gettingstarted@programming@repl"
+    weight = 10
+
+[[menu.main]]
+    name = "Telnet REPL"
+    url = "/gettingstarted/programming/repl/telnet/"
+    identifier = "gettingstarted@programming@repl@telnet"
+    parent = "gettingstarted@programming@repl"
+    weight = 20
+
+[[menu.main]]
+    name = "FTP"
+    url = "/gettingstarted/programming/ftp/"
+    identifier = "gettingstarted@programming@ftp"
+    parent = "gettingstarted@programming"
+    weight = 50
+
+[[menu.main]]
+    name = "Safe boot"
+    url = "/gettingstarted/programming/safeboot/"
+    identifier = "gettingstarted@programming@safeboot"
+    parent = "gettingstarted@programming"
+    weight = 60
+
+[[menu.main]]
+    name = "Device Registration"
+    url = "/gettingstarted/registration/"
+    identifier = "gettingstarted@registration"
+    parent = "gettingstarted"
+    weight = 40
+
+[[menu.main]]
+    name = "Sigfox"
+    url = "/gettingstarted/registration/sigfox/"
+    identifier = "gettingstarted@registration@sigfox"
+    parent = "gettingstarted@registration"
+    weight = 10
+
+[[menu.main]]
+    name = "Cellular"
+    url = "/gettingstarted/registration/cellular/"
+    identifier = "gettingstarted@registration@cellular"
+    parent = "gettingstarted@registration"
+    weight = 20
+
+[[menu.main]]
+    name = "LoRaWAN"
+    url = "/gettingstarted/registration/lora/"
+    identifier = "gettingstarted@registration@lora"
+    parent = "gettingstarted@registration"
+    weight = 30
+
+[[menu.main]]
+    name = "The Things Network"
+    url = "/gettingstarted/registration/lora/ttn/"
+    identifier = "gettingstarted@registration@lora@ttn"
+    parent = "gettingstarted@registration@lora"
+    weight = 10
+
+[[menu.main]]
+    name = "Objenious"
+    url = "/gettingstarted/registration/lora/objenious/"
+    identifier = "gettingstarted@registration@lora@objenious"
+    parent = "gettingstarted@registration@lora"
+    weight = 20
+
+# *** Pymakr Plugin
+[[menu.main]]
+    name = "Pymakr"
+    url = "/pymakr/installation/"
+    identifier = "pymakr"
+    weight = 45
+
+[[menu.main]]
+    name = "Installation"
+    url = "/pymakr/installation/"
+    identifier = "pymakr@installation"
+    parent = "pymakr"
+    weight = 10
+
+[[menu.main]]
+    name = "Atom"
+    url = "/pymakr/installation/atom/"
+    identifier = "pymakr@installation@atom"
+    parent = "pymakr@installation"
+    weight = 10
+
+[[menu.main]]
+    name = "Visual Studio Code"
+    url = "/pymakr/installation/vscode/"
+    identifier = "pymakr@installation@vscode"
+    parent = "pymakr@installation"
+    weight = 20
+
+[[menu.main]]
+    name = "Tools/Features"
+    url = "/pymakr/toolsfeatures/"
+    identifier = "pymakr@toolsfeatures"
+    parent = "pymakr"
+    weight = 20
+
+[[menu.main]]
+    name = "Settings"
+    url = "/pymakr/settings/"
+    identifier = "pymakr@settings"
+    parent = "pymakr"
+    weight = 30
+
+# *** Pytrack, Pysense, Pyscan
+[[menu.main]]
+    name = "Pytrack, Pysense, Pyscan"
+    url = "/pytrackpysense/"
+    identifier = "pytrackpysense"
+    weight = 50
+
+[[menu.main]]
+    name = "Installing Software"
+    url = "/pytrackpysense/installation/"
+    identifier = "pytrackpysense@installation"
+    parent = "pytrackpysense"
+    weight = 10
+
+[[menu.main]]
+    name = "Updating Firmware"
+    url = "/pytrackpysense/installation/firmware/"
+    identifier = "pytrackpysense@installation@firmware"
+    parent = "pytrackpysense@installation"
+    weight = 10
+
+[[menu.main]]
+    name = "Installing Drivers - Windows 7"
+    url = "/pytrackpysense/installation/drivers/"
+    identifier = "pytrackpysense@installation@drivers"
+    parent = "pytrackpysense@installation"
+    weight = 20
+
+[[menu.main]]
+    name = "Installing Libraries"
+    url = "/pytrackpysense/installation/libraries/"
+    identifier = "pytrackpysense@installation@libraries"
+    parent = "pytrackpysense@installation"
+    weight = 30
+
+[[menu.main]]
+    name = "API Reference"
+    url = "/pytrackpysense/apireference/"
+    identifier = "pytrackpysense@apireference"
+    parent = "pytrackpysense"
+    weight = 20
+
+[[menu.main]]
+    name = "Pytrack"
+    url = "/pytrackpysense/apireference/pytrack/"
+    identifier = "pytrackpysense@apireference@pytrack"
+    parent = "pytrackpysense@apireference"
+    weight = 10
+
+[[menu.main]]
+    name = "Pysense"
+    url = "/pytrackpysense/apireference/pysense/"
+    identifier = "pytrackpysense@apireference@pysense"
+    parent = "pytrackpysense@apireference"
+    weight = 20
+
+[[menu.main]]
+    name = "Pyscan"
+    url = "/pytrackpysense/apireference/pyscan/"
+    identifier = "pytrackpysense@apireference@pyscan"
+    parent = "pytrackpysense@apireference"
+    weight = 30
+
+[[menu.main]]
+    name = "Sleep"
+    url = "/pytrackpysense/apireference/sleep/"
+    identifier = "pytrackpysense@apireference@sleep"
+    parent = "pytrackpysense@apireference"
+    weight = 40
+
+# *** Tutorials & Examples
+[[menu.main]]
+    name = "Tutorials & Examples"
+    url = "/tutorials/"
+    identifier = "tutorials"
+    weight = 60
+
+[[menu.main]]
+    name = "All Pycom Device Examples"
+    url = "/tutorials/all/"
+    identifier = "tutorials@all"
+    parent = "tutorials"
+    weight = 10
+
+[[menu.main]]
+    name = "REPL"
+    url = "/tutorials/all/repl/"
+    identifier = "tutorials@all@repl"
+    parent = "tutorials@all"
+    weight = 10
+
+[[menu.main]]
+    name = "WLAN"
+    url = "/tutorials/all/wlan/"
+    identifier = "tutorials@all@wlan"
+    parent = "tutorials@all"
+    weight = 20
+
+[[menu.main]]
+    name = "Bluetooth"
+    url = "/tutorials/all/ble/"
+    identifier = "tutorials@all@ble"
+    parent = "tutorials@all"
+    weight = 30
+
+[[menu.main]]
+    name = "HTTPS"
+    url = "/tutorials/all/https/"
+    identifier = "tutorials@all@https"
+    parent = "tutorials@all"
+    weight = 40
+
+[[menu.main]]
+    name = "MQTT"
+    url = "/tutorials/all/mqtt/"
+    identifier = "tutorials@all@mqtt"
+    parent = "tutorials@all"
+    weight = 50
+
+[[menu.main]]
+    name = "AWS"
+    url = "/tutorials/all/aws/"
+    identifier = "tutorials@all@aws"
+    parent = "tutorials@all"
+    weight = 60
+
+[[menu.main]]
+    name = "ADC"
+    url = "/tutorials/all/adc/"
+    identifier = "tutorials@all@adc"
+    parent = "tutorials@all"
+    weight = 70
+
+[[menu.main]]
+    name = "I2C"
+    url = "/tutorials/all/i2c/"
+    identifier = "tutorials@all@i2c"
+    parent = "tutorials@all"
+    weight = 80
+
+[[menu.main]]
+    name = "Onewire Driver"
+    url = "/tutorials/all/owd/"
+    identifier = "tutorials@all@owd"
+    parent = "tutorials@all"
+    weight = 90
+
+[[menu.main]]
+    name = "Threading"
+    url = "/tutorials/all/threading/"
+    identifier = "tutorials@all@threading"
+    parent = "tutorials@all"
+    weight = 100
+
+[[menu.main]]
+    name = "RGB LED"
+    url = "/tutorials/all/rgbled/"
+    identifier = "tutorials@all@rgbled"
+    parent = "tutorials@all"
+    weight = 110
+
+[[menu.main]]
+    name = "Timers"
+    url = "/tutorials/all/timers/"
+    identifier = "tutorials@all@timers"
+    parent = "tutorials@all"
+    weight = 120
+
+[[menu.main]]
+    name = "PIR Sensor"
+    url = "/tutorials/all/pir/"
+    identifier = "tutorials@all@pir"
+    parent = "tutorials@all"
+    weight = 130
+
+[[menu.main]]
+    name = "Modbus"
+    url = "/tutorials/all/modbus/"
+    identifier = "tutorials@all@modbus"
+    parent = "tutorials@all"
+    weight = 140
+
+[[menu.main]]
+    name = "OTA update"
+    url = "/tutorials/all/ota/"
+    identifier = "tutorials@all@ota"
+    parent = "tutorials@all"
+    weight = 150
+
+[[menu.main]]
+    name = "RMT"
+    url = "/tutorials/all/rmt/"
+    identifier = "tutorials@all@rmt"
+    parent = "tutorials@all"
+    weight = 160
+
+[[menu.main]]
+    name = "Socket"
+    url = "/tutorials/all/socket/"
+    identifier = "tutorials@all@socket"
+    parent = "tutorials@all"
+    weight = 170
+
+[[menu.main]]
+    name = "Touch"
+    url = "/tutorials/all/touch/"
+    identifier = "tutorials@all@touch"
+    parent = "tutorials@all"
+    weight = 180
+
+[[menu.main]]
+    name = "LoRa Examples"
+    url = "/tutorials/lora/"
+    identifier = "tutorials@lora"
+    parent = "tutorials"
+    weight = 20
+
+[[menu.main]]
+    name = "LoRa-MAC (Raw LoRa)"
+    url = "/tutorials/lora/lora-mac/"
+    identifier = "tutorials@lora@lora-mac"
+    parent = "tutorials@lora"
+    weight = 10
+
+[[menu.main]]
+    name = "LoRaWAN with OTAA"
+    url = "/tutorials/lora/lorawan-otaa/"
+    identifier = "tutorials@lora@lorawan-otaa"
+    parent = "tutorials@lora"
+    weight = 20
+
+[[menu.main]]
+    name = "LoRaWAN with ABP"
+    url = "/tutorials/lora/lorawan-abp/"
+    identifier = "tutorials@lora@lorawan-abp"
+    parent = "tutorials@lora"
+    weight = 30
+
+[[menu.main]]
+    name = "LoRa-MAC Nano-Gateway"
+    url = "/tutorials/lora/lora-mac-nano-gateway/"
+    identifier = "tutorials@lora@lora-mac-nano-gateway"
+    parent = "tutorials@lora"
+    weight = 40
+
+[[menu.main]]
+    name = "LoPy to LoPy"
+    url = "/tutorials/lora/module-module/"
+    identifier = "tutorials@lora@module-module"
+    parent = "tutorials@lora"
+    weight = 50
+
+[[menu.main]]
+    name = "LoRaWAN Nano-Gateway"
+    url = "/tutorials/lora/lorawan-nano-gateway/"
+    identifier = "tutorials@lora@lorawan-nano-gateway"
+    parent = "tutorials@lora"
+    weight = 60
+
+[[menu.main]]
+    name = "RN2483 to LoPy"
+    url = "/tutorials/lora/rn2483-to-lopy/"
+    identifier = "tutorials@lora@rn2483-to-lopy"
+    parent = "tutorials@lora"
+    weight = 70
+
+[[menu.main]]
+    name = "LoRa Mesh"
+    url = "/tutorials/lora/lora-mesh/"
+    identifier = "tutorials@lora@lora-mesh"
+    parent = "tutorials@lora"
+    weight = 80
+
+[[menu.main]]
+    name = "PyMesh Border Router"
+    url = "/tutorials/lora/pymesh-br/"
+    identifier = "tutorials@lora@pymesh-br"
+    parent = "tutorials@lora"
+    weight = 90
+
+[[menu.main]]
+    name = "Sigfox Examples"
+    url = "/tutorials/sigfox/"
+    identifier = "tutorials@sigfox"
+    parent = "tutorials"
+    weight = 30
+
+[[menu.main]]
+    name = "LTE Examples"
+    url = "/tutorials/lte/"
+    identifier = "tutorials@lte"
+    parent = "tutorials"
+    weight = 40
+
+[[menu.main]]
+    name = "CAT-M1"
+    url = "/tutorials/lte/cat-m1/"
+    identifier = "tutorials@lte@cat-m1"
+    parent = "tutorials@lte"
+    weight = 10
+
+[[menu.main]]
+    name = "NB-IoT"
+    url = "/tutorials/lte/nb-iot/"
+    identifier = "tutorials@lte@nb-iot"
+    parent = "tutorials@lte"
+    weight = 20
+
+[[menu.main]]
+    name = "Module IMEI"
+    url = "/tutorials/lte/imei/"
+    identifier = "tutorials@lte@imei"
+    parent = "tutorials@lte"
+    weight = 30
+
+[[menu.main]]
+    name = "Modem Firmware Update"
+    url = "/tutorials/lte/firmware/"
+    identifier = "tutorials@lte@firmware"
+    parent = "tutorials@lte"
+    weight = 40
+
+[[menu.main]]
+    name = "Pytrack Examples"
+    url = "/tutorials/pytrack/"
+    identifier = "tutorials@pytrack"
+    parent = "tutorials"
+    weight = 50
+
+[[menu.main]]
+    name = "Pysense Examples"
+    url = "/tutorials/pysense/"
+    identifier = "tutorials@pysense"
+    parent = "tutorials"
+    weight = 60
+
+[[menu.main]]
+    name = "Pyscan Examples"
+    url = "/tutorials/pyscan/"
+    identifier = "tutorials@pyscan"
+    parent = "tutorials"
+    weight = 70
+
+# *** Firmware & API Reference
+[[menu.main]]
+    name = "Firmware & API Reference"
+    url = "/firmwareapi/"
+    identifier = "firmwareapi"
+    weight = 70
+
+[[menu.main]]
+    name = "Pycom Modules"
+    url = "/firmwareapi/pycom/"
+    identifier = "firmwareapi@pycom"
+    parent = "firmwareapi"
+    weight = 10
+
+[[menu.main]]
+    name = "machine"
+    url = "/firmwareapi/pycom/machine/"
+    identifier = "firmwareapi@pycom@machine"
+    parent = "firmwareapi@pycom"
+    weight = 10
+
+[[menu.main]]
+    name = "ADC"
+    url = "/firmwareapi/pycom/machine/adc/"
+    identifier = "firmwareapi@pycom@machine@adc"
+    parent = "firmwareapi@pycom@machine"
+    weight = 10
+
+[[menu.main]]
+    name = "DAC"
+    url = "/firmwareapi/pycom/machine/dac/"
+    identifier = "firmwareapi@pycom@machine@dac"
+    parent = "firmwareapi@pycom@machine"
+    weight = 20
+
+[[menu.main]]
+    name = "I2C"
+    url = "/firmwareapi/pycom/machine/i2c/"
+    identifier = "firmwareapi@pycom@machine@i2c"
+    parent = "firmwareapi@pycom@machine"
+    weight = 30
+
+[[menu.main]]
+    name = "Pin"
+    url = "/firmwareapi/pycom/machine/pin/"
+    identifier = "firmwareapi@pycom@machine@pin"
+    parent = "firmwareapi@pycom@machine"
+    weight = 40
+
+[[menu.main]]
+    name = "PWM"
+    url = "/firmwareapi/pycom/machine/pwm/"
+    identifier = "firmwareapi@pycom@machine@pwm"
+    parent = "firmwareapi@pycom@machine"
+    weight = 50
+
+[[menu.main]]
+    name = "RTC"
+    url = "/firmwareapi/pycom/machine/rtc/"
+    identifier = "firmwareapi@pycom@machine@rtc"
+    parent = "firmwareapi@pycom@machine"
+    weight = 60
+
+[[menu.main]]
+    name = "SPI"
+    url = "/firmwareapi/pycom/machine/spi/"
+    identifier = "firmwareapi@pycom@machine@spi"
+    parent = "firmwareapi@pycom@machine"
+    weight = 70
+
+[[menu.main]]
+    name = "UART"
+    url = "/firmwareapi/pycom/machine/uart/"
+    identifier = "firmwareapi@pycom@machine@uart"
+    parent = "firmwareapi@pycom@machine"
+    weight = 80
+
+[[menu.main]]
+    name = "WDT"
+    url = "/firmwareapi/pycom/machine/wdt/"
+    identifier = "firmwareapi@pycom@machine@wdt"
+    parent = "firmwareapi@pycom@machine"
+    weight = 90
+
+[[menu.main]]
+    name = "Timer"
+    url = "/firmwareapi/pycom/machine/timer/"
+    identifier = "firmwareapi@pycom@machine@timer"
+    parent = "firmwareapi@pycom@machine"
+    weight = 100
+
+[[menu.main]]
+    name = "SD"
+    url = "/firmwareapi/pycom/machine/sd/"
+    identifier = "firmwareapi@pycom@machine@sd"
+    parent = "firmwareapi@pycom@machine"
+    weight = 110
+
+[[menu.main]]
+    name = "CAN"
+    url = "/firmwareapi/pycom/machine/can/"
+    identifier = "firmwareapi@pycom@machine@can"
+    parent = "firmwareapi@pycom@machine"
+    weight = 120
+
+[[menu.main]]
+    name = "RMT"
+    url = "/firmwareapi/pycom/machine/rmt/"
+    identifier = "firmwareapi@pycom@machine@rmt"
+    parent = "firmwareapi@pycom@machine"
+    weight = 130
+
+[[menu.main]]
+    name = "network"
+    url = "/firmwareapi/pycom/network/"
+    identifier = "firmwareapi@pycom@network"
+    parent = "firmwareapi@pycom"
+    weight = 20
+
+[[menu.main]]
+    name = "WLAN"
+    url = "/firmwareapi/pycom/network/wlan/"
+    identifier = "firmwareapi@pycom@network@wlan"
+    parent = "firmwareapi@pycom@network"
+    weight = 10
+
+[[menu.main]]
+    name = "Server"
+    url = "/firmwareapi/pycom/network/server/"
+    identifier = "firmwareapi@pycom@network@server"
+    parent = "firmwareapi@pycom@network"
+    weight = 20
+
+[[menu.main]]
+    name = "Bluetooth"
+    url = "/firmwareapi/pycom/network/bluetooth/"
+    identifier = "firmwareapi@pycom@network@bluetooth"
+    parent = "firmwareapi@pycom@network"
+    weight = 30
+
+[[menu.main]]
+    name = "GATT"
+    url = "/firmwareapi/pycom/network/bluetooth/gatt/"
+    identifier = "firmwareapi@pycom@network@bluetooth@gatt"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 10
+
+[[menu.main]]
+    name = "GATTCConnection"
+    url = "/firmwareapi/pycom/network/bluetooth/gattcconnection/"
+    identifier = "firmwareapi@pycom@network@bluetooth@gattcconnection"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 20
+
+[[menu.main]]
+    name = "GATTCService"
+    url = "/firmwareapi/pycom/network/bluetooth/gattccservice/"
+    identifier = "firmwareapi@pycom@network@bluetooth@gattccservice"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 30
+
+[[menu.main]]
+    name = "GATTCCharacteristic"
+    url = "/firmwareapi/pycom/network/bluetooth/gattccharacteristic/"
+    identifier = "firmwareapi@pycom@network@bluetooth@gattccharacteristic"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 40
+
+[[menu.main]]
+    name = "GATTSService"
+    url = "/firmwareapi/pycom/network/bluetooth/gattsservice/"
+    identifier = "firmwareapi@pycom@network@bluetooth@gattsservice"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 50
+
+[[menu.main]]
+    name = "GATTSCharacteristic"
+    url = "/firmwareapi/pycom/network/bluetooth/gattscharacteristic/"
+    identifier = "firmwareapi@pycom@network@bluetooth@gattscharacteristic"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 60
+
+#  [Errno 2] No such file or directory: './content/firmwareapi/pycom/network/lora/README.md'
+[[menu.main]]
+    name = "LoRa"
+    url = "/firmwareapi/pycom/network/lora/"
+    identifier = "firmwareapi@pycom@network@lora"
+    parent = "firmwareapi@pycom@network"
+    weight = 40
+
+[[menu.main]]
+    name = "Pymesh"
+    url = "/firmwareapi/pycom/network/lora/pymesh/"
+    identifier = "firmwareapi@pycom@network@lora@pymesh"
+    parent = "firmwareapi@pycom@network@lora"
+    weight = 10
+
+[[menu.main]]
+    name = "Sigfox"
+    url = "/firmwareapi/pycom/network/sigfox/"
+    identifier = "firmwareapi@pycom@network@sigfox"
+    parent = "firmwareapi@pycom@network"
+    weight = 50
+
+[[menu.main]]
+    name = "LTE"
+    url = "/firmwareapi/pycom/network/lte/"
+    identifier = "firmwareapi@pycom@network@lte"
+    parent = "firmwareapi@pycom@network"
+    weight = 60
+
+[[menu.main]]
+    name = "AES"
+    url = "/firmwareapi/pycom/aes/"
+    identifier = "firmwareapi@pycom@aes"
+    parent = "firmwareapi@pycom"
+    weight = 30
+
+[[menu.main]]
+    name = "pycom"
+    url = "/firmwareapi/pycom/pycom/"
+    identifier = "firmwareapi@pycom@pycom"
+    parent = "firmwareapi@pycom"
+    weight = 40
+
+[[menu.main]]
+    name = "MicroPython Modules"
+    url = "/firmwareapi/micropython/"
+    identifier = "firmwareapi@micropython"
+    parent = "firmwareapi"
+    weight = 20
+
+[[menu.main]]
+    name = "micropython"
+    url = "/firmwareapi/micropython/micropython/"
+    identifier = "firmwareapi@micropython@micropython"
+    parent = "firmwareapi@micropython"
+    weight = 10
+
+[[menu.main]]
+    name = "uctypes"
+    url = "/firmwareapi/micropython/uctypes/"
+    identifier = "firmwareapi@micropython@uctypes"
+    parent = "firmwareapi@micropython"
+    weight = 20
+
+[[menu.main]]
+    name = "sys"
+    url = "/firmwareapi/micropython/sys/"
+    identifier = "firmwareapi@micropython@sys"
+    parent = "firmwareapi@micropython"
+    weight = 30
+
+[[menu.main]]
+    name = "uos"
+    url = "/firmwareapi/micropython/uos/"
+    identifier = "firmwareapi@micropython@uos"
+    parent = "firmwareapi@micropython"
+    weight = 40
+
+[[menu.main]]
+    name = "array"
+    url = "/firmwareapi/micropython/array/"
+    identifier = "firmwareapi@micropython@array"
+    parent = "firmwareapi@micropython"
+    weight = 50
+
+[[menu.main]]
+    name = "cmath"
+    url = "/firmwareapi/micropython/cmath/"
+    identifier = "firmwareapi@micropython@cmath"
+    parent = "firmwareapi@micropython"
+    weight = 60
+
+[[menu.main]]
+    name = "math"
+    url = "/firmwareapi/micropython/math/"
+    identifier = "firmwareapi@micropython@math"
+    parent = "firmwareapi@micropython"
+    weight = 70
+
+[[menu.main]]
+    name = "gc"
+    url = "/firmwareapi/micropython/gc/"
+    identifier = "firmwareapi@micropython@gc"
+    parent = "firmwareapi@micropython"
+    weight = 80
+
+[[menu.main]]
+    name = "ubinascii"
+    url = "/firmwareapi/micropython/ubinascii/"
+    identifier = "firmwareapi@micropython@ubinascii"
+    parent = "firmwareapi@micropython"
+    weight = 90
+
+[[menu.main]]
+    name = "ujson"
+    url = "/firmwareapi/micropython/ujson/"
+    identifier = "firmwareapi@micropython@ujson"
+    parent = "firmwareapi@micropython"
+    weight = 100
+
+[[menu.main]]
+    name = "ure"
+    url = "/firmwareapi/micropython/ure/"
+    identifier = "firmwareapi@micropython@ure"
+    parent = "firmwareapi@micropython"
+    weight = 110
+
+[[menu.main]]
+    name = "usocket"
+    url = "/firmwareapi/micropython/usocket/"
+    identifier = "firmwareapi@micropython@usocket"
+    parent = "firmwareapi@micropython"
+    weight = 120
+
+[[menu.main]]
+    name = "select"
+    url = "/firmwareapi/micropython/select/"
+    identifier = "firmwareapi@micropython@select"
+    parent = "firmwareapi@micropython"
+    weight = 130
+
+[[menu.main]]
+    name = "utime"
+    url = "/firmwareapi/micropython/utime/"
+    identifier = "firmwareapi@micropython@utime"
+    parent = "firmwareapi@micropython"
+    weight = 140
+
+[[menu.main]]
+    name = "uhashlib"
+    url = "/firmwareapi/micropython/uhashlib/"
+    identifier = "firmwareapi@micropython@uhashlib"
+    parent = "firmwareapi@micropython"
+    weight = 150
+
+[[menu.main]]
+    name = "ussl"
+    url = "/firmwareapi/micropython/ussl/"
+    identifier = "firmwareapi@micropython@ussl"
+    parent = "firmwareapi@micropython"
+    weight = 160
+
+[[menu.main]]
+    name = "ucrypto"
+    url = "/firmwareapi/micropython/ucrypto/"
+    identifier = "firmwareapi@micropython@ucrypto"
+    parent = "firmwareapi@micropython"
+    weight = 170
+
+#  [Errno 2] No such file or directory: './content/firmwareapi/micropython/ustruct/README.md'
+[[menu.main]]
+    name = "ustruct"
+    url = "/firmwareapi/micropython/ustruct/"
+    identifier = "firmwareapi@micropython@ustruct"
+    parent = "firmwareapi@micropython"
+    weight = 180
+
+[[menu.main]]
+    name = "uzlib"
+    url = "/firmwareapi/micropython/uzlib/"
+    identifier = "firmwareapi@micropython@uzlib"
+    parent = "firmwareapi@micropython@ustruct"
+    weight = 10
+
+[[menu.main]]
+    name = "_thread"
+    url = "/firmwareapi/micropython/_thread/"
+    identifier = "firmwareapi@micropython@_thread"
+    parent = "firmwareapi@micropython"
+    weight = 190
+
+[[menu.main]]
+    name = "Builtin"
+    url = "/firmwareapi/micropython/builtin/"
+    identifier = "firmwareapi@micropython@builtin"
+    parent = "firmwareapi@micropython"
+    weight = 200
+
+[[menu.main]]
+    name = "Notes"
+    url = "/firmwareapi/notes/"
+    identifier = "firmwareapi@notes"
+    parent = "firmwareapi"
+    weight = 30
+
+# *** Product Info, Datasheets
+[[menu.main]]
+    name = "Product Info, Datasheets"
+    url = "/datasheets/"
+    identifier = "datasheets"
+    weight = 80
+
+[[menu.main]]
+    name = "Development Modules"
+    url = "/datasheets/development/"
+    identifier = "datasheets@development"
+    parent = "datasheets"
+    weight = 10
+
+[[menu.main]]
+    name = "WiPy 2.0"
+    url = "/datasheets/development/wipy2/"
+    identifier = "datasheets@development@wipy2"
+    parent = "datasheets@development"
+    weight = 10
+
+[[menu.main]]
+    name = "WiPy 3.0"
+    url = "/datasheets/development/wipy3/"
+    identifier = "datasheets@development@wipy3"
+    parent = "datasheets@development"
+    weight = 20
+
+[[menu.main]]
+    name = "LoPy"
+    url = "/datasheets/development/lopy/"
+    identifier = "datasheets@development@lopy"
+    parent = "datasheets@development"
+    weight = 30
+
+[[menu.main]]
+    name = "LoPy 4"
+    url = "/datasheets/development/lopy4/"
+    identifier = "datasheets@development@lopy4"
+    parent = "datasheets@development"
+    weight = 40
+
+[[menu.main]]
+    name = "SiPy"
+    url = "/datasheets/development/sipy/"
+    identifier = "datasheets@development@sipy"
+    parent = "datasheets@development"
+    weight = 50
+
+[[menu.main]]
+    name = "GPy"
+    url = "/datasheets/development/gpy/"
+    identifier = "datasheets@development@gpy"
+    parent = "datasheets@development"
+    weight = 60
+
+[[menu.main]]
+    name = "FiPy"
+    url = "/datasheets/development/fipy/"
+    identifier = "datasheets@development@fipy"
+    parent = "datasheets@development"
+    weight = 70
+
+[[menu.main]]
+    name = "OEM Modules"
+    url = "/datasheets/oem/"
+    identifier = "datasheets@oem"
+    parent = "datasheets"
+    weight = 20
+
+[[menu.main]]
+    name = "W01"
+    url = "/datasheets/oem/w01/"
+    identifier = "datasheets@oem@w01"
+    parent = "datasheets@oem"
+    weight = 10
+
+[[menu.main]]
+    name = "L01"
+    url = "/datasheets/oem/l01/"
+    identifier = "datasheets@oem@l01"
+    parent = "datasheets@oem"
+    weight = 20
+
+[[menu.main]]
+    name = "L04"
+    url = "/datasheets/oem/l04/"
+    identifier = "datasheets@oem@l04"
+    parent = "datasheets@oem"
+    weight = 30
+
+[[menu.main]]
+    name = "G01"
+    url = "/datasheets/oem/g01/"
+    identifier = "datasheets@oem@g01"
+    parent = "datasheets@oem"
+    weight = 40
+
+[[menu.main]]
+    name = "L01 OEM Baseboard Reference"
+    url = "/datasheets/oem/l01_reference/"
+    identifier = "datasheets@oem@l01_reference"
+    parent = "datasheets@oem"
+    weight = 50
+
+[[menu.main]]
+    name = "Universal OEM Baseboard Reference"
+    url = "/datasheets/oem/universal_reference/"
+    identifier = "datasheets@oem@universal_reference"
+    parent = "datasheets@oem"
+    weight = 60
+
+[[menu.main]]
+    name = "Expansion Boards and Shields"
+    url = "/datasheets/boards/"
+    identifier = "datasheets@boards"
+    parent = "datasheets"
+    weight = 30
+
+[[menu.main]]
+    name = "Expansion Board 3.0"
+    url = "/datasheets/boards/expansion3/"
+    identifier = "datasheets@boards@expansion3"
+    parent = "datasheets@boards"
+    weight = 10
+
+[[menu.main]]
+    name = "Pytrack"
+    url = "/datasheets/boards/pytrack/"
+    identifier = "datasheets@boards@pytrack"
+    parent = "datasheets@boards"
+    weight = 20
+
+[[menu.main]]
+    name = "Pysense"
+    url = "/datasheets/boards/pysense/"
+    identifier = "datasheets@boards@pysense"
+    parent = "datasheets@boards"
+    weight = 30
+
+[[menu.main]]
+    name = "Pyscan"
+    url = "/datasheets/boards/pyscan/"
+    identifier = "datasheets@boards@pyscan"
+    parent = "datasheets@boards"
+    weight = 40
+
+[[menu.main]]
+    name = "Expansion Board 2.0"
+    url = "/datasheets/boards/expansion2/"
+    identifier = "datasheets@boards@expansion2"
+    parent = "datasheets@boards"
+    weight = 50
+
+[[menu.main]]
+    name = "Deep Sleep Shield"
+    url = "/datasheets/boards/deepsleep/"
+    identifier = "datasheets@boards@deepsleep"
+    parent = "datasheets@boards"
+    weight = 60
+
+[[menu.main]]
+    name = "Deep Sleep API"
+    url = "/datasheets/boards/deepsleep/api/"
+    identifier = "datasheets@boards@deepsleep@api"
+    parent = "datasheets@boards@deepsleep"
+    weight = 10
+
+[[menu.main]]
+    name = "Notes"
+    url = "/datasheets/notes/"
+    identifier = "datasheets@notes"
+    parent = "datasheets"
+    weight = 40
+
+# *** Pybytes
+[[menu.main]]
+    name = "Pybytes"
+    url = "/pybytes/"
+    identifier = "pybytes"
+    weight = 90
+
+[[menu.main]]
+    name = "Getting Started with Pybytes"
+    url = "/pybytes/getstarted/"
+    identifier = "pybytes@getstarted"
+    parent = "pybytes"
+    weight = 10
+
+[[menu.main]]
+    name = "Add a device to Pybytes"
+    url = "/pybytes/connect/"
+    identifier = "pybytes@connect"
+    parent = "pybytes"
+    weight = 20
+
+[[menu.main]]
+    name = "Connect to Pybytes: Quick Add"
+    url = "/pybytes/connect/quick/"
+    identifier = "pybytes@connect@quick"
+    parent = "pybytes@connect"
+    weight = 10
+
+[[menu.main]]
+    name = "Connect to Pybytes: Flash Pybytes library manually"
+    url = "/pybytes/connect/flash/"
+    identifier = "pybytes@connect@flash"
+    parent = "pybytes@connect"
+    weight = 20
+
+[[menu.main]]
+    name = "Add Sigfox device"
+    url = "/pybytes/connect/sigfox/"
+    identifier = "pybytes@connect@sigfox"
+    parent = "pybytes@connect"
+    weight = 30
+
+[[menu.main]]
+    name = "DevKit contract"
+    url = "/pybytes/connect/sigfox/devkit/"
+    identifier = "pybytes@connect@sigfox@devkit"
+    parent = "pybytes@connect@sigfox"
+    weight = 10
+
+[[menu.main]]
+    name = "Custom contract"
+    url = "/pybytes/connect/sigfox/custom/"
+    identifier = "pybytes@connect@sigfox@custom"
+    parent = "pybytes@connect@sigfox"
+    weight = 20
+
+[[menu.main]]
+    name = "Visualise data from your device"
+    url = "/pybytes/dashboard/"
+    identifier = "pybytes@dashboard"
+    parent = "pybytes"
+    weight = 30
+
+[[menu.main]]
+    name = "Integrations"
+    url = "/pybytes/integrations/"
+    identifier = "pybytes@integrations"
+    parent = "pybytes"
+    weight = 40
+
+[[menu.main]]
+    name = "Amazon IoT"
+    url = "/pybytes/integrations/amazon-iot/"
+    identifier = "pybytes@integrations@amazon-iot"
+    parent = "pybytes@integrations"
+    weight = 10
+
+# *** Documentation Notes
+[[menu.main]]
+    name = "Documentation Notes"
+    url = "/docnotes/"
+    identifier = "docnotes"
+    weight = 100
+
+[[menu.main]]
+    name = "Syntax"
+    url = "/docnotes/syntax/"
+    identifier = "docnotes@syntax"
+    parent = "docnotes"
+    weight = 10
+
+[[menu.main]]
+    name = "REPL vs Scripts"
+    url = "/docnotes/replscript/"
+    identifier = "docnotes@replscript"
+    parent = "docnotes"
+    weight = 20
+
+[[menu.main]]
+    name = "Mesh Networks"
+    url = "/docnotes/mesh-networks/"
+    identifier = "docnotes@mesh-networks"
+    parent = "docnotes"
+    weight = 30
+
+# *** Advanced Topics
+[[menu.main]]
+    name = "Advanced topics"
+    url = "/advance/downgrade/"
+    identifier = "advance"
+    weight = 150
+
+[[menu.main]]
+    name = "Firmware Downgrade"
+    url = "/advance/downgrade/"
+    identifier = "advance@downgrade"
+    parent = "advance"
+    weight = 10
+
+[[menu.main]]
+    name = "CLI Updater"
+    url = "/advance/cli/"
+    identifier = "advance@cli"
+    parent = "advance"
+    weight = 20
+
+[[menu.main]]
+    name = "SecureBoot and Encryption"
+    url = "/advance/encryption/"
+    identifier = "advance@encryption"
+    parent = "advance"
+    weight = 30
+
+[[menu.main]]
+    name = "License"
+    url = "/advance/license/"
+    identifier = "advance@license"
+    parent = "advance"
+    weight = 40

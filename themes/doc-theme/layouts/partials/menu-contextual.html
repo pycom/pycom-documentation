@@ -1,0 +1,27 @@
+{{/*
+  Use Hugo's native Table of contents feature.
+  https://gohugo.io/content-management/toc/
+*/}}
+
+{{- if gt .WordCount 400 -}}
+
+
+<v-slide-y-transition>
+    <v-card class="menu-contextual" v-if="drawer2" @click.stop="drawer2 = !drawer2">
+      <v-card-title class="beba" style="height: 68px; background-color: #1E1E3C; color: #17FFBD">
+        What's in this document
+        <v-btn icon @click.stop="drawer2 = !drawer2" style="color: #17FFBD; position: absolute; right: 0; top: 4px;;">
+          <v-icon>more_vert</v-icon>
+        </v-btn>
+
+
+      </v-card-title>
+      <v-card-text class="fancyScroll righttree">
+    {{ .TableOfContents | replaceRE "<li>" "<li class=\"righttree\">" | safeHTML }}
+      </v-card-text>
+    </v-card>
+</v-slide-y-transition>
+
+
+
+{{ end }}

@@ -1,0 +1,299 @@
+
+html {
+    font-size: 105%;
+
+}
+
+
+.menu-contextual {
+  width: 320px;
+  right: 0px;
+  top: 0px;
+  z-index: 3;
+  position: fixed;
+}
+
+li.lefttree, li.righttree   {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+aside {
+  padding-bottom: 72px;
+}
+
+nav#TableOfContents {
+  margin-left: -48px;
+}
+
+h1, h2, h3, h4 {
+  color: #1E1E3C;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+
+
+h1 {
+  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+
+h2 > a {
+  color: #1E1E3C;
+}
+
+@font-face {
+font-family: "Beba";
+src: url("/fonts/BebasNeue-Regular.eot");
+src: url("/fonts/BebasNeue-Regular.woff") format("woff"),
+url("/fonts/BebasNeue-Regular.otf") format("opentype");
+}
+/* 'Beba',Helvetica,Arial,Lucida,sans-serif; */
+
+.mono {
+  font-family: monospace!important;
+}
+
+.beba {
+  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+    letter-spacing: 0.1em;
+}
+
+
+.application {
+    line-height: 1.7;
+}
+
+.application {
+  /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
+  font-family:'Space Mono',monospace;
+}
+
+p {
+  text-align: justify;
+}
+
+.bread {
+  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+  letter-spacing: 0.1em;
+  color: #7800FF;
+}
+
+.theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
+    background-color: transparent;
+}
+/** this gives correct offset when link to anchors
+*[id]:before {
+  display: block;
+  content: " ";
+  visibility: hidden;
+  z-index: 0;
+}
+*/
+
+a, li.lefttree > a {
+  text-decoration: none;
+}
+
+a, li.righttree > a {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: underline;
+    padding: 5px;
+}
+
+a:hover {
+  background-color: yellow;
+}
+
+a {
+    color: #1E1E3C!important;
+}
+
+li > a {
+  color: #1E1E3C;
+  font-weight: 500;
+    line-height: 1.60;
+}
+
+li > a.hot {
+  color: #7800FF;
+  text-decoration: underline;
+  background-color: yellow;
+  padding: 6px;
+}
+
+
+
+li.lefttree {
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+}
+
+li.lefttree > a {
+      font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+        letter-spacing: 0.1em;
+}
+
+li.hot {
+  width: calc(100% + 22px);
+  margin-right: 0px;
+  padding-right: 0px;
+  transform: translate(-22px);
+  padding-left: 22px;
+}
+
+
+
+ul.lefttree {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.v-toolbar__content, .v-toolbar__extension {
+    padding:0!important;
+}
+
+.danger-alert {
+  background-color: #FF450A !important;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.warning-alert {
+  background-color: #FF450A !important;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+
+.info-alert {
+  background-color: #00FFFF !important;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.theme--light.v-toolbar {
+    color: #171730!important;
+}
+
+nav#TableOfContents {
+    overflow-y: scroll;
+    max-height: 640px;
+}
+
+img {
+  max-width: 90%;
+  margin-left: 5%;
+  padding: 18px;
+}
+
+/*
+nav#TableOfContents::-webkit-scrollbar, .fancyScroll::-webkit-scrollbar
+{
+	width: 10px!important;
+}
+
+nav#TableOfContents::-webkit-scrollbar-thumb, .fancyScroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px!important;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+                     color-stop(0.86, rgb(255,255,255)),
+                     color-stop(0.72, rgb(120,0,255)));
+}
+*/
+
+
+
+
+[v-cloak] > * { display:none }
+[v-cloak]::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('/logo2.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+
+table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+table td, table th {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+.ppurple {
+  color: #7800FF;
+}
+
+.pbgpurple {
+  background-color: #7800FF!important;
+  color: white;
+}
+
+
+.navy {
+  color: #1E1E3C;
+}
+
+.prev-next {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin: 0;
+  left: 0;
+}
+
+
+.primary {
+    background-color: red !important;
+    border-color: red !important;
+}
+
+pre {
+    background-color: transparent!important;
+}
+pre > code {
+  width: 100%;
+  padding: 12px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+code {
+
+    padding: 1px;
+    background-color: #EEEEEE;
+}
+
+.primary--text {
+  color: #7800FF;
+}
