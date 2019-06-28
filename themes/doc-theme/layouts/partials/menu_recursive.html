@@ -1,4 +1,5 @@
 {{ $page := .page }}
+{{ $level := add .level  1 }}
 {{ $pURL := .page.URL }}
 <ul class="lefttree ">
 {{ range .menu }}
@@ -10,10 +11,11 @@
 
   {{ if true }}
     <li class="lefttree {{ if or $iz $haz }}padleft hot{{ end }}" >
-      <a href="{{ .URL | relURL }}" class="{{ if or $iz $haz }}hot{{end}} {{ if  $subheading }}mono{{ end }}"> {{ .Pre }} {{ .Name }}</a>
+      <v-icon style="color: transparent; display: hidden;" >done</v-icon>
+      <a href="{{ .URL | relURL }}" class="{{ if or $iz $haz }}hot{{end}}"> {{ .Pre }} {{ .Name }}</a>
       {{ end }}
       {{ if or $iz $haz $phaz }}
-        {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page) }}
+        {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page "level" $level ) }}
       {{ end }}
 
       {{ if or $iz $haz $phaz}}
@@ -24,7 +26,8 @@
 
 
     <li class="lefttree {{ if $haz }}hot{{end}}">
-      <a href="{{ .URL | relURL }}" class="{{ if $iz }}hot{{end}} {{ if  $subheading }}mono{{ end }}">{{ .Name }}</a>
+      <v-icon style="color: transparent; display: hidden;" >done</v-icon>
+      <a href="{{ .URL | relURL }}" class="{{ if $iz }}hot{{end}}">{{ .Name }}</a>
     </li>
 
   {{ end }}

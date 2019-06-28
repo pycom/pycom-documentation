@@ -5,13 +5,11 @@
   class="lighten-4 pt-0"
   style="overflow-y: hidden; overflow-x: hidden;"
 >
-    <v-container style="height: 68px; background-color: rgb(23, 23, 48);" class="dark mb-0 pb-1 pt-3 elevation-5">
-        <v-img height=48 width=190  src="/logo.svg">
+    <v-container style="height: 68px; background-color: rgb(23, 23, 48);" class="dark mb-0 pb-1 pt-3 elevation-5 " >
+        <v-img class="ml-4" height=48 width=190  src="/logo.svg">
     </v-container>
 
   <v-container class="ma-0 pa-0 elevation-1">
-
-
 
     <v-text-field
     v-model="q"
@@ -25,25 +23,25 @@
       label="Search"
     ></v-text-field>
 
-
   </v-container>
 
-  <div class="fancyScroll" style="overflow-y: scroll; overflow-x: hidden;
-      max-height: 100%;">
+  <div class="fancyScroll pa-0 ma-0" style="overflow-y: scroll; overflow-x: hidden;
+      max-height: 100%;" >
 
-    <v-divider class="grey lighten-1  mr-2 ml-2 mb-4"></v-divider>
+    <v-divider class="grey lighten-1  mr-2 ml-1 mb-4"></v-divider>
 
-
-    <p class="ml-3">
-       <a href="/" class="beba" style="color: #1E1E3C; text-decoration: none!important;" >
-         <v-icon style="color: #1E1E3C;" >home</v-icon> Table of content</a>
-    <p>
-
-    {{ partial "menu_recursive.html" (dict "menu" .Site.Menus.main "page" . ) }}
+      <ul class="lefttree">
+        <li class="lefttree">
+            <a href="/" class="beba" style="color: #1E1E3C; text-decoration: none;" >
+              <v-icon style="color: #1E1E3C;" class="mr-1" >home</v-icon> Table of content</a>
+        </li>
+      </ul>
+    
+    {{ partial "menu_recursive.html" (dict "menu" .Site.Menus.main "page" . "level" 0) }}
 
     <v-divider class="grey lighten-1 ma-2 mt-4 mb-4"></v-divider>
 
-    <ul>Have a question ?
+    <ul class="lefttree" >Have a question ?
       <li class="lefttree">  <a href="https://forum.pycom.io">Ask on the forum</a>
     </ul>
     <p>&nbsp;</p>

@@ -1,7 +1,11 @@
 {{ $page := .page }}
-  {{ $prev := . }}
+{{ $level :=  1 }}
+{{ $prev := . }}
 
 {{ range .menu }}
+
+
+
 
   {{ $iz := eq  $page.URL .URL}}
   {{ $haz := in  $page.URL .URL}}
@@ -14,7 +18,7 @@
       <a href="{{ .URL | relURL }}" class="bread {{ if or $iz $haz }}hot{{end}}"> {{ .Pre }} {{ .Name }}</a>
         {{ if not $iz }}>{{ end }}
       {{ end }}
-          {{ partial "breadcrumb_recursive.html" (dict "menu" .Children "page" $page) }}
+        {{ partial "breadcrumb_recursive.html" (dict "menu" .Children "page" $page "level" $level) }}
     {{ if or $iz $haz }}
 
 
@@ -36,3 +40,4 @@
   {{ end }}
 
 {{ end }}
+</ul>

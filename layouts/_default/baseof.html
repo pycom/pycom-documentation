@@ -14,27 +14,20 @@
 </head>
 <body>
 <v-app id="app" class="grey lighten-5"  v-cloak stylse="display: none;">
-    {{ partial "menu.html" . }}
-      {{- partial "toolbar.html" . -}}
-
+   {{ partial "menu.html" . }}
+   {{- partial "toolbar.html" . -}}
    <v-content >
       <v-container class="fluid pa-4">
-        <v-container class="ma-1 pa-1">
+          <v-container class="ma-1 pa-1">
+                {{- partial "menu-contextual.html" . -}}
+                {{- block "main" . }}{{- end }}
+          </v-container>
+      </v-container>
+    </v-content>
 
-
-
-
-              {{- partial "menu-contextual.html" . -}}
-              {{- block "main" . }}{{- end }}
-
-</v-container>
-</v-container>
-          </v-content>
-
-
-
-
-  {{- partial "footer.html" . -}}
+<!--
+    {{- partial "footer.html" . -}}
+-->
  </v-app>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -63,8 +56,8 @@
         drawer2: true,
         toc: 0,
         branches: [
-          { value: 'https://development.pycom.io', text: 'development version'},
-          { value: 'https://docs.pycom.io', text: 'version stable',  }
+          { value: 'https://docs.pycom.io', text: 'version stable',  },          
+          { value: 'https://development.pycom.io', text: 'version development'},
         ],
         branch: ""
       },
@@ -102,7 +95,7 @@
         fetchResults (kw, start) {
           if (!start) { start = 1 }
           let key = "AIzaSyD4-MGytNzTCZpTH6UYk1mfOxZkt74T5MI";
-          let cx = "004592132197158309932:jleutbge8gs";
+          let cx = "004592132197158309932:anluf60c9w8";
           let url = "https://www.googleapis.com/customsearch/v1";
           url = url + "?cx=" + cx + "&key=" + key + "&q=" + encodeURI(kw) + "&start=" + start
 

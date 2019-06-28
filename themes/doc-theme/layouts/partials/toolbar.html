@@ -7,9 +7,8 @@
   dark
   style="background-color: #171730"
 >
-<!-- style="background-color: #171730"  -->
   <v-toolbar-title style="width: 260px; " class="ml-4 pl-0  pt-2 text-xs-center hidden-sm-and-down">
-    <v-img height=48 width=190  src="/logo.svg" class="">
+    <v-img class="ml-4"  height=48 width=190  src="/logo.svg" class="">
   </v-toolbar-title>
 
     <v-btn icon @click.stop="drawer = !drawer" style="z-index: 1200;">
@@ -21,8 +20,8 @@
 
 
   <v-spacer></v-spacer>
-  <div style="width: 235px; background-color: ">
-  <v-select :items="branches" v-model="branch" class="mono">
+  <div style="width: 240px; ">
+  <v-select :items="branches" v-model="branch" width=120 class="mono">
     </div>
   </v-select>
   {{- if gt .WordCount 400 -}}
