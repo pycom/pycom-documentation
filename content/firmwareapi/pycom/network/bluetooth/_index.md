@@ -217,6 +217,20 @@ Example:
 bluetooth.set_advertisement(name="advert", manufacturer_data="lopy_v1")
 ```
 
+#### bluetooth.set\_advertisement\_params(\* , adv\_int\_min=0x20, adv\_int\_max=0x40, adv\_type=Bluetooth.ADV\_TYPE\_IND, own\_addr\_type=Bluetooth.BLE\_ADDR\_TYPE\_PUBLIC, channel\_map=Bluetooth.ADV\_CHNL\_ALL, adv\_filter\_policy=Bluetooth.ADV\_FILTER\_ALLOW\_SCAN\_ANY\_CON\_ANY)
+
+Configure the parameters used when advertising.
+
+The arguments are:
+
+* `adv_int_min` is the minimum advertising interval for undirected and low duty cycle directed advertising.
+* `adv_int_max` is the maximum advertising interval for undirected and low duty cycle directed advertising.
+* `adv_type` is the advertising type.
+* `own_addr_type` is the owner bluetooth device address type.
+* `channel_map` is the advertising channel map.
+* `adv_filter_policy` is the advertising filter policy.
+
+
 #### bluetooth.advertise(\[Enable\])
 
 Start or stop sending advertisements. The `set_advertisement()` method must have been called prior to this one.
@@ -246,6 +260,7 @@ Closes the BLE connection with the client.
 * Advertisement type: `Bluetooth.CONN_ADV`, `Bluetooth.CONN_DIR_ADV`, `Bluetooth.DISC_ADV`, `Bluetooth.NON_CONN_ADV`, `Bluetooth.SCAN_RSP`
 * Address type: `Bluetooth.PUBLIC_ADDR`, `Bluetooth.RANDOM_ADDR`, `Bluetooth.PUBLIC_RPA_ADDR`, `Bluetooth.RANDOM_RPA_ADDR`
 * Advertisement data type: `Bluetooth.ADV_FLAG`, `Bluetooth.ADV_16SRV_PART`, `Bluetooth.ADV_T16SRV_CMPL`, `Bluetooth.ADV_32SRV_PART`, `Bluetooth.ADV_32SRV_CMPL`, `Bluetooth.ADV_128SRV_PART`, `Bluetooth.ADV_128SRV_CMPL`, `Bluetooth.ADV_NAME_SHORT`, `Bluetooth.ADV_NAME_CMPL`, `Bluetooth.ADV_TX_PWR`, `Bluetooth.ADV_DEV_CLASS`, `Bluetooth.ADV_SERVICE_DATA`, `Bluetooth.ADV_APPEARANCE`, `Bluetooth.ADV_ADV_INT`, `Bluetooth.ADV_32SERVICE_DATA`, `Bluetooth.ADV_128SERVICE_DATA`, `Bluetooth.ADV_MANUFACTURER_DATA`
+* Advertisement parameters: `Bluetooth.ADV_TYPE_IND`, `Bluetooth.ADV_TYPE_DIRECT_IND_HIGH`, `Bluetooth.ADV_TYPE_SCAN_IND`, `Bluetooth.ADV_TYPE_NONCONN_IND`, `Bluetooth.ADV_TYPE_DIRECT_IND_LOW`, `Bluetooth.ADV_BLE_ADDR_TYPE_PUBLIC`, `Bluetooth.ADV_BLE_ADDR_TYPE_RANDOM`, `Bluetooth.ADV_BLE_ADDR_TYPE_RPA_PUBLIC`, `Bluetooth.ADV_BLE_ADDR_TYPE_RPA_RANDOM`, `Bluetooth.ADV_CHNL_37`, `Bluetooth.ADV_CHNL_38`, `Bluetooth.ADV_CHNL_39`, `Bluetooth.ADV_CHNL_ALL`, `Bluetooth.ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY`, `Bluetooth.ADV_FILTER_ALLOW_SCAN_WLST_CON_ANY`, `Bluetooth.ADV_FILTER_ALLOW_SCAN_ANY_CON_WLST`, `Bluetooth.ADV_FILTER_ALLOW_SCAN_WLST_CON_WLST`
 * Characteristic properties (bit values that can be combined): `Bluetooth.PROP_BROADCAST`, `Bluetooth.PROP_READ`, `Bluetooth.PROP_WRITE_NR`, `Bluetooth.PROP_WRITE`, `Bluetooth.PROP_NOTIFY`, `Bluetooth.PROP_INDICATE`, `Bluetooth.PROP_AUTH`, `Bluetooth.PROP_EXT_PROP`
 * Characteristic callback events: `Bluetooth.CHAR_READ_EVENT`, `Bluetooth.CHAR_WRITE_EVENT`, `Bluetooth.NEW_ADV_EVENT`, `Bluetooth.CLIENT_CONNECTED`, `Bluetooth.CLIENT_DISCONNECTED`, `Bluetooth.CHAR_NOTIFY_EVENT`
 * Antenna type: `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
