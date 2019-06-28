@@ -1,6 +1,7 @@
 ---
 title: ""
 aliases:
+disable_breadcrumbs: true
 ---
 
 ![](/gitbook/assets/tutorialsicon%20%281%29.png)
@@ -14,4 +15,3 @@ General Pycom tutorials contains tutorials that may be run on any Pycom device, 
 Before starting, ensure that any Pycom devices are running the latest firmware; for instructions see [Firmware Updates](/gettingstarted/installation/firmwaretool).
 
 The source code for these tutorials, along with the required libraries can be found in in the [pycom-libraries](https://github.com/pycom/pycom-libraries) repository.
-

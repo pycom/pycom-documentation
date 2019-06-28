@@ -1,6 +1,7 @@
 ---
 title: ""
 aliases:
+disable_breadcrumbs: true
 ---
 
 In addition to the Expansion Board, Pycom also offers three additional sensor boards, which are ideal for quickly building a fully functioning IoT solution! Whether the application is environment sensing or asset tracking, these additional boards support a variety of sensors.
@@ -74,4 +75,3 @@ All of the included sensors are connected to the Pycom device via the I2C interf
 You can find the datasheet and more info here:
 
 {{% refname "../datasheets/boards/pyscan.md" %}}
-

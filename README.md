@@ -39,3 +39,4 @@ wget -o 404.txt -r  --spider http://localhost:1313
 
 A webhook has been installed on the publish branch to
 https://publish.d20i0wkqbblkur.amplifyapp.com/
+https://github.com/pycom/pycom-documentation/tree/master

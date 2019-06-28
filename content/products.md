@@ -4,6 +4,7 @@ aliases:
     - products.html
     - products.md
     - chapter/products
+disable_breadcrumbs: true
 ---
 
 ## Pycom Products
