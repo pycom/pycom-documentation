@@ -2,6 +2,7 @@
 title: "Introduction"
 aliases:
   - /introduction
+disable_breadcrumbs: true
 ---
 Welcome to the Pycom documentation site. We recommend reading through all the sections to familiarise yourself with the various tools and features available to you to help you develop on your Pycom module.
 
