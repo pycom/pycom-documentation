@@ -2,7 +2,8 @@
 <html class="fancyScroll">
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <!--<link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">-->
+  <link href="/css/vuetify.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
   <title>{{ if .Title }}{{ .Title }} {{ else }}{{ .Site.Title }}{{ end }}</title>
@@ -13,6 +14,7 @@
   <link rel="icon" href="/favicon.ico">
 </head>
 <body>
+</script>
 <v-app id="app" class="grey lighten-5"  v-cloak stylse="display: none;">
    {{ partial "menu.html" . }}
    {{- partial "toolbar.html" . -}}
@@ -56,8 +58,8 @@
         drawer2: true,
         toc: 0,
         branches: [
+          { value: 'https://docs.pycom.io', text: 'version stable',  },
           { value: 'https://development.pycom.io', text: 'version development'},
-          { value: 'https://docs.pycom.io', text: 'version stable',  },          
         ],
         branch: ""
       },

@@ -1,6 +1,31 @@
 html {
-    font-size: 105%;
+    /*font-size: 100%;*/
 }
+
+/* Style the header */
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 68px;
+}
+/* Style the header END */
 
 .menu-contextual {
   width: 320px;
@@ -32,7 +57,7 @@ h1, h2, h3, h4 {
 
 
 h1 {
-  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+  font-family: 'BebasNeueBold', sans-serif;
 }
 
 h1, h2, h3, h4 {
@@ -46,10 +71,29 @@ h2 > a {
 }
 
 @font-face {
-font-family: "Beba";
-src: url("/fonts/BebasNeue-Regular.eot");
-src: url("/fonts/BebasNeue-Regular.woff") format("woff"),
-url("/fonts/BebasNeue-Regular.otf") format("opentype");
+font-family: "Bebas";
+src: url("/fonts/bebas/BebasNeue-Regular.eot");
+src: url("/fonts/bebas/BebasNeue-Regular.woff") format("woff"),
+url("/fonts/bebas/BebasNeue-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: "BebasNeueBook";
+src: url("/fonts/bebas/BebasNeueBook.eot");
+src: url("/fonts/bebas/BebasNeueBook.woff") format("woff"),
+url("/fonts/bebas/BebasNeueBook.eot") format("opentype");
+}
+@font-face {
+font-family: "BebasNeueBold";
+src: url("/fonts/bebas/BebasNeueBold.eot");
+src: url("/fonts/bebas/BebasNeueBold.woff") format("woff"),
+url("/fonts/bebas/BebasNeueBold.eot") format("opentype");
+}
+@font-face {
+font-family: "Space Mono";
+src: url("/fonts/space-mono/SpaceMono-Regular.ttf");
+src: url("/fonts/space-mono/SpaceMono-Regular.woff") format("woff"),
+url("/fonts/space-mono/SpaceMono-Regular.eot") format("opentype");
 }
 /* 'Beba',Helvetica,Arial,Lucida,sans-serif; */
 
@@ -69,18 +113,16 @@ url("/fonts/BebasNeue-Regular.otf") format("opentype");
 
 .application {
   /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
-  font-family: Helvetica;
+  font-family: 'Space Mono';
 }
-/*
-p {
-  text-align: justify;
-}
-*/
 
+a.bread:hover {
+  background-color: transparent;
+}
 .bread {
-  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+  font-family: 'BebasNeueBold',sans-serif;
   letter-spacing: 0.1em;
-  /* color: #7800FF; */
+  color: rgb(120, 0, 255)!important;
 }
 
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
@@ -95,13 +137,30 @@ a, li.lefttree > a {
   text-decoration: none;
 }
 
+li.lefttree > a:hover {
+  background-color: transparent!important;
+}
+
+
+li.lefttree > a {
+  padding:6px;
+}
+
+li.hot > a.hot {
+  text-decoration: none;
+  color: #7800FF!important;
+  padding: 6px;
+
+}
+
 a, li.righttree > a {
   text-decoration: none;
+
 }
 
 a {
   text-decoration: underline;
-    padding: 5px;
+  padding: 0px;
 }
 
 a:hover {
@@ -122,8 +181,10 @@ li > a {
     line-height: 1.60;
 }
 
-li > a.hot {
-  text-decoration: underline;
+li.hot li.hot > a.hot {
+  text-decoration: none;
+  font-family: 'BebasNeueBold';
+  color:#1E1E3C;
   padding: 6px;
 }
 
@@ -133,9 +194,13 @@ li.lefttree > i {
 }
 
 li.lefttree > a {
-      font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
-        letter-spacing: 0.1em;
+      font-family: 'BebasNeueBold', sans-serif;
+      letter-spacing: 0.1em;
+      font-size: 1.2em;
+
 }
+
+li.lefttree .lefttree > a {font-family: 'BebasNeueBook',sans-serif;}
 
 li.hot {
   width: calc(100% + 22px);
@@ -267,5 +332,5 @@ code {
 }
 
 p {
-  text-align: justify;
+  font-family: 'Space Mono';
 }
