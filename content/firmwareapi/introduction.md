@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/introduction.md
     - chapter/firmwareapi
 ---
+
 This chapter describes modules (function and class libraries) that are built into MicroPython. There are a number of categories for the available modules:
 
 * Modules which implement a subset of standard Python functionality and are not intended to be extended by the user.

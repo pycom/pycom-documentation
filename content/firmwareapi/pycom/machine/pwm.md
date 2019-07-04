@@ -5,11 +5,13 @@ aliases:
     - firmwareapi/pycom/machine/pwm.md
     - chapter/firmwareapi/pycom/machine/pwm
 ---
+
 ## class PWM – Pulse Width Modulation
 
 ### Quick Usage Example
 
 ```python
+
 from machine import PWM
 pwm = PWM(0, frequency=5000)  # use PWM timer 0, with a frequency of 5KHz
 # create pwm channel on pin P12 with a duty cycle of 50%

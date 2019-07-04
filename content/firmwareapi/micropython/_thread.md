@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/micropython/_thread.md
     - chapter/firmwareapi/micropython/_thread
 ---
+
 This module provides low-level primitives for working with multiple threads (also called light-weight processes or tasks) — multiple threads of control sharing their global data space. For synchronisation, simple locks (also called mutexes or binary semaphores) are provided.
 
 When a thread specific error occurs a `RuntimeError` exception is raised.
@@ -12,6 +13,7 @@ When a thread specific error occurs a `RuntimeError` exception is raised.
 ## Quick Usage Example
 
 ```python
+
 import _thread
 import time
 
@@ -81,6 +83,7 @@ Return the status of the lock: `True` if it has been acquired by some thread, `F
 In addition to these methods, lock objects can also be used via the with statement, e.g.:
 
 ```python
+
 import _thread
 
 a_lock = _thread.allocate_lock()

@@ -108,8 +108,6 @@ aliases:
     </v-tabs>
 </div>
 
-***
-
 
 ## Antennas
 

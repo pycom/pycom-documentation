@@ -109,8 +109,6 @@ aliases:
   </v-tabs>
 </div>
 
----
-
 ## Antennas
 
 ### Lora/Sigfox

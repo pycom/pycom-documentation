@@ -3,6 +3,7 @@ title: "Programming the modules"
 aliases:
     - chapter/gettingstarted/programming
 ---
+
 Now that you have connected and updated your pycom module and installed all the required software on your computer, we can begin programming your Pycom module.
 
 If this is your first time using a Pycom module we highly recommend you read through the following pages:

@@ -5,6 +5,7 @@ aliases:
     - docnotes/syntax.md
     - chapter/docnotes/syntax
 ---
+
 The Pycom documentation follows standard Python Library format using the popular Sphinx Docs tool. There are some notable points regarding the syntax of classes, methods and constants. Please see the notes below and familiarise yourself with the specific details before reviewing the documentation.
 
 ## Keyword Arguments
@@ -14,12 +15,14 @@ The Pycom documentation follows standard Python Library format using the popular
 The values of the arguments (as seen in the examples/docs) refer to the default values that are passed into the constructor if nothing is provided.
 
 ```python
+
 i2c.init(mode, * , baudrate=100000, pins=(SDA, SCL))
 ```
 
 An example of how this method might be called:
 
 ```python
+
 i2c.init(I2C.MASTER, pins=('P12', 'P11'))
 ```
 
@@ -34,10 +37,12 @@ It is important to note that there are certain class methods that can only accep
 An astrik `*` in a method description (in the docs), denotes that the following arguments require a keyword, i.e. `pin='P16'` in the example below.
 
 ```python
+
 adc.channel(* , pin, attn=ADC.ATTN_0DB)
 ```
 
 ```python
+
 from machine import ADC
 
 adc = ADC()                     # create an ADC object
@@ -49,6 +54,7 @@ apin = adc.channel(pin='P16')   # create an analog pin on P16
 Another example shows how the `PWM` class, `pwm.channel()` requires a keyword argument for `pin` but does not for `id`.
 
 ```python
+
 from machine import PWM
 
 pwm = PWM(0, frequency=5000)
@@ -60,12 +66,14 @@ pwm_c = pwm.channel(0, pin='P12') # no keyword argument requires for id (0) but 
 The documentation may refer to a method that takes an argument listed by name but does allow for a keyword to be passed. For example, the `pycom` class contains a method `rgbled`. This lists that the method accepts a value for `color`, however this may not be specified by `keyword`, only `value`. This is intentional as the `value` being passed is the only argument valid for this method
 
 ```python
+
 pycom.rgbled(color)
 ```
 
 If the argument is passed into the method with a keyword, it will return an error stating TypeError: function does not take keyword arguments.
 
 ```python
+
 import pycom
 
 pycom.rgbled(color=0xFF0000) # Incorrect
@@ -75,10 +83,12 @@ pycom.rgbled(0xFF0000) # Correct
 Another example of a method that only accepts value input. In this case, the `RTC.init()` method require a value (`tuple`) input for the `datetime`. It will not accept a keyword.
 
 ```python
+
 rtc.init(datetime)
 ```
 
 ```python
+
 from machine import RTC
 
 rtc = RTC()
@@ -91,6 +101,7 @@ rtc.init((2014, 5, 1, 4, 13, 0, 0, 0)) # Correct
 The `constants` section of a library within the docs refers to specific values from that library's class. These might be used when constructing an object from that class or when utilising a method from within that class. These are generally listed by the library name followed by the specific value. See the example below:
 
 ```python
+
 I2C.MASTER()
 ```
 

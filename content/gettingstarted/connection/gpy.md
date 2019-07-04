@@ -96,8 +96,6 @@ aliases:
   </v-tabs>
 </div>
 
----
-
 ## Antennas
 
 ### LTE Cat-M1/NB-IoT

@@ -1,6 +1,9 @@
 ---
-title: ""
+title: "Introduction"
 aliases:
+    - pytrackpysense/introduction.html
+    - pytrackpysense/introduction.md
+    - chapter/pytrackpysense
 disable_breadcrumbs: true
 ---
 

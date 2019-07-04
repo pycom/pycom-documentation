@@ -6,13 +6,12 @@ aliases:
     - chapter/firmwareapi/pycom/machine/adc
 ---
 
-# ADC
-
 ## class ADC – Analog to Digital Conversion
 
 ### Quick Usage Example
 
 ```python
+
 import machine
 
 adc = machine.ADC()             # create an ADC object
@@ -48,6 +47,7 @@ Create an analog pin.
 Returns an instance of `ADCChannel`. Example:
 
 ```python
+
 # enable an ADC channel on P16
 apin = adc.channel(pin='P16')
 ```

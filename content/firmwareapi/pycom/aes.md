@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/pycom/aes.md
     - chapter/firmwareapi/pycom/aes
 ---
+
 AES (Advanced Encryption Standard) is a symmetric block cipher standardised by NIST. It has a fixed data block size of 16 bytes. Its keys can be 128, 192, or 256 bits long.
 
 {{% hint style="info" %}}
@@ -14,6 +15,7 @@ AES is implemented using the ESP32 hardware module.
 ## Quick Usage Example
 
 ```python
+
 from crypto import AES
 import crypto
 key = b'notsuchsecretkey' # 128 bit (16 bytes) key

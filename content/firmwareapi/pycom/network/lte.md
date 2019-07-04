@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/pycom/network/lte.md
     - chapter/firmwareapi/pycom/network/lte
 ---
+
 The LTE class provides access to the LTE-M/NB-IoT modem on the GPy and FiPy. LTE-M/NB-IoT are new categories of cellular protocols developed by the [3GPP](http://www.3gpp.org) and optimised for long battery life power and longer range. These are new protocols currently in the process of being deployed by mobile networks across the world.
 
 The GPy and FiPy support both new LTE-M protocols:
@@ -17,14 +18,27 @@ The GPy and FiPy support both new LTE-M protocols:
 {{< /hint >}}
 
 {{% hint style="info" %}}
-The Sequans modem used on Pycom's cellular enabled modules can only work in one of these modes at a time. In order to switch between the two protocols you need to flash a different firmware to the Sequans modem. Instructions for this can be found [here](/../../tutorials/lte/firmware).
+The Sequans modem used on Pycom's cellular enabled modules can only work in one of these modes at a time. In order to switch between the two protocols you need to flash a different firmware to the Sequans modem. Instructions for this can be found [here](/tutorials/lte/firmware).
+{{< /hint >}}
+
+{{% hint style="info" %}}
+
+**FiPy/Gpy Band Support**
+
+- Fipy/GPy v1.0 ==> supports 6 bands only (3, 4, 12, 13, 20, 28)
+
+- Fipy/GPy v1.2  with Sequans modem Firmware (41xxx) ==> Supports Full range of 17 bands (1, 2, 3, 4, 5, 8, 12, 13, 14, 17, 18, 19, 20, 25, 26, 28, 66)
+
+- Fipy/GPy v1.2  with Sequans older modem Firmwares  (39xxx)==> Supports 8 Bands (3, 4, 5, 8, 12, 13, 20, 28)
+
+- Fipy/GPy v1.2  with Sequans old modem Firmwares  < (39xxx)==> Supports 6 Bands (3, 4, 12, 13, 20, 28)
+
 {{< /hint >}}
 
 ## AT Commands
 
 The AT commands for the Sequans Monarch modem on the GPy/FiPy are available in a PDF file.
-
-{% file src="..//gitbook/assets/monarch\_4g-ez\_lr5110\_atcommands\_referencemanual\_rev3\_noconfidential.pdf" caption="AT Commands for Sequans" %}
+<a href="/gitbook/assets/Monarch-LR5110-ATCmdRefMan-rev6_noConfidential.pdf" target="_blank"> AT Commands for Sequans </a>
 
 ## Constructors
 
@@ -33,6 +47,7 @@ The AT commands for the Sequans Monarch modem on the GPy/FiPy are available in a
 Create and configure a LTE object. See init for params of configuration.
 
 ```python
+
 from network import LTE
 lte = LTE()
 ```
@@ -54,9 +69,9 @@ Disables LTE modem completely. This reduces the power consumption to the minimum
 #### lte.attach(\*, band=None, apn=None, cid=None, type=LTE.IP, legacyattach=True)
 
 Enable radio functionality and attach to the LTE network authorised by the inserted SIM card. Optionally specify:
- 
+
 - `band` : to scan for networks. If no band (or `None`) is specified, all 8 bands will be scanned. The possible values for the band are: `3, 4, 5, 8, 12, 13, 20 and 28`.
- 
+
 - `apn` : Specify the APN (Access point Name).
 
 - `cid` : connection ID, see `LTE.connect()`. when the ID is set here it will be remembered when doint connect so no need to specify again
@@ -69,7 +84,7 @@ Enable radio functionality and attach to the LTE network authorised by the inser
 *NOTE* :
 When carrier is specified in `LTE()` or `LTE.init()` (eg. `lte = LTE(carrier=verizon)`) No need to specify band, apn or type these parameters are already programmed in to the LTE modem for each carrier.
 
---- 
+---
 
 #### lte.isattached()
 
@@ -90,6 +105,7 @@ Start a data session and obtain and IP address. Optionally specify a CID (Connec
 For instance, to attach and connect to Verizon:
 
 ```python
+
 import time
 from network import LTE
 
@@ -123,12 +139,14 @@ Send an AT command directly to the modem. Returns the raw response from the mode
 Example:
 
 ```python
+
 lte.send_at_cmd('AT+CEREG?')    # check for network registration manually (sames as lte.isattached())
 ```
 
 Optionally the response can be parsed for pretty printing:
 
 ```python
+
 def send_at_cmd_pretty(cmd):
     response = lte.send_at_cmd(cmd).split('\r\n')
     for line in response:
@@ -138,7 +156,7 @@ send_at_cmd_pretty('AT!="showphy"')     # get the PHY status
 send_at_cmd_pretty('AT!="fsm"')         # get the System FSM
 ```
 
-- `delay` : specify maximum Timeout in ms to wait response from modem.
+- `delay` : specify the number of milliseconds the esp32 chip will wait between sending an AT command to the modem. and reading the response.
 
 #### lte.imei()
 
@@ -165,9 +183,9 @@ Resumes PPP session with LTE modem.
 Reset modem configuration to Factory settings.
 
 #### lte.modem\_upgrade\_mode()
- 
+
  Puts the modem in to modem upgrade mode and bridging LTE modem UART port to FiPy/GPy UART0 to enable upgrading Firmware over USB port.
- 
+
  ---
  *NOTE* :
  In this mode all All tasks on the board are halted and a reset is required to regain functionality.

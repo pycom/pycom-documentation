@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/micropython/gc.md
     - chapter/firmwareapi/micropython/gc
 ---
+
 ## Methods
 
 #### gc.enable()

@@ -6,7 +6,9 @@ aliases:
     - chapter/tutorials/lora/lora-mesh
 ---
 
-# Pymesh - LoRa Mesh
+{{% hint style="info" %}}	
+These API's are currently only available in the latest RC builds.
+{{% /hint %}}
 
 The Pymesh LoRa Mesh is implemented using [OpenThread](https://openthread.io/guides/thread-primer).
 

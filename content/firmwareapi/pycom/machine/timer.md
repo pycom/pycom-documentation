@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/pycom/machine/timer.md
     - chapter/firmwareapi/pycom/machine/timer
 ---
+
 ## class Timer – Measure Time and Set Alarms
 
 Timers can be used for a great variety of tasks, like measuring time spans or being notified that a specific interval has elapsed.
@@ -71,6 +72,7 @@ Get the elapsed time in microseconds.
 Example:
 
 ```python
+
 from machine import Timer
 import time
 
@@ -109,6 +111,7 @@ Disables the alarm.
 Example:
 
 ```python
+
 from machine import Timer
 
 class Clock:
@@ -127,5 +130,5 @@ clock = Clock()
 ```
 
 {{% hint style="info" %}}
-For more information on how Pycom's products handle interrupts, see [notes](../../../notes.md#interrupt-handling).
+For more information on how Pycom's products handle interrupts, see [notes](/firmwareapi/notes#interrupt-handling).
 {{< /hint >}}

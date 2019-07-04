@@ -5,17 +5,25 @@ aliases:
     - gettingstarted/registration/sigfox.md
     - chapter/gettingstarted/registration/sigfox
 ---
+
 Before you start, update your device to the latest firmware. Select _stable_ firmware in Firmware updater. After firmware update is done, _Sigfox ID_ and _Sigfox PAC_ were assigned to your device.
 
 Copy _Sigfox ID_ and _Sigfox PAC_ from the last screen of firmware updater.
 
 ![](/gitbook/assets/fwupdater.png)
 
-_Sigfox ID_ and _Sigfox Pac_ is assigned to your device just once during the first update process. _Sigfox ID_ and _Sigfox Pac_ will not change after successive firmware updates.
+{{% hint style="danger" %}}
+_Sigfox ID_ and _Sigfox Pac_ are assigned to your device just once during the first firmware update process. They will not change after successive firmware updates.
+Sigfox Pac is one-time activation code, which will be invalidated after device's registration on Sigfox Backend.
+Keep in mind that firmware updater will always display the same (even invalid) Sigfox Pac.
+In case of successive registration to a new account (or device type) on Sigfox Backend, you need to get Sigfox Pac from device page on Sigfox Backend.
+See [Sigfox documentation](https://support.sigfox.com/docs/device-idpac-couple) for more info.
+{{< /hint >}}
 
 After first firmware update you can also get your _Sigfox ID_ and _Sigfox PAC_ through a couple of commands via the REPL.
 
 ```python
+
 from network import Sigfox
 import binascii
 
@@ -72,4 +80,3 @@ Now you can see your new Sigfox PAC.
 ![](/gitbook/assets/newsigfoxpac%20%281%29.png)
 
 Once you know your new Sigfox PAC go to [https://backend.sigfox.com/activate](https://backend.sigfox.com/activate) and register device with different account.
-

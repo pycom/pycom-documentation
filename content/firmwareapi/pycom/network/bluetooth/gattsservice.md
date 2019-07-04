@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/pycom/network/bluetooth/gattsservice.md
     - chapter/firmwareapi/pycom/network/bluetooth/gattsservice
 ---
+
 The GATT Server allows the device to act as a peripheral and hold its own ATT lookup data, server & characteristic definitions. In this mode, the device acts as a slave and a master must initiate a request.
 
 Services are used to categorise data up into specific chunks of data known as characteristics. A service may have multiple characteristics, and each service has a unique numeric ID called a UUID.
@@ -31,6 +32,7 @@ Creates a new characteristic on the service. Returns an object of the class `GAT
 * `value` sets the initial value. Can take an integer, a string or a bytes object.
 
 ```python
+
 service.characteristic('temp', value=25)
 ```
 

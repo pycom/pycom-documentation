@@ -5,11 +5,13 @@ aliases:
     - firmwareapi/pycom/machine/spi.md
     - chapter/firmwareapi/pycom/machine/spi
 ---
+
 SPI is a serial protocol that is driven by a master. At the physical level there are 3 lines: SCK, MOSI, MISO.
 
 See usage model of I2C; SPI is very similar. Main difference is parameters to init the SPI bus:
 
 ```python
+
 from machine import SPI
 spi = SPI(0, mode=SPI.MASTER, baudrate=1000000, polarity=0, phase=0, firstbit=SPI.MSB)
 ```
@@ -19,6 +21,7 @@ Only required parameter is mode, must be SPI.MASTER. Polarity can be 0 or 1, and
 ## Quick Usage Example
 
 ```python
+
 from machine import SPI
 
 # configure the SPI master @ 2MHz
@@ -33,6 +36,7 @@ spi.write_readinto(bytes([0x01, 0x02, 0x03, 0x04, 0x05]), rbuf) # send a receive
 ## Quick Usage Example using non-default pins
 
 ```python
+
 from machine import SPI
 
 # configure the SPI master @ 2MHz

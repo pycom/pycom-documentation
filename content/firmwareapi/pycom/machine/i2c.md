@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/pycom/machine/i2c.md
     - chapter/firmwareapi/pycom/machine/i2c
 ---
+
 I2C is a two-wire protocol for communicating between devices. At the physical level it consists of 2 wires: SCL and SDA, the clock and data lines respectively.
 
 I2C objects are created attached to a specific bus. They can be initialised when created, or initialised later on.
@@ -12,6 +13,7 @@ I2C objects are created attached to a specific bus. They can be initialised when
 ## Example using default Pins
 
 ```python
+
 from machine import I2C
 
 i2c = I2C(0)                         # create on bus 0
@@ -24,6 +26,7 @@ i2c.deinit()                         # turn off the peripheral
 ## Example using non-default Pins
 
 ```python
+
 from machine import I2C
 
 i2c = I2C(0, pins=('P10','P11'))     # create and use non-default PIN assignments (P10=SDA, P11=SCL)
@@ -36,6 +39,7 @@ Printing the `i2c` object gives you information about its configuration.
 A master must specify the recipient's address:
 
 ```python
+
 i2c.init(I2C.MASTER)
 i2c.writeto(0x42, '123')        # send 3 bytes to slave with address 0x42
 i2c.writeto(addr=0x42, b'456')  # keyword for address
@@ -44,6 +48,7 @@ i2c.writeto(addr=0x42, b'456')  # keyword for address
 Master also has other methods:
 
 ```python
+
 i2c.scan()                          # scan for slaves on the bus, returning
                                     #   a list of valid addresses
 i2c.readfrom_mem(0x42, 2, 3)        # read 3 bytes from memory of slave 0x42,
@@ -55,6 +60,7 @@ i2c.writeto_mem(0x42, 2, 'abc')     # write 'abc' (3 bytes) to memory of slave 0
 ## Quick Usage Example
 
 ```python
+
 from machine import I2C
 # configure the I2C bus
 i2c = I2C(0, I2C.MASTER, baudrate=100000)

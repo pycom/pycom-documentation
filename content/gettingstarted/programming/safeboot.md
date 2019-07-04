@@ -5,6 +5,7 @@ aliases:
     - gettingstarted/programming/safeboot.md
     - chapter/gettingstarted/programming/safeboot
 ---
+
 If powering up normally or upon pressing the reset button, a Pycom module will boot into standard mode; the `boot.py` file will be executed first, followed by `main.py`. It is possible to alter the boot procedure of the module by tying certain pins `high` or `low` when the module boots.
 
 ## Bootloader
@@ -32,6 +33,7 @@ The selection made during safe boot is not persistent, therefore after the next 
 If problems occur within the filesystem or you wish to factory reset your module to remove your code, run following code in the REPL:
 
 ```python
+
 >>> import os
 >>> os.mkfs('/flash')
 ```
@@ -45,6 +47,7 @@ Be aware, resetting the flash filesystem will delete all files inside the intern
 Pycom devices support both soft and hard resets. A soft reset clears the state of the MicroPython virtual machine but leaves hardware peripherals unaffected. To do a soft reset, press `Ctrl+D` on the REPL or from within a script, run:
 
 ```python
+
 >>> import sys
 >>> sys.exit()
 ```
@@ -52,6 +55,7 @@ Pycom devices support both soft and hard resets. A soft reset clears the state o
 A hard reset is the same as performing a power cycle to the device. In order to hard reset the device, press the `reset` switch or run:
 
 ```python
+
 >>> import machine
 >>> machine.reset()
 ```

@@ -5,11 +5,13 @@ aliases:
     - firmwareapi/pycom/machine/uart.md
     - chapter/firmwareapi/pycom/machine/uart
 ---
+
 UART implements the standard UART/USART duplex serial communications protocol. At the physical level it consists of 2 lines: RXD and TXD. The unit of communication is a character (not to be confused with a string character) which can be 5, 6, 7 or 8 bits wide.
 
 UART objects can be created and initialised using:
 
 ```python
+
 from machine import UART
 
 uart = UART(1, 9600)                         # init with given baudrate
@@ -21,6 +23,7 @@ Bits can be `5, 6, 7, 8`. Parity can be `None`, `UART.EVEN` or `UART.ODD`. Stop 
 A UART object acts like a stream object therefore reading and writing is done using the standard stream methods:
 
 ```python
+
 uart.read(10)       # read 10 characters, returns a bytes object
 uart.readall()      # read all available characters
 uart.readline()     # read a line
@@ -31,12 +34,14 @@ uart.write('abc')   # write the 3 characters
 To check if there is anything to be read, use:
 
 ```python
+
 uart.any()               # returns the number of characters available for reading
 ```
 
 ## Quick Usage Example
 
 ```python
+
 from machine import UART
 # this uses the UART_1 default pins for TXD and RXD (``P3`` and ``P4``)
 uart = UART(1, baudrate=9600)
@@ -47,6 +52,7 @@ uart.read(5) # read up to 5 bytes
 ## Quick Usage Example using non-default pins (TXD/RXD only)
 
 ```python
+
 from machine import UART
 # this uses the UART_1 non-default pins for TXD and RXD (``P20`` and ``P21``)
 uart = UART(1, baudrate=9600, pins=('P20','P21'))
@@ -57,6 +63,7 @@ uart.read(5) # read up to 5 bytes
 ## Quick Usage Example using non-default pins (TXD/RXD and flow control)
 
 ```python
+
 from machine import UART
 # this uses the UART_1 non-default pins for TXD, RXD, RTS and CTS (``P20``, ``P21``, ``P22``and ``P23``)
 uart = UART(1, baudrate=9600, pins=('P20', 'P21', 'P22', 'P23'))
