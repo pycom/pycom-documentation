@@ -815,169 +815,170 @@ theme = "doc-theme"
     parent = "firmwareapi@pycom"
     weight = 40
 
-[[menu.main]]
-    name = "MicroPython Modules"
-    url = "/firmwareapi/micropython/"
-    identifier = "firmwareapi@micropython"
-    parent = "firmwareapi"
-    weight = 20
+    [[menu.main]]
+        name = "MicroPython Modules"
+        url = "/firmwareapi/micropython/"
+        identifier = "firmwareapi@micropython"
+        parent = "firmwareapi"
+        weight = 20
 
-[[menu.main]]
-    name = "micropython"
-    url = "/firmwareapi/micropython/micropython/"
-    identifier = "firmwareapi@micropython@micropython"
-    parent = "firmwareapi@micropython"
-    weight = 10
+    [[menu.main]]
+        name = "micropython"
+        url = "/firmwareapi/micropython/micropython/"
+        identifier = "firmwareapi@micropython@micropython"
+        parent = "firmwareapi@micropython"
+        weight = 50
 
-[[menu.main]]
-    name = "uctypes"
-    url = "/firmwareapi/micropython/uctypes/"
-    identifier = "firmwareapi@micropython@uctypes"
-    parent = "firmwareapi@micropython"
-    weight = 20
+    [[menu.main]]
+        name = "uctypes"
+        url = "/firmwareapi/micropython/uctypes/"
+        identifier = "firmwareapi@micropython@uctypes"
+        parent = "firmwareapi@micropython"
+        weight = 110
 
-[[menu.main]]
-    name = "sys"
-    url = "/firmwareapi/micropython/sys/"
-    identifier = "firmwareapi@micropython@sys"
-    parent = "firmwareapi@micropython"
-    weight = 30
+    [[menu.main]]
+        name = "sys"
+        url = "/firmwareapi/micropython/sys/"
+        identifier = "firmwareapi@micropython@sys"
+        parent = "firmwareapi@micropython"
+        weight = 70
 
-[[menu.main]]
-    name = "uos"
-    url = "/firmwareapi/micropython/uos/"
-    identifier = "firmwareapi@micropython@uos"
-    parent = "firmwareapi@micropython"
-    weight = 40
+    [[menu.main]]
+        name = "uos"
+        url = "/firmwareapi/micropython/uos/"
+        identifier = "firmwareapi@micropython@uos"
+        parent = "firmwareapi@micropython"
+        weight = 140
 
-[[menu.main]]
-    name = "array"
-    url = "/firmwareapi/micropython/array/"
-    identifier = "firmwareapi@micropython@array"
-    parent = "firmwareapi@micropython"
-    weight = 50
+    [[menu.main]]
+        name = "array"
+        url = "/firmwareapi/micropython/array/"
+        identifier = "firmwareapi@micropython@array"
+        parent = "firmwareapi@micropython"
+        weight = 10
 
-[[menu.main]]
-    name = "cmath"
-    url = "/firmwareapi/micropython/cmath/"
-    identifier = "firmwareapi@micropython@cmath"
-    parent = "firmwareapi@micropython"
-    weight = 60
+    [[menu.main]]
+        name = "cmath"
+        url = "/firmwareapi/micropython/cmath/"
+        identifier = "firmwareapi@micropython@cmath"
+        parent = "firmwareapi@micropython"
+        weight = 20
 
-[[menu.main]]
-    name = "math"
-    url = "/firmwareapi/micropython/math/"
-    identifier = "firmwareapi@micropython@math"
-    parent = "firmwareapi@micropython"
-    weight = 70
+    [[menu.main]]
+        name = "math"
+        url = "/firmwareapi/micropython/math/"
+        identifier = "firmwareapi@micropython@math"
+        parent = "firmwareapi@micropython"
+        weight = 40
 
-[[menu.main]]
-    name = "gc"
-    url = "/firmwareapi/micropython/gc/"
-    identifier = "firmwareapi@micropython@gc"
-    parent = "firmwareapi@micropython"
-    weight = 80
+    [[menu.main]]
+        name = "gc"
+        url = "/firmwareapi/micropython/gc/"
+        identifier = "firmwareapi@micropython@gc"
+        parent = "firmwareapi@micropython"
+        weight = 30
 
-[[menu.main]]
-    name = "ubinascii"
-    url = "/firmwareapi/micropython/ubinascii/"
-    identifier = "firmwareapi@micropython@ubinascii"
-    parent = "firmwareapi@micropython"
-    weight = 90
+    [[menu.main]]
+        name = "ubinascii"
+        url = "/firmwareapi/micropython/ubinascii/"
+        identifier = "firmwareapi@micropython@ubinascii"
+        parent = "firmwareapi@micropython"
+        weight = 80
 
-[[menu.main]]
-    name = "ujson"
-    url = "/firmwareapi/micropython/ujson/"
-    identifier = "firmwareapi@micropython@ujson"
-    parent = "firmwareapi@micropython"
-    weight = 100
+    [[menu.main]]
+        name = "ujson"
+        url = "/firmwareapi/micropython/ujson/"
+        identifier = "firmwareapi@micropython@ujson"
+        parent = "firmwareapi@micropython"
+        weight = 130
 
-[[menu.main]]
-    name = "ure"
-    url = "/firmwareapi/micropython/ure/"
-    identifier = "firmwareapi@micropython@ure"
-    parent = "firmwareapi@micropython"
-    weight = 110
+    [[menu.main]]
+        name = "ure"
+        url = "/firmwareapi/micropython/ure/"
+        identifier = "firmwareapi@micropython@ure"
+        parent = "firmwareapi@micropython"
+        weight = 150
 
-[[menu.main]]
-    name = "usocket"
-    url = "/firmwareapi/micropython/usocket/"
-    identifier = "firmwareapi@micropython@usocket"
-    parent = "firmwareapi@micropython"
-    weight = 120
+    [[menu.main]]
+        name = "usocket"
+        url = "/firmwareapi/micropython/usocket/"
+        identifier = "firmwareapi@micropython@usocket"
+        parent = "firmwareapi@micropython"
+        weight = 160
 
-[[menu.main]]
-    name = "select"
-    url = "/firmwareapi/micropython/select/"
-    identifier = "firmwareapi@micropython@select"
-    parent = "firmwareapi@micropython"
-    weight = 130
+    [[menu.main]]
+        name = "select"
+        url = "/firmwareapi/micropython/select/"
+        identifier = "firmwareapi@micropython@select"
+        parent = "firmwareapi@micropython"
+        weight = 60
 
-[[menu.main]]
-    name = "utime"
-    url = "/firmwareapi/micropython/utime/"
-    identifier = "firmwareapi@micropython@utime"
-    parent = "firmwareapi@micropython"
-    weight = 140
+    [[menu.main]]
+        name = "utime"
+        url = "/firmwareapi/micropython/utime/"
+        identifier = "firmwareapi@micropython@utime"
+        parent = "firmwareapi@micropython"
+        weight = 190
 
-[[menu.main]]
-    name = "uhashlib"
-    url = "/firmwareapi/micropython/uhashlib/"
-    identifier = "firmwareapi@micropython@uhashlib"
-    parent = "firmwareapi@micropython"
-    weight = 150
+    [[menu.main]]
+        name = "uhashlib"
+        url = "/firmwareapi/micropython/uhashlib/"
+        identifier = "firmwareapi@micropython@uhashlib"
+        parent = "firmwareapi@micropython"
+        weight = 120
 
-[[menu.main]]
-    name = "ussl"
-    url = "/firmwareapi/micropython/ussl/"
-    identifier = "firmwareapi@micropython@ussl"
-    parent = "firmwareapi@micropython"
-    weight = 160
+    [[menu.main]]
+        name = "ussl"
+        url = "/firmwareapi/micropython/ussl/"
+        identifier = "firmwareapi@micropython@ussl"
+        parent = "firmwareapi@micropython"
+        weight = 170
 
-[[menu.main]]
-    name = "ucrypto"
-    url = "/firmwareapi/micropython/ucrypto/"
-    identifier = "firmwareapi@micropython@ucrypto"
-    parent = "firmwareapi@micropython"
-    weight = 170
+    [[menu.main]]
+        name = "ucrypto"
+        url = "/firmwareapi/micropython/ucrypto/"
+        identifier = "firmwareapi@micropython@ucrypto"
+        parent = "firmwareapi@micropython"
+        weight = 90
 
-#  [Errno 2] No such file or directory: './content/firmwareapi/micropython/ustruct/README.md'
-[[menu.main]]
-    name = "ustruct"
-    url = "/firmwareapi/micropython/ustruct/"
-    identifier = "firmwareapi@micropython@ustruct"
-    parent = "firmwareapi@micropython"
-    weight = 180
+    #  [Errno 2] No such file or directory: './content/firmwareapi/micropython/ustruct/README.md'
+    [[menu.main]]
+        name = "ustruct"
+        url = "/firmwareapi/micropython/ustruct/"
+        identifier = "firmwareapi@micropython@ustruct"
+        parent = "firmwareapi@micropython"
+        weight = 180
 
 [[menu.main]]
     name = "uzlib"
     url = "/firmwareapi/micropython/uzlib/"
     identifier = "firmwareapi@micropython@uzlib"
-    parent = "firmwareapi@micropython@ustruct"
-    weight = 10
-
-[[menu.main]]
-    name = "_thread"
-    url = "/firmwareapi/micropython/_thread/"
-    identifier = "firmwareapi@micropython@_thread"
-    parent = "firmwareapi@micropython"
-    weight = 190
-
-[[menu.main]]
-    name = "Builtin"
-    url = "/firmwareapi/micropython/builtin/"
-    identifier = "firmwareapi@micropython@builtin"
     parent = "firmwareapi@micropython"
     weight = 200
 
-[[menu.main]]
-    name = "Notes"
-    url = "/firmwareapi/notes/"
-    identifier = "firmwareapi@notes"
-    parent = "firmwareapi"
-    weight = 30
 
-# *** Product Info, Datasheets
+    [[menu.main]]
+        name = "_thread"
+        url = "/firmwareapi/micropython/_thread/"
+        identifier = "firmwareapi@micropython@_thread"
+        parent = "firmwareapi@micropython"
+        weight = 250
+
+    [[menu.main]]
+        name = "Builtin"
+        url = "/firmwareapi/micropython/builtin/"
+        identifier = "firmwareapi@micropython@builtin"
+        parent = "firmwareapi@micropython"
+        weight = 260
+
+    [[menu.main]]
+        name = "Notes"
+        url = "/firmwareapi/notes/"
+        identifier = "firmwareapi@notes"
+        parent = "firmwareapi"
+        weight = 30
+
+
 [[menu.main]]
     name = "Product Info, Datasheets"
     url = "/datasheets/"
