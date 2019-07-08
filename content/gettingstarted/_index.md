@@ -34,4 +34,4 @@ Now that you familiar with programming your device you will no doubt be keen to 
 
 {{% hint style="info" %}}
 You can navigate through this guide using the arrow buttons at the bottom of the page.
-{{< /hint >}}
+{{% /hint %}}

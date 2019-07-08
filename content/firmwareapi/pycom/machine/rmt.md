@@ -78,7 +78,7 @@ Deinitialise the RMT object.
 
 {{% hint style="info" %}}
 If an RMT object needs to be reconfigured from RX/TX to TX/RX, then either first `deinit()` must be called or the `init()` again with the desired configuration.
-{{< /hint >}}
+{{% /hint %}}
 
 #### rmt.pulses\_get(pulses, timeout)
 
@@ -105,7 +105,7 @@ Return value: Tuple of items with the following structure: `(level, duration)`:
 
 {{% hint style="info" %}}
 Maximum of 128 pulses can be received in a row without receiving "idle" signal. If the incoming pulse sequence contains more than 128 pulses the rest is dropped and the receiver waits for another sequence of pulses. The `pulses_get` function can be called to receive more than 128 pulses, however the above mentioned limitation should be kept in mind when evaluating the received data.
-{{< /hint >}}
+{{% /hint %}}
 
 #### rmt.pulses\_send(duration, data, start\_level, wait\_tx\_done)
 

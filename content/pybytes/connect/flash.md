@@ -11,7 +11,7 @@ Use this, if you want to have full control over the Pybytes library on your devi
 
 {{% hint style="info" %}}
 Pybytes firmware already contains [Pybytes library](https://github.com/pycom/pycom-micropython-sigfox/tree/pybytes-master/esp32/frozen/Base). That means that you can [add your device quickly](../quick) without the need of flashing Pybytes library.
-{{< /hint >}}
+{{% /hint %}}
 
 ### Step 1: Flash stable firmware to your device with Pycom firmware updater tool
 1. Open Pycom firmware updater tool
@@ -37,7 +37,7 @@ You can download _Pybytes library_ at the device's settings page:
 {{% hint style="info" %}}
 In case you haven't installed Pymakr plugin, follow [these instructions](/pymakr/installation/atom).
 We recommend to install Pymakr in Atom.
-{{< /hint >}}
+{{% /hint %}}
 
 1. Connect your device to the computer with a USB cable.
 2. Open zip archive of Pybytes library and extract a containing folder.

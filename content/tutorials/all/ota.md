@@ -131,7 +131,7 @@ This library is split into two layers. The top level `OTA` class implements all 
 
 {{% hint style="danger" %}}
 Although the above code is functional, it is provided only as an example of how an end user might implement a OTA update mechanism. It is not 100% feature complete e.g. even though it does backup previous versions of files, the roll back procedure is not implemented. This is left of the end user to do.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Example
 
@@ -139,7 +139,7 @@ Below is am example implementing the methodology previously explained in this tu
 
 {{% hint style="info" %}}
 The example below will only work on a Pycom device with LoRa capabilities. If want to test it out on a device without LoRa functionality then simply comment out any code relating to LoRa. Leaving just the `WiFiOTA` initialisation and they `ota.connect()` and `ota.update()`
-{{< /hint >}}
+{{% /hint %}}
 
 ```python
 

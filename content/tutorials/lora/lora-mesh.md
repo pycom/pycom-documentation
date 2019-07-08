@@ -30,7 +30,7 @@ This example shows how to:
 
 {{% hint style="info" %}}
 The LoRa-Mesh socket supports only the following socket methods: `close()`, `bind()`, `sendto()`, and `recvfrom()`.
-{{< /hint >}}
+{{% /hint %}}
 
 **Lora Mesh example**
 

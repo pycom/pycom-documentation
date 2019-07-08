@@ -19,6 +19,11 @@ git merge master
 git push origin publish
 ```
 
+# Quickrefs
+
+- master -> publish -> https://publish.d1rmdw1xyxqk1e.amplifyapp.com/ -> https://docs.pycom.io
+- development -> development-publish -> https://development-publish.d2aq2bahs3kibc.amplifyapp.com/ -> https://development.pycom.io
+
 # some infos:
 
 - assets are in ./static directory, a directory aliased at /
@@ -36,7 +41,3 @@ git push origin publish
 ```
 wget -o 404.txt -r  --spider http://localhost:1313
 ```
-
-A webhook has been installed on the publish branch to
-https://publish.d20i0wkqbblkur.amplifyapp.com/
-https://github.com/pycom/pycom-documentation/tree/master

@@ -66,7 +66,7 @@ These settings can also be applied on a per project basis by clicking `Settings`
 
 {{% hint style="info" %}}
 This process is easiest with either a Pycom Expansion Board or a Pytrack/Pysense as the addresses are automatically selected. For external products such as FTDI USB Serial Cables, the serial address may need to be copied manually. Additionally, the reset button on the device may also need to be pressed before a connection message appears.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Connecting via Telnet
 

@@ -33,7 +33,7 @@ s.send(bytes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
 
 {{% hint style="danger" %}}
 Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use (e.g. without an antenna), may damage the device.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Disengage Sequence Number
 

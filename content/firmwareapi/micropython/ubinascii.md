@@ -17,7 +17,7 @@ Convert binary data to hexadecimal representation. Returns bytes string.
 **Difference to CPython**
 
 If additional argument, `sep` is supplied, it is used as a separator between hexadecimal values.
-{{< /hint >}}
+{{% /hint %}}
 
 #### ubinascii.unhexlify(data)
 

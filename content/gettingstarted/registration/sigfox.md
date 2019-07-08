@@ -45,7 +45,7 @@ Then provide the required information including email address and complete regis
 
 {{% hint style="info" %}}
 When registering your other devices (not your first device), you already have created Sigfox Account before. Be sure you are login with your Sigfox account. In that way all of your devices will be added to same Sigfox Account.
-{{< /hint >}}
+{{% /hint %}}
 
 ![](/gitbook/assets/sigfoxregistrationform.png)
 

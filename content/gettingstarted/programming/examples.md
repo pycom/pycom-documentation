@@ -109,5 +109,5 @@ print(pycom_devices[0]) # expect 'wipy'
 
 {{% hint style="info" %}}
 For more Python examples, check out these [tutorials](https://www.tutorialspoint.com/python3/). Be aware of the implementation differences between MicroPython and Python 3.5.
-{{< /hint >}}
+{{% /hint %}}
 

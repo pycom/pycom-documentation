@@ -14,11 +14,11 @@ The GPy and FiPy support both new LTE-M protocols:
 
 {{% hint style="info" %}}
 **Please note:** The GPy and FiPy only support the two protocols above and are not compatible with older LTE standards.
-{{< /hint >}}
+{{% /hint %}}
 
 {{% hint style="info" %}}
 The Sequans modem used on Pycom's cellular enabled modules can only work in one of these modes at a time. In order to switch between the two protocols you need to flash a different firmware to the Sequans modem. Instructions for this can be found [here](/../../tutorials/lte/firmware).
-{{< /hint >}}
+{{% /hint %}}
 
 ## AT Commands
 

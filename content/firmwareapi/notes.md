@@ -17,4 +17,4 @@ Currently, there are 2 classes that support interrupts; the [`Alarm`](/firmwarea
 
 {{% hint style="info" %}}
 Currently the interrupt system can queue up to **16 interrupts**.
-{{< /hint >}}
+{{% /hint %}}

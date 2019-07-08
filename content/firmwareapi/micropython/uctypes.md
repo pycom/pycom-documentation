@@ -9,7 +9,7 @@ This module implements "foreign data interface" for MicroPython. The idea behind
 
 {{% hint style="info" %}}
 Module ustruct Standard Python way to access binary data structures (doesn't scale well to large and complex structures).
-{{< /hint >}}
+{{% /hint %}}
 
 ## Defining Structure Layout
 

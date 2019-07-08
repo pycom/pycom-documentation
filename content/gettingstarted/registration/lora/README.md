@@ -41,5 +41,5 @@ With ABP the encryption keys enabling communication with the network are preconf
 
 {{% hint style="info" %}}
 If you cannot find your favourite LoRaWAN network in the list above, please consider writing a tutorial for how to connect a Pycom module with it and contribute it to this documentation via a [GitHub pull request](https://github.com/pycom/pycom-documentation).
-{{< /hint >}}
+{{% /hint %}}
 

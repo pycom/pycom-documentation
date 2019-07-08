@@ -19,7 +19,7 @@ Print exception with a traceback to a file-like object file (or `sys.stdout` by 
 **Difference to CPython**
 
 This is simplified version of a function which appears in the traceback module in CPython. Unlike `traceback.print_exception()`, this function takes just exception value instead of exception type, exception value, and traceback object; file argument should be positional; further arguments are not supported. CPython-compatible traceback module can be found in `micropython-lib`.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Constants
 
@@ -35,7 +35,7 @@ This is simplified version of a function which appears in the traceback module i
 **Difference to CPython**
 
 CPython mandates more attributes for this object, but the actual useful bare minimum is implemented in MicroPython.
-{{< /hint >}}
+{{% /hint %}}
 
 * `sys.maxsize`: Maximum value which a native integer type can hold on the current platform, or maximum value representable by MicroPython integer type, if it's smaller than platform max value (that is the case for MicroPython ports without long int support).
 

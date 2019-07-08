@@ -13,7 +13,7 @@ If you have one of the Pycom expansion boards, then simply insert the card into 
 
 {{% hint style="info" %}}
 Make sure your SD card is formatted either as FAT16 or FAT32.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Quick Example Usage:
 
@@ -54,4 +54,4 @@ Disable the SD card.
 
 {{% hint style="info" %}}
 Please note that the SD card library currently supports FAT16/32 formatted SD cards up to 32 GB. Future firmware updates will increase compatibility with additional formats and sizes.
-{{< /hint >}}
+{{% /hint %}}

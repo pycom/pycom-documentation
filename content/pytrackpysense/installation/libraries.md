@@ -28,7 +28,7 @@ In addition to the Pysense or Pytrack specific libraries, you also need to uploa
 
 {{% hint style="info" %}}
 The Pytrack and Pysense boards behave the same as the Expansion Board. `Upload`, `Run` and upload code to Pycom modules via the Pymakr Plugin, in exactly the same process.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Importing/Using the Libraries
 

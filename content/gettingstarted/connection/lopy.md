@@ -117,11 +117,11 @@ aliases:
 
 {{% hint style="danger" %}}
 If you intend on using the LoRa connectivity of the LoPy you **must** connect a LoRa antenna to your LoPy before trying to use LoRa otherwise you risk damaging the device.
-{{< /hint >}}
+{{% /hint %}}
 
 {{% hint style="danger" %}}
 The LoPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 433MHz. For this you will require a LoPy4.
-{{< /hint >}}
+{{% /hint %}}
 
 * Firstly you will need to connect the U.FL to SMA pig tail to the LoPy using the U.FL connector on the same side of the LoPy as the LED.
 

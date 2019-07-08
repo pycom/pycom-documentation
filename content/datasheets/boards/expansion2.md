@@ -26,7 +26,7 @@ The pinout of the Expansion Board is available as a PDF File
 
 {{% hint style="danger" %}}
 Be gentle when plugging/unplugging from the USB connector. Whilst the USB connector is soldered and is relatively strong, if it breaks off it can be very difficult to fix.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Battery Charger
 

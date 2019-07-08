@@ -104,7 +104,7 @@ aliases:
 
 {{% hint style="danger" %}}
 If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the GPy you **must** connect a LTE CAT-M1/NB-IoT antenna to your GPy before trying to use LTE Cat-M1 or NB-IoT otherwise you risk damaging the device.
-{{< /hint >}}
+{{% /hint %}}
 
 * You will need to connect the antenna to the GPy using the U.FL connector on the same side of the GPy as the LED.
 

@@ -72,7 +72,7 @@ Construct a UART object on the given `bus`. `bus` can be `0, 1 or 2`. If the `bu
 
 {{% hint style="danger" %}}
 On the GPy/FiPy UART2 is unavailable because it is used to communicate with the cellular radio.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Methods
 

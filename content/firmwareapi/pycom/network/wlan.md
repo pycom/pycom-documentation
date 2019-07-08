@@ -45,7 +45,7 @@ Create a WLAN object, and optionally configure it. See [`init`](../wlan#wlan-ini
 
 {{% hint style="info" %}}
 The WLAN constructor is special in the sense that if no arguments besides the `id` are given, it will return the already existing WLAN instance without re-configuring it. This is because WLAN is a system feature of the WiPy. If the already existing instance is not initialised it will do the same as the other constructors an will initialise it with default values.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Methods
 
@@ -105,7 +105,7 @@ Connect to a wifi access point using the given SSID, and other security paramete
 
 {{% hint style="info" %}}
 The ESP32 only handles certificates with `pkcs8` format (but not the "Traditional SSLeay RSAPrivateKey" format). The private key should be RSA coded with 2048 bits at maximum.
-{{< /hint >}}
+{{% /hint %}}
 
 #### wlan.scan(\[ssid=NULL, bssid=NULL, channel=0, show\_hidden=False, type=WLAN.SCAN\_ACTIVE, scantime=120ms\])
 

@@ -11,7 +11,7 @@ aliases:
 
 {{% hint style="info" %}}
  Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
-{{< /hint >}}
+{{% /hint %}}
 
 
 **Store**: Discontinued, See [WiPy3](../wipy3)
@@ -36,7 +36,7 @@ The pinout of the WiPy2 is available as a PDF File.
 
 {{% hint style="info" %}}
 Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Notes
 

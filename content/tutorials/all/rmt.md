@@ -113,7 +113,7 @@ data = rmt.pulses_get()
 
 {{% hint style="danger" %}}
     If tx_idle_level is not set to the opposite of the third value in the tx_carrier tuple, the carrier wave will continue to be generated when the RMT channel is idle.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Receiving
 

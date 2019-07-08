@@ -22,7 +22,7 @@ The datasheet of the Pyscan is available as a PDF File.
 
 {{% hint style="info" %}}
 For the time being, we recommend to upload the `MFRC630.mpy` file via FTP due to current limitations of Pymakr that will be fixed shortly.
-{{< /hint >}}
+{{% /hint %}}
 
 Libraries for the rest of the components will be added soon.
 

@@ -8,7 +8,7 @@ aliases:
 
 {{% hint style="info" %}}
 Please ensure you have the latest Sequans modem firmware for the best network compatibility. Instructions for this can be found [here](../firmware).
-{{< /hint >}}
+{{% /hint %}}
 
 The LTE Cat M1 service gives full IP access through the cellular modem.
 

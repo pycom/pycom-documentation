@@ -10,7 +10,7 @@ aliases:
 
 {{% hint style="info" %}}
 As shipped, Pycom modules only support CAT-M1, in order to use NB-IoT you need to flash a different firmware to the Sequans modem. Instructions for this can be found [here](../firmware).
-{{< /hint >}}
+{{% /hint %}}
 
 ## NB-IoT usage
 

@@ -27,7 +27,7 @@ After you add your Sigfox credentials to Pybytes you can see DevKit contract typ
 
 {{% hint style="info" %}}
 Detailed steps which are same for all devices are [**described here**](../../quick).
-{{< /hint >}}
+{{% /hint %}}
 
 ## Check sigfox status
 

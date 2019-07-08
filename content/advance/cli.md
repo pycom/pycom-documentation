@@ -78,7 +78,7 @@ The CLI tool uses a combination of global and command specific parameters. The *
 While `pycom-fwtool-cli -h` shows help for global parameters and a list of available commands, command specific parameters can be viewed using `pycom-fwtool-cli [command] -h`
 
 The parameter `-r, --reset` has been added as a courtesy for users of 3rd party ESP32 products. This functionality is **not supported** by the Expansion Board 2.0 and may cause this tool to crash or hang in certain circumstances.
-{{< /hint >}}
+{{% /hint %}}
 
 ### Global Parameters
 
@@ -131,7 +131,7 @@ All other commands require that **the serial port is specified either through th
 #### Special note for Expansion Board 2.0
 
 You will need to have a **jumper wire** connected between `G23` and `GND` to use any of the commands below. You will also need to **press the reset button** either before running each command or at least before running the first command. To avoid having to press the reset button again after each command, you can use the `-c` / `--continuation` option. The first command connecting to the device **MUST NOT** use the `-c` / `--continuation` option. This is to make sure a program called `_stub_` is uploaded onto the device. This `_stub_` cannot be uploaded more than once, so you need to tell the cli tool that the `_stub_` is already running, which is done through using the `-c` / `--continuation` option.
-{{< /hint >}}
+{{% /hint %}}
 
 #### chip\_id
 
@@ -266,7 +266,7 @@ optional arguments:
 
 {{% hint style="info" %}}
 Note: The local `pybytes_config.json` file is overwritten when making any modifications using this command (requires Pybytes firmware `1.17.5.b6` or higher and Firmware updater `1.14.3`).
-{{< /hint >}}
+{{% /hint %}}
 
 #### cb
 
@@ -363,4 +363,3 @@ usage: pycom-fwtool-cli erase_all [-h]
 optional arguments:
   -h, --help  show this help message and exit
 ```
-

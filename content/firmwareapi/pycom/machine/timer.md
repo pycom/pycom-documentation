@@ -15,7 +15,7 @@ These two concepts are grouped into two different subclasses:
 
 {{% hint style="info" %}}
 You can create as many of these objects as needed.
-{{< /hint >}}
+{{% /hint %}}
 
 ### Constructors
 
@@ -128,4 +128,4 @@ clock = Clock()
 
 {{% hint style="info" %}}
 For more information on how Pycom's products handle interrupts, see [notes](../../../notes.md#interrupt-handling).
-{{< /hint >}}
+{{% /hint %}}

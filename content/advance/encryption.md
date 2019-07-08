@@ -104,5 +104,5 @@ Because the encryption is done based on the physical flash address, there are 2 
 
 {{% hint style="info" %}}
 Hint: on MicroPython interface, the method `pycom.ota_slot()` responds with the address of the next OTA partition available (either `0x10000` or `0x1A0000`).
-{{< /hint >}}
+{{% /hint %}}
 

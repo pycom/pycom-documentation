@@ -33,7 +33,7 @@ Use `print()` to output contents of variables to the console for you to read. Re
 Note that after writing or pasting any indented code like a function or a while loop, the user will have to press enter up to three times to tell MicroPython the code is to be closed (this is standard MicroPython & Python behaviour).
 
 Also be aware that code written into the REPL is not saved after the device is powered off/on again.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Run
 
@@ -41,7 +41,7 @@ To test code on a device, create a new `.py` file or open an existing one, type 
 
 {{% hint style="info" %}}
 Changes made to files won't be automatically uploaded to the board upon restarting or exiting the `Run` feature, as the Pycom board will not store this code. In order to push the code permanently to a device, use the `Upload` feature.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Projects
 

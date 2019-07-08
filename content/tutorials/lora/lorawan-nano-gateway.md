@@ -392,7 +392,7 @@ There are two methods of connecting LoPy devices to the nano-gateway, Over the A
 
 {{% hint style="info" %}}
 It's important that the following code examples (also on GitHub) are used to connect to the nano-gateway as it only supports single channel connections.
-{{< /hint >}}
+{{% /hint %}}
 
 ### OTAA (Over The Air Activation)
 

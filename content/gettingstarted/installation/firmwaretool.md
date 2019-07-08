@@ -16,7 +16,7 @@ Here are the download links to the update tool. Please download the appropriate 
 
 {{% hint style="info" %}}
 Previous versions of firmware are available for download [**here**](/advance/downgrade).
-{{< /hint >}}
+{{% /hint %}}
 
 ## Updating Device Firmware
 

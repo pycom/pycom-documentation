@@ -10,7 +10,7 @@ In this section, we will explain to you how to create widgets for data visualisa
 
 {{% hint style="info" %}}
 We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](../connect/). After your done with that, you can proceed to the next example.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Step 1: Set up your python application
 
@@ -25,7 +25,7 @@ The first step is to have your python application uploaded and running on your P
 
 {{% hint style="info" %}}
 Scroll a bit down to see the picture of the project structure in Atom.
-{{< /hint >}}
+{{% /hint %}}
 
 This python application will send data from the array every 5 seconds to Pybytes.
 
@@ -64,7 +64,7 @@ In this code, we're calling the function `pybytes.send_signal(signalNumber, valu
 
     **255** different values: **0 ... 254** (signalNumber 255 is reserved for the Pybytes terminal)
 * `value` is the value being attributed to that particular signal number
-{{< /hint >}}
+{{% /hint %}}
 
 Your example project in Atom (with Pymakr) should look like this.
 Press *Upload* button to upload the code into your device.
@@ -90,7 +90,7 @@ Go to Pybytes and on *Devices* page select your device;
 Then go to `Data` tab and click on the row in the *Undefined signals* table (recommended). Alternatively, you can click on *Define new signal* button.
 {{% hint style="info" %}}
 If you don't see your undefined signal in *Undefined signals* table, please reload your browser.
-{{< /hint >}}
+{{% /hint %}}
 
 ![](/gitbook/assets/pybytes/dashboard/undefined-signals-table.png)
 
@@ -106,7 +106,7 @@ Your signal was defined!
 The name and unit are labels used to identify your signal inside Pybytes (In this example we defined `Sinwave` as the name of the signal and `Rad` as the unit).
 
 The signal number has to match the signal number that you defined on `pybytes.send_signal` function call, inside your `main.py` code (In this example we defined `signalNumber = 1`);
-{{< /hint >}}
+{{% /hint %}}
 
 ## Step 3: Add a widget for the signal
 

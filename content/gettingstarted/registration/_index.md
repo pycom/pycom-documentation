@@ -14,5 +14,5 @@ Some of our devices require registration before you can utilise specific feature
 
 {{% hint style="info" %}}
 **Not all Pycom devices require activation**; most features work immediately out of the box!
-{{< /hint >}}
+{{% /hint %}}
 

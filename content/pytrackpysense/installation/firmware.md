@@ -19,7 +19,7 @@ The latest firmware DFU file can be downloaded from the links below:
 {{% hint style="info" %}}
   Make sure to choose the correct firmware version for your expansion board. both 3.0 and 3.1 versions have version numbers in the silkscreen on the back of the board. See the image below for examples highlighted in Red
   ![](/gitbook/assets/expansion_board_version.png)
-{{< /hint >}}
+{{% /hint %}}
 
 While in the normal, application mode, the Pysense/Pytrack/Pyscan/Expansion Board v3 require a Serial USB CDC driver, in DFU, bootloader mode, the DFU driver is required. Below, the USB Product ID is depicted for each case.
 
@@ -117,7 +117,7 @@ $ dfu-util -D pytrack_0.0.8.dfu
 
 {{% hint style="info" %}}
 You might need to run `dfu-util` as `sudo`. In that case, you will need to enter your password.
-{{< /hint >}}
+{{% /hint %}}
 
 An output, similar to the one below, will appear upon successful installation:
 
