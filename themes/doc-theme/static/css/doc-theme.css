@@ -334,3 +334,13 @@ code {
 p {
   font-family: 'Space Mono';
 }
+
+
+/** this gives correct offset when link to anchors */
+*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
+}
