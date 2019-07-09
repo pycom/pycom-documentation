@@ -132,7 +132,7 @@ p_in.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING, pin_handler)
 
 {{% hint style="info" %}}
 For more information on how Pycom's products handle interrupts, see [here](/firmwareapi/notes#interrupt-handling).
-{{< /hint >}}
+{{% /hint %}}
 
 ## Attributes
 

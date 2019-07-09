@@ -83,7 +83,7 @@ To use an external antenna, set `P12 as output pin.`
 
 Pin('P12', mode=Pin.OUT)(True)
 ```
-{{< /hint >}}
+{{% /hint %}}
 
 ### bluetooth.deinit()
 

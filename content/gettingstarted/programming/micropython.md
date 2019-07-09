@@ -28,5 +28,5 @@ Micropython also has a number of Micropython specific libraries for accessing ha
 Micropython, unlike C/C++ or Arduino, **does not use braces {} to indicate blocks of code** specified for class and function definitions or flow control. Blocks of code are denoted by line indentation, which is strictly enforced.
 
 The number of spaces in the indentation is variable but all statements within a block must be indented the same amount.
-{{< /hint >}}
+{{% /hint %}}
 

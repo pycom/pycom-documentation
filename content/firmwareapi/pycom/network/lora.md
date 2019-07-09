@@ -50,7 +50,7 @@ print(data)
 
 {{% hint style="danger" %}}
 Please ensure that there is an antenna connected to your device before sending/receiving LoRa messages as improper use (e.g. without an antenna), may damage the device.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Additional Examples
 
@@ -93,7 +93,7 @@ The arguments are:
 
 {{% hint style="info" %}}
 In `LoRa.LORAWAN` mode, only `adr`, `public`, `tx_retries` and `device_class` are used. All the other params will be ignored as they are handled by the LoRaWAN stack directly. On the other hand, in `LoRa.LORA` mode from those 4 arguments, only the public one is important in order to program the sync word. In `LoRa.LORA` mode `adr`, `tx_retries` and `device_class` are ignored since they are only relevant to the LoRaWAN stack.
-{{< /hint >}}
+{{% /hint %}}
 
 For example, you can do:
 
@@ -444,7 +444,7 @@ s.bind(1)
 
 {{% hint style="info" %}}
 The `bind()` method is only applicable when the radio is configured in `LoRa.LORAWAN` mode.
-{{< /hint >}}
+{{% /hint %}}
 
 #### socket.send(bytes)
 
@@ -500,7 +500,7 @@ s.setsockopt(socket.SOL_LORA, socket.SO_CONFIRMED, True)
 
 {{% hint style="info" %}}
 Socket options are only applicable when the LoRa radio is used in LoRa.LORAWAN mode. When using the radio in LoRa.LORA mode, use the class methods to change the spreading factor, bandwidth and coding rate to the desired values.
-{{< /hint >}}
+{{% /hint %}}
 
 #### socket.settimeout(value)
 

@@ -26,7 +26,7 @@ If you are using Atom, it is important to check at this point that Atom has succ
 ![](/gitbook/assets/atom_project.png)
 
 If this is not the case you can press `alt-ctrl-r` on Windows/Linux or `ctrl-alt-cmd-l` on macOS, in order to reload Atom and fix the issue.
-{{< /hint >}}
+{{% /hint %}}
 
 4. Now that you have a project created, we need to add some files to it. A standard MicroPython project has the following structure:
 

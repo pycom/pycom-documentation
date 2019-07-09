@@ -33,7 +33,7 @@ When changing the WLAN mode, if following the instructions below, the WLAN conne
 2. Duplicate the REPL on UART. This way commands can be run via Serial USB.
 
 
-{{< /hint >}}
+{{% /hint %}}
 
 ## Connecting to a Router
 
@@ -84,7 +84,7 @@ if not wlan.isconnected():
 
 {{% hint style="info" %}}
 Notice how we check for the reset cause and the connection status, this is crucial in order to be able to soft reset the LoPy during a telnet session without breaking the connection.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Multiple Networks using a Static IP Address
 

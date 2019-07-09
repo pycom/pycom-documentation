@@ -21,7 +21,7 @@ for i in range(1, 100):
 ```
 
 There will be a 20 second delay after every 2 packets.
-{{< /hint >}}
+{{% /hint %}}
 
 This class provides a driver for the Sigfox network processor in the Sigfox enabled Pycom devices.
 
@@ -50,7 +50,7 @@ s.send(bytes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
 
 {{% hint style="danger" %}}
 Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use (e.g. without an antenna), may damage the device.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Constructors
 
@@ -69,7 +69,7 @@ sigfox = Sigfox(mode=Sigfox.FSK, frequency=912000000)
 
 {{% hint style="info" %}}
 Sigfox.FSK mode is not supported on LoPy 4 and FiPy.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Methods
 
@@ -85,7 +85,7 @@ The arguments are:
 
 {{% hint style="info" %}}
 The SiPy comes in 2 different hardware flavours: a +14dBm Tx power version which can only work with `RCZ1` and `RCZ3` and a +22dBm version which works exclusively on `RCZ2` and `RCZ4`.
-{{< /hint >}}
+{{% /hint %}}
 
 #### sigfox.mac()
 
@@ -110,7 +110,7 @@ To return human-readable values you should import `ubinascii` and convert binary
 
 print(ubinascii.hexlify(sigfox.mac()))
 ```
-{{< /hint >}}
+{{% /hint %}}
 
 #### sigfox.frequencies()
 
@@ -261,7 +261,7 @@ To communicate between two Sigfox capable devices, it may be used in FSK mode. T
 
 {{% hint style="info" %}}
 Sigfox.FSK mode is not supported on LoPy 4 and FiPy.
-{{< /hint >}}
+{{% /hint %}}
 
 **Device 1**:
 
@@ -295,5 +295,5 @@ while True:
 
 {{% hint style="danger" %}}
 Remember to use the correct frequency for your region (868 MHz for Europe, 912 MHz for USA, etc.)
-{{< /hint >}}
+{{% /hint %}}
 

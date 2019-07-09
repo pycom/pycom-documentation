@@ -10,7 +10,7 @@ AES (Advanced Encryption Standard) is a symmetric block cipher standardised by N
 
 {{% hint style="info" %}}
 AES is implemented using the ESP32 hardware module.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Quick Usage Example
 
@@ -65,5 +65,4 @@ Decrypt data with the key and the parameters set at initialisation.
 
 {{% hint style="danger" %}}
 To avoid security issues, IV should always be a random number and should never be reused to encrypt two different messages. The same applies to the counter in CTR mode. You can use `crypto.getrandbits()` for this purpose.
-{{< /hint >}}
-
+{{% /hint %}}

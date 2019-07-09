@@ -115,11 +115,11 @@ aliases:
 
 {{% hint style="danger" %}}
 If you intend on using the LoRa/Sigfox connectivity of the FiPy you **must** connect a LoRa/Sigfox antenna to your FiPy before trying to use LoRa/Sigfox otherwise you risk damaging the device.
-{{< /hint >}}
+{{% /hint %}}
 
 {{% hint style="info" %}}
 The FiPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 433MHz. For this you will require a LoPy4.
-{{< /hint >}}
+{{% /hint %}}
 
 * Firstly you will need to connect the U.FL to SMA pig tail to the FiPy using the U.FL connector on the same side of the FiPy as the LED.
 
@@ -134,7 +134,7 @@ The FiPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 4
 
 {{% hint style="danger" %}}
 If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the FiPy you **must** connect a LTE CAT-M1/NB-IoT antenna to your FiPy before trying to use LTE Cat-M1 or NB-IoT otherwise you risk damaging the device.
-{{< /hint >}}
+{{% /hint %}}
 
 * You will need to connect the antenna to the FiPy using the U.FL connector on the under side of the FiPy.
 

@@ -109,5 +109,5 @@ Warning: When running via the repl calling `setup_sleep()` will hang/crash the r
 
 {{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Libraries GitHub repository](https://github.com/pycom/pycom-libraries)
-{{< /hint >}}
+{{% /hint %}}
 

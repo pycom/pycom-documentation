@@ -40,7 +40,7 @@ If problems occur within the filesystem or you wish to factory reset your module
 
 {{% hint style="danger" %}}
 Be aware, resetting the flash filesystem will delete all files inside the internal device storage (not the SD card) and they cannot be recovered.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Reset
 

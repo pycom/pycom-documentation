@@ -62,7 +62,7 @@ Bind the `socket` to `address`. The socket must not already be bound. The `addre
 
 {{% hint style="info" %}}
 In the case of LoRa sockets, the address parameter is simply an integer with the port number, for instance: `s.bind(1)`
-{{< /hint >}}
+{{% /hint %}}
 
 #### socket.listen(\[backlog\])
 
@@ -126,7 +126,7 @@ The socket must be in blocking mode; it can have a timeout, but the file object'
 **Difference to CPython**
 
 Closing the file object returned by `makefile()` **WILL** close the original socket as well.
-{{< /hint >}}
+{{% /hint %}}
 
 #### socket.read(size)
 

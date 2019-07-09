@@ -18,4 +18,4 @@ Currently, there are 2 classes that support interrupts; the [`Alarm`](../pycom/m
 
 {{% hint style="info" %}}
 Currently the interrupt system can queue up to **16 interrupts**.
-{{< /hint >}}
+{{% /hint %}}

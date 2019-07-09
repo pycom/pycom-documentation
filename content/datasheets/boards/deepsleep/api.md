@@ -101,4 +101,4 @@ This method resets the PIC controller and resets it to the state previous to the
 
 {{% hint style="info" %}}
 Please note that more functionality is being added weekly to these libraries. If a required feature is not available, feel free to contribute with a pull request at the [Pycom Libraries](https://github.com/pycom/pycom-libraries) GitHub repository.
-{{< /hint >}}
+{{% /hint %}}

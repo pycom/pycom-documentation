@@ -328,7 +328,7 @@ Pymesh sockets is created, if the Mesh was enabled before (`lora.Mesh()` was cal
 
 {{% hint style="info" %}}
 The Pymesh sockets supports only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
-{{< /hint >}}
+{{% /hint %}}
 
 LoRa sockets support the following standard methods from the socket module:
 

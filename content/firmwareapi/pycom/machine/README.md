@@ -89,7 +89,7 @@ Returns a byte string with a unique identifier of a board/SoC. It will vary from
 
 {{% hint style="info" %}}
 Use `ubinascii.hexlify()` to convert the byte string to hexadecimal form for ease of manipulation and use elsewhere.
-{{< /hint >}}
+{{% /hint %}}
 
 #### machine.info()
 

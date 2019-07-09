@@ -12,7 +12,7 @@ search: false
 
 {{% hint style="info" %}}
 This article is only related to GPy, FiPy, and G01 boards
-{{< /hint >}}
+{{% /hint %}}
 
 {{% hint style="danger" %}}
 **Important**: When upgrading your modem for the first time, even if you have updated it in the past with the old firmware update method, you **MUST** use the "recovery" upgrade method described below. Otherwise you will risk breaking your module.
@@ -24,7 +24,7 @@ Please also use the file upgdiff_33080-to-39529.dup (1.2M) from the archive.
 import sqnsupgrade
 sqnsupgrade.run('upgdiff_33080-to-39529.dup', 'updater.elf')
 ```
-{{< /hint >}}
+{{% /hint %}}
 
 
 Please read the following instructions carefully as there are some significant changes compared to the previous updater version.
@@ -58,7 +58,7 @@ sqnsupgrade.run('upgdiff_38638-to-39529.dup')
 ```
 If you are updating the Sequans firmware on your module for the first time, please use instead the file upgdiff_33080-to-39529.dup (1.2M) from the same archive.
 Similar upgrade packages are available for the NB-IoT firmwares. 
-{{< /hint >}}
+{{% /hint %}}
 
 ## Via SD card
 
@@ -138,7 +138,7 @@ SYSTEM VERSION
 
 {{% hint style="info" %}}
 Please note that the firmware update may seem to "stall" around 7-10% and again at 99%. This is not an indication of a failure but the fact that the modem has to do some tasks during and the updater will wait for these tasks to be completed. Unless the upgrade process is hanging for more than 5 minutes, **do not interrupt the process** as you will have to start again if you don't finish it. It may also take several minutes for the updater to load before responding to the AT wakeup command.
-{{< /hint >}}
+{{% /hint %}}
 
 After you have updated your modem once using the recovery method, you can now flash your modem again using just the `CATM1-38638.dup` or `NB1-37781.dup` file without specifying the `updater.elf` file. However, should the upgrade fail, your modem may end up in recovery mode and you will need the `updater.elf` file again. The updater will check for this and prompt you if using the `updater.elf` file is necessary.
 

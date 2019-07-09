@@ -18,7 +18,7 @@ Sigfox Pac is one-time activation code, which will be invalidated after device's
 Keep in mind that firmware updater will always display the same (even invalid) Sigfox Pac.
 In case of successive registration to a new account (or device type) on Sigfox Backend, you need to get Sigfox Pac from device page on Sigfox Backend.
 See [Sigfox documentation](https://support.sigfox.com/docs/device-idpac-couple) for more info.
-{{< /hint >}}
+{{% /hint %}}
 
 After first firmware update you can also get your _Sigfox ID_ and _Sigfox PAC_ through a couple of commands via the REPL.
 
@@ -53,7 +53,7 @@ Then provide the required information including email address and complete regis
 
 {{% hint style="info" %}}
 When registering your other devices (not your first device), you already have created Sigfox Account before. Be sure you are login with your Sigfox account. In that way all of your devices will be added to same Sigfox Account.
-{{< /hint >}}
+{{% /hint %}}
 
 ![](/gitbook/assets/sigfoxregistrationform.png)
 

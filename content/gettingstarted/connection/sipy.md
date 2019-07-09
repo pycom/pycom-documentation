@@ -111,7 +111,7 @@ Please ensure you have the signal level of the UART adapter set to
 
 {{% hint style="danger" %}}
 If you intend on using the Sigfox connectivity of the SiPy you **must** connect a Sigfox antenna to your SiPy before trying to use Sigfox otherwise you risk damaging the device.
-{{< /hint >}}
+{{% /hint %}}
 
 * Firstly you will need to connect the U.FL to SMA pig tail to the SiPy using the U.FL connector on the same side of the SiPy as the LED.
 

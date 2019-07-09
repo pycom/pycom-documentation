@@ -37,7 +37,7 @@ Click again on the Continue button.
 {{% hint style="info" %}}
 If your device is already connected to your computer, on MacOS serial port will be automatically filled for you.
 At this step, you can also click on Rescan ports button to update ports listed in the Firmware updater.
-{{< /hint >}}
+{{% /hint %}}
 
 Check the options "Erase flash file system" and "Force update Pybytes registration";
 

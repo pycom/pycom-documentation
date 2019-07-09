@@ -11,7 +11,7 @@ The firmware upgrade tool usually updates your device to the latest available fi
 
 {{% hint style="info" %}}
 If you are using an Expansion Board 1.0 or 2.0, you will need to have a jumper connected between `G23` and `GND` to use either procedure below. You will also need to press the reset button before beginning.
-{{< /hint >}}
+{{% /hint %}}
 
 You can obtain previous firmware versions here:
 
@@ -24,7 +24,7 @@ You can obtain previous firmware versions here:
 
 {{% hint style="info" %}}
 Prior to version `1.16.0.b1` the firmware for modules with LoRa functionality was frequency specific. From `1.16.0.b1` and onward, the firmware is region agnostic and this can either be set programatically or via the config block (see [here](../cli.md#lpwan)).
-{{< /hint >}}
+{{% /hint %}}
 
 ## GUI
 

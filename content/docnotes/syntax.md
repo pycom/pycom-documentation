@@ -107,5 +107,5 @@ I2C.MASTER()
 
 {{% hint style="info" %}}
 Be aware that you can only reference these constants upon importing and constructing a object from a library.
-{{< /hint >}}
+{{% /hint %}}
 

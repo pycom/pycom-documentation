@@ -13,7 +13,7 @@ The universal OEM reference board is a reference design suitable W01, L01, L04 a
 
 {{% hint style="info" %}}
 If you require a reference board for the G01, only this design is suitable. The L01 reference board does not contain the necessary SIM slot.
-{{< /hint >}}
+{{% /hint %}}
 
 ## Features
 
