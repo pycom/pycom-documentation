@@ -3,7 +3,7 @@ title: "Introduction"
 aliases:
   - pybytes/introduction
 ---
-Pycom ecosystem makes IoT development easy.
+Pycom ecosystem makes IoT development easy
 
 * Choose [IoT hardware](products) which fit your project requirements.
 
