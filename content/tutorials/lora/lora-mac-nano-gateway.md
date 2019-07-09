@@ -101,7 +101,7 @@ while(True):
     time.sleep(5)
 ```
 
-The node is always sending packages and waiting for the `ack` from the gateway.
+The node is always sending packages and waiting for the `ack` from the gateway
 
 {{% hint style="info" %}}
 
