@@ -76,7 +76,7 @@ On the GPy/FiPy UART2 is unavailable because it is used to communicate with the 
 
 ## Methods
 
-#### uart.init(baudrate=9600, bits=8, parity=None, stop=1, \* , timeout\_chars=2, pins=(TXD, RXD, RTS, CTS))
+#### uart.init(baudrate=9600, bits=8, parity=None, stop=1, \* , timeout\_chars=2, pins=(TXD, RXD, RTS, CTS), rx\_buffer\_size=512)
 
 Initialise the UART bus with the given parameters:
 
@@ -86,6 +86,7 @@ Initialise the UART bus with the given parameters:
 * `stop` is the number of stop bits, `1 or 2`.
 * `timeout_chars` Rx timeout defined in number of characters. The value given here will be multiplied by the time a characters takes to be transmitted at the configured `baudrate`.
 * `pins` is a 4 or 2 item list indicating the TXD, RXD, RTS and CTS pins (in that order). Any of the pins can be `None` if one wants the UART to operate with limited functionality. If the RTS pin is given the the RX pin must be given as well. The same applies to CTS. When no pins are given, then the default set of TXD (P1) and RXD (P0) pins is taken, and hardware flow control will be disabled. If `pins=None`, no pin assignment will be made.
+* `rx_buffer_size` is the size of the buffer used for storing the RX packets. By default is is 512 bytes.
 
 #### uart.deinit()
 
