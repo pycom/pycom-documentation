@@ -619,25 +619,27 @@ theme = "doc-theme"
     weight = 10
 
 [[menu.main]]
+    name = "CAN"
+    url = "/firmwareapi/pycom/machine/can/"
+    identifier = "firmwareapi@pycom@machine@can"
+    parent = "firmwareapi@pycom@machine"
+    weight = 20
+
+[[menu.main]]
     name = "DAC"
     url = "/firmwareapi/pycom/machine/dac/"
     identifier = "firmwareapi@pycom@machine@dac"
     parent = "firmwareapi@pycom@machine"
-    weight = 20
+    weight = 30
 
 [[menu.main]]
     name = "I2C"
     url = "/firmwareapi/pycom/machine/i2c/"
     identifier = "firmwareapi@pycom@machine@i2c"
     parent = "firmwareapi@pycom@machine"
-    weight = 30
+    weight = 35
 
-[[menu.main]]
-    name = "Pin"
-    url = "/firmwareapi/pycom/machine/pin/"
-    identifier = "firmwareapi@pycom@machine@pin"
-    parent = "firmwareapi@pycom@machine"
-    weight = 40
+
 
 [[menu.main]]
     name = "PWM"
@@ -646,61 +648,63 @@ theme = "doc-theme"
     parent = "firmwareapi@pycom@machine"
     weight = 50
 
+
 [[menu.main]]
-    name = "RTC"
-    url = "/firmwareapi/pycom/machine/rtc/"
-    identifier = "firmwareapi@pycom@machine@rtc"
+    name = "Pin"
+    url = "/firmwareapi/pycom/machine/pin/"
+    identifier = "firmwareapi@pycom@machine@pin"
     parent = "firmwareapi@pycom@machine"
     weight = 60
-
-[[menu.main]]
-    name = "SPI"
-    url = "/firmwareapi/pycom/machine/spi/"
-    identifier = "firmwareapi@pycom@machine@spi"
-    parent = "firmwareapi@pycom@machine"
-    weight = 70
-
-[[menu.main]]
-    name = "UART"
-    url = "/firmwareapi/pycom/machine/uart/"
-    identifier = "firmwareapi@pycom@machine@uart"
-    parent = "firmwareapi@pycom@machine"
-    weight = 80
-
-[[menu.main]]
-    name = "WDT"
-    url = "/firmwareapi/pycom/machine/wdt/"
-    identifier = "firmwareapi@pycom@machine@wdt"
-    parent = "firmwareapi@pycom@machine"
-    weight = 90
-
-[[menu.main]]
-    name = "Timer"
-    url = "/firmwareapi/pycom/machine/timer/"
-    identifier = "firmwareapi@pycom@machine@timer"
-    parent = "firmwareapi@pycom@machine"
-    weight = 100
-
-[[menu.main]]
-    name = "SD"
-    url = "/firmwareapi/pycom/machine/sd/"
-    identifier = "firmwareapi@pycom@machine@sd"
-    parent = "firmwareapi@pycom@machine"
-    weight = 110
-
-[[menu.main]]
-    name = "CAN"
-    url = "/firmwareapi/pycom/machine/can/"
-    identifier = "firmwareapi@pycom@machine@can"
-    parent = "firmwareapi@pycom@machine"
-    weight = 120
 
 [[menu.main]]
     name = "RMT"
     url = "/firmwareapi/pycom/machine/rmt/"
     identifier = "firmwareapi@pycom@machine@rmt"
     parent = "firmwareapi@pycom@machine"
+    weight = 70
+
+[[menu.main]]
+    name = "RTC"
+    url = "/firmwareapi/pycom/machine/rtc/"
+    identifier = "firmwareapi@pycom@machine@rtc"
+    parent = "firmwareapi@pycom@machine"
+    weight = 80
+
+[[menu.main]]
+    name = "SD"
+    url = "/firmwareapi/pycom/machine/sd/"
+    identifier = "firmwareapi@pycom@machine@sd"
+    parent = "firmwareapi@pycom@machine"
+    weight = 90
+
+[[menu.main]]
+    name = "SPI"
+    url = "/firmwareapi/pycom/machine/spi/"
+    identifier = "firmwareapi@pycom@machine@spi"
+    parent = "firmwareapi@pycom@machine"
+    weight = 100
+
+[[menu.main]]
+    name = "Timer"
+    url = "/firmwareapi/pycom/machine/timer/"
+    identifier = "firmwareapi@pycom@machine@timer"
+    parent = "firmwareapi@pycom@machine"
+    weight = 110
+
+[[menu.main]]
+    name = "UART"
+    url = "/firmwareapi/pycom/machine/uart/"
+    identifier = "firmwareapi@pycom@machine@uart"
+    parent = "firmwareapi@pycom@machine"
+    weight = 120
+
+[[menu.main]]
+    name = "WDT"
+    url = "/firmwareapi/pycom/machine/wdt/"
+    identifier = "firmwareapi@pycom@machine@wdt"
+    parent = "firmwareapi@pycom@machine"
     weight = 130
+
 
 [[menu.main]]
     name = "network"
