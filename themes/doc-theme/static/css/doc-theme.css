@@ -337,10 +337,6 @@ p {
 
 
 /** this gives correct offset when link to anchors */
-*[id]:before {
-  display: block;
-  content: " ";
-  margin-top: -75px;
-  height: 75px;
-  visibility: hidden;
+html {
+  scroll-padding-top: 70px; /* height of sticky header */
 }
