@@ -293,7 +293,7 @@ Note:
 
 Example using promoscious mode:
 
-```
+```python
 from network import WLAN
 import ubinascii
 
