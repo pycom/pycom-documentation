@@ -437,6 +437,13 @@ theme = "doc-theme"
     weight = 150
 
 [[menu.main]]
+    name = "Lorawan OTA update"
+    url = "/tutorials/all/ota-lorawan/"
+    identifier = "tutorials@all@ota-lorawan"
+    parent = "tutorials@all"
+    weight = 155
+
+[[menu.main]]
     name = "RMT"
     url = "/tutorials/all/rmt/"
     identifier = "tutorials@all@rmt"
