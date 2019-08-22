@@ -91,6 +91,11 @@
 
       },
       methods: {
+        handleGoogleError() {
+          const q = 'site:docs.pycom.io ' + this.q;
+          const loc = encodeURI('https://bing.com?q=' + q)
+          window.location = loc
+        },
         navResult (url) {
           window.location = url;
         },
@@ -108,11 +113,13 @@
               // Mmm ... Google result number is varying accross page ....
               this.pageCount = Math.min(10, Math.trunc(res.data.searchInformation.totalResults/10) + 1)
             } else {
+              this.handleGoogleError();
               this.results = null;
             }
           }, response => {
             this.results = null;
             console.log(response)
+            this.handleGoogleError();
             this.error = { status: response.error, message: response.text }
             // ====
           })
