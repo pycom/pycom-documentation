@@ -91,13 +91,18 @@
 
       },
       methods: {
+        handleGoogleError() {
+          const q = 'site:docs.pycom.io ' + this.q;
+          const loc = encodeURI('https://bing.com?q=' + q)
+          window.location = loc
+        },
         navResult (url) {
           window.location = url;
         },
         fetchResults (kw, start) {
           if (!start) { start = 1 }
-          let key = "AIzaSyD4-MGytNzTCZpTH6UYk1mfOxZkt74T5MI";
-          let cx = "004592132197158309932:jleutbge8gs";
+          let key = "AIzaSyCDyOKwSjrgE_tkSbO0kbI8Omc6VZMwqA8";
+          let cx = "000185904715529159933:pfyw5o4foii";
           let url = "https://www.googleapis.com/customsearch/v1";
           url = url + "?cx=" + cx + "&key=" + key + "&q=" + encodeURI(kw) + "&start=" + start
 
@@ -108,11 +113,13 @@
               // Mmm ... Google result number is varying accross page ....
               this.pageCount = Math.min(10, Math.trunc(res.data.searchInformation.totalResults/10) + 1)
             } else {
+              this.handleGoogleError();
               this.results = null;
             }
           }, response => {
             this.results = null;
             console.log(response)
+            this.handleGoogleError();
             this.error = { status: response.error, message: response.text }
             // ====
           })
