@@ -91,6 +91,11 @@
 
       },
       methods: {
+        handleGoogleError() {
+          const q = 'site:docs.pycom.io ' + this.q;
+          const loc = encodeURI('https://bing.com?q=' + q)
+          window.location = loc
+        },
         navResult (url) {
           window.location = url;
         },
@@ -110,10 +115,12 @@
               this.pageCount = Math.min(10, Math.trunc(res.data.searchInformation.totalResults/10) + 1)
             } else {
               this.results = null;
+              this.handleGoogleError();
             }
           }, response => {
             this.results = null;
             this.error = { status: response.error, message: response.text }
+            this.handleGoogleError();
             // ====
           })
         },
