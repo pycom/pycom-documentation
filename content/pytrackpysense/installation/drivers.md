@@ -14,7 +14,7 @@ Please follow the instructions below to install the required drivers.
 
 Please download the driver software from the link below.
 
-[Pytrack/Pysense/Pyscan/Expansion Board 3 Driver](https://github.com/pycom/pycom-documentation/blob/master/pytrackpysense/installation/pycom.inf)
+[Pytrack/Pysense/Pyscan/Expansion Board 3 Driver](https://github.com/pycom/pycom-documentation/blob/master/content/pytrackpysense/installation/pycom.inf)
 
 ## Installation
 
@@ -49,4 +49,3 @@ If the installation was successful, you should now see a window specifying that 
 To confirm that the installation was correct, navigate back to the `Device Manager` and click the dropdown for other devices. The warning label should now be gone and Pytrack/Pysense should be installed.
 
 ![](/gitbook/assets/win7-8.png)
-
