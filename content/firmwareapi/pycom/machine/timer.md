@@ -5,7 +5,7 @@ aliases:
     - firmwareapi/pycom/machine/timer.md
     - chapter/firmwareapi/pycom/machine/timer
 ---
-## class Timer – Measure Time and Set Alarms
+## class Timer - Measure Time and Set Alarms
 
 Timers can be used for a great variety of tasks, like measuring time spans or being notified that a specific interval has elapsed.
 
