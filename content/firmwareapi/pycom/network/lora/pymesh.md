@@ -37,15 +37,26 @@ For various other complete Pymesh examples, check Tutorials & Examples section (
 
 ## Constructors
 
-#### class network.LoRa.Mesh()
+#### class network.LoRa.Mesh(*, key=masterkey)
 
 Create and configure the Mesh object.
 
-```python
+By default, the key is `0134C0DE1AB51234C0DE1AB5CA1A110F`.
 
+The current Master key can be found using: `print("Masterkey:", pymesh.cli("masterkey"))`.
+
+```python
+import ubinascii
 from network import LoRa
+
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
+masterkey = ubinascii.unhexlify("112233")
+mesh = lora.Mesh(key=masterkey)
 pymesh = lora.Mesh()
+
+# as test, the Masterkey can be printed
+>>> print("Masterkey:", mesh.cli("masterkey"))
+Masterkey: 11223300000000000000000000000000
 ```
 
 ## Methods
