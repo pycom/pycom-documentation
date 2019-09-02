@@ -1,12 +1,12 @@
 ---
-title: "Pymesh"
+title: "Pymesh Example"
 aliases:
     - tutorials/lora/lora-mesh.html
     - tutorials/lora/lora-mesh.md
     - chapter/tutorials/lora/lora-mesh
 ---
 
-{{% hint style="info" %}}	
+{{% hint style="info" %}}
 These API's are currently only available in the latest RC builds.
 {{% /hint %}}
 
