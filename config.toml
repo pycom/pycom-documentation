@@ -1252,8 +1252,8 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "Advanced Security Example"
-    url = "/pymesh/security-advanced"
-    identifier = "pymesh@security-advanced"
+    url = "/pymesh/security"
+    identifier = "pymesh@security"
     parent = "pymesh"
     weight = 50
 

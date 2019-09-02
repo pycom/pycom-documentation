@@ -29,4 +29,4 @@ Pymesh solution works on all of our LoRa supporting development boards, the LoPy
 * [Pymesh Micropython API](/firmwareapi/pycom/network/lora/pymesh)
 * [Simple Example](/pymesh/lora-mesh)
 * [Border Router Example](/pymesh/pymesh-br)
-* ​[Advanced Security Example](/pymesh/security-advanced)​
+* ​[Advanced Security Example](/pymesh/security)​
