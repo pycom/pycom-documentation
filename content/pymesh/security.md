@@ -24,7 +24,7 @@ This encryption can be used even for communicating between Nodes that are not in
 
 The challenge is in distributing the keys used for encryption(decryption), this is
 
-![](../../.gitbook/assets/pymesh_security.png)
+<img src="/gitbook/assets/pymesh/security.png" alt="Pymesh Security" width="400"/>
 
 ### Symmetric encryption
 
