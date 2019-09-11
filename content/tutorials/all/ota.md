@@ -214,19 +214,20 @@ while True:
 ## Method B
 
 OTA software updates can be performed through the FTP server. Download the appropriate .tar.gz file for the Firmware you want to upgrade/downgrade to from [here](https://docs.pycom.io/advance/downgrade/).
-ertact the application bin file eg (wipy.bin) for WiPy, rename that file to ``appimg.bin`` Upload the ``appimg.bin`` file
-to: ``/flash/sys/appimg.bin``.
-once the file is succesfully transfered through the FTP server, the upload is complete and the ``appimg.bin`` file will be automatically deleted.
+extract the application bin file eg. (wipy.bin) for WiPy, rename that file to ``appimg.bin`` Upload the ``appimg.bin`` file
+to: ``/flash/sys/appimg.bin`` via your FTP client.
+once the file is succesfully transfered through the FTP server, the Firmware upgrade is complete and the ``appimg.bin`` file will be automatically deleted.
 
 To boot up from the new Firmware just reset the device via Reset button or via reset Command:
 
-    >>> import machine
-    >>> machine.reset()
-
+```
+import machine
+machine.reset()
+```
 
 In order to check your software version, do:
 
-```python
+```
 import os
 os.uname().release
 ```
