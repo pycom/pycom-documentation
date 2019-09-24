@@ -328,6 +328,10 @@ This function is used to set the filter mask for Wifi control packets in promisc
 
 To get the current Filter mask, call the function with empty args.
 
+### wlan.smartConfig()
+
+Start Smart Config process for provessioning Wifi ssid/pwd
+
 ## Constants
 
 * WLAN mode: `WLAN.STA`, `WLAN.AP`, `WLAN.STA_AP`
@@ -353,6 +357,10 @@ To get the current Filter mask, call the function with empty args.
   `WLAN.EVENT_PKT_MISC`: misc paket recieved in promiscuous mode.
 
   `WLAN.EVENT_PKT_ANY`: Any packet recieved in promiscuous mode.
+  
+  `SMART_CONF_DONE`: Smart Config of wifi ssid/pwd Finished
+  
+  `SMART_CONF_TIEMOUT`: Smart Config of wifi ssid/pwd timed-out
 
 * Control packet filters in promiscuous mode:
 

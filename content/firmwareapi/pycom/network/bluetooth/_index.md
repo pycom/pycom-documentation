@@ -255,6 +255,15 @@ bluetooth.service('abc123')
 
 Closes the BLE connection with the client.
 
+### bluetooth.tx\_power(type, level)
+
+Gets or sets the TX Power level.
+If called with only `type` parameter it returns with the current value belonging to the given type.
+If both `type` and `level` parameters are given, it sets the TX Power.
+
+Valid values for `type`: `Bluetooth.TX_PWR_CONN` -> for handling connection, `Bluetooth.TX_PWR_ADV` -> for advertising, `Bluetooth.TX_PWR_SCAN` -> for scan, `Bluetooth.TX_PWR_DEFAULT` -> default, if others not set
+Valid values for `level`: Bluetooth.TX_PWR_N12` -> -12dbm, `Bluetooth.TX_PWR_N9` -> -9dbm, `Bluetooth.TX_PWR_N6` -> -6dbm, `Bluetooth.TX_PWR_N3` -> -3dbm, `Bluetooth.TX_PWR_0` -> 0dbm, `Bluetooth.TX_PWR_P3` -> 3dbm, `Bluetooth.TX_PWR_P6` -> 6dbm, `Bluetooth.TX_PWR_P9` -> 9dbm
+
 ## Constants
 
 * Bluetooth mode: `Bluetooth.BLE`
@@ -265,6 +274,8 @@ Closes the BLE connection with the client.
 * Characteristic properties (bit values that can be combined): `Bluetooth.PROP_BROADCAST`, `Bluetooth.PROP_READ`, `Bluetooth.PROP_WRITE_NR`, `Bluetooth.PROP_WRITE`, `Bluetooth.PROP_NOTIFY`, `Bluetooth.PROP_INDICATE`, `Bluetooth.PROP_AUTH`, `Bluetooth.PROP_EXT_PROP`
 * Characteristic callback events: `Bluetooth.CHAR_READ_EVENT`, `Bluetooth.CHAR_WRITE_EVENT`, `Bluetooth.NEW_ADV_EVENT`, `Bluetooth.CLIENT_CONNECTED`, `Bluetooth.CLIENT_DISCONNECTED`, `Bluetooth.CHAR_NOTIFY_EVENT`
 * Antenna type: `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
+* TX Power type: `Bluetooth.TX_PWR_CONN`, `Bluetooth.TX_PWR_ADV`, `Bluetooth.TX_PWR_SCAN`, `Bluetooth.TX_PWR_DEFAULT`
+* TX Power level: `Bluetooth.TX_PWR_N12`, `Bluetooth.TX_PWR_N9`, `Bluetooth.TX_PWR_N6`, `Bluetooth.TX_PWR_N3`, `Bluetooth.TX_PWR_0`, `Bluetooth.TX_PWR_P3`, `Bluetooth.TX_PWR_P6`, `Bluetooth.TX_PWR_P9`
 
 ## Exceptions
 

@@ -10,7 +10,7 @@ aliases:
 
 Pycom modules come with the ability to update the devices firmware, while it is still running, we call this an "over the air" (OTA) update. The [`pycom`](/firmwareapi/pycom/pycom) library provides several functions to achieve this. This example will demonstrate how you could potentially use this functionality to update deployed devices. The full source code of this example can be found [here](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA).
 
-## Method
+## Method A
 
 Here we will describe one possible update methodology you could use that is implemented by this example.
 
@@ -211,4 +211,23 @@ while True:
 
     sleep(5)
 ```
+## Method B
 
+OTA software updates can be performed through the FTP server. Download the appropriate .tar.gz file for the Firmware you want to upgrade/downgrade to from [here](https://docs.pycom.io/advance/downgrade/).
+extract the application bin file eg. (wipy.bin) for WiPy, rename that file to ``appimg.bin`` Upload the ``appimg.bin`` file
+to: ``/flash/sys/appimg.bin`` via your FTP client.
+once the file is succesfully transfered through the FTP server, the Firmware upgrade is complete and the ``appimg.bin`` file will be automatically deleted.
+
+To boot up from the new Firmware just reset the device via Reset button or via reset Command:
+
+```
+import machine
+machine.reset()
+```
+
+In order to check your software version, do:
+
+```
+import os
+os.uname().release
+```
