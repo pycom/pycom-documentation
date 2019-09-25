@@ -31,3 +31,16 @@ The `GPIO` pins of the modules are **NOT** `5V` tolerant, connecting them to vol
 Static electricity can damage components on the device and may destroy them. If there is a lot of static electricity in the area (e.g. dry and cold climates), take extra care not to shock the device. If the device came in a ESD bag (Silver packaging), the best way to store and carry the device is inside this bag as it will be protected against static discharges.
 {{% /hint %}}
 
+## LoRa
+There is a known issue regarding LoRa communication on the LoPy1, L01 and FiPy where the SX1272 chip no longer receives any LoRa messages. This happens mainly with modules running continuously for extended periods of time (days) on a power supply susceptible to under-voltage spikes.
+
+The workaround for this issue is to reset the LoRa SX1272 chip if it gets stuck in that state. If there is no way for your application to detect that situation another workaround is to reset the LoRa chip at a specified intervals (eg. once every 24hrs)
+
+
+**For LO1/FiPy:**
+
+To reset the LoRa chip you can do a Deep sleep cycle 
+
+**For LoPy1:**
+
+Currently a power reset is required to reset the LoRa chip , A MicroPython API will be added shortly to assert the SX1272 reset line from the Application.

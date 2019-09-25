@@ -10,7 +10,7 @@ aliases:
 
 Pycom modules come with the ability to update the devices firmware, while it is still running, we call this an "over the air" (OTA) update. The [`pycom`](/firmwareapi/pycom/pycom) library provides several functions to achieve this. This example will demonstrate how you could potentially use this functionality to update deployed devices. The full source code of this example can be found [here](https://github.com/pycom/pycom-libraries/tree/master/examples/OTA).
 
-## Method
+## Method A
 
 Here we will describe one possible update methodology you could use that is implemented by this example.
 
@@ -211,4 +211,56 @@ while True:
 
     sleep(5)
 ```
+## Method B
+
+OTA software updates can be performed through the FTP server. Download the appropriate .tar.gz file for the Firmware you want to upgrade/downgrade to from [here](https://docs.pycom.io/advance/downgrade/).
+extract the application bin file eg. (wipy.bin) for WiPy, rename that file to ``appimg.bin`` Upload the ``appimg.bin`` file
+to: ``/flash/sys/appimg.bin`` via your FTP client.
+once the file is succesfully transfered through the FTP server, the Firmware upgrade is complete and the ``appimg.bin`` file will be automatically deleted.
+
+To boot up from the new Firmware just reset the device via Reset button or via reset Command:
+
+```
+import machine
+machine.reset()
+```
+
+In order to check your software version, do:
+
+```
+import os
+os.uname().release
+```
+
+## OTA update from version 1.18 to 1.20
+Between version 1.18.2 and 1.20 the partition table is changed, the OTA_0 partition, among several others, is relocated because the size of the firmware has been increased due to the extended functionality of the 1.20 version. Due to this reason when updating from version 1.18.2 to 1.20 via OTA, an update to an intermediate version, numbered as [1.18.3](https://github.com/pycom/pycom-micropython-sigfox/tree/v1.18.3), must be performed.
+The intermediate version makes sure that when OTA update to 1.20 is requested, the partition table contains correct entries and the new image will be flashed to the proper location.
+
+The intermediate version, [1.18.3](https://github.com/pycom/pycom-micropython-sigfox/tree/v1.18.3), contains the following EXTRA steps when OTA update is requested:
+* Updates bootloader
+* Moves the content of the "ota data" partition to its new location
+* Updates the partition table
+
+_Note_: Please note that if bootloader or partition table update fails (e.g.: due to a power-loss), the device will not boot and recover and a new image must be flashed via a cable.
+
+When the device is being updated to the [1.18.3](https://github.com/pycom/pycom-micropython-sigfox/tree/v1.18.3) intermediate version it may be flashed onto "OTA_0" partition depending on the where current active image is loaded from. In this case on next boot it automatically copies itself from "OTA_0" to "Factory" partition as a preparation for being able to receive the 1.20 image in the future. Without this step when the 1.20 image is being flashed on the "Factory" partition due to its increased size it would overwrite the first segments of the curently running firmware (which is the 1.18.3 and located on "OTA_0" partition).
+
+Therefore the correct update chain from 1.18 to 1.20 via OTA looks like: 1.18.2 -> 1.18.3 -> 1.20
+
+Downgarding from 1.20 back to 1.18 is possible, however the target version must be 1.18.3. The 1.18.3 image able to detect whether a downgrade happened and in this case it will not perform the steps explained above, it behaves as the 1.18.2r7 image just with updated partition table and bootloader. Updating back again to 1.20 is possible and allowed.
+
+_Note_: Updating devices with encrypted flash is not supported.
+
+_Note_: Downgrading via OTA from 1.18.3 to 1.18.2.xx is not allowed as this might casuse further OTA operations to fail.
+
+_Note_: Before doing OTA to 1.20 firmware make sure that the Scripts on device are updated (if necessary) to be compatible with 1.20 FW to avoid exceptions once device is updated to 1.20 which might lead to loosing connection to the remote device.
+
+You can find firmware images for 1.18.3 here:
+
+[Wipy](https://software.pycom.io/downloads/WiPy.html)
+[FiPy](https://software.pycom.io/downloads/FiPy.html)
+[GPy](https://software.pycom.io/downloads/GPy.html)
+[LoPy](https://software.pycom.io/downloads/LoPy.html)
+[LoPy4](https://software.pycom.io/downloads/LoPy4.html)
+[SiPy](https://software.pycom.io/downloads/SiPy.html)
 
