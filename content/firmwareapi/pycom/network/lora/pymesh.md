@@ -1,24 +1,26 @@
----
+ ---
 title: "PyMesh"
 aliases:
     - firmwareapi/pycom/network/lora/pymesh.html
     - firmwareapi/pycom/network/lora/pymesh.md
 ---
 
-This class provides Pymesh - LoRa Mesh protocol compliant for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating Pymesh initialisation and basic usage:
+The following will show the Pymesh (LoRa Mesh network created by Pycom) class for the LoPy and FiPy.
+
+Below is a brief example demonstrating how to initialise the Pymesh network.
 
 ```python
 
 from network import LoRa
 
 # initialise LoRa
-# the LoRa parameters (frecq, sf, bandwidth) has to be the same for all
+# the LoRa parameters (frequency, spreading factor, bandwidth) has to be the same for all
 # nodes in the same Pymesh
 lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,
     frequency = 863000000, bandwidth=LoRa.BW_125KHZ, sf=7)
 
 print("Enable Pymesh")
-pymesh = lora.Mesh()
+pymesh = lora.Pymesh()
 
 # check node state inside Pymesh
 # PYMESH_ROLE_DISABLED = 0, ///< The Pymesh stack is disabled.
@@ -31,19 +33,19 @@ print("Pymesh node role: %d"%pymesh.state())
 print("IPv6 unicast addresses: %s"%pymesh.ipaddr())
 ```
 
-## Additional Examples
+## Examples
 
-For various other complete Pymesh examples, check Tutorials & Examples section (LoRa/Pymesh).
+For various other Pymesh examples, check the [Pymesh Chapter](/pymesh).
 
-## Constructors
+## Constructor
 
-#### class network.LoRa.Mesh(*, key=masterkey)
+#### class network.LoRa.Pymesh(*, key=masterkey)
 
-Create and configure the Mesh object.
+This constructor `network.LoRa.Pymesh()` creates and configures the Pymesh object.
 
 By default, the key is `0134C0DE1AB51234C0DE1AB5CA1A110F`.
 
-The current Master key can be found using: `print("Masterkey:", pymesh.cli("masterkey"))`.
+The current `masterkey` can be found using: `print("Masterkey:", pymesh.cli("masterkey"))`.
 
 ```python
 import ubinascii
@@ -51,20 +53,19 @@ from network import LoRa
 
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 masterkey = ubinascii.unhexlify("112233")
-mesh = lora.Mesh(key=masterkey)
-pymesh = lora.Mesh()
+pymesh = lora.Pymesh(key=masterkey)
 
-# as test, the Masterkey can be printed
->>> print("Masterkey:", mesh.cli("masterkey"))
-Masterkey: 11223300000000000000000000000000
+# as test, the masterkey can be printed
+>>> print("masterkey:", pymesh.cli("masterkey"))
+masterkey: 11223300000000000000000000000000
 ```
 
 ## Methods
 
-#### mesh.deinit()
+#### pymesh.deinit()
 
-De-initialise Pymesh task. Any further Pymesh commands will return no answer.
-To use again Pymesh the `LoRa.Mesh()` constructor has to be called.
+This destroys the Pymesh task. Any further Pymesh commands will return no answer.
+To recreate the Pymesh, use the `LoRa.Pymesh()` constructor.
 
 ```python
 
@@ -74,28 +75,28 @@ True
 >>> pymesh.leader()
 ```
 
-#### mesh.state()
+#### pymesh.state()
 
-Get node state inside Pymesh, which can be one of the following:
-```
-* PYMESH_ROLE_DISABLED = 0, ///< The Pymesh stack is disabled.
-* PYMESH_ROLE_DETACHED = 1, ///< Not currently participating in a Pymesh.
-* PYMESH_ROLE_CHILD    = 2, ///< The Pymesh Child role.
-* PYMESH_ROLE_ROUTER   = 3, ///< The Pymesh Router role.
-* PYMESH_ROLE_LEADER   = 4, ///< The Pymesh Leader role.
+This receives the node's state inside of the Pymesh, which can be one of the following:
+```python
+# PYMESH_ROLE_DISABLED = 0, ///< The Pymesh stack is disabled.
+# PYMESH_ROLE_DETACHED = 1, ///< Not currently participating in a Pymesh.
+# PYMESH_ROLE_CHILD    = 2, ///< The Pymesh Child role.
+# PYMESH_ROLE_ROUTER   = 3, ///< The Pymesh Router role.
+# PYMESH_ROLE_LEADER   = 4, ///< The Pymesh Leader role.
 ```
 
 ```python
 
-# get node state inside Pymesh
+# receive node's state inside Pymesh
 >>> pymesh.state()
 4
 ```
 More info: https://openthread.io/guides/thread-primer/node-roles-and-types
 
-#### mesh.single()
+#### pymesh.single()
 
-Returns `True` if this node is the only Leader or Router in the current Mesh network.
+This answers `True` if this node is the only Leader or Router in the current Pymesh network.
 
 ```python
 
@@ -103,36 +104,37 @@ Returns `True` if this node is the only Leader or Router in the current Mesh net
 True
 ```
 
-#### mesh.ipaddr()
+#### pymesh.ipaddr()
 
-Returns all the IPv6 unicast addresses assigned on Pymesh interface.
-
-```python
-
->>> pymesh.ipaddr()
-['fdde:ad00:beef:0:0:ff:fe00:fc00', 'fdde:ad00:beef:0:0:ff:fe00:cc00', 'fdde:ad00:beef:0:86c3:6130:98cc:6633', 'fe80:0:0:0:301:101:101:104']
-```
-In the previous `pymesh.ipaddr()` answer, these are the individual IPv6:
-* `fe80:0:0:0:301:101:101:104` - link-local IPv6
- * used to discover neighbors, configure links.
- * not routable.
- * always has a prefix of `fe80::/16`.
-* `fdde:ad00:beef:0:86c3:6130:98cc:6633` - mesh-local identifier
- * independent of network topology.
- * does not change as the topology changes.
- * should be used by applications.
- * always has a prefix `fd00::/8`.
-* `fdde:ad00:beef:0:0:ff:fe00:cc00` - routing locator (RLOC)
- * identifies a mesh interface, based on its location in the network topology.
- * Changes as the topology changes.
- * Generally not used by applications.
-* `fdde:ad00:beef:0:0:ff:fe00:fc00` - Leader IPv6.
+This returns all the IPv6 unicast addresses assigned on Pymesh interface.
 
 More info: https://openthread.io/guides/thread-primer/ipv6-addressing
 
-#### mesh.rloc()
+```python
+>>> pymesh.ipaddr()
+['fdde:ad00:beef:0:0:ff:fe00:fc00', 'fdde:ad00:beef:0:0:ff:fe00:cc00', 'fdde:ad00:beef:0:86c3:6130:98cc:6633', 'fe80:0:0:0:301:101:101:104']
+```
 
-Returns the routing locator (RLOC) IPv6 address.
+In the previous `pymesh.ipaddr()` answer, these are the individual IPv6:
+
+* `fe80:0:0:0:301:101:101:104` - the link-local IPv6 address
+ * used to discover neighbors, configure links
+ * not routable
+ * always has a prefix of `fe80::/16`
+* `fdde:ad00:beef:0:86c3:6130:98cc:6633` - the mesh-local identifier
+ * independent of network topology
+ * does not change as the topology changes
+ * should be used by applications
+ * always has a prefix `fd00::/8`
+* `fdde:ad00:beef:0:0:ff:fe00:cc00` - the routing locator (RLOC)
+ * identifies a mesh interface, based on its location in the network topology
+ * Changes as the topology changes
+ * Generally not used by applications
+* `fdde:ad00:beef:0:0:ff:fe00:fc00` - the Leader IPv6
+
+#### pymesh.rloc()
+
+This returns the routing locator's (RLOC) IPv6 address.
 
 ```python
 
@@ -144,16 +146,17 @@ Returns the routing locator (RLOC) IPv6 address.
 
 More info: https://openthread.io/guides/thread-primer/ipv6-addressing
 
-#### mesh.neighbors()
+#### pymesh.neighbors()
 
-Returns a list with tuples containing information about neighbors, ie. all other nodes that have a direct radio connection to the calling node.
+This returns a list with tuples containing information about neighbour nodes. Neighbour nodes are all nodes that have a **direct** radio connection to the calling node.
 
-For each neighbor the following properties are returned:
-* mac - LoRa MAC address.
-* role - Child(2) or Router(3), implicitly Leader is shown as normal Router.
-* rloc16 - the RLOC (more info [here](https://openthread.io/guides/thread-primer/ipv6-addressing)).
-* rssi - the RSSI of the radio link (Received Signal Strength Indication) expressed in db.
-* age - number of seconds since last data packet was received.
+For each neighbour the following properties are returned:
+
+* mac - LoRa MAC address
+* role - Child(2) or Router(3), the Leader is always shown as a normal Router
+* rloc16 - the RLOC (more info [here](https://openthread.io/guides/thread-primer/ipv6-addressing))
+* rssi - the RSSI(Received Signal Strength Indication) of the radio link expressed is in decibels(dB)
+* age - number of seconds since last data packet was received
 
 ```python
 
@@ -165,16 +168,21 @@ For each neighbor the following properties are returned:
 -37
 ```
 
-#### mesh.routers()
+#### pymesh.routers()
 
-Returns a list with tuples containing information about all routers from Pymesh. Routers are Pymesh nodes that relay/route packets inside Pymesh.
+This returns a list with tuples containing information about all routers from Pymesh. Routers are Pymesh nodes that relay/route packets inside Pymesh.
 
 For each Router the following properties are returned:
-* mac - LoRa MAC address.
-* rloc16 - the RLOC (more info [here](https://openthread.io/guides/thread-primer/ipv6-addressing)).
-* id - the Pymesh internal ID, each Router has its own random unique ID.
-* path_cost - the cost of the path from current node to this router.
-* age - number of seconds since last keep-alive packet was received.
+
+* mac - LoRa MAC address
+* rloc16 - the RLOC (more info [here](https://openthread.io/guides/thread-primer/ipv6-addressing))
+* id - each Router has its own random unique ID
+* path_cost - the cost of the path from current node to this router
+ * example: 4 nodes are connected in the sequence, A-B-C-D
+  * path_cost A to B is 0(all path_cost's begin at 0)
+  * path_cost A to C is 1
+  * path_cost A to D is 2
+* age - number of seconds since last keep-alive packet was received
 
 ```python
 
@@ -187,14 +195,15 @@ For each Router the following properties are returned:
 25600
 ```
 
-#### mesh.leader()
+#### pymesh.leader()
 
-Returns information about Leader of the current Pymesh. can be called from any connected node.
+This returns information about Leader of the Pymesh. It can be called from any node.
 
 The following details are returned:
-* part_id - partition id, the Pymesh internal network address.
-* mac - the LoRa MAC address of the Leader.
-* rloc16 - the Leader RLOC16.
+
+* part_id - partition id, the Pymesh internal network address
+* mac - the LoRa MAC address of the Leader
+* rloc16 - the Leader RLOC (more info [here](https://openthread.io/guides/thread-primer/ipv6-addressing))
 
 ```python
 
@@ -202,12 +211,13 @@ The following details are returned:
 (part_id=828258, mac=72340172838076676, rloc16=52224)
 ```
 
-#### mesh.rx_cb(handler, argument)
+#### pymesh.rx_cb(callback_handler, argument)
 
-Specify the callback handler executed ( with parameter `argument`) when a new packet was received, on **any opened socket** (in case multiple sockets are opened). At this moment, in the callback handler, the right socket
-has to be checked for incoming data.
+This specifies the callback handler executed when a new packet is received.
 
-Please check the following callback example.
+In case multiple sockets are open, this callback is executed on **any opened socket**. The callback handler has to find the correct socket for the incoming data. In order to search for the correct socket use the parameter `argument`.
+
+Below is the callback example.
 
 ```python
 
@@ -249,66 +259,76 @@ sockets.append(eid_socket)
 sockets.append(br_socket)
 
 # set RX callback
-mesh.mesh.rx_cb(receive_pack, sockets)
+pymesh.rx_cb(receive_pack, sockets)
 ```
 
-#### mesh.border_router([ipv6_net_address, preference_level])
+#### pymesh.border_router([ipv6_net_address, preference_level])
 
-Gets or sets as Border Router the current node, by specifying the external IPv6 network address (prefix), which should be used for any IPv6 packet to be sent outside of Pymesh. The parameters details are:
-* ipv6_net_address
- * has to be a valid IPv6 network address containing IP and mask, for ex `"2001:cafe:cafe:cafe::/64"`.
- * all the nodes from the Pymesh will receive a random additional IPv6 unicast address, from this network address.
- * a IPv6 packet which has as destination this prefix, will be routed to this node.
-  * the UDP datagram has a custom header: MAGIC byte (`0xBB`), then 16 bytes of IPv6 destination and 2 bytes port number.
- * to actually catch this IPv6 packet, a socket has to be created on a port.
- * please check the Pymesh example, to see how a UDP packet for external network is being handled.
-* preference_level - should be a value (-1: low, 0: normal, 1: high)
-  * in case multiple Border Routers are being declared with the same prefix and the same path cost, the one with the highest preference is used.
+This method has 2 different purposes.
+
+1. The current node can be set up as a Border Router by specifying the external IPv6 network address
+2. The current node is asked if it is a Border Router, and if it is, then the external IPv6 network address is given.
+</p>
+
+For a more detailed example, [click here](/pymesh/pymesh-br).
+
+The details of the parameters are:
+
+* `ipv6_net_address`
+ * this is a valid IPv6 network address containing IP and mask, for ex `"2001:cafe:cafe:cafe::/64"`.
+ * as a consequence from this method being applied, all of the nodes from the Pymesh will receive a random additional IPv6 unicast address. This will be selected from within this network address.
+* `preference_level`
+ * should be a value of either -1: low, 0: normal or 1: high
+ * if multiple Border Routers are declared with the same prefix and the same path cost, the one with the highest preference is used, ie. 1.
 
 ```python
 
 # IPv6 addresses, before setting Border Router
 >>> pymesh.ipaddr()
 ['fdde:ad00:beef:0:0:ff:fe00:fc00', 'fdde:ad00:beef:0:0:ff:fe00:cc00', 'fdde:ad00:beef:0:86c3:6130:98cc:6633', 'fe80:0:0:0:301:101:101:104']
-# setting Border Router
+# setting Border Router with preference_level 0
 >>> pymesh.border_router("2001:cafe:cafe:cafe::/64", 0)
 0
 # checking a new IPv6 address is assigned
 >>> pymesh.ipaddr()
 ['2001:cafe:cafe:cafe:a5d2:6934:9acd:66b3', 'fdde:ad00:beef:0:0:ff:fe00:fc00', 'fdde:ad00:beef:0:0:ff:fe00:cc00', 'fdde:ad00:beef:0:86c3:6130:98cc:6633', 'fe80:0:0:0:301:101:101:104']
 # list the BR entries
->>> mesh.mesh.border_router()
+>>> pymesh.border_router()
 [(net='2001:dead:beef:cafe::/64', preference=0)]
 >>>
 ```
 
-#### mesh.border_router_del(ipv6_net_address)
+#### pymesh.border_router_del(ipv6_net_address)
 
-Removes a Border Router entry, by specifying the external IPv6 network address (prefix), which should be used for any IPv6 packet to be sent outside of Pymesh. The parameter is the same as for `mesh.border_router(ipv6_net_address, preference_level)`.
+This returns the Border Router node to a normal node.
 
-This will remove all IPv6 unicast from all Mesh nodes, which previously set an IPv6 with BR prefix.
+The parameter `ipv6_net_address` has to be the same as the one that was used when the node was set as a Border Router.
+
+As a consequence, the random IPv6 that was allocated, will be deleted from all nodes.
 
 ```python
 
 # BR entry
->>> mesh.mesh.border_router()
+>>> pymesh.border_router()
 [(net='2001:dead:beef:caff::/64', preference=1)]
-# checking the BR IPv6 unicast address with BR prefix
+# checking the Border Router IPv6 unicast address with BR prefix
 >>> pymesh.ipaddr()
 ['2001:dead:beef:caff:2291:48a4:5229:94ca', 'fdde:ad00:beef:0:0:ff:fe00:6800', 'fdde:ad00:beef:0:4623:91c8:64b2:d9ec', 'fe80:0:0:0:200:0:0:8']
-# remove the BR entry
->>> mesh.mesh.border_router_del('2001:dead:beef:caff::/64')
-# verify, no more BR entry
->>> mesh.mesh.border_router()
+# remove the Border Router  entry
+>>> pymesh.border_router_del('2001:dead:beef:caff::/64')
+# this verifies the current node is no longer a Border Router
+>>> pymesh.border_router()
 []
-# verify, no more IPv6 with BR prefix
->>> mesh.ipaddr()
+# this verifies the current node doesn't have the Border Router IPv6 network address
+>>> pymesh.ipaddr()
 ['fdde:ad00:beef:0:0:ff:fe00:6800', 'fdde:ad00:beef:0:4623:91c8:64b2:d9ec', 'fe80:0:0:0:200:0:0:8']
 ```
 
-#### mesh.cli()
+#### pymesh.cli(command)
 
-Sends a CLI command to the internal openthread engine; the list of CLI commands is [here](https://github.com/openthread/openthread/blob/c482301ec73b80985445102e4d0a936346172ddb/src/cli/README)
+This sends a command to the internal Openthread engine.
+
+The list of CLI commands is [here](https://github.com/openthread/openthread/tree/master/src/cli), please scroll down on github for the Openthread command list.
 ```python
 
 # get the Leader data set
@@ -323,69 +343,69 @@ Leader Router ID: 51
 '16 bytes from fdde:ad00:beef:0:0:ff:fe00:d800: icmp_seq=2 hlim=64 time=246ms\r\n'
 ```
 
-## Working with Pymesh LoRa Sockets
+## Working with Pymesh Sockets
 
-Pymesh supports only UDP sockets (not-acknowledged). They are created in the following way:
+Pymesh supports UDP sockets. These are channels of communication. They are created in the following way:
 
 ```python
-
 import socket
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 ```
 
-Multiple sockets (maximum 3) can be created, being bind on a certain IPv6 unicast and port number.
+A maximum of 3 sockets can be created, being bound on a certain IPv6 unicast and port number.
 
-Pymesh sockets is created, if the Mesh was enabled before (`lora.Mesh()` was called).
+Make sure that the Pymesh is initialised before setting up any sockets.
 
 {{% hint style="info" %}}
-The Pymesh sockets supports only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
+The Pymesh sockets support only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
 {{% /hint %}}
-
-LoRa sockets support the following standard methods from the socket module:
 
 #### socket.close()
 
-Closes the socket.
+This closes the socket.
 
 Usage:
 
 ```python
-
 s.close()
 ```
 
 #### socket.bind(port\_number)
 #### socket.bind((ipv6_string, port\_number))
-Binds (links) an socket with an UDP port number (values 1024 to 63535), with or without an IPv6 interface.
-By default, if just `port_number` is used, then it binds the socket with all IPv6 unicast addresses; it's equivalent with `"::"`as for the `ipv6_string`.
+This binds (links) a socket with an UDP port number with values between 1024 and 63535. There is an option to bind it with an IPv6 interface.
+By default, if only the `port_number` is used, then the socket binds to all IPv6 unicast addresses. It is the equivalent to using `"::"` in place of the `ipv6_string`.
 
 Usage:
 
 ```python
-
 # binding socket with all IPv6 interfaces, like "::"
 >>> s.bind(1234)
->>> mesh.ipaddr()
+>>> pymesh.ipaddr()
 ['fdde:ad00:beef:0:0:ff:fe00:6800', 'fdde:ad00:beef:0:4623:91c8:64b2:d9ec', 'fe80:0:0:0:200:0:0:8']
-# binding the socket on a specific pair IPv6 and port number
+# binding the socket on a specific pair of (IPv6, port_number)
 >>> s.bind(('fdde:ad00:beef:0:4623:91c8:64b2:d9ec', 1235))
 ```
 
+**Note: Please use double brackets when using the IPV6 and port_number.**
+
 #### socket.sendto(bytes,(ip, port))
 
-Sends `bytes` buffer to `ip`, on the designated UDP `port`. Returns the number of bytes sent.
+This sends the `bytes` buffer to `ip`, on the designated UDP `port`.
+
+It returns the number of bytes sent.
 
 Usage:
 
 ```python
-
 >>> s.sendto("Hello World!", ("fdde:ad00:beef:0:0:ff:fe00:d800", 1234))
 12
 ```
 
 #### socket.recvfrom(bufsize)
 
-This method is useful to know the destination port number of the message received. Returns a pair of the form: `(data_bytes, (ipv6_string, port_number))`
+This receives the bytes buffer on the socket. The maximum number of bytes is `bufsize`.
+
+It returns a pair in the form: `(data_bytes, (ipv6_string, port_number))`
 
 Usage:
 
