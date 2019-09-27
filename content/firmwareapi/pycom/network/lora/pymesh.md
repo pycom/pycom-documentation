@@ -39,7 +39,7 @@ For various other Pymesh examples, check the [Pymesh Chapter](/pymesh).
 
 ## Constructor
 
-#### class network.LoRa.Pymesh(*, key=masterkey)
+#### class network.LoRa.Pymesh(\*, key=masterkey)
 
 This constructor `network.LoRa.Pymesh()` creates and configures the Pymesh object.
 
@@ -262,7 +262,7 @@ sockets.append(br_socket)
 pymesh.rx_cb(receive_pack, sockets)
 ```
 
-#### pymesh.border_router([ipv6_net_address, preference_level])
+#### pymesh.border_router(\*, [ipv6_net_address, preference_level])
 
 This method has 2 different purposes.
 
