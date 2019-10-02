@@ -1195,6 +1195,20 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "Create new release"
+    url = "/pybytes/releases/"
+    identifier = "pybytes@releases"
+    parent = "pybytes"
+    weight = 20
+
+[[menu.main]]
+    name = "Deploy release"
+    url = "/pybytes/releases/deploy/"
+    identifier = "pybytes@releases@deploy"
+    parent = "pybytes@releases"
+    weight = 20
+
+[[menu.main]]
     name = "Visualise data from your device"
     url = "/pybytes/dashboard/"
     identifier = "pybytes@dashboard"
