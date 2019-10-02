@@ -22,7 +22,15 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
 4. If you want to include code changes in this release you can:
   * *check* _Upload the code_ `checkbox`.
   * `Browse` your target code (should be a `zip` file)
+  * The `zip` file size is limited to `4MB`
 ![](/gitbook/assets/pybytes/releases/create-release-step-7.png)
+  * if you need to update files on the device you should have the below structure.
+  * `zip` file structure:
+      - root
+        - flash
+          - main.py
+          - .....
+          - xyz.py
 
 5. *Write* a description for this release.
 ![](/gitbook/assets/pybytes/releases/create-release-step-8.png)
