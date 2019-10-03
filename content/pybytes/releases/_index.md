@@ -1,48 +1,19 @@
 ---
-title: "Create New Release"
+title: "Pybytes Project Releases"
 aliases:
 ---
 
-In this section, we will explain how to create a new release.
+### What is the release?
+Each **Pybpytes** project contains list of `devices`. You can update the devices `code`, `network configurations` and/or `firmware` version using a `release` version.
 
+### What is included in the release?
+Each `Release` can contains one or more of the following:
 
-## Create release wizard
+1. Network configurations settings
+2. firmware version
+3. `MicroPython` code
+4. release description
 
-In Pybytes, go to *Applications* -> *My applications* -> *select target application* -> *Releases* Page:
-
-1. Click on *Create Release*.
-![](/gitbook/assets/pybytes/releases/create-release-step-1.png)
-
-2. A list of pre-configured application configurations will be shown.
-![](/gitbook/assets/pybytes/releases/create-release-step-2.png)
-
-3. Select the target `firmware`, or omit this step.
-![](/gitbook/assets/pybytes/releases/create-release-step-3.png)
-
-4. If you want to include code changes in this release you can:
-  * *check* _Upload the code_ `checkbox`.
-  * `Browse` your target code (should be a `zip` file)
-  * The `zip` file size is limited to `4MB`
-![](/gitbook/assets/pybytes/releases/create-release-step-7.png)
-  *  if you need to update files on the device you should follow the structure below.
-  * `zip` file structure:
-    ```
-      my_release.zip
-      ├── flash <-- updates files on the /flash partition
-      │   └── main.py
-      │   └── my_awesome_module.py
-      │   └── ...
-      └── sd <-- updates files on the MicroSD card
-          └── my_another_awesome_module.py
-          └── ...
-    ```
-    * *Check* file structure and code example on the following link: [my-code.zip](/gitbook/assets/pybytes/releases/code-example/my-code.zip)
-
-5. *Write* a description for this release.
-![](/gitbook/assets/pybytes/releases/create-release-step-8.png)
-
-6. *Review* release details then *Click* Finish.
-![](/gitbook/assets/pybytes/releases/create-release-step-9.png)
-
-7. You can see a list of created releases under the `Releases` tab.
-![](/gitbook/assets/pybytes/releases/create-release-step-10.png)
+### Release Versioning
+1. **Pybytes** increment release version by **one** each time a release is created in the project. **1** is the first release version.
+2. `Project` is limited to **10** `Releases`. _oldest release will be removed when you create more than 10 releases_

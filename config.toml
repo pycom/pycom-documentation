@@ -1195,10 +1195,17 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-    name = "Create new release"
+    name = "Project Releases"
     url = "/pybytes/releases/"
     identifier = "pybytes@releases"
     parent = "pybytes"
+    weight = 20
+
+[[menu.main]]
+    name = "Create new release"
+    url = "/pybytes/releases/new/"
+    identifier = "pybytes@releases@new"
+    parent = "pybytes@releases"
     weight = 20
 
 [[menu.main]]
