@@ -3,7 +3,7 @@ title: "Create New Release"
 aliases:
 ---
 
-In this section, we will explain to you how to create a new release.
+In this section, we will explain how to create a new release.
 
 
 ## Create release wizard
@@ -13,7 +13,7 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
 1. Click on *Create Release*.
 ![](/gitbook/assets/pybytes/releases/create-release-step-1.png)
 
-2. List of pre-configured application configurations will be listed.
+2. A list of pre-configured application configurations will be shown.
 ![](/gitbook/assets/pybytes/releases/create-release-step-2.png)
 
 3. Select the target `firmware`, or omit this step.
@@ -24,7 +24,7 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
   * `Browse` your target code (should be a `zip` file)
   * The `zip` file size is limited to `4MB`
 ![](/gitbook/assets/pybytes/releases/create-release-step-7.png)
-  * if you need to update files on the device you should have the below structure.
+  *  if you need to update files on the device you should follow the structure below.
   * `zip` file structure:
       - root
         - flash
@@ -38,5 +38,5 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
 6. *Review* release details then *Click* Finish.
 ![](/gitbook/assets/pybytes/releases/create-release-step-9.png)
 
-7. You can see list of created releases under the `Releases` tab.
+7. You can see a list of created releases under the `Releases` tab.
 ![](/gitbook/assets/pybytes/releases/create-release-step-10.png)
