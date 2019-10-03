@@ -16,15 +16,15 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
 2. A list of pre-configured application configurations will be shown.
 ![](/gitbook/assets/pybytes/releases/create-release-step-2.png)
 
-3. Select the target `firmware`, or omit this step.
+3. Select the target firmware, or omit this step.
 ![](/gitbook/assets/pybytes/releases/create-release-step-3.png)
 
 4. If you want to include code changes in this release you can:
-  * *check* _Upload the code_ `checkbox`.
-  * `Browse` your target code (should be a `zip` file)
-  * The `zip` file size is limited to `4MB`
+  * Check _Upload the code_ **checkbox**.
+  * Browse your target code (should be a **zip** file)
+  * The **zip** file size is limited to **4MB**
 ![](/gitbook/assets/pybytes/releases/create-release-step-7.png)
-  * Download and extend example release zip archive **[my-release.zip](/gitbook/assets/pybytes/releases/code-example/my-code.zip)** 
+  * Download and extend example release zip archive **[my-release.zip](/gitbook/assets/pybytes/releases/code-example/my-code.zip)**
   * Or create a zip file with the following structure:
     ```
       my_release.zip
@@ -43,5 +43,5 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
 6. *Review* release details then *Click* Finish.
 ![](/gitbook/assets/pybytes/releases/create-release-step-9.png)
 
-7. You can see a list of created releases under the `Releases` tab.
+7. You can see a list of created releases under the **Releases** tab.
 ![](/gitbook/assets/pybytes/releases/create-release-step-10.png)
