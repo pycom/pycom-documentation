@@ -26,11 +26,16 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
 ![](/gitbook/assets/pybytes/releases/create-release-step-7.png)
   *  if you need to update files on the device you should follow the structure below.
   * `zip` file structure:
-      - root
-        - flash
-          - main.py
-          - .....
-          - xyz.py
+    ```
+      my_release.zip
+      ├── flash <-- updates files on the /flash partition
+      │   └── main.py
+      │   └── my_awesome_module.py
+      │   └── ...
+      └── sd <-- updates files on the MicroSD card
+          └── my_another_awesome_module.py
+          └── ...
+    ```
 
 5. *Write* a description for this release.
 ![](/gitbook/assets/pybytes/releases/create-release-step-8.png)
