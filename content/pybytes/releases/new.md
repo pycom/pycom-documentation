@@ -24,8 +24,8 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
   * `Browse` your target code (should be a `zip` file)
   * The `zip` file size is limited to `4MB`
 ![](/gitbook/assets/pybytes/releases/create-release-step-7.png)
-  *  if you need to update files on the device you should follow the structure below.
-  * `zip` file structure:
+  * Download and extend example release zip archive **[my-release.zip](/gitbook/assets/pybytes/releases/code-example/my-code.zip)** 
+  * Or create a zip file with the following structure:
     ```
       my_release.zip
       ├── flash <-- updates files on the /flash partition
@@ -36,7 +36,6 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
           └── my_another_awesome_module.py
           └── ...
     ```
-    * *Check* file structure and code example on the following link: [my-code.zip](/gitbook/assets/pybytes/releases/code-example/my-code.zip)
 
 5. *Write* a description for this release.
 ![](/gitbook/assets/pybytes/releases/create-release-step-8.png)
