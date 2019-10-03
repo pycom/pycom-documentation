@@ -36,6 +36,7 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
           └── my_another_awesome_module.py
           └── ...
     ```
+    * *Check* file structure and code example on the following link: [my-code.zip](/gitbook/assets/pybytes/releases/code-example/my-code.zip)
 
 5. *Write* a description for this release.
 ![](/gitbook/assets/pybytes/releases/create-release-step-8.png)
