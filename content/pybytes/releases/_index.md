@@ -4,7 +4,7 @@ aliases:
 ---
 
 ### What is the release?
-Each **Pybpytes** project contains list of `devices`. You can update the devices `code`, `network configurations` and/or `firmware` version using a `release` version.
+Each **Pybytes** project contains list of `devices`. You can update the devices `code`, `network configurations` and/or `firmware` version using a `release` version.
 
 ### What is included in the release?
 Each `Release` can contains one or more of the following:
