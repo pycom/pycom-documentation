@@ -1202,6 +1202,13 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "Pybytes iOS"
+    url = "/pybytes/smart/"
+    identifier = "pybytes@smart"
+    parent = "pybytes"
+    weight = 20
+
+[[menu.main]]
     name = "Create new release"
     url = "/pybytes/releases/new/"
     identifier = "pybytes@releases@new"
