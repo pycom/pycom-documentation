@@ -24,7 +24,7 @@ In Pybytes, go to *Applications* -> *My applications* -> *select target applicat
   * Browse your target code (should be a **zip** file)
   * The **zip** file size is limited to **4MB**
 ![](/gitbook/assets/pybytes/releases/create-release-step-7.png)
-  * Download and extend example release zip archive **[my-release.zip](/gitbook/assets/pybytes/releases/code-example/my-code.zip)**
+  * Download and extend example release zip archive **[my-release.zip](/gitbook/assets/pybytes/releases/my-release.zip)**
   * Or create a zip file with the following structure:
     ```
       my_release.zip
