@@ -58,15 +58,14 @@ bluetooth = Bluetooth()
 
 ## Methods
 
-#### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None, modem\_sleep=True, secure=False)
+#### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None, modem\_sleep=True, secure=False, pin=123456)
 
 * `id` Only one Bluetooth peripheral available so must always be 0
 * `mode` currently the only supported mode is `Bluetooth.BLE`
 * `modem_sleep` Enables or Disables BLE modem sleep, Disable modem sleep as a workaround when having Crashes due to flash cache being disabled, as this prevents BLE task saving data in external RAM while accesing external flash for R/W
-* `antenna` selects between the internal and the external antenna. Can be either
-
-  `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`.
-* `secure` enables or disables the GATT Server security features.
+* `antenna` selects between the internal and the external antenna. Can be either `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
+* `secure` enables or disables the GATT Server security features
+* `pin` a six digit number to connect to the GATT Sever
 
   With our development boards it defaults to using the internal antenna, but in
 
