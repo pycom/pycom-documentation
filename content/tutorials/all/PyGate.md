@@ -2,19 +2,44 @@
 
 __For Starting Pygate and connecting it to a LoRa server , you need to__ 
 
-1- Have a pycom Device (Wipy, LoPy, GPy ,..etc) attached to the Pygate Board
+1- Have a pycom Device (Wipy, LoPy, GPy ,..etc) attached to the Pygate Board (The RGB LED should be on the same side as the usb port of PyGate)
 
-2- Flash the Pycom Device with latest PyGate Firmware.
+2- Attach LoRa Antenna to Pygate Board
 
-3- Upload the Gateway configuration json file on the attached pycom device (via Pymakr or VsCode) , Depending on the type of Pygate (EU868/US915) you should have different config files.
+3- Flash the Pycom Device with latest PyGate Firmware.
+
+4- Upload the Gateway configuration json file on the attached pycom device (via Pymakr or VsCode) , Depending on the type of Pygate (EU868/US915) you should have different config files.
 
 __In the following example we will demonstrate a simple script for getting started with Pygate using Wifi connection for EU868 region:__
+
+you can use that same file you just need to put your GW unique ID , LoRa server adresse and port numbers
 
 ```python
 from network import WLAN
 import time
 import machine
 from machine import RTC
+import pycom
+
+#Disable Hearbeat
+pycom.heartbeat(False)
+
+#Define callback function for Pygate Events
+def machine_cb (arg):
+    evt = machine.events()
+    if (evt & machine.PYGATE_START_EVT):
+        # Green
+        pycom.rgbled(0x103300)
+    elif (evt & machine.PYGATE_ERROR_EVT):
+        # Red
+        pycom.rgbled(0x331000)
+    elif (evt & machine.PYGATE_STOP_EVT):
+        # RGB off
+        pycom.rgbled(0x000000)
+        
+# register Callback func
+machine.callback(trigger = (machine.PYGATE_START_EVT |
+machine.PYGATE_STOP_EVT | machine.PYGATE_ERROR_EVT), handler=machine_cb)
 
 # Connect to a Wifi Network
 wlan = WLAN(mode=WLAN.STA)
@@ -221,11 +246,16 @@ Sample Config json file for GW configuration on EU868 region:
 		"serv_port_down": 1700,
 		"keepalive_interval": 10,
 		"stat_interval": 30,
-		"push_timeout_ms": 500,
+		"push_timeout_ms": 100,
 		"forward_crc_valid": true,
 		"forward_crc_error": false,
 		"forward_crc_disabled": false
 	}
 }
 ```
-__To stop the Pygate at any time via the REPL use CTRL-C, that will stop GW tasks and safely power off the Concentrator.__
+To stop the Pygate at any time use:
+
+- REPL -> use CTRL-C
+- using deinit function `machine.pygate_deinit()`
+
+that will stop GW tasks and safely power off the Concentrator.
