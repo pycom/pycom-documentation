@@ -337,6 +337,13 @@ theme = "doc-theme"
     identifier = "tutorials@all@repl"
     parent = "tutorials@all"
     weight = 10
+    
+ [[menu.main]]
+    name = "PyGate"
+    url = "/tutorials/all/PyGate/"
+    identifier = "tutorials@all@PyGate"
+    parent = "tutorials@all"
+    weight = 10
 
 [[menu.main]]
     name = "WLAN"
