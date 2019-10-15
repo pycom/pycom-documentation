@@ -2,7 +2,7 @@
 
 __For Starting Pygate and connecting it to a LoRa server , you need to__ 
 
-1- Have a pycom Device (Wipy, LoPy, GPy ,..etc) attached to the Pygate Board (The RGB LED should be on the same side as the usb port of PyGate)
+1- Have a pycom Device (Wipy, LoPy4, GPy) attached to the Pygate Board (The RGB LED should be on the same side as the usb port of PyGate)
 
 2- Attach LoRa Antenna to Pygate Board
 
