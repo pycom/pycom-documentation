@@ -13,6 +13,10 @@ aliases:
 
 <p><a href="/gitbook/assets/16-213298_expertise_pycom_lopy-1.0r.pdf" target="_blank">LoPy CE RED Certificate</a></p>
 
+#### LoPy 4.0
+
+<p><a href="/gitbook/assets/C03-B0-RED-final.pdf" target="_blank">LoPy 4.0 CE RED Certificate</a></p>
+
 #### WiPy 2.0
 
 <p><a href="/gitbook/assets/16-213297_expertise_pycom_wipy-2.0r.pdf" target="_blank">WiPy 2.0 CE RED Certificate</a></p>
@@ -58,6 +62,10 @@ aliases:
 <p><a href="/gitbook/assets/2090bcc16_grant.pdf" target="_blank">LoPy FCC Certificate</a></p>
 
 <p><a href="/gitbook/assets/2090ccc16_grant.pdf" target="_blank">LoPy FCC Certificate</a></p>
+
+#### LoPy 4.0
+
+<p><a href="/gitbook/assets/Pycom-2AJMTLOPY4R-FCC-Grant-DSS.pdf" target="_blank">LoPy 4.0 FCC Certificate</a></p>
 
 #### WiPy 2.0
 
