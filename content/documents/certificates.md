@@ -13,6 +13,10 @@ aliases:
 
 <p><a href="/gitbook/assets/16-213298_expertise_pycom_lopy-1.0r.pdf" target="_blank">LoPy CE RED Certificate</a></p>
 
+#### LoPy 4.0
+
+<p><a href="/gitbook/assets/C03-B0-RED-final.pdf" target="_blank">LoPy 4.0 CE RED Certificate</a></p>
+
 #### WiPy 2.0
 
 <p><a href="/gitbook/assets/16-213297_expertise_pycom_wipy-2.0r.pdf" target="_blank">WiPy 2.0 CE RED Certificate</a></p>
