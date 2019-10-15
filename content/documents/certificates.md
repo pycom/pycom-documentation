@@ -59,6 +59,10 @@ aliases:
 
 <p><a href="/gitbook/assets/2090ccc16_grant.pdf" target="_blank">LoPy FCC Certificate</a></p>
 
+#### LoPy 4.0
+
+<p><a href="/gitbook/assets/Pycom-2AJMTLOPY4R-FCC-Grant-DSS.pdf" target="_blank">LoPy 4.0 FCC Certificate</a></p>
+
 #### WiPy 2.0
 
 <p><a href="/gitbook/assets/2091acc16_grant.pdf" target="_blank">WiPy 2.0 FCC Certificate</a></p>
