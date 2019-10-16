@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+      {{ partial "menu.html" . }}
+
+      {{- partial "menu-contextual.html" . -}}
+
+          <main>
+            {{- .Content -}}
+          </main>
+
+{{ end }}

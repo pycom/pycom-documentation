@@ -1,0 +1,10 @@
+<v-layout class="full-width  prev-next pa-2 mt-4 mb-0" styleZZ="background-color: #7800FF;">
+  <v-flex xs6 class="ppurple">
+  {{ if $.prev }}
+  <v-btn class="ml-4" href="{{ $.prev.URL }}">Previous</v-btn>
+  {{ end }}
+  </v-flex>
+  <v-flex xs6 class="text-xs-right">
+  <v-btn class="mr-4 pbgpurple white--text"  href="{{ $.next }}">Next</v-btn>
+    </v-flex>
+</v-layout>

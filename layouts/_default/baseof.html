@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="fancyScroll">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <!--<link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">-->
+  <link href="/css/vuetify.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <title>{{ if .Title }}{{ .Title }} {{ else }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
+
+
+  <link href="/css/doc-theme.css?" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+</script>
+<v-app id="app" class="grey lighten-5"  v-cloak stylse="display: none;">
+   {{ partial "menu.html" . }}
+   {{- partial "toolbar.html" . -}}
+   <v-content >
+      <v-container class="fluid pa-4">
+          <v-container class="ma-1 pa-1">
+                {{- partial "menu-contextual.html" . -}}
+                {{- block "main" . }}{{- end }}
+          </v-container>
+      </v-container>
+    </v-content>
+
+<!--
+    {{- partial "footer.html" . -}}
+-->
+ </v-app>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.5.13/vuetify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+  <script>
+  // Vue.use(VueResource)
+  // Vue.use(Vuetify, {
+  //   theme: {
+  //     primary: '#FF0000',
+  //     secondary: '#b0bec5',
+  //     accent: '#8c9eff',
+  //     error: '#b71c1c'
+  //   }
+  // })
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        page: 1,
+        pageCount: 0,
+        q: null,
+        error: null,
+        results: null,
+        drawer: true,
+        drawer2: true,
+        toc: 0,
+        branches: [
+          { value: 'https://docs.pycom.io', text: 'version stable',  },
+          { value: 'https://development.pycom.io', text: 'version development'},
+        ],
+        branch: ""
+      },
+      mounted: function () {
+        // on boot set default branch as specified as first in array
+        this.branch= this.branches[0]
+        for (b in this.branches) {
+          if ( document.location.href.indexOf(this.branches[b].value) > -1) {
+            this.branch= this.branches[b]
+          }
+        }
+        // there is not always a toc button
+        // temp. show page-toc to the user as hint of existence
+        if (this.$refs.tocBtn) {
+          var elem = this.$refs.tocBtn.$el
+          setTimeout(function () {
+              elem.click();
+
+          }, 3500);
+        }
+        // we use a /search/ page essentially to generate/store a browser
+        // history, if in search page, query results
+        if (document.location.pathname === "/search/") {
+          this.q = decodeURI(window.location.search.split("=")[1])
+          this.fetchResults (this.q)
+        }
+        var elem2 = document.getElementById("vuetify-theme-stylesheet");
+        elem2.parentNode.removeChild(elem2);
+
+      },
+      methods: {
+        handleGoogleError() {
+          const q = 'site:docs.pycom.io ' + this.q;
+          const loc = encodeURI('https://bing.com?q=' + q)
+          window.location = loc
+        },
+        navResult (url) {
+          window.location = url;
+        },
+        fetchResults (kw, start) {
+          if (!start) { start = 1 }
+          let key = "AIzaSyCDyOKwSjrgE_tkSbO0kbI8Omc6VZMwqA8";
+          let cx = "000185904715529159933:pfyw5o4foii";
+          let url = "https://www.googleapis.com/customsearch/v1";
+          url = url + "?cx=" + cx + "&key=" + key + "&q=" + encodeURI(kw) + "&start=" + start
+
+          this.$http.get(url).then((res) => {
+            if (res.data) {
+              this.results = res.data
+              this.page = Math.trunc(res.data.queries.request[0].startIndex /10) + 1
+              // Mmm ... Google result number is varying accross page ....
+              this.pageCount = Math.min(10, Math.trunc(res.data.searchInformation.totalResults/10) + 1)
+            } else {
+              this.handleGoogleError();
+              this.results = null;
+            }
+          }, response => {
+            this.results = null;
+            console.log(response)
+            this.handleGoogleError();
+            this.error = { status: response.error, message: response.text }
+            // ====
+          })
+        },
+        search(p) {
+          window.location = '/search/?q=' + encodeURI(this.q)
+        },
+        pageClicked(p) {
+          event.stopPropagation()
+          event.preventDefault()
+          this.$nextTick(() => {
+            const start = ((this.page - 1) * 10) + 1
+            this.fetchResults(this.q, start)
+             })
+        },
+      },
+      watch: {
+        // whenever question changes, this function will run
+        branch: function (newb, old) {
+          if (newb.value != this.branches[0].value) {
+            window.location = newb + window.location.pathname
+          }
+        },
+
+      },
+    });
+
+  </script>
+
+{{- partial "alexia.html" . -}}
+{{- partial "google_analitycs.html" . -}}
+</body>
+</html>

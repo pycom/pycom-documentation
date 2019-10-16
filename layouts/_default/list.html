@@ -1,0 +1,23 @@
+{{ define "main" }}
+<v-card>
+  <v-card-text>
+    {{ if not .Params.disable_breadcrumbs }}
+    {{ partial "breadcrumb_recursive.html" (dict "menu" .Site.Menus.main "page" . ) }}
+    {{ end }}
+    <h1>{{- .Title -}}</h1>
+      {{- .Content -}}
+    <ul>
+      {{ if lt .WordCount 10 }}
+        {{ range .Paginator.Pages }}
+        <li><a href="{{ .URL }}">
+          {{ if .Title }}{{ .Title }}{{ else }}{{ .URL }}{{ end }}<a/></li>
+        {{ end }}
+      {{ end }}
+      </ul>
+  </v-card-text>
+</v-card>
+<p>&nbsp;</p>
+{{ partial "prev_next.html" (dict "menu" .Site.Menus.main "page" . ) }}
+<v-spacer/>
+
+{{ end }}

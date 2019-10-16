@@ -1,0 +1,15 @@
+{{ define "main" }}
+<v-card>
+  <v-card-text>
+    {{ if not .Params.disable_breadcrumbs }}
+    {{ partial "breadcrumb_recursive.html" (dict "menu" .Site.Menus.main "page" . ) }}
+    {{ end }}
+    <h1 class="mt-0 pt-0">{{- .Title -}}</h1>
+    {{- .Content -}}
+    </v-card-text>
+</v-card>
+    <p>&nbsp;</p>
+    {{ partial "prev_next.html" (dict "menu" .Site.Menus.main "page" . ) }}
+    <v-spacer/>
+
+{{ end }}

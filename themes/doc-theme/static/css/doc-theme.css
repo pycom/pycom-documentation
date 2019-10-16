@@ -1,0 +1,342 @@
+html {
+    /*font-size: 100%;*/
+}
+
+/* Style the header */
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 68px;
+}
+/* Style the header END */
+
+.menu-contextual {
+  width: 320px;
+  right: 0px;
+  top: 0px;
+  z-index: 4;
+  position: fixed;
+}
+
+li.lefttree, li.righttree   {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+aside {
+  padding-bottom: 72px;
+}
+
+nav#TableOfContents {
+  margin-left: -48px;
+}
+
+h1, h2, h3, h4 {
+  color: #1E1E3C;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+
+
+h1 {
+  font-family: 'BebasNeueBold', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+
+h2 > a {
+  color: #1E1E3C;
+}
+
+@font-face {
+font-family: "Bebas";
+src: url("/fonts/bebas/BebasNeue-Regular.eot");
+src: url("/fonts/bebas/BebasNeue-Regular.woff") format("woff"),
+url("/fonts/bebas/BebasNeue-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: "BebasNeueBook";
+src: url("/fonts/bebas/BebasNeueBook.eot");
+src: url("/fonts/bebas/BebasNeueBook.woff") format("woff"),
+url("/fonts/bebas/BebasNeueBook.eot") format("opentype");
+}
+@font-face {
+font-family: "BebasNeueBold";
+src: url("/fonts/bebas/BebasNeueBold.eot");
+src: url("/fonts/bebas/BebasNeueBold.woff") format("woff"),
+url("/fonts/bebas/BebasNeueBold.eot") format("opentype");
+}
+@font-face {
+font-family: "Space Mono";
+src: url("/fonts/space-mono/SpaceMono-Regular.ttf");
+src: url("/fonts/space-mono/SpaceMono-Regular.woff") format("woff"),
+url("/fonts/space-mono/SpaceMono-Regular.eot") format("opentype");
+}
+/* 'Beba',Helvetica,Arial,Lucida,sans-serif; */
+
+.mono {
+  font-family: monospace!important;
+}
+
+.beba {
+  font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif;
+    letter-spacing: 0.1em;
+}
+
+
+.application {
+    line-height: 1.7;
+}
+
+.application {
+  /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
+  font-family: 'Space Mono';
+}
+
+a.bread:hover {
+  background-color: transparent;
+}
+.bread {
+  font-family: 'BebasNeueBold',sans-serif;
+  letter-spacing: 0.1em;
+  color: rgb(120, 0, 255)!important;
+}
+
+.theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
+    background-color: transparent;
+}
+
+ul.lefttree {
+  margin-left: -8px;
+}
+
+a, li.lefttree > a {
+  text-decoration: none;
+}
+
+li.lefttree > a:hover {
+  background-color: transparent!important;
+}
+
+
+li.lefttree > a {
+  padding:6px;
+}
+
+li.hot > a.hot {
+  text-decoration: none;
+  color: #7800FF!important;
+  padding: 6px;
+
+}
+
+a, li.righttree > a {
+  text-decoration: none;
+
+}
+
+a {
+  text-decoration: underline;
+  padding: 0px;
+}
+
+a:hover {
+  background-color: yellow;
+}
+
+a.v-tabs__item:hover {
+    background-color: red!important;
+}
+
+a {
+    color: #1E1E3C;
+}
+
+li > a {
+  color: #1E1E3C;
+  font-weight: 500;
+    line-height: 1.60;
+}
+
+li.hot li.hot > a.hot {
+  text-decoration: none;
+  font-family: 'BebasNeueBold';
+  color:#1E1E3C;
+  padding: 6px;
+}
+
+
+li.lefttree > i {
+  display: hidden;
+}
+
+li.lefttree > a {
+      font-family: 'BebasNeueBold', sans-serif;
+      letter-spacing: 0.1em;
+      font-size: 1.2em;
+
+}
+
+li.lefttree .lefttree > a {font-family: 'BebasNeueBook',sans-serif;}
+
+li.hot {
+  width: calc(100% + 22px);
+  margin-right: 0px;
+  padding-right: 0px;
+  transform: translate(-22px);
+  padding-left: 22px;
+}
+
+
+.v-toolbar__content, .v-toolbar__extension {
+    padding:0!important;
+}
+
+.danger-alert {
+  background-color: #EF9A9A !important;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.warning-alert {
+  background-color: #EF9A9A !important;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+
+.info-alert {
+  background-color: #90CAF9 !important;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.theme--light.v-toolbar {
+    color: #171730!important;
+}
+
+nav#TableOfContents {
+    overflow-y: scroll;
+    max-height: 640px;
+}
+
+img {
+  max-width: 90%;
+  margin-left: 5%;
+  padding: 18px;
+}
+
+[v-cloak] > * { display:none }
+[v-cloak]::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('/logo2.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+table td, table th {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+.ppurple {
+  color: #7800FF;
+}
+
+.pbgpurple {
+  background-color: #7800FF!important;
+  color: white;
+}
+
+
+.navy {
+  color: #1E1E3C;
+}
+
+.prev-next {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin: 0;
+  left: 0;
+}
+
+
+.primary {
+    background-color: red !important;
+    border-color: red !important;
+}
+
+pre {
+    background-color: transparent!important;
+}
+pre > code {
+  width: 100%;
+  padding: 12px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+code {
+    padding: 1px;
+    background-color: #EEEEEE;
+}
+
+.primary--text {
+  color: #7800FF;
+}
+
+.v-window {
+  padding-top: 24px;
+}
+
+p {
+  font-family: 'Space Mono';
+}
+
+
+/** this gives correct offset when link to anchors */
+html {
+  scroll-padding-top: 70px; /* height of sticky header */
+}

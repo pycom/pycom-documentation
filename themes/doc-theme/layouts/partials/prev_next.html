@@ -1,0 +1,100 @@
+{{ $page := .page }}
+{{ $prev := false }}
+{{ $prevtmp := false }}
+{{ $got := false }}
+{{ $current := false }}
+
+{{ range .menu }}
+  {{- /** *************************************************************** */ -}}
+  {{ $iz := eq  $page.URL .URL}}
+  {{ if $got }}
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
+  {{ end }}
+  {{ if $iz }}
+    {{ $current = . }}
+    {{ $got = true }}
+    {{ $prev = $prevtmp }}
+    {{ else }}
+    {{ $got = false }}
+  {{ end }}
+  {{ $prevtmp = . }}
+  {{- /** *************************************************************** */ -}}
+
+  {{ if .HasChildren }}
+    {{ range .Children }}
+    {{- /** *************************************************************** */ -}}
+    {{ $iz := eq  $page.URL .URL}}
+    {{ if $got }}
+
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
+
+    {{ end }}
+    {{ if $iz }}
+      {{ $current = . }}
+      {{ $got = true }}
+      {{ $prev = $prevtmp }}
+      {{ else }}
+      {{ $got = false }}
+    {{ end }}
+    {{ $prevtmp = . }}
+    {{- /** *************************************************************** */ -}}
+
+    {{ if .HasChildren }}
+      {{ range .Children }}
+      {{- /** *************************************************************** */ -}}
+      {{ $iz := eq  $page.URL .URL}}
+      {{ if $got }}
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
+      {{ end }}
+      {{ if $iz }}
+        {{ $current = . }}
+        {{ $got = true }}
+        {{ $prev = $prevtmp }}
+        {{ else }}
+        {{ $got = false }}
+      {{ end }}
+      {{ $prevtmp = . }}
+
+      {{- /** *************************************************************** */ -}}
+
+      {{ if .HasChildren }}
+        {{ range .Children }}
+        {{- /** *************************************************************** */ -}}
+        {{ $iz := eq  $page.URL .URL}}
+        {{ if $got }}
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
+        {{ end }}
+        {{ if $iz }}
+          {{ $current = . }}
+          {{ $got = true }}
+          {{ $prev = $prevtmp }}
+          {{ else }}
+          {{ $got = false }}
+        {{ end }}
+        {{ $prevtmp = . }}
+        {{ if .HasChildren }}
+          {{ range .Children }}
+          {{- /** *************************************************************** */ -}}
+          {{ $iz := eq  $page.URL .URL}}
+          {{ if $got }}
+      {{ partial "prev_next_btn.html" (dict "context" . "prev" $prev "next" .URL)  }}
+          {{ end }}
+          {{ if $iz }}
+            {{ $current = . }}
+            {{ $got = true }}
+            {{ $prev = $prevtmp }}
+            {{ else }}
+            {{ $got = false }}
+          {{ end }}
+          {{ $prevtmp = . }}
+          {{- /** *************************************************************** */ -}}
+          {{ end }}
+        {{ end }}
+        {{- /** *************************************************************** */ -}}
+        {{ end }}
+      {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

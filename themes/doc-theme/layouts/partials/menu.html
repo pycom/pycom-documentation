@@ -1,0 +1,50 @@
+<v-navigation-drawer
+  v-model="drawer"
+  fixed
+  app
+  class="lighten-4 pt-0"
+  style="overflow-y: hidden; overflow-x: hidden;margin-top:70px;"
+>
+    <!--<v-container style="height: 68px; background-color: rgb(23, 23, 48);" class="dark mb-0 pb-1 pt-3 elevation-5 " >
+        <v-img class="ml-4" height=48 width=190  src="/logo.svg">
+    </v-container>-->
+
+  <v-container class="ma-0 pa-0 elevation-1">
+
+    <v-text-field
+    v-model="q"
+      style="width: 100%;"
+      @change="search"
+      @click:append="search"
+      class="grey lighten-5 mt-0  mr-2 pa-3 ma-0 mono"
+      light
+      hide-details
+      append-icon="search"
+      label="Search"
+    ></v-text-field>
+
+  </v-container>
+
+  <div class="fancyScroll pa-0 ma-0" style="overflow-y: scroll; overflow-x: hidden;
+      max-height: 100%;" >
+
+    <v-divider class="grey lighten-1  mr-2 ml-1 mb-4"></v-divider>
+
+      <ul class="lefttree">
+        <li class="lefttree">
+            <a href="/" class="beba" style="color: #1E1E3C; text-decoration: none;" >
+              <v-icon style="color: #1E1E3C;" class="mr-1" >home</v-icon> Introduction</a>
+        </li>
+      </ul>
+
+    {{ partial "menu_recursive.html" (dict "menu" .Site.Menus.main "page" . "level" 0) }}
+
+    <v-divider class="grey lighten-1 ma-2 mt-4 mb-4"></v-divider>
+
+    <ul class="lefttree" >Have a question ?
+      <li class="lefttree">  <a href="https://forum.pycom.io">Ask on the forum</a>
+    </ul>
+    <p>&nbsp;</p>
+      <p>&nbsp;</p>
+  </div>
+</v-navigation-drawer>
