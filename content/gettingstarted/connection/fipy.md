@@ -121,11 +121,11 @@ If you intend on using the LoRa/Sigfox connectivity of the FiPy you **must** con
 The FiPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 433MHz. For this you will require a LoPy4.
 {{% /hint %}}
 
-* Firstly you will need to connect the U.FL to SMA pig tail to the FiPy using the U.FL connector on the same side of the FiPy as the LED.
+* Firstly, you will need to connect the U.FL to SMA pig tail to the FiPy using the U.FL connector on the same side of the FiPy as the LED.
 
 ![](/gitbook/assets/lora_sigfox_pigtail_fipy.png)
 
-* If you are using a pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.
+* If you are using a Pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.
 * Finally you will need to screw on the antenna to the SMA connector.
 
 ![](/gitbook/assets/lora_sigfox_pigtail_ant_fipy.png)
