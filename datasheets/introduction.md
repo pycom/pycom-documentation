@@ -1,6 +1,6 @@
 # Introduction
 
-The follow pages contain all information relating to each product, for examples: pinouts, spec sheets, relevant examples and notes.
+The follow pages contain all information relating to each product, for example: pinouts, spec sheets, relevant examples and notes.
 
 ## Development Modules
 
@@ -43,4 +43,3 @@ The follow pages contain all information relating to each product, for examples:
 {% page-ref page="boards/expansion2.md" %}
 
 {% page-ref page="boards/deepsleep/" %}
-

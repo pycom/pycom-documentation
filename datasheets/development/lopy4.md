@@ -28,9 +28,9 @@ The datasheet of the LoPy4 is available as a PDF File.
 
 ### WiFi
 
-By default, upon boot the LoPy4 will create a WiFi access point with the SSID `lopy4-wlan-XXXX`, where `XXXX` is a random 4-digit number, and the password `www.pycom.io`.
+By default, upon booting up the LoPy4 will create a WiFi access point with the SSID `lopy4-wlan-XXXX`, where `XXXX` is a random 4-digit number and the password `www.pycom.io`.
 
-The RF switch that selects between the on-board and external antenna is connected to `P12`, for this reason using `P12` should be avoided unless WiFi is disabled in your application.
+The RF switch that chooses between the on-board and external antenna is connected to `P12`, so for this reason using `P12` should be avoided unless WiFi is disabled in your application.
 
 ### Power
 
@@ -38,11 +38,10 @@ The `Vin` pin on the LoPy4 can be supplied with a voltage ranging from `3.5v` to
 
 ## Tutorials
 
-Tutorials on how to the LoPy4 module can be found in the [examples](../../tutorials/introduction.md) section of this documentation. The following tutorials might be of specific interest for the LoPy4:
+Tutorials on the LoPy4 module can be found in the [examples](../../tutorials/introduction.md) section of this documentation. The following tutorials might be of  interest for those using the LoPy4:
 
 * [WiFi connection](../../tutorials/all/wlan.md)
 * [LoRaWAN node](../../tutorials/lora/lorawan-abp.md)
 * [LoRaWAN nano gateway](../../tutorials/lora/lorawan-nano-gateway.md)
 * [Sigfox](../../tutorials/sigfox.md)
 * [BLE](../../tutorials/all/ble.md)
-

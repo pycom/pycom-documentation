@@ -79,11 +79,11 @@ If you intend on using the LoRa/Sigfox connectivity of the FiPy you **must** con
 The FiPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 433MHz. For this you will require a LoPy4.
 {% endhint %}
 
-* Firstly you will need to connect the U.FL to SMA pig tail to the FiPy using the U.FL connector on the same side of the FiPy as the LED.
+* Firstly, you will need to connect the U.FL to SMA pig tail to the FiPy using the U.FL connector on the same side of the FiPy as the LED.
 
 ![](../../.gitbook/assets/lora_sigfox_pigtail_fipy.png)
 
-* If you are using a pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.
+* If you are using a Pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.
 * Finally you will need to screw on the antenna to the SMA connector.
 
 ![](../../.gitbook/assets/lora_sigfox_pigtail_ant_fipy.png)
@@ -109,6 +109,3 @@ All Pycom modules, including the FiPy, come with a on-board WiFi antenna as well
 If you intend on using the LTE CAT-M1 or NB-IoT connectivity of the FiPy you will need to insert a SIM card into your FiPy. It should be noted that the FiPy does not support regular LTE connectivity and you may require a special SIM. It is best to contact your local cellular providers for more information on acquiring a LTE CAT-M1/NB-IoT enabled nano SIM.
 
 ![](../../.gitbook/assets/sim_fipy.png)
-
-
-

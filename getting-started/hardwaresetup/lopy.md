@@ -81,7 +81,7 @@ The LoPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 4
 
 ![](../../.gitbook/assets/lora_pigtail_lopy.png)
 
-* If you are using a pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.
+* If you are using a Pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.
 * Finally you will need to screw on the antenna to the SMA connector.
 
 ![](../../.gitbook/assets/lora_pigtail_ant_lopy.png)
@@ -95,6 +95,3 @@ All Pycom modules, including the LoPy, come with a on-board WiFi antenna as well
 ### Deep Sleep current issue {#deep-sleep-current-issue}
 
 The LoPy, SiPy, and WiPy 2.0 experience an issue where the modules maintain a high current consumption in deep sleep mode. This issue has been resolved in all newer products. The cause for this issue is the DC to DC switch mode converter remains in a high performance mode even when the device is in deep sleep. The flash memory chip also does not power down. A more detailed explanation can be found [here.](https://forum.pycom.io/topic/1022/root-causes-of-high-deep-sleep-current)
-
-
-

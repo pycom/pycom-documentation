@@ -1,17 +1,17 @@
 # Visualise data from your device
 
-In this section, we will explain to you how to create widgets for data visualisation and set up your device's dashboard on Pybytes.
+In this section, we will explain how to create widgets for data visualisation and how to set up your device's dashboard on Pybytes.
 
 {% hint style="info" %}
-We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](connect/). After your done with that, you can proceed to the next example.
+We're assuming that you have already connected your device to Pybytes. In case you haven't, check how to [add your device here](connect/). After you're done with that, you can proceed to the next example.
 {% endhint %}
 
 ## Step 1: Set up your application \(main.py\)
 
 The first step is to have an application running on your device. The application in this example sends data from a vector every 10 seconds to Pybytes.
 
-1. Open the `main.py` file on Pymakr;
-2. Insert the following code on your `main.py`;
+1. Open the `main.py` file on Pymakr
+2. Insert the following code on your `main.py`
 
 ```python
 # # Import what is necessary to create a thread
@@ -39,7 +39,7 @@ def send_env_data():
 _thread.start_new_thread(send_env_data, ())
 ```
 
-3. Upload the code into your device. Now your device is sending data to Pybytes.
+3. Upload the code into your device. Your device is now sending data to Pybytes.
 
 {% hint style="info" %}
 
@@ -91,7 +91,7 @@ The datatype also has to match the variable used as argument on `pybytes.send_vi
 
 ![](../.gitbook/assets/02-1%20%281%29.png)
 
-3. Select the type of visualisation \(e.g. Bar chart or Line chart\).
+3. Select the type of visualisation \(e.g. bar chart or line graph\).
 
 ![](../.gitbook/assets/03.gif)
 
@@ -127,5 +127,4 @@ The datatype also has to match the variable used as argument on `pybytes.send_vi
 
 ## Done!
 
-Now you've learned how to set up your device's dashboard to display data. Also, you can add more widgets to other pins of your device.
-
+Now you've learned how to set up your device's dashboard to display data. Also, you can add more widgets to your device's other pins.
