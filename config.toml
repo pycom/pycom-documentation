@@ -1146,7 +1146,7 @@ theme = "doc-theme"
     weight = 90
 
 [[menu.main]]
-    name = "Getting Started with Pybytes"
+    name = "Getting Started"
     url = "/pybytes/getstarted/"
     identifier = "pybytes@getstarted"
     parent = "pybytes"
@@ -1223,7 +1223,7 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-    name = "Visualise data from your device"
+    name = "Visualise data"
     url = "/pybytes/dashboard/"
     identifier = "pybytes@dashboard"
     parent = "pybytes"
@@ -1242,6 +1242,27 @@ theme = "doc-theme"
     identifier = "pybytes@integrations@amazon-iot"
     parent = "pybytes@integrations"
     weight = 10
+
+[[menu.main]]
+    name = "Microsoft Azure"
+    url = "/pybytes/integrations/azure/"
+    identifier = "pybytes@integrations@azure"
+    parent = "pybytes@integrations"
+    weight = 20
+
+[[menu.main]]
+    name = "Google Cloud IoT"
+    url = "/pybytes/integrations/google/"
+    identifier = "pybytes@integrations@google"
+    parent = "pybytes@integrations"
+    weight = 30
+
+[[menu.main]]
+    name = "Webhooks"
+    url = "/pybytes/integrations/webhooks/"
+    identifier = "pybytes@integrations@webhooks"
+    parent = "pybytes@integrations"
+    weight = 40
 
 # *** Pymesh
 [[menu.main]]
