@@ -6,10 +6,10 @@ aliases:
     - chapter/pybytes/dashboard/intro
 ---
 
-In this section, we will explain to you how to create widgets for data visualisation and set up your device's dashboard on Pybytes.
+In this section, we will explain how to create widgets for data visualisation and how to set up your device's dashboard on Pybytes.
 
 {{% hint style="info" %}}
-We assume that you already have your device connected to Pybytes. In case you haven't, check how to [add your device here](../connect/). After your done with that, you can proceed to the next example.
+We're assuming that you have already connected your device to Pybytes. In case you haven't, check how to [add your device here](../connect/). After you're done with that, you can proceed to the next example.
 {{% /hint %}}
 
 ## Step 1: Set up your python application
@@ -118,7 +118,7 @@ Click on the *Create a new display* button.
 
 ![](/gitbook/assets/pybytes/dashboard/create-new-display.png)
 
-Select the type of visualisation (e.g. *Bar chart* or *Line chart*). Let's select the *Line chart*.   
+3. Select the type of visualisation \(e.g. bar chart or line graph\).   
 
 ![](/gitbook/assets/pybytes/dashboard/line-chart.png)
 
@@ -140,4 +140,4 @@ Click on the `Dashboard` tab. Your widget was successfully added there!
 
 ## Done!
 
-Now you've learned how to set up your device's dashboard to display data. Also, you can add more widgets to other signals of your device.
+Now you've learned how to set up your device's dashboard to display data. Also, you can add more widgets to your device's other signals.

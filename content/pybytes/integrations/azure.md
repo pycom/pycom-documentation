@@ -9,16 +9,16 @@ Whenever one of your integrated devices sends a signal to our broker, we republi
 
 ## Integrate your devices
 
-The first step requires you to create an [IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/). This is an Azure service that enables you to ingest high volumes of telemetry from your IoT devices into the cloud for storage or processing. In order to do that, [follow the official documentation](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal). To summarize you'll need to:
+The first step requires you to create an [IoT Hub](https://docs.microsoft.com/en-us/azure/iot-hub/). This is an Azure service that enables you to gather high volumes of telemetry data from your IoT devices. It then moves them into the cloud for storage or processing. In order to do that, [follow the offical documentation](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal). To summarise you'll need to:
     - specify your [subscription plan](https://account.azure.com/subscriptions/)
-    - create or choose a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-portal), a container that holds resources that share the same lifecycle, permissions, and policies. This name must contain only alphanumeric characters, periods, underscores, hyphens and parenthesis and cannot end in a period.
+    - create or choose a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-portal). This contains resources that share the same lifecycle, permissions and policies. The name can contain alphanumeric characters, periods, underscores, hyphens and parenthesis. It cannot end in a period.
     - choose a [region](https://azure.microsoft.com/en-us/global-infrastructure/regions/)
-    - choose the IoT Hub name (its length must be between 3 and 50, and it must contain only alphanumeric characters and hyphens). It won't be possible to change this name later.
+    - choose an IoT Hub name (its length must be between 3 and 50, and it can use only alphanumeric characters and hyphens). It won't be possible to change this name later.
     - [specify tier scaling and units](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling)
 
 ![IoT Hub creation](/gitbook/assets/01_azure_integration.png)
 
-Now copy and paste a connection string with the privilege to write into the registry by clicking on the relative button
+Now copy and paste the connection string with the privilege to write into the registry by clicking on the relative button
 
 Go to Pybytes and click on *Integrations* > *New Integration* and choose *Microsoft Azure*.
 
@@ -34,7 +34,7 @@ When you're ready, click on the _Create_ button.
 
 ![select-azure-integration](/gitbook/assets/pybytes/integrations/azure/azure-configuration-form.png)
 
-If everything's worked as expected, you should be able to see a summary of your integration like the following:
+If everything's working as expected, you should be able to see a summary of your integration similar to the following:
 
 ![Azure integration's summary](/gitbook/assets/pybytes/integrations/azure/azure-integration-inspector.png)
 

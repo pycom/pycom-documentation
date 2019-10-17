@@ -125,7 +125,7 @@ The LoPy only supports LoRa on the 868MHz or 915MHz bands. It does not support 4
 
 ![](/gitbook/assets/lora_pigtail_lopy.png)
 
-* If you are using a pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.
+* If you are using a Pycase, you will next need to put the SMA connector through the antenna hole, ensuring you align the flat edge correctly, and screw down the connector using the provided nut.
 * Finally you will need to screw on the antenna to the SMA connector.
 
 ![](/gitbook/assets/lora_pigtail_ant_lopy.png)

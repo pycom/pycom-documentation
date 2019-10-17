@@ -21,7 +21,7 @@ The datasheet of the Pyscan is available as a PDF File.
 * The accelerometer library is [here](https://github.com/pycom/pycom-libraries/blob/master/pytrack/lib/LIS2HH12.py)
 
 {{% hint style="info" %}}
-For the time being, we recommend to upload the `MFRC630.mpy` file via FTP due to current limitations of Pymakr that will be fixed shortly.
+For the time being, we recommend uploading the `MFRC630.mpy` file via FTP due to current Pymakr limitations that will be fixed shortly.
 {{% /hint %}}
 
 Libraries for the rest of the components will be added soon.
@@ -36,7 +36,7 @@ Libraries for the rest of the components will be added soon.
 
 The Windows 7 driver for Pyscan is located [here](/pytrackpysense/installation/firmware).
 
-For other Operating Systems there's no driver required.
+For other Operating Systems, no driver is required.
 
 ## Pinout
 
