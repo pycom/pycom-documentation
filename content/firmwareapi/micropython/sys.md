@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/micropython/sys.md
     - chapter/firmwareapi/micropython/sys
 ---
+
 ## Methods
 
 #### sys.exit(retval=0)
@@ -42,6 +43,7 @@ CPython mandates more attributes for this object, but the actual useful bare min
 This attribute is useful for detecting "bitness" of a platform (32-bit vs 64-bit, etc.). It's recommended to not compare this attribute to some value directly, but instead count number of bits in it:
 
 ```python
+
 bits = 0
 v = sys.maxsize
 while v:

@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/micropython/ujson.md
     - chapter/firmwareapi/micropython/ujson
 ---
+
 This modules allows to convert between Python objects and the JSON data format.
 
 ## Methods

@@ -5,11 +5,12 @@ aliases:
     - docnotes/syntax.md
     - chapter/docnotes/syntax
 ---
+
 The Pycom documentation follows standard Python Library format using the popular Sphinx Docs tool. There are some notable points regarding the syntax of classes, methods and constants. Please see the notes below and familiarise yourself with the specific details before reviewing the documentation.
 
 ## Keyword Arguments
 
-`Keyword Arguments` refer to the arguments that are passed into a constructor (upon referencing a class object). When passing values into a MicroPython constructor it is not always required to specify the name of the argument and instead rely on the order of the arguments passed as to describe what they refer to. In the example below, it can be seen that the argument `mode` is passed into the `i2c.init()` method without specifying a name.
+`Keyword Arguments` refer to the arguments that are passed into a constructor \(upon referencing a class object\). When passing values into a MicroPython constructor, it is not always required to specify the name of the argument. You can instead rely on the order of the arguments passed as to describe what they refer to. In the example below, it can be seen that the argument `mode` is passed into the `i2c.init()` method without specifying a name.
 
 The values of the arguments (as seen in the examples/docs) refer to the default values that are passed into the constructor if nothing is provided.
 
@@ -17,21 +18,21 @@ The values of the arguments (as seen in the examples/docs) refer to the default 
 i2c.init(mode, * , baudrate=100000, pins=(SDA, SCL))
 ```
 
-An example of how this method might be called:
+An example of what this method might be called:
 
 ```python
 i2c.init(I2C.MASTER, pins=('P12', 'P11'))
 ```
 
-It can be seen that a value for `baudrate` was not passed into the method and thus MicroPython will assume a default value of `100000`. Also the first argument `mode` was not specified by name, as the constructor does not require it, denoted by the lack of an `=` symbol in the constructor documentation.
+It can be seen that a value for `baudrate` was not passed into the method and thus MicroPython will assume a default value of `100000`. Also, the first argument `mode` was not specified by name, as the constructor does not require it, denoted by the lack of an `=` symbol in the constructor documentation.
 
 ## Passing Arguments into a Method
 
-It is important to note that there are certain class methods that can only accept a `keyword` for certain arguments as well as some that only accept a `value`. This is intentional by design but is not always apparent to the user calling specific methods. The differences between the two are outlined below, with examples referencing where differences might apply and what to be aware of.
+It is important to note that there are certain class methods that can only accept a `keyword` for certain arguments as well as some that only accept a `value`. This is intentional by design, but is not always apparent to the user calling specific methods. The differences between the two are outlined below, with examples referencing where differences might apply and what to be aware of.
 
 ## Keyword
 
-An astrik `*` in a method description (in the docs), denotes that the following arguments require a keyword, i.e. `pin='P16'` in the example below.
+An asterisk `*` in a method description \(in the docs\), denotes that the following arguments require a keyword, i.e. `pin='P16'` in the example below.
 
 ```python
 adc.channel(* , pin, attn=ADC.ATTN_0DB)
@@ -44,7 +45,7 @@ adc = ADC()                     # create an ADC object
 apin = adc.channel(pin='P16')   # create an analog pin on P16
 ```
 
-`pin` is a required argument and the method `channel` will not execute unless it is passed as with a keyword.
+`pin` is a required argument and the method `channel` will not execute unless it is passed with a keyword.
 
 Another example shows how the `PWM` class, `pwm.channel()` requires a keyword argument for `pin` but does not for `id`.
 
@@ -52,7 +53,7 @@ Another example shows how the `PWM` class, `pwm.channel()` requires a keyword ar
 from machine import PWM
 
 pwm = PWM(0, frequency=5000)
-pwm_c = pwm.channel(0, pin='P12') # no keyword argument requires for id (0) but is required for pin (pin='P12')
+pwm_c = pwm.channel(0, pin='P12') # no keyword argument required for id (0) but is required for pin (pin='P12')
 ```
 
 ## Value
@@ -97,4 +98,3 @@ I2C.MASTER()
 {{% hint style="info" %}}
 Be aware that you can only reference these constants upon importing and constructing a object from a library.
 {{% /hint %}}
-

@@ -11,6 +11,7 @@ The RMT (Remote Control) module is primarily designed to send and receive infrar
 ## Quick Usage Example: sending
 
 ```python
+
 import machine
 
 # create a RMT object for transmission
@@ -26,6 +27,7 @@ rmt.send_pulses(duration, data)
 ## Quick Usage Example: receiving
 
 ```python
+
 import machine
 # create a RMT object
 rmt = machine.RMT(channel=3)
@@ -107,19 +109,23 @@ Return value: Tuple of items with the following structure: `(level, duration)`:
 Maximum of 128 pulses can be received in a row without receiving "idle" signal. If the incoming pulse sequence contains more than 128 pulses the rest is dropped and the receiver waits for another sequence of pulses. The `pulses_get` function can be called to receive more than 128 pulses, however the above mentioned limitation should be kept in mind when evaluating the received data.
 {{% /hint %}}
 
-#### rmt.pulses\_send(duration, data, start\_level, wait\_tx\_done)
+#### rmt.pulses\_send(duration, data, start\_level)
 
 Generates pulses as defined by the parameters below
 
-* `duration` represents the duration of the pulses to be sent, the time unit (resolution) depends on the selected channel.
-* `data` Tuple that represents the sequence of pulses to be sent, must be composed of 0 or 1 elements.
-* `start_level` defines the state (HIGH/LOW) of the first pulse given by `duration` if `data` is not given.
-* `data` must be a tuple and `duration` can be a tuple or a single number, with `data` being optional. In the case that only `duration` is provided, it must be a tuple and you must also provide `start_level` which will dictate the level of the first duration, the signal level then toggles between each duration value.
-  * If `data` is provided and `duration` is a single number, each pulse in `data` will have have an equal length as set by `duration`.
-  * If `data` and `duration` are provided as tuples, they must be of the same number of elements, with each pulse lasting its matching duration.
-* `wait_tx_done` :
-  * `False`: Allows the function to send asynchronosly without waiting for the transmission to be done.
-  * `True`: will wait for transmission to be done
+* `duration` represents the duration of the pulses to be sent,
+
+  the time unit (resolution) depends on the selected channel.
+
+* `data` Tuple that represents the sequence of pulses to be sent, must be
+
+  composed of 0 or 1 elements.
+
+* `start_level` defines the state (HIGH/LOW) of the first pulse given by
+
+  `duration` if `data` is not given.
+
+`data` must be a tuple and `duration` can be a tuple or a single number, with `data` being optional. In the case that only `duration` is provided, it must be a tuple and you must also provide `start_level` which will dictate the level of the first duration, the signal level then toggles between each duration value. If `data` is provided and `duration` is a single number, each pulse in `data` will have have an equal length as set by `duration`. If `data` and `duration` are provided as tuples, they must be of the same number of elements, with each pulse lasting its matching duration.
 
 ## Constants
 

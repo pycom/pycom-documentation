@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/micropython/ubinascii.md
     - chapter/firmwareapi/micropython/ubinascii
 ---
+
 This module implements conversions between binary data and various encodings of it in ASCII form (in both directions).
 
 ## Methods

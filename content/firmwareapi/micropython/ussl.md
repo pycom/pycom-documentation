@@ -5,15 +5,17 @@ aliases:
     - firmwareapi/micropython/ussl.md
     - chapter/firmwareapi/micropython/ussl
 ---
+
 This module provides access to Transport Layer Security (often known as "Secure Sockets Layer") encryption and peer authentication facilities for network sockets, both client-side and server-side.
 
 ## Methods
 
-#### ssl.wrap\_socket(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ca\_certs=None)
+#### ssl.wrap\_socket(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ca\_certs=None\, timeout=10sec)
 
 Takes an instance `sock` of `socket.socket`, and returns an instance of ssl.SSLSocket, a subtype of `socket.socket`, which wraps the underlying socket in an SSL context. Example:
 
 ```python
+
 import socket
 import ssl
 s = socket.socket()
@@ -26,6 +28,7 @@ Certificates must be used in order to validate the other side of the connection,
 For instance, to connect to the Blynk servers using certificates, take the file `ca.pem` located in the `blynk` examples folder and put it in `/flash/cert/`. Then do:
 
 ```python
+
 import socket
 import ssl
 s = socket.socket()
@@ -35,12 +38,13 @@ ss.connect(socket.getaddrinfo('cloud.blynk.cc', 8441)[0][-1])
 
 SSL sockets inherit all methods and from the standard sockets, see the `usocket` module.
 
+`timeout` : specify a Timeout in Seconds for the SSL handshake operation between client and server, default is 10 seconds
+
 ## Exceptions
 
-`ssl.SSLError`
+* `ssl.SSLError`
 
 ## Constants
 
 * `ssl.CERT_NONE`, `ssl.CERT_OPTIONAL`, `ssl.CERT_REQUIRED`: Supported values in `cert_reqs`
-* `ssl.SSL_TIMEOUT`: raised by a "wrapped" socket when socket.do_handshake() is called
 

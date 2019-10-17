@@ -5,6 +5,7 @@ aliases:
     - gettingstarted/programming/micropython.md
     - chapter/gettingstarted/programming/micropython
 ---
+
 Our boards work with [MicroPython](https://micropython.org/); a Python 3.5 implementation that is optimised to run on micro controllers. This allows for much faster and more simple development process than using C.
 
 ![](/gitbook/assets/micropython%20%281%29.jpg)

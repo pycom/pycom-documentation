@@ -5,6 +5,7 @@ aliases:
     - gettingstarted/programming/first-project.md
     - chapter/gettingstarted/programming/first-project
 ---
+
 This guide will take you through how to setup your first project with Pymakr and make the on-board RGB LED flash various colours.
 
 ## Creating a project in Pymakr
@@ -27,7 +28,7 @@ If you are using Atom, it is important to check at this point that Atom has succ
 If this is not the case you can press `alt-ctrl-r` on Windows/Linux or `ctrl-alt-cmd-l` on macOS, in order to reload Atom and fix the issue.
 {{% /hint %}}
 
-1. Now that you have a project created, we need to add some files to it. A standard MicroPython project has the following structure:
+4. Now that you have a project created, we need to add some files to it. A standard MicroPython project has the following structure:
 
 ```text
 RGB-Blink
@@ -39,7 +40,7 @@ RGB-Blink
 
 * `boot.py` This is the first script that runs on your module when it
 
-  turns on. This is often used to connect a module a a WiFi network so that
+  turns on. This is often used to connect a module to a WiFi network so that
 
   Telnet and FTP can be used without connecting to the WiFi AP created by the
 
@@ -65,13 +66,14 @@ RGB-Blink
 
 For this example, you will just need to create a `main.py` file.
 
-Now that the project structure is setup, you may wish to configure project specific settings for Pymakr e.g. Which serial port to use. On Atom you need to click the `^` button on the Pymakr pane, then click `Project Settings`. On Visual Studio Code you need to click the `All commands` button on the bottom of the windows, then click `Pymakr > Project Settings`. This creates a file called `pymakr.conf` inside your project and populates it with default settings copied over from your global settings. A detailed explanation of these settings can be found [here](/../pymakr/settings).
+Now that the project structure is setup, you may wish to configure project specific settings for Pymakr e.g. Which serial port to use. On Atom you need to click the `^` button on the Pymakr pane, then click `Project Settings`. On Visual Studio Code you need to click the `All commands` button on the bottom of the windows, then click `Pymakr > Project Settings`. This creates a file called `pymakr.conf` inside your project and populates it with default settings copied over from your global settings. A detailed explanation of these settings can be found [here](/pymakr/settings).
 
 ## Controlling the on-board LED
 
-Now that you have setup and configured your project, we can move on to programming your module. The first thing we will need to do is import some libraries in order to interact with the on-board LED. The Pycom firmware comes with a large amount of libraries for standard functionality built-in. You can find out more about these in the [API documentation](/../firmwareapi/introduction). For this example you will need to open the `main.py` file and add the following code:
+Now that you have setup and configured your project, we can move on to programming your module. The first thing we will need to do is import some libraries in order to interact with the on-board LED. The Pycom firmware comes with a large amount of libraries for standard functionality built-in. You can find out more about these in the [API documentation](/firmwareapi/introduction). For this example you will need to open the `main.py` file and add the following code:
 
 ```python
+
 import pycom
 import time
 ```
@@ -81,6 +83,7 @@ This will import two libraries, `Pycom` which is responsible for Pycom specific 
 You may have noticed that when you power up your Pycom module, the on-board LED blinks blue on a regular basis. This "heartbeat" is used as a way of know that your module has powered up and started correctly. Before we can change the colour of this LED we need to disable this heart beat. Below your imports you will need to add the following:
 
 ```python
+
 pycom.heartbeat(False)
 ```
 
@@ -89,6 +92,7 @@ Now it's time to test your code. On the Pymakr pane/bottom of the window you wil
 Now that we can confirm the device is connected and Pymakr is able to run code on it, we can complete our script to blink the LED like so:
 
 ```python
+
 import pycom
 import time
 
@@ -112,7 +116,7 @@ In the previous section we got code running on on your Pycom module using the `r
 If you need to remove files from your device you have two options, either connect via FTP and manage your files that way or format the device's internal flash like so:
 
 ```python
+
 import os
 os.mkfs('/flash')
 ```
-

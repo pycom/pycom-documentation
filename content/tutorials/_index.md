@@ -1,6 +1,9 @@
 ---
-title: ""
+title: "Introduction"
 aliases:
+    - tutorials/introduction.html
+    - tutorials/introduction.md
+    - chapter/tutorials
 disable_breadcrumbs: true
 ---
 

@@ -4,6 +4,7 @@ aliases:
     - firmwareapi/pycom/network/bluetooth/gattscharacteristic.html
     - firmwareapi/pycom/network/bluetooth/gattscharacteristic.md
 ---
+
 The smallest concept in GATT is the Characteristic, which encapsulates a single data point (though it may contain an array of related data, such as X/Y/Z values from a 3-axis accelerometer, longitude and latitude from a GPS, etc.).
 
 The following class allows you to manage Server characteristics.
@@ -15,6 +16,7 @@ The following class allows you to manage Server characteristics.
 Gets or sets the value of the characteristic. Can take an integer, a string or a bytes object.
 
 ```python
+
 characteristic.value(123) # set characteristic value to an integer with the value 123
 characteristic.value() # get characteristic value
 ```
@@ -36,6 +38,7 @@ Returns a value with bit flags identifying the events that have occurred since t
 An example of advertising and creating services on the device:
 
 ```python
+
 from network import Bluetooth
 
 bluetooth = Bluetooth()

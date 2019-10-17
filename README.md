@@ -7,17 +7,15 @@ hugo serve
 
 # Workflow
 
-- Make PR using Master branch
-- PR get merged on master
-- Then merge publish with master
+## Make documentation update
+- Checkout your branch from `master` and commit and push your changes
+- Make a PR against `master` branch (implicitly set as `master` branch is our default branch) 
+- Assign a reviewer and let your PR to be merged
 
-```
-git commit -m "section: commit message"
-git push origin master
-git checkout publish
-git merge master
-git push origin publish
-```
+## Deploy changes
+- Make PR from `master` against `publish` branch
+- Assign a reviewer and let your PR to be merged
+- docs were updated
 
 # Quickrefs
 

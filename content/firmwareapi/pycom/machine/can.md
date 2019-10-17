@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/pycom/machine/can.md
     - chapter/firmwareapi/pycom/machine/can
 ---
+
 The CAN class supports the full CAN 2.0 specification with standard and extended frames, as well as acceptance filtering.
 
 The ESP32 has a built-in CAN controller, but the transceiver needs to be added externally. A recommended device is the SN65HVD230.
@@ -12,6 +13,7 @@ The ESP32 has a built-in CAN controller, but the transceiver needs to be added e
 ## Quick Usage Example
 
 ```python
+
 from machine import CAN
 
 can = CAN(mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))
@@ -26,6 +28,7 @@ can.recv()
 Create an CAN object. See init for parameters of initialisation.:
 
 ```python
+
 # only 1 CAN peripheral is available, so the bus must always be 0
 can = CAN(0, mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))    # pin order is Tx, Rx
 ```
@@ -58,6 +61,7 @@ Send a CAN frame on the bus
 Can be used like:
 
 ```python
+
 can.send(id=0x0020, data=bytes([0x01, 0x02, 0x03, 0x04, 0x05]), extended=True)   # sends 5 bytes with an extended identifier
 
 can.send(id=0x010, data=bytes([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08])) # sends 8 bytes with an standard identifier
@@ -72,6 +76,7 @@ Get a message from the receive queue, and optionally specify a timeout value in 
 `(id, data, rtr, extended)`
 
 ```python
+
 >>> can.recv()
 (id=0x012, data=b'123', rtr=False, extended=False)
 ```
@@ -91,6 +96,7 @@ With software filters all messages in the bus are received by the CAN controller
 For example:
 
 ```python
+
 can.soft_filter(CAN.FILTER_LIST, [0x100, 0x200, 0x300, 0x400])  # only accept identifiers from 0x100, 0x200, 0x300 and 0x400
 
 can.soft_filter(CAN.FILTER_RANGE, [(0x001, 0x010), (0x020, 0x030), (0x040, 0x050)])  # only accept identifiers from 0x001 to 0x010, from 0x020 to 0x030 and from 0x040 to 0x050.
@@ -117,6 +123,7 @@ The values can be OR-ed together, for instance `trigger=CAN.RX_FRAME | CAN.RX_FI
 It can be used like this:
 
 ```python
+
 from machine import CAN
 
 can = CAN(mode=CAN.NORMAL, baudrate=500000, pins=('P22', 'P23'))

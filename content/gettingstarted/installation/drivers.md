@@ -5,6 +5,7 @@ aliases:
     - gettingstarted/installation/drivers.md
     - chapter/gettingstarted/installation/drivers
 ---
+
 ## Linux
 
 You should not need to install any drivers for our devices to be recognised by Linux. You may how ever need to adjust permissions to make sure you have access to the serial port. On most distributions this can be done by adding your user to the `dialout` user group. Please check the specific instructions for your linux distribution for how to do this.
@@ -19,9 +20,10 @@ All our products will work out of the box for Windows 8/10/+. If using Windows 7
 
 ### Download
 
-Please download the driver software from the link below :
+Please download the driver software from the link below:
 
-[Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver](https://raw.githubusercontent.com/pycom/pycom-docs/37661883902849b1a931ee273a23ae8e0f3d773e/chapter/pytrackpysense/installation/pycom.inf)
+[Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver (save the file to your computer)](https://github.com/pycom/pycom-documentation/blob/development_release/.gitbook/assets/pycom.inf)
+
 
 ### Installation
 

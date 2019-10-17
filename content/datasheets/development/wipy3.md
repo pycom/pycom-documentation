@@ -33,23 +33,23 @@ The pinout of the WiPy3 is available as a PDF File.
 ![](/gitbook/assets/wipy3-pinout.png)
 
 {{% hint style="info" %}}
-Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed in Software.
+Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
 {{% /hint %}}
 
 ## Differences from WiPy 2.0
 
-* Deep sleep current draw fixed, now only 19.7µA
-* Upgraded RAM from 512KB to 4MB
-* Upgraded External FLASH from 4MB to 8MB
-* Antenna select pin moved from GPIO16 to GPIO21 (P12)
+* The Deep Sleep current draw is now fixed - it is only 19.7µA
+* The RAM has been upgraded from 512KB to 4MB
+* The External FLASH has been upgraded from 4MB to 8MB
+* The antenna select pin has moved from GPIO16 to GPIO21 \(P12\)
 
 ## Notes
 
 ### WiFi
 
-By default, upon boot the WiPy3 will create a WiFi access point with the SSID `wipy-wlan-XXXX`, where `XXXX` is a random 4-digit number, and the password `www.pycom.io`.
+By default, upon booting up the WiPy3 will create a WiFi access point with the SSID `wipy-wlan-XXXX`, where `XXXX` is a random 4-digit number, and the password `www.pycom.io`.
 
-The RF switch that selects between the on-board and external antenna is connected to `P12`, for this reason using `P12` should be avoided unless WiFi is disabled in your application.
+The RF switch that chooses between the on-board and external antenna is connected to `P12`, for this reason using `P12` should be avoided unless WiFi is disabled in your application.
 
 ### Power
 
@@ -57,7 +57,7 @@ The `Vin` pin on the WiPy3 can be supplied with a voltage ranging from `3.5v` to
 
 ## Tutorials
 
-Tutorials on how to the WiPy3 module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of specific interest for the WiPy3:
+Tutorials on the WiPy3 module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of interest for those using the WiPy3:
 
 * [WiFi connection](/tutorials/all/wlan)
 * [BLE](/tutorials/all/ble)

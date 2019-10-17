@@ -5,6 +5,7 @@ aliases:
     - gettingstarted/programming/ftp.md
     - chapter/gettingstarted/programming/ftp
 ---
+
 There is a small internal file system accessible with each Pycom device, called `/flash`. This is stored within the external serial flash memory. If a microSD card is also connected and mounted, it will be available as well. When the device starts up, it will always boot from the `boot.py` located in the `/flash` file system.
 
 The file system is accessible via the native FTP server running on each Pycom device. Open an FTP client and connect to:
@@ -13,7 +14,7 @@ The file system is accessible via the native FTP server running on each Pycom de
 * username: `micro`
 * password: `python`
 
-See [network.server](/../firmwareapi/pycom/network/server) for information on how to change the defaults. The recommended clients are:
+See [network.server](/firmwareapi/pycom/network/server) for information on how to change the defaults. The recommended clients are:
 
 * macOS/Linux: default FTP client
 * Windows: Filezilla and FireFTP

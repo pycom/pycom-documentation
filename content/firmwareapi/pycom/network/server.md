@@ -5,11 +5,13 @@ aliases:
     - firmwareapi/pycom/network/server.md
     - chapter/firmwareapi/pycom/network/server
 ---
+
 The `Server` class controls the behaviour and the configuration of the FTP and telnet services running on the Pycom device. Any changes performed using this class' methods will affect both.
 
 Example:
 
 ```python
+
 import network
 server = network.Server()
 server.deinit() # disable the server
@@ -20,6 +22,7 @@ server.init(login=('user', 'password'), timeout=600)
 ## Quick Usage Example
 
 ```python
+
 from network import Server
 
 # init with new user, password and seconds timeout

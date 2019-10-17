@@ -5,6 +5,7 @@ aliases:
     - advance/downgrade.md
     - chapter/advance/downgrade
 ---
+
 The firmware upgrade tool usually updates your device to the latest available firmware version. If you require to downgrade your device to a previous firmware there are two methods to achieve this.
 
 {{% hint style="info" %}}
@@ -21,7 +22,7 @@ You can obtain previous firmware versions here:
 * [LoPy4](https://software.pycom.io/downloads/LoPy4.html)
 
 {{% hint style="info" %}}
-Prior to version `1.16.0.b1` the firmware for modules with LoRa functionality was frequency specific. From `1.16.0.b1` and onward, the firmware is region agnostic and this can either be set programatically or via the config block (see [here](../cli#lpwan)).
+Prior to version `1.16.0.b1` the firmware for modules with LoRa functionality was frequency specific. From `1.16.0.b1` and onward, the firmware is region agnostic and this can either be set programatically or via the config block (see [here](../cli.md#lpwan)).
 {{% /hint %}}
 
 ## GUI
