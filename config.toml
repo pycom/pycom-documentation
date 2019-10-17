@@ -1146,7 +1146,7 @@ theme = "doc-theme"
     weight = 90
 
 [[menu.main]]
-    name = "Getting Started with Pybytes"
+    name = "Getting Started"
     url = "/pybytes/getstarted/"
     identifier = "pybytes@getstarted"
     parent = "pybytes"
@@ -1223,7 +1223,7 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-    name = "Visualise data from your device"
+    name = "Visualise data"
     url = "/pybytes/dashboard/"
     identifier = "pybytes@dashboard"
     parent = "pybytes"
