@@ -5,11 +5,13 @@ aliases:
     - firmwareapi/pycom/machine/pin.md
     - chapter/firmwareapi/pycom/machine/pin
 ---
+
 A pin is the basic object to control I/O pins (also known as GPIO - general-purpose input/output). It has methods to set the mode of the pin (input, output, etc) and methods to get and set the digital logic level. For analog control of a pin, see the ADC class.
 
 ## Quick Usage Example
 
 ```python
+
 from machine import Pin
 
 # initialize `P9` in gpio mode and make it an output
@@ -31,6 +33,7 @@ p_in() # get value, 0 or 1
 Create a new Pin object associated with the string `id`. If additional arguments are given, they are used to initialise the pin. [See pin.init()](../pin#pin-init-mode-pull-alt)
 
 ```python
+
 from machine import Pin
 p = Pin('P10', mode=Pin.OUT, pull=None, alt=-1)
 ```
@@ -49,6 +52,8 @@ Initialise the pin:
   * `None` - no pull up or down resistor.
   * `Pin.PULL_UP` - pull up resistor enabled.
   * `Pin.PULL_DOWN` - pull down resistor enabled.
+* `*`
+  * Pin value: `0` or `1`
 * `alt` is the id of the alternate function.
 
 Returns: `None`.
@@ -71,6 +76,7 @@ Pin objects are callable. The call method provides a (fast) shortcut to set and 
 Example:
 
 ```python
+
 from machine import Pin
 pin = Pin('P12', mode=Pin.IN, pull=Pin.PULL_UP)
 pin()   # fast method to get the value
@@ -114,6 +120,7 @@ The values can be OR-ed together, for instance `trigger=Pin.IRQ_FALLING | Pin.IR
 Example:
 
 ```python
+
 from machine import Pin
 
 def pin_handler(arg):
@@ -124,7 +131,7 @@ p_in.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING, pin_handler)
 ```
 
 {{% hint style="info" %}}
-For more information on how Pycom's products handle interrupts, see [here](../../../notes.md#interrupt-handling).
+For more information on how Pycom's products handle interrupts, see [here](/firmwareapi/notes#interrupt-handling).
 {{% /hint %}}
 
 ## Attributes
@@ -134,6 +141,7 @@ For more information on how Pycom's products handle interrupts, see [here](../..
 Contains all Pin objects supported by the expansion board. Examples:
 
 ```python
+
 Pin.exp_board.G16
 led = Pin(Pin.exp_board.G16, mode=Pin.OUT)
 Pin.exp_board.G16.id()
@@ -144,6 +152,7 @@ Pin.exp_board.G16.id()
 Contains all `Pin` objects supported by the module. Examples:
 
 ```python
+
 Pin.module.P9
 led = Pin(Pin.module.P9, mode=Pin.OUT)
 Pin.module.P9.id()

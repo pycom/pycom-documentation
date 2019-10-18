@@ -5,6 +5,7 @@ aliases:
     - advance/encryption.md
     - chapter/advance/encryption
 ---
+
 ## Summary
 
 In order to encrypt your firmware, you will need to build it from source. Our firmware source code can be found [here](https://github.com/pycom/pycom-micropython-sigfox/), along with instructions on how to build it. Below you will find specific instructions on how generate keys, build and flash encrypted firmware.

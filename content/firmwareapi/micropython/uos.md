@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/micropython/uos.md
     - chapter/firmwareapi/micropython/uos
 ---
+
 The `uos` module contains functions for filesystem access and `urandom` function.
 
 ## Port Specifics
@@ -86,31 +87,16 @@ Alias for the `remove()` method.
 Mounts a block device (like an SD object) in the specified mount point. Example:
 
 ```python
+
 os.mount(sd, '/sd')
 uos.unmount(path)
 ```
 
 Unmounts a previously mounted block device from the given path.
 
-#### uos.mkfat(block\_device)
+#### uos.mkfs(block\_device or path)
 
-Instantiate a VFS (Virtual File System) object with underlying FAT file system.
-
-Example:
-
-```python
-from machine import SD
-import os
-sd = SD()
-vfs = os.mkfat(sd)	# Creating a VFS 
-vfs.mkfs(sd)     	# Formating the SD card
-# Now we can use normal os mount
-os.mount(vfs, '/sd')
-```
-
-#### uos.fsformat(path)
-
-Formats the block device mounted under the input path, must be either `/flash` or `/sd`
+Formats the specified path, must be either `/flash` or `/sd`. A block device can also be passed like an SD object before being mounted.
 
 #### uos.dupterm(stream\_object)
 
@@ -119,4 +105,3 @@ Duplicate the terminal (the REPL) on the passed stream-like object. The given ob
 ## Constants
 
 * `uos.sep`: Separation character used in paths
-

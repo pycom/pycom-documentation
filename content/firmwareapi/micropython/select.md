@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/micropython/select.md
     - chapter/firmwareapi/micropython/select
 ---
+
 This module provides functions to wait for events on streams (select streams which are ready for operations).
 
 ## Pyboard specifics

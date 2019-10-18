@@ -3,6 +3,7 @@ title: "REPL"
 aliases:
     - chapter/gettingstarted/programming/repl
 ---
+
 REPL stands for Read Evaluate Print Loop, and is the name given to the interactive MicroPython prompt that is accessible on the Pycom devices. Using the REPL is by far the easiest way to test out Python code and run commands. You can use the REPL in addition to writing scripts in `main.py`.
 
 The following pages will explain how to use the REPL with both Serial USB and Telnet connections.

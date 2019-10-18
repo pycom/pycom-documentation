@@ -4,6 +4,7 @@ aliases:
     - firmwareapi/pycom/network/bluetooth/gattccservice.html
     - firmwareapi/pycom/network/bluetooth/gattccservice.md
 ---
+
 Services are used to categorise data up into specific chunks of data known as characteristics. A service may have multiple characteristics, and each service has a unique numeric ID called a UUID.
 
 The following class allows control over Client services.

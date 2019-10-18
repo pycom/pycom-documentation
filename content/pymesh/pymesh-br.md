@@ -5,6 +5,11 @@ aliases:
     - tutorials/lora/pymesh-br.md
 ---
 
+
+{{% hint style="info" %}}	
+These API's are currently only available in the latest RC builds.
+{{% /hint %}}
+
 The following script exemplifies the declaration of a Border Router inside Pymesh.
 
 The Border Router is a role of a Pymesh node that can forward the Pymesh internal data to the Cloud.  This is accomplished with the following steps:

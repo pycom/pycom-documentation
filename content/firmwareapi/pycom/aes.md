@@ -5,6 +5,7 @@ aliases:
     - firmwareapi/pycom/aes.md
     - chapter/firmwareapi/pycom/aes
 ---
+
 AES (Advanced Encryption Standard) is a symmetric block cipher standardised by NIST. It has a fixed data block size of 16 bytes. Its keys can be 128, 192, or 256 bits long.
 
 {{% hint style="info" %}}
@@ -64,4 +65,3 @@ Decrypt data with the key and the parameters set at initialisation.
 {{% hint style="danger" %}}
 To avoid security issues, IV should always be a random number and should never be reused to encrypt two different messages. The same applies to the counter in CTR mode. You can use `crypto.getrandbits()` for this purpose.
 {{% /hint %}}
-

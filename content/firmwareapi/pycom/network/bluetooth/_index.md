@@ -1,7 +1,9 @@
 ---
 title: "Bluetooth"
 aliases:
+    - chapter/firmwareapi/pycom/network/bluetooth
 ---
+
 This class provides a driver for the Bluetooth radio in the module. Currently, only basic BLE functionality is available.
 
 ## Quick Usage Example
@@ -67,11 +69,7 @@ bluetooth = Bluetooth()
 * `secure` enables or disables the GATT Server security features
 * `pin` a six digit number to connect to the GATT Sever
 
-  With our development boards it defaults to using the internal antenna, but in
-
-  the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be
-
-  used for other things.
+  With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
 
 Initialises and enables the Bluetooth radio in BLE mode.
 
@@ -231,7 +229,6 @@ The arguments are:
 * `channel_map` is the advertising channel map.
 * `adv_filter_policy` is the advertising filter policy.
 
-
 #### bluetooth.advertise(\[Enable\])
 
 Start or stop sending advertisements. The `set_advertisement()` method must have been called prior to this one.
@@ -280,4 +277,3 @@ Valid values for `level`: Bluetooth.TX_PWR_N12` -> -12dbm, `Bluetooth.TX_PWR_N9`
 ## Exceptions
 
 * `Bluetooth.timeout`
-

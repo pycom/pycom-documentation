@@ -5,7 +5,8 @@ aliases:
     - firmwareapi/micropython/builtin.md
     - chapter/firmwareapi/micropython/builtin
 ---
-All builtin functions are described here. They are also available via [builtins](../builtin) module.
+
+All builtin functions are described here. 
 
 abs()
 

@@ -15,7 +15,6 @@
   <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-</script>
 <v-app id="app" class="grey lighten-5"  v-cloak stylse="display: none;">
    {{ partial "menu.html" . }}
    {{- partial "toolbar.html" . -}}
@@ -108,20 +107,20 @@
           url = url + "?cx=" + cx + "&key=" + key + "&q=" + encodeURI(kw) + "&start=" + start
 
           this.$http.get(url).then((res) => {
-
             if (res.data) {
               this.results = res.data
               this.page = Math.trunc(res.data.queries.request[0].startIndex /10) + 1
               // Mmm ... Google result number is varying accross page ....
               this.pageCount = Math.min(10, Math.trunc(res.data.searchInformation.totalResults/10) + 1)
             } else {
-              this.results = null;
               this.handleGoogleError();
+              this.results = null;
             }
           }, response => {
             this.results = null;
-            this.error = { status: response.error, message: response.text }
+            console.log(response)
             this.handleGoogleError();
+            this.error = { status: response.error, message: response.text }
             // ====
           })
         },

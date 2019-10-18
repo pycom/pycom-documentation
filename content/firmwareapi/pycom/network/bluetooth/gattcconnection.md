@@ -4,6 +4,7 @@ aliases:
     - firmwareapi/pycom/network/bluetooth/gattcconnection.html
     - firmwareapi/pycom/network/bluetooth/gattcconnection.md
 ---
+
 The GATT Client is the device that requests data from the server, otherwise known as the master device (commonly this might be a phone/tablet/PC). All transactions are initiated by the master, which receives a response from the slave.
 
 ## Methods
@@ -19,6 +20,7 @@ Returns `True` if the connection is still open. `False` otherwise.
 Example:
 
 ```python
+
 from network import Bluetooth
 import ubinascii
 bluetooth = Bluetooth()
@@ -46,6 +48,7 @@ Performs a service search on the connected BLE peripheral (server) a returns a l
 Example:
 
 ```python
+
 # assuming that a BLE connection is already open
 services = connection.services()
 print(services)

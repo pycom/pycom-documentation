@@ -1,4 +1,9 @@
-### Search results
+---
+title: ""
+aliases:
+    - search.html
+    - search.md
+---
 
 {{ results.searchInformation.totalResults }} results in {{ results.searchInformation.formattedSearchTime }} ms.
 

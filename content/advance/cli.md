@@ -5,6 +5,7 @@ aliases:
     - advance/cli.md
     - chapter/advance/cli
 ---
+
 ## Command Line Update Utility
 
 #### Windows
@@ -330,7 +331,7 @@ To restore your OTA block: `$pycom-fwtool-cli -p PORT ota -r -f backup.ota`
 
 #### lpwan
 
-Get/Set LPWAN parameters saved to non-volatile storage. Please see [here](/firmwareapi/pycom/network/lora.md##loranvramsave) for more details.
+Get/Set LPWAN parameters saved to non-volatile storage. Please see [here](/firmwareapi/pycom/network/lora#loranvramsave) for more details.
 
 ```text
 usage: pycom-fwtool-cli  -p PORT lpwan [-h] [--region REGION]

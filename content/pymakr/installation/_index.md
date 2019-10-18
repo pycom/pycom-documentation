@@ -1,6 +1,7 @@
 ---
 title: "Installation"
 aliases:
+disable_breadcrumbs: true
 ---
 
 ![](/gitbook/assets/pymakr-logo-1.png)
