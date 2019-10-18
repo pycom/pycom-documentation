@@ -30,15 +30,7 @@ In a nutshell, Pybytes is an environment designed to optimise your IoT applicati
 
 ## Let's get started!
 
-<<<<<<< HEAD:pybytes/introduction.md
-* [Getting started with Pybytes](getstarted.md)
-* [Connect your Pycom module to Pybytes](connect/)
-* [Visualise data from your device](dashboard.md)
-* ​[Integrations with external services](integrations/)​
-
-=======
 * [Getting started with Pybytes](/pybytes/getstarted)
 * [Connect your Pycom module to Pybytes](/pybytes/connect)
 * [Visualise data from your device](/pybytes/dashboard)
 * ​[Integrations with external services](/pybytes/integrations/index.html)​
->>>>>>> publish:content/pybytes/_index.md
