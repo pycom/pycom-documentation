@@ -60,11 +60,12 @@ bluetooth = Bluetooth()
 
 ## Methods
 
-### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None)
+### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None, secure=False)
 
 * `id` Only one Bluetooth peripheral available so must always be 0
 * `mode` currently the only supported mode is `Bluetooth.BLE`
 * `antenna` selects between the internal and the external antenna. Can be either`Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`.
+* `secure` enables or disables the GATT Server security features.
 
   With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
 

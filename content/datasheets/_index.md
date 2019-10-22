@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets
 ---
 
-The follow pages contain all information relating to each product, for examples: pinouts, spec sheets, relevant examples and notes.
+The follow pages contain all information relating to each product, for example: pinouts, spec sheets, relevant examples and notes.
 
 ## Development Modules
 
