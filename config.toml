@@ -1299,39 +1299,60 @@ theme = "doc-theme"
     weight = 95
 
 [[menu.main]]
-    name = "Pymesh Library API"
-    url = "/pymesh/library"
-    identifier = "pymesh@library"
+    name = "Pymesh LICENCE"
+    url = "/pymesh/licence"
+    identifier = "pymesh@licence"
     parent = "pymesh"
     weight = 10
 
 [[menu.main]]
-    name = "Micropython API"
-    url = "/firmwareapi/pycom/network/lora/pymesh"
-    identifier = "pymesh@api"
+    name = "Simple Example"
+    url = "/pymesh/simple-example"
+    identifier = "pymesh@simple-example"
     parent = "pymesh"
     weight = 20
 
 [[menu.main]]
-    name = "Simple Example"
-    url = "/pymesh/lora-mesh"
-    identifier = "pymesh@lora-mesh"
+    name = "Pymesh Library API"
+    url = "/pymesh/lib-api"
+    identifier = "pymesh@lib-api"
     parent = "pymesh"
     weight = 30
+
+[[menu.main]]
+    name = "Pymesh Library CLI"
+    url = "/pymesh/lib-cli"
+    identifier = "pymesh@lib-cli"
+    parent = "pymesh"
+    weight = 40
+
+[[menu.main]]
+    name = "Pymesh Library BLE RPC"
+    url = "/pymesh/lib-ble-rpc"
+    identifier = "pymesh@lib-ble-rpc"
+    parent = "pymesh"
+    weight = 50
 
 [[menu.main]]
     name = "Border Router Examplee"
     url = "/pymesh/pymesh-br"
     identifier = "pymesh@pymesh-br"
     parent = "pymesh"
-    weight = 40
+    weight = 60
 
 [[menu.main]]
     name = "Advanced Security Example"
     url = "/pymesh/security"
     identifier = "pymesh@security"
     parent = "pymesh"
-    weight = 50
+    weight = 70
+
+[[menu.main]]
+    name = "Micropython API"
+    url = "/firmwareapi/pycom/network/lora/pymesh"
+    identifier = "pymesh@api"
+    parent = "pymesh"
+    weight = 90
 
 # *** Documentation Notes
 [[menu.main]]
