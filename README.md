@@ -21,7 +21,7 @@ They require approved PR.
 A webhook has been installed on the publish branch to
 https://publish.d20i0wkqbblkur.amplifyapp.com/
 https://github.com/pycom/pycom-documentation/tree/master
-    
+
 ### Updating documentation pages (no development firmware API changes)
 Use this workflow if you want to update documentation pages
 (you are not updating pages with new development firmware API).
@@ -29,12 +29,12 @@ Use this workflow if you want to update documentation pages
     $ git checkout publish
     $ git pull
     $ git checkout -b my-docs-update
-    
+
 After you push your changes to your branch, go to GitHub and create two pull requests.
 So your branch is merged both to `publish` and `development-publish` branch.
 
-After a moment both https://docs.pycom.io and https://development.pycom.io will be updated.    
-          
+After your pull request has been reviewed and merged both https://docs.pycom.io and https://development.pycom.io will be updated.    
+
 ![no fw api changes](static/github/nonFwChanges.jpg)
 
 ### Adding development firmware API changes
@@ -47,7 +47,7 @@ When a user clicks on development dropdown on any firmware API change, he/she wi
     $ git checkout development-publish
     $ git pull
     $ git checkout -b my-fw-api-update
-    
+
 After you push your changes to your branch,
 go to GitHub and create a pull with **development-publish** branch as a base branch.    
 
@@ -62,7 +62,7 @@ In this case, you want to sync "development" version of docs with the "stable" d
     $ git pull
     $ git checkout -b my-sync-branch
     $ git merge development-publish
-     
+
 After you push your changes to your branch,
 go to GitHub and create a pull with **development-publish** branch as a base branch.    
 
