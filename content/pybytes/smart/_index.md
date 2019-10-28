@@ -25,7 +25,7 @@ Then iPhone will let you pre-fill your saved password.
 3. On the next screen, you will need to enter your Wi-Fi credentials.
 <br/>
 <br/>
-<img src="/gitbook/assets/pybytes/iOS/login.jpg" alt="Pybytes iOS login" width="150" style="box-shadow: 2px 2px 8px 2px #cccccc;"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="/gitbook/assets/pybytes/iOS/loginSavedPasswords.jpg" alt="Pybytes iOS login" width="150" style="box-shadow: 2px 2px 8px 2px #cccccc;" />
+<img src="/gitbook/assets/pybytes/iOS/login.jpg" alt="Pybytes iOS login" width="200" style="padding:0px;box-shadow: 2px 2px 8px 2px #cccccc;"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="/gitbook/assets/pybytes/iOS/loginSavedPasswords.jpg" alt="Pybytes iOS login" width="200" style="padding:0px;box-shadow: 2px 2px 8px 2px #cccccc;" />
 
 4. After pressing START button, the devices should appear on the screen. I might take up to several minutes until all your devices are provisioned. The first device usually appears on the screen within one minute.
 <br/>
@@ -33,8 +33,8 @@ Then iPhone will let you pre-fill your saved password.
 <span style="background-color:#00cc96;">&nbsp;Tip:&nbsp;</span>&nbsp;The name of a device provisioned device is its Wireless MAC address.
 <br/>
 <br/>
-<img src="/gitbook/assets/pybytes/iOS/wifiSettings.jpg" alt="Pybytes iOS login" width="150" style="box-shadow: 2px 2px 8px 2px #cccccc;"/>&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="/gitbook/assets/pybytes/iOS/provisionedDevicesIOS.jpg" alt="Pybytes iOS login" width="150" style="box-shadow: 2px 2px 8px 2px #cccccc;"/>
+<img src="/gitbook/assets/pybytes/iOS/wifiSettings.jpg" alt="Pybytes iOS login" width="200" style="padding:0px;box-shadow: 2px 2px 8px 2px #cccccc;"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="/gitbook/assets/pybytes/iOS/provisionedDevicesIOS.jpg" alt="Pybytes iOS login" width="200" style="padding:0px;box-shadow: 2px 2px 8px 2px #cccccc;"/>
 5. During the devices provisioning on the desktop in Pybytes device management platform you might see the notifications about successful provisioning of your devices in the platform. You might also see the provisioned devices in the Devices section.
 <br/>
 <br/>
@@ -54,13 +54,13 @@ Then iPhone will let you pre-fill your saved password.
 <a id="faq"></a>
 ### FAQ
 
-<span style="background-color:#ffff00;">&nbsp;I can’t connect to Wi-Fi in Pybytes iOS&nbsp;</span>
+<span style="background-color:#00cc96;">&nbsp;I can’t connect to Wi-Fi in Pybytes iOS&nbsp;</span>
 
 * First, check the version of iOS that you have. If it is iOS 12 then turn off completely the Wi-Fi connection on your phone and after try to use Pybytes iOS again for connecting to Wi-Fi.
 
 * If you have a later than 12 version of iOS then check (how to check) your Wi-Fi router setting. It should run 2.4 HGz Wi-Fi network.
 
-<span style="background-color:#ffff00;">&nbsp;No devices were provisioned after 5 min.&nbsp;</span>
+<span style="background-color:#00cc96;">&nbsp;No devices were provisioned after 5 min.&nbsp;</span>
 
 * Check if your devices are charged or powered on
 
@@ -68,7 +68,7 @@ Then iPhone will let you pre-fill your saved password.
 
 * Check if no one in the same room is trying to provision with Pybytes iOS app.
 
-<span style="background-color:#ffff00;">&nbsp;How long does the provisioning take?&nbsp;</span>
+<span style="background-color:#00cc96;">&nbsp;How long does the provisioning take?&nbsp;</span>
 
 * On average, provisioning of 6 devices takes up to 2 min. But it depends on the capacity of your Wi-Fi router and some other factors.
 
