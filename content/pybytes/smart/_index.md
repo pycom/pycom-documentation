@@ -49,7 +49,7 @@ Then your iPhone will pre-fill your saved password.
 * Only use a Wi-Fi network with 2.4GHz as Pycom devices cannot connect to a 5GHz network.
 * Your device might be provisioned faster if you move your device closer to your Wi-Fi router.
 * Make sure your devices are powered on and running firmware 1.20.1 or newer.
-* You cannot provision the same devices on the different Pybytes account unless you erased them completely and flashed the latest firmware again with FW updater tool.
+* You cannot provision the same devices on the different Pybytes account unless you <a href="https://docs.pycom.io/advance/cli/#erase-all">erased them completely</a> and flashed the latest firmware again with FW updater tool.
 * If there is a spinning wheel on your screen, that means that your device is being provisioned. If it has disappeared, then press the START button again.
 * Please take into account that we are developing a new feature and therefore some niggles can occur. (Please bear with us!) If any issues occur whilst you are using Pybytes iOS, then drop us a line at <a href="mailto:support@pycom.io">support@pycom.io</a>.
 
