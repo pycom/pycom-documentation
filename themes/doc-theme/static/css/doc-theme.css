@@ -1,5 +1,6 @@
 html {
     /*font-size: 100%;*/
+    scroll-behavior: smooth;
 }
 
 /* Style the header */
@@ -122,7 +123,7 @@ a.bread:hover {
 .bread {
   font-family: 'BebasNeueBold',sans-serif;
   letter-spacing: 0.1em;
-  color: rgb(120, 0, 255)!important;
+  color: #00cc96 !important;
 }
 
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
@@ -148,7 +149,7 @@ li.lefttree > a {
 
 li.hot > a.hot {
   text-decoration: none;
-  color: #7800FF!important;
+  color: #00cc96!important;
   padding: 6px;
 
 }
@@ -245,8 +246,8 @@ nav#TableOfContents {
 
 img {
   max-width: 90%;
-  margin-left: 5%;
-  padding: 18px;
+  margin-left: 0;
+  padding: 5px;
 }
 
 [v-cloak] > * { display:none }
@@ -281,11 +282,11 @@ table td, table th {
 }
 
 .ppurple {
-  color: #7800FF;
+  color: #00cc96;
 }
 
 .pbgpurple {
-  background-color: #7800FF!important;
+  background-color: #00cc96!important;
   color: white;
 }
 
@@ -324,7 +325,7 @@ code {
 }
 
 .primary--text {
-  color: #7800FF;
+  color: #00cc96;
 }
 
 .v-window {

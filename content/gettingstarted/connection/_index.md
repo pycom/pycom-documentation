@@ -7,6 +7,8 @@ This chapter of the documentation will show you how to connect you Pycom module.
 
 {{% refname "lopy.md" %}}
 
+{{% refname "lopy4.md" %}}
+
 {{% refname "sipy.md" %}}
 
 {{% refname "gpy.md" %}}
@@ -14,4 +16,3 @@ This chapter of the documentation will show you how to connect you Pycom module.
 {{% refname "fipy.md" %}}
 
 {{% refname "wipy.md" %}}
-
