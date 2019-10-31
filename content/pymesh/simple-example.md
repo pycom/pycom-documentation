@@ -6,11 +6,11 @@ aliases:
 
 ## What is Pymesh micropython library?
 
-Pymesh micropython library is a set of scripts included (as frozen) in the Pymesh firmware binary release (not yet released).
+The Pymesh Micropython library is a set of frozen scripts in the Pymesh firmware binary release (which has not yet been released).
 
 [Open-source on github](https://github.com/pycom/pycom-libraries/tree/master/lib/pymesh)
 
-It allows users to use Pymesh in a few lines of code, as shown in the following code snippet.
+It allows users to access Pymesh in a few lines of code, as shown in the following code snippet.
 
 ```python
 
@@ -97,9 +97,9 @@ while True:
 
 ## Output
 
-An example of output is bellow.
+An example of possible output is below.
 
-At any point pressing `Enter` will try to execute CLI commands, more details are presented in [Pymesh library CLI](/pymesh/lib-cli).
+At any point pressing `Enter` will result in the attempt to execute CLI commands. More details are found in [Pymesh library CLI](/pymesh/lib-cli).
 
 ```
 

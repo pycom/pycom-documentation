@@ -20,7 +20,7 @@ _**Note: For obtaining the Pymesh firmware please follow the steps from [Pymesh 
 
 ## What does Pymesh offer you?
 
-* Ad-hoc communication network over raw-LoRa radio
+* An ad-hoc communication network over raw-LoRa radio
 * Multi-gateway (Border Routers) Nodes that connect Mesh-internal data with the Cloud
 * Each Node uses LBS - Listen Before Talk
 * Security on multiple levels

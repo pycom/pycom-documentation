@@ -8,9 +8,9 @@ aliases:
 
 This Micropython library is included as frozen scripts in the Pymesh firmware release.
 
-Code is open-sourced in [pycom-libraries repository](https://github.com/pycom/pycom-libraries/tree/master/lib/pymesh).
+The code is open-sourced in [pycom-libraries repository](https://github.com/pycom/pycom-libraries/tree/master/lib/pymesh).
 
-It is easily customisable and contributions are highly recommend using [Github PRs](https://github.com/pycom/pycom-libraries/pulls).
+It is easily customisable and contributions are welcome using [Github PRs](https://github.com/pycom/pycom-libraries/pulls).
 
 ### Main features
 
@@ -40,7 +40,7 @@ A simple example of usage is in the [main.py](https://github.com/pycom/pycom-lib
 
 ## Specifications
 
-It can be easily customised, by modifying any file from [/lib folder](https://github.com/pycom/pycom-libraries/tree/master/lib/pymesh/lib) and flashing it to the board. Automatically the uploaded file will be executed instead of the _frozen_ one, already embedded into the binary firmware.
+It can be easily customised, by modifying any file from [/lib folder](https://github.com/pycom/pycom-libraries/tree/master/lib/pymesh/lib) and flashing it to the board. The uploaded file will automatically be executed instead of the _frozen_ one, which is already embedded into the binary firmware.
 
 ### Structure
 
@@ -55,9 +55,9 @@ It can be easily customised, by modifying any file from [/lib folder](https://gi
     * setting BLE server
 * auxiliary files:
   * `pymesh-debug.py`
-    * debugging on levels, allowing dynamically changing debug level
+    * debugging on multiple levels, allowing dynamically changing the current debug level
   * `pymesh-config.py`
-    * reading/writing Pymesh configuration file
+    * reading/writing the Pymesh configuration file
   * `gps.py`
     * maintaining location coordinates, as an extension `Pytrack` GPS can be used
 * Mesh internals
