@@ -6,9 +6,9 @@ aliases:
 
 ## Overview
 
-The Pymesh micropython library is included as frozen in the Pymesh firmware releases.
+The Pymesh micropython library is included as a `frozen python script` in the Pymesh firmware releases.
 
-Instead of REPL, a specific Pymesh CLI is interpreting commands and it is recognised, by starting with `>`.
+Instead of REPL, a specific Pymesh CLI interprets commands. This is shown by `>`.
 
 The CLI is executed on a separate thread inside the Pymesh library.
 
@@ -25,10 +25,10 @@ List of available commands
 ip - display current IPv6 unicast addresses
 mac - set or display the current LoRa MAC address
 self - display all info about current node
-mml - display the Mesh Mac List (MAC of all nodes inside this Mesh), also inquires Leader
-mp - display the Mesh Pairs (Pairs of all nodes connections), also inquires Leader
+mml - display the Mesh Mac List (MAC of all nodes inside this Mesh)
+mp - display the Mesh Pairs (pairs of all nodes connections)
 s - send message
-ws - verifies if message sent was acknowledged
+ws - verifies if the message sent was acknowledged
 rm - verifies if any message was received
 sleep - deep-sleep
 br - enable/disable or display the current Border Router functionality
@@ -75,7 +75,7 @@ deepsleep_init
 Cleanup code, all Alarms cb should be stopped
 Going to deepsleep for 10 seconds
 ```
-This puts the device in deepsleep for designated number of seconds.
+This puts the device into deepsleep for a designated number of seconds.
 
 ```
 >buf
@@ -110,20 +110,22 @@ This executes an Openthread CLI command. The list of CLI commands is [here](http
 >mac
 1
 ```
-This shows LoRa MAC, this address is used as unique identifier in the Pymesh. Bellow there's a section on how to set MAC specific MAC address (useful for debugging, the MAC could be consecutive small numbers like `0x1`, `0x2`, `...`)
+This shows the LoRa MAC or sets it to a known value. This address is used as a unique identifier within the Pymesh.
+
+This can be useful for debugging and the MAC could be set to  consecutive small numbers, such as `0x1`, `0x2`, ...
 
 ```
 >mml
 mesh_mac_list  [1, 6, 2]
 ```
-This shows the list of all MAC Nodes attached to Pymesh. It inquires Leader, which centralises this data.
+This shows the list of all MAC Nodes attached to Pymesh. It inquires the Leader, which centralises this data.
 
 ```
 >mp
 Send pack: 0xF3 to IP fdde:ad00:beef:0:0:ff:fe00:fc00
 last_mesh_pairs [[2, 6, -87], [1, 6, -77]]
 ```
-This shows Mesh Pairs list, with each direct connected nodes (by their MAC address) and the averaged RSSI value.
+This shows the Mesh Pairs list. It lists each directly connected node (by their MAC address) and the averaged RSSI value.
 
 ```
 >mni
@@ -143,7 +145,7 @@ True
 PACK_MESSAGE_ACK received
 1945883 =================  ACK RECEIVED :) :) :)
 ```
-This sends text messages to another Node inside Pymesh. The messaging waits for acknowledgement (ACK message type) from the destination node.
+This sends text messages to another Node within the Pymesh. The messaging node waits for acknowledgement (ACK message type) from the destination node.
 
 ```
 >ws
@@ -151,7 +153,7 @@ This sends text messages to another Node inside Pymesh. The messaging waits for 
 ACK? mac 1, id 12345 => 1
 True
 ```
-This shows if a message was acknowledged by the destination Node.
+This shows if the message was acknowledged by the destination Node.
 
 ```
 >rm
@@ -197,7 +199,7 @@ BR:  [(net='2001:cafe:cafe:cafe::/64', preference=0)]
 (state 0=Disable, 1=Enable, 2=Display [Default Display])<
 Border Router state:  [(net='2001:cafe:cafe:cafe::/64', preference=0)]
 ```
-This enables/disables and shows the state of the current node as Border Router.
+This enables/disables the Border Router functionality of the current node. It also shows the state of the current node as Border Router.
 
 ```
 >brs
@@ -207,4 +209,4 @@ brs
 (port destination [Default: 5555])<
 Send BR message: {'ip': '1:2:3::4', 'b': '', 'port': 5555}
 ```
-This sends a packet to an IP address external of the Pymesh. This packet will be received by the designated Border Router and it can be further forwarded to another network interface, like: BLE, Wifi, Sigfox or Cellular (Fipy only).
+This sends a packet to an external IP address, outside of the Pymesh. The packet will be received by the designated Border Router and it can be further forwarded to another network interface, such as: BLE, Wifi, Sigfox or Cellular (Fipy only).

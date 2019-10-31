@@ -28,11 +28,11 @@ This sets the location coordinates.
 
 #### get_mesh_mac_list()
 
-This returns list of distinct MAC address that are in this mesh network, for example `[mac1, mac2, mac 3]`.`
+This returns the list of distinct MAC address that are within this mesh network, for example `[mac1, mac2, mac 3]`.`
 
 #### get_mesh_pairs()
 
-This returns list of pairs that is a mesh connection, as shown bellow:
+This returns the list of pairs that form a mesh connection, as shown bellow:
 
 ```
 [
@@ -69,7 +69,7 @@ This returns the node data for a specified mac address, or own data id `mac_id` 
 
 #### send_message(data)
 
-This sends a message with another node. It return True if there is buffer to store it (to be sent).
+This sends a message to another node. It return True if there is a buffer to store it (to be sent onwards).
 
 `data` is a dictionary with the following structure:
 ```
@@ -84,11 +84,11 @@ This sends a message with another node. It return True if there is buffer to sto
 
 #### send_message_was_sent(mac, msg_id)
 
-This checks if acknowledge was received for the specified `mac` and `msg_id`. It returns `True` if message was delivered.
+This checks if acknowledgement was received from the specified  `mac` and `msg_id`. It returns `True` if message was delivered.
 
 #### receive_message()
 
-This returns the received messages, in a dictionary with the next structure:
+This returns the received messages, in a dictionary with the following structure:
 ```
 {
   'b': 'text',
