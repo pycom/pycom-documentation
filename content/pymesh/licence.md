@@ -10,15 +10,15 @@ In order to receive access to the Pymesh firmware releases (for Lopy4, Fipy, L01
 <!-- <a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy4_v2.pdf" target="\_blank"> the Pymesh LICENCE PDF document </a> -->
 
 1. Complete the Pymesh LICENCE PDF document(not yet available), sign it and send us by [this email](mailto:catalin@pycom.io?subject=[Pymesh_LICENCE]).
-1. You will receive on email an archive containing the images for all boards.
-1. Extract the corresponding image, for example Lopy4.tar.gz, and upload the firmware to your board, using the [Pycom Firmware Update Tool](https://pycom.io/downloads/), like in the following image:
+1. You will receive by email an archive containing the images for all boards.
+1. Extract the corresponding image, for example Lopy4.tar.gz, and upload the firmware to your board, using the [Pycom Firmware Update Tool](https://pycom.io/downloads/), similar in the following image:
 <img src="/gitbook/assets/pymesh/pymesh_firmware_update.png" alt="Pymesh Firmware Update" width="500"/>
 
 ## Test Pymesh firmware loading
 
 ### Method 1
 
-The simplest method to check if Pymesh class is successfully installed, just try this code directly in REPL:
+The simplest way to check if the Pymesh class has been successfully installed is to try the following code, directly in REPL:
 
 ```python
 >>> from network import LoRa
@@ -36,7 +36,7 @@ Q: **I've received an error, such as `(LoadProhibited). Exception was unhandled.
 
 A: In some cases, the NVM partition needs to be formatted. For this a format of whole Flash Memory should be performed.
 
-This can be done using the cli version of the Firmware Update Tool, so please navigate where this app was installed (search for pycom-fwtool-cli executable) and execute:
+This can be done using the cli version of the `Firmware Update Tool`, so please navigate where the app was installed (search for pycom-fwtool-cli executable) and execute:
 ```
 pycom-fwtool-cli -p <PORT> erase_all
 ```
@@ -45,4 +45,4 @@ pycom-fwtool-cli -p <PORT> erase_all
 
 * on Windows `COM10`
 * on Linux `/dev/ttyACM0`
-* on MacOS ``/dev/tty.usbmodemPy8eaa911`
+* on MacOS `/dev/tty.usbmodemPy8eaa911`

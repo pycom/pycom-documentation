@@ -9,19 +9,19 @@ aliases:
 
 ## Overview
 
-The Border Router role, of a Node inside Pymesh, takes the traffic from the Pymesh and forwards it to the Cloud (Pymesh-external).
+Any node inside of the Pymesh can take on the role as a Border Router, which takes the traffic from the Pymesh and forwards it to the Cloud (Pymesh-external).
 
 Several things must be accomplished:
 
-* The BR node should have connection with the Cloud, using another network interface (than LoRa-Pymesh), for example: BLE, Wifi or Cellular.
-* The node has to be declared as BR, so all the other nodes send packets to it, with destination Cloud.
-* Dynamically multiple nodes can be BR, each of them having different priorities levels (Normal, High or Low)
- * The BR with the smallest routing cost is chosen.
- * If multiple BR have the same routing cost, the priority level is used.
+* The Border Router node should have connection with the Cloud. This should occur using another network interface (other than LoRa-Pymesh), for example: BLE, Wifi or Cellular.
+* The node has to be declared as a Border Router, so that all the other nodes send packets to it. The final destination is the Cloud.
+* To add flexibility, at runtime (dynamically), multiple nodes can act as Border Routers. Each of them can have different priority levels (Normal, High or Low).
+ * The Border Router with the smallest routing cost is selected.
+ * If multiple Border Routers have the same routing cost, then the priority level is used.
 
 ## Border Router using CLI
 
-As explained in [Pymesh CLI - Border Router section](pymesh/lib-cli/#border-router-specific), using commands `br` and `brs`, a simple testing scenario can be easily implemented.
+As explained in [Pymesh CLI - Border Router section](pymesh/lib-cli/#border-router-specific), using commands `br` and `brs`, a simple test scenario can be easily implemented.
 
 ## Border Router using Pymesh API
 
@@ -54,14 +54,14 @@ pymesh.send_mess_external(ip, port, "Hello World")
 
 Internally, the Border Router mechanism is implemented with the following steps:
 
-* declare the BR network address prefix, like `2001:dead:beef:cafe::/64`
-* this piece of information is sent to the `Leader` and the dataset will increase version (it will be updated)
-* the dataset is propagated to all Pymesh nodes
-* all the nodes will be assigned a random IPv6 unicast address with this network prefix (like `2001:dead:beef:cafe:1234:5678:9ABC:DEF0`)
-* if a node sends data to an IPv6 which is external (it doesn't have prefix from Pymesh already existent networks, like `1:2:3::4`), this UDP datagram will be routed to the BR
- * this UDP packet will have as source the random IPv6 from BR network address
-* BR will receive the UDP datagrams for external with an appended header, which contains:
+* Declare the Border Router network address prefix, for example `2001:dead:beef:cafe::/64`
+* The network address prefix is then sent to the `Leader` and the dataset will increase the version, meaning that it will be updated.
+* The dataset is propagated to all Pymesh nodes.
+* All the nodes will be assigned a random IPv6 unicast address with this network prefix (for example `2001:dead:beef:cafe:1234:5678:9ABC:DEF0`)
+* If a node sends data to an IPv6 which is external (meaning it doesn't have a prefix from already existent networks in Pymesh, for example `1:2:3::4`), then the UDP datagram will be routed to the Border Router
+ * This UDP packet will have as source the random IPv6 from BR network address
+* The Border Router will receive the external UDP datagrams with an appended header, which contains:
  * MAGIC byte: `0xBB`
  * IPv6 destination as bytearray (16 bytes)
  * port destination as 2 bytes (1-65535 values).
-* the IPv6 destination is important so BR could actually route (forward) the UDP datagram content to the right interface (Wifi/BLE/cellular).
+* The IPv6 destination is important, because it means that the Border Router can route (forward) the UDP datagram content to the correct interface (Wifi/BLE/cellular).
