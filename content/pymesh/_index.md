@@ -14,7 +14,9 @@ A Mesh network acts like a net, this means that any node within the network can 
 
 Mesh networks essentially get rid of gateways, which decentralises the network's infrastructure. This then means that the network becomes flexible, so it can do many wonderful things – such as generate, change and fix itself. The success of the Mesh network is down to its parts, as any node within the network will automatically connect to the best radio-link available.
 
-Pymesh solution works on all of our LoRa supporting development boards, the LoPy4 and FiPy as well as on our OEM modules, L01 and L04.
+Pymesh works on all of our LoRa supporting development boards, the LoPy4 and FiPy as well as on our OEM modules, L01 and L04.
+
+_**Note: For obtaining the Pymesh firmware please follow the steps from [Pymesh LICENCE page](/pymesh/licence).**_
 
 _**Note: For obtaining the Pymesh firmware please follow the steps from [Pymesh LICENCE page](/pymesh/licence).**_
 
