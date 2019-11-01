@@ -44,7 +44,7 @@ This returns the list of pairs that form a mesh connection, as shown bellow:
 
 #### get_node_info(mac_id = ' ')
 
-This returns the node data for a specified mac address, or own data id `mac_id` is not specified. Node data is dictionary with the following structure:
+This returns the node data for a specified mac address, or own data if `mac_id` is not specified. Node data is dictionary with the following structure:
 ```        
 {
     'ip': 4c00,   # last 2bytes from the ip v6 RLOC16 address
