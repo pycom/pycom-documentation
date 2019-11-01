@@ -9,7 +9,7 @@ aliases:
 In order to receive access to the Pymesh firmware releases (for Lopy4, Fipy, L01 or L04), the next process should be followed:
 <!-- <a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy4_v2.pdf" target="\_blank"> the Pymesh LICENCE PDF document </a> -->
 
-1. Complete the Pymesh LICENCE PDF document(not yet available), sign it and send us by [this email](mailto:catalin@pycom.io?subject=[Pymesh_LICENCE]).
+1. Complete the <a href="/gitbook/assets/pymesh/Pymesh_Licence_Copyright_Notice.pdf" target="\_blank"> the Pymesh LICENCE PDF document </a>, sign it and send us by [this email](mailto:catalin@pycom.io?subject=[Pymesh_LICENCE]).
 1. You will receive by email an archive containing the images for all boards.
 1. Extract the corresponding image, for example Lopy4.tar.gz, and upload the firmware to your board, using the [Pycom Firmware Update Tool](https://pycom.io/downloads/), similar in the following image:
 <img src="/gitbook/assets/pymesh/pymesh_firmware_update.png" alt="Pymesh Firmware Update" width="500"/>
