@@ -4,6 +4,10 @@ aliases:
   - pymesh/simple-example
 ---
 
+## Overview
+
+Pymesh mobile application is available [here for both iOS and Android platforms](https://github.com/pycom/pycom-libraries/tree/master/pymesh/mobile_app). Using it, users can connect over BLE with a Pymesh node and find out network information.
+
 ## RPC protocol
 
 It is implemented in [ble_rpc.py](https://github.com/pycom/pycom-libraries/blob/master/lib/pymesh/lib/ble_rpc.py).

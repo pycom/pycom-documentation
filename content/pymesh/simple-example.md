@@ -6,11 +6,13 @@ aliases:
 
 ## What is Pymesh micropython library?
 
-The Pymesh Micropython library is a set of frozen scripts in the Pymesh firmware binary release (which has not yet been released).
+The Pymesh Micropython library is a set of frozen scripts in the Pymesh firmware binary release.
 
-[Open-source on github](https://github.com/pycom/pycom-libraries/tree/master/lib/pymesh)
+[Open-source on github](https://github.com/pycom/pycom-libraries/tree/master/pymesh/pymesh_frozen)
 
 It allows users to access Pymesh in a few lines of code, as shown in the following code snippet.
+
+Additionally, users could install the Pymesh mobile application, which is available [here for both iOS and Android platforms](https://github.com/pycom/pycom-libraries/tree/master/pymesh/mobile_app). Using it, users can connect over BLE with a Pymesh node and find out network information.
 
 ```python
 
