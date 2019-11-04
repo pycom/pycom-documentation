@@ -6,7 +6,7 @@ aliases:
 
 ## Overview
 
-Pymesh mobile application is available [here for both iOS and Android platforms](https://github.com/pycom/pycom-libraries/tree/master/pymesh/mobile_app). It can be used to connect over BLE to a Pymesh node. It also allows users to find out network information.
+The Pymesh mobile application is available [here for both iOS and Android platforms](https://github.com/pycom/pycom-libraries/tree/master/pymesh/mobile_app). It can be used to connect over BLE to a Pymesh node. It also allows users to find out network information.
 
 ## RPC protocol
 
