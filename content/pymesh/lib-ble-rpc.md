@@ -4,6 +4,10 @@ aliases:
   - pymesh/simple-example
 ---
 
+## Overview
+
+The Pymesh mobile application is available [here for both iOS and Android platforms](https://github.com/pycom/pycom-libraries/tree/master/pymesh/mobile_app). It can be used to connect over BLE to a Pymesh node. It also allows users to find out network information.
+
 ## RPC protocol
 
 It is implemented in [ble_rpc.py](https://github.com/pycom/pycom-libraries/blob/master/lib/pymesh/lib/ble_rpc.py).
@@ -44,7 +48,8 @@ This returns the list of pairs that form a mesh connection, as shown bellow:
 
 #### get_node_info(mac_id = ' ')
 
-This returns the node data for a specified mac address, or own data if `mac_id` is not specified. Node data is dictionary with the following structure:
+This returns the node data for a specified MAC address, or returns own data if the `mac_id` is not specified. The node data is given as a dictionary with the following structure:
+
 ```        
 {
     'ip': 4c00,   # last 2bytes from the ip v6 RLOC16 address
