@@ -20,7 +20,7 @@ lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868,
     frequency = 863000000, bandwidth=LoRa.BW_125KHZ, sf=7)
 
 print("Enable Pymesh")
-pymesh = lora.Pymesh()
+pymesh = lora.Mesh()
 
 # check node state inside Pymesh
 # PYMESH_ROLE_DISABLED = 0, ///< The Pymesh stack is disabled.
@@ -39,9 +39,9 @@ For various other Pymesh examples, check the [Pymesh Chapter](/pymesh).
 
 ## Constructor
 
-#### class network.LoRa.Pymesh(\*, key=masterkey)
+#### class network.LoRa.Mesh(\*, key=masterkey)
 
-This constructor `network.LoRa.Pymesh()` creates and configures the Pymesh object.
+This constructor `network.LoRa.Mesh()` creates and configures the Pymesh object.
 
 By default, the key is `0134C0DE1AB51234C0DE1AB5CA1A110F`.
 
@@ -53,7 +53,7 @@ from network import LoRa
 
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 masterkey = ubinascii.unhexlify("112233")
-pymesh = lora.Pymesh(key=masterkey)
+pymesh = lora.Mesh(key=masterkey)
 
 # as test, the masterkey can be printed
 >>> print("masterkey:", pymesh.cli("masterkey"))
@@ -65,7 +65,7 @@ masterkey: 11223300000000000000000000000000
 #### pymesh.deinit()
 
 This destroys the Pymesh task. Any further Pymesh commands will return no answer.
-To recreate the Pymesh, use the `LoRa.Pymesh()` constructor.
+To recreate the Pymesh, use the `LoRa.Mesh()` constructor.
 
 ```python
 
