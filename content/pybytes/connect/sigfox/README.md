@@ -41,4 +41,3 @@ Read more how to use Sigfox with [devKit contract](devkit).
 Read more how to use Sigfox with [Custom contract](devkit).
 
 {{% refname "custom.md" %}}
-
