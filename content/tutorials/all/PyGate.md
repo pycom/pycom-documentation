@@ -259,3 +259,127 @@ To stop the Pygate at any time use:
 - using deinit function `machine.pygate_deinit()`
 
 that will stop GW tasks and safely power off the Concentrator.
+
+
+__Note__: The Pygate packet forwarder is a legacy packet forwarder, you must make sure you use check legacy packet forwarder option in TTN as shown below.
+
+![alt_text](https://wiki.dragino.com/images/c/c6/TTN_Create_Gateway_0.png)
+
+
+## Pygate APIs
+
+###machine Module
+
+#### machine.pygate\_init([buff])
+
+This function is used to initialize Pygate 
+
+- `buff`: data contents of gateway global config json file
+
+when no parameter is passed to function the Pygate is just powered on. (will be useful when using pygate as just a concentrator controllable via uart by another device eg. RPi)
+
+#### machine.pygate\_deinit()
+
+Shuts down concentrator.
+
+#### machine.pygate\_cmd\_decode(buff)
+
+send lora gateway command to concentrator, this is useful when packet forwarder / HAL software is run on a different device (eg. Rpi) and commands to concentrator are passed to Pygate via uart
+
+#### machine.pygate\_cmd\_get()
+
+Get command execution result from concentrator.
+
+Example script when running Packet forwarder sw on a different device:
+
+```python
+from machine import UART
+import machine
+import time
+import os
+import gc
+
+machine.pygate_init(None)
+time.sleep(3)
+
+uart = UART(1, 115200, timeout_chars=40, pins=('P23', 'P22'))
+
+while True:
+    if uart.any():
+        rx_data = uart.read()
+        machine.pygate_cmd_decode(rx_data)
+        tx_data =  machine.pygate_cmd_get()
+        l = uart.write(tx_data)
+    else:
+        time.sleep_us(10)
+```
+
+#### machine.callback(trigger, handler=None, arg=None)
+
+- `trigger`: A trigger event(s) for invoking the callback function `handler`, the triggers/events are:
+
+	`machine.PYGATE_START_EVT`
+
+	`machine.PYGATE_STOP_EVT`
+
+	`machine.MP_QSTR_PYGATE_ERROR_EVT`
+
+- `handler`: The callback function to be called, when not passed to function the any pre-registered callback will be disabled/removed
+
+- `arg`: Optional arg to be bassed to callback function.
+
+#### machine.events()
+
+Get the pygate events
+
+
+
+## Pygate Ethernet adapter APIs
+
+`network.ETH` module
+
+### ETH.init(hosname=None)
+
+This function starts Ethernet interface and enables the ethernet adapter.
+
+`hostname`: set the interface hostname.
+
+### ETH.	ifconfig(config=\['dhcp' or configtuple\])
+
+With no parameters given returns a 4-tuple of (ip, subnet_mask, gateway, DNS_server).
+
+If dhcp is passed as a parameter then the DHCP client is enabled and the IP params are negotiated with the dhcp server.
+
+If the 4-tuple config is given then a static IP is configured. For instance:
+
+`eth.ifconfig(config=('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))`
+
+### ETH.hostname(string)
+
+Set interface host name.
+
+### ETH.mac()
+
+Get the ethernet interface mac address.
+
+### ETH.deinit()
+
+shuts down ethernet interface.
+
+### ETH.isconnected(Bool)
+
+Returns `True` if the ethernet if link is up and IP is accquired, `Fasle` otherwise
+
+### ETH.register(reg, cmd, value)
+
+Write/Read specific register from/to the ksz8851 ethernet controller
+
+`cmd`: 0 to read , 1 to write
+
+Ex: to read register 0x90
+
+`eth.register(0x90,0)`
+
+to write:
+
+`eth.register(0x90, 1, 0x0000)`
