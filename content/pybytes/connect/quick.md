@@ -8,7 +8,7 @@ aliases:
 
 In this section, we explain to you how to connect your device to Pybytes quickly using the Firmware Updater tool.
 
-### 1. Download Pycom Firmware Updater tool
+### Download Pycom Firmware Updater tool
 
 1. At the final step of the "Add Device" process, you can download and install the [Pycom Firmware Updater tool](https://pycom.io/downloads/)).
 ![](/gitbook/assets/pybytes/add-device/connect-your-device-component.png)
@@ -16,7 +16,7 @@ In this section, we explain to you how to connect your device to Pybytes quickly
 1. Copy the activation token by pressing the Copy button. The activation token is valid for one hour. If your activation token has expired, you can create a new one.
 
 
-### 2. Flash Pybytes firmware with Pycom Firmware Updater tool
+### Flash Pybytes firmware with Pycom Firmware Updater tool
 
 #### Before you start
 * Connect your device to the computer
