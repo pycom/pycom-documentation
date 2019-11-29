@@ -25,8 +25,9 @@ MDNS.add_service("_http", MDNS.PROTO_TCP, 80)
 # Add an UDP service to advertise
 MDNS.add_service("_myservice", MDNS.PROTO_UDP, 1234, txt= (("board","esp32"),("u","user"),("p","password")))
 
-# Wait some time
+# Give the other devices time to discover the services offered
 time.sleep(60)
+
 # Remove a service, it will no longer be advertised
 MDNS.remove_service("_http", MDNS.PROTO_TCP)
 
@@ -70,7 +71,7 @@ Deinitializes the MDNS module and removes all registered services.
 
 #### MDNS.set_name(\*, hostname=None, instance_name=None)
 
-Sets the hostname and instance name of this device to be advertised.
+Sets the hostname and instance name of the device that is going to be advertised.
 
 The arguments are:
 
