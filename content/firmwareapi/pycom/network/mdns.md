@@ -25,10 +25,9 @@ MDNS.add_service("_http", MDNS.PROTO_TCP, 80)
 # Add an UDP service to advertise
 MDNS.add_service("_myservice", MDNS.PROTO_UDP, 1234, txt= (("board","esp32"),("u","user"),("p","password")))
 
-
-# Wait some time and remove 1 service
+# Wait some time
 time.sleep(60)
-# Remove a service, it will not be advertised
+# Remove a service, it will no longer be advertised
 MDNS.remove_service("_http", MDNS.PROTO_TCP)
 
 ```
@@ -46,7 +45,7 @@ MDNS.init()
 # Perform a query for 2000 ms
 q = MDNS.query(2000, "_http", MDNS.PROTO_TCP)
 
-# Print out query's result
+# Print out the query's result
 if q is not None:
     for elem in q:
         print(elem.instance_name())
@@ -73,7 +72,7 @@ Deinitializes the MDNS module and removes all registered services.
 
 Sets the hostname and instance name of this device to be advertised.
 
-Arguments are:
+The arguments are:
 
 * `hostname` is the hostname to set
 * `instance_name` is the instance name to set
@@ -82,43 +81,43 @@ Arguments are:
 
 Adds a service to the MDNS module which will be advertised.
 
-Arguments are:
+The arguments are:
 
-* `service_type` is the type of the offered service, e.g.: _http, _ftp or can be custom.
+* `service_type` is the type of the offered service, e.g.: _http, _ftp or can be custom service
 * `proto` is the Layer 4 protocol (TCP or UDP), can be `MDNS.PROTO_TCP` or `MDNS.PROTO_UDP`
 * `port` is the port number
-* `txt` is the TXT entries to be placed into the advertisement. The TXT entry is a (key, value) tuple, several TXT entries can be included in an advertisement, in that case this must be given as a list of tuples.
+* `txt` is the TXT entries to be placed into the advertisement. The TXT entry is a (key, value) tuple and several TXT entries can be included in an advertisement. In that case, 'txt' must be given as a list of tuples.
 
 #### MDNS.remove_service(service_type, proto)
 
 Removes a service from the MDNS module so it will not be advertised anymore.
 
-Arguments are:
+The arguments are:
 
-* `service_type` is the type of the service, e.g.: _http, _ftp or can be custom.
+* `service_type` is the type of the service, e.g.: _http, _ftp or can be custom service
 * `proto` is the Layer 4 protocol (TCP or UDP), can be `MDNS.PROTO_TCP` or `MDNS.PROTO_UDP`
 
 #### MDNS.query(timeout, service_type, proto, \*, instance_name=None)
 
 Performs a query with the given parameters.
 
-Arguments are:
+The arguments are:
 
-* `timeout` is the timeout value in miliseconds to be waited for the results
-* `service_type` is the type of the service to be queried, e.g.: _http, _ftp or can be custom.
+* `timeout` is the timeout value in milliseconds to wait to receive the results
+* `service_type` is the type of the service to be queried, e.g.: _http, _ftp or can be custom service
 * `proto` is the Layer 4 protocol (TCP or UDP), can be `MDNS.PROTO_TCP` or `MDNS.PROTO_UDP`
 * `instance_name` is the instance name of the service to be queried
 
-If service found, the function returns with List of `MDNS_Query` objects.
+If the service is found then the function returns with a list of `MDNS_Query` objects.
 
 ## MDNS_Query class
 
-The `MDNS_Query` aggregates all the properties of an entry of a successfull query session:
+The `MDNS_Query` aggregates all of the properties of a successful query session entry:
 * `hostname` is the hostname of the host advertising the service
 * `instance_name` is the instance_name of the service
 * `addr` is the IPv4 address belonging to the service
 * `port` is the port number belonging to the service
-* `txt`is the TXT entries from the advertisement. The TXT entry is a (key, value) tuple, several TXT entries can be included in an advertisement.
+* `txt` is the TXT entries from the advertisement. The TXT entry is a (key, value) tuple, and several TXT entries can be included in an advertisement.
 
 #### MDNS_Query.hostname()
 
