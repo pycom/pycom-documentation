@@ -1160,18 +1160,11 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-    name = "Connect to Pybytes: Quick Add"
+    name = "Provisioning via USB"
     url = "/pybytes/connect/quick/"
     identifier = "pybytes@connect@quick"
     parent = "pybytes@connect"
     weight = 10
-
-[[menu.main]]
-    name = "Connect to Pybytes: Flash Pybytes library manually"
-    url = "/pybytes/connect/flash/"
-    identifier = "pybytes@connect@flash"
-    parent = "pybytes@connect"
-    weight = 20
 
 [[menu.main]]
     name = "Add Sigfox device"

@@ -32,8 +32,6 @@ At the end of the "Add Device" wizard, Pybytes will show that your device profil
 
 ![](/gitbook/assets/pybytes/add-device/final-step.png)
 
-Select how you would like to connect your device to Pybytes:
 
-1. **[Connect your device quickly](quick) (Recommended)**
-
-2. [Connect your device by flashing Pybytes Library](flash) (only if you want to customize Pybytes library code).
+## Next step
+[Provision your device via USB](quick)
