@@ -1167,24 +1167,24 @@ theme = "doc-theme"
     weight = 10
 
 [[menu.main]]
-    name = "Add Sigfox device"
-    url = "/pybytes/connect/sigfox/"
-    identifier = "pybytes@connect@sigfox"
-    parent = "pybytes@connect"
+    name = "Sigfox"
+    url = "/pybytes/sigfox/"
+    identifier = "pybytes@sigfox"
+    parent = "pybytes"
     weight = 30
 
 [[menu.main]]
     name = "DevKit contract"
-    url = "/pybytes/connect/sigfox/devkit/"
-    identifier = "pybytes@connect@sigfox@devkit"
-    parent = "pybytes@connect@sigfox"
+    url = "/pybytes/sigfox/devkit/"
+    identifier = "pybytes@sigfox@devkit"
+    parent = "pybytes@sigfox"
     weight = 10
 
 [[menu.main]]
     name = "Custom contract"
-    url = "/pybytes/connect/sigfox/custom/"
-    identifier = "pybytes@connect@sigfox@custom"
-    parent = "pybytes@connect@sigfox"
+    url = "/pybytes/sigfox/custom/"
+    identifier = "pybytes@sigfox@custom"
+    parent = "pybytes@sigfox"
     weight = 20
 
 [[menu.main]]

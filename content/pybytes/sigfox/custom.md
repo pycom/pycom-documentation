@@ -30,7 +30,7 @@ and select Sigfox device type which is associated with Sigfox custom contract.
    2. Paste your device token to firmware updater
 
 {{% hint style="info" %}}
-Detailed steps which are same for all devices are [**described here**](../../quick).
+Detailed steps which are same for all devices are [**described here**](/pybytes/connect/quick).
 {{% /hint %}}
 
 After your device was flashed with Pybytes firmware in automatically start adding itself to Sigfox backend.
