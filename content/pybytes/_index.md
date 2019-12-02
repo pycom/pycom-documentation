@@ -4,7 +4,7 @@ aliases:
   - pybytes/introduction
 ---
 
-[![pybytes](/gitbook/assets/pybytes/introduction/pybytes_logo.png)](https://pybytes.pycom.io/?utm_source=docs&utm_medium=web&utm_campaign=pybytes-introduction)
+![pybytes](/gitbook/assets/pybytes/introduction/pybytes_logo.png)
 
 ## What is Pybytes?
 

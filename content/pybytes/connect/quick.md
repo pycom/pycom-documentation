@@ -1,5 +1,5 @@
 ---
-title: "Connect the device to Pybytes"
+title: "Provisioning via USB"
 aliases:
     - pybytes/connect/quick.html
     - pybytes/connect/quick.md

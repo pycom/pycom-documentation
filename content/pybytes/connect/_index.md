@@ -25,10 +25,5 @@ Go to the *Devices* page in Pybytes:
 1. At the end of the *Add Device* wizard, Pybytes will show that your device profile was successfully created.
 ![](/gitbook/assets/pybytes/add-device/final-step.png)
 
-## Step 2: Configure your device
-
-There are two options for connecting your device to Pybytes:
-
-1. **Recommended:** [Connect your device quickly with the help of the Firmware Updater](quick)
-
-1. [Connect your device by flashing Pybytes Library](flash) (only if you want to customize Pybytes library code).
+## Next step
+[Provision your device via USB](quick)

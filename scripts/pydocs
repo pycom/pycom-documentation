@@ -1,0 +1,106 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+const program = require('commander');
+const { execSync } = require('child_process');
+const Octokit = require('@octokit/rest');
+const fs = require('fs');
+const path = require('path');
+const inquirer = require('inquirer');
+
+const githubTokenRaw = fs.readFileSync(path.resolve(__dirname, 'githubToken.json'));
+const GITHUB_TOKEN = JSON.parse(githubTokenRaw).githubToken;
+const currentBranch = execSync('git rev-parse --abbrev-ref HEAD').toString().replace(/(\r\n|\n|\r)/gm, '');
+const repositoryName = 'pycom-documentation';
+
+/**
+ * It runs a shell command returning stdout and stderr, if any
+ * @param  {string} command one or more commands that can be run in a shell
+ * @return {object}         stdout and stderr
+ */
+async function runShellCommand(command) {
+    let stdout;
+    let stderr;
+    try {
+        console.log(`${command}...`);
+        ({ stdout, stderr } = await exec(command, { cwd: this.localDir }));
+        return { stdout, stderr };
+    } catch (e) {
+        return { stdout: e.stdout, stderr: e.stderr };
+    }
+}
+
+async function createReviewRequest(octokit, pullNumber, repo, reviewer) {
+    return octokit.pulls.createReviewRequest({
+        owner: 'pycom',
+        repo,
+        pull_number: pullNumber,
+        reviewers: [reviewer],
+    });
+}
+
+program
+    .command('pr <reviewer>')
+    .description('Create two PRs from your current branch to base branches: publish and development-publish')
+    .action(async (reviewer) => {
+        const answers = await inquirer.prompt([
+            {
+            type: 'input',
+            name: 'prTitle',
+            message: "Please enter the title of your PR:"
+            },
+            {
+                type: 'input',
+                name: 'prDescription',
+                message: "Please enter the description of your PR:"
+            }
+        ]);
+
+        const octokit = new Octokit({ auth: GITHUB_TOKEN });
+
+        const { data: dataDev } = await octokit.pulls.create({
+            owner: 'pycom',
+            repo: repositoryName,
+            title: answers.prTitle,
+            body: answers.prDescription,
+            head: currentBranch,
+            base: 'publish',
+        });
+        console.log('created PR against develop branch:', dataDev.url);
+
+        try {
+            const { data: reviewDev } = await createReviewRequest(octokit, dataDev.number, repositoryName, reviewer);
+            console.log(`review for #${dataDev.number} requested review from: ${reviewDev.requested_reviewers[0].login}`);
+        } catch (e) {
+            console.log(e);
+            console.error('Failed to create add reviewer to your PR, maybe you used a wrong reviewer name?');
+        }
+
+        const { data: dataMaster } = await octokit.pulls.create({
+            owner: 'pycom',
+            repo: repositoryName,
+            title: answers.prTitle,
+            body: answers.prDescription,
+            head: currentBranch,
+            base: 'development-publish',
+        });
+        console.log('created PR against master branch:', dataMaster.url);
+
+        try {
+            const { data: reviewMaster } = await createReviewRequest(octokit, dataMaster.number, repositoryName, reviewer);
+            console.log(`review for #${dataMaster.number} requested review from: ${reviewMaster.requested_reviewers[0].login}`);
+        } catch (e) {
+            console.log(e);
+            console.error('Failed to create add reviewer to your PR, maybe you used a wrong reviewer name?');
+        }
+    });
+
+if (process.argv.length === 2) {
+    program.help();
+    process.exit(1);
+}
+
+program.parse(process.argv);
