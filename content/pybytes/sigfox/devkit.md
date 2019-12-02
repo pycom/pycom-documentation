@@ -12,7 +12,7 @@ But every device you want to add to Pybytes you need register on Sigfox backend.
 
 After you add your Sigfox credentials to Pybytes you can see DevKit contract type is selected as default (on page Settings → Sigfox API).
 
-![](/gitbook/assets/pybytesdevkit%20%281%29.png)
+![](/gitbook/assets/pybytes/sigfox/pybytesdevkit.png)
 
 ## Add your device to Pybytes
 
@@ -33,7 +33,7 @@ Now you should see sigfox status component.
 
 Click on _Check Sigfox status_ button
 
-![](/gitbook/assets/devkitcheck.png)
+![](/gitbook/assets/pybytes/sigfox/devkitcheck.png)
 
 You should see two green lights.
 
