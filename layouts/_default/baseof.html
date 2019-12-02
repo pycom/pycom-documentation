@@ -15,7 +15,6 @@
   <link rel="icon" href="/favicon.ico">
 </head>
 <body>
-</script>
 <v-app id="app" class="grey lighten-5"  v-cloak stylse="display: none;">
    {{ partial "menu.html" . }}
    {{- partial "toolbar.html" . -}}
@@ -59,8 +58,8 @@
         drawer2: true,
         toc: 0,
         branches: [
-          { value: 'https://docs.pycom.io', text: 'version stable',  },
           { value: 'https://development.pycom.io', text: 'version development'},
+          { value: 'https://docs.pycom.io', text: 'version stable',  },
         ],
         branch: ""
       },
@@ -103,7 +102,7 @@
         fetchResults (kw, start) {
           if (!start) { start = 1 }
           let key = "AIzaSyCDyOKwSjrgE_tkSbO0kbI8Omc6VZMwqA8";
-          let cx = "000185904715529159933:pfyw5o4foii";
+          let cx = "000185904715529159933:irgu2wbrygm";
           let url = "https://www.googleapis.com/customsearch/v1";
           url = url + "?cx=" + cx + "&key=" + key + "&q=" + encodeURI(kw) + "&start=" + start
 
