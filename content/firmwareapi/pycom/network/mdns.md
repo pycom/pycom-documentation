@@ -114,6 +114,7 @@ If the service is found then the function returns with a list of `MDNS_Query` ob
 ## MDNS_Query class
 
 The `MDNS_Query` aggregates all of the properties of a successful query session entry:
+
 * `hostname` is the hostname of the host advertising the service
 * `instance_name` is the instance_name of the service
 * `addr` is the IPv4 address belonging to the service
