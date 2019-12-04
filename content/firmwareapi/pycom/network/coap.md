@@ -1,5 +1,10 @@
-# COAP
-
+---
+title: "CoAP"
+aliases:
+    - firmwareapi/pycom/network/coap.html
+    - firmwareapi/pycom/network/coap.md
+    - chapter/firmwareapi/pycom/network/coap
+---
 This module implements a CoAp Server and Client, it operates as both at the same time.
 
 ## Usage Example
@@ -97,6 +102,7 @@ Returns with the socket assigned to the given `address` and `port` during `Coap.
 #### Coap.add_resource(uri, *, media_type=-1, max_age=-1, value=0, etag=False)
 
 Creates a resource object and adds it to the Coap Module to operate as a server.
+
 * `uri` is the full path of the resource.
 * `media_type` is the media type (Coap option: Content-Format) of the resource. If not given, no defined media type is associated with the resource.
 * `max_age` is the maximum time in seconds when the value of the resource is considered fresh (Coap option: Max-Age). If not given, no fresh time is associated with the resource.
@@ -104,23 +110,25 @@ Creates a resource object and adds it to the Coap Module to operate as a server.
 * `etag` is a boolean argument to enable/disable entity tag calculation (Coap option: ETag). By default it is turned off.
 
 
-{% hint style="info" %}
+{{% hint style="info" %}}
 Media type argument should be one of the standard defined value which are available via Coap Module's constants.
-{% endhint %}
+{{% /hint %}}
 
-{% hint style="info" %}
+{{% hint style="info" %}}
 Entity tag calculation is a simple counter increment between value 1-65535 with overflow but without value 0. Incremented each time the value of the resource is changed.
-{% endhint %}
+{{% /hint %}}
 
 
 #### Coap.remove_resource(uri)
 
 Removes the resource defined by `uri` argument.
+
 * `uri` is the full path of the resource to be removed.
 
 #### Coap.get_resource(uri)
 
 Returns with the resource defined by `uri` argument.
+
 * `uri` is the full path of the resource to be returned.
 
 #### Coap.read()
@@ -130,16 +138,18 @@ Must be called when a packet is received on the socket assigned to the Coap Modu
 #### Coap.register_response_handler(callback)
 
 Registers a callback function which will be called when a remote Coap Server responses to our request.
+
 * `callback` is the callback to be registered. It must have the following arguments:
-    * `code` is the response code from the received message
-    * `id_param` is the transaction ID of the received message. This can be used to match together requests and the response for it.
-    * `type_param` is the type flag from the received message
-    * `token` is the token field from the received message
-    * `payload` is the payload of the received message
+* `code` is the response code from the received message
+* `id_param` is the transaction ID of the received message. This can be used to match together requests and the response for it.
+* `type_param` is the type flag from the received message
+* `token` is the token field from the received message
+* `payload` is the payload of the received message
 
 #### Coap.send_request(uri_host, method, *, uri_port=5683, uri_path, content_format, payload, token, include_options=true)
 
 Creates and sends a request to a Coap server.
+
 * `uri_host` is the IP address of the server, included in the message as an "URI-HOST" option
 * `method` is the method to be sent to the server, can be: `Coap.REQUEST_GET`, `Coap.REQUEST_PUT`, `Coap.REQUEST_POST`, `Coap.REQUEST_DELETE`
 * `uri_port` is the port of the server, included in the message as an "URI-PORT" option, by default it is 5683
@@ -160,41 +170,45 @@ The following methods are defined in the scope of the `resource` class.
 #### resource.add_attribute(name, value)
 
 Adds a new attribute to the resource. Attributes are used to explain the resource during service discovery.
+
 * `name` is the name of the resource.
 * `value` is the value of the resource.
 
-{% hint style="info" %}
+{{% hint style="info" %}}
 During service discovery, GET request to ".well-know/core", the attributes are returned with the belonging values.
 E.g. using the "libcoap's" command line coap-client to fetch the resource from our server:
 
 coap-client -m get coap://<Coap-Server's address>/.well-known/core
-</resource2>,</resource1>;ct=0;title=resource1
 
-{% endhint %}
+< /resource2>,< /resource1>;ct=0;title=resource1
+
+{{% /hint %}}
 
 #### resource.value(value)
 
 Updates or fetches the value of the resource.
+
 * `value` is the value to update the current value with.
 If the method is called without parameter the current value is returned.
 
 #### resource.callback(operation, enable)
 To enable or disable a specific operation (GET, PUT, POST, DELETE) on the resource.
+
 * `operation` is the operation to enable/disable, can be ORED of the followings: `Coap.REQUEST_GET`, `Coap.REQUEST_PUT`, `Coap.REQUEST_POST`, `Coap.REQUEST_DELETE`
 * `enable` is boolean parameter to enable/disable the operations specified by `operation`
 
 
-{% hint style="info" %}
+{{% hint style="info" %}}
 During a GET request, only the first occurance of an ETAG or Accept option is parsed and interpreted, the others of the same type are dropped (if any).
-{% endhint %}
+{{% /hint %}}
 
-{% hint style="info" %}
+{{% hint style="info" %}}
 During a PUT request, only the first occurance of an If-Match option is parsed and interpreted, the others of the same type are dropped (if any).
-{% endhint %}
+{{% /hint %}}
 
-{% hint style="danger" %}
+{{% hint style="danger" %}}
 Due to limitations of the underlying ESP-IDF/libcoap library, new resources cannot be added via PUT or POST requests.
-{% endhint %}
+{{% /hint %}}
 
 ## Constants
 
