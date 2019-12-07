@@ -34,7 +34,7 @@ def socket_thread(p, coap_socket):
             sock = s[0]
             event = s[1]
             if(event & uselect.POLLIN):
-                # Check if the socket belongs to CoAp module
+                # Check if the socket belongs to the CoAp module
                 if(sock == coap_socket):
                     # Call Coap.read() which parses the incoming CoAp message
                     Coap.read()
@@ -44,10 +44,10 @@ def socket_thread(p, coap_socket):
 wlan = WLAN(mode=WLAN.STA)
 wlan.connect('your-ssid', auth=(WLAN.WPA2, 'your-key'))
 
-# Initialize CoAp module
+# Initialise the CoAp module
 Coap.init(str(wlan.ifconfig()[0]), service_discovery=True)
 
-# Add a resource with default value and plain text content format
+# Add a resource with a default value and a plain text content format
 r = Coap.add_resource("resource1", media_type=Coap.MEDIATYPE_TEXT_PLAIN, value="default_value")
 # Add an attribute to the resource
 r.add_attribute("title", "resource1")
