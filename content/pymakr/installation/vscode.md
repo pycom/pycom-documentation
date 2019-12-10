@@ -12,7 +12,7 @@ You will also need NodeJS installed on your PC. Please download the latest LTS v
 
 Please follow these steps to install the Pymakr VSCode Extension:
 
-1. Ensure that you have VSCode installed and open.
+1. Ensure that you have the latest VSCode installed and open.
 
 ![](/gitbook/assets/vsc_setup_step_1-1.png)
 
