@@ -10,7 +10,7 @@ For beginners, users getting started with MicroPython & Pycom as well as Atom te
 
 Please follow these steps to install the Pymakr Plugin:
 
-1. Ensure that you have Atom installed and open.
+1. Ensure that you have the latest Atom installed and open.
 ![](/gitbook/assets/atom_setup_step_1-1.png)
 
 1. Navigate to the Install page, via `Atom > Preferences > Install`
