@@ -802,6 +802,13 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
+    name = "MDNS"
+    url = "/firmwareapi/pycom/network/mdns/"
+    identifier = "firmwareapi@pycom@network@mdns"
+    parent = "firmwareapi@pycom@network"
+    weight = 70
+
+[[menu.main]]
     name = "AES"
     url = "/firmwareapi/pycom/aes/"
     identifier = "firmwareapi@pycom@aes"
