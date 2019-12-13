@@ -1,6 +1,6 @@
 ## Pygate
 
-__For starting Pygate and connecting it to a LoRa server , you need to__ 
+__To connect your Pygate to a LoRa server, follow these steps:__  
 
 1- Have a pycom Device (Wipy, LoPy4, GPy) attached to the Pygate Board (The RGB LED should be on the same side as the usb port of PyGate)
 
