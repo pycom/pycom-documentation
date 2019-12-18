@@ -1223,6 +1223,20 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "LoRa"
+    url = "/pybytes/lora/"
+    identifier = "pybytes@lora"
+    parent = "pybytes"
+    weight = 30
+
+[[menu.main]]
+    name = "Pycom LoRa Server"
+    url = "/pybytes/lora/pycomLoraServerSetup/"
+    identifier = "pybytes@lora@pycomLoraServerSetup"
+    parent = "pybytes@lora"
+    weight = 10
+
+[[menu.main]]
     name = "Visualise data"
     url = "/pybytes/dashboard/"
     identifier = "pybytes@dashboard"
