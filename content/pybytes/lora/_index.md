@@ -5,7 +5,7 @@ aliases:
 
 ## Overview
 
-Pybytes supports [The Things Network](https://www.thethingsnetwork.org/) and Pycom LoRa Server ([ChirpStack](https://www.chirpstack.io/)).
+Pybytes supports [The Things Network](https://www.thethingsnetwork.org/) and ChirpStack ([ChirpStack](https://www.chirpstack.io/)).
 
 ## TTN Server
 
