@@ -11,7 +11,7 @@ Pybytes supports [The Things Network](https://www.thethingsnetwork.org/) and Chi
 
 Once a device is created in Pybytes with LoRa network, and the TTN Server is selected, the device is automatically created in TTN server.
 
-## LoRa Server
+## ChirpStack
 
 Pybytes has its own LoRa Server based on [ChirpStack](https://www.chirpstack.io/).
 

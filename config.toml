@@ -1174,27 +1174,6 @@ theme = "doc-theme"
     weight = 10
 
 [[menu.main]]
-    name = "Sigfox"
-    url = "/pybytes/sigfox/"
-    identifier = "pybytes@sigfox"
-    parent = "pybytes"
-    weight = 30
-
-[[menu.main]]
-    name = "DevKit contract"
-    url = "/pybytes/sigfox/devkit/"
-    identifier = "pybytes@sigfox@devkit"
-    parent = "pybytes@sigfox"
-    weight = 10
-
-[[menu.main]]
-    name = "Custom contract"
-    url = "/pybytes/sigfox/custom/"
-    identifier = "pybytes@sigfox@custom"
-    parent = "pybytes@sigfox"
-    weight = 20
-
-[[menu.main]]
     name = "Project Releases"
     url = "/pybytes/releases/"
     identifier = "pybytes@releases"
@@ -1223,18 +1202,46 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-    name = "LoRa"
-    url = "/pybytes/lora/"
-    identifier = "pybytes@lora"
+    name = "Networks"
+    url = "/pybytes/networks/"
+    identifier = "pybytes@networks"
     parent = "pybytes"
-    weight = 30
+    weight = 20
+
+[[menu.main]]
+    name = "Sigfox"
+    url = "/pybytes/networks/sigfox/"
+    identifier = "pybytes@networks@sigfox"
+    parent = "pybytes@networks"
+    weight = 20
+
+[[menu.main]]
+    name = "DevKit contract"
+    url = "/pybytes/networks/sigfox/devkit/"
+    identifier = "pybytes@networks@sigfox@devkit"
+    parent = "pybytes@networks@sigfox"
+    weight = 20
+
+[[menu.main]]
+    name = "Custom contract"
+    url = "/pybytes/networks/sigfox/custom/"
+    identifier = "pybytes@networks@sigfox@custom"
+    parent = "pybytes@networks@sigfox"
+    weight = 20
+
+[[menu.main]]
+    name = "LoRa"
+    url = "/pybytes/networks/lora/"
+    identifier = "pybytes@networks@lora"
+    parent = "pybytes@networks"
+    weight = 20
 
 [[menu.main]]
     name = "Pycom LoRa Server"
-    url = "/pybytes/lora/pycomLoraServerSetup/"
-    identifier = "pybytes@lora@pycomLoraServerSetup"
-    parent = "pybytes@lora"
-    weight = 10
+    url = "/pybytes/networks/lora/pycomLoraServerSetup/"
+    identifier = "pybytes@networks@lora@pycomLoraServerSetup"
+    parent = "pybytes@networks@lora"
+    weight = 20
 
 [[menu.main]]
     name = "Visualise data"
