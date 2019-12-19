@@ -16,15 +16,30 @@ After create a loRa device or configure Pybytes to use Pycom LoRa Server, the us
 
 To use the service the basic configurations are done by Pybytes, but if the user wants to overwrite it, it is possible using this credentials.
 
+### What is created by Pybytes?
+
+Network-server - `Pycom`
+
+User and Organization - Created based on the same credentials used by Pybytes.
+
+Service Profile - Connected to organization.
+
+Device Profile - Two different profiles, for OTAA and ABP devices.
+
+Application - All devices will be connected to this app.
+
+Device - All devices will be created by Pybytes.
+
+
 ## Gateway
 
-The user should setup the Gateway in order to communicate with Pycom Lora Server.
+The user should setup their own Gateway in order to communicate with Pycom Lora Server.
 
 ### How to setup a gateway?
 
-* Pycom LoRa Server (https://loraserver.pycom.io/)
+* Login in Pycom LoRa Server (https://loraserver.pycom.io/)
 
-* Click on `Gateway` on the sidebar
+* Click on `Gateway` on the main sidebar
 
 * Click on `Create` button
 
@@ -46,4 +61,4 @@ The user should setup the Gateway in order to communicate with Pycom Lora Server
 
     Gateway location (set to current location)
 
-For more information look at [ChirpStack official documentation](https://www.chirpstack.io/guides/first-gateway-device/#add-a-lora-sup-reg-sup-gateway)    
+For more information look at [ChirpStack official guide](https://www.chirpstack.io/guides/first-gateway-device/#add-a-lora-sup-reg-sup-gateway)    
