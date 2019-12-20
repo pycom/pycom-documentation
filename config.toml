@@ -1160,6 +1160,13 @@ theme = "doc-theme"
     weight = 10
 
 [[menu.main]]
+    name = "Pybytes library API"
+    url = "/pybytes/api/"
+    identifier = "pybytes@api"
+    parent = "pybytes"
+    weight = 15
+
+[[menu.main]]
     name = "Add a device to Pybytes"
     url = "/pybytes/connect/"
     identifier = "pybytes@connect"
@@ -1178,7 +1185,7 @@ theme = "doc-theme"
     url = "/pybytes/sigfox/"
     identifier = "pybytes@sigfox"
     parent = "pybytes"
-    weight = 30
+    weight = 25
 
 [[menu.main]]
     name = "DevKit contract"
@@ -1199,21 +1206,14 @@ theme = "doc-theme"
     url = "/pybytes/releases/"
     identifier = "pybytes@releases"
     parent = "pybytes"
-    weight = 20
-
-[[menu.main]]
-    name = "Pybytes iOS"
-    url = "/pybytes/smart/"
-    identifier = "pybytes@smart"
-    parent = "pybytes"
-    weight = 20
+    weight = 30
 
 [[menu.main]]
     name = "Create new release"
     url = "/pybytes/releases/new/"
     identifier = "pybytes@releases@new"
     parent = "pybytes@releases"
-    weight = 20
+    weight = 10
 
 [[menu.main]]
     name = "Deploy release"
@@ -1223,18 +1223,25 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "Pybytes iOS"
+    url = "/pybytes/smart/"
+    identifier = "pybytes@smart"
+    parent = "pybytes"
+    weight = 35
+
+[[menu.main]]
     name = "Visualise data"
     url = "/pybytes/dashboard/"
     identifier = "pybytes@dashboard"
     parent = "pybytes"
-    weight = 30
+    weight = 40
 
 [[menu.main]]
     name = "Integrations"
     url = "/pybytes/integrations/"
     identifier = "pybytes@integrations"
     parent = "pybytes"
-    weight = 40
+    weight = 45
 
 [[menu.main]]
     name = "Amazon IoT"
