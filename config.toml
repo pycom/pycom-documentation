@@ -721,7 +721,7 @@ theme = "doc-theme"
     url = "/firmwareapi/pycom/network/coap/"
     identifier = "firmwareapi@pycom@network@coap"
     parent = "firmwareapi@pycom@network"
-    weight = 30
+    weight = 20
 
 [[menu.main]]
     name = "Bluetooth"
