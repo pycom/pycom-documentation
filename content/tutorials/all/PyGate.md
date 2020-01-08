@@ -8,11 +8,11 @@ __To connect your Pygate to a LoRa server, follow these steps:__
 
 3- Flash the Pycom Device with latest PyGate Firmware.
 
-4- Upload the Gateway configuration json file on the attached pycom device (via Pymakr or VsCode) , Depending on the type of Pygate (EU868/US915) you should have different config files.
+4- Upload the Gateway configuration json file onto the attached Pycom device (via Pymakr on Atom or VSCode). Depending on the type of Pygate (EU868/US915) you should have different config files.
 
-__In the following example we will demonstrate a simple script for getting started with Pygate using Wifi connection for EU868 region:__
+__The following example will demonstrate a simple script for getting started with a Pygate via a Wifi connection for the EU868 region:__
 
-you can use that same file you just need to put your GW unique ID , LoRa server adresse and port numbers
+You can use the same file, just enter your GW unique ID, the LoRa server address and port numbers.
 
 ```python
 from network import WLAN
@@ -63,7 +63,7 @@ machine.pygate_init(buf)
 
 ```
 
-Sample Config json file for GW configuration on EU868 region:
+A sample Config json file for GW configuration on EU868 region:
 
 ```json
 {
@@ -258,10 +258,10 @@ To stop the Pygate at any time use:
 - REPL -> use CTRL-C
 - using deinit function `machine.pygate_deinit()`
 
-that will stop GW tasks and safely power off the Concentrator.
+This will stop GW tasks and safely power-off the Concentrator.
 
 
-__Note__: The Pygate packet forwarder is a legacy packet forwarder, you must make sure you use check legacy packet forwarder option in TTN as shown below.
+__Note__: The Pygate packet forwarder is a legacy packet forwarder, so you must make sure you use select the legacy packet forwarder option in TTN as shown below.
 
 ![alt_text](https://wiki.dragino.com/images/c/c6/TTN_Create_Gateway_0.png)
 
@@ -272,25 +272,25 @@ __Note__: The Pygate packet forwarder is a legacy packet forwarder, you must mak
 
 #### machine.pygate\_init([buff])
 
-This function is used to initialize Pygate 
+This function is used to initialize the Pygate 
 
-- `buff`: data contents of gateway global config json file
+- `buff`: the data contents of the gateway global config json file
 
-when no parameter is passed to function the Pygate is just powered on. (will be useful when using pygate as just a concentrator controllable via uart by another device eg. RPi)
+When no parameter is passed to function the Pygate is just powered on. (will be useful when using pygate as just a concentrator controllable via uart by another device eg. RPi)
 
 #### machine.pygate\_deinit()
 
-Shuts down concentrator.
+This shuts down the concentrator.
 
 #### machine.pygate\_cmd\_decode(buff)
 
-send lora gateway command to concentrator, this is useful when packet forwarder / HAL software is run on a different device (eg. Rpi) and commands to concentrator are passed to Pygate via uart
+This sends the LoRa gateway command to the concentrator. This is useful when packet forwarder / HAL software is run on a different device (e.g. Rpi) and commands to the concentrator are passed to the Pygate via UART.
 
 #### machine.pygate\_cmd\_get()
 
-Get command execution result from concentrator.
+This gets the command execution result from concentrator.
 
-Example script when running Packet forwarder sw on a different device:
+An example script demonstrating running packet forwarder software on a different device:
 
 ```python
 from machine import UART
@@ -324,14 +324,13 @@ while True:
 
 	`machine.MP_QSTR_PYGATE_ERROR_EVT`
 
-- `handler`: The callback function to be called, when not passed to function the any pre-registered callback will be disabled/removed
+- `handler`: The callback function to be called.  When not passed to function, any pre-registered callback will be disabled/removed.
 
 - `arg`: Optional arg to be bassed to callback function.
 
 #### machine.events()
 
-Get the pygate events
-
+Get the Pygate events
 
 
 ## Pygate Ethernet adapter APIs
@@ -340,15 +339,15 @@ Get the pygate events
 
 ### ETH.init(hosname=None)
 
-This function starts Ethernet interface and enables the ethernet adapter.
+This function starts the Ethernet interface and enables the ethernet adapter.
 
-`hostname`: set the interface hostname.
+`hostname`: set the interface hostname
 
 ### ETH.	ifconfig(config=\['dhcp' or configtuple\])
 
-With no parameters given returns a 4-tuple of (ip, subnet_mask, gateway, DNS_server).
+With no parameters given, this returns a 4-tuple of (ip, subnet_mask, gateway, DNS_server).
 
-If dhcp is passed as a parameter then the DHCP client is enabled and the IP params are negotiated with the dhcp server.
+If DHCP is passed as a parameter, then the DHCP client is enabled and the IP params are negotiated with the DHCP server.
 
 If the 4-tuple config is given then a static IP is configured. For instance:
 
@@ -356,7 +355,7 @@ If the 4-tuple config is given then a static IP is configured. For instance:
 
 ### ETH.hostname(string)
 
-Set interface host name.
+Set the interface host name.
 
 ### ETH.mac()
 
@@ -364,15 +363,15 @@ Get the ethernet interface mac address.
 
 ### ETH.deinit()
 
-shuts down ethernet interface.
+Shuts down the ethernet interface.
 
 ### ETH.isconnected(Bool)
 
-Returns `True` if the ethernet if link is up and IP is accquired, `Fasle` otherwise
+Returns `True` if the ethernet link is up and IP is accquired, `Fasle` if otherwise
 
 ### ETH.register(reg, cmd, value)
 
-Write/Read specific register from/to the ksz8851 ethernet controller
+Write/read specific register from/to the ksz8851 ethernet controller
 
 `cmd`: 0 to read , 1 to write
 
@@ -380,6 +379,6 @@ Ex: to read register 0x90
 
 `eth.register(0x90,0)`
 
-to write:
+To write:
 
 `eth.register(0x90, 1, 0x0000)`
