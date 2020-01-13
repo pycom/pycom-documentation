@@ -27,5 +27,9 @@ aliases:
 pybytes.deepsleep(1000)
 
 
-## Success Response
-TBD
+**Success Response**
+----
+After sleep, device reconnect
+
+    >> Connecting with SSID and PASSWORD
+     >> WiFi connection established

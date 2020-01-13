@@ -24,5 +24,5 @@ aliases:
 ----
 `pybytes.read_config()`
 
-## Success Response
+**Success Response**
 `Pybytes configuration read from /flash/pybytes_config.json`

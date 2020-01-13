@@ -23,7 +23,7 @@ aliases:
 ----
 `pybytes.get_config()`
 
-## Success Response
+**Success Response**
 ```json
 {
 	'ssl': True,

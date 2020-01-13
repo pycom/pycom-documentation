@@ -17,5 +17,9 @@ aliases:
 ----
 `pybytes.reconnect()`
 
-## Success Response
-`TBD`
+**Success Response**
+
+After disconnect
+----
+    >> Connecting with SSID and PASSWORD
+     >> WiFi connection established

@@ -17,5 +17,5 @@ aliases:
 ----
 `pybytes.is_connected()`
 
-## Success Response
+**Success Response**
 `True`

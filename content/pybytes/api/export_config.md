@@ -23,5 +23,5 @@ aliases:
 ----
 `pybytes.export_config()`
 
-## Success Response
+**Success Response**
 `Pybytes configuration exported to /flash/pybytes_config.json`

@@ -29,5 +29,5 @@ aliases:
 ----
 `pybytes.enable_lte('Standard', 1, 3, 'internet', 'IP', False)`
 
-## Success Response
+**Success Response**
 `TBD`

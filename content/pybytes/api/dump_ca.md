@@ -24,5 +24,5 @@ aliases:
 ----
 `pybytes.dump_ca(ca_file='/flash/cert/pycom-ca.pem')`
 
-## Success Response
+**Success Response**
 `Successfully created /flash/cert/pycom-ca.pem`

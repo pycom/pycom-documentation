@@ -17,7 +17,7 @@ aliases:
 ----
 `pybytes.print_config()`
 
-## Success Response
+**Success Response**
     ssl = True
     wifi = {'ssid': '', 'password': ''}
     lte = {'apn': 'internet', 'cid': 1, 'reset': False, 'carrier': 'Standard', 'band': 3, 'type': 'IP'}

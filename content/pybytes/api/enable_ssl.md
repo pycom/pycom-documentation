@@ -24,5 +24,5 @@ aliases:
 ----
 `pybytes.enable_ssl('/flash/cert/pycom-ca.pem', True)`
 
-## Success Response
+**Success Response**
 `Please reset your module to apply the new settings`
