@@ -1237,9 +1237,9 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-    name = "Pycom LoRa Server"
-    url = "/pybytes/networks/lora/pycomLoraServerSetup/"
-    identifier = "pybytes@networks@lora@pycomLoraServerSetup"
+    name = "Chirpstack LoRa Server"
+    url = "/pybytes/networks/lora/chirpstack/"
+    identifier = "pybytes@networks@lora@chirpstack"
     parent = "pybytes@networks@lora"
     weight = 20
 
