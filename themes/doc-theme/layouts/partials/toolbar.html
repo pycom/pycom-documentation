@@ -17,6 +17,15 @@
         {{ .Page.Title }}
     </span>
 
+  <v-text-field
+    style="max-width: 650px"
+    class="ml-3 algolia-search-field"
+    light
+    hide-details
+    label="Search the docs..."
+    solo
+    append-icon="search"
+  ></v-text-field>
 
   <v-spacer></v-spacer>
   {{ if eq .Section "firmwareapi"}}
