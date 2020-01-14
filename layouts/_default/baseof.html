@@ -18,11 +18,11 @@
 </head>
 <body>
 </script>
-<v-app id="app" class="grey lighten-5"  v-cloak stylse="display: none;">
+<v-app id="app" class=""  v-cloak style="background-color: white;">
    {{ partial "menu.html" . }}
    {{- partial "toolbar.html" . -}}
    <v-content >
-      <v-container class="fluid pa-4">
+      <v-container class="fluid pa-4" style="padding-top: 0 !important;">
           <v-container class="ma-1 pa-1">
                 {{- partial "menu-contextual.html" . -}}
                 {{- block "main" . }}{{- end }}
