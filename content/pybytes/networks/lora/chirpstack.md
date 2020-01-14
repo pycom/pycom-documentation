@@ -20,6 +20,8 @@ The basic configurations are made by Pybytes, but if you want to overwrite the L
 
 You can add your own server in the section Network-servers  
 
+![Network-servers](/gitbook/assets/pybytes/lora/screenshots/network_servers.png)
+
 **User** - Value
 
 The User will be created based on the same credentials that are used in Pybytes and it can be managed in the section Org. Users. At the same place, the Admin status of the user can be changed.  
@@ -46,6 +48,8 @@ All devices created in Pybytes will be connected to this app.
 ## Gateway
 
 The user should set up their own Gateway in order to communicate with ChirpStack.
+
+![Gateway](/gitbook/assets/pybytes/lora/screenshots/gateway.png)
 
 ### How to set up a gateway: 
 
