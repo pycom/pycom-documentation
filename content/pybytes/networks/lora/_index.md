@@ -17,6 +17,4 @@ For more information check out [The Things Network](https://www.thethingsnetwork
 
 ![ChirpStack](/gitbook/assets/pybytes/lora/chirpstack_logo.png)
 
-Pybytes has its own LoRa Server based on [ChirpStack](https://www.chirpstack.io/).
-
-* [How to use it](chirpstack).
+Pybytes has its own LoRa Server based on [ChirpStack](https://www.chirpstack.io/). Check out [how to use it](chirpstack).
