@@ -5,18 +5,12 @@
   class="lighten-4 pt-0"
   style="overflow-y: hidden; overflow-x: hidden;margin-top:70px;"
 >
-    <!--<v-container style="height: 68px; background-color: rgb(23, 23, 48);" class="dark mb-0 pb-1 pt-3 elevation-5 " >
-        <v-img class="ml-4" height=48 width=190  src="/logo.svg">
-    </v-container>-->
 
   <v-container class="ma-0 pa-0 elevation-1">
 
     <v-text-field
-    v-model="q"
       style="width: 100%;"
-      @change="search"
-      @click:append="search"
-      class="grey lighten-5 mt-0  mr-2 pa-3 ma-0 mono"
+      class="grey lighten-5 mt-0  mr-2 pa-3 ma-0 mono algolia-search-field"
       light
       hide-details
       append-icon="search"
