@@ -8,7 +8,6 @@ aliases:
 ----
   Returns configuration data
 
-
 **Method**
 ----
 **pybytes.get_config(key)**

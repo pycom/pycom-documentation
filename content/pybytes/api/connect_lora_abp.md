@@ -8,7 +8,6 @@ aliases:
 ----
   Initialize LoRa ABP connection
 
-
 **Method**
 ----
 **pybytes.connect_lora_abp()**

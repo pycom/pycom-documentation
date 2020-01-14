@@ -8,7 +8,6 @@ aliases:
 ----
   Start deepsleep mode for the given period
 
-
 **Method**
 ----
 **pybytes.deepsleep(ms, pins, mode, enable_pull)**

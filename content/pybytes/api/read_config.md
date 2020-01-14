@@ -8,7 +8,6 @@ aliases:
 ----
   Reads configuration from file
 
-
 **Method**
 ----
 **pybytes.read_config(file', reconnect)**

@@ -8,7 +8,6 @@ aliases:
 ----
   Enable Terminal
 
-
 **Method**
 ----
 **pybytes.enable_terminal()**

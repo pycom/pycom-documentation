@@ -8,7 +8,6 @@ aliases:
 ----
   Initialize Sigfox connection
 
-
 **Method**
 ----
 **pybytes.connect_sigfox()**

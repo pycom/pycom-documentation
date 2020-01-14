@@ -8,7 +8,6 @@ aliases:
 ----
   Export configuration file
 
-
 **Method**
 ----
 **pybytes.export_config(file)**

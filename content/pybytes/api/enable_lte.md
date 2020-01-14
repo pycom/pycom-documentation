@@ -8,7 +8,6 @@ aliases:
 ----
   Enable LTE connection
 
-
 **Method**
 ----
 **pybytes.enable_lte(carrier, cid, band, apn, type, reset, fallback)**

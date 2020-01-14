@@ -8,7 +8,6 @@ aliases:
 ----
   Disconnect device
 
-
 **Method**
 ----
 **pybytes.disconnect()**

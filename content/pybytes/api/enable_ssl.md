@@ -8,7 +8,6 @@ aliases:
 ----
   Enable SSL
 
-
 **Method**
 ----
 **pybytes.enable_ssl(ca_file, dump_ca)**

@@ -8,7 +8,6 @@ aliases:
 ----
   Initialize LoRa OTAA connection
 
-
 **Method**
 ----
 **pybytes.connect_lora_otaa()**

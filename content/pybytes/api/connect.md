@@ -8,7 +8,6 @@ aliases:
 ----
   Initialize connection based on default parameters
 
-
 **Method**
 ----
 **pybytes.connect()**

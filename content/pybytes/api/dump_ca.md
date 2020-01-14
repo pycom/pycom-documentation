@@ -8,7 +8,6 @@ aliases:
 ----
   Make a dump_ca
 
-
 **Method**
 ----
 **pybytes.dump_ca(ca_file)**

@@ -8,7 +8,6 @@ aliases:
 ----
   Prints current configuration in the terminal
 
-
 **Method**
 ----
 **pybytes.print_config()**

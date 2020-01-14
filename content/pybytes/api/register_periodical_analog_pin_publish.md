@@ -8,23 +8,21 @@ aliases:
 ----
   Publish periodically on the given analog pin
 
-
 **Method**
 ----
-**pybytes.register_periodical_digital_pin_publish(persistent, pin_number, pull_mode, period)**
+**pybytes.register_periodical_analog_pin_publish(persistent, pin_number, period)**
 
 **Parameters**
 ----
 | name  | Description   | is Required    | Default value
 | ------------- |:-------------:|:-------------:|:-------------:|
-| persistent   | TBD  | TBD   | TBD  |
-| pin number   | Reconnect after changes  | TBD   | TBD  |
-| pull mode   | Reconnect after changes  | TBD   | TBD  |
-| period   | Time in ms  | Yes   | -  |
+| persistent   | Bool  | No   | False  |
+| pin number   | Analog pin number  TBD| Yes   | -  |
+| period   | Interval in seconds  | Yes   | -  |
 
 **Example**
 ----
-`pybytes.register_periodical_digital_pin_publish(TBD, TBD, TBD, 1000)`
+`pybytes.register_periodical_analog_pin_publish(False, 13, 2)`
 
 **Success Response**
 TBD

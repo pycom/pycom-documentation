@@ -8,7 +8,6 @@ aliases:
 ----
   Reconnects device
 
-
 **Method**
 ----
 **pybytes.reconnect()**

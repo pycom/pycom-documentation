@@ -8,7 +8,6 @@ aliases:
 ----
   Initialize watchdog for WiFi and LTE connection
 
-
 **Method**
 ----
 **pybytes.connect_wifi()**

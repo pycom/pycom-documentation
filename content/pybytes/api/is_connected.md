@@ -8,7 +8,6 @@ aliases:
 ----
   Returns true if connected
 
-
 **Method**
 ----
 **pybytes.is_connected()**
