@@ -3,7 +3,7 @@ title: "Networks"
 aliases:
 ---
 
-Pybytes supports four Network Types which you can configure both for each device and for the group of the devices within a project. Those Networks are WiFi, LoRa, Sigfox, and LTE CAT M1 / NB1.  In this section the detailed setting procedure of every network type will be explained.
+Pybytes supports four network types, which you can configure for each device or for a group of devices within a project. The compatible networks are WiFi, LoRa, Sigfox, and LTE CAT M1 / NB1. In this section, a detailed list of the settings for each network has been compiled.
 
 [**Sigfox**](/pybytes/networks/sigfox)
 
