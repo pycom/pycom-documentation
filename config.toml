@@ -1,4 +1,4 @@
-baseURL = "https://docs.pycom.io/"
+baseURL = "https://development.pycom.io/"
 languageCode = "en-us"
 title = "documentation"
 uglyurls = false
@@ -198,12 +198,12 @@ theme = "doc-theme"
     parent = "gettingstarted@registration@lora"
     weight = 10
 
-# [[menu.main]]
-#     name = "Objenious"
-#     url = "/gettingstarted/registration/lora/objenious/"
-#     identifier = "gettingstarted@registration@lora@objenious"
-#     parent = "gettingstarted@registration@lora"
-#     weight = 20
+[[menu.main]]
+    name = "Objenious"
+    url = "/gettingstarted/registration/lora/objenious/"
+    identifier = "gettingstarted@registration@lora@objenious"
+    parent = "gettingstarted@registration@lora"
+    weight = 20
 
 # *** Pymakr Plugin
 [[menu.main]]
@@ -335,6 +335,13 @@ theme = "doc-theme"
     name = "REPL"
     url = "/tutorials/all/repl/"
     identifier = "tutorials@all@repl"
+    parent = "tutorials@all"
+    weight = 10
+
+ [[menu.main]]
+    name = "PyGate"
+    url = "/tutorials/all/PyGate/"
+    identifier = "tutorials@all@PyGate"
     parent = "tutorials@all"
     weight = 10
 
@@ -521,6 +528,20 @@ theme = "doc-theme"
     weight = 70
 
 [[menu.main]]
+    name = "LoRa Mesh"
+    url = "/tutorials/lora/lora-mesh/"
+    identifier = "tutorials@lora@lora-mesh"
+    parent = "tutorials@lora"
+    weight = 80
+
+[[menu.main]]
+    name = "PyMesh Border Router"
+    url = "/tutorials/lora/pymesh-br/"
+    identifier = "tutorials@lora@pymesh-br"
+    parent = "tutorials@lora"
+    weight = 90
+
+[[menu.main]]
     name = "Sigfox Examples"
     url = "/tutorials/sigfox/"
     identifier = "tutorials@sigfox"
@@ -612,25 +633,25 @@ theme = "doc-theme"
     weight = 10
 
 [[menu.main]]
+    name = "CAN"
+    url = "/firmwareapi/pycom/machine/can/"
+    identifier = "firmwareapi@pycom@machine@can"
+    parent = "firmwareapi@pycom@machine"
+    weight = 20
+
+[[menu.main]]
     name = "DAC"
     url = "/firmwareapi/pycom/machine/dac/"
     identifier = "firmwareapi@pycom@machine@dac"
     parent = "firmwareapi@pycom@machine"
-    weight = 20
+    weight = 30
 
 [[menu.main]]
     name = "I2C"
     url = "/firmwareapi/pycom/machine/i2c/"
     identifier = "firmwareapi@pycom@machine@i2c"
     parent = "firmwareapi@pycom@machine"
-    weight = 30
-
-[[menu.main]]
-    name = "Pin"
-    url = "/firmwareapi/pycom/machine/pin/"
-    identifier = "firmwareapi@pycom@machine@pin"
-    parent = "firmwareapi@pycom@machine"
-    weight = 40
+    weight = 35
 
 [[menu.main]]
     name = "PWM"
@@ -640,58 +661,58 @@ theme = "doc-theme"
     weight = 50
 
 [[menu.main]]
-    name = "RTC"
-    url = "/firmwareapi/pycom/machine/rtc/"
-    identifier = "firmwareapi@pycom@machine@rtc"
+    name = "Pin"
+    url = "/firmwareapi/pycom/machine/pin/"
+    identifier = "firmwareapi@pycom@machine@pin"
     parent = "firmwareapi@pycom@machine"
     weight = 60
 
 [[menu.main]]
-    name = "SPI"
-    url = "/firmwareapi/pycom/machine/spi/"
-    identifier = "firmwareapi@pycom@machine@spi"
+    name = "RMT"
+    url = "/firmwareapi/pycom/machine/rmt/"
+    identifier = "firmwareapi@pycom@machine@rmt"
     parent = "firmwareapi@pycom@machine"
     weight = 70
 
 [[menu.main]]
-    name = "UART"
-    url = "/firmwareapi/pycom/machine/uart/"
-    identifier = "firmwareapi@pycom@machine@uart"
+    name = "RTC"
+    url = "/firmwareapi/pycom/machine/rtc/"
+    identifier = "firmwareapi@pycom@machine@rtc"
     parent = "firmwareapi@pycom@machine"
     weight = 80
-
-[[menu.main]]
-    name = "WDT"
-    url = "/firmwareapi/pycom/machine/wdt/"
-    identifier = "firmwareapi@pycom@machine@wdt"
-    parent = "firmwareapi@pycom@machine"
-    weight = 90
-
-[[menu.main]]
-    name = "Timer"
-    url = "/firmwareapi/pycom/machine/timer/"
-    identifier = "firmwareapi@pycom@machine@timer"
-    parent = "firmwareapi@pycom@machine"
-    weight = 100
 
 [[menu.main]]
     name = "SD"
     url = "/firmwareapi/pycom/machine/sd/"
     identifier = "firmwareapi@pycom@machine@sd"
     parent = "firmwareapi@pycom@machine"
+    weight = 90
+
+[[menu.main]]
+    name = "SPI"
+    url = "/firmwareapi/pycom/machine/spi/"
+    identifier = "firmwareapi@pycom@machine@spi"
+    parent = "firmwareapi@pycom@machine"
+    weight = 100
+
+[[menu.main]]
+    name = "Timer"
+    url = "/firmwareapi/pycom/machine/timer/"
+    identifier = "firmwareapi@pycom@machine@timer"
+    parent = "firmwareapi@pycom@machine"
     weight = 110
 
 [[menu.main]]
-    name = "CAN"
-    url = "/firmwareapi/pycom/machine/can/"
-    identifier = "firmwareapi@pycom@machine@can"
+    name = "UART"
+    url = "/firmwareapi/pycom/machine/uart/"
+    identifier = "firmwareapi@pycom@machine@uart"
     parent = "firmwareapi@pycom@machine"
     weight = 120
 
 [[menu.main]]
-    name = "RMT"
-    url = "/firmwareapi/pycom/machine/rmt/"
-    identifier = "firmwareapi@pycom@machine@rmt"
+    name = "WDT"
+    url = "/firmwareapi/pycom/machine/wdt/"
+    identifier = "firmwareapi@pycom@machine@wdt"
     parent = "firmwareapi@pycom@machine"
     weight = 130
 
@@ -800,6 +821,13 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@network@lte"
     parent = "firmwareapi@pycom@network"
     weight = 60
+
+[[menu.main]]
+    name = "MDNS"
+    url = "/firmwareapi/pycom/network/mdns/"
+    identifier = "firmwareapi@pycom@network@mdns"
+    parent = "firmwareapi@pycom@network"
+    weight = 70
 
 [[menu.main]]
     name = "AES"
@@ -941,13 +969,19 @@ theme = "doc-theme"
     parent = "firmwareapi@micropython"
     weight = 90
 
-#  [Errno 2] No such file or directory: './content/firmwareapi/micropython/ustruct/README.md'
 [[menu.main]]
     name = "ustruct"
     url = "/firmwareapi/micropython/ustruct/"
     identifier = "firmwareapi@micropython@ustruct"
     parent = "firmwareapi@micropython"
     weight = 180
+
+[[menu.main]]
+    name = "uzlib"
+    url = "/firmwareapi/micropython/uzlib/"
+    identifier = "firmwareapi@micropython@uzlib"
+    parent = "firmwareapi@micropython"
+    weight = 200
 
 [[menu.main]]
     name = "_thread"
