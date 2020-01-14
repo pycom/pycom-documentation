@@ -721,7 +721,7 @@ theme = "doc-theme"
     url = "/firmwareapi/pycom/network/coap/"
     identifier = "firmwareapi@pycom@network@coap"
     parent = "firmwareapi@pycom@network"
-    weight = 30
+    weight = 20
 
 [[menu.main]]
     name = "Bluetooth"
@@ -800,6 +800,13 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@network@lte"
     parent = "firmwareapi@pycom@network"
     weight = 60
+
+[[menu.main]]
+    name = "MDNS"
+    url = "/firmwareapi/pycom/network/mdns/"
+    identifier = "firmwareapi@pycom@network@mdns"
+    parent = "firmwareapi@pycom@network"
+    weight = 70
 
 [[menu.main]]
     name = "AES"

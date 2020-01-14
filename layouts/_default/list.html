@@ -1,5 +1,5 @@
 {{ define "main" }}
-<v-card>
+<v-card flat class="DocSearch-content">
   <v-card-text>
     {{ if not .Params.disable_breadcrumbs }}
     {{ partial "breadcrumb_recursive.html" (dict "menu" .Site.Menus.main "page" . ) }}
