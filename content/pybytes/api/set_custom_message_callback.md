@@ -6,7 +6,7 @@ aliases:
 
 **Send custom message callback**
 ----
-  Send custom location
+  Send custom location.
 
 **Method**
 ----

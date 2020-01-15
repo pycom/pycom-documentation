@@ -6,7 +6,7 @@ aliases:
 
 **Send battery level**
 ----
-  Send battery level
+  Send battery level.
 
 **Method**
 ----

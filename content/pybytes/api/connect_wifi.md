@@ -6,7 +6,7 @@ aliases:
 
 **Connect Wifi**
 ----
-  Initialize watchdog for WiFi and LTE connection
+  Initialize watchdog for WiFi and LTE connection.
 
 **Method**
 ----

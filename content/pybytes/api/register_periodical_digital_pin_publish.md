@@ -6,7 +6,7 @@ aliases:
 
 **Register periodical digital pin publish**
 ----
-  Publish periodically on the given digital pin
+  Publish periodically on the given digital pin.
 
 
 **Method**

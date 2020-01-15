@@ -6,7 +6,7 @@ aliases:
 
 **Send scan info message**
 ----
-  Send scan info message
+  Send scan info message.
 
 **Method**
 ----

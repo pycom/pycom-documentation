@@ -6,7 +6,7 @@ aliases:
 
 **Send analog pin value**
 ----
-  Send analog pin value
+  Send analog pin value.
 
 **Method**
 ----

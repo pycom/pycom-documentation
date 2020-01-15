@@ -6,7 +6,7 @@ aliases:
 
 **Update configuration**
 ----
-  Update device configuration
+  Update device configuration.
 
 **Method**
 ----

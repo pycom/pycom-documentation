@@ -22,7 +22,7 @@ aliases:
 | apn   | APN  | No   | None  |
 | type   | Type  | No   | None  |
 | reset   | Reset  | No   | None  |
-| fallback   | Fallbackena  | No   | False  |
+| fallback   | Fallback TBD | No   | False  |
 
 **Example**
 ----

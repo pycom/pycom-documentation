@@ -6,7 +6,7 @@ aliases:
 
 **Send custom location**
 ----
-  Send custom location
+  Send custom location.
 
 **Method**
 ----

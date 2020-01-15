@@ -6,7 +6,7 @@ aliases:
 
 **Is connected**
 ----
-  Returns true if connected
+  Returns true if connected.
 
 **Method**
 ----

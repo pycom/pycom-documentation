@@ -6,7 +6,7 @@ aliases:
 
 **Reconnect**
 ----
-  Reconnects device
+  Reconnects device.
 
 **Method**
 ----

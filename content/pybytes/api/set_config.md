@@ -6,7 +6,7 @@ aliases:
 
 **Set configuration**
 ----
-  Set device configuration
+  Set device configuration.
 
 **Method**
 ----

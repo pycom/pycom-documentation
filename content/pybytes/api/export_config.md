@@ -4,9 +4,9 @@ aliases:
   - pybytes/api/export_config
 ---
 
-**Export Config**
+**Export configuration file**
 ----
-  Export configuration file
+  Exports configuration file at specified path.
 
 **Method**
 ----

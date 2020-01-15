@@ -4,7 +4,11 @@ aliases:
   - pybytes/api
 ---
 
-* [Connect Wifi](connect_wifi)
+* [Add custom method](add_custom_method)
+
+* [Activate](activate)
+
+* [Connect](connect)
 
 * [Connect LTE](connect_lte)
 
@@ -14,70 +18,66 @@ aliases:
 
 * [Connect Sigfox](connect_sigfox)
 
+* [Connect Wifi](connect_wifi)
+
+* [Deepsleep](deepsleep)
+
 * [Disconnect](disconnect)
 
-* [Send custom message](send_custom_message)
+* [Dump ca](dump_ca)
 
-* [Set custom message callback](set_custom_message_callback)
+* [Enable lte](enable_lte)
 
-* [Send ping message](send_ping_message)
-
-* [Send info message](send_info_message)
-
-* [Send scan info message](send_scan_info_message)
-
-* [Send digital pin value](send_digital_pin_value)
-
-* [Send analog pin value](send_analog_pin_value)
-
-* [Send virtual pin value](send_virtual_pin_value)
-
-* [Send signal](send_signal)
-
-* [Register periodical digital pin publish](register_periodical_digital_pin_publish)
-
-* [Register periodical analog pin publish](register_periodical_analog_pin_publish)
-
-* [Add custom method](add_custom_method)
+* [Enable ssl](enable_ssl)
 
 * [Enable terminal](enable_terminal)
 
-* [Send battery level](send_battery_level)
+* [Export config](export_config)
 
-* [Send custom location](send_custom_location)
+* [Get config](get_config)
 
 * [Is connected](is_connected)
 
 * [isconnected](isconnected)
 
-* [Connect](connect)
-
-* [Write config](write_config)
-
 * [Print cfg msg](print_cfg_msg)
 
 * [Print config](print_config)
-
-* [Get config](get_config)
-
-* [Set config](set_config)
-
-* [Update config](update_config)
 
 * [Read config](read_config)
 
 * [Reconnect](reconnect)
 
-* [Export config](export_config)
+* [Register periodical analog pin publish](register_periodical_analog_pin_publish)
 
-* [Enable ssl](enable_ssl)
+* [Register periodical digital pin publish](register_periodical_digital_pin_publish)
 
-* [Enable lte](enable_lte)
+* [Send analog pin value](send_analog_pin_value)
 
-* [Deepsleep](deepsleep)
+* [Send battery level](send_battery_level)
 
-* [Dump ca](dump_ca)
+* [Send custom message](send_custom_message)
+
+* [Set custom message callback](set_custom_message_callback)
+
+* [Send custom location](send_custom_location)
+
+* [Send digital pin value](send_digital_pin_value)
+
+* [Send info message](send_info_message)
+
+* [Send ping message](send_ping_message)
+
+* [Send scan info message](send_scan_info_message)
+
+* [Send signal](send_signal)
+
+* [Send virtual pin value](send_virtual_pin_value)
+
+* [Set config](set_config)
 
 * [Start](start)
 
-* [Activate](activate)
+* [Update config](update_config)
+
+* [Write config](write_config)

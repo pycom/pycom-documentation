@@ -6,7 +6,7 @@ aliases:
 
 **Send ping message**
 ----
-  Send ping message
+  Send ping message.
 
 **Method**
 ----

@@ -6,7 +6,7 @@ aliases:
 
 **Send signal**
 ----
-  Send signal
+  Send signal to the given pin.
 
 **Method**
 ----

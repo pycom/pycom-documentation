@@ -6,7 +6,7 @@ aliases:
 
 **Register periodical analog pin publish**
 ----
-  Publish periodically on the given analog pin
+  Publish periodically on the given analog pin.
 
 **Method**
 ----

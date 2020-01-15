@@ -16,9 +16,9 @@ aliases:
 ----
 | name  | Description   | is Required    | Default value
 | ------------- |:-------------:|:-------------:|:-------------:|
-| ms   | Time to sleep in ms  | Yes   | - |
+| ms   | Sleep period in ms  | Yes   | - |
 | pins   | Affected pins  | No   | None |
-| mode   | Sleep mode  | No   | None |
+| mode   | Sleep mode TBD  | No   | None |
 | enable_pull   | Enable pull  | No   | None |
 
 **Example**

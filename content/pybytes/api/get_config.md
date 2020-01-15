@@ -6,7 +6,7 @@ aliases:
 
 **Get Config**
 ----
-  Returns configuration data
+  Returns configuration data.
 
 **Method**
 ----

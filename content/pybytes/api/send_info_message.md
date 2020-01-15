@@ -6,7 +6,7 @@ aliases:
 
 **Send info message**
 ----
-  Send info message
+  Send info message.
 
 **Method**
 ----

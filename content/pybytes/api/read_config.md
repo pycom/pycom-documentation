@@ -6,7 +6,7 @@ aliases:
 
 **Read config**
 ----
-  Reads configuration from file
+  Reads configuration from the given file.
 
 **Method**
 ----
