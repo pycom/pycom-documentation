@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Send signal"
 aliases:
   - pybytes/api/send_signal
 ---
 
-**Send signal**
-----
   Send signal to the given pin.
 
 **Method**
@@ -24,4 +22,7 @@ aliases:
 `pybytes.send_signal(13,25)`
 
 **Success Response**
-TBD
+---
+```
+To check the result, look at Pybytes → Device → Data
+```

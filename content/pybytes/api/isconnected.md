@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Is connected"
 aliases:
   - pybytes/api/isconnected
 ---
 
-**Is connected**
-----
   Returns true if connected.
 
 **Method**
@@ -17,4 +15,8 @@ aliases:
 `pybytes.isconnected()`
 
 **Success Response**
-`True`
+----
+
+```
+>> True
+```

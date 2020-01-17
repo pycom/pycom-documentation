@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Update configuration"
 aliases:
   - pybytes/api/update_config
 ---
 
-**Update configuration**
-----
   Update device configuration.
 
 **Method**
@@ -27,4 +25,6 @@ aliases:
 `pybytes.update_config(key=None, value=None, permanent=True, silent=False, reconnect=False)`
 
 **Success Response**
-TBD
+----
+
+TBD test

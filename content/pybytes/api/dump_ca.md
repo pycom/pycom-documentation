@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Dump CA"
 aliases:
   - pybytes/api/dump_ca
 ---
 
-**Dump CA**
-----
   Make a dump_ca
 
 **Method**
@@ -24,4 +22,8 @@ aliases:
 `pybytes.dump_ca(ca_file='/flash/cert/pycom-ca.pem')`
 
 **Success Response**
-`Successfully created /flash/cert/pycom-ca.pem`
+----
+
+```
+>> Successfully created /flash/cert/pycom-ca.pem
+```

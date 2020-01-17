@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Get configuration"
 aliases:
   - pybytes/api/get_config
 ---
 
-**Get Config**
-----
   Returns configuration data.
 
 **Method**
@@ -23,6 +21,8 @@ aliases:
 `pybytes.get_config()`
 
 **Success Response**
+----
+
 ```json
 {
 	'ssl': True,

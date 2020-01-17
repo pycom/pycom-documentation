@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Connect Wifi"
 aliases:
   - pybytes/api/connect_wifi
 ---
 
-**Connect Wifi**
-----
   Initialize watchdog for WiFi and LTE connection.
 
 **Method**
@@ -14,5 +12,8 @@ aliases:
 
 **Success Response**
 ----
-    >> Connecting with SSID and PASSWORD
-     >> WiFi connection established
+
+```
+>> Connecting with SSID and PASSWORD
+>>  WiFi connection established
+```

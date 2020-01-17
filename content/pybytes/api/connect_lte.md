@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Connect LTE"
 aliases:
   - pybytes/api/connect_lte
 ---
 
-**Connect LTE**
-----
   Initialize watchdog for WiFi and LTE connection.
 
 **Method**
@@ -22,7 +20,3 @@ aliases:
 **Example**
 ----
 `pybytes.connect_lte(reconnect=True, check_interval=0.5)`
-
-**Success Response**
-----
-    TBD

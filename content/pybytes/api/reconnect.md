@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Reconnect"
 aliases:
   - pybytes/api/reconnect
 ---
 
-**Reconnect**
-----
   Reconnects device.
 
 **Method**
@@ -17,8 +15,10 @@ aliases:
 `pybytes.reconnect()`
 
 **Success Response**
+----
 
 After disconnect
-----
-    >> Connecting with SSID and PASSWORD
-     >> WiFi connection established
+```
+>> Connecting with SSID and PASSWORD
+>>  WiFi connection established
+```

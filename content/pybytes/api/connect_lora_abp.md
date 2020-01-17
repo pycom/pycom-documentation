@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Connect LoRa ABP"
 aliases:
   - pybytes/api/connect_lora_abp
 ---
 
-**Connect LoRa ABP**
-----
   Initialize LoRa ABP connection.
 
 **Method**
@@ -17,7 +15,7 @@ aliases:
 | name  | Description   | is Required    | Default value
 | ------------- |:-------------:|:-------------:|:-------------:|
 | timeout   | Connection timeout  | Yes   | - |
-| nanogateway   | TBD  | Yes  | - |
+| nanogateway   | Enable nanogateway  | Yes  | - |
 
 **Example**
 ----
@@ -25,6 +23,9 @@ aliases:
 
 **Success Response**
 ----
-    >> Trying to join LoRa.ABP for 15000 seconds...
-     >> Setting up LoRa socket...
-     >> Connected using LoRa
+
+```
+>> Trying to join LoRa.ABP for 15000 seconds...
+>>  Setting up LoRa socket...
+>>  Connected using LoRa
+```

@@ -1,12 +1,10 @@
 ---
-title: "Pybytes library API"
+title: "Send information message"
 aliases:
   - pybytes/api/send_info_message
 ---
 
-**Send info message**
-----
-  Send info message.
+  Send information message.
 
 **Method**
 ----
@@ -15,6 +13,3 @@ aliases:
 **Example**
 ----
 `pybytes.send_info_message()`
-
-**Success Response**
-TBD

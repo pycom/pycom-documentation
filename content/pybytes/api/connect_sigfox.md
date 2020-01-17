@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Connect Sigfox"
 aliases:
   - pybytes/api/connect_sigfox
 ---
 
-**Connect Sigfox**
-----
   Initialize Sigfox connection.
 
 **Method**
@@ -18,4 +16,7 @@ aliases:
 
 **Success Response**
 ----
-    >> Connected using Sigfox. Only upload stream is supported
+
+```
+>> Connected using Sigfox. Only upload stream is supported
+```

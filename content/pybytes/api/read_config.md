@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Read configuration"
 aliases:
   - pybytes/api/read_config
 ---
 
-**Read config**
-----
   Reads configuration from the given file.
 
 **Method**
@@ -24,4 +22,8 @@ aliases:
 `pybytes.read_config()`
 
 **Success Response**
-`Pybytes configuration read from /flash/pybytes_config.json`
+----
+
+```
+>> Pybytes configuration read from /flash/pybytes_config.json
+```

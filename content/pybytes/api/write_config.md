@@ -1,12 +1,10 @@
 ---
-title: "Pybytes library API"
+title: "Write configuration"
 aliases:
   - pybytes/api/write_config
 ---
 
-**Update configuration**
-----
-  Update device configuration.
+  Write device configuration.
 
 **Method**
 ----
@@ -24,5 +22,8 @@ aliases:
 `pybytes.write_config(file='/flash/pybytes_config.json', silent=False)`
 
 **Success Response**
+----
 
-    >> Pybytes configuration written to /flash/pybytes_config.json
+```
+>> Pybytes configuration written to /flash/pybytes_config.json
+```

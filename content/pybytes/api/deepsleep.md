@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Deepsleep"
 aliases:
   - pybytes/api/deepsleep
 ---
 
-**Deepsleep**
-----
   Start deepsleep mode for the given period
 
 **Method**
@@ -17,18 +15,20 @@ aliases:
 | name  | Description   | is Required    | Default value
 | ------------- |:-------------:|:-------------:|:-------------:|
 | ms   | Sleep period in ms  | Yes   | - |
-| pins   | Affected pins  | No   | None |
-| mode   | Sleep mode TBD  | No   | None |
-| enable_pull   | Enable pull  | No   | None |
+| pins   | A list or tuple containing the GPIO to setup for deepsleep wakeup  | No   | None |
+| mode   | Configure how GPIOs can wake up -> **machine.WAKEUP_ALL_LOW** or **machine.WAKEUP_ANY_HIGH**  | No   | None |
+| enable_pull   | If set to **True** keeps the pull up or pull down resistors enabled during deep sleep  | No   | None |
 
 **Example**
 ----
-pybytes.deepsleep(1000)
+`>> pybytes.deepsleep(1000)`
 
 
 **Success Response**
 ----
 After sleep, device reconnect
 
-    >> Connecting with SSID and PASSWORD
-     >> WiFi connection established
+```
+>> Connecting with SSID and PASSWORD
+>>  WiFi connection established
+```

@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Enable LTE"
 aliases:
   - pybytes/api/enable_lte
 ---
 
-**Enable LTE**
-----
   Enable LTE connection
 
 **Method**
@@ -22,11 +20,17 @@ aliases:
 | apn   | APN  | No   | None  |
 | type   | Type  | No   | None  |
 | reset   | Reset  | No   | None  |
-| fallback   | Fallback TBD | No   | False  |
+| fallback   | If **True** extends network preferences with the given LTE information| No   | False  |
 
 **Example**
 ----
-`pybytes.enable_lte('Standard', 1, 3, 'internet', 'IP', False)`
+`pybytes.enable_lte('standard', 1, 8, 'soracom.io', 'IP', False)`
 
 **Success Response**
-`TBD`
+----
+
+```
+>> Pybytes configuration written to /flash/pybytes_config.json
+>> Watchdog timeout has been increased to 2147483647 ms
+>> Initialized watchdog for WiFi and LTE connection with timeout 1260000 ms
+```

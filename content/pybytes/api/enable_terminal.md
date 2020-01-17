@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Enable Terminal"
 aliases:
   - pybytes/api/enable_terminal
 ---
 
-**Enable Terminal**
-----
   Enable Terminal
 
 **Method**

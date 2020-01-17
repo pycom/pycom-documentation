@@ -1,12 +1,10 @@
 ---
-title: "Pybytes library API"
+title: "Export configuration file"
 aliases:
   - pybytes/api/export_config
 ---
 
-**Export configuration file**
-----
-  Exports configuration file at specified path.
+  Exports all configuration data into a file at specified path.
 
 **Method**
 ----
@@ -23,4 +21,8 @@ aliases:
 `pybytes.export_config()`
 
 **Success Response**
-`Pybytes configuration exported to /flash/pybytes_config.json`
+----
+
+```
+>> Pybytes configuration exported to /flash/pybytes_config.json
+```

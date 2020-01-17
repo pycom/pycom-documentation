@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Connect LoRa OTAA"
 aliases:
   - pybytes/api/connect_lora_otaa
 ---
 
-**Connect LoRa OTAA**
-----
   Initialize LoRa OTAA connection.
 
 **Method**
@@ -17,7 +15,7 @@ aliases:
 | name  | Description   | is Required    | Default value
 | ------------- |:-------------:|:-------------:|:-------------:|
 | timeout   | Connection timeout  | Yes   | - |
-| nanogateway   | TBD  | Yes  | - |
+| nanogateway   | Enable nanogateway  | Yes  | - |
 
 **Example**
 ----
@@ -25,6 +23,9 @@ aliases:
 
 **Success Response**
 ----
-    >> Trying to join LoRa.OTAA for 15 seconds...
-     >> Setting up LoRa socket...
-     >> Connected using LoRa
+
+```
+>> Trying to join LoRa.OTAA for 15 seconds...
+>>  Setting up LoRa socket...
+>>  Connected using LoRa
+```

@@ -1,12 +1,10 @@
 ---
-title: "Pybytes library API"
+title: "Send custom message callback"
 aliases:
   - pybytes/api/set_custom_message_callback
 ---
 
-**Send custom message callback**
-----
-  Send custom location.
+  Send custom message callback.
 
 **Method**
 ----
@@ -20,7 +18,11 @@ aliases:
 
 **Example**
 ----
-`pybytes.set_custom_message_callback(true)`
+`pybytes.set_custom_message_callback(print("Hello Pycom!"))`
 
 **Success Response**
-TBD
+----
+
+```
+>> Hello Pycom!
+```

@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Set configuration"
 aliases:
   - pybytes/api/set_config
 ---
 
-**Set configuration**
-----
   Set device configuration.
 
 **Method**
@@ -27,4 +25,8 @@ aliases:
 `pybytes.set_config(key=None, value=None, permanent=True, silent=False, reconnect=False)`
 
 **Success Response**
-TBD
+----
+
+```
+>> Pybytes configuration written to /flash/pybytes_config.json
+```

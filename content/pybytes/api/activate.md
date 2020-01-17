@@ -1,11 +1,10 @@
 ---
-title: "Pybytes library API"
+title: "Activate Device"
 aliases:
-  - pybytes/api/activate
+  - pybytes/api/activate.html
+  - pybytes/api/activate.md
 ---
 
-**Activate**
-----
   Activate device on Pybytes.
 
 **Method**
@@ -22,17 +21,19 @@ aliases:
 
 **Example**
 ----
-pybytes.activate("eyJhIjoiNTYzM...")
+`pybytes.activate("eyJhIjoiNTYzM...")`
 
 
 **Success Response**
 ----
 
-    >> Please wait while we try to connect to Pycom
-     >> Wifi connection established... activating device!
-     >> WMAC: 807D3AC325E8
-     >> Firmware: 1.20.1.r2
-     >> Pybytes: 1.3.0
-     >> Initialized watchdog for WiFi and LTE connection with timeout 1260000 ms
-     >> WiFi connection established
-     >> Pybytes connected successfully (using the built-in pybytes library)
+```
+>> Please wait while we try to connect to Pycom
+>>  Wifi connection established... activating device!
+>>  WMAC: 807D3AC325E8
+>>  Firmware: 1.20.1.r2
+>>  Pybytes: 1.3.0
+>>  Initialized watchdog for WiFi and LTE connection with timeout 1260000 ms
+>>  WiFi connection established
+>>  Pybytes connected successfully (using the built-in pybytes library)
+```

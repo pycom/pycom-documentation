@@ -1,11 +1,9 @@
 ---
-title: "Pybytes library API"
+title: "Send ping message"
 aliases:
   - pybytes/api/send_ping_message
 ---
 
-**Send ping message**
-----
   Send ping message.
 
 **Method**
@@ -15,6 +13,3 @@ aliases:
 **Example**
 ----
 `pybytes.send_ping_message()`
-
-**Success Response**
-TBD
