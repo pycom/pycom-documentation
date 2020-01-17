@@ -1412,11 +1412,46 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-    name = "Pybytes iOS"
-    url = "/pybytes/smart/"
-    identifier = "pybytes@smart"
+    name = "Networks"
+    url = "/pybytes/networks/"
+    identifier = "pybytes@networks"
     parent = "pybytes"
-    weight = 60
+    weight = 20
+
+[[menu.main]]
+    name = "Sigfox"
+    url = "/pybytes/networks/sigfox/"
+    identifier = "pybytes@networks@sigfox"
+    parent = "pybytes@networks"
+    weight = 20
+
+[[menu.main]]
+    name = "DevKit contract"
+    url = "/pybytes/networks/sigfox/devkit/"
+    identifier = "pybytes@networks@sigfox@devkit"
+    parent = "pybytes@networks@sigfox"
+    weight = 20
+
+[[menu.main]]
+    name = "Custom contract"
+    url = "/pybytes/networks/sigfox/custom/"
+    identifier = "pybytes@networks@sigfox@custom"
+    parent = "pybytes@networks@sigfox"
+    weight = 20
+
+[[menu.main]]
+    name = "LoRa"
+    url = "/pybytes/networks/lora/"
+    identifier = "pybytes@networks@lora"
+    parent = "pybytes@networks"
+    weight = 20
+
+[[menu.main]]
+    name = "Chirpstack LoRa Server"
+    url = "/pybytes/networks/lora/chirpstack/"
+    identifier = "pybytes@networks@lora@chirpstack"
+    parent = "pybytes@networks@lora"
+    weight = 20
 
 [[menu.main]]
     name = "Visualise data"
