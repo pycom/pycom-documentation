@@ -4,7 +4,7 @@ aliases:
   - pybytes/api/send_signal
 ---
 
-  Send signal to the given pin.
+  Send signal to the given signal number.
 
 **Method**
 ----

@@ -5,7 +5,7 @@ aliases:
   - pybytes/api/activate.md
 ---
 
-  Activate device on Pybytes.
+  Activate device on Pybytes, via Pymakr plugin.
 
 **Method**
 ----

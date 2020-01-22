@@ -22,7 +22,7 @@ aliases:
 
 **Example**
 ----
-`pybytes.set_config(key=None, value=None, permanent=True, silent=False, reconnect=False)`
+`pybytes.set_config(key="network_preferences", value="wifi", permanent=True, silent=False, reconnect=False)`
 
 **Success Response**
 ----

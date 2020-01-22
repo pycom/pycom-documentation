@@ -20,3 +20,10 @@ aliases:
 **Example**
 ----
 `pybytes.connect_lte(reconnect=True, check_interval=0.5)`
+
+**Success Response**
+----
+
+```
+>> LTE connection established
+```

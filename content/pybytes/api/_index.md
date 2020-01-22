@@ -3,26 +3,6 @@ title: "Pybytes library API"
 aliases:
 ---
 
-
-If you are facing any issues try to enable debugging.
-
-### Debugging
-There are multiple debug levels, 0 is warnings only, 6 is currently the highest used).
-
-#### use:
-
-```
->> import pycom;
->> pycom.nvs_set('pybytes_debug', debugLevel)
-```
-
-#### e.g.
-```
->> import pycom;
->> pycom.nvs_set('pybytes_debug', 6)
-```    
-
-
 # API List
 
 
@@ -77,3 +57,23 @@ There are multiple debug levels, 0 is warnings only, 6 is currently the highest 
 * [Update configuration](update_config)
 
 * [Write configuration](write_config)
+
+# Issues
+
+If you are facing any issues try to enable debugging.
+
+### Debugging
+There are multiple debug levels, 0 is warnings only, 6 is currently the highest used).
+
+#### use:
+
+```
+>> import pycom;
+>> pycom.nvs_set('pybytes_debug', debugLevel)
+```
+
+#### e.g.
+```
+>> import pycom;
+>> pycom.nvs_set('pybytes_debug', 6)
+```    

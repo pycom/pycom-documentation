@@ -4,7 +4,7 @@ aliases:
   - pybytes/api/start
 ---
 
-  Start/Restart device.
+  Starts Pybytes library.
 
 **Method**
 ----

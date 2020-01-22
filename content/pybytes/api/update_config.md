@@ -4,7 +4,7 @@ aliases:
   - pybytes/api/update_config
 ---
 
-  Update device configuration.
+  Update device configuration parameters.
 
 **Method**
 ----
@@ -22,7 +22,7 @@ aliases:
 
 **Example**
 ----
-`pybytes.update_config(key=None, value=None, permanent=True, silent=False, reconnect=False)`
+`pybytes.update_config(key="network_preferences", value="wifi", permanent=True, silent=False, reconnect=False)`
 
 **Success Response**
 ----

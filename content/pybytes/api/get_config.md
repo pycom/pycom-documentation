@@ -31,34 +31,34 @@ aliases:
 		'password': 'PASSWORD'
 	},
 	'lte': {
-		'apn': 'internet',
-		'cid': 1,
+		'apn': 'apn',
+		'cid': 999,
 		'reset': False,
-		'carrier': 'Standard',
-		'band': 3,
-		'type': 'IP'
+		'carrier': 'carrier',
+		'band': 999,
+		'type': 'type'
 	},
 	'username': 'user@email.com',
 	'network_preferences': ['lte', 'lora_otaa'],
-	'cfg_msg': 'Pybytes configuration read from /flash/pybytes_config.json',
+	'cfg_msg': 'Pybytes configuration read from file.json',
 	'dump_ca': True,
 	'wlan_antenna': 0,
-	'server': '10.0.0.61',
+	'server': 'xx.x.x.xx',
 	'lora': {
 		'otaa': {
-			'app_key': '87c8105c151f885bc19ccb9484fe8185',
-			'app_device_eui': '909d7afb9b82c0f6',
-			'app_eui': '70B3D57ED000AFA0'
+			'app_key': 'app_key',
+			'app_device_eui': 'app_device_eui',
+			'app_eui': 'app_eui'
 		}
 	},
 	'ota_server': {
-		'port': 443,
+		'port': 999,
 		'domain': 'software.pycom.io'
 	},
 	'pybytes_autostart': True,
 	'ssl_params': {
-		'ca_certs': '/flash/cert/pycom-ca.pem'
+		'ca_certs': 'ca_certs'
 	},
-	'device_id': '139e95ed-7213-406b-b07a-a54bfbf021c8'
+	'device_id': 'device_id'
 }
 ```
