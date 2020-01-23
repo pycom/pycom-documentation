@@ -3,6 +3,28 @@ title: "Pybytes library API"
 aliases:
 ---
 
+To test Pybytes library API, connect your device to Pymakr and call the methods listed below.
+You can use Pybytes library API in your MicroPython project.
+
+
+### Debugging
+If you are facing any issues try to enable debugging.
+There are multiple debug levels, 0 is warnings only, 99 is currently the highest used).
+
+#### use:
+
+```
+>> import pycom;
+>> pycom.nvs_set('pybytes_debug', debugLevel)
+```
+
+#### e.g.
+```
+>> import pycom;
+>> pycom.nvs_set('pybytes_debug', 99)
+```    
+
+
 # API List
 
 
@@ -57,23 +79,3 @@ aliases:
 * [Update configuration](update_config)
 
 * [Write configuration](write_config)
-
-# Issues
-
-If you are facing any issues try to enable debugging.
-
-### Debugging
-There are multiple debug levels, 0 is warnings only, 6 is currently the highest used).
-
-#### use:
-
-```
->> import pycom;
->> pycom.nvs_set('pybytes_debug', debugLevel)
-```
-
-#### e.g.
-```
->> import pycom;
->> pycom.nvs_set('pybytes_debug', 6)
-```    
