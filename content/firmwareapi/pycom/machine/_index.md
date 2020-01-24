@@ -50,7 +50,7 @@ Gates the clock to the CPU, useful to reduce power consumption at any time durin
 
 Stops the CPU and all peripherals, including the networking interfaces (except for LTE). Execution is resumed from the main script, just as with a reset. If a value in milliseconds is given then the device will wake up after that period of time, otherwise it will remain in deep sleep until the reset button is pressed.
 
-The products with LTE connectivity (FiPy, GPy, G01), require the LTE radio to be disabled separately via the LTE class before entering deepsleep. This is required due to the LTE radio being powered independently and allowing use cases which require the system to be taken out from deepsleep by an event from the LTE network (data or SMS received for instance).
+Products with LTE connectivity, such as the FiPy, GPy, G01, need to have the LTE radio disabled separately via the LTE class before entering deepsleep. This is necessary because the LTE radio is powered independently, which allows for use cases that wake the system from deepsleep by an event from the LTE network, for example receiving data or an SMS.
 
 #### machine.pin\_sleep\_wakeup(pins, mode, enable\_pull)
 
