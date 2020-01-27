@@ -27,4 +27,4 @@ aliases:
 **Success Response**
 ----
 
-TBD test
+Pybytes configuration written to /flash/pybytes_config.json
