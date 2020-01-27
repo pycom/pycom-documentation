@@ -85,6 +85,24 @@ Returns `True` if the last `ntp_sync` has been completed, `False` otherwise:
 rtc.synced()
 ```
 
+#### rtc.memory(\[data\])
+
+Reads RTC memory contents or write data in passed Buffer in to RTC memory
+
+Example:
+
+```python
+rtc = RTC()
+rtc.memory(b'10101010') # writes data in RTC memory
+rtc.memory()
+```
+
+Output:
+
+```python
+b'10101010'
+```
+
 ## Constants
 
 * Clock source: `RTC.INTERNAL_RC`, `RTC.XTAL_32KHZ`
