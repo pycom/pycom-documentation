@@ -118,5 +118,5 @@ If you need to remove files from your device you have two options, either connec
 ```python
 
 import os
-os.mkfs('/flash')
+os.fsformat('/flash')
 ```
