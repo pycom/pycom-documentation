@@ -4,7 +4,7 @@ aliases:
   - pybytes/api/read_config
 ---
 
-  Reads configuration from the given file.
+  Reads the configuration from the given file.
 
 **Method**
 ----

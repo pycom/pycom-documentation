@@ -4,7 +4,7 @@ aliases:
   - pybytes/api/start
 ---
 
-  Starts Pybytes library.
+  Opens the Pybytes library.
 
 **Method**
 ----

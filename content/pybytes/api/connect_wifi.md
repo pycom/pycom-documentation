@@ -4,7 +4,7 @@ aliases:
   - pybytes/api/connect_wifi
 ---
 
-  Initialize watchdog for WiFi and LTE connection.
+  Initialize watchdog for the WiFi and LTE connection.
 
 **Method**
 ----

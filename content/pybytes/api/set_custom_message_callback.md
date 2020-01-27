@@ -4,7 +4,7 @@ aliases:
   - pybytes/api/set_custom_message_callback
 ---
 
-  Send custom message callback.
+  Sends custom message callback.
 
 **Method**
 ----

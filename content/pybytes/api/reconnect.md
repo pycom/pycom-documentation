@@ -17,7 +17,7 @@ aliases:
 **Success Response**
 ----
 
-After disconnect
+After the device disconnects:
 ```
 >> Connecting with SSID and PASSWORD
 >>  WiFi connection established

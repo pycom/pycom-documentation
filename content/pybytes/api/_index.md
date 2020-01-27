@@ -3,13 +3,13 @@ title: "Pybytes library API"
 aliases:
 ---
 
-To test Pybytes library API, connect your device to Pymakr and call the methods listed below.
-You can use Pybytes library API in your MicroPython project.
+To test the Pybytes library API, connect your device to Pymakr and call the methods listed below.
+You can use the Pybytes library API in your MicroPython project.
 
 
 ### Debugging
-If you are facing any issues try to enable debugging.
-There are multiple debug levels, 0 is warnings only, 99 is currently the highest used).
+Enable debugging if you are having any issues.
+There are multiple debug levels, the lowest is 0 which is for warnings only and 99 is the highest used and will print more debugging messages
 
 #### use:
 
@@ -77,5 +77,3 @@ There are multiple debug levels, 0 is warnings only, 99 is currently the highest
 * [Start](start)
 
 * [Update configuration](update_config)
-
-* [Write configuration](write_config)

@@ -4,7 +4,7 @@ aliases:
   - pybytes/api/print_config
 ---
 
-  Prints current configuration in the terminal.
+  Prints the current configuration in the terminal.
 
 **Method**
 ----

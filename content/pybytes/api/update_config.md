@@ -22,7 +22,7 @@ aliases:
 
 **Example**
 ----
-`pybytes.update_config(key="network_preferences", value="wifi", permanent=True, silent=False, reconnect=False)`
+`pybytes.update_config(key="wifi", value={'password': 'Pa$$w0rd'}, permanent=True, silent=False, reconnect=False)`
 
 **Success Response**
 ----

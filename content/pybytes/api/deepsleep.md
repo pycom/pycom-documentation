@@ -26,7 +26,7 @@ aliases:
 
 **Success Response**
 ----
-After sleep, device reconnect
+After deepsleep, the device reconnects.
 
 ```
 >> Connecting with SSID and PASSWORD
