@@ -72,6 +72,7 @@ Get the elapsed time in microseconds.
 Example:
 
 ```python
+
 from machine import Timer
 import time
 
@@ -110,6 +111,7 @@ Disables the alarm.
 Example:
 
 ```python
+
 from machine import Timer
 
 class Clock:

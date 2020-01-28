@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 </head>
 <body>
+</script>
 <v-app id="app" class=""  v-cloak style="background-color: white;">
    {{ partial "menu.html" . }}
    {{- partial "toolbar.html" . -}}
@@ -46,8 +47,8 @@
         drawer2: true,
         toc: 0,
         branches: [
-          { value: 'https://development.pycom.io', text: 'version development'},
           { value: 'https://docs.pycom.io', text: 'version stable',  },
+          { value: 'https://development.pycom.io', text: 'version development'},
         ],
         branch: ""
       },

@@ -1,13 +1,19 @@
 ---
 title: "Bluetooth"
 aliases:
+    - chapter/firmwareapi/pycom/network/bluetooth
 ---
+search: false
+---
+
+# Bluetooth
 
 This class provides a driver for the Bluetooth radio in the module. Currently, only basic BLE functionality is available.
 
 ## Quick Usage Example
 
 ```python
+
 from network import Bluetooth
 import time
 bt = Bluetooth()
@@ -60,12 +66,11 @@ bluetooth = Bluetooth()
 
 ## Methods
 
-### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None, secure=False)
+### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None)
 
 * `id` Only one Bluetooth peripheral available so must always be 0
 * `mode` currently the only supported mode is `Bluetooth.BLE`
 * `antenna` selects between the internal and the external antenna. Can be either`Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`.
-* `secure` enables or disables the GATT Server security features.
 
   With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
 
@@ -263,3 +268,4 @@ Closes the BLE connection with the client.
 * Characteristic properties (bit values that can be combined): `Bluetooth.PROP_BROADCAST`, `Bluetooth.PROP_READ`, `Bluetooth.PROP_WRITE_NR`, `Bluetooth.PROP_WRITE`, `Bluetooth.PROP_NOTIFY`, `Bluetooth.PROP_INDICATE`, `Bluetooth.PROP_AUTH`, `Bluetooth.PROP_EXT_PROP`
 * Characteristic callback events: `Bluetooth.CHAR_READ_EVENT`, `Bluetooth.CHAR_WRITE_EVENT`, `Bluetooth.NEW_ADV_EVENT`, `Bluetooth.CLIENT_CONNECTED`, `Bluetooth.CLIENT_DISCONNECTED`, `Bluetooth.CHAR_NOTIFY_EVENT`
 * Antenna type: `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
+
