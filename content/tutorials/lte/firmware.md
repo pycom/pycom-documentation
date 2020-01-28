@@ -72,7 +72,7 @@ To transfer the firmware files onto the SD card you have two options:
 from machine import SD
 
 sd = SD()
-os.fsformat('/sd')    # format SD card
+os.fsformat('/sd')    #format SD card
 from machine import SD
 sd = SD()
 fs = os.mkfat(sd)
