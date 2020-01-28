@@ -119,5 +119,4 @@ If you need to remove files from your device you have two options, either connec
 
 import os
 os.fsformat('/flash')
-
 ```
