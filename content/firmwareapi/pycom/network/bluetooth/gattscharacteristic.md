@@ -21,6 +21,10 @@ characteristic.value(123) # set characteristic value to an integer with the valu
 characteristic.value() # get characteristic value
 ```
 
+#### characteristic.events()
+
+Returns a value with bit flags identifying the events that have occurred since the last call. Calling this function clears the events.
+
 #### characteristic.callback(trigger=None, handler=None, arg=None)
 
 Creates a callback that will be executed when any of the triggers occurs. The arguments are:
@@ -29,20 +33,15 @@ Creates a callback that will be executed when any of the triggers occurs. The ar
 * `handler` is the function that will be executed when the callback is triggered.
 * `arg` is the argument that gets passed to the callback. If nothing is given, the characteristic object that owns the callback will be used.
 
-An example of how this could be implemented can be seen in the [`characteristic.events()` ](gattscharacteristic.md#characteristic-events)section.
+Beyond the `arg` a tuple (called `data`) is also passed to `handler`. The tuple consists of (event, value), where `event` is the triggering event, and `value` is the value strictly belonging to the `event` in case of a WRITE event. If the `event` is not a WRITE event, the `value` has no meaning.
 
-#### characteristic.events()
+It is adviced to get the `event` and new `value` of the characteristic via this tuple, and not via `characteristic.event()` and `characteristic.value()` calls in the context of the `handler` to make sure no event and value is lost. The reason behind this is that `characteristic.event()` and `characteristic.value()` returns with the very last event received and with the current value of the characteristic, while the input parameters are always linked to the specific event triggering the `handler`. If the device is busy executing other operation it may happen that the `handler` of an incoming event is not called before the next event comes and processed.
 
-Returns a value with bit flags identifying the events that have occurred since the last call. Calling this function clears the events.
-
-An example of advertising and creating services on the device:
+An example of how this could be implemented can be seen below, along an example of advertising and creating services on the device:
 
 ```python
 
 from network import Bluetooth
-
-bluetooth = Bluetooth()
-bluetooth.set_advertisement(name='LoPy', service_uuid=b'1234567890123456')
 
 def conn_cb (bt_o):
     events = bt_o.events()
@@ -51,40 +50,33 @@ def conn_cb (bt_o):
     elif events & Bluetooth.CLIENT_DISCONNECTED:
         print("Client disconnected")
 
-bluetooth.callback(trigger=Bluetooth.CLIENT_CONNECTED | Bluetooth.CLIENT_DISCONNECTED, handler=conn_cb)
+def char1_cb_handler(chr, data):
 
+    # data is a tuple containing the triggering event and the value if the event is a WRITE event
+    # It is adviced to fetch the event and value from the input parameter, and not via characteristic.event() and characteristic.value()
+    events, value = data
+    if  events & Bluetooth.CHAR_WRITE_EVENT:
+        print("Write request with value = {}".format(value))
+    else:
+        print('Read request on char 1')
+
+def char2_cb_handler(chr, data):
+    # value is not used in this callback as the WRITE events are not processed
+    events, value = data
+    if  events & Bluetooth.CHAR_READ_EVENT:
+        print('Read request on char 2')
+
+bluetooth = Bluetooth()
+bluetooth.set_advertisement(name='LoPy', service_uuid=b'1234567890123456')
+bluetooth.callback(trigger=Bluetooth.CLIENT_CONNECTED | Bluetooth.CLIENT_DISCONNECTED, handler=conn_cb)
 bluetooth.advertise(True)
 
 srv1 = bluetooth.service(uuid=b'1234567890123456', isprimary=True)
-
 chr1 = srv1.characteristic(uuid=b'ab34567890123456', value=5)
-
-char1_read_counter = 0
-def char1_cb_handler(chr):
-    global char1_read_counter
-    char1_read_counter += 1
-
-    events = chr.events()
-    if  events & Bluetooth.CHAR_WRITE_EVENT:
-        print("Write request with value = {}".format(chr.value()))
-    else:
-        if char1_read_counter < 3:
-            print('Read request on char 1')
-        else:
-            return 'ABC DEF'
-
 char1_cb = chr1.callback(trigger=Bluetooth.CHAR_WRITE_EVENT | Bluetooth.CHAR_READ_EVENT, handler=char1_cb_handler)
 
 srv2 = bluetooth.service(uuid=1234, isprimary=True)
-
 chr2 = srv2.characteristic(uuid=4567, value=0x1234)
-char2_read_counter = 0xF0
-def char2_cb_handler(chr):
-    global char2_read_counter
-    char2_read_counter += 1
-    if char2_read_counter > 0xF1:
-        return char2_read_counter
-
 char2_cb = chr2.callback(trigger=Bluetooth.CHAR_READ_EVENT, handler=char2_cb_handler)
 ```
 
