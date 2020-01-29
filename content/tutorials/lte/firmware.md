@@ -37,10 +37,10 @@ Please start with the following steps:
 2. Select Firmware Type `stable` in the communication window to upgrade to version `v1.18.1.r1`
 
 
-The modem firmware files are password protected, to download them you should be a forum.pycom.io member and access to:
-Announcements & News --&gt;  Announcements only for members --&gt; Firmware Files for Sequans LTE modem now are secured, or clicking [Here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured).
+The modem firmware files are password protected. In order to download them, head to forum.pycom.io and become a member (if you aren't already) and click on:
+Announcements & News --> Announcements for members only --> the Firmware Files for the Sequans LTE modem are now secured or click here.
 
-You can find the different versions of firmwares available [here](https://software.pycom.io/downloads/sequans2.html).
+You can find the different available firmware versions here.
 
 We are using `CATM1-39529.zip` and `NB1-37781.zip` as examples in this tutorial.
 
@@ -56,8 +56,8 @@ Please note that the `updater.elf` file is only around 300K so you can also stor
 import sqnsupgrade
 sqnsupgrade.run('upgdiff_38638-to-39529.dup')
 ```
-If you are updating the Sequans firmware on your module for the first time, please use instead the file upgdiff_33080-to-39529.dup (1.2M) from the same archive.
-Similar upgrade packages are available for the NB-IoT firmwares.
+If you are updating the Sequans firmware on your module for the first time, please use this file instead upgdiff_33080-to-39529.dup (1.2M), which is from the same archive.
+Similar upgrade packages are available for the NB-IoT firmware.
 {{% /hint %}}
 
 ## Via SD card
@@ -269,4 +269,4 @@ The latest version of the `sqnsupgrade` class has a few additional features that
      If the modem is in application mode, the current firmware version is displayed. This behaviour replaces the version() command which now is only available in uart() mode. Optional parameters are sqnsupgrade.info(verbose=False, debug=False)
 
 #### sqnsupgrade.run(load_fff=True)
-    New optional command line option load_fff for the sqnsupgrade.run() command. This is designed to be an internal flag. And should only applied when advised by pycom support.
+There is an optional command line load_fff for the sqnsupgrade.run() command. This is designed to be an internal flag. IMPORTANT: This should only be used when advised by Pycom Support.
