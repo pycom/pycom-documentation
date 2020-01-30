@@ -40,8 +40,7 @@ Please start with the following steps:
 The modem firmware files are password protected. In order to download them, head to forum.pycom.io and become a member (if you aren't already) and click on:
 Announcements & News --> Announcements for members only --> the Firmware Files for the Sequans LTE modem are now secured or click here.
 
-You can find the different available firmware versions [here]
-(https://software.pycom.io/downloads/sequans2.html)
+You can find the different available firmware versions [here](https://software.pycom.io/downloads/sequans2.html)
 
 We are using `CATM1-39529.zip` and `NB1-37781.zip` as examples in this tutorial.
 
