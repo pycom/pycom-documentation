@@ -23,21 +23,22 @@ characteristic.value() # get characteristic value
 
 #### characteristic.events()
 
-Returns a value with bit flags identifying the events that have occurred since the last call. Calling this function clears the events.
+Returns a value with bit flags, identifying the events that have occurred since the last call. Calling this function clears the events.
 
 #### characteristic.callback(trigger=None, handler=None, arg=None)
 
-Creates a callback that will be executed when any of the triggers occurs. The arguments are:
+Creates a callback that will be executed when any of the triggers occur. The arguments are:
 
 * `trigger` can be either `Bluetooth.CHAR_READ_EVENT` or `Bluetooth.CHAR_WRITE_EVENT`.
 * `handler` is the function that will be executed when the callback is triggered.
 * `arg` is the argument that gets passed to the callback. If nothing is given, the characteristic object that owns the callback will be used.
 
-Beyond the `arg` a tuple (called `data`) is also passed to `handler`. The tuple consists of (event, value), where `event` is the triggering event, and `value` is the value strictly belonging to the `event` in case of a WRITE event. If the `event` is not a WRITE event, the `value` has no meaning.
+Beyond the `arg` a tuple (called `data`) is also passed to `handler`. The tuple consists of (event, value), where `event` is the triggering event and `value` is the value strictly belonging to the `event` in case of a WRITE event. If the `event` is not a WRITE event, the `value` has no meaning.
 
-It is adviced to get the `event` and new `value` of the characteristic via this tuple, and not via `characteristic.event()` and `characteristic.value()` calls in the context of the `handler` to make sure no event and value is lost. The reason behind this is that `characteristic.event()` and `characteristic.value()` returns with the very last event received and with the current value of the characteristic, while the input parameters are always linked to the specific event triggering the `handler`. If the device is busy executing other operation it may happen that the `handler` of an incoming event is not called before the next event comes and processed.
+We recommend getting both the `event` and new `value` of the characteristic via this tuple, and not via `characteristic.event()` and `characteristic.value()` calls in the context of the `handler` to make sure no event and value is lost.
+The reason behind this is that `characteristic.event()` and `characteristic.value()` return with the very last event received and with the current value of the characteristic, while the input parameters are always linked to the specific event triggering the `handler`. If the device is busy executing other operations,  the `handler` of an incoming event may not be called before the next event occurs and is processed.
 
-An example of how this could be implemented can be seen below, along an example of advertising and creating services on the device:
+An example of how this can be implemented is shown below, via an example of advertising and creating services on the device:
 
 ```python
 
@@ -52,8 +53,8 @@ def conn_cb (bt_o):
 
 def char1_cb_handler(chr, data):
 
-    # data is a tuple containing the triggering event and the value if the event is a WRITE event
-    # It is adviced to fetch the event and value from the input parameter, and not via characteristic.event() and characteristic.value()
+    # The data is a tuple containing the triggering event and the value if the event is a WRITE event.
+    # We recommend fetching the event and value from the input parameter, and not via characteristic.event() and characteristic.value()
     events, value = data
     if  events & Bluetooth.CHAR_WRITE_EVENT:
         print("Write request with value = {}".format(value))
@@ -61,7 +62,7 @@ def char1_cb_handler(chr, data):
         print('Read request on char 1')
 
 def char2_cb_handler(chr, data):
-    # value is not used in this callback as the WRITE events are not processed
+    # The value is not used in this callback as the WRITE events are not processed.
     events, value = data
     if  events & Bluetooth.CHAR_READ_EVENT:
         print('Read request on char 2')
