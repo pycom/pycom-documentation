@@ -85,15 +85,15 @@ go to GitHub and create a pull with **publish** branch as a base branch.
 
 ### How to create a pull request on "development-publish" and "publish" based on the current branch
 
-    1 - Access pycom-documentation/scripts
+1 - Access ```pycom-documentation/scripts```
 
-    2 - Run **npm install**
+2 - Run ```npm install```
 
-    3 - Based on **githubToken.example.json**, create the file **githubToken.json** with your Github token
+3 - Based on ```githubToken.example.json```, create the file ```githubToken.json``` with your Github token
 
-    4 - Run **./pydocs pr github_username**
+4 - Run ```./pydocs pr github_username```
 
-    5 - Enter with the requested information
+5 - Enter with the requested information
 
 ## some info:
 
