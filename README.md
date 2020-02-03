@@ -87,11 +87,11 @@ go to GitHub and create a pull with **publish** branch as a base branch.
 
     1 - Access pycom-documentation/scripts
 
-    2 - Run ```npm install```
+    2 - Run **npm install**
 
-    3 - Based on ```githubToken.example.json```, create the file ```githubToken.json``` with your Github token
+    3 - Based on **githubToken.example.json**, create the file **githubToken.json** with your Github token
 
-    4 - Run ```./pydocs pr github_username```
+    4 - Run **./pydocs pr github_username**
 
     5 - Enter with the requested information
 
