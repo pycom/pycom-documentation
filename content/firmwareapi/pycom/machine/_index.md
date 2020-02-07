@@ -65,7 +65,7 @@ Products with LTE connectivity, such as the FiPy, GPy, G01, need to have the LTE
 
 #### machine.pin\_sleep\_wakeup(pins, mode, enable\_pull)
 
-Configure pins to wake up from deep/light sleep mode. The pins which have this capability are: `P2, P3, P4, P6, P8 to P10 and P13 to P23`.
+Configure pins to wake up from sleep mode. The pins which have this capability are: `P2, P3, P4, P6, P8 to P10 and P13 to P23`.
 
 The arguments are:
 

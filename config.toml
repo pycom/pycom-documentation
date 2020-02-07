@@ -1397,20 +1397,6 @@ theme = "doc-theme"
     weight = 10
 
 [[menu.main]]
-    name = "DevKit contract"
-    url = "/pybytes/sigfox/devkit/"
-    identifier = "pybytes@sigfox@devkit"
-    parent = "pybytes@sigfox"
-    weight = 10
-
-[[menu.main]]
-    name = "Custom contract"
-    url = "/pybytes/sigfox/custom/"
-    identifier = "pybytes@sigfox@custom"
-    parent = "pybytes@sigfox"
-    weight = 20
-
-[[menu.main]]
     name = "Project Releases"
     url = "/pybytes/releases/"
     identifier = "pybytes@releases"
