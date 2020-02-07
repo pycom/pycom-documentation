@@ -15,7 +15,6 @@ AES is implemented using the ESP32 hardware module.
 ## Quick Usage Example
 
 ```python
-
 from crypto import AES
 import crypto
 key = b'notsuchsecretkey' # 128 bit (16 bytes) key
