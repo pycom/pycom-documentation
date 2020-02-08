@@ -60,16 +60,18 @@ bluetooth = Bluetooth()
 
 ## Methods
 
-#### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None, modem\_sleep=True, secure=False, pin=123456)
+#### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None, modem\_sleep=True, pin=None, privacy=True, secure\_connections=True, mtu=200)
 
-* `id` Only one Bluetooth peripheral available so must always be 0
-* `mode` currently the only supported mode is `Bluetooth.BLE`
-* `modem_sleep` Enables or Disables BLE modem sleep, Disable modem sleep as a workaround when having Crashes due to flash cache being disabled, as this prevents BLE task saving data in external RAM while accesing external flash for R/W
-* `antenna` selects between the internal and the external antenna. Can be either `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
-* `secure` enables or disables the GATT Server security features
-* `pin` a six digit number to connect to the GATT Sever
+* `id` Only one Bluetooth peripheral available so must always be 0.
+* `mode` currently the only supported mode is `Bluetooth.BLE`.
+* `antenna` selects between the internal and the external antenna. Can be either `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`.
+* `modem_sleep` Enables or Disables BLE modem sleep, Disable modem sleep as a workaround when having Crashes due to flash cache being disabled, as this prevents BLE task saving data in external RAM while accesing external flash for R/W.
+* `pin` a one to six digit number (`0`-`9`) to connect to the GATT Sever. Setting any valid pin, GATT Server security features are activated.
+* `privacy` Enables or Disables local privacy settings so address will be random or public.
+* `secure_connections` Enables or Disables Secure Connections and MITM Protection.
+* `mtu` Maximum Transmission Unit (MTU) is the maximum length of an ATT packet. Value must be between `23` and `200`.
 
-  With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
+With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
 
 Initialises and enables the Bluetooth radio in BLE mode.
 
@@ -155,6 +157,10 @@ while bluetooth.isscanning():
             # try to get the manufacturer data (Apple's iBeacon data is sent here)
             print(ubinascii.hexlify(mfg_data))
 ```
+
+#### bluetooth.set\_pin()
+
+Sets a new pin and grants security request access, if it was not set before. Pin must be a one to six digit number (`0`-`9`). Every time a new pin has been set, Connection and Bonding with Client devices are deleted, and avertisement is stopped.
 
 #### bluetooth.connect(mac\_addr, timeout=None)
 
