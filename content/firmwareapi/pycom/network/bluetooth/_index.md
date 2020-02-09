@@ -160,7 +160,7 @@ while bluetooth.isscanning():
 
 #### bluetooth.set\_pin()
 
-Sets a new pin and grants security request access, if it was not set before. Pin must be a one to six digit number (`0`-`9`). Every time a new pin has been set, Connection and Bonding with Client devices are deleted, and avertisement is stopped.
+Configures a new PIN to be used by the device. The PIN is a 1-6 digit length decimal number, if less than 6 digits are given the missing leading digits are considered as 0. E.g. 1234 becomes 001234. When a new PIN is configured, the information of all previously bonded device is removed and the current connection is terminated. To restart advertisement the advertise() must be called after PIN is changed.
 
 #### bluetooth.connect(mac\_addr, timeout=None)
 
