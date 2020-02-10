@@ -35,4 +35,4 @@ Read more how to use Sigfox with [devKit contract](devkit).
 
 ### Sigfox custom contracts
 
-Read more how to use Sigfox with [Custom contract](devkit).
+Read more how to use Sigfox with [Custom contract](custom).
