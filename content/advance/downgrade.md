@@ -12,7 +12,18 @@ The firmware upgrade tool usually updates your device to the latest available fi
 If you are using an Expansion Board 1.0 or 2.0, you will need to have a jumper connected between `G23` and `GND` to use either procedure below. You will also need to press the reset button before beginning.
 {{% /hint %}}
 
-You can obtain previous firmware versions here:
+Here you can download Pycom firmware:
+
+### Current and previous Pybytes firmware
+
+* [WiPy](https://software.pycom.io/downloads/pybytes/WiPy.html)
+* [LoPy](https://software.pycom.io/downloads/pybytes/LoPy.html)
+* [SiPy](https://software.pycom.io/downloads/pybytes/SiPy.html)
+* [GPy](https://software.pycom.io/downloads/pybytes/GPy.html)
+* [FiPy](https://software.pycom.io/downloads/pybytes/FiPy.html)
+* [LoPy4](https://software.pycom.io/downloads/pybytes/LoPy4.html)
+
+### Legacy and previous development firmware
 
 * [WiPy](https://software.pycom.io/downloads/WiPy.html)
 * [LoPy](https://software.pycom.io/downloads/LoPy.html)
