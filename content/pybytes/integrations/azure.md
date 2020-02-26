@@ -19,7 +19,9 @@ The first step requires you to create an [IoT Hub](https://docs.microsoft.com/en
 
 ![IoT Hub creation](/gitbook/assets/01_azure_integration.png)
 
-Now copy and paste the connection string with the privilege to write into the registry by clicking on the relative button
+Now copy and paste the connection string with the privilege to write into the registry.
+
+![copy-azure-connection-string](/gitbook/assets/pybytes/integrations/azure/azure-connection-string.png)
 
 Go to Pybytes and click on *Integrations* > *New Integration* and choose *Microsoft Azure*.
 
