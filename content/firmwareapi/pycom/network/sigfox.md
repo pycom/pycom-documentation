@@ -240,7 +240,8 @@ s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, True)
 s.send(bytes([1, 2, 3]))
 
 # await DOWNLINK message
-s.recv(32)
+r = s.recv(32)
+print(ubinascii.hexlify(r))
 ```
 
 ## Sigfox FSK (Device to Device)
