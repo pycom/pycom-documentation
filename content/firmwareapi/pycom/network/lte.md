@@ -58,6 +58,73 @@ lte = LTE()
 
 This method is used to set up the LTE subsystem. After a `deinit()` this method can take several seconds to return waiting for the LTE modem to start-up. Optionally specify a carrier name. The available options are: `verizon, at&t, standard`. `standard` is generic for any carrier, and it's also the option used when no arguments are given.
 
+**Power Saving Mode**
+
+The _Power Saving Mode_ allows a user to configure how often a device will connect and how long it will stay connected. Upon `attach()` this configuration is then requested from the network. Ultimately it is up to the network to decide the PSM configuration. After a successful PSM configuration,
+
+- the LTE modem will go into a low power state during deep sleep, but
+- it will stay attached to the network, thus no time is spent for `attach()` after waking up.
+
+The configuration is done with these four parameters:
+
+- `psm_period_value` : Configure at which period the device will connect to the network. Values from 0 to 31 are allowed.
+- `psm_period_unit` : Specify the _unit_ to be used for `psm_period_value`.
+- `psm_active_value` : Configure how long the device will be connected. Values from 0 to 31 are allowed.
+- `psm_active_unit` : Specify the _unit_ for `psm_active_value`.
+
+The LTE specification prescribes certain _units_ for configuring PSM. See the constants below.
+
+For the following example, assume you want to wake up once per hour, connect and do some processing, then go to deepsleep for 55 minutes:
+
+```python
+
+from network import LTE
+import time
+import socket
+import machine
+import pycom
+
+def attach():
+    start = time.time()
+    if lte.isattached():
+        print("already attached")
+    else:
+        print("attach")
+        lte.attach(band=20, apn="spe.inetd.vodafone.nbiot")
+        while not lte.isattached():
+            time.sleep(1)
+    print("attached after", time.time() - start, "seconds")
+    print(lte.psm())
+
+def connect():
+    print("connect")
+    start = time.time()
+    lte.connect()
+    while not lte.isconnected():
+        time.sleep(0.5)
+    print("connected after", time.time() - start, "seconds")
+
+def http_get(url = 'http://detectportal.firefox.com/'):
+    _, _, host, path = url.split('/', 3)
+    addr = socket.getaddrinfo(host, 80)[0][-1]
+    s = socket.socket()
+    s.connect(addr)
+    s.send(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
+    s.close()
+
+# period 1h, active 10s
+lte = LTE(psm_period_value=1, psm_period_unit=LTE.PSM_PERIOD_1H,
+          psm_active_value=5, psm_active_unit=LTE.PSM_ACTIVE_2S )
+print(lte.psm())
+attach()
+connect()
+http_get()
+print("deinit")
+lte.deinit(detach=False, reset=False)
+print("deepsleep")
+machine.deepsleep(55 * 60 * 1000) # 55m
+```
+
 #### lte.deinit(detach=True, reset = False)
 
 Disables LTE modem completely. This reduces the power consumption to the minimum. Call this before entering deepsleep.
@@ -209,3 +276,8 @@ Check Network Coverage for UE device (i.e LTE modem).
 - `LTE.IP` : Internet Protocol IP
 
 - `LTE.IPV4V6` : Internet protocol ver. 4/6
+
+- `PSM_PERIOD_2S`, `PSM_PERIOD_30S`, `PSM_PERIOD_1M`, `PSM_PERIOD_10M`, `PSM_PERIOD_1H`, `PSM_PERIOD_10H`, `PSM_PERIOD_320H`: Specify the unit for the PSM period to be 2 seconds, 30 seconds, 1 minute, 10 minutes, 1 hour, 10 hours, or 320 hours, respectively.
+- `PSM_PERIOD_DISABLED`: Specifying the unit for PSM period of `PSM_PERIOD_DISABLED` means turning PSM off. This is the default.
+- `PSM_ACTIVE_2S`, `PSM_ACTIVE_1M`, `PSM_ACTIVE_6M`: Specify the unit for the PSM active duration to be 2 seconds, 1 minute, or 6 minutes, respectively.
+- `PSM_ACTIVE_DISABLED`: Specifying the active duration unit of `PSM_ACTIVE_DISABLED` means turning PSM off. This is the default.
