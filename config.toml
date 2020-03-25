@@ -570,6 +570,13 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "Power consumption"
+    url = "/tutorials/lte/power/"
+    identifier = "tutorials@lte@power"
+    parent = "tutorials@lte"
+    weight = 20
+
+[[menu.main]]
     name = "Module IMEI"
     url = "/tutorials/lte/imei/"
     identifier = "tutorials@lte@imei"
