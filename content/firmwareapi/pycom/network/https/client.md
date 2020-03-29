@@ -96,7 +96,7 @@ HTTP_Client.auth("", "")
 
 #### HTTP_Client.callback(callback, *, action=True)
 
-Registeror unregister method for HTTP_Client's response handler.
+Register or unregister method for HTTP_Client's response handler.
 * `callback` registers/unregisters (based on `action` flag) a callback function which will be called when a response received on the Client's request. `callback` must have the following arguments:
   * `status` is the status code issued by a Server in response to a Client's request (e.g. `200` OK or `404` Not Found).
   * `headers` is a dictionary contains all the response headers as key-value pairs. Size of `headers` depends on the number of headers received.
