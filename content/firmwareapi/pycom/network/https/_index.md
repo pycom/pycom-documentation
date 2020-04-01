@@ -4,7 +4,7 @@ aliases:
     - chapter/firmwareapi/pycom/network/https
 ---
 
-This module implements an HTTP and HTTPS Server and Client, operating as both at the same time.
+This module implements an HTTP and HTTPS Server and Client, operating individually or as both at the same time.
 
 ## Quick Usage Example
 Below is an example demonstrating the usage of `HTTP_Server` and `HTTP_Client` at the same time:
@@ -51,7 +51,7 @@ HTTP_Client.init('http://' + str(wlan.ifconfig()[0] + '/resource'), callback=cli
 # Send request with body
 HTTP_Client.send_request(body='Hello Server!')
 ```
-To implement HTTPS Server and Client, only the two init methods need to be changed:
+To implement HTTPS Server and Client, only the two init methods need to be changed. HTTP Server and Client init:
 
 ```python
 # HTTP Server init
@@ -60,7 +60,7 @@ HTTP_Server.init()
 # HTTP Client init
 HTTP_Client.init('http://' + str(wlan.ifconfig()[0] + '/resource'), callback=client_callback)
 ```
-
+HTTPS Server and Client init:
 ```python
 # HTTPS Server init
 HTTP_Server.init(port=443, keyfile='/flash/cert/prvtkey.pem', certfile='/flash/cert/cacert.pem')

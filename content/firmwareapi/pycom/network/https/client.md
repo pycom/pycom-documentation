@@ -5,7 +5,7 @@ aliases:
     - firmwareapi/pycom/network/https/client.md
     - chapter/firmwareapi/pycom/network/https/client
 ---
-This module implements a HTTP/S Client.
+This module implements HTTP/S Client.
 
 ## Quick Usage Example
 
@@ -49,7 +49,7 @@ Initialize the HTTP_Client module.
 
 The arguments are:
 
-* `url` is the address where the HTTP_Client module handles communication. Based on HTTP or HTTPS Client mode, `url` string must be started with 'http://' or 'https://'.
+* `url` is the address where the HTTP_Client module handles communication. Based on HTTP or HTTPS Client mode, `url` string must be started with 'http://' or 'https://' respectively.
 * `auth` is a tuple with (username, password). `Basic` authentication is supported in case of configured username and password.
 * `callback` registers a callback function which will be called when a response received on the Client's request. `callback` must have the following arguments:
   * `status` is the status code issued by a Server in response to a Client's request (e.g. `200` OK or `404` Not Found).
