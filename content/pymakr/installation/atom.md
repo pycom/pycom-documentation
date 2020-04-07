@@ -14,20 +14,16 @@ Please follow these steps to install the [Pymakr Plugin](https://atom.io/package
 
 ![](/gitbook/assets/atom_setup_step_1-1.png)
 
-2. Navigate to the Install page, via `Atom > Preferences > Install`
-
+1. Navigate to the Install page, via `Atom > Preferences > Install`
 ![](/gitbook/assets/atom_setup_step_2-1.png)
 
-3. Search for `Pymakr` and select the official Pycom Pymakr Plugin.
-
+1. Search for `Pymakr` and select the official Pycom Pymakr Plugin.
 ![](/gitbook/assets/atom_setup_step_3-1.png)
 
-4. You should now see and click the Install button. This will download and install the Pymakr Plugin.
-
+1. You should now see and click the Install button. This will download and install the Pymakr Plugin.
 ![](/gitbook/assets/atom_setup_step_4-1.png)
 
-5. That's it! You've installed the Pymakr Plugin for Atom.
-
+1. That's it! You've installed the Pymakr Plugin for Atom.
 ![](/gitbook/assets/atom_setup_step_5-1.png)
 
 ## Connecting via Serial USB
@@ -35,11 +31,9 @@ Please follow these steps to install the [Pymakr Plugin](https://atom.io/package
 After installing the Pymakr Plugin, you need to take a few seconds to configure it for first time use. Please follow these steps:
 
 1. Connect your Pycom device to your computer via USB. If you are using an Expansion Board 2.0, and have just finished a firmware upgrade, be sure to **remove the wire between GND and G23** and reset your device by pressing the button.
-
    Note: you don't need the wire for Expansion Board 3.0
 
-2. Open Atom and ensure that the Pymakr Plugin has correctly installed.
-
+1. Open Atom and ensure that the Pymakr Plugin has correctly installed.
 ![](/gitbook/assets/atom_config_step_2-1.png)
 
 4. Pymakr has auto-connection enabled by default. In case your device didn't open right away, click on the button `Connect device` and then on your device.

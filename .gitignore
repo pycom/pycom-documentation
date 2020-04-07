@@ -7,3 +7,10 @@
 *.iml
 out
 gen
+
+.DS_Store
+static/.DS_Store
+static/gitbook/.DS_Store
+static/gitbook/assets/.DS_Store
+static/gitbook/assets/pybytes/.DS_Store
+scripts/githubToken.json
