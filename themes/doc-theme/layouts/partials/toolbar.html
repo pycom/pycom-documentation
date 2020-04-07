@@ -5,6 +5,7 @@
   class="pr-3 pl-2 navbar"
   dark
   style="background-color: #171730;"
+  flat
 >
   <v-toolbar-title style="width: 260px; " class="ml-4 pl-0  pt-2 text-xs-center hidden-sm-and-down">
     <v-img class="ml-4"  height=48 width=190  src="/logo.svg" class="">
@@ -17,6 +18,15 @@
         {{ .Page.Title }}
     </span>
 
+  <v-text-field
+    style="max-width: 650px"
+    class="ml-3 algolia-search-field"
+    light
+    hide-details
+    label="Search the docs..."
+    solo
+    append-icon="search"
+  ></v-text-field>
 
   <v-spacer></v-spacer>
   {{ if eq .Section "firmwareapi"}}

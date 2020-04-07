@@ -50,17 +50,17 @@ Gates the clock to the CPU, useful to reduce power consumption at any time durin
 
 Stops the CPU and all peripherals, including the networking interfaces (except for LTE). Execution is resumed from the main script, just as with a reset. If a value in milliseconds is given then the device will wake up after that period of time, otherwise it will remain in deep sleep until the reset button is pressed.
 
-The products with LTE connectivity (FiPy, GPy, G01), require the LTE radio to be disabled separately via the LTE class before entering deepsleep. This is required due to the LTE radio being powered independently and allowing use cases which require the system to be taken out from deepsleep by an event from the LTE network (data or SMS received for instance).
+Products with LTE connectivity, such as the FiPy, GPy, G01, need to have the LTE radio disabled separately via the LTE class before entering deepsleep. This is necessary because the LTE radio is powered independently, which allows for use cases that wake the system from deepsleep by an event from the LTE network, for example receiving data or an SMS.
 
-#### machine.pin\_deepsleep\_wakeup(pins, mode, enable\_pull)
+#### machine.pin\_sleep\_wakeup(pins, mode, enable\_pull)
 
-Configure pins to wake up from deep sleep mode. The pins which have this capability are: `P2, P3, P4, P6, P8 to P10 and P13 to P23`.
+Configure pins to wake up from sleep mode. The pins which have this capability are: `P2, P3, P4, P6, P8 to P10 and P13 to P23`.
 
 The arguments are:
 
-* `pins` a list or tuple containing the `GPIO` to setup for deepsleep wakeup.
+* `pins` a list or tuple containing the `GPIO` to setup for sleep wakeup.
 * `mode` selects the way the configure `GPIO`s can wake up the module. The possible values are: `machine.WAKEUP_ALL_LOW` and `machine.WAKEUP_ANY_HIGH`.
-* `enable_pull` if set to `True` keeps the pull up or pull down resistors enabled during deep sleep. If this variable is set to `True`, then `ULP` or capacitive touch wakeup cannot be used in combination with `GPIO` wakeup.
+* `enable_pull` if set to `True` keeps the pull up or pull down resistors enabled during sleep. If this variable is set to `True`, then `ULP` or capacitive touch wakeup cannot be used in combination with `GPIO` wakeup.
 
 #### machine.wake\_reason()
 
@@ -107,4 +107,3 @@ Returns the high water mark of the stack associated with various system tasks, i
 ### Pin Wakeup Modes
 
 `machine.WAKEUP_ALL_LOW`, `machine.WAKEUP_ANY_HIGH`
-

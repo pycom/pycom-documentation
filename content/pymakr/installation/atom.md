@@ -12,6 +12,7 @@ Please follow these steps to install the [Pymakr Plugin](https://atom.io/package
 
 1. [Download and install](https://atom.io) Atom. Ensure that you have Atom installed and open.
 
+1. Ensure that you have the latest Atom installed and open.
 ![](/gitbook/assets/atom_setup_step_1-1.png)
 
 1. Navigate to the Install page, via `Atom > Preferences > Install`

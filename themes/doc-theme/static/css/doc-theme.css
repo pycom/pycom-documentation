@@ -341,3 +341,17 @@ p {
 html {
   scroll-padding-top: 70px; /* height of sticky header */
 }
+
+img[src*="/gitbook/assets/pybytes/lora/screenshots"]{
+    margin-top: 20px;
+    margin-left: 15px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+img[src="/gitbook/assets/pybytes/lora/chirpstack_logo.png"]{
+    width: 200px;
+}
+
+img[src="/gitbook/assets/pybytes/lora/ttn_logo.svg"]{
+    width: 130px;
+}

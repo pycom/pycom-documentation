@@ -35,7 +35,7 @@ If problems occur within the filesystem or you wish to factory reset your module
 ```python
 
 >>> import os
->>> os.mkfs('/flash')
+>>> os.fsformat('/flash')
 ```
 
 {{% hint style="danger" %}}
@@ -59,4 +59,3 @@ A hard reset is the same as performing a power cycle to the device. In order to 
 >>> import machine
 >>> machine.reset()
 ```
-
