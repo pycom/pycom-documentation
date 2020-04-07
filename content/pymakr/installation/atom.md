@@ -12,19 +12,18 @@ Please follow these steps to install the [Pymakr Plugin](https://atom.io/package
 
 1. [Download and install](https://atom.io) Atom. Ensure that you have Atom installed and open.
 
-1. Ensure that you have the latest Atom installed and open.
 ![](/gitbook/assets/atom_setup_step_1-1.png)
 
-1. Navigate to the Install page, via `Atom > Preferences > Install`
+2. Navigate to the Install page, via `Atom > Preferences > Install`
 ![](/gitbook/assets/atom_setup_step_2-1.png)
 
-1. Search for `Pymakr` and select the official Pycom Pymakr Plugin.
+3. Search for `Pymakr` and select the official Pycom Pymakr Plugin.
 ![](/gitbook/assets/atom_setup_step_3-1.png)
 
-1. You should now see and click the Install button. This will download and install the Pymakr Plugin.
+4. You should now see and click the Install button. This will download and install the Pymakr Plugin.
 ![](/gitbook/assets/atom_setup_step_4-1.png)
 
-1. That's it! You've installed the Pymakr Plugin for Atom.
+5. That's it! You've installed the Pymakr Plugin for Atom.
 ![](/gitbook/assets/atom_setup_step_5-1.png)
 
 ## Connecting via Serial USB
@@ -37,11 +36,11 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 1. Open Atom and ensure that the Pymakr Plugin has correctly installed.
 ![](/gitbook/assets/atom_config_step_2-1.png)
 
-4. Pymakr has auto-connection enabled by default. In case your device didn't open right away, click on the button `Connect device` and then on your device.
+2. Pymakr has auto-connection enabled by default. In case your device hasn't connected right away, click on `Connect device` and then on your device.
 
 ![](/gitbook/assets/atom_config_step_4.png)
 
-7. Now it should show three arrows `>>>`, indicating that you are connected!
+3. Now it should show three arrows `>>>`, indicating that you are connected!
 
 ![](/gitbook/assets/atom_config_step_7%20%281%29.png)
 
