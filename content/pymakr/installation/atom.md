@@ -8,9 +8,9 @@ aliases:
 
 For beginners, users getting started with MicroPython & Pycom as well as Atom text editor users, we recommend the **Pymakr Plugin for Atom**. This section will help you get started using the Atom Text Editor & Pymakr Plugin.
 
-Please follow these steps to install the Pymakr Plugin:
+Please follow these steps to install the [Pymakr Plugin](https://atom.io/packages/pymakr):
 
-1. Ensure that you have Atom installed and open.
+1. [Download and install](https://atom.io) Atom. Ensure that you have Atom installed and open.
 
 ![](/gitbook/assets/atom_setup_step_1-1.png)
 
@@ -42,23 +42,11 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 ![](/gitbook/assets/atom_config_step_2-1.png)
 
-3. Open the Pymakr console by clicking the `^` button, located in the lower right side of the Atom window.
-
-![](/gitbook/assets/atom_config_step_3%20%281%29.png)
-
-4. Click, `More` followed by `Get Serial Ports`. This will copy the serial address of your expansion board to your clipboard.
+4. Pymakr has auto-connection enabled by default. In case your device didn't open right away, click on the button `Connect device` and then on your device.
 
 ![](/gitbook/assets/atom_config_step_4.png)
 
-5. Navigate to `Settings > Global Settings`
-
-![](/gitbook/assets/atom_config_step_5.png)
-
-6. Paste the serial address you copied earlier into the text field `Device Address`
-
-![](/gitbook/assets/atom_config_step_6%20%281%29.png)
-
-7. Press connect and the Pymakr console should show three arrows `>>>`, indicating that you are connected
+7. Now it should show three arrows `>>>`, indicating that you are connected!
 
 ![](/gitbook/assets/atom_config_step_7%20%281%29.png)
 
@@ -74,12 +62,13 @@ After installing the Pymakr Plugin, a device may be connected via the telnet int
 
 1. Ensure that Pycom device is turned on
 2. Connect the host computer to the WiFi Access Point named after your board (the SSID will be as follows e.g. `lopy-wlan-xxxx`, `wipy-wlan-xxxx`, etc.). The password is `www.pycom.io`.
-3. Follow the steps as above in the "Connecting via Serial USB" section but
+3. Go to `Settings` > `Global Settings`
 
-   enter `192.168.4.1` as the address.
+![](/gitbook/assets/atom_global_settings.png)
+
+4. In `Devices Addresses (List)`, enter `192.168.4.1` as the address.
+
+![](/gitbook/assets/atom_device_list.png)
 
 4. The default username and password are `micro` and `python`, respectively.
-5. Click `Connect` in the Pymakr pane, Pymakr will now connect via telnet.
-
-![](/gitbook/assets/pymakr-plugin-settings-1.png)
-
+5. Click `192.168.4.1` in the Devices List pane, Pymakr will now connect via telnet.
