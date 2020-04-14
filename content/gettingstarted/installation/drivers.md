@@ -22,7 +22,7 @@ All our products will work out of the box for Windows 8/10/+. If using Windows 7
 
 Please download the driver software from the link below:
 
-[Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver (save the file to your computer)](https://github.com/pycom/pycom-documentation/blob/development_release/.gitbook/assets/pycom.inf)
+[Pysense/Pytrack/Pyscan/Expansion Board 3.0 Serial Driver (save the file to your computer)](https://docs.pycom.io/gitbook/assets/pycom.inf)
 
 
 ### Installation
