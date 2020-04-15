@@ -779,6 +779,13 @@ theme = "doc-theme"
     parent = "firmwareapi@pycom@network@bluetooth"
     weight = 60
 
+[[menu.main]]
+    name = "BLE Mesh"
+    url = "/firmwareapi/pycom/network/bluetooth/BLE_Mesh/"
+    identifier = "firmwareapi@pycom@network@bluetooth@BLE_Mesh"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 70
+
 #  [Errno 2] No such file or directory: './content/firmwareapi/pycom/network/lora/README.md'
 [[menu.main]]
     name = "LoRa"
