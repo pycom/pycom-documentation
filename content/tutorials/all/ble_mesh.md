@@ -49,7 +49,7 @@ element = BLE_Mesh.create_element(primary=True, feature=BLE_Mesh.GATT_PROXY)
 model_server = element.add_model(BLE_Mesh.GENERIC, BLE_Mesh.ONOFF, BLE_Mesh.SERVER, callback=server_cb)
 
 # Initialize BLE_Mesh
-BLE_Mesh.init("Pycom-BLE-MESH Server", auth=BLE_Mesh.OOB_OUTPUT)
+BLE_Mesh.init("Pycom Server", auth=BLE_Mesh.OOB_OUTPUT)
 
 # Turn on Provisioning Advertisement
 BLE_Mesh.set_node_prov(BLE_Mesh.PROV_ADV|BLE_Mesh.PROV_GATT, callback=prov_callback)
@@ -81,7 +81,7 @@ element = BLE_Mesh.create_element(primary=True, feature=BLE_Mesh.GATT_PROXY)
 model_client = element.add_model(BLE_Mesh.GENERIC, BLE_Mesh.ONOFF, BLE_Mesh.CLIENT, callback=client_cb)
 
 # Initialize BLE_Mesh
-BLE_Mesh.init("Pycom-BLE-MESH Client")
+BLE_Mesh.init("Pycom Client")
 
 # Turn on Provisioning Advertisement
 BLE_Mesh.set_node_prov(BLE_Mesh.PROV_ADV|BLE_Mesh.PROV_GATT, callback=prov_callback)
