@@ -64,9 +64,6 @@ import pycom
 def client_cb(model, event, recv_op):
     print("Set State: ", model.value())
 
-def prov_callback(oob_type, oob_pass):
-    print("OOB Pass: ", oob_pass)
-
 # BLE Mesh module
 BLE_Mesh = Bluetooth.BLE_Mesh
 
@@ -84,5 +81,5 @@ model_client = element.add_model(BLE_Mesh.GENERIC, BLE_Mesh.ONOFF, BLE_Mesh.CLIE
 BLE_Mesh.init("Pycom Client")
 
 # Turn on Provisioning Advertisement
-BLE_Mesh.set_node_prov(BLE_Mesh.PROV_ADV|BLE_Mesh.PROV_GATT, callback=prov_callback)
+BLE_Mesh.set_node_prov(BLE_Mesh.PROV_ADV|BLE_Mesh.PROV_GATT)
 ```
