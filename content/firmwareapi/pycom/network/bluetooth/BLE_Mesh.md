@@ -25,7 +25,7 @@ The library is under development, its current limitations:
 
 ## Methods of BLE_Mesh class
 
-#### BLE_Mesh.init(name="PYCOM-ESP-BLE-MESH", auth=0)
+#### BLE_Mesh.init(name="PYCOM-ESP-BLE-MESH", *, auth=0)
 
 Initializes the BLE Mesh module with the pre-configured Elements and Models.
 
@@ -34,12 +34,12 @@ Initializes the BLE Mesh module with the pre-configured Elements and Models.
 
 #### BLE_Mesh.set_node_prov(bearer=BLE_Mesh.PROV_NONE, *, callback=None)
 
-Enable provisioning bearers to get the device ready for provisioning. If OOB is enabled, callback inform about OOB information.
+Enable provisioning bearers to get the device ready for provisioning. If OOB is enabled, the callback is used to inform the user about OOB information.
 
 * `bearer` is the transport data protocol between endpoints, can be `BLE_Mesh.PROV_ADV` and/or `BLE_Mesh.PROV_GATT`.
 * `callback` is the callback to be registered. It must have the following arguments:
-* `oob_type` returns the type of OOB authentication. 
-* `oob_pass` returns the generated pass in case of `BLE_Mesh.OOB_OUTPUT`.
+    * `oob_type` returns the type of OOB authentication. 
+    * `oob_pass` returns the generated pass in case of `BLE_Mesh.OOB_OUTPUT`.
 
 #### BLE_Mesh.reset_node_prov()
 
@@ -96,6 +96,3 @@ Calling this function only makes sense when the BLE_Mesh_Model is a Client Model
 * Constants for Model - type: `BLE_Mesh.GENERIC`, `BLE_Mesh.SENSORS`, `BLE_Mesh.TIME_SCENES`, `BLE_Mesh.LIGHTNING`
 * Constants for Model - functionality: `BLE_Mesh.ONOFF`, `BLE_Mesh.LEVEL`
 * Constants for Model - server or client: `BLE_Mesh.SERVER`, `BLE_Mesh.CLIENT`
-
-
-
