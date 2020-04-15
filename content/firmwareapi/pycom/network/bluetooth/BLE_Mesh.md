@@ -62,7 +62,7 @@ This API creates a new BLE_Mesh_Model object. The BLE_Mesh_Model on concept leve
 * `type` is the type of the new Model.
 * `functionality` shows what functionality the new Model will be able to perform in the context of the `type`. 
 * `server_client` shows whether the new Model will act as a Server or Client.
-* `callback` is the user defined callback to call when any event happens on the Model.
+* `callback` is the user defined callback to call when any event happens on the Model. It accepts 3 parameters: `model`, `event`, `op_code`. The `model` is the BLE_Mesh_Model object, the `event` and the `op_code` are belonging of the BLE Mesh packet received.
 * `value` is the initial value represented by the Model.
 
 ## Methods of BLE_Mesh_Model object
