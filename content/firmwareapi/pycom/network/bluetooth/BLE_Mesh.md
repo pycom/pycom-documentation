@@ -5,7 +5,7 @@ aliases:
     - firmwareapi/pycom/network/bluetooth/BLE_Mesh.md
 ---
 
-The BLE_Mesh library provides support for connecting to a BLE Mesh Network with various Server and Client models.
+The BLE_Mesh library provides support for connecting to a BLE Mesh Network with various Server and Client models. Currently, Node cannot be configured as Provisioner.
 The library is under development, its current limitations:
 
 - Only one Element (primary) can be added to the Node.
@@ -21,6 +21,12 @@ The library is under development, its current limitations:
 - Supported Node Features:
     * GATT Proxy
     * Relay
+
+- Recommended Mobile Applications:
+    * nRF Mesh (iOS and Android)
+    * Silicon Labs Bluetoth Mesh (iOS)
+    * ST BLE Mesh (Android)
+    * EspBLEMesh (Android)
 
 
 ## Methods of BLE_Mesh class
