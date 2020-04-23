@@ -207,10 +207,10 @@ theme = "doc-theme"
 
 # *** Pymakr Plugin
 [[menu.main]]
-    name = "Pymakr"
+    name = "Pymakr Plugin"
     url = "/pymakr/installation/"
     identifier = "pymakr"
-    weight = 45
+    weight = 44
 
 [[menu.main]]
     name = "Installation"
@@ -246,6 +246,27 @@ theme = "doc-theme"
     identifier = "pymakr@settings"
     parent = "pymakr"
     weight = 30
+
+# *** Pymakr Online IDE
+[[menu.main]]
+    name = "Pymakr Online"
+    url = "/pymakr-online/"
+    identifier = "pymakr-online"
+    weight = 45
+
+[[menu.main]]
+    name = "How to Open"
+    url = "/pymakr-online/how-to-open/"
+    identifier = "pymakr-online@how-to-open"
+    parent = "pymakr-online"
+    weight = 10
+
+[[menu.main]]
+    name = "Tools/Features"
+    url = "/pymakr-online/toolsfeatures/"
+    identifier = "pymakr-online@toolsfeatures"
+    parent = "pymakr-online"
+    weight = 20
 
 # *** Pytrack, Pysense, Pyscan
 [[menu.main]]
