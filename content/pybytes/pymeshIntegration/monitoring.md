@@ -14,4 +14,4 @@ If the user clicks on the devices and go to the **Signal** interface, the user c
 
 ![Devices Signal](/gitbook/assets/pybytes/pymesh/device_signal.png)
 
-To illustrate the Pymesh Provisioning, check [**Pymesh Provisioning**](/pybytes/pymesh/provisioning)
+To illustrate the Pymesh Provisioning, check [**Pymesh Provisioning**](/pybytes/pymeshintegration/provisioning)

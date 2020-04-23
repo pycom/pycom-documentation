@@ -1455,8 +1455,8 @@ theme = "doc-theme"
 
  [[menu.main]]
      name = "Pymesh Integration"
-     url = "/pybytes/pymeshIntegration/"
-     identifier = "pybytes@pymeshIntegration"
+     url = "/pybytes/pymeshintegration/"
+     identifier = "pybytes@pymeshintegration"
      parent = "pybytes"
      weight = 90
 

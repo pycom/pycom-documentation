@@ -7,6 +7,6 @@ This documentation is a quick introduction to the new Pymesh integration feature
 
 The Pymesh integration is here to help Pymesh firmware deployment and to monitor Pymesh node's health.
 
-[**Pymesh Provisioning**](/pybytes/pymesh/provisioning)
+[**Pymesh Provisioning**](/pybytes/pymeshintegration/provisioning)
 
-[**Pymesh Monitoring**](/pybytes/pymesh/monitoring)
+[**Pymesh Monitoring**](/pybytes/pymeshintegration/monitoring)
