@@ -118,7 +118,7 @@ Get or set the `value` for resource.
 
 #### resource.register_request_handler(method, *, callback)
 
-Registers the servers operation on the given resource.
+Registers the servers operation on the given resource. Calling multiple times this function, only the most recent methods are registered.
 * `method` is the indication of the desired action to be performed for a given resource. It can be `HTTP_Server.GET`, `HTTP_Server.POST`, `HTTP_Server.PUT`, `HTTP_Server.DELETE`, or any combination at the same time. Calling method again with different method, unregisters recent settings, and resets the new one(s).
 * `callback` can be assigned to the resource, it contains information about Client's request:
    * `uri` is the full path of the resource to be requested.
