@@ -13,6 +13,7 @@ BLE Mesh module enables many-to-many device connections, based on Bluetooth modu
 ```python
 from network import Bluetooth
 import pycom
+import time
 
 def blink_led(n):
     for x in range(n):
