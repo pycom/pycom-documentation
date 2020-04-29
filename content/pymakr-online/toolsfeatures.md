@@ -160,6 +160,26 @@ To export your project, ensure that you have opened Pymakr Online from the Pymak
 ![](/gitbook/assets/pymakr-online/pymakr-download-completed.jpg)
 
 
+# Create a new file or folder 
+
+To create a file or folder in Pymakr Online, disregarding how you opened it, you just need to right click on the folder you want to create the file or folder in.
+
+![](/gitbook/assets/pymakr-online/pymakr-create-folder.jpg)
+
+In this case, I'm creating a folder called 'new-folder' under the project root. For that, I right clicked on the project name. 
+
+Now type the name of the file/folder: 
+![](/gitbook/assets/pymakr-online/pymakr-create-folder-1.jpg)
+
+_**Note: Pymakr Online only supports the formats .py .txt .log .json .html .js .cet .crt**_
+_**A folder name can not contain dots (.)**_
+
+If you want to delete a folder or file, right click on the item to be deleted and then click on "Delete file" or "Delete folder". 
+
+![](/gitbook/assets/pymakr-online/pymakr-create-folder-2.jpg)
+
+
+
 
 
 
