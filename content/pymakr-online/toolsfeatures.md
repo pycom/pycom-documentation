@@ -106,9 +106,9 @@ Once the download has been completed, you can now work with the device's files i
 ![](/gitbook/assets/pymakr-online/pymakr-device-import-3.jpg)!
 
 
-### 4. Zip file (soon)
+### 4. Zip file
 
-Still under development, this feature allows you to upload a zip file of your project into Pymakr Online and start to work with it from there. 
+This feature allows you to upload a zip file of your project into Pymakr Online and start to work with it from there. The zip file can not be bigger than 4MB.
 
 ### 5. Github Repository
 
