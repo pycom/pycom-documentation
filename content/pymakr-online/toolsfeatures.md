@@ -16,7 +16,7 @@ _**Note: Your device needs to be online in order to be reachable by Pymakr Onlin
 
 ## Terminal
 
-just like Pymakr Plugin, Pymakr Online also has a REPL (Read Evaluate Print Line) terminal. The REPL allows you to run code on your device, line by line. To begin coding, open Pymakr from a device (device's page > pymakr tab > open Pymakr button), go to the terminal and start typing your code. 
+Just like Pymakr Plugin, Pymakr Online also has a REPL (Read Evaluate Print Line) terminal. The REPL allows you to run code on your device, line by line. To begin coding, open Pymakr from a device (device's page > pymakr tab > open Pymakr button), go to the terminal and start typing your code. 
 
 
 ## Download a file
@@ -71,7 +71,7 @@ Before exporting your project, you first need to import a project into Pymakr or
 
 ### 1. Blank project
 
-This will open Pymakr Online with the essential files of Micropython project (main.py and boot.py).
+This will open Pymakr Online with the essential files of MicroPython project (main.py and boot.py).
 
 ### 2. Project/Release
 
