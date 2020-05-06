@@ -13,6 +13,10 @@ The library is under development, its current limitations:
     * Configuration Server Model (automatically generated together with primary Element)
     * Generic OnOff Server Model
     * Generic OnOff Client Model
+    * Generic Level Server Model
+    * Generic Level Client Model
+    * Sensor Server Model
+    * Sensor Client Model
  
 - Supported OOB authentication types:
     * No OOB
@@ -31,21 +35,21 @@ The library is under development, its current limitations:
 
 ## Methods of BLE_Mesh class
 
-#### BLE_Mesh.init(name="PYCOM-ESP-BLE-MESH", *, auth=0)
+#### BLE_Mesh.init(name="PYCOM-ESP-BLE-MESH", *, auth=0, callback=None)
 
 Initializes the BLE Mesh module with the pre-configured Elements and Models.
 
 * `name` is the name which will be used to identify the device during Provisioning
 * `auth` is the Out-Of-Band (OOB) method. Currently `BLE_Mesh.OOB_OUTPUT` is supported. Without specifying this argument, `NO_OOB` will be used during provisioning.
+* `callback` is the callback to be registered. It must have the following arguments:
+    * `event` returns current event of provisioning. 
+    * `oob_pass` returns the generated pass in case of `BLE_Mesh.OOB_OUTPUT`.
 
-#### BLE_Mesh.set_node_prov(bearer=BLE_Mesh.PROV_NONE, *, callback=None)
+#### BLE_Mesh.set_node_prov(bearer=BLE_Mesh.PROV_NONE, *)
 
 Enable provisioning bearers to get the device ready for provisioning. If OOB is enabled, the callback is used to inform the user about OOB information.
 
 * `bearer` is the transport data protocol between endpoints, can be `BLE_Mesh.PROV_ADV` and/or `BLE_Mesh.PROV_GATT`.
-* `callback` is the callback to be registered. It must have the following arguments:
-    * `oob_type` returns the type of OOB authentication. 
-    * `oob_pass` returns the generated pass in case of `BLE_Mesh.OOB_OUTPUT`.
 
 #### BLE_Mesh.reset_node_prov()
 
@@ -61,37 +65,44 @@ This API creates a new BLE_Mesh_Element object. The BLE_Mesh_Element on concept 
 
 ## Methods of BLE_Mesh_Element object
 
-#### BLE_Mesh_Element.add_model(type=BLE_Mesh.GENERIC, functionality=BLE_Mesh.ONOFF, server_client=BLE_Mesh.SERVER, *, callback=None, value=None)
+#### BLE_Mesh_Element.add_model(type=BLE_Mesh.GEN_ONOFF, server_client=BLE_Mesh.SERVER, *, callback=None, value=None, sen_min=-100, sen_max=100, sen_res=0.1)
 
 This API creates a new BLE_Mesh_Model object. The BLE_Mesh_Model on concept level is equivalent to the Model in the BLE Mesh terminology.
 
 * `type` is the type of the new Model.
-* `functionality` shows what functionality the new Model will be able to perform in the context of the `type`. 
 * `server_client` shows whether the new Model will act as a Server or Client.
-* `callback` is the user defined callback to call when any event happens on the Model. It accepts 3 parameters: `model`, `event`, `op_code`. The `model` is the BLE_Mesh_Model object, the `event` and the `op_code` are belonging of the BLE Mesh packet received.
+* `callback` is the user defined callback to call when any event happens on the Model. It accepts 3 parameters: `new_state`, `event`, `op_code`. The `new_state` is the corresponding state of BLE_Mesh_Model, the `event` and the `op_code` are belonging of the BLE Mesh packet received.
 * `value` is the initial value represented by the Model.
+* `sen_min` is the minimum value of Sensor State in case of Sensor Model.
+* `sen_max` is the maximum value of Sensor State in case of Sensor Model.
+* `sen_res` is the resolution of Sensor State in case of Sensor Model.
 
 ## Methods of BLE_Mesh_Model object
 
-#### BLE_Mesh_Model.value()
+#### BLE_Mesh_Model.get_state(addr=BLE_Mesh.ADDR_ALL_NODES, app_idx=0, state_type=None)
 
-Updates or fetches the value of the Model.
+Gets the State of the Sensor Model. If called from Server Model, returnes with State, in case of Client Model, it sends a Get Message, and returns State through the registered callback.
 
-* `value` is the new value to update the current value with.
-If the method is called without a parameter, the current value is returned.
-
-If the BLE_Mesh_Model is Server, publication message will be sent out when the value is updated.
-If the BLE_Mesh_Model is Client, only the locally stored value will be returned.
-When the BLE_Mesh_Model is Client and it received a publication message from a Server, the local value is automatically updated.
-
-
-#### BLE_Mesh_Model.set_state(value, addr=BLE_Mesh.ADDR_ALL_NODES, *, app_idx=0)
-
-Calling this function only makes sense when the BLE_Mesh_Model is a Client Model. It sets the value of the Server model.
-
-* `value` is the new value to update the current value with.
 * `addr` is the address of the remote Node to send the update message.
 * `app_idx` is the index of one of the registered Application IDs to use when sending out the message.
+* `state_type` is the type of Get State. 
+
+#### BLE_Mesh_Model.set_state(state, addr=BLE_Mesh.ADDR_ALL_NODES, app_idx=0, state_type=None)
+
+Sets the State of the Sensor Model. If called from Server Model, sets State directly, in case of Client Model, it sends a Set Message, and updates State.
+
+* `state` is the new value to update the current value with.
+* `addr` is the address of the remote Node to send the update message.
+* `app_idx` is the index of one of the registered Application IDs to use when sending out the message.
+* `state_type` is the type of Set State. 
+
+#### BLE_Mesh_Model.status_state(addr=BLE_Mesh.ADDR_ALL_NODES, app_idx=0, state_type=None)
+
+Calling this function only makes sense when the BLE_Mesh_Model is a Server Model. It sends a Status message with the State to the Client Model(s).
+
+* `addr` is the address of the remote Node to send the update message.
+* `app_idx` is the index of one of the registered Application IDs to use when sending out the message.
+* `state_type` is the type of Status State. 
 
 ## Constants
 
@@ -99,6 +110,7 @@ Calling this function only makes sense when the BLE_Mesh_Model is a Client Model
 * Features of an Element: `BLE_Mesh.RELAY`, `BLE_Mesh.LOW_POWER`, `BLE_Mesh.GATT_PROXY`, `BLE_Mesh.FRIEND`
 * Authentication options: `BLE_Mesh.OOB_INPUT`, `BLE_Mesh.OOB_OUTPUT`
 * Constants for Node addresses: `BLE_Mesh.ADDR_ALL_NODES`, `BLE_Mesh.ADDR_PUBLISH`
-* Constants for Model - type: `BLE_Mesh.GENERIC`, `BLE_Mesh.SENSORS`, `BLE_Mesh.TIME_SCENES`, `BLE_Mesh.LIGHTNING`
-* Constants for Model - functionality: `BLE_Mesh.ONOFF`, `BLE_Mesh.LEVEL`
+* Constants for Model - type: `BLE_Mesh.GEN_ONOFF`, `BLE_Mesh.GEN_LEVEL`, `BLE_Mesh.GEN_SENSOR`, `BLE_Mesh.GEN_SENSOR_SETUP`
 * Constants for Model - server or client: `BLE_Mesh.SERVER`, `BLE_Mesh.CLIENT`
+* Constants for Model - states: `BLE_Mesh.STATE_ONOFF`, `BLE_Mesh.STATE_LEVEL`, `BLE_Mesh.STATE_LEVEL_DELTA`, `BLE_Mesh.STATE_LEVEL_MOVE`, `BLE_Mesh.SEN_DESCRIPTOR`, `BLE_Mesh.SEN`, `BLE_Mesh.SEN_COLUMN`, `BLE_Mesh.SEN_SERIES`, `BLE_Mesh.SEN_SET_CADENCE`, `BLE_Mesh.SEN_SETTINGS`, `BLE_Mesh.SEN_SETTING`
+* Constants for Provision Events: `BLE_Mesh.PROV_REGISTER_EVT`, `BLE_Mesh.PROV_ENABLE_EVT`, `BLE_Mesh.PROV_DISABLE_EVT`, `BLE_Mesh.LINK_OPEN_EVT`, `BLE_Mesh.LINK_CLOSE_EVT`, `BLE_Mesh.PROV_COMPLETE_EVT`, `BLE_Mesh.PROV_RESET_EVT`, `BLE_Mesh.PROV_OUTPUT_OOB_REQ_EVT`, `BLE_Mesh.PROV_INPUT_OOB_REQ_EVT`
