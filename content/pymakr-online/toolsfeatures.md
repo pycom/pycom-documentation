@@ -162,7 +162,7 @@ To export your project, ensure that you have opened Pymakr Online from the Pymak
 
 # Create a new file or folder 
 
-To create a file or folder in Pymakr Online, disregarding how you opened it, you just need to right click on the folder you want to create the file or folder in.
+To create a file or folder in Pymakr Online, disregarding of how you opened it, you just need to right click on the folder you want to create the file or folder in.
 
 ![](/gitbook/assets/pymakr-online/pymakr-create-folder.jpg)
 
