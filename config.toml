@@ -381,6 +381,13 @@ theme = "doc-theme"
     weight = 30
 
 [[menu.main]]
+    name = "BLE Mesh"
+    url = "/tutorials/all/ble_mesh/"
+    identifier = "tutorials@all@ble_mesh"
+    parent = "tutorials@all"
+    weight = 35
+
+[[menu.main]]
     name = "HTTPS"
     url = "/tutorials/all/https/"
     identifier = "tutorials@all@https"
@@ -820,6 +827,13 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@network@bluetooth@gattscharacteristic"
     parent = "firmwareapi@pycom@network@bluetooth"
     weight = 60
+
+[[menu.main]]
+    name = "BLE Mesh"
+    url = "/firmwareapi/pycom/network/bluetooth/BLE_Mesh/"
+    identifier = "firmwareapi@pycom@network@bluetooth@BLE_Mesh"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 70
 
 #  [Errno 2] No such file or directory: './content/firmwareapi/pycom/network/lora/README.md'
 [[menu.main]]
