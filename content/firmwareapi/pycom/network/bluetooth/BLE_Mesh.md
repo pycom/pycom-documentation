@@ -35,7 +35,7 @@ Pymesh BLE features:
 
 ## Methods of BLE_Mesh class
 
-#### BLE_Mesh.init(name="PYMES-BLE", *, auth=0, callback=None)
+#### BLE_Mesh.init(name="PYCOM-ESP-BLE-MESH", *, auth=0, callback=None)
 
 Initializes the BLE Mesh module with the pre-configured Elements and Models.
 
