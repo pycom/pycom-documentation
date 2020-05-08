@@ -1,48 +1,48 @@
 ---
-title: "BLE_Mesh"
+title: "Pymesh BLE"
 aliases:
     - firmwareapi/pycom/network/bluetooth/BLE_Mesh.html
     - firmwareapi/pycom/network/bluetooth/BLE_Mesh.md
 ---
 
-The BLE_Mesh library provides support for connecting to a BLE Mesh Network with various Server and Client models. Currently, Node cannot be configured as Provisioner.
-The library is under development, its current limitations:
+The Pymesh BLE library provides support for connecting to a BLE Mesh Network with various Server and Client models.
 
-- Only one Element (primary) can be added to the Node.
-- Supported Models:
-    * Configuration Server Model (automatically generated together with primary Element)
-    * Generic OnOff Server Model
-    * Generic OnOff Client Model
-    * Generic Level Server Model
-    * Generic Level Client Model
-    * Sensor Server Model
-    * Sensor Client Model
- 
-- Supported OOB authentication types:
-    * No OOB
-    * Output OOB
- 
-- Supported Node Features:
-    * GATT Proxy
-    * Relay
+For examples, please check the section [Pymesh BLE Examples](/tutorials/all/ble_mesh).
 
-- Recommended Mobile Applications:
-    * nRF Mesh (iOS and Android)
-    * Silicon Labs Bluetoth Mesh (iOS)
-    * ST BLE Mesh (Android)
-    * EspBLEMesh (Android)
+Pymesh BLE features:
+
+* Supported Models:
+ * Configuration Server Model (automatically generated together with primary Element)
+ * Generic OnOff Server Model
+ * Generic OnOff Client Model
+ * Generic Level Server Model
+ * Generic Level Client Model
+ * Sensor Server Model
+ * Sensor Client Model
+* Supported OOB authentication types:
+ * No OOB
+ * Output OOB
+* Supported Node Features:
+ * GATT Proxy
+ * Relay
+* Only one Element (primary) can be added to the Node.
+* Node cannot be configured as Provisioner and a mobile application should be used for Provisioning process
+ * nRF Mesh (iOS and Android)
+ * Silicon Labs Bluetoth Mesh (iOS)
+ * ST BLE Mesh (Android)
+ * EspBLEMesh (Android)
 
 
 ## Methods of BLE_Mesh class
 
-#### BLE_Mesh.init(name="PYCOM-ESP-BLE-MESH", *, auth=0, callback=None)
+#### BLE_Mesh.init(name="PYMES-BLE", *, auth=0, callback=None)
 
 Initializes the BLE Mesh module with the pre-configured Elements and Models.
 
 * `name` is the name which will be used to identify the device during Provisioning
 * `auth` is the Out-Of-Band (OOB) method. Currently `BLE_Mesh.OOB_OUTPUT` is supported. Without specifying this argument, `NO_OOB` will be used during provisioning.
 * `callback` is the callback to be registered. It must have the following arguments:
-    * `event` returns current event of provisioning. 
+    * `event` returns current event of provisioning.
     * `oob_pass` returns the generated pass in case of `BLE_Mesh.OOB_OUTPUT`.
 
 #### BLE_Mesh.set_node_prov(bearer=BLE_Mesh.PROV_NONE, *)
@@ -85,7 +85,7 @@ Gets the State of the Sensor Model. If called from Server Model, returnes with S
 
 * `addr` is the address of the remote Node to send the update message.
 * `app_idx` is the index of one of the registered Application IDs to use when sending out the message.
-* `state_type` is the type of Get State. 
+* `state_type` is the type of Get State.
 
 #### BLE_Mesh_Model.set_state(state, addr=BLE_Mesh.ADDR_ALL_NODES, app_idx=0, state_type=None)
 
@@ -94,7 +94,7 @@ Sets the State of the Sensor Model. If called from Server Model, sets State dire
 * `state` is the new value to update the current value with.
 * `addr` is the address of the remote Node to send the update message.
 * `app_idx` is the index of one of the registered Application IDs to use when sending out the message.
-* `state_type` is the type of Set State. 
+* `state_type` is the type of Set State.
 
 #### BLE_Mesh_Model.status_state(addr=BLE_Mesh.ADDR_ALL_NODES, app_idx=0, state_type=None)
 
@@ -102,7 +102,7 @@ Calling this function only makes sense when the BLE_Mesh_Model is a Server Model
 
 * `addr` is the address of the remote Node to send the update message.
 * `app_idx` is the index of one of the registered Application IDs to use when sending out the message.
-* `state_type` is the type of Status State. 
+* `state_type` is the type of Status State.
 
 ## Constants
 
