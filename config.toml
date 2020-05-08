@@ -381,7 +381,7 @@ theme = "doc-theme"
     weight = 30
 
 [[menu.main]]
-    name = "BLE Mesh"
+    name = "Pymesh BLE"
     url = "/tutorials/all/ble_mesh/"
     identifier = "tutorials@all@ble_mesh"
     parent = "tutorials@all"
@@ -829,7 +829,7 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
-    name = "BLE Mesh"
+    name = "Pymesh BLE"
     url = "/firmwareapi/pycom/network/bluetooth/BLE_Mesh/"
     identifier = "firmwareapi@pycom@network@bluetooth@BLE_Mesh"
     parent = "firmwareapi@pycom@network@bluetooth"
