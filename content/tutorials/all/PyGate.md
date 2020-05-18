@@ -33,7 +33,7 @@ The following example shows the script and json file to run the Pygate over Wifi
  * log in to https://console.thethingsnetwork.org/
  * go to Gateways and register a new gateway
  * select "I'm using a legacy packet forwarder"
- * enter a EUI (8 byte hexadecimal value) - also enter this in your `config.json` for `gateway_ID` prefixed with `eui-`
+ * enter a EUI (8 byte hexadecimal value) - also enter this in your `config.json` for `gateway_ID` (Just enter the digits without the "eui-" prefix)
  * select your Frequency Plan
  * select a router - also enter the hostname in your `config.json` for `server_address`
  * enter your wifi SSID and password in `main.py`
