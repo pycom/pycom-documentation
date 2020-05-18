@@ -2,7 +2,9 @@
 
 The Pygate is an 8-channel LoRaWAN gateway. You connect a WiPy or Gpy board into the Pygate and flash a firmware build where the Pygate functionality is enabled. See the [Pygate tutorial](/tutorials/all/pygate) to get started.
 
-__To connect your Pygate to a LoRa server, follow these steps:__  
+### Quickstart
+
+To connect your Pygate to a LoRa server, follow these steps:
 
 1. Attach a Wipy, or GPy to the Pygate. The RGB LED of the development board should be aligned with the USB port of the Pygate.
 
@@ -14,15 +16,28 @@ __To connect your Pygate to a LoRa server, follow these steps:__
 
 1. Create a `main.py` that creates an uplink and runs the Pygate packet fowarder.
 
-__The following example shows the simple script and json file to run the Pygate over Wifi connecting to [The Things Network](https://www.thethingsnetwork.org/)__
+1. Run the `main.py`.
 
-If you are in EU region, it should be sufficent to update:
- * `config.json` Enter your unique GW ID, the LoRa server address and port number
- * `main.py` Enter your wifi SSID and password.
+1. Now it is operational. The communication from other LoRa nodes such as a LoPy4 will now reach the gateway and will receive up and downlink via the PyGate.
 
-In generaly, you should supply a config matching your region (EU868/US915). The format of the file is the same a TODO:Insert link
+1. To stop the Pygate at any time press Ctrl-C on the REPL and run `machine.pygate_deinit()`. It will take a few seconds to stop the gateway tasks and safely power-off the concentrator.
 
-TODO: minimal TTN getting started
+
+Make sure you supply a config matching your region (EU868, US915, etc), e.g. https://github.com/Lora-net/packet_forwarder/tree/master/lora_pkt_fwd/cfg. If you are in EU region, it should be sufficent to update the example below with your GW ID, the LoRa server address and port number.
+
+
+### Example TTN Wifi
+
+The following example shows the script and json file to run the Pygate over Wifi connecting to [The Things Network](https://www.thethingsnetwork.org/).
+
+ * log in to https://console.thethingsnetwork.org/
+ * go to Gateways and register a new gateway
+ * select "I'm using a legacy packet forwarder"
+ * enter a EUI (8 byte hexadecimal value) - also enter this in your `config.json` for `gateway_ID` prefixed with `eui-`
+ * select your Frequency Plan
+ * select a router - also enter the hostname in your `config.json` for `server_address`
+ * enter your wifi SSID and password in `main.py`
+
 
 
 ```python
@@ -265,17 +280,9 @@ A sample `config.json` file for gateway configuration in EU868 region:
 ```
 
 
-To stop the Pygate at any time press Ctrl-C on the REPL and run `machine.pygate_deinit()`.
+### UART control
 
-This will stop the gateway tasks and safely power-off the concentrator.
-
-
-__Note__: The Pygate packet forwarder is a legacy packet forwarder, so you must make sure you use select the legacy packet forwarder option in TTN as shown below.
-
-![alt_text](https://wiki.dragino.com/images/c/c6/TTN_Create_Gateway_0.png)
-
-
-__The following example demonstrates running only the concentrator on the Pygate and running the packet forwarder software on a different device, controlling the Pygate via UART:__
+You can also start the Pygate without a configuration file. Only the concentrator will run in this mode. The script below allows it to be controlled via UART. You can then run e.g. the [pico GW](https://github.com/Lora-net/picoGW_hal) on a RPi to control it.
 
 ```python
 from machine import UART
