@@ -703,6 +703,13 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
+    name = "Pygate"
+    url = "/firmwareapi/pycom/machine/pygate/"
+    identifier = "firmwareapi@pycom@machine@pygate"
+    parent = "firmwareapi@pycom@machine"
+    weight = 65
+
+[[menu.main]]
     name = "RMT"
     url = "/firmwareapi/pycom/machine/rmt/"
     identifier = "firmwareapi@pycom@machine@rmt"
@@ -778,6 +785,13 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@network@coap"
     parent = "firmwareapi@pycom@network"
     weight = 20
+
+[[menu.main]]
+    name = "Ethernet"
+    url = "/firmwareapi/pycom/network/eth/"
+    identifier = "firmwareapi@pycom@network@eth"
+    parent = "firmwareapi@pycom@network"
+    weight = 25
 
 [[menu.main]]
     name = "Bluetooth"
