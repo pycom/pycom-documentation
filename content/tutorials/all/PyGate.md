@@ -278,30 +278,3 @@ A sample `config.json` file for gateway configuration in EU868 region:
 	}
 }
 ```
-
-
-### UART control
-
-You can also start the Pygate without a configuration file. Only the concentrator will run in this mode. The script below allows it to be controlled via UART. You can then run e.g. the [pico GW](https://github.com/Lora-net/picoGW_hal) on a RPi to control it.
-
-```python
-from machine import UART
-import machine
-import time
-import os
-import gc
-
-machine.pygate_init(None)
-time.sleep(3)
-
-uart = UART(1, 115200, timeout_chars=40, pins=('P23', 'P22'))
-
-while True:
-    if uart.any():
-        rx_data = uart.read()
-        machine.pygate_cmd_decode(rx_data)
-        tx_data =  machine.pygate_cmd_get()
-        l = uart.write(tx_data)
-    else:
-        time.sleep_us(10)
-```

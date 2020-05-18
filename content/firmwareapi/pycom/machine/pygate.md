@@ -10,26 +10,15 @@ The Pygate is an 8-channel LoRaWAN gateway. You connect a WiPy or Gpy board to t
 
 ## Methods
 
-#### machine.pygate\_init([buff])
+#### machine.pygate\_init(buff)
 
 This function is used to initialize the Pygate
 
 - `buff`: the data contents of the gateway global config json file
 
-When no parameter is passed to the function, the Pygate is just powered on. This is useful when using the Pygate just as a concentrator which is controlled via UART by another device such as a Raspberry Pi.
-
 #### machine.pygate\_deinit()
 
 This shuts down the concentrator.
-
-#### machine.pygate\_cmd\_decode(buff)
-
-This sends the LoRa gateway command to the concentrator. This is useful when packet forwarder / HAL software is run on a different device (e.g. Rpi) and commands to the concentrator are passed to the Pygate via UART.
-
-#### machine.pygate\_cmd\_get()
-
-This gets the command execution result from concentrator. This is useful when controlling the concentrator via UART.
-
 
 #### machine.callback(trigger, handler=None, arg=None)
 
