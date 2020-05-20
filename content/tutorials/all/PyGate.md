@@ -1,25 +1,18 @@
 ## Pygate
 
-The Pygate is an 8-channel LoRaWAN gateway. You connect a WiPy or Gpy board into the Pygate and flash a firmware build where the Pygate functionality is enabled. See the [Pygate tutorial](/tutorials/all/pygate) to get started.
+The Pygate is an 8-channel LoRaWAN gateway. This page will help you get started with it.
 
 ### Quickstart
 
 To connect your Pygate to a LoRa server, follow these steps:
 
 1. Attach a Wipy, or GPy to the Pygate. The RGB LED of the development board should be aligned with the USB port of the Pygate.
-
 1. Attach the LoRa Antenna to the Pygate.
-
-1. Flash the Pycom Device with latest Pygate Firmware.
-
+1. Flash the Pycom Device with with a firmware build where Pygate functionality is enabled.
 1. Create a `config.json` for your Pygate and upload it.
-
 1. Create a `main.py` that creates an uplink and runs the Pygate packet fowarder.
-
 1. Run the `main.py`.
-
 1. Now it is operational. The communication from other LoRa nodes such as a LoPy4 will now reach the gateway and will receive up and downlink via the PyGate.
-
 1. To stop the Pygate at any time press Ctrl-C on the REPL and run `machine.pygate_deinit()`. It will take a few seconds to stop the gateway tasks and safely power-off the concentrator.
 
 
