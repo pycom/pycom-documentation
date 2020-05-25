@@ -780,6 +780,27 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "HTTPS"
+    url = "/firmwareapi/pycom/network/https/"
+    identifier = "firmwareapi@pycom@network@https"
+    parent = "firmwareapi@pycom@network"
+    weight = 40
+
+[[menu.main]]
+    name = "Server"
+    url = "/firmwareapi/pycom/network/https/server/"
+    identifier = "firmwareapi@pycom@network@https@server"
+    parent = "firmwareapi@pycom@network@https"
+    weight = 10
+
+[[menu.main]]
+    name = "Client"
+    url = "/firmwareapi/pycom/network/https/client/"
+    identifier = "firmwareapi@pycom@network@https@client"
+    parent = "firmwareapi@pycom@network@https"
+    weight = 10
+
+[[menu.main]]
     name = "Bluetooth"
     url = "/firmwareapi/pycom/network/bluetooth/"
     identifier = "firmwareapi@pycom@network@bluetooth"
