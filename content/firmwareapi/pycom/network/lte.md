@@ -88,6 +88,8 @@ Enable radio functionality and attach to the LTE network authorised by the inser
 
 - `band` : to scan for networks. If no band (or `None`) is specified, all 8 bands will be scanned. The possible values for the band are: `3, 4, 5, 8, 12, 13, 20 and 28`.
 
+- `bands` : similar to `band`, but specify a set of bands to scan. E.g. `bands=(8,20)`.
+
 - `apn` : Specify the APN (Access point Name).
 
 - `cid` : connection ID, see `LTE.connect()`. when the ID is set here it will be remembered when doint connect so no need to specify again
