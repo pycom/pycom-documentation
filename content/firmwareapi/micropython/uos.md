@@ -87,12 +87,16 @@ Alias for the `remove()` method.
 Mounts a block device (like an SD object) in the specified mount point. Example:
 
 ```python
-
-os.mount(sd, '/sd')
-uos.unmount(path)
+uos.mount(sd, '/sd')
 ```
 
-Unmounts a previously mounted block device from the given path.
+#### uos.umount(mount\_point)
+
+Unmounts a previously mounted block device from the specified mount point. Example:
+
+```python
+uos.umount('/sd')
+```
 
 #### uos.mkfs(block\_device or path)
 
