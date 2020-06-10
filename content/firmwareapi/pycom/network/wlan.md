@@ -341,6 +341,11 @@ Start SmartConfig operation, the smartConfig is a provisioning technique that en
 
 Get the password of AP the Device is connected to.
 
+### wlan.ap\_tcpip\_sta\_list()
+
+This API returns with a list of the devices connected to the Pycom board when it is in AP mode.
+Each element of the returned list is a tuple, containing the MAC address and IP address of the device.
+
 ## Constants
 
 * WLAN mode: `WLAN.STA`, `WLAN.AP`, `WLAN.STA_AP`
