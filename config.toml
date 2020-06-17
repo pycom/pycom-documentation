@@ -198,12 +198,12 @@ theme = "doc-theme"
     parent = "gettingstarted@registration@lora"
     weight = 10
 
-[[menu.main]]
-    name = "Objenious"
-    url = "/gettingstarted/registration/lora/objenious/"
-    identifier = "gettingstarted@registration@lora@objenious"
-    parent = "gettingstarted@registration@lora"
-    weight = 20
+# [[menu.main]]
+#     name = "Objenious"
+#     url = "/gettingstarted/registration/lora/objenious/"
+#     identifier = "gettingstarted@registration@lora@objenious"
+#     parent = "gettingstarted@registration@lora"
+#     weight = 20
 
 # *** Pymakr Plugin
 [[menu.main]]
