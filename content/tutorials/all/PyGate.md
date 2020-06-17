@@ -2,15 +2,17 @@
 
 The Pygate is an 8-channel LoRaWAN gateway. This page will help you get started with it.
 
+The Pygate board can have an PyEthernet adapter connected which allows an ethernet connection. The PyEthernet also support PoE. Do check the separate [page and warning for PoE-NI!](/tutorials/all/poe)
+
 ### Quickstart
 
 To connect your Pygate to a LoRa server, follow these steps:
 
-1. Attach a Wipy, or GPy to the Pygate. The RGB LED of the development board should be aligned with the USB port of the Pygate.
+1. Attach a WiPy, GPy or LoPy4 to the Pygate. The RGB LED of the development board should be aligned with the USB port of the Pygate.
 1. Attach the LoRa Antenna to the Pygate.
 1. Flash the Pycom Device with with a firmware build where Pygate functionality is enabled.
 1. Create a `config.json` for your Pygate and upload it.
-1. Create a `main.py` that creates an uplink and runs the Pygate packet fowarder.
+1. Create a `main.py` that creates an uplink (wifi, ethernet or lte) and runs the LoRa packet fowarder.
 1. Run the `main.py`.
 1. Now it is operational. The communication from other LoRa nodes such as a LoPy4 will now reach the gateway and will receive up and downlink via the PyGate.
 1. To stop the Pygate at any time press Ctrl-C on the REPL and run `machine.pygate_deinit()`. It will take a few seconds to stop the gateway tasks and safely power-off the concentrator.
@@ -23,13 +25,16 @@ Make sure you supply a config matching your region (EU868, US915, etc), e.g. htt
 
 The following example shows the script and json file to run the Pygate over Wifi connecting to [The Things Network](https://www.thethingsnetwork.org/).
 
- * log in to https://console.thethingsnetwork.org/
- * go to Gateways and register a new gateway
- * select "I'm using a legacy packet forwarder"
- * enter a EUI (8 byte hexadecimal value) - also enter this in your `config.json` for `gateway_ID` (Just enter the digits without the "eui-" prefix)
- * select your Frequency Plan
- * select a router - also enter the hostname in your `config.json` for `server_address`
- * enter your wifi SSID and password in `main.py`
+1. log in to https://console.thethingsnetwork.org/
+1. go to Gateways and register a new gateway
+1. select "I'm using a legacy packet forwarder"
+1. make up a EUI (8 byte hexadecimal value) and register it on the TTN website
+1. enter the EUI in your `config.json` under `gateway_ID` (Just enter the hex digits without the "eui-" prefix and without spaces)
+1. select your Frequency Plan
+1. select a router - also enter the hostname in your `config.json` under `server_address`
+1. enter your wifi SSID and password in `main.py`
+1. upload `config.json` and `main.py` and reset the board
+1. you will see how it creates the uplink connection and then start the LoRa GW. It will print out some debug information while it is running. After some initialization it will print "LoRa GW started" and the LED will turn green.
 
 
 
@@ -70,7 +75,7 @@ print("Wifi Connection established")
 
 # Sync time via NTP server for GW timestamps on Events
 rtc = RTC()
-rtc.ntp_sync(server="0.nl.pool.ntp.org")
+rtc.ntp_sync(server="0.pool.ntp.org")
 
 # Read the GW config file from Filesystem
 fp = open('/flash/config.json','r')

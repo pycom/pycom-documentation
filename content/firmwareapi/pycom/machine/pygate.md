@@ -6,7 +6,7 @@ aliases:
     - chapter/firmwareapi/pycom/machine/pygate
 ---
 
-The Pygate is an 8-channel LoRaWAN gateway. You connect a WiPy or Gpy board to the Pygate and flash a firmware build where the Pygate functionality is enabled. See the [Pygate tutorial](/tutorials/all/pygate) to get started.
+The Pygate is an 8-channel LoRaWAN gateway. Connect a WiPy, Gpy or LoPy4 board to the Pygate and flash the Pygate firmware. See the [Pygate tutorial](/tutorials/all/pygate) to get started.
 
 ## Methods
 
