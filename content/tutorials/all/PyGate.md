@@ -2,6 +2,8 @@
 
 The Pygate is an 8-channel LoRaWAN gateway. This page will help you get started with it.
 
+The Pygate board can have an PyEthernet adapter connected which allows an ethernet connection. The PyEthernet also support PoE. Do check the separate [page and warning for PoE-NI!](/tutorials/all/poe)
+
 ### Quickstart
 
 To connect your Pygate to a LoRa server, follow these steps:
