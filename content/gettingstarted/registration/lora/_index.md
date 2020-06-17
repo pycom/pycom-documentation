@@ -16,6 +16,8 @@ In order to connect your LoRa capable Pycom module to a LoRaWAN network you will
 Firstly you will need to get your modules `Device EUI`, this can be achieved using the following code:
 
 ```python
+
+
 from network import LoRa
 import ubinascii
 

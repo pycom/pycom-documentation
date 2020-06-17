@@ -17,8 +17,6 @@ Pymesh works on all of our LoRa supporting development boards, the LoPy4 and FiP
 
 _**Note: For obtaining the Pymesh firmware please follow the steps from [Pymesh LICENCE page](/pymesh/licence).**_
 
-_**Note: For obtaining the Pymesh firmware please follow the steps from [Pymesh LICENCE page](/pymesh/licence).**_
-
 ## What does Pymesh offer you?
 
 * An ad-hoc communication network over raw-LoRa radio
