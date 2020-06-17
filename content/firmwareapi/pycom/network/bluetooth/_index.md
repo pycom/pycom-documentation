@@ -47,14 +47,13 @@ GAP allows for devices to take various roles but generic flow works with devices
 
 ## Constructors
 
-### class network.Bluetooth(id=0, ...)
+#### class network.Bluetooth(id=0, ...)
 
 Create a Bluetooth object, and optionally configure it. See init for params of configuration.
 
 Example:
 
 ```python
-
 from network import Bluetooth
 bluetooth = Bluetooth()
 ```
@@ -76,16 +75,7 @@ With our development boards it defaults to using the internal antenna, but in th
 
 Initialises and enables the Bluetooth radio in BLE mode.
 
-{{% hint style="info" %}}
-To use an external antenna, set `P12 as output pin.`
-
-```python
-
-Pin('P12', mode=Pin.OUT)(True)
-```
-{{% /hint %}}
-
-### bluetooth.deinit()
+#### bluetooth.deinit()
 
 Disables the Bluetooth radio.
 
