@@ -1641,6 +1641,47 @@ theme = "doc-theme"
     parent = "pymesh"
     weight = 90
 
+# *** Cellular Services
+[[menu.main]]
+    name = "Cellular Services"
+    url = "/cellularservices/"
+    identifier = "cellularservices"
+    weight = 95
+
+  [[menu.main]]
+      name = "Vodafone NB-IoT"
+      url = "/cellularservices/vodafone/"
+      identifier = "cellularservices@vodafone"
+      parent = "cellularservices"
+      weight = 10
+
+      [[menu.main]]
+          name = "Sim card Registration"
+          url = "/cellularservices/vodafone/simregistration/"
+          identifier = "cellularservices@vodafone@simregistration"
+          parent = "cellularservices@vodafone"
+          weight = 10
+
+      [[menu.main]]
+          name = "Creating Reports"
+          url = "/cellularservices/vodafone/creatingreports/"
+          identifier = "cellularservices@vodafone@creatingreports"
+          parent = "cellularservices@vodafone"
+          weight = 20
+
+    [[menu.main]]
+        name = "Verizon Cat-M1"
+        url = "/cellularservices/verizon/"
+        identifier = "cellularservices@verison"
+        parent = "cellularservices"
+        weight = 20
+
+    [[menu.main]]
+        name = "PySim"
+        url = "/cellularservices/pysim/"
+        identifier = "cellularservices@pysim"
+        parent = "cellularservices"
+        weight = 30
 # *** Documentation Notes
 [[menu.main]]
     name = "Documentation Notes"

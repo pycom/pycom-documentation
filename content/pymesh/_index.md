@@ -3,8 +3,7 @@ title: "Pymesh"
 aliases:
   - pymesh/introduction
 ---
-
-<img src="/gitbook/assets/pymesh/pymesh_roles.png" alt="Pymesh" width="500"/>
+![](/gitbook/assets/pymesh/pymesh_roles.png)
 
 ## What is Pymesh?
 
