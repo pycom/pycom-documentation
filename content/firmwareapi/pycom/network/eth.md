@@ -10,7 +10,12 @@ The ETH class enables the use of an ethernet connection via the PyEthernet board
 
 ---
 *NOTE* :
-Ethernet support is only available in special Gpy or WiPy firmware builds where this feature has been enabled.
+Ethernet support is only available in the Pygate firmware build.
+
+---
+
+*NOTE2* :
+The PyEthernet board is connected via SPI bus 3 and GPIO's 17-19 and 21-23. So this bus and pins cannot be used concurrently with ethernet. This also means that on a LoPy4 with Pygate firmware, the LoRa module of the LoPy4 is disabled, since it is also connected via SPI 3. Of course you can still use the LoRa gateway functionality since this uses the LoRa modules on the the Pygate board itself.
 
 ---
 
