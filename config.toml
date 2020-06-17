@@ -1,4 +1,4 @@
-baseURL = "https://development.pycom.io/"
+baseURL = "https://docs.pycom.io/"
 languageCode = "en-us"
 title = "documentation"
 uglyurls = false
