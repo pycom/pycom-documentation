@@ -641,6 +641,13 @@ theme = "doc-theme"
     weight = 10
 
 [[menu.main]]
+    name = "Pygate"
+    url = "/firmwareapi/pycom/machine/pygate/"
+    identifier = "firmwareapi@pycom@machine@pygate"
+    parent = "firmwareapi@pycom@machine"
+    weight = 5
+
+[[menu.main]]
     name = "ADC"
     url = "/firmwareapi/pycom/machine/adc/"
     identifier = "firmwareapi@pycom@machine@adc"
@@ -843,6 +850,13 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@network@mdns"
     parent = "firmwareapi@pycom@network"
     weight = 70
+
+[[menu.main]]
+    name = "Ethernet"
+    url = "/firmwareapi/pycom/network/eth/"
+    identifier = "firmwareapi@pycom@network@eth"
+    parent = "firmwareapi@pycom@network"
+    weight = 80
 
 [[menu.main]]
     name = "AES"
