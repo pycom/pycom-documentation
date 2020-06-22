@@ -12,7 +12,7 @@ In addition to the Expansion Board, Pycom also offers three additional sensor bo
 
 Pytrack is a location enabled version of the Expansion Board, intended for use in GPS applications such as asset tracking or monitoring.
 
-![](/gitbook/assets/pytrack%20%281%29.png)
+![](/gitbook/assets/pytrack.png)
 
 ### Features & Hardware
 
@@ -34,7 +34,7 @@ You can find the datasheet and more info here:
 
 Pysense is a sensor packed version of the Expansion Board, intended for use in environment sensing applications such as temperature, humidity monitoring, and light sensing.
 
-![](/gitbook/assets/pysense%20%281%29.png)
+![](/gitbook/assets/pysense.png)
 
 ### Features & Hardware
 
@@ -58,7 +58,7 @@ You can find the datasheet and more info here:
 
 Pyscan is a RFID-NFC enabled version of the Expansion Board, intended for use in scanning applications, such as RFID/NFC readers.
 
-![](/gitbook/assets/pyscan-new%20%281%29.png)
+![](/gitbook/assets/pyscan-new.png)
 
 ### Features & Hardware
 
@@ -77,4 +77,3 @@ All of the included sensors are connected to the Pycom device via the I2C interf
 You can find the datasheet and more info here:
 
 {{% refname "../datasheets/boards/pyscan.md" %}}
-
