@@ -1147,6 +1147,13 @@ theme = "doc-theme"
     weight = 30
 
 [[menu.main]]
+    name = "Pygate"
+    url = "/datasheets/boards/pygate/"
+    identifier = "datasheets@boards@pygate"
+    parent = "datasheets@boards"
+    weight = 10
+
+[[menu.main]]
     name = "Expansion Board 3.0"
     url = "/datasheets/boards/expansion3/"
     identifier = "datasheets@boards@expansion3"
