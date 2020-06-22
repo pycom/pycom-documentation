@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/boards/pyscan
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83hfia61dsuyojco-pyscan-new.png)
+![](/gitbook/assets/pyscan-new.png)
 
 ## Datasheet
 

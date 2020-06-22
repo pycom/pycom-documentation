@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/boards/expansion3
 ---
 
-## ![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn82uldmpus0lnq1kx-expansion3.png)
+## ![](/gitbook/assets/expansion3.png)
 
 ## Datasheet
 
