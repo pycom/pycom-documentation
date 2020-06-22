@@ -12,7 +12,7 @@ In addition to the Expansion Board, Pycom also offers three additional sensor bo
 
 Pytrack is a location enabled version of the Expansion Board, intended for use in GPS applications such as asset tracking or monitoring.
 
-![](/gitbook/assets/pytrack.png)
+![](/gitbook/assets/pytrack-new.png)
 
 ### Features & Hardware
 
