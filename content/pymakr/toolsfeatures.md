@@ -66,7 +66,7 @@ The Pymakr Plugins have a feature to sync and upload code to a device. This can 
 
 To start using the `Upload` feature, ensure that a project folder has been created for the device. For example, if using the `pymakr.conf` from above, this project folder should be named `scripts`. This folder should have the following structure:
 
-![](/gitbook/assets/mp-filestructure%20%281%29.png)
+![](/gitbook/assets/mp-filestructure.png)
 
 Library files should be placed into the `lib` folder, certificates into the `cert` folder and so on. The `Upload` button will take the highest level folder (currently open) and upload this to the connected Pycom device. The files will be pushed to the device in exactly the same structure as within the code editor's file directory.
 

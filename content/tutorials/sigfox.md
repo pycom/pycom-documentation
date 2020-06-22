@@ -49,7 +49,7 @@ Firstly you will need to log into the [Sigfox Backend](https://backend.sigfox.co
 
 You should now see the Information page with an entry `Device Type:` followed by a link. Please follow the link
 
-![screenshot of sigfox ID](/gitbook/assets/seq_dis_2%20%281%29.png)
+![screenshot of sigfox ID](/gitbook/assets/seq_dis_2.png)
 
 Finally, on this page click on `Disengage sequence number` button in the upper right corner.
 

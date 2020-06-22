@@ -42,7 +42,7 @@ duration = 10000
 rmt.pulses_send(duration, data)
 ```
 
-![Waveform of example 1](/gitbook/assets/rmt_ex_1%20%281%29.png)
+![Waveform of example 1](/gitbook/assets/rmt_ex_1.png)
 
 In this example we define the signal by a tuple of durations and what state the signal starts in.
 
@@ -79,7 +79,7 @@ duration = (400,200,100,300,200,400)
 rmt.pulses_send(duration, data)
 ```
 
-![Waveform of example 3](/gitbook/assets/rmt_ex_3%20%281%29.png)
+![Waveform of example 3](/gitbook/assets/rmt_ex_3.png)
 
 The following example creates an RMT object on channel 4 and configures it for transmission with carrier modulation.
 

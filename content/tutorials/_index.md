@@ -7,7 +7,7 @@ aliases:
 disable_breadcrumbs: true
 ---
 
-![](/gitbook/assets/tutorialsicon%20%281%29.png)
+![](/gitbook/assets/tutorialsicon.png)
 
 ## Tutorials and Examples
 

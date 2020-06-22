@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/oem/universal_reference
 ---
 
-![](/gitbook/assets/universal_reference%20%281%29.png)
+![](/gitbook/assets/universal_reference.png)
 
 The universal OEM reference board is a reference design suitable for the W01, L01, L04 and G01 OEM modules, making it possible to have a single PCB design that can accommodate all of our OEM modules.
 

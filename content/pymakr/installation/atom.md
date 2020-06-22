@@ -42,7 +42,7 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 3. Now it should show three arrows `>>>`, indicating that you are connected!
 
-![](/gitbook/assets/atom_config_step_7%20%281%29.png)
+![](/gitbook/assets/atom_config_step_7.png)
 
 These settings can also be applied on a per project basis by clicking `Settings` then `Project Settings`. This will open a JSON file which you can edit to enter your desired settings.
 

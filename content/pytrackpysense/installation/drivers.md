@@ -24,7 +24,7 @@ First navigate open the Windows start menu and search/navigate to `Device Manage
 
 Right click the device and select `Update Driver Software`.
 
-![](/gitbook/assets/win7-2%20%281%29.png)
+![](/gitbook/assets/win7-2.png)
 
 Select the option to **Browse my computer for driver software**.
 
@@ -32,15 +32,15 @@ Select the option to **Browse my computer for driver software**.
 
 Next you will need to navigate to where you downloaded the driver to (e.g. **Downloads** Folder).
 
-![](/gitbook/assets/win7-4%20%281%29.png)
+![](/gitbook/assets/win7-4.png)
 
 Specify the folder in which the drivers are contained. If you haven't extracted the `.zip` file, please do this before selecting the folder.
 
-![](/gitbook/assets/win7-5%20%281%29.png)
+![](/gitbook/assets/win7-5.png)
 
 You may receive a warning, suggesting that windows can't verify the publisher of this driver. Click `Install this driver software anyway` as this link points to our official driver.
 
-![](/gitbook/assets/win7-6%20%281%29.png)
+![](/gitbook/assets/win7-6.png)
 
 If the installation was successful, you should now see a window specifying that the driver was correctly installed.
 

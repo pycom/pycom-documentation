@@ -43,7 +43,7 @@ As of version `1.12.0.b0` of the firmware update tool, you can now provide a `.t
 
 When you start the update tool you will see the following screen:
 
-![](/gitbook/assets/downgrade_gui%20%281%29.png)
+![](/gitbook/assets/downgrade_gui.png)
 
 When you tick the `Flash from local file` option, an address bar will appear. Click the `...` button and locate the `.tar(.gz)` file with the firmware you wish to flash to your device. From this point the updater will behave just like a regular update but using the local file instead of downloading the latest.
 

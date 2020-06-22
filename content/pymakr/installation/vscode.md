@@ -30,7 +30,7 @@ Please follow these steps to install the [Pymakr VSCode Extension](https://marke
 
 5. That's it! You've installed the Pymakr Extension for VSCode
 
-![](/gitbook/assets/vsc_setup_step_5%20%281%29.png)
+![](/gitbook/assets/vsc_setup_step_5.png)
 
 ## Connecting via Serial USB
 
@@ -64,7 +64,7 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 7. Finally close the JSON file, click `All commands`, then `Pymakr > Connect` to connect your device. The Pymakr console should show three arrows `>>>`, indicating that you are connected
 
-![](/gitbook/assets/vsc_config_step_6%20%281%29.png)
+![](/gitbook/assets/vsc_config_step_6.png)
 
 These settings can also be applied on a per project basis by clicking `All commands` then `Pymakr > Project Settings`. This will open a JSON file which you can edit to enter your desired settings for the currently open project.
 
