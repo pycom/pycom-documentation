@@ -13,7 +13,7 @@ aliases:
 
 The datasheet of the Pygate Board is available as a PDF File.
 
-<a href="/gitbook/assets/Pycom_002_Specsheets_Pygate_v1.pdf" target="_blank"> Pygate Datasheet </a>
+<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_Pygate_v1.pdf" target="_blank"> Pygate Datasheet </a>
 
 ## Battery Charger
 
@@ -22,7 +22,3 @@ The Pygate features a single cell Li-Ion/Li-Po charger. When the board is being 
 ## Troubleshooting
 
 * If PIC stays in bootloader mode, the [`dfu-util` update](/pytrackpysense/installation/firmware) should be performed
-
-## 3D model for case design
-
-* Please see the <a href="/gitbook/assets/Expansion_Board_3D.step" target="_blank"> 3D model </a> (step format)
