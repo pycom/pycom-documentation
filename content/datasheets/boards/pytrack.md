@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/boards/pytrack
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn83ejihh1jeasccad-pytrack.png) 
+![](/gitbook/assets/pytrack.png) 
 
 ## Datasheet
 

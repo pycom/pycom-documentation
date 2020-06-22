@@ -5,6 +5,8 @@ aliases:
 
 This section contains all of the datasheets for the Pycom Expansion Boards and Shields. This includes the Expansion Board, Pytrack, Pysense and Deep Sleep Shield.
 
+{{% refname "pygate.md" %}}
+
 {{% refname "expansion3.md" %}}
 
 {{% refname "pytrack.md" %}}
@@ -16,4 +18,3 @@ This section contains all of the datasheets for the Pycom Expansion Boards and S
 {{% refname "expansion2.md" %}}
 
 {{% refname "deepsleep/" %}}
-
