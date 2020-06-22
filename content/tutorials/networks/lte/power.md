@@ -6,12 +6,28 @@ aliases:
     - chapter/tutorials/power
 ---
 
-There are some trade offs one can do to reduce power consumption of the LTE modem. You can limit connectivity in exchange for saving power consumption.
-
-Let's start with the simplest choice: Turn off or not. It's not very sophisticated, but for completeness, let's start with this:
+There are some trade offs one can do to reduce power consumption of the LTE modem. You trade connectivity in exchange for power consumption. The sections below show different options.
 
 
-## Turn LTE modem off
+
+## Don't enable on boot<a id="lte-disable-on-boot" ></a>
+
+If you don't need LTE connectivity at all, you can make sure the modem is not initialized at boot with the following command:
+
+```python
+
+import pycom
+pycom.lte_modem_en_on_boot(False)
+```
+
+This setting is persisted across reboots.
+
+
+## Turn off after use<a id="lte-power-off" ></a>
+
+
+If you do use LTE connectivity, but you want the modem to go into low power consumption after you are done with the communication, you can disable it with `deinit()` at the end.
+
 
 ```python
 
@@ -64,8 +80,8 @@ The example above is the simple case where we attach, connect, communicate and t
 
 ## Leave LTE modem on
 
-Depending on your use case, you may want to save the time (and energy) for reattching that you get after [turning the modem off](#turn-lte-modem-off).
-If your device communicates a lot, then you can choose to not turn it off at all, save the time for the reattach. However, you then trade the higher power consumption during any idle time. For this, simply remove the deinit from the example:
+Depending on your use case, you may want to save the time (and energy) for reattaching that you get after [turning the modem off](#lte-power-off).
+If your device communicates frequently, then you can choose to not turn the modem off at all and save the time for the reattach. Then you trade the higher power consumption during any idle time for the quicker response. For this, simply remove the deinit from the example:
 
 
 ```python
