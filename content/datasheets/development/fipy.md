@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/development/fipy
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn82srvkf3rhetvjpi-fipy-1.png)
+![](/gitbook/assets/fipy-1.png)
 
 
 {{% hint style="info" %}}
