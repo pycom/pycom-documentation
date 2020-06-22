@@ -8,7 +8,7 @@ aliases:
 
 This basic example shows how to read an NFC card and authenticate it using a pre-defined access list.
 
-``` python
+```python
 
 from pyscan import Pyscan
 from MFRC630 import MFRC630
@@ -62,3 +62,4 @@ _thread.start_new_thread(discovery_loop, (nfc, 0))
 ```
 
 You can find this, and all the other examples in our [pycom-libraries GitHub repository](https://github.com/pycom/pycom-libraries)
+
