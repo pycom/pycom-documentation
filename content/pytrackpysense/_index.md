@@ -7,7 +7,7 @@ aliases:
 disable_breadcrumbs: true
 ---
 
-In addition to the Expansion Board, Pycom also offers three additional sensor boards, which are ideal for quickly building a fully functioning IoT solution! Whether the application is environment sensing or asset tracking, these additional boards support a variety of sensors.
+In addition to the Expansion Board, Pycom also offers three additional types of sensor boards, which are ideal for quickly building a fully functioning IoT solution! Whether the application is environment sensing or asset tracking, these additional boards support a variety of sensors. New versions of the Pytrack and Pysense are now available with additional features:
 
 ## Pytrack 2.0 X
 
