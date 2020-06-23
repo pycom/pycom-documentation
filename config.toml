@@ -311,9 +311,23 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "Pytrack 2.0 X"
+    url = "/pytrackpysense/apireference/pytrack2/"
+    identifier = "pytrackpysense@apireference@pytrack2"
+    parent = "pytrackpysense@apireference"
+    weight = 10
+
+[[menu.main]]
     name = "Pytrack"
     url = "/pytrackpysense/apireference/pytrack/"
     identifier = "pytrackpysense@apireference@pytrack"
+    parent = "pytrackpysense@apireference"
+    weight = 20
+
+[[menu.main]]
+    name = "Pysense 2.0 X"
+    url = "/pytrackpysense/apireference/pysense2/"
+    identifier = "pytrackpysense@apireference@pysense2"
     parent = "pytrackpysense@apireference"
     weight = 10
 
@@ -361,10 +375,10 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "PyGate"
-    url = "/tutorials/all/PyGate/"
-    identifier = "tutorials@all@PyGate"
-    parent = "tutorials@all"
-    weight = 10
+    url = "/tutorials/PyGate/"
+    identifier = "tutorials@PyGate"
+    parent = "tutorials"
+    weight = 1
 
 [[menu.main]]
     name = "PoE"
