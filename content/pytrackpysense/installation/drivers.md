@@ -6,7 +6,7 @@ aliases:
     - chapter/pytrackpysense/installation/drivers
 ---
 
-Pytrack and Pysense will work out of the box for Windows 8/10/+, macOS as well as Linux. If using Windows 7, drivers to support the boards will need to be installed.
+Pytrack and Pysense will work out of the box for Windows 8/10/+ (please download the correct driver through Windows Update), macOS as well as Linux. If using Windows 7, drivers to support the boards will need to be installed.
 
 Please follow the instructions below to install the required drivers.
 
@@ -14,7 +14,9 @@ Please follow the instructions below to install the required drivers.
 
 Please download the driver software from the link below.
 
-[Pytrack/Pysense/Pyscan/Expansion Board 3 Driver](/gitbook/assets/pycom.inf.zip)
+[Unsigned driver for Windows 7 compatible with Pycom products](/gitbook/assets/pycom.inf.zip)
+Please note that this driver is not suitable for the Expansion Board 1 & 2.
+As these drivers are not signed, you may need to disable driver signing enforcement in your Windows operating system.
 
 ## Installation
 
@@ -24,7 +26,7 @@ First navigate open the Windows start menu and search/navigate to `Device Manage
 
 Right click the device and select `Update Driver Software`.
 
-![](/gitbook/assets/win7-2%20%281%29.png)
+![](/gitbook/assets/win7-2.png)
 
 Select the option to **Browse my computer for driver software**.
 
@@ -32,15 +34,15 @@ Select the option to **Browse my computer for driver software**.
 
 Next you will need to navigate to where you downloaded the driver to (e.g. **Downloads** Folder).
 
-![](/gitbook/assets/win7-4%20%281%29.png)
+![](/gitbook/assets/win7-4.png)
 
 Specify the folder in which the drivers are contained. If you haven't extracted the `.zip` file, please do this before selecting the folder.
 
-![](/gitbook/assets/win7-5%20%281%29.png)
+![](/gitbook/assets/win7-5.png)
 
 You may receive a warning, suggesting that windows can't verify the publisher of this driver. Click `Install this driver software anyway` as this link points to our official driver.
 
-![](/gitbook/assets/win7-6%20%281%29.png)
+![](/gitbook/assets/win7-6.png)
 
 If the installation was successful, you should now see a window specifying that the driver was correctly installed.
 
