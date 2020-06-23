@@ -8,10 +8,14 @@ aliases:
 
 To update the firmware on the Pysense/Pytrack/Pyscan/Expansion Board v3, please see the following instructions. The firmware of Pysense/Pytrack/Pyscan/Expansion Board v3 can be updated via the USB port using the terminal tool, `DFU-util`.
 
+{{% hint style="info" %}}
+There is currently no firmware update released for the new Pytrack 2.0 X and Pysense 2.0 X. Please do not try to flash these boards with firmware released for the old 1.x hardware revision.
+{{% /hint %}}
+
 The latest firmware DFU file can be downloaded from the links below:
 
-* [Pytrack DFU](https://software.pycom.io/findupgrade?key=pytrack.dfu&type=all&redirect=true)
-* [Pysense DFU](https://software.pycom.io/findupgrade?key=pysense.dfu&type=all&redirect=true)
+* [Pytrack 1.x DFU](https://software.pycom.io/findupgrade?key=pytrack.dfu&type=all&redirect=true)
+* [Pysense 1.x DFU](https://software.pycom.io/findupgrade?key=pysense.dfu&type=all&redirect=true)
 * [Expansion Board DFU v3.0](https://software.pycom.io/findupgrade?key=expansion3.dfu&type=all&redirect=true)
 * [Expansion Board DFU v3.1](https://software.pycom.io/findupgrade?key=expansion31.dfu&type=all&redirect=true)
 
@@ -160,4 +164,3 @@ For exemple, a Pytrack board is visible as either:
   * this is bootloader mode (`f014` is USB PID), active just for 7-8 seconds, if the reset button was just  pressed before plugging USB connector.
 * `Bus 020 Device 005: ID 04d8:f013 Microchip Technology Inc. Pytrack Serial: Pyabcde0`
   * this is normal, application mode (`f013` is USB PID), this means the bootloader verified application partition and it boot-up correctly.
-

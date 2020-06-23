@@ -315,7 +315,7 @@ theme = "doc-theme"
     url = "/pytrackpysense/apireference/pytrack2/"
     identifier = "pytrackpysense@apireference@pytrack2"
     parent = "pytrackpysense@apireference"
-    weight = 10
+    weight = 15
 
 [[menu.main]]
     name = "Pytrack"
@@ -329,7 +329,7 @@ theme = "doc-theme"
     url = "/pytrackpysense/apireference/pysense2/"
     identifier = "pytrackpysense@apireference@pysense2"
     parent = "pytrackpysense@apireference"
-    weight = 20
+    weight = 15
 
 [[menu.main]]
     name = "Pysense"
