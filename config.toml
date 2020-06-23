@@ -375,10 +375,10 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "PyGate"
-    url = "/tutorials/all/PyGate/"
-    identifier = "tutorials@all@PyGate"
+    url = "/tutorials/PyGate/"
+    identifier = "tutorials@PyGate"
     parent = "tutorials"
-    weight = 100
+    weight = 1
 
 [[menu.main]]
     name = "PoE"
