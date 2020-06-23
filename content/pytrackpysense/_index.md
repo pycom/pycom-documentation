@@ -4,6 +4,7 @@ aliases:
     - pytrackpysense/introduction.html
     - pytrackpysense/introduction.md
     - chapter/pytrackpysense
+disable_breadcrumbs: true
 ---
 
 In addition to the Expansion Board, Pycom also offers three additional sensor boards, which are ideal for quickly building a fully functioning IoT solution! Whether the application is environment sensing or asset tracking, these additional boards support a variety of sensors.
@@ -15,10 +16,11 @@ Pytrack 2.0 X is an improved location enabled version of the Expansion Board, in
 ![](/gitbook/assets/pytrack20X.png)
 
 ## New Features on Pytrack 2.0 X
-# – External 6 pin connector to add new Pycom sensor range Pynodes. You can technically have upto 256 nodes connected in a daisy chain (data bus) although we are sure you would never reach that number
-# – SMA connector for External active / passive GPS antennas when the built-in GPS antenna needs a boost!
-# – circuity to enable full power down of module for hard resets without needing to put module in Deep sleep.
-# – safeboot button for when things go wrong
+
+* External 6 pin connector to add new Pycom sensor range Pynodes. You can technically have upto 256 nodes connected in a daisy chain (data bus) although we are sure you would never reach that number
+* SMA connector for External active / passive GPS antennas when the built-in GPS antenna needs a boost!
+* circuity to enable full power down of module for hard resets without needing to put module in Deep sleep.
+* safeboot button for when things go wrong
 
 ## Pysense 2.0 X
 
@@ -27,10 +29,11 @@ Pysense 2.0 X is an improved sensor packed version of the Expansion Board, inten
 ![](/gitbook/assets/pysense20X.png)
 
 ## New Features on Pysense 2.0 X
-# – External 6 pin connector to add new Pycom sensor range Pynodes (Coming Soon!)
-# – A new circuity to enable full power down of module for hard resets without needing to put module in Deep sleep.
-# – Enhanced isolation of onboard sensors to improve reliability of sensor reporting.
-# – New safeboot button for when things go wrong
+
+* External 6 pin connector to add new Pycom sensor range Pynodes (Coming Soon!)
+* A new circuity to enable full power down of module for hard resets without needing to put module in Deep sleep.
+* Enhanced isolation of onboard sensors to improve reliability of sensor reporting.
+* New safeboot button for when things go wrong
 
 ## Pytrack 1.x
 
