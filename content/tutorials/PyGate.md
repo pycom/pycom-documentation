@@ -2,7 +2,9 @@
 
 The Pygate is an 8-channel LoRaWAN gateway. This page will help you get started with it.
 
+{{% hint style="info" %}}
 While the Pygate shield has the radio chips required to act as a LoRaWAN gateway, it will require a WiPy3, GPy or LoPy4 to run the LoRaWAN gateway software and provide connectivity to the LoRaWAN server (TTN / ChirpStack etc.) via WiFi, Ethernet (with the optional PyEthernet adapter) or LTE-M (a GPy with a mobile subscription is required for LTE-M connectivity).
+{{% /hint %}}
 
 A USB connection is recommended for the initial firmware update of the Pycom development module (WiPy 3, GPy, LoPy4) and to upload the configuration & start-up script. The module can be updated over the air via WiFi / LTE-M (depending on network capabilities) or via Ethernet connection which allows installation of the gateway in remote locations.
 
