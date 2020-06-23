@@ -277,8 +277,8 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "Expansion Board"
-    url = "/pytrackpysense/"
-    identifier = "pytrackpysense"
+    url = "/expansion3/"
+    identifier = "expansion3"
     weight = 40
 
 [[menu.main]]
@@ -383,8 +383,8 @@ theme = "doc-theme"
     name = "PyGate"
     url = "/tutorials/all/PyGate/"
     identifier = "tutorials@all@PyGate"
-    parent = "tutorials@all"
-    weight = 10
+    parent = "tutorials"
+    weight = 100
 
 [[menu.main]]
     name = "PoE"

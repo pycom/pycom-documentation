@@ -4,6 +4,9 @@ aliases:
     - pytrackpysense/introduction.html
     - pytrackpysense/introduction.md
     - chapter/pytrackpysense
+    - expansion3/introduction.html
+    - expansion3/introduction.md
+    - chapter/expansion3
 disable_breadcrumbs: true
 ---
 
