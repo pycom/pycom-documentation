@@ -2,23 +2,27 @@
 
 The Pygate is an 8-channel LoRaWAN gateway. This page will help you get started with it.
 
-The Pygate board can have an PyEthernet adapter connected which allows an ethernet connection. The PyEthernet also support PoE. Do check the separate [page and warning for PoE-NI!](/tutorials/all/poe)
+While the Pygate shield has the radio chips required to act as a LoRaWAN gateway, it will require a WiPy3, GPy or LoPy4 to run the LoRaWAN gateway software and provide connectivity to the LoRaWAN server (TTN / ChirpStack etc.) via WiFi, Ethernet (with the optional PyEthernet adapter) or LTE-M (a GPy with a mobile subscription is required for LTE-M connectivity).
+
+A USB connection is recommended for the initial firmware update of the Pycom development module (WiPy 3, GPy, LoPy4) and to upload the configuration & start-up script. The module can be updated over the air via WiFi / LTE-M (depending on network capabilities) or via Ethernet connection which allows installation of the gateway in remote locations.
+
+The Pygate board can have the PyEthernet adapter connected which allows an Ethernet connection. The PyEthernet also supports PoE. Please check the separate [page and warning for PoE-NI!](/tutorials/all/poe)
 
 ### Quickstart
 
-To connect your Pygate to a LoRa server, follow these steps:
+To connect your Pygate to a LoRa server, please follow these steps:
 
-1. Attach a WiPy, GPy or LoPy4 to the Pygate. The RGB LED of the development board should be aligned with the USB port of the Pygate.
+1. Attach a WiPy 3, GPy or LoPy 4 to the Pygate. The RGB LED of the development board should be aligned with the USB port of the Pygate.
 1. Attach the LoRa Antenna to the Pygate.
-1. Flash the Pycom Device with with a firmware build where Pygate functionality is enabled.
-1. Create a `config.json` for your Pygate and upload it.
-1. Create a `main.py` that creates an uplink (wifi, ethernet or lte) and runs the LoRa packet fowarder.
-1. Run the `main.py`.
-1. Now it is operational. The communication from other LoRa nodes such as a LoPy4 will now reach the gateway and will receive up and downlink via the PyGate.
+1. Flash the Pycom Device with with a firmware build where Pygate functionality is enabled. In the firmware update tool, please choose pygate as the firmware type.
+1. Create a `config.json` for your Pygate and upload it (please check the template further below).
+1. Create a `main.py` that creates an uplink (wifi, ethernet or lte) and runs the LoRa packet forwarder (see example below).
+1. Run the `main.py`. This file is automatically execute every time the module resets.
+1. Now it is operational. The communication from other LoRa nodes such as a LoPy4 will now reach the gateway and will receive up and downlink messages via the PyGate.
 1. To stop the Pygate at any time press Ctrl-C on the REPL and run `machine.pygate_deinit()`. It will take a few seconds to stop the gateway tasks and safely power-off the concentrator.
 
 
-Make sure you supply a config matching your region (EU868, US915, etc), e.g. https://github.com/Lora-net/packet_forwarder/tree/master/lora_pkt_fwd/cfg. If you are in EU region, it should be sufficent to update the example below with your GW ID, the LoRa server address and port number.
+Make sure you supply a config matching your region (EU868, US915, etc), e.g. https://github.com/Lora-net/packet_forwarder/tree/master/lora_pkt_fwd/cfg. If you are in EU region, it should be sufficient to update the example below with your GW ID, the LoRa server address and port number.
 
 
 ### Example TTN Wifi
