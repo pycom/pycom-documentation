@@ -53,9 +53,7 @@ The Pytrack is has a number of features including GPS, 3-Axis Accelerometer and 
 
 All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `P22` (SDA) and `P21` (SCL).
 
-You can find the datasheet and more info here:
-
-{{% refname "../datasheets/boards/pytrack.md" %}}
+You can find the datasheet and more info here: {{% refname "../datasheets/boards/pytrack.md" %}}
 
 ## Pysense
 
@@ -77,9 +75,7 @@ The Pysense is packed with a number of sensors and hardware, see the list below 
 
 All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `GPI09` (SDA) and `GPI08` (SCL).
 
-You can find the datasheet and more info here:
-
-{{% refname "../datasheets/boards/pysense.md" %}}
+You can find the datasheet and more info here: {{% refname "../datasheets/boards/pysense.md" %}}
 
 ## Pyscan
 
@@ -101,6 +97,4 @@ The Pyscan is packed with a number of sensors and hardware, see the list below f
 
 All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `P22` (SDA) and `P21` (SCL).
 
-You can find the datasheet and more info here:
-
-{{% refname "../datasheets/boards/pyscan.md" %}}
+You can find the datasheet and more info here: {{% refname "../datasheets/boards/pyscan.md" %}}
