@@ -276,12 +276,6 @@ theme = "doc-theme"
     weight = 50
 
 [[menu.main]]
-    name = "Expansion Board"
-    url = "/expansion3/"
-    identifier = "expansion3"
-    weight = 40
-
-[[menu.main]]
     name = "Installing Software"
     url = "/pytrackpysense/installation/"
     identifier = "pytrackpysense@installation"
