@@ -81,7 +81,7 @@ You can find the datasheet and more info here: {{% refname "../datasheets/boards
 
 Pyscan is a RFID-NFC enabled version of the Expansion Board, intended for use in scanning applications, such as RFID/NFC readers.
 
-![](/gitbook/assets/pyscan-new.png)
+![](/gitbook/assets/pyscan.png)
 
 ### Features & Hardware
 

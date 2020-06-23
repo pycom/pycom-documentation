@@ -6,7 +6,7 @@ aliases:
     - chapter/pytrackpysense
 ---
 
-In addition to the Expansion Board, Pycom also offers three additional sensor boards, which are ideal for quickly building a fully functioning IoT solution! Whether the application is environment sensing or asset tracking, these additional boards support a variety of sensors.
+In addition to the Expansion Board, Pycom also offers three additional types of sensor boards, which are ideal for quickly building a fully functioning IoT solution! Whether the application is environment sensing or asset tracking, these additional boards support a variety of sensors. New versions of the Pytrack and Pysense are now available with additional features:
 
 ## Pytrack 2.0 X
 
@@ -52,9 +52,7 @@ The Pytrack is has a number of features including GPS, 3-Axis Accelerometer and 
 
 All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `P22` (SDA) and `P21` (SCL).
 
-You can find the datasheet and more info here:
-
-{{% refname "../datasheets/boards/pytrack.md" %}}
+You can find the datasheet and more info here: {{% refname "../datasheets/boards/pytrack.md" %}}
 
 ## Pysense
 
@@ -76,15 +74,13 @@ The Pysense is packed with a number of sensors and hardware, see the list below 
 
 All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `GPI09` (SDA) and `GPI08` (SCL).
 
-You can find the datasheet and more info here:
-
-{{% refname "../datasheets/boards/pysense.md" %}}
+You can find the datasheet and more info here: {{% refname "../datasheets/boards/pysense.md" %}}
 
 ## Pyscan
 
 Pyscan is a RFID-NFC enabled version of the Expansion Board, intended for use in scanning applications, such as RFID/NFC readers.
 
-![](/gitbook/assets/pyscan-new.png)
+![](/gitbook/assets/pyscan.png)
 
 ### Features & Hardware
 
@@ -100,6 +96,4 @@ The Pyscan is packed with a number of sensors and hardware, see the list below f
 
 All of the included sensors are connected to the Pycom device via the I2C interface. These pins are located at `P22` (SDA) and `P21` (SCL).
 
-You can find the datasheet and more info here:
-
-{{% refname "../datasheets/boards/pyscan.md" %}}
+You can find the datasheet and more info here: {{% refname "../datasheets/boards/pyscan.md" %}}
