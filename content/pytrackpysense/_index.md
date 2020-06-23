@@ -35,7 +35,7 @@ Pysense 2.0 X is an improved sensor packed version of the Expansion Board, inten
 * Enhanced isolation of onboard sensors to improve reliability of sensor reporting.
 * New safeboot button for when things go wrong
 
-## Pytrack 1.x
+## Pytrack 1
 
 Pytrack is a location enabled version of the Expansion Board, intended for use in GPS applications such as asset tracking or monitoring.
 
@@ -55,7 +55,7 @@ All of the included sensors are connected to the Pycom device via the I2C interf
 
 You can find the datasheet and more info here: {{% refname "../datasheets/boards/pytrack.md" %}}
 
-## Pysense
+## Pysense 1
 
 Pysense is a sensor packed version of the Expansion Board, intended for use in environment sensing applications such as temperature, humidity monitoring, and light sensing.
 
