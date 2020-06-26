@@ -26,6 +26,11 @@ To connect your Pygate to a LoRa server, please follow these steps:
 
 Make sure you supply a config matching your region (EU868, US915, etc), e.g. https://github.com/Lora-net/packet_forwarder/tree/master/lora_pkt_fwd/cfg. If you are in EU region, it should be sufficient to update the example below with your GW ID, the LoRa server address and port number.
 
+{{% hint style="info" %}}
+**Note** Running the LoRa gateway on a GPy over Wifi does currently not work, because the module runs out of memory. We're working on a fix for this! This out-of-memory situation also arises if you connect via Ethernet or LTE, but you have the Wifi stack loaded. If you face this problem, please run ``import pycom`` and ``pycom.wifi_on_boot(False)`` and reset the board afterwards.
+{{% /hint %}}
+
+
 
 ### Example TTN Wifi
 
