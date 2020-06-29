@@ -14,6 +14,15 @@ The PyEthernet module offers an optional onboard Power over Ethernet (PoE) power
 WARNING: Before you use the PoE adapter for the first time, please make sure you read and follow the below instructions as failure to do so might damanage your devices!
 {{% /hint %}}
 
+The PoE power supply integrated in the PyEthernet module has no galvanic isolation. This means that in accordance with
+IEEE 802.3-2005 standard, you must <b>NOT</b> connect any other devices / cables / chargers if the GND connection is connected to mains earth!
+This is typically the case with PCs, Oscilloscopes, Logic Analysers, current consumption measurement devices etc.
+
+Incorrect usages of Power over Ethernet can lead to unrecoverable damage of not only the PyEthernet module but all hardware connected to it.
+
+A battery can be connected to the PyGate without issues. The battery can be charged via both USB-C and PoE power.
+
+
 <h3>Setup Options</h3>
 
 <table >
@@ -55,11 +64,3 @@ WARNING: Before you use the PoE adapter for the first time, please make sure you
 		</tr>
 	</tbody>
 </table>
-
-The PoE power supply integrated in the PyEthernet module has no galvanic isolation. This means that in accordance with
-IEEE 802.3-2005 standard, you must <b>NOT</b> connect any other devices / cables / chargers if the GND connection is connected to mains earth!
-This is typically the case with PCs, Oscilloscopes, Logic Analysers, current consumption measurement devices etc.
-
-Incorrect usages of Power over Ethernet can lead to unrecoverable damage of not only the PyEthernet module but all hardware connected to it.
-
-A battery can be connected to the PyGate without issues. The battery can be charged via both USB-C and PoE power.
