@@ -20,7 +20,7 @@ This is typically the case with PCs, Oscilloscopes, Logic Analysers, current con
 
 Incorrect usages of Power over Ethernet can lead to unrecoverable damage of not only the PyEthernet module but all hardware connected to it.
 
-A battery can be connected to the PyGate without issues. The battery can be charged via both USB-C and PoE power.
+A battery can be connected to the PyGate without issues. The battery can be charged either via USB-C or PoE power.
 
 
 <h3>Setup Options</h3>
