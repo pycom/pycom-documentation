@@ -8,8 +8,6 @@ aliases:
 
 ![](/gitbook/assets/PoE-NI.png)
 
-Before you use the PoE adapter for the first time, please make sure you follow the below instructions as failure to do so might damanage your devices!
-
 The PyEthernet module offers an optional onboard Power over Ethernet (PoE) power supply circuit. This means that you can power your hardware with only an ethernet cable coming from a power injector or PoE enabled Ethernet switch. However, since the PoE is non-isolated, you must adhere to the following warning!
 
 {{% hint style="danger" %}}
@@ -21,40 +19,47 @@ WARNING: Before you use the PoE adapter for the first time, please make sure you
 <table >
 	<tbody>
 		<tr>
-			<td> Connectivity option</td>
-			<td> Power over Ethernet</td>
-			<td> Power over USB/Battery only</td>
+			<td> <b>Connectivity option</b></td>
+			<td> <b>Power over Ethernet</b></td>
+			<td> <b>Power over USB-C / external supply</b></td>
 		</tr>
 		<tr>
-			<td> USB-C cable connected to a PC with mains ground</td>
-			<td> NOK</td>
-			<td> OK</td>
+			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
+			<td> <b>NOK</b></td>
+			<td> <b>OK</b></td>
 		</tr>
     <tr>
-			<td> USB-C charger not connected to mains ground</td>
-			<td> OK</td>
-			<td> OK</td>
+			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
+			<td> <b>OK</b></td>
+			<td> <b>OK</b></td>
 		</tr>
     <tr>
-			<td> USB-C cable connected to a Notebook without mains ground</td>
-			<td> OK</td>
-			<td> OK</td>
+			<td> USB-C charger <b>with</b> mains ground protection</td>
+			<td> <b>NOK</b></td>
+			<td> <b>OK</b></td>
+		</tr>
+    <tr>
+			<td> USB-C charger <b>without</b> mains ground protection</td>
+			<td> <b>OK</b></td>
+			<td> <b>OK</b></td>
 		</tr>
 		<tr>
+			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
+			<td> <b>NOK</b></td>
+			<td> <b>OK</b></td>
+		</tr>
+    <tr>
 			<td> Battery</td>
-			<td> OK</td>
-			<td> OK</td>
-		</tr>
-		<tr>
-			<td> oscilloscope / Logic Analyser / Other testequipment</td>
-			<td> NOK</td>
-			<td> OK</td>
+			<td> <b>OK</b></td>
+			<td> <b>OK</b></td>
 		</tr>
 	</tbody>
 </table>
 
 The PoE power supply integrated in the PyEthernet module has no galvanic isolation. This means that in accordance with
-IEEE 802.3-2005 standard, you must <b>not</b> connect any other devices / cables / chargers if the GND connection is connected to mains earth.
-This is typically the case with PCs, Oscilloscopes, Logic Analysers, current measurement devices etc.
+IEEE 802.3-2005 standard, you must <b>NOT</b> connect any other devices / cables / chargers if the GND connection is connected to mains earth!
+This is typically the case with PCs, Oscilloscopes, Logic Analysers, current consumption measurement devices etc.
 
 Incorrect usages of Power over Ethernet can lead to unrecoverable damage of not only the PyEthernet module but all hardware connected to it.
+
+A battery can be connected to the PyGate without issues. The battery can be charged via both USB-C and PoE power.
