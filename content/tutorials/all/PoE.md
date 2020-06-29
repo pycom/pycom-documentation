@@ -34,7 +34,7 @@ A battery can be connected to the PyGate without issues. The battery can be char
 		</tr>
 		<tr>
 			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td> <b>NOK</b></td>
+			<td> <b>NOT OK</b></td>
 			<td> <b>OK</b></td>
 		</tr>
     <tr>
@@ -44,7 +44,7 @@ A battery can be connected to the PyGate without issues. The battery can be char
 		</tr>
     <tr>
 			<td> USB-C charger <b>with</b> mains ground protection</td>
-			<td> <b>NOK</b></td>
+			<td> <b>NOT OK</b></td>
 			<td> <b>OK</b></td>
 		</tr>
     <tr>
@@ -54,7 +54,7 @@ A battery can be connected to the PyGate without issues. The battery can be char
 		</tr>
 		<tr>
 			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td> <b>NOK</b></td>
+			<td> <b>NOT OK</b></td>
 			<td> <b>OK</b></td>
 		</tr>
     <tr>
