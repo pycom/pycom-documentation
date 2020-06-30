@@ -28,38 +28,65 @@ A battery can be connected to the PyGate without issues. The battery can be char
 <table >
 	<tbody>
 		<tr>
-			<td> <b>Connectivity option</b></td>
 			<td> <b>Power over Ethernet</b></td>
-			<td> <b>Power over USB-C / external supply</b></td>
+			<td> </td>
 		</tr>
 		<tr>
 			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td> <b>NOT OK</b></td>
+			<td> <center> <b>NOT OK</b></center></td>
+		</tr>
+    <tr>
+			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
+			<td> <center> <b>OK</b></center></td>
+		</tr>
+    <tr>
+			<td> USB-C charger <b>with</b> mains ground protection</td>
+			<td> <center> <b>NOT OK</b></center></td>
+		</tr>
+    <tr>
+			<td> USB-C charger <b>without</b> mains ground protection</td>
+			<td> <center> <b>OK</b></center></td>
+		</tr>
+		<tr>
+			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
+			<td> <center> <b>NOT OK</b></center></td>
+		</tr>
+    <tr>
+			<td> Battery</td>
+			<td> <center> <b>OK</b></center></td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table >
+	<tbody>
+		<tr>
+			<td> <b>Power over USB-C / external supply</b></td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
 			<td> <b>OK</b></td>
 		</tr>
     <tr>
 			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
 			<td> <b>OK</b></td>
-			<td> <b>OK</b></td>
 		</tr>
     <tr>
 			<td> USB-C charger <b>with</b> mains ground protection</td>
-			<td> <b>NOT OK</b></td>
 			<td> <b>OK</b></td>
 		</tr>
     <tr>
 			<td> USB-C charger <b>without</b> mains ground protection</td>
 			<td> <b>OK</b></td>
-			<td> <b>OK</b></td>
 		</tr>
 		<tr>
 			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td> <b>NOT OK</b></td>
 			<td> <b>OK</b></td>
 		</tr>
     <tr>
 			<td> Battery</td>
-			<td> <b>OK</b></td>
 			<td> <b>OK</b></td>
 		</tr>
 	</tbody>
