@@ -14,7 +14,7 @@ The PyEthernet module offers an optional onboard Power over Ethernet (PoE) power
 WARNING: Before you use the PoE adapter for the first time, please make sure you read and follow the below instructions as failure to do so might damanage your devices!
 {{% /hint %}}
 
-The PoE power supply integrated in the PyEthernet module has no galvanic isolation. This means that in accordance with
+The PoE power supply integrated in the PyEthernet module with UPC code 604565285911 has no galvanic isolation. This means that in accordance with
 IEEE 802.3-2005 standard, you must <b>NOT</b> connect any other devices / cables / chargers if the GND connection is connected to mains earth!
 This is typically the case with PCs, Oscilloscopes, Logic Analysers, current consumption measurement devices etc.
 
@@ -24,17 +24,14 @@ A battery can be connected to the PyGate without issues. The battery can be char
 
 
 <h3>Setup Options</h3>
+
 <h4> Power over Ethernet</h4>
 
 <table >
 	<tbody>
-  <tr>
-    <td> <b>Power over Ethernet</b></td>
-    <td> </td>
-  </tr>  
 		<tr>
-			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td> <center> <b>NOT OK</b></center></td>
+			<td width="50%"> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
+			<td width="20%"> <center> <b>NOT OK</b></center></td>
 		</tr>
     <tr>
 			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
@@ -60,17 +57,13 @@ A battery can be connected to the PyGate without issues. The battery can be char
 </table>
 
 <br><br>
-<h4> Power over USB-C</h4>
+<h4> Power over USB-C or external supply</h4>
 
 <table >
 	<tbody>
 		<tr>
-			<td> <b>Power over USB-C</b></td>
-			<td> </td>
-		</tr>
-		<tr>
-			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td> <b>OK</b></td>
+			<td width="50%"> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
+			<td width="20%"> <b>OK</b></td>
 		</tr>
     <tr>
 			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
