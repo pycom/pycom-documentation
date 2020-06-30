@@ -6,7 +6,7 @@ aliases:
     - chapter/firmwareapi/pycom/network/lora
 ---
 
-This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
+This class provides a LoRaWAN 1.0.3 compliant driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
 
 ```python
 
@@ -69,23 +69,22 @@ lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 
 ## Methods
 
-#### lora.init(mode, \* ,region=LoRa.EU868, frequency=868000000, tx\_power=14, bandwidth=LoRa.BW\_125KHZ, sf=7, preamble=8, coding\_rate=LoRa.CODING\_4\_5, power\_mode=LoRa.ALWAYS\_ON, tx\_iq=False, rx\_iq=False, adr=False, public=True, tx\_retries=1, device\_class=LoRa.CLASS\_A)
+#### lora.init(mode, \* ,region=LoRa.EU868, frequency=868000000, tx\_power=14, bandwidth=LoRa.BW\_125KHZ, sf=7, preamble=8, coding\_rate=LoRa.CODING\_4\_5, power\_mode=LoRa.ALWAYS\_ON, inv\_iq=False, adr=False, public=True, tx\_retries=1, device\_class=LoRa.CLASS\_A)
 
 This method is used to set the LoRa subsystem configuration and to specific raw LoRa or LoRaWAN.
 
 The arguments are:
 
 * `mode` can be either `LoRa.LORA` or `LoRa.LORAWAN`.
-* `region` can take the following values: `LoRa.AS923`, `LoRa.AU915`, `LoRa.EU868` or `LoRa.US915`. If not provided this will default to `LoRaEU868`. If they are not specified, this will also set appropriate defaults for `frequency` and `tx_power`.
-* `frequency` accepts values between `863000000` and `870000000` in the 868 band, or between `902000000` and `928000000` in the 915 band.
+* `region` can take the following values: `LoRa.AS923`, `LoRa.AU915`, `LoRa.EU433`, `LoRa.EU868`, `LoRa.US915`, `LoRa.CN470`, `LoRa.CN779`, `LoRa.IN865`, `LoRa.RU864`, `LoRa.KR920`. If not provided this will default to `LoRaEU868`. If they are not specified, this will also set appropriate defaults for `frequency` and `tx_power`.
+* `frequency` accepts values based on the region provided. Default value is `868000000` for `LoRa.EU868`.
 * `tx_power` is the transmit power in dBm. It accepts between 2 and 14 for the 868 band, and between 5 and 20 in the 915 band.
 * `bandwidth` is the channel bandwidth in KHz. In the 868 band the accepted values are `LoRa.BW_125KHZ` and `LoRa.BW_250KHZ`. In the 915 band the accepted values are `LoRa.BW_125KHZ` and `LoRa.BW_500KHZ`.
 * `sf` sets the desired spreading factor. Accepts values between 7 and 12.
 * `preamble` configures the number of pre-amble symbols. The default value is 8.
 * `coding_rate` can take the following values: `LoRa.CODING_4_5`, `LoRa.CODING_4_6`, `LoRa.CODING_4_7` or `LoRa.CODING_4_8`.
 * `power_mode` can be either `LoRa.ALWAYS_ON`, `LoRa.TX_ONLY` or `LoRa.SLEEP`. In `ALWAYS_ON` mode, the radio is always listening for incoming - packets whenever a transmission is not taking place. In `TX_ONLY` the radio goes to sleep as soon as the transmission completes. In `SLEEP` mode the radio is sent to sleep permanently and won't accept any commands until the power mode is changed.
-* `tx_iq` enables TX IQ inversion.
-* `rx_iq` enables RX IQ inversion.
+* `inv_iq` enables IQ inversion (both TX and RX).
 * `adr` enables Adaptive Data Rate.
 * `public` selects between the public and private sync word.
 * `tx_retries` sets the number of TX retries in `LoRa.LORAWAN` mode.
@@ -120,7 +119,8 @@ The parameters are:
 * `activation`: can be either `LoRa.OTAA` or `LoRa.ABP`.
 * `auth`: is a tuple with the authentication data.
 * `timeout`: is the maximum time in milliseconds to wait for the Join Accept message to be received. If no timeout (or zero) is given, the call returns immediately and the status of the join request can be checked with `lora.has_joined()`.
-* `dr`: is an optional value to specify the initial data rate for the Join Request. Possible values are 0 to 5 for **EU868**, or 0 to 4 for **US915**.
+* `dr`: is an optional value to specify the initial data rate for the Join Request. Possible values depend upon the selected region.
+
 
 In the case of `LoRa.OTAA` the authentication tuple is: `(dev_eui, app_eui, app_key)` where `dev_eui` is optional. If it is not provided the LoRa MAC will be used. Therefore, you can do OTAA in 2 different ways:
 
@@ -207,7 +207,7 @@ lora.bandwidth(LoRa.BW_125KHZ)
 
 #### lora.frequency(\[frequency\])
 
-Get or set the frequency in raw LoRa mode (`LoRa.LORA`). The allowed range is between `863000000` and `870000000` Hz for the 868 MHz band version or between `902000000` and `928000000` Hz for the 915 MHz band version.
+Get or set the frequency in raw LoRa mode (`LoRa.LORA`). The allowed range is between `433175000` and `928000000` Hz and depends upon the LoRaWAN region selected during LoRa initialization. Only the frequencies permitted by the current region will be accepted.
 
 ```python
 
@@ -246,7 +246,7 @@ lora.preamble(LoRa.CODING_4_5)
 
 #### lora.sf(\[sf\])
 
-Get or set the spreading factor value in raw LoRa mode (`LoRa.LORA`). The minimum value is 7 and the maximum is 12:
+Get or set the spreading factor value in raw LoRa mode (`LoRa.LORA`). The minimum value is 6 and the maximum is 12:
 
 ```python
 
@@ -408,7 +408,7 @@ lora.nvram_erase()
 * Raw LoRa coding rate: `LoRa.CODING_4_5`, `LoRa.CODING_4_6`, `LoRa.CODING_4_7`, `LoRa.CODING_4_8`
 * Callback trigger types (may be ORed): `LoRa.RX_PACKET_EVENT`, `LoRa.TX_PACKET_EVENT`, `LoRa.TX_FAILED_EVENT`
 * LoRaWAN device class: `LoRa.CLASS_A`, `LoRa.CLASS_C`
-* LoRaWAN regions: `LoRa.AS923`, `LoRa.AU915`, `LoRa.EU868`, `LoRa.US915`
+* LoRaWAN regions: `LoRa.AS923`, `LoRa.AU915`, `LoRa.EU433`, `LoRa.EU868`, `LoRa.US915`, `LoRa.CN470`, `LoRa.CN779`, `LoRa.IN865`, `LoRa.RU864`, `LoRa.KR920`
 
 ## Working with LoRa and LoRaWAN Sockets
 
