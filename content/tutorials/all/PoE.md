@@ -67,23 +67,23 @@ A battery can be connected to the PyGate without issues. The battery can be char
 		</tr>
     <tr>
 			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
-			<td> <b>OK</b></td>
+			<td> <center> <b>OK</b></center></td>
 		</tr>
     <tr>
 			<td> USB-C charger <b>with</b> mains ground protection</td>
-			<td> <b>OK</b></td>
+			<td> <center> <b>OK</b></center></td>
 		</tr>
     <tr>
 			<td> USB-C charger <b>without</b> mains ground protection</td>
-			<td> <b>OK</b></td>
+			<td> <center> <b>OK</b></center></td>
 		</tr>
 		<tr>
 			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td> <b>OK</b></td>
+			<td> <center> <b>OK</b></center></td>
 		</tr>
     <tr>
 			<td> Battery</td>
-			<td> <b>OK</b></td>
+			<td> <center> <b>OK</b></center></td>
 		</tr>
 	</tbody>
 </table>
