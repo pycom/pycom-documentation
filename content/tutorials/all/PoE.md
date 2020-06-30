@@ -26,6 +26,8 @@ A battery can be connected to the PyGate without issues. The battery can be char
 <h3>Setup Options</h3>
 
 <h4> Power over Ethernet</h4>
+![](/gitbook/assets/poe-ni-warn1.png)
+
 <div class="poe-table">
 <table class="poe">
 	<tbody>
@@ -59,6 +61,7 @@ A battery can be connected to the PyGate without issues. The battery can be char
 
 <br><br>
 <h4> Power over USB-C or external supply</h4>
+![](/gitbook/assets/poe-ni-warn2.png)
 <div class="poe-table">
 <table class="poe">
 	<tbody>
