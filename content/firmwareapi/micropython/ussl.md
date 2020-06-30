@@ -10,9 +10,9 @@ This module provides access to Transport Layer Security (often known as "Secure 
 
 ## Methods
 
-#### ssl.wrap\_socket(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ca\_certs=None\, timeout=10sec)
+#### ssl.wrap\_socket(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ssl\_version=0, ca\_certs=None, server\_hostname=None, timeout=10sec)
 
-Takes an instance `sock` of `socket.socket`, and returns an instance of ssl.SSLSocket, a subtype of `socket.socket`, which wraps the underlying socket in an SSL context. Example:
+Takes an instance `sock` of `socket.socket`, and returns an instance of `ssl.SSLSocket`, a subtype of `socket.socket`, which wraps the underlying socket in an SSL context. Example:
 
 ```python
 
