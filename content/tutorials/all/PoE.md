@@ -24,13 +24,14 @@ A battery can be connected to the PyGate without issues. The battery can be char
 
 
 <h3>Setup Options</h3>
+<h4> Power over Ethernet</h4>
 
 <table >
 	<tbody>
-		<tr>
-			<td> <b>Power over Ethernet</b></td>
-			<td> </td>
-		</tr>
+  <tr>
+    <td> <b>Power over Ethernet</b></td>
+    <td> </td>
+  </tr>  
 		<tr>
 			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
 			<td> <center> <b>NOT OK</b></center></td>
@@ -58,11 +59,13 @@ A battery can be connected to the PyGate without issues. The battery can be char
 	</tbody>
 </table>
 
+<br><br>
+<h4> Power over USB-C</h4>
 
 <table >
 	<tbody>
 		<tr>
-			<td> <b>Power over USB-C / external supply</b></td>
+			<td> <b>Power over USB-C</b></td>
 			<td> </td>
 		</tr>
 		<tr>
