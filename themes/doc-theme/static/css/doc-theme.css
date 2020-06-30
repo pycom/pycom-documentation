@@ -367,8 +367,20 @@ img[src*="/gitbook/assets/pybytes/pymesh/"]{
   font-weight: 600;
 }
 
+table.poe td:nth-child(1){
+  font-weight: 400;
+}
+
 table.poe td:nth-child(2){
   text-align:center;
   font-weight: 600;
   width:100px;
+}
+
+table.poe .red {
+  background-color: #EF9A9A !important;
+}
+
+table.poe .green {
+  background-color: #c5eee3 !important;
 }
