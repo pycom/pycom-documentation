@@ -31,27 +31,27 @@ A battery can be connected to the PyGate without issues. The battery can be char
 	<tbody>
 		<tr>
 			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td class="red">NOT OK</td>
+			<td class="poe-red">NOT OK</td>
     </tr>
     <tr>
 			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
-			<td class="green">  OK</td>
+			<td class="poe-green">  OK</td>
     </tr>
     <tr>
 			<td> USB-C charger <b>with</b> mains ground protection</td>
-			<td class="red">  NOT OK</td>
+			<td class="poe-red">  NOT OK</td>
     </tr>
     <tr>
 			<td> USB-C charger <b>without</b> mains ground protection</td>
-			<td class="green">  OK</td>
+			<td class="poe-green">  OK</td>
     </tr>
 		<tr>
 			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td class="red">  NOT OK</td>
+			<td class="poe-poe-red">  NOT OK</td>
     </tr>
     <tr>
 			<td> Battery</td>
-			<td class="green"> OK</td>
+			<td class="poe-green"> OK</td>
     </tr>
 	</tbody>
 </table>
@@ -64,27 +64,27 @@ A battery can be connected to the PyGate without issues. The battery can be char
 	<tbody>
 		<tr>
 			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td class="green">OK</td>
+			<td class="poe-green">OK</td>
     </tr>
     <tr>
 			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
-			<td class="green"> OK </td>
+			<td class="poe-green"> OK </td>
     </tr>
     <tr>
 			<td> USB-C charger <b>with</b> mains ground protection</td>
-			<td class="green"> OK </td>
+			<td class="poe-green"> OK </td>
     </tr>
     <tr>
 			<td> USB-C charger <b>without</b> mains ground protection</td>
-			<td class="green"> OK </td>
+			<td class="poe-green"> OK </td>
     </tr>
 		<tr>
 			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td class="green"> OK </td>
+			<td class="poe-green"> OK </td>
     </tr>
     <tr>
 			<td> Battery</td>
-			<td class="green"> OK </td>
+			<td class="poe-green"> OK </td>
     </tr>
 	</tbody>
 </table>

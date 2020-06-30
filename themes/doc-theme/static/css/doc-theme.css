@@ -377,10 +377,10 @@ table.poe td:nth-child(2){
   width:100px;
 }
 
-table.poe .red {
+table.poe .poe-red {
   background-color: #EF9A9A !important;
 }
 
-table.poe .green {
+table.poe .poe-green {
   background-color: #c5eee3 !important;
 }
