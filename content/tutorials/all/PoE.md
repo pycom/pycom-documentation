@@ -26,76 +26,66 @@ A battery can be connected to the PyGate without issues. The battery can be char
 <h3>Setup Options</h3>
 
 <h4> Power over Ethernet</h4>
-
-<table >
+<div class="poe-table">
+<table class="poe">
 	<tbody>
 		<tr>
-			<td width="50%"> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td width="20%"> <center> <b>NOT OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
+			<td>NOT OK</td>
+    </tr>
     <tr>
 			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
-			<td> <center> <b>OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td>  OK</td>
+    </tr>
     <tr>
 			<td> USB-C charger <b>with</b> mains ground protection</td>
-			<td> <center> <b>NOT OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td>  NOT OK</td>
+    </tr>
     <tr>
 			<td> USB-C charger <b>without</b> mains ground protection</td>
-			<td> <center> <b>OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td>  OK</td>
+    </tr>
 		<tr>
 			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td> <center> <b>NOT OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td>  NOT OK</td>
+    </tr>
     <tr>
 			<td> Battery</td>
-			<td> <center> <b>OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td> OK</td>
+    </tr>
 	</tbody>
 </table>
+</div>
 
 <br><br>
 <h4> Power over USB-C or external supply</h4>
-
-<table >
+<div class="poe-table">
+<table class="poe">
 	<tbody>
 		<tr>
-			<td width="50%"> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td width="20%"> <center> <b>OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
+			<td>OK</td>
+    </tr>
     <tr>
 			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
-			<td> <center> <b>OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td> OK </td>
+    </tr>
     <tr>
 			<td> USB-C charger <b>with</b> mains ground protection</td>
-			<td> <center> <b>OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td> OK </td>
+    </tr>
     <tr>
 			<td> USB-C charger <b>without</b> mains ground protection</td>
-			<td> <center> <b>OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td> OK </td>
+    </tr>
 		<tr>
 			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td> <center> <b>OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td> OK </td>
+    </tr>
     <tr>
 			<td> Battery</td>
-			<td> <center> <b>OK</b></center></td>
-      <td width="30%" border="0"> </td>
-		</tr>
+			<td> OK </td>
+    </tr>
 	</tbody>
 </table>
+</div>

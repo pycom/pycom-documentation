@@ -359,3 +359,14 @@ img[src="/gitbook/assets/pybytes/lora/ttn_logo.svg"]{
 img[src*="/gitbook/assets/pybytes/pymesh/"]{
     width: 70%;
 }
+
+/* PoE table */
+.poe-table {
+  width:50%;display:table;
+  font-weight: 600;
+}
+
+table.poe tr:nth-child(2){
+  text-align:center;
+  font-weight: 600;
+}
