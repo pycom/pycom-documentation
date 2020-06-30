@@ -47,7 +47,7 @@ A battery can be connected to the PyGate without issues. The battery can be char
     </tr>
 		<tr>
 			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td class="poe-poe-red">  NOT OK</td>
+			<td class="poe-red">  NOT OK</td>
     </tr>
     <tr>
 			<td> Battery</td>
