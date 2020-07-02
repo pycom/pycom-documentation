@@ -865,11 +865,25 @@ theme = "doc-theme"
     weight = 40
 
 [[menu.main]]
+    name = "LoRaWAN v1.0.2"
+    url = "/firmwareapi/pycom/network/lora/lora_102/"
+    identifier = "firmwareapi@pycom@network@lora@lora_102"
+    parent = "firmwareapi@pycom@network@lora"
+    weight = 10
+
+[[menu.main]]
+    name = "LoRaWAN v1.0.3"
+    url = "/firmwareapi/pycom/network/lora/lora_103/"
+    identifier = "firmwareapi@pycom@network@lora@lora_103"
+    parent = "firmwareapi@pycom@network@lora"
+    weight = 20
+
+[[menu.main]]
     name = "Pymesh"
     url = "/firmwareapi/pycom/network/lora/pymesh/"
     identifier = "firmwareapi@pycom@network@lora@pymesh"
     parent = "firmwareapi@pycom@network@lora"
-    weight = 10
+    weight = 30
 
 [[menu.main]]
     name = "Sigfox"
