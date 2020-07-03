@@ -4,7 +4,10 @@ aliases:
   - /firmwareapi/pycom/network/lora_103.md
 ---
 
-This class provides a LoRaWAN 1.0.3 compliant driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
+This class provides a LoRaWAN 1.0.3 compliant driver for the LoRa network processor in the LoPy and FiPy.
+LoRaWAN v1.0.3 is available from the firmware version 1.20.3.b0.
+
+Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
 
 ```python
 from network import LoRa
