@@ -210,7 +210,7 @@ class NanoGateway:
 
         # Initialize LoRa in LORA mode
         self.lora = LoRa(mode=LoRa.LORA, frequency=self.frequency, bandwidth=LoRa.BW_125KHZ, sf=self.sf,
-                        preamble=8, coding_rate=LoRa.CODING_4_5, tx_iq=True)
+                        preamble=8, coding_rate=LoRa.CODING_4_5)
         # Create a raw LoRa socket
         self.lora_sock = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
         self.lora_sock.setblocking(False)
@@ -299,12 +299,12 @@ class NanoGateway:
         if events & LoRa.TX_PACKET_EVENT:
             self.txnb += 1
             lora.init(mode=LoRa.LORA, frequency=self.frequency, bandwidth=LoRa.BW_125KHZ,
-                     sf=self.sf, preamble=8, coding_rate=LoRa.CODING_4_5, tx_iq=True)
+                     sf=self.sf, preamble=8, coding_rate=LoRa.CODING_4_5)
 
     def _send_down_link(self, data, tmst, datarate, frequency):
         self.lora.init(mode=LoRa.LORA, frequency=frequency, bandwidth=LoRa.BW_125KHZ,
                       sf=self._dr_to_sf(datarate), preamble=8, coding_rate=LoRa.CODING_4_5,
-                      tx_iq=True)
+                      inv_iq=True)
         while time.ticks_us() < tmst:
             pass
         self.lora_sock.send(data)

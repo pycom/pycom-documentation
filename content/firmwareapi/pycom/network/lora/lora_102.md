@@ -1,15 +1,15 @@
 ---
-title: "LoRa"
+title: "LoRa (LoRaWAN v1.0.2)"
 aliases:
-    - firmwareapi/pycom/network/lora.html
-    - firmwareapi/pycom/network/lora.md
-    - chapter/firmwareapi/pycom/network/lora
+  - /firmwareapi/pycom/network/lora_102.md
 ---
 
-This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
+This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network processor in the LoPy and FiPy.
+LoRaWAN v1.0.2 is available up to the firmware version 1.20.2 (starting from v1.20.3.b0 the LoRaWAN v1.0.3 is available).
+
+Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
 
 ```python
-
 from network import LoRa
 import socket
 import ubinascii
@@ -63,7 +63,6 @@ For various other complete LoRa examples, check here for additional examples.
 Create and configure a LoRa object. See init for params of configuration.
 
 ```python
-
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 ```
 
@@ -98,7 +97,6 @@ In `LoRa.LORAWAN` mode, only `adr`, `public`, `tx_retries` and `device_class` ar
 For example, you can do:
 
 ```python
-
 # initialize in raw LoRa mode
 lora.init(mode=LoRa.LORA, tx_power=14, sf=12)
 ```
@@ -106,7 +104,6 @@ lora.init(mode=LoRa.LORA, tx_power=14, sf=12)
 or
 
 ```python
-
 # initialize in LoRaWAN mode
 lora.init(mode=LoRa.LORAWAN)
 ```
@@ -125,21 +122,18 @@ The parameters are:
 In the case of `LoRa.OTAA` the authentication tuple is: `(dev_eui, app_eui, app_key)` where `dev_eui` is optional. If it is not provided the LoRa MAC will be used. Therefore, you can do OTAA in 2 different ways:
 
 ```python
-
 lora.join(activation=LoRa.OTAA, auth=(app_eui, app_key), timeout=0)  # the device MAC address is used as DEV_EUI
 ```
 
 or
 
 ```python
-
 lora.join(activation=LoRa.OTAA, auth=(dev_eui, app_eui, app_key), timeout=0) # a custom DEV_EUI is specified
 ```
 
 Example:
 
 ```python
-
 from network import LoRa
 import socket
 import time
@@ -169,7 +163,6 @@ while not lora.has_joined():
 In the case of `LoRa.ABP` the authentication tuple is: `(dev_addr, nwk_swkey, app_swkey)`. Example:
 
 ```python
-
 from network import LoRa
 import socket
 import ubinascii
@@ -197,7 +190,6 @@ lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))
 Get or set the bandwidth in raw LoRa mode (`LoRa.LORA`). Can be either `LoRa.BW_125KHZ` (0), `LoRa.BW_250KHZ` (1) or `LoRa.BW_500KHZ` (2):
 
 ```python
-
 # get raw LoRa Bandwidth
 lora.bandwidth()
 
@@ -210,7 +202,6 @@ lora.bandwidth(LoRa.BW_125KHZ)
 Get or set the frequency in raw LoRa mode (`LoRa.LORA`). The allowed range is between `863000000` and `870000000` Hz for the 868 MHz band version or between `902000000` and `928000000` Hz for the 915 MHz band version.
 
 ```python
-
 # get raw LoRa Frequency
 lora.frequency()
 
@@ -223,7 +214,6 @@ lora.frequency(868000000)
 Get or set the coding rate in raw LoRa mode (`LoRa.LORA`). The allowed values are: `LoRa.CODING_4_5` (1), `LoRa.CODING_4_6` (2), `LoRa.CODING_4_7` (3) and `LoRa.CODING_4_8` (4).
 
 ```python
-
 # get raw LoRa Coding Rate
 lora.coding_rate()
 
@@ -236,7 +226,6 @@ lora.coding_rate(LoRa.CODING_4_5)
 Get or set the number of preamble symbols in raw LoRa mode (`LoRa.LORA`):
 
 ```python
-
 # get raw LoRa preamble symbols
 lora.preamble()
 
@@ -249,7 +238,6 @@ lora.preamble(LoRa.CODING_4_5)
 Get or set the spreading factor value in raw LoRa mode (`LoRa.LORA`). The minimum value is 7 and the maximum is 12:
 
 ```python
-
 # get raw LoRa spread factor value
 lora.sf()
 
@@ -270,7 +258,6 @@ Return a named tuple with useful information from the last received LoRa or LoRa
 Example:
 
 ```python
-
 lora.stats()
 ```
 
@@ -305,7 +292,6 @@ The arguments are:
 Examples:
 
 ```python
-
 lora.add_channel(index=0, frequency=868000000, dr_min=5, dr_max=6)
 ```
 
@@ -314,7 +300,6 @@ lora.add_channel(index=0, frequency=868000000, dr_min=5, dr_max=6)
 Removes the channel from the specified `index`. On the 868MHz band the channels 0 to 2 cannot be removed, they can only be replaced by other channels using the `lora.add_channel` method. A way to remove all channels except for one is to add the same channel, 3 times on indexes 0, 1 and 2. An example can be seen below:
 
 ```python
-
 lora.remove_channel()
 ```
 
@@ -337,7 +322,6 @@ An example of how this callback functions can be seen the in method [`lora.event
 This method is used to check for radio activity on the current LoRa channel, and if the `rssi` of the measured activity is lower than the `rssi_threshold` given, the return value will be `True`, otherwise `False`. Example:
 
 ```python
-
 lora.ischannel_free(-100)
 ```
 
@@ -350,7 +334,6 @@ Set the battery level value that will be sent when the LoRaWAN MAC command that 
 * `255` means that the end-device was not able to measure the battery level.
 
 ```python
-
 lora.set_battery_level(127) # 50% battery
 ```
 
@@ -361,7 +344,6 @@ This method returns a value with bits sets (if any) indicating the events that h
 Example:
 
 ```python
-
 def lora_cb(lora):
     events = lora.events()
     if events & LoRa.RX_PACKET_EVENT:
@@ -377,7 +359,6 @@ lora.callback(trigger=(LoRa.RX_PACKET_EVENT | LoRa.TX_PACKET_EVENT), handler=lor
 Save the LoRaWAN state (joined status, network keys, packet counters, etc) in non-volatile memory in order to be able to restore the state when coming out of deepsleep or a power cycle.
 
 ```python
-
 lora.nvram_save()
 ```
 
@@ -386,7 +367,6 @@ lora.nvram_save()
 Restore the LoRaWAN state (joined status, network keys, packet counters, etc) from non-volatile memory. State must have been previously stored with a call to `nvram_save` before entering deepsleep. This is useful to be able to send a LoRaWAN message immediately after coming out of deepsleep without having to join the network again. This can only be used if the current region matches the one saved.
 
 ```python
-
 lora.nvram_restore()
 ```
 
@@ -395,8 +375,35 @@ lora.nvram_restore()
 Remove the LoRaWAN state (joined status, network keys, packet counters, etc) from non-volatile memory.
 
 ```python
-
 lora.nvram_erase()
+```
+
+#### lora.nvram\_erase()
+
+Remove the LoRaWAN state (joined status, network keys, packet counters, etc) from non-volatile memory.
+
+```python
+lora.nvram_erase()
+```
+
+#### lora.mesh()
+
+Enable the Mesh network. Only after Mesh enabling the `lora.cli()` and `socket` can be used.
+
+```python
+lora.mesh()
+```
+
+#### lora.cli()
+
+Send OpenThread CLI commands, the list is [here](https://github.com/openthread/openthread/blob/master/src/cli/README). The output is multiline string, having as line-endings the `\r\n`.
+
+```bash
+>>> print(lora.cli("ipaddr"))
+fdde:ad00:beef:0:0:ff:fe00:fc00
+fdde:ad00:beef:0:0:ff:fe00:e800
+fdde:ad00:beef:0:e1f0:783c:1e8f:c763
+fe80:0:0:0:2c97:cb65:3219:c86
 ```
 
 ## Constants
@@ -410,17 +417,26 @@ lora.nvram_erase()
 * LoRaWAN device class: `LoRa.CLASS_A`, `LoRa.CLASS_C`
 * LoRaWAN regions: `LoRa.AS923`, `LoRa.AU915`, `LoRa.EU868`, `LoRa.US915`
 
+## Exceptions
+
+* `LoRa.timeout`
+
 ## Working with LoRa and LoRaWAN Sockets
 
 LoRa sockets are created in the following way:
 
 ```python
-
 import socket
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 ```
 
 And they must be created after initialising the LoRa network card.
+
+LoRa-Mesh socket is created, if the Mesh was enabled before (`lora.mesh()` was called).
+
+{{% hint style="info" %}}
+The LoRa-Mesh socket supports only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
+{{% /hint %}}
 
 LoRa sockets support the following standard methods from the socket module:
 
@@ -429,7 +445,6 @@ LoRa sockets support the following standard methods from the socket module:
 Usage:
 
 ```python
-
 s.close()
 ```
 
@@ -438,7 +453,6 @@ s.close()
 Usage:
 
 ```python
-
 s.bind(1)
 ```
 
@@ -451,15 +465,23 @@ The `bind()` method is only applicable when the radio is configured in `LoRa.LOR
 Usage:
 
 ```python
-
 s.send(bytes([1, 2, 3]))
 ```
 
 or
 
 ```python
-
 s.send('Hello')
+```
+
+#### socket.sendto(bytes,(ip, port))
+
+This is supported only by the LoRa Mesh socket.
+
+Usage:
+
+```python
+s.sendto('Hello', ('fdde:ad00:beef:0:0:ff:fe00:e800', 1234))
 ```
 
 #### socket.recv(bufsize)
@@ -467,7 +489,6 @@ s.send('Hello')
 Usage:
 
 ```python
-
 s.recv(128)
 ```
 
@@ -478,7 +499,6 @@ This method is useful to know the destination port number of the message receive
 Usage:
 
 ```python
-
 s.recvfrom(128)
 ```
 
@@ -487,7 +507,6 @@ s.recvfrom(128)
 Set the value of the given socket option. The needed symbolic constants are defined in the socket module (`SO_*` etc.). In the case of LoRa the values are always integers. Examples:
 
 ```python
-
 # configuring the data rate
 s.setsockopt(socket.SOL_LORA, socket.SO_DR, 5)
 
@@ -509,7 +528,6 @@ Sets the socket timeout value in seconds. Accepts floating point values.
 Usage:
 
 ```python
-
 s.settimeout(5.5)
 ```
 
@@ -518,6 +536,5 @@ s.settimeout(5.5)
 Usage:
 
 ```python
-
 s.setblocking(True)
 ```
