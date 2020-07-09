@@ -15,7 +15,7 @@ aliases:
 
 **Store**: [Buy Here](https://pycom.io/product/gpy)
 
-**Getting Started:** [Click Here](/gettingstarted/connection/gpy)
+**Getting Started:** [Click Here](/gettingstarted/)
 
 ## Datasheet
 
@@ -24,19 +24,17 @@ Please Note: We have removed the labels from the pictures in the documentation d
 {{% /hint %}}
 
 
-The datasheet of the GPy is available as a PDF File.
+The datasheet of the GPy is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_GPy_v2.pdf")
 
-<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_GPy_v2.pdf" target="_blank"> GPy Datasheet </a>
+The drawing of the LTE-M antenna is available as a [PDF File](/gitbook/assets/lte-m-antenna-drawing.pdf")
 
-The drawing of the LTE-M antenna is available as a PDF File.
+The Gpy is certified for [CE RED](/gitbook/assets/gpy_c03-b0-red-final.pdf) and [FCC DSS](/gitbook/assets/pycom-2ajmtgpy01r-fcc-grant-dss.pdf) [FCC DTS](/gitbook/assets/pycom-2ajmtgpy01r-fcc-grant-dts.pdf) [FCC TNB](//gitbook/assets/pycom-2ajmtgpy01r-fcc-grant-tnb.pdf) 
 
-<a href="/gitbook/assets/lte-m-antenna-drawing.pdf" target="_blank"> LTE-M Antenna Drawing </a>
+[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-GPy(8217-00090P)-20190523.pdf)
 
 ## Pinout
 
-The pinout of the GPy is available as a PDF File
-
-<a href="/gitbook/assets/gpy-pinout.pdf" target="_blank"> GPy Pinout </a>
+The pinout of the GPy is available as a [PDF File](/gitbook/assets/gpy-pinout.pdf)
 
 ![](/gitbook/assets/gpy-pinout.png)
 

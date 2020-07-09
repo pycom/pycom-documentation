@@ -7,8 +7,6 @@ aliases:
     - chapter/datasheets/development/fipy
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn82srvkf3rhetvjpi-fipy-1.png)
-
 
 {{% hint style="info" %}}
  Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
@@ -22,13 +20,13 @@ aliases:
 
 ## Datasheet
 
-The datasheet of the FiPy is available as a PDF File.
+The datasheet of the FiPy is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_FiPy_v2.pdf)
 
-<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_FiPy_v2.pdf" target="_blank"> FiPy Datasheet </a>
+The drawing of the LTE-M antenna is available as a [PDF File](/gitbook/assets/lte-m-antenna-drawing.pdf).
 
-The drawing of the LTE-M antenna is available as a PDF File.
-<a href="/gitbook/assets/lte-m-antenna-drawing.pdf" target="_blank"> LTE-M Antenna Drawing </a>
+The Fipy is certified for [CE RED](/gitbook/assets/fipy_c03-b0-red-final.pdf) and [FCC DSS](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dss.pdf) [FCC DTS](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dts.pdf) [FCC DXX](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dxx.pdf) [FCC TNB](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-tnb.pdf) 
 
+[ROHS certification](gitbook/assets/RoHs_declarations/RoHS-for-FiPy(8217-00091P)-20190523.pdf)
 ## Pinout
 
 The pinout of the FiPy is available as a PDF File

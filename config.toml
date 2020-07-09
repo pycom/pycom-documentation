@@ -24,151 +24,76 @@ theme = "doc-theme"
     weight = 40
 
 [[menu.main]]
-    name = "Hardware Setup"
-    url = "/gettingstarted/connection/"
-    identifier = "gettingstarted@connection"
-    parent = "gettingstarted"
+    name = "Getting Started"
+    url = "/gettingstarted/"
+    identifier = "gettingstarted@gettingstarted"
+    parent="gettingstarted"
     weight = 10
-
-[[menu.main]]
-    name = "LoPy"
-    url = "/gettingstarted/connection/lopy/"
-    identifier = "gettingstarted@connection@lopy"
-    parent = "gettingstarted@connection"
-    weight = 10
-
-[[menu.main]]
-    name = "LoPy 4"
-    url = "/gettingstarted/connection/lopy4/"
-    identifier = "gettingstarted@connection@lopy4"
-    parent = "gettingstarted@connection"
-    weight = 20
-
-[[menu.main]]
-    name = "SiPy"
-    url = "/gettingstarted/connection/sipy/"
-    identifier = "gettingstarted@connection@sipy"
-    parent = "gettingstarted@connection"
-    weight = 30
-
-[[menu.main]]
-    name = "GPy"
-    url = "/gettingstarted/connection/gpy/"
-    identifier = "gettingstarted@connection@gpy"
-    parent = "gettingstarted@connection"
-    weight = 40
-
-[[menu.main]]
-    name = "FiPy"
-    url = "/gettingstarted/connection/fipy/"
-    identifier = "gettingstarted@connection@fipy"
-    parent = "gettingstarted@connection"
-    weight = 50
-
-[[menu.main]]
-    name = "WiPy"
-    url = "/gettingstarted/connection/wipy/"
-    identifier = "gettingstarted@connection@wipy"
-    parent = "gettingstarted@connection"
-    weight = 60
 
 [[menu.main]]
     name = "Software"
-    url = "/gettingstarted/installation/"
-    identifier = "gettingstarted@installation"
+    url = "/gettingstarted/software/"
+    identifier = "gettingstarted@software"
     parent = "gettingstarted"
-    weight = 20
+    weight = 30
 
 [[menu.main]]
     name = "Drivers"
-    url = "/gettingstarted/installation/drivers/"
-    identifier = "gettingstarted@installation@drivers"
-    parent = "gettingstarted@installation"
+    url = "/gettingstarted/software/drivers/"
+    identifier = "gettingstarted@software@drivers"
+    parent = "gettingstarted@software"
     weight = 10
 
-[[menu.main]]
-    name = "Updating Firmware"
-    url = "/gettingstarted/installation/firmwaretool/"
-    identifier = "gettingstarted@installation@firmwaretool"
-    parent = "gettingstarted@installation"
-    weight = 20
+
 
 [[menu.main]]
-    name = "Pymakr"
-    url = "/gettingstarted/installation/pymakr/"
-    identifier = "gettingstarted@installation@pymakr"
-    parent = "gettingstarted@installation"
-    weight = 30
+    name= "VS Code"
+    url="/gettingstarted/software/vscode/"
+    identifier= "gettingstarted@software@vscode" 
+    parent= "gettingstarted@software"
+    weight=20
+
+[[menu.main]]
+    name= "Atom"
+    url="/gettingstarted/software/atom/"
+    identifier= "gettingstarted@software@atom" 
+    parent= "gettingstarted@software"
+    weight=30
 
 [[menu.main]]
     name = "Programming the modules"
     url = "/gettingstarted/programming/"
     identifier = "gettingstarted@programming"
     parent = "gettingstarted"
-    weight = 30
-
-[[menu.main]]
-    name = "Introduction to MicroPython"
-    url = "/gettingstarted/programming/micropython/"
-    identifier = "gettingstarted@programming@micropython"
-    parent = "gettingstarted@programming"
-    weight = 10
-
-[[menu.main]]
-    name = "MicroPython Examples"
-    url = "/gettingstarted/programming/examples/"
-    identifier = "gettingstarted@programming@examples"
-    parent = "gettingstarted@programming"
-    weight = 20
-
-[[menu.main]]
-    name = "Your first Pymakr project"
-    url = "/gettingstarted/programming/first-project/"
-    identifier = "gettingstarted@programming@first-project"
-    parent = "gettingstarted@programming"
-    weight = 30
-
-[[menu.main]]
-    name = "REPL"
-    url = "/gettingstarted/programming/repl/"
-    identifier = "gettingstarted@programming@repl"
-    parent = "gettingstarted@programming"
     weight = 40
 
 [[menu.main]]
-    name = "Serial USB (UART)"
-    url = "/gettingstarted/programming/repl/serial/"
-    identifier = "gettingstarted@programming@repl@serial"
-    parent = "gettingstarted@programming@repl"
+    name = "USB Serial" 
+    url = "/gettingstarted/programming/usbserial/"
+    identifier = "gettingstarted@programming@usbserial"
+    parent = "gettingstarted@programming"
     weight = 10
 
 [[menu.main]]
-    name = "Telnet REPL"
-    url = "/gettingstarted/programming/repl/telnet/"
-    identifier = "gettingstarted@programming@repl@telnet"
-    parent = "gettingstarted@programming@repl"
-    weight = 20
-
-[[menu.main]]
-    name = "FTP"
+    name = "FTP & Telnet"
     url = "/gettingstarted/programming/ftp/"
     identifier = "gettingstarted@programming@ftp"
     parent = "gettingstarted@programming"
-    weight = 50
+    weight = 20
 
 [[menu.main]]
     name = "Safe boot"
     url = "/gettingstarted/programming/safeboot/"
     identifier = "gettingstarted@programming@safeboot"
     parent = "gettingstarted@programming"
-    weight = 60
+    weight = 30
 
 [[menu.main]]
     name = "Device Registration"
     url = "/gettingstarted/registration/"
     identifier = "gettingstarted@registration"
     parent = "gettingstarted"
-    weight = 40
+    weight = 50
 
 [[menu.main]]
     name = "Sigfox"
@@ -198,159 +123,19 @@ theme = "doc-theme"
     parent = "gettingstarted@registration@lora"
     weight = 10
 
-# [[menu.main]]
-#     name = "Objenious"
-#     url = "/gettingstarted/registration/lora/objenious/"
-#     identifier = "gettingstarted@registration@lora@objenious"
-#     parent = "gettingstarted@registration@lora"
-#     weight = 20
-
-# *** Pymakr Plugin
 [[menu.main]]
-    name = "Pymakr Plugin"
-    url = "/pymakr/installation/"
-    identifier = "pymakr"
-    weight = 44
-
-[[menu.main]]
-    name = "Installation"
-    url = "/pymakr/installation/"
-    identifier = "pymakr@installation"
-    parent = "pymakr"
-    weight = 10
-
-[[menu.main]]
-    name = "Atom"
-    url = "/pymakr/installation/atom/"
-    identifier = "pymakr@installation@atom"
-    parent = "pymakr@installation"
-    weight = 10
-
-[[menu.main]]
-    name = "Visual Studio Code"
-    url = "/pymakr/installation/vscode/"
-    identifier = "pymakr@installation@vscode"
-    parent = "pymakr@installation"
+    name = "Chirpstack"
+    url = "/gettingstarted/registration/lora/chirpstack/"
+    identifier = "gettingstarted@registration@lora@chirpstack"
+    parent = "gettingstarted@registration@lora"
     weight = 20
 
 [[menu.main]]
-    name = "Tools/Features"
-    url = "/pymakr/toolsfeatures/"
-    identifier = "pymakr@toolsfeatures"
-    parent = "pymakr"
-    weight = 20
-
-[[menu.main]]
-    name = "Settings"
-    url = "/pymakr/settings/"
-    identifier = "pymakr@settings"
-    parent = "pymakr"
+    name = "Senet"
+    url = "/gettingstarted/registration/lora/senet/"
+    identifier = "gettingstarted@registration@lora@senet"
+    parent = "gettingstarted@registration@lora"
     weight = 30
-
-# *** Pymakr Online IDE
-[[menu.main]]
-    name = "Pymakr Online"
-    url = "/pymakr-online/"
-    identifier = "pymakr-online"
-    weight = 45
-
-[[menu.main]]
-    name = "How to Open"
-    url = "/pymakr-online/how-to-open/"
-    identifier = "pymakr-online@how-to-open"
-    parent = "pymakr-online"
-    weight = 10
-
-[[menu.main]]
-    name = "Tools/Features"
-    url = "/pymakr-online/toolsfeatures/"
-    identifier = "pymakr-online@toolsfeatures"
-    parent = "pymakr-online"
-    weight = 20
-
-# *** Pytrack, Pysense, Pyscan
-[[menu.main]]
-    name = "Pytrack, Pysense, Pyscan"
-    url = "/pytrackpysense/"
-    identifier = "pytrackpysense"
-    weight = 50
-
-[[menu.main]]
-    name = "Installing Software"
-    url = "/pytrackpysense/installation/"
-    identifier = "pytrackpysense@installation"
-    parent = "pytrackpysense"
-    weight = 10
-
-[[menu.main]]
-    name = "Updating Firmware"
-    url = "/pytrackpysense/installation/firmware/"
-    identifier = "pytrackpysense@installation@firmware"
-    parent = "pytrackpysense@installation"
-    weight = 10
-
-[[menu.main]]
-    name = "Installing Drivers - Windows 7"
-    url = "/pytrackpysense/installation/drivers/"
-    identifier = "pytrackpysense@installation@drivers"
-    parent = "pytrackpysense@installation"
-    weight = 20
-
-[[menu.main]]
-    name = "Installing Libraries"
-    url = "/pytrackpysense/installation/libraries/"
-    identifier = "pytrackpysense@installation@libraries"
-    parent = "pytrackpysense@installation"
-    weight = 30
-
-[[menu.main]]
-    name = "API Reference"
-    url = "/pytrackpysense/apireference/"
-    identifier = "pytrackpysense@apireference"
-    parent = "pytrackpysense"
-    weight = 20
-
-[[menu.main]]
-    name = "Pytrack 2.0 X"
-    url = "/pytrackpysense/apireference/pytrack2/"
-    identifier = "pytrackpysense@apireference@pytrack2"
-    parent = "pytrackpysense@apireference"
-    weight = 10
-
-[[menu.main]]
-    name = "Pytrack"
-    url = "/pytrackpysense/apireference/pytrack/"
-    identifier = "pytrackpysense@apireference@pytrack"
-    parent = "pytrackpysense@apireference"
-    weight = 20
-
-[[menu.main]]
-    name = "Pysense 2.0 X"
-    url = "/pytrackpysense/apireference/pysense2/"
-    identifier = "pytrackpysense@apireference@pysense2"
-    parent = "pytrackpysense@apireference"
-    weight = 10
-
-[[menu.main]]
-    name = "Pysense"
-    url = "/pytrackpysense/apireference/pysense/"
-    identifier = "pytrackpysense@apireference@pysense"
-    parent = "pytrackpysense@apireference"
-    weight = 20
-
-[[menu.main]]
-    name = "Pyscan"
-    url = "/pytrackpysense/apireference/pyscan/"
-    identifier = "pytrackpysense@apireference@pyscan"
-    parent = "pytrackpysense@apireference"
-    weight = 30
-
-[[menu.main]]
-    name = "Sleep"
-    url = "/pytrackpysense/apireference/sleep/"
-    identifier = "pytrackpysense@apireference@sleep"
-    parent = "pytrackpysense@apireference"
-    weight = 40
 
 # *** Tutorials & Examples
 [[menu.main]]
@@ -360,278 +145,274 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
-    name = "All Pycom Device Examples"
-    url = "/tutorials/all/"
-    identifier = "tutorials@all"
+    name = "Basic"
+    url = "/tutorials/basic/"
+    identifier = "tutorials@basic"
     parent = "tutorials"
     weight = 10
-
 [[menu.main]]
     name = "REPL"
-    url = "/tutorials/all/repl/"
-    identifier = "tutorials@all@repl"
-    parent = "tutorials@all"
+    url = "/tutorials/basic/repl/"
+    identifier = "tutorials@basic@repl"
+    parent = "tutorials@basic"
     weight = 10
-
 [[menu.main]]
-    name = "PyGate"
-    url = "/tutorials/PyGate/"
-    identifier = "tutorials@PyGate"
-    parent = "tutorials"
-    weight = 1
-
-[[menu.main]]
-    name = "PoE"
-    url = "/tutorials/all/PoE/"
-    identifier = "tutorials@all@PoE"
-    parent = "tutorials@all"
-    weight = 12
-
-
-[[menu.main]]
-    name = "WLAN"
-    url = "/tutorials/all/wlan/"
-    identifier = "tutorials@all@wlan"
-    parent = "tutorials@all"
+    name = "Sleep"
+    url = "/tutorials/basic/sleep/"
+    identifier = "tutorials@basic@sleep"
+    parent = "tutorials@basic"
     weight = 20
-
 [[menu.main]]
-    name = "Bluetooth"
-    url = "/tutorials/all/ble/"
-    identifier = "tutorials@all@ble"
-    parent = "tutorials@all"
+    name = "Print"
+    url = "/tutorials/basic/print/"
+    identifier = "tutorials@basic@print"
+    parent = "tutorials@basic"
     weight = 30
-
 [[menu.main]]
-    name = "HTTPS"
-    url = "/tutorials/all/https/"
-    identifier = "tutorials@all@https"
-    parent = "tutorials@all"
+    name = "RGB LED"
+    url = "/tutorials/basic/rgbled/"
+    identifier = "tutorials@basic@rgbled"
+    parent = "tutorials@basic"
     weight = 40
-
 [[menu.main]]
-    name = "MQTT"
-    url = "/tutorials/all/mqtt/"
-    identifier = "tutorials@all@mqtt"
-    parent = "tutorials@all"
+    name = "GPIO"
+    url = "/tutorials/basic/gpio/"
+    identifier = "tutorials@basic@gpio"
+    parent = "tutorials@basic"
     weight = 50
-
 [[menu.main]]
-    name = "AWS"
-    url = "/tutorials/all/aws/"
-    identifier = "tutorials@all@aws"
-    parent = "tutorials@all"
+    name="Hardware"
+    url="/tutorials/hardware/"
+    identifier="tutorials@hardware"
+    parent="tutorials"
+    weight = 20
+[[menu.main]]
+    name="ADC"
+    url="/tutorials/hardware/adc/"
+    identifier="tutorials@hardware@adc"
+    parent="tutorials@hardware"
+    weight = 10
+[[menu.main]]
+    name="I2C"
+    url="/tutorials/hardware/i2c/"
+    identifier="tutorials@hardware@i2c"
+    parent="tutorials@hardware"
+    weight = 20
+[[menu.main]]
+    name="Onewire"
+    url="/tutorials/hardware/owd/"
+    identifier="tutorials@hardware@owd"
+    parent="tutorials@hardware"
+    weight = 30
+[[menu.main]]
+    name="PIR Sensor"
+    url="/tutorials/hardware/pir/"
+    identifier="tutorials@hardware@pir"
+    parent="tutorials@hardware"
+    weight = 40
+[[menu.main]]
+    name="Modbus"
+    url="/tutorials/hardware/modbus/"
+    identifier="tutorials@hardware@modbus"
+    parent="tutorials@hardware"
+    weight = 50
+[[menu.main]]
+    name="Threading"
+    url="/tutorials/hardware/threading/"
+    identifier="tutorials@hardware@threading"
+    parent="tutorials@hardware"
     weight = 60
-
 [[menu.main]]
-    name = "ADC"
-    url = "/tutorials/all/adc/"
-    identifier = "tutorials@all@adc"
-    parent = "tutorials@all"
+    name="Timers"
+    url="/tutorials/hardware/timers/"
+    identifier="tutorials@hardware@timers"
+    parent="tutorials@hardware"
     weight = 70
-
 [[menu.main]]
-    name = "I2C"
-    url = "/tutorials/all/i2c/"
-    identifier = "tutorials@all@i2c"
-    parent = "tutorials@all"
+    name="Touch"
+    url="/tutorials/hardware/touch/"
+    identifier="tutorials@hardware@touch"
+    parent="tutorials@hardware"
     weight = 80
 
 [[menu.main]]
-    name = "Onewire Driver"
-    url = "/tutorials/all/owd/"
-    identifier = "tutorials@all@owd"
-    parent = "tutorials@all"
-    weight = 90
-
-[[menu.main]]
-    name = "Threading"
-    url = "/tutorials/all/threading/"
-    identifier = "tutorials@all@threading"
-    parent = "tutorials@all"
-    weight = 100
-
-[[menu.main]]
-    name = "RGB LED"
-    url = "/tutorials/all/rgbled/"
-    identifier = "tutorials@all@rgbled"
-    parent = "tutorials@all"
-    weight = 110
-
-[[menu.main]]
-    name = "Timers"
-    url = "/tutorials/all/timers/"
-    identifier = "tutorials@all@timers"
-    parent = "tutorials@all"
-    weight = 120
-
-[[menu.main]]
-    name = "PIR Sensor"
-    url = "/tutorials/all/pir/"
-    identifier = "tutorials@all@pir"
-    parent = "tutorials@all"
-    weight = 130
-
-[[menu.main]]
-    name = "Modbus"
-    url = "/tutorials/all/modbus/"
-    identifier = "tutorials@all@modbus"
-    parent = "tutorials@all"
-    weight = 140
-
-[[menu.main]]
-    name = "OTA update"
-    url = "/tutorials/all/ota/"
-    identifier = "tutorials@all@ota"
-    parent = "tutorials@all"
-    weight = 150
-
-[[menu.main]]
-    name = "Lorawan OTA update"
-    url = "/tutorials/all/ota-lorawan/"
-    identifier = "tutorials@all@ota-lorawan"
-    parent = "tutorials@all"
-    weight = 155
-
-[[menu.main]]
-    name = "RMT"
-    url = "/tutorials/all/rmt/"
-    identifier = "tutorials@all@rmt"
-    parent = "tutorials@all"
-    weight = 160
-
-[[menu.main]]
-    name = "Socket"
-    url = "/tutorials/all/socket/"
-    identifier = "tutorials@all@socket"
-    parent = "tutorials@all"
-    weight = 170
-
-[[menu.main]]
-    name = "Touch"
-    url = "/tutorials/all/touch/"
-    identifier = "tutorials@all@touch"
-    parent = "tutorials@all"
-    weight = 180
-
-[[menu.main]]
-    name = "LoRa Examples"
-    url = "/tutorials/lora/"
-    identifier = "tutorials@lora"
+    name = "Networks"
+    url = "/tutorials/networks/"
+    identifier = "tutorials@networks"
     parent = "tutorials"
-    weight = 20
-
+    weight = 30
 [[menu.main]]
-    name = "LoRa-MAC (Raw LoRa)"
-    url = "/tutorials/lora/lora-mac/"
-    identifier = "tutorials@lora@lora-mac"
-    parent = "tutorials@lora"
+    name = "WiFi"
+    url = "/tutorials/networks/wlan/"
+    identifier = "tutorials@networks@wlan"
+    parent = "tutorials@networks"
     weight = 10
-
 [[menu.main]]
-    name = "LoRaWAN with OTAA"
-    url = "/tutorials/lora/lorawan-otaa/"
-    identifier = "tutorials@lora@lorawan-otaa"
-    parent = "tutorials@lora"
+    name = "BLE"
+    url = "/tutorials/networks/ble/"
+    identifier = "tutorials@networks@ble"
+    parent = "tutorials@networks"
+    weight = 15
+[[menu.main]]
+    name = "SigFox"
+    url = "/tutorials/networks/sigfox/"
+    identifier = "tutorials@networks@sigfox"
+    parent = "tutorials@networks"
     weight = 20
-
 [[menu.main]]
-    name = "LoRaWAN with ABP"
-    url = "/tutorials/lora/lorawan-abp/"
-    identifier = "tutorials@lora@lorawan-abp"
-    parent = "tutorials@lora"
+    name = "LoRa"
+    url = "/tutorials/networks/LoRa/"
+    identifier = "tutorials@networks@lora"
+    parent = "tutorials@networks"
     weight = 30
 
 [[menu.main]]
-    name = "LoRa-MAC Nano-Gateway"
-    url = "/tutorials/lora/lora-mac-nano-gateway/"
-    identifier = "tutorials@lora@lora-mac-nano-gateway"
-    parent = "tutorials@lora"
+    name = "LoRaWAN ABP"
+    url = "/tutorials/networks/lora/lorawan-abp/"
+    identifier = "tutorials@networks@lora@lorawan-abp"
+    parent = "tutorials@networks@lora"
+    weight = 10
+[[menu.main]]
+    name = "LoRaWAN OTAA"
+    url = "/tutorials/networks/lora/lorawan-otaa/"
+    identifier = "tutorials@networks@lora@lorawan-otaa"
+    parent = "tutorials@networks@lora"
+    weight = 20
+[[menu.main]]
+    name = "LoRaWAN Gateway"
+    url = "/tutorials/networks/lora/lorawan-nano-gateway/"
+    identifier = "tutorials@networks@lora@lorawan-gateway"
+    parent = "tutorials@networks@lora"
+    weight = 30
+[[menu.main]]
+    name = "LoRa RAW"
+    url = "/tutorials/networks/lora/lora-mac/"
+    identifier = "tutorials@networks@lora@lora-mac"
+    parent = "tutorials@networks@lora"
     weight = 40
-
 [[menu.main]]
-    name = "LoPy to LoPy"
-    url = "/tutorials/lora/module-module/"
-    identifier = "tutorials@lora@module-module"
-    parent = "tutorials@lora"
+    name = "LoRa RAW Gateway"
+    url = "/tutorials/networks/lora/lora-mac-nano-gateway/"
+    identifier = "tutorials@networks@lora@lora-mac-nano-gateway"
+    parent = "tutorials@networks@lora"
     weight = 50
-
 [[menu.main]]
-    name = "LoRaWAN Nano-Gateway"
-    url = "/tutorials/lora/lorawan-nano-gateway/"
-    identifier = "tutorials@lora@lorawan-nano-gateway"
-    parent = "tutorials@lora"
+    name = "Lopy to Lopy"
+    url = "/tutorials/networks/lora/module-module/"
+    identifier = "tutorials@networks@lora@module-module"
+    parent = "tutorials@networks@lora"
     weight = 60
 
 [[menu.main]]
-    name = "RN2483 to LoPy"
-    url = "/tutorials/lora/rn2483-to-lopy/"
-    identifier = "tutorials@lora@rn2483-to-lopy"
-    parent = "tutorials@lora"
-    weight = 70
-
-[[menu.main]]
-    name = "Sigfox Examples"
-    url = "/tutorials/sigfox/"
-    identifier = "tutorials@sigfox"
-    parent = "tutorials"
-    weight = 30
-
-[[menu.main]]
-    name = "LTE Examples"
-    url = "/tutorials/lte/"
-    identifier = "tutorials@lte"
-    parent = "tutorials"
+    name = "LTE"
+    url = "/tutorials/networks/lte/"
+    identifier = "tutorials@networks@lte"
+    parent = "tutorials@networks"
     weight = 40
-
 [[menu.main]]
-    name = "CAT-M1"
-    url = "/tutorials/lte/cat-m1/"
-    identifier = "tutorials@lte@cat-m1"
-    parent = "tutorials@lte"
-    weight = 10
-
-[[menu.main]]
-    name = "NB-IoT"
-    url = "/tutorials/lte/nb-iot/"
-    identifier = "tutorials@lte@nb-iot"
-    parent = "tutorials@lte"
-    weight = 20
-
-[[menu.main]]
-    name = "Module IMEI"
-    url = "/tutorials/lte/imei/"
-    identifier = "tutorials@lte@imei"
-    parent = "tutorials@lte"
-    weight = 30
-
-[[menu.main]]
-    name = "Modem Firmware Update"
-    url = "/tutorials/lte/firmware/"
-    identifier = "tutorials@lte@firmware"
-    parent = "tutorials@lte"
-    weight = 40
-
-[[menu.main]]
-    name = "Pytrack Examples"
-    url = "/tutorials/pytrack/"
-    identifier = "tutorials@pytrack"
-    parent = "tutorials"
+    name = "Ethernet"
+    url = "/tutorials/networks/ethernet/"
+    identifier = "tutorials@networks@ethernet"
+    parent = "tutorials@networks"
     weight = 50
 
 [[menu.main]]
-    name = "Pysense Examples"
-    url = "/tutorials/pysense/"
-    identifier = "tutorials@pysense"
+    name = "Network Protecols"
+    url = "/tutorials/networkprotecols/"
+    identifier = "tutorials@networkprotecols"
     parent = "tutorials"
-    weight = 60
+    weight = 40
+[[menu.main]]
+    name = "AWS"
+    url = "/tutorials/networkprotecols/aws/"
+    identifier = "tutorials@networkprotecols@aws"
+    parent = "tutorials@networkprotecols"
+    weight = 10
+[[menu.main]]
+    name = "HTTP Webserver"
+    url = "/tutorials/networkprotecols/webserver/"
+    identifier = "tutorials@networkprotecols@webserver"
+    parent = "tutorials@networkprotecols"
+    weight = 15
+[[menu.main]]
+    name = "HTTPS"
+    url = "/tutorials/networkprotecols/https/"
+    identifier = "tutorials@networkprotecols@https"
+    parent = "tutorials@networkprotecols"
+    weight = 20
+[[menu.main]]
+    name = "MQTT"
+    url = "/tutorials/networkprotecols/mqtt/"
+    identifier = "tutorials@networkprotecols@mqtt"
+    parent = "tutorials@networkprotecols"
+    weight = 30
+[[menu.main]]
+    name = "PoE"
+    url = "/tutorials/networkprotecols/PoE/"
+    identifier = "tutorials@networkprotecols@poe"
+    parent = "tutorials@networkprotecols"
+    weight = 40
+[[menu.main]]
+    name = "NTP"
+    url = "/tutorials/networkprotecols/ntp/"
+    identifier = "tutorials@networkprotecols@ntp"
+    parent = "tutorials@networkprotecols"
+    weight = 45
+[[menu.main]]
+    name = "Sockets"
+    url = "/tutorials/networkprotecols/socket/"
+    identifier = "tutorials@networkprotecols@socket"
+    parent = "tutorials@networkprotecols"
+    weight = 50
 
 [[menu.main]]
-    name = "Pyscan Examples"
-    url = "/tutorials/pyscan/"
-    identifier = "tutorials@pyscan"
+    name = "Expansion Boards"
+    url = "/tutorials/expansionboards/"
+    identifier = "tutorials@expansionboards"
     parent = "tutorials"
-    weight = 70
+    weight = 50
+[[menu.main]]
+    name = "Pygate"
+    url = "/tutorials/expansionboards/pygate/"
+    identifier = "tutorials@expansionboards@pygate"
+    parent = "tutorials@expansionboards"
+    weight = 10
+[[menu.main]]
+    name = "pysense"
+    url = "/tutorials/expansionboards/pysense"
+    identifier = "tutorials@expansionboards@pysense"
+    parent = "tutorials@expansionboards"
+    weight = 20
+[[menu.main]]
+    name = "pysense 2.0 X"
+    url = "/tutorials/expansionboards/pysense2"
+    identifier = "tutorials@expansionboards@pysense2"
+    parent = "tutorials@expansionboards"
+    weight = 30
+[[menu.main]]
+    name = "pytrack"
+    url = "/tutorials/expansionboards/pytrack"
+    identifier = "tutorials@expansionboards@pytrack"
+    parent = "tutorials@expansionboards"
+    weight = 40
+[[menu.main]]
+    name = "pytrack 2.0 X"
+    url = "/tutorials/expansionboards/pytrack2"
+    identifier = "tutorials@expansionboards@pytrack2"
+    parent = "tutorials@expansionboards"
+    weight = 50
+[[menu.main]]
+    name = "pyscan"
+    url = "/tutorials/expansionboards/pyscan"
+    identifier = "tutorials@expansionboards@pyscan"
+    parent = "tutorials@expansionboards"
+    weight = 60
+[[menu.main]]
+    name = "Advanced"
+    url = "/tutorials/advanced/"
+    identifier = "tutorials@advanced"
+    parent = "tutorials"
+    weight = 60
 
 # *** Firmware & API Reference
 [[menu.main]]
@@ -880,11 +661,62 @@ theme = "doc-theme"
     weight = 30
 
 [[menu.main]]
-    name = "pycom"
+    name = "Pycom"
     url = "/firmwareapi/pycom/pycom/"
     identifier = "firmwareapi@pycom@pycom"
     parent = "firmwareapi@pycom"
     weight = 40
+
+[[menu.main]]
+    name = "Expansion boards"
+    url = "/firmwareapi/pycom/expansionboards/"
+    identifier = "firmwareapi@pycom@expansionboards"
+    parent = "firmwareapi@pycom"
+    weight = 50
+
+[[menu.main]]
+    name = "Pygate"
+    url = "/firmwareapi/pycom/expansionboards/pygate/"
+    identifier = "firmwareapi@pycom@expansionboards@pygate"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 10
+[[menu.main]]
+    name = "pysense"
+    url = "/firmwareapi/pycom/expansionboards/pysense/"
+    identifier = "firmwareapi@pycom@expansionboards@pysense"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 20
+[[menu.main]]
+    name = "pysense 2.0 x"
+    url = "/firmwareapi/pycom/expansionboards/pysense2/"
+    identifier = "firmwareapi@pycom@expansionboards@pysense2"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 30
+[[menu.main]]
+    name = "pytrack"
+    url = "/firmwareapi/pycom/expansionboards/pytrack/"
+    identifier = "firmwareapi@pycom@expansionboards@pytrack"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 40
+[[menu.main]]
+    name = "pytrack 2.0 x"
+    url = "/firmwareapi/pycom/expansionboards/pytrack2/"
+    identifier = "firmwareapi@pycom@expansionboards@pytrack2"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 50
+[[menu.main]]
+    name = "pyscan"
+    url = "/firmwareapi/pycom/expansionboards/pyscan/"
+    identifier = "firmwareapi@pycom@expansionboards@pyscan"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 60
+[[menu.main]]
+    name = "sleep"
+    url = "/firmwareapi/pycom/expansionboards/sleep/"
+    identifier = "firmwareapi@pycom@expansionboards@sleep"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 70
+
 
 [[menu.main]]
     name = "MicroPython Modules"
@@ -1126,6 +958,13 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "L01 OEM Baseboard"
+    url = "/datasheets/oem/l01_reference/"
+    identifier = "datasheets@oem@l01_reference"
+    parent = "datasheets@oem"
+    weight = 25
+
+[[menu.main]]
     name = "L04"
     url = "/datasheets/oem/l04/"
     identifier = "datasheets@oem@l04"
@@ -1140,87 +979,118 @@ theme = "doc-theme"
     weight = 40
 
 [[menu.main]]
-    name = "L01 OEM Baseboard Reference"
-    url = "/datasheets/oem/l01_reference/"
-    identifier = "datasheets@oem@l01_reference"
-    parent = "datasheets@oem"
-    weight = 50
-
-[[menu.main]]
-    name = "Universal OEM Baseboard Reference"
+    name = "Universal OEM Baseboard"
     url = "/datasheets/oem/universal_reference/"
     identifier = "datasheets@oem@universal_reference"
     parent = "datasheets@oem"
     weight = 60
 
 [[menu.main]]
+    name = "OEM Deepsleep"
+    url = "/datasheets/oem/deepsleep/"
+    identifier = "datasheets@oem@deepsleep"
+    parent = "datasheets@oem"
+    weight = 70
+    
+[[menu.main]]
     name = "Expansion Boards and Shields"
-    url = "/datasheets/boards/"
+    url = "/datasheets/expansionboards/"
     identifier = "datasheets@boards"
     parent = "datasheets"
     weight = 30
 
 [[menu.main]]
     name = "Pygate"
-    url = "/datasheets/boards/pygate/"
+    url = "/datasheets/expansionboards/pygate/"
     identifier = "datasheets@boards@pygate"
     parent = "datasheets@boards"
-    weight = 10
+    weight = 5
 
-[[menu.main]]
-    name = "Expansion Board 3.0"
-    url = "/datasheets/boards/expansion3/"
-    identifier = "datasheets@boards@expansion3"
-    parent = "datasheets@boards"
-    weight = 10
-
-[[menu.main]]
-    name = "Pytrack"
-    url = "/datasheets/boards/pytrack/"
-    identifier = "datasheets@boards@pytrack"
-    parent = "datasheets@boards"
-    weight = 20
 
 [[menu.main]]
     name = "Pysense"
-    url = "/datasheets/boards/pysense/"
+    url = "/datasheets/expansionboards/pysense/"
     identifier = "datasheets@boards@pysense"
     parent = "datasheets@boards"
-    weight = 30
-
+    weight = 10
 [[menu.main]]
-    name = "Pyscan"
-    url = "/datasheets/boards/pyscan/"
-    identifier = "datasheets@boards@pyscan"
+    name = "Pysense 2.0 X"
+    url = "/datasheets/expansionboards/pysense2/"
+    identifier = "datasheets@boards@pysense2"
+    parent = "datasheets@boards"
+    weight = 20
+[[menu.main]]
+    name = "Pytrack"
+    url = "/datasheets/expansionboards/pytrack/"
+    identifier = "datasheets@boards@pytrack"
+    parent = "datasheets@boards"
+    weight = 30
+[[menu.main]]
+    name = "Pytrack 2.0 X"
+    url = "/datasheets/expansionboards/pytrack2/"
+    identifier = "datasheets@boards@pytrack2"
     parent = "datasheets@boards"
     weight = 40
-
-[[menu.main]]
-    name = "Expansion Board 2.0"
-    url = "/datasheets/boards/expansion2/"
-    identifier = "datasheets@boards@expansion2"
+    [[menu.main]]
+    name = "Pyscan"
+    url = "/datasheets/expansionboards/pyscan/"
+    identifier = "datasheets@boards@pyscan"
     parent = "datasheets@boards"
     weight = 50
-
 [[menu.main]]
-    name = "Deep Sleep Shield"
-    url = "/datasheets/boards/deepsleep/"
-    identifier = "datasheets@boards@deepsleep"
+    name = "Expansion Board 2.0"
+    url = "/datasheets/expansionboards/expansion2/"
+    identifier = "datasheets@boards@expansion2"
     parent = "datasheets@boards"
     weight = 60
-
 [[menu.main]]
-    name = "Deep Sleep API"
-    url = "/datasheets/boards/deepsleep/api/"
-    identifier = "datasheets@boards@deepsleep@api"
-    parent = "datasheets@boards@deepsleep"
-    weight = 10
+    name = "Expansion Board 3.0"
+    url = "/datasheets/expansionboards/expansion3/"
+    identifier = "datasheets@boards@expansion3"
+    parent = "datasheets@boards"
+    weight = 70
+
+
 
 [[menu.main]]
     name = "Notes"
     url = "/datasheets/notes/"
     identifier = "datasheets@notes"
     parent = "datasheets"
+    weight = 40
+
+# firmware tool
+[[menu.main]]
+    name = "Update Firmware"
+    url = "/updatefirmware/"
+    identifier = "updatefirmware"
+    weight = 85
+
+[[menu.main]]
+    name = "Device"
+    url = "/updatefirmware/device/"
+    identifier = "updatefirmware@device"
+    parent= "updatefirmware" 
+    weight = 10
+[[menu.main]]
+    name = "Device (OTA)"
+    url = "/updatefirmware/OTA/"
+    identifier = "updatefirmware@ota"
+    parent= "updatefirmware"
+    weight = 20
+
+[[menu.main]]
+    name = "Expansion Board"
+    url = "/updatefirmware/expansionboard/"
+    identifier = "updatefirmware@expansionboard"
+    parent= "updatefirmware"
+    weight = 30
+
+[[menu.main]]
+    name = "LTE Modem"
+    url = "/updatefirmware/ltemodem/"
+    identifier = "updatefirmware@ltemodem"
+    parent = "updatefirmware"
     weight = 40
 
 # *** Pybytes
@@ -1568,56 +1438,56 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "Pymesh LICENCE"
-    url = "/pymesh/licence"
+    url = "/pymesh/licence/"
     identifier = "pymesh@licence"
     parent = "pymesh"
     weight = 10
 
 [[menu.main]]
     name = "Simple Example"
-    url = "/pymesh/simple-example"
+    url = "/pymesh/simple-example/"
     identifier = "pymesh@simple-example"
     parent = "pymesh"
     weight = 20
 
 [[menu.main]]
     name = "Pymesh Library API"
-    url = "/pymesh/lib-api"
+    url = "/pymesh/lib-api/"
     identifier = "pymesh@lib-api"
     parent = "pymesh"
     weight = 30
 
 [[menu.main]]
     name = "Pymesh Library CLI"
-    url = "/pymesh/lib-cli"
+    url = "/pymesh/lib-cli/"
     identifier = "pymesh@lib-cli"
     parent = "pymesh"
     weight = 40
 
 [[menu.main]]
     name = "Pymesh Library BLE RPC"
-    url = "/pymesh/lib-ble-rpc"
+    url = "/pymesh/lib-ble-rpc/"
     identifier = "pymesh@lib-ble-rpc"
     parent = "pymesh"
     weight = 50
 
 [[menu.main]]
     name = "Border Router Examplee"
-    url = "/pymesh/pymesh-br"
+    url = "/pymesh/pymesh-br/"
     identifier = "pymesh@pymesh-br"
     parent = "pymesh"
     weight = 60
 
 [[menu.main]]
     name = "Advanced Security Example"
-    url = "/pymesh/security"
+    url = "/pymesh/security/"
     identifier = "pymesh@security"
     parent = "pymesh"
     weight = 70
 
 [[menu.main]]
     name = "Micropython API"
-    url = "/firmwareapi/pycom/network/lora/pymesh"
+    url = "/firmwareapi/pycom/network/lora/pymesh/"
     identifier = "pymesh@api"
     parent = "pymesh"
     weight = 90
@@ -1665,7 +1535,7 @@ theme = "doc-theme"
         weight = 30
 # *** Documentation Notes
 [[menu.main]]
-    name = "Documentation Notes"
+    name = "Micropython Support"
     url = "/docnotes/"
     identifier = "docnotes"
     weight = 100
@@ -1683,6 +1553,24 @@ theme = "doc-theme"
     identifier = "docnotes@replscript"
     parent = "docnotes"
     weight = 20
+[[menu.main]]
+    name = "Micropython"
+    url = "/docnotes/micropython/"
+    identifier = "docnotes@micropython"
+    parent = "docnotes"
+    weight = 30
+[[menu.main]]
+    name = "Micropython examples"
+    url = "/docnotes/examples/"
+    identifier = "docnotes@examples"
+    parent = "docnotes"
+    weight = 40
+[[menu.main]]
+    name = "REPL commands"
+    url = "/docnotes/repl/"
+    identifier = "docnotes@repl"
+    parent = "docnotes"
+    weight = 50
 
 [[menu.main]]
     name = "Mesh Networks"
@@ -1718,3 +1606,9 @@ theme = "doc-theme"
     identifier = "advance@encryption"
     parent = "advance"
     weight = 30
+
+[[menu.main]]
+    name="License"
+    url="/license/"
+    identifier="license"
+    weight = 500

@@ -2743,10 +2743,19 @@ video {
   -webkit-transform: scale(0) rotate(-45deg);
           transform: scale(0) rotate(-45deg);
 }
-.blockquote {
-  padding: 16px 0 16px 24px;
-  font-size: 18px;
+/*changes 09-07-2020:
+  removed . before blockquote
+  changed padding from 16px 0px 16px 24px
+  changed font-size from 18px
+  added background-color
+  added border-radius 
+*/
+blockquote {
+  padding: 10px 0 10px 10px;
+  font-size: 14px;
   font-weight: 300;
+  background-color:rgba(0,128,0,0.7);
+  border-radius: 5px;
 }
 code,
 kbd {
@@ -2756,17 +2765,25 @@ kbd {
   font-size: 85%;
   font-weight: 900;
 }
-code:after,
+
+/* changes 09-07-2020: 
+    commented code::before and code:after
+    changed code color
+    commented box-shadow
+*/
+
+/*code:after,*/
 kbd:after,
-code:before,
+/*code:before, */
 kbd:before {
   content: "\00a0";
   letter-spacing: -1px;
 }
 code {
   background-color: #f5f5f5;
-  color: #bd4147;
+  color: #1E1E3C; /*#bd4147;
   box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  */
 }
 kbd {
   background: #616161;
@@ -2850,8 +2867,11 @@ ol {
   font-size: 12px !important;
   font-weight: 400;
 }
+/* changes 09-07-2020:
+  changed margin-bottom from 16px
+  */
 p {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .overflow-hidden {
   overflow: hidden;

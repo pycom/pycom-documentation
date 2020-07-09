@@ -7,12 +7,9 @@ aliases:
 
 This section contains all of the datasheets for the Pycom OEM Devices. This includes the W01, L01, L04, and G01.
 
-{{% refname "w01.md" %}}
-
-{{% refname "l01.md" %}}
-
-{{% refname "g01.md" %}}
-
-{{% refname "l01\_reference.md" %}}
-
-{{% refname "universal\_reference.md" %}}
+- [W01](/datasheets/oem/w01/)
+- [L01](/datasheets/oem/l01/)
+- [L01](/datasheets/oem/l01_reference/)
+- [L04](/datasheets/oem/l04/)
+- [Baseboard](datasheets/oem/universal_reference/)
+- [Deepsleep](datasheets/oem/deepsleep/)

@@ -16,21 +16,18 @@ aliases:
 
 **Store**: Discontinued, See [WiPy3](../wipy3)
 
-**Getting Started:** [Click Here](/gettingstarted/connection/wipy)
+**Getting Started:** [Click Here](/gettingstarted/)
 
 ## Datasheet
 
+The datasheet of the WiPy2 is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy2.0_v2.pdf)
 
+The Wipy 2 is certified for [CE RED](/gitbook/assets/16-213297_expertise_pycom_wipy-2.0r.pdf) and [FCC ACC](/gitbook/assets/2091acc16_grant.pdf) [FCC BCC](/gitbook/assets/2091bcc16_grant.pdf)
 
-The datasheet of the WiPy2 is available as a PDF File.
-
-<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy2.0_v2.pdf" target="_blank"> WiPy 2 Datasheet </a>
 
 ## Pinout
 
-The pinout of the WiPy2 is available as a PDF File.
-
-<a href="/gitbook/assets/wipy2-pinout.pdf" target="_blank"> WiPy 2 Pinout </a>
+The pinout of the WiPy2 is available as a [PDF File](/gitbook/assets/wipy2-pinout.pdf)
 
 ![](/gitbook/assets/wipy2-pinout.png)
 

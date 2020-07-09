@@ -325,7 +325,7 @@ code {
 }
 
 .primary--text {
-  color: #00cc96;
+  color: green; /*#00cc96; */
 }
 
 .v-window {
