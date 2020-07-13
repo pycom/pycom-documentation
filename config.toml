@@ -1172,6 +1172,20 @@ theme = "doc-theme"
     url = "/datasheets/boards/expansion3/"
     identifier = "datasheets@boards@expansion3"
     parent = "datasheets@boards"
+    weight = 20
+
+[[menu.main]]
+    name = "Pytrack 2.0X"
+    url = "/datasheets/boards/pytrack2/"
+    identifier = "datasheets@boards@pytrack2"
+    parent = "datasheets@boards"
+    weight = 10
+
+[[menu.main]]
+    name = "Pysense 2.0X"
+    url = "/datasheets/boards/pysense2/"
+    identifier = "datasheets@boards@pysense2"
+    parent = "datasheets@boards"
     weight = 10
 
 [[menu.main]]
@@ -1179,7 +1193,7 @@ theme = "doc-theme"
     url = "/datasheets/boards/pytrack/"
     identifier = "datasheets@boards@pytrack"
     parent = "datasheets@boards"
-    weight = 20
+    weight = 30
 
 [[menu.main]]
     name = "Pysense"
