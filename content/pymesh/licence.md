@@ -1,47 +1,50 @@
 ---
-title: "Pymesh Library CLI"
+title: "Obtaining Pymesh"
 aliases:
   - pymesh/simple-example
 ---
 
-## Licensing process
+## Obtaining Pymesh
 
-In order to receive access to the Pymesh firmware releases (for Lopy4, Fipy, L01 or L04), the next process should be followed:
-
-1. Complete the <a href="/gitbook/assets/pymesh/Pymesh_Licence_Copyright_Notice.pdf" target="\_blank"> the Pymesh LICENCE PDF document</a>, sign it and send us by [this email](mailto:catalin@pycom.io?subject=[Pymesh_LICENCE]).
-1. You will receive by email an archive containing the images for all boards.
-1. Extract the corresponding image, for example Lopy4.tar.gz, and upload the firmware to your board, using the [Pycom Firmware Update Tool](https://pycom.io/downloads/), similar in the following image:
-<img src="/gitbook/assets/pymesh/pymesh_firmware_update.png" alt="Pymesh Firmware Update" width="500"/>
+In order to receive access to the Pymesh firmware releases (for Lopy4, Fipy, L01 or L04), please follow the steps from [Pybytes - Pymesh integration](/pybytes/pymeshintegration/).
 
 ## Test Pymesh firmware loading
 
 ### Method 1
 
-The simplest way to check if the Pymesh class has been successfully installed is to try the following code, directly in REPL:
+The simplest way to check if the Pymesh class has been successfully instantiated (and started inside Pybytes) is to try the following code, directly in REPL:
 
 ```python
->>> from network import LoRa
->>> lora = LoRa(mode=LoRa.LORA)
->>> mesh = lora.Mesh()
+# todo: add try/except for checking pybytes object exists
+>>> pymesh = pybytes.__pymesh.__pymesh
+>>> pymesh.cli_start()
+>h
+List of available commands
+br - enable/disable or display the current Border Router functionality
+brs - send packet for Mesh-external, to BR, if any
+buf - display buffer info
+config - print config file contents
+debug - set debug level
+gps - get/set location coordinates
+h - help, list of commands
+ip - display current IPv6 unicast addresses
+mac - set or display the current LoRa MAC address
+mml - display the Mesh Mac List (MAC of all nodes inside this Mesh), also inquires Leader
+mp - display the Mesh Pairs (Pairs of all nodes connections), also inquires Leader
+ot - sends command to openthread internal CLI
+pause - suspend Pymesh
+resume - resume Pymesh
+rm - verifies if any message was received
+rst - reset NOW, including NVM Pymesh IPv6
+s - send message
+self - display all info about current node
+sleep - deep-sleep
+stop - close this CLI
+tx_pow - set LoRa TX power in dBm (2-20)
+ws - verifies if message sent was acknowledged
+
 ```
 
 ### Method 2
 
 Upload the `main.py` from the [Simple Example](/pymesh/simple-example).
-
-## FAQ
-
-Q: **I've received an error, such as `(LoadProhibited). Exception was unhandled.`, what should I do?**
-
-A: In some cases, the NVM partition needs to be formatted. For this a format of whole Flash Memory should be performed.
-
-This can be done using the cli version of the `Firmware Update Tool`, so please navigate where the app was installed (search for pycom-fwtool-cli executable) and execute:
-```
-pycom-fwtool-cli -p <PORT> erase_all
-```
-
-`<PORT>` should be replaced with the actual USB COM port, for example:
-
-* on Windows `COM10`
-* on Linux `/dev/ttyACM0`
-* on MacOS `/dev/tty.usbmodemPy8eaa911`

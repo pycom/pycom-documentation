@@ -15,7 +15,7 @@ Mesh networks essentially get rid of gateways, which decentralises the network's
 
 Pymesh works on all of our LoRa supporting development boards, the LoPy4 and FiPy as well as on our OEM modules, L01 and L04.
 
-_**Note: For obtaining the Pymesh firmware please follow the steps from [Pymesh LICENCE page](/pymesh/licence).**_
+_**Note: For obtaining the Pymesh firmware please follow the steps from [Pybytes - Pymesh integration](/pybytes/pymeshintegration/).**_
 
 ## What does Pymesh offer you?
 

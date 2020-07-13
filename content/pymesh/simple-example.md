@@ -6,16 +6,19 @@ aliases:
 
 ## What is Pymesh micropython library?
 
-The Pymesh Micropython library is a set of frozen scripts in the Pymesh firmware binary release.
+The Pymesh Micropython library is a set of frozen scripts in the Pymesh firmware binary release; the [open-source scripts are available on github](https://github.com/pycom/pycom-libraries/tree/master/pymesh/pymesh_frozen)
 
-[Open-source on github](https://github.com/pycom/pycom-libraries/tree/master/pymesh/pymesh_frozen)
-
-It allows users to access Pymesh in a few lines of code, as shown in the following code snippet.
-
-Additionally, users can install the Pymesh mobile application which is available [here for both iOS and Android platforms](https://github.com/pycom/pycom-libraries/tree/master/pymesh/mobile_app). It allows users to connect over BLE to a Pymesh node and find out network information.
+If Pybytes is used, then Pymesh is already started and pymesh object can be obtained by simply using (`main-pybytes.py` from github):
 
 ```python
 
+# todo: add try/except for checking pybytes object exists
+pymesh = pybytes.__pymesh.__pymesh
+```
+
+If Pybytes is not used, then the Pymesh network has to be started manually. The is shown in the following code snippet (`main.py` from github):
+
+```python
 import pycom
 import time
 
@@ -52,9 +55,7 @@ pymesh_config = PymeshConfig.read_config()
 #initialize Pymesh
 pymesh = Pymesh(pymesh_config, new_message_cb)
 
-mac = pymesh.mac()
-# based on LoRa MAC address, some nodes could be forced to be
-# sleep-end-devices (always Child) or to have increased Leader priority
+# mac = pymesh.mac()
 # if mac > 10:
 #     pymesh.end_device(True)
 # elif mac == 5:
@@ -82,20 +83,23 @@ pymesh.send_mess(5, "Hello World")
 # pymesh.br_set(PymeshConfig.BR_PRIORITY_NORM, new_br_message_cb)
 
 # remove Border Router function from current node
-#pymesh.br_remove()
+# pymesh.br_remove()
 
 # send data for Mesh-external, basically to the BR
 # ip = "1:2:3::4"
 # port = 5555
 # pymesh.send_mess_external(ip, port, "Hello World")
 
-print("done Pymesh init, forever loop, exit/stop with Ctrl+C multiple times")
-# set BR with callback
+print("done Pymesh init, CLI is started, h - help/command list, stop - CLI will be stopped")
+pymesh.cli_start()
 
-while True:
-    time.sleep(3)
+# while True:
+#     time.sleep(3)
+
 
 ```
+
+Additionally, users can install the Pymesh mobile application which is available [here for both iOS and Android platforms](https://github.com/pycom/pycom-libraries/tree/master/pymesh/mobile_app). It allows users to connect over BLE to a Pymesh node and find out network information.
 
 ## Output
 
