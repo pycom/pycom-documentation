@@ -8,7 +8,7 @@ aliases:
 
 This Micropython library is included as frozen scripts in the Pymesh firmware release.
 
-The code is open-sourced in [pycom-libraries repository](https://github.com/pycom/pycom-libraries/tree/master/lib/pymesh).
+The code is open-sourced in [pycom-libraries repository](https://github.com/pycom/pycom-libraries/blob/master/pymesh/pymesh_frozen/lib/pymesh.py).
 
 It is easily customisable and contributions are welcome using [Github PRs](https://github.com/pycom/pycom-libraries/pulls).
 

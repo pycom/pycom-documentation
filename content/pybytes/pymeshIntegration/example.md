@@ -8,14 +8,12 @@ Below there is a code example that should be implemented in the main.py file. Th
 
 ```python
 import time
-import pycom
 
 if pybytes is not None:
-    if pybytes.__pymesh:
-        pymesh = pybytes.__pymesh
+    if pybytes.__pymesh and pybytes.__pymesh.__pymesh:
+        pymesh = pybytes.__pymesh.__pymesh
         while True:
-            free_mem = pycom.get_free_heap()
-            pkt = "Hello, from " + str(pymesh.__pymesh.mac()) + ", time " + str(time.time()) + ", mem " + str(free_mem)
+            pkt = "Hello, from " + str(pymesh.mac())
             pybytes.send_signal(1, pkt)
             time.sleep(20)
 ```
@@ -23,3 +21,5 @@ if pybytes is not None:
 Every time a data is sent trough Pymesh, the node's monitoring data is also sent. This monitoring data contains information as the number of neighbors, loRa mac,  IP, role, age, and location.
 
 Some of this information can be seen in the Pymesh Monitoring view or in section Signal, in the device interface in Pybytes.
+
+For additional `pymesh` methods, check the open-source [Pymesh Library](https://github.com/pycom/pycom-libraries/tree/master/pymesh/pymesh_frozen) and the corresponding [Pymesh documentation](/pymesh/).
