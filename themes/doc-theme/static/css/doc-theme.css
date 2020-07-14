@@ -359,3 +359,28 @@ img[src="/gitbook/assets/pybytes/lora/ttn_logo.svg"]{
 img[src*="/gitbook/assets/pybytes/pymesh/"]{
     width: 70%;
 }
+
+/* PoE table */
+.poe-table {
+  width:80%;
+  display:table;
+  font-weight: 600;
+}
+
+table.poe td:nth-child(1){
+  font-weight: 400;
+}
+
+table.poe td:nth-child(2){
+  text-align:center;
+  font-weight: 600;
+  width:100px;
+}
+
+table.poe .poe-red {
+  background-color: #EF9A9A !important;
+}
+
+table.poe .poe-green {
+  background-color: #c5eee3 !important;
+}

@@ -6,7 +6,7 @@ aliases:
     - chapter/pytrackpysense/installation/drivers
 ---
 
-Pytrack and Pysense will work out of the box for Windows 8/10/+, macOS as well as Linux. If using Windows 7, drivers to support the boards will need to be installed.
+Pytrack and Pysense will work out of the box for Windows 8/10/+ (please download the correct driver through Windows Update), macOS as well as Linux. If using Windows 7, drivers to support the boards will need to be installed.
 
 Please follow the instructions below to install the required drivers.
 
@@ -14,7 +14,9 @@ Please follow the instructions below to install the required drivers.
 
 Please download the driver software from the link below.
 
-[Pytrack/Pysense/Pyscan/Expansion Board 3 Driver](https://docs.pycom.io/pytrackpysense/installation/pycom.inf)
+[Unsigned driver for Windows 7 compatible with Pycom products](/gitbook/assets/pycom.inf.zip)
+Please note that this driver is not suitable for the Expansion Board 1 & 2.
+As these drivers are not signed, you may need to disable driver signing enforcement in your Windows operating system.
 
 ## Installation
 

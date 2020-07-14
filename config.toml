@@ -311,9 +311,23 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "Pytrack 2.0 X"
+    url = "/pytrackpysense/apireference/pytrack2/"
+    identifier = "pytrackpysense@apireference@pytrack2"
+    parent = "pytrackpysense@apireference"
+    weight = 10
+
+[[menu.main]]
     name = "Pytrack"
     url = "/pytrackpysense/apireference/pytrack/"
     identifier = "pytrackpysense@apireference@pytrack"
+    parent = "pytrackpysense@apireference"
+    weight = 20
+
+[[menu.main]]
+    name = "Pysense 2.0 X"
+    url = "/pytrackpysense/apireference/pysense2/"
+    identifier = "pytrackpysense@apireference@pysense2"
     parent = "pytrackpysense@apireference"
     weight = 10
 
@@ -361,10 +375,10 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "PyGate"
-    url = "/tutorials/all/PyGate/"
-    identifier = "tutorials@all@PyGate"
-    parent = "tutorials@all"
-    weight = 10
+    url = "/tutorials/PyGate/"
+    identifier = "tutorials@PyGate"
+    parent = "tutorials"
+    weight = 1
 
 [[menu.main]]
     name = "PoE"
@@ -1158,6 +1172,20 @@ theme = "doc-theme"
     url = "/datasheets/boards/expansion3/"
     identifier = "datasheets@boards@expansion3"
     parent = "datasheets@boards"
+    weight = 20
+
+[[menu.main]]
+    name = "Pytrack 2.0X"
+    url = "/datasheets/boards/pytrack2/"
+    identifier = "datasheets@boards@pytrack2"
+    parent = "datasheets@boards"
+    weight = 10
+
+[[menu.main]]
+    name = "Pysense 2.0X"
+    url = "/datasheets/boards/pysense2/"
+    identifier = "datasheets@boards@pysense2"
+    parent = "datasheets@boards"
     weight = 10
 
 [[menu.main]]
@@ -1165,7 +1193,7 @@ theme = "doc-theme"
     url = "/datasheets/boards/pytrack/"
     identifier = "datasheets@boards@pytrack"
     parent = "datasheets@boards"
-    weight = 20
+    weight = 30
 
 [[menu.main]]
     name = "Pysense"
