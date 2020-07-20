@@ -32,4 +32,4 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 
 ## 3D model for case design
 
-* Please see the <a href="/gitbook/assets/pytrack_v2.0X.step" target="_blank"> 3D model </a> (step format)
+* Please see the [3D model](/gitbook/assets/pytrack_v2.0X.step) (step format)
