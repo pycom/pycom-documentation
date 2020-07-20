@@ -49,14 +49,14 @@ theme = "doc-theme"
 [[menu.main]]
     name= "VS Code"
     url="/gettingstarted/software/vscode/"
-    identifier= "gettingstarted@software@vscode" 
+    identifier= "gettingstarted@software@vscode"
     parent= "gettingstarted@software"
     weight=20
 
 [[menu.main]]
     name= "Atom"
     url="/gettingstarted/software/atom/"
-    identifier= "gettingstarted@software@atom" 
+    identifier= "gettingstarted@software@atom"
     parent= "gettingstarted@software"
     weight=30
 
@@ -68,7 +68,7 @@ theme = "doc-theme"
     weight = 40
 
 [[menu.main]]
-    name = "USB Serial" 
+    name = "USB Serial"
     url = "/gettingstarted/programming/usbserial/"
     identifier = "gettingstarted@programming@usbserial"
     parent = "gettingstarted@programming"
@@ -991,7 +991,7 @@ theme = "doc-theme"
     identifier = "datasheets@oem@deepsleep"
     parent = "datasheets@oem"
     weight = 70
-    
+
 [[menu.main]]
     name = "Expansion Boards and Shields"
     url = "/datasheets/expansionboards/"
@@ -1011,6 +1011,20 @@ theme = "doc-theme"
     name = "Pysense"
     url = "/datasheets/expansionboards/pysense/"
     identifier = "datasheets@boards@pysense"
+    parent = "datasheets@boards"
+    weight = 20
+
+[[menu.main]]
+    name = "Pytrack 2.0X"
+    url = "/datasheets/boards/pytrack2/"
+    identifier = "datasheets@boards@pytrack2"
+    parent = "datasheets@boards"
+    weight = 10
+
+[[menu.main]]
+    name = "Pysense 2.0X"
+    url = "/datasheets/boards/pysense2/"
+    identifier = "datasheets@boards@pysense2"
     parent = "datasheets@boards"
     weight = 10
 [[menu.main]]
@@ -1070,7 +1084,7 @@ theme = "doc-theme"
     name = "Device"
     url = "/updatefirmware/device/"
     identifier = "updatefirmware@device"
-    parent= "updatefirmware" 
+    parent= "updatefirmware"
     weight = 10
 [[menu.main]]
     name = "Device (OTA)"

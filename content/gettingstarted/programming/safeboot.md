@@ -34,7 +34,7 @@ If problems occur within the filesystem or you wish to factory reset your module
 
 ```python
 >>> import os
->>> os.fsformat('/flash')
+>>> os.fsformat('flash')
 ```
 
 {{% hint style="danger" %}}

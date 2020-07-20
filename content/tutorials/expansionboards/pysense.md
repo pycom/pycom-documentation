@@ -24,7 +24,7 @@ while True:
    time.sleep_ms(100)
 ```
 
-![](/gitbook/assets/accelerometer_visualiser%20%281%29.png)
+![](/gitbook/assets/accelerometer_visualiser.png)
 
 If you want to visualise the data output by this script a Processing sketch is available [here](https://github.com/pycom/pycom-libraries/tree/master/examples/pytrack_pysense_accelerometer) that will show the board orientation in 3D.
 

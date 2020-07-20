@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/development/lopy
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn80ythqnrgah01r2m-lopy-1.png)
+![](/gitbook/assets/lopy-1.png)
 
 
 {{% hint style="info" %}}

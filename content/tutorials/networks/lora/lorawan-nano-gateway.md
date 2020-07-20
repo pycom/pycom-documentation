@@ -361,7 +361,7 @@ Once an account has been registered, the nano-gateway can then be registered. To
 
 Inside the TTN Console, there are two options, `applications` and `gateways`. Select `gateways` and then click on `register gateway`. This will allow for the set up and registration of a new nano-gateway.
 
-![](/gitbook/assets/ttn-2%20%281%29.png)
+![](/gitbook/assets/ttn-2.png)
 
 On the Register Gateway page, you will need to set the following settings:
 
@@ -382,7 +382,7 @@ The Gateway EUI should match your Gateway ID from the `config.py` file. We sugge
 
 Once these settings have been applied, click `Register Gateway`. A Gateway Overview page will appear, with the configuration settings showing. Next click on the `Gateway Settings` and configure the Router address to match that of the gateway (default: `router.eu.thethings.network`).
 
-![](/gitbook/assets/ttn-4%20%281%29.png)
+![](/gitbook/assets/ttn-4.png)
 
 The `Gateway` should now be configured. Next, one or more nodes can now be configured to use the nano-gateway and TTN applications may be built.
 
@@ -541,22 +541,22 @@ Once the device has been added, change the `Activation Method` between `OTAA` an
 
 Now that the data is arriving on the TTN Backend, TTN can be managed as to where data should be delivered to. To do this, use the `Integrations` tab within the new Application's settings.
 
-![](/gitbook/assets/ttn-7%20%281%29.png)
+![](/gitbook/assets/ttn-7.png)
 
 Upon clicking `add integration`, a screen with 4 different options will appear. These have various functionality and more information about them can be found on the TTN website/documentation.
 
 For this example, use the `HTTP Integration` to forward the LoRaWAN Packets to a remote server/address.
 
-![](/gitbook/assets/ttn-8%20%281%29.png)
+![](/gitbook/assets/ttn-8.png)
 
 Click `HTTP Integration` to connect up an endpoint that can receive the data.
 
 For testing, a website called [RequestBin](https://requestbin.com/), may be used to receive the data that TTN forwards (via POST Request). To set this up, navigate to [RequestBin](https://requestbin.com/) and click the `Create a RequestBin`.
 
-![](/gitbook/assets/ttn-9%20%281%29.png)
+![](/gitbook/assets/ttn-9.png)
 
 Copy the URL that is generated and past this into the `URL` form under the `Application Settings`.
 
-![](/gitbook/assets/ttn-10%20%281%29.png)
+![](/gitbook/assets/ttn-10.png)
 
 This is the address that TTN will forward data onto. As soon as a LoPy starts sending messages, TTN will forward these onto `RequestBin` and they will appear at the unique `RequestBin URL`.

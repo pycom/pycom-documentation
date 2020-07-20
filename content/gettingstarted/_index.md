@@ -30,9 +30,9 @@ This step works the same for all our development boards and expansion boards. In
 
 ![](/gitbook/assets/expansion_board_3_lopy4.png)
 
->Note: If you do not have an expansion board, you are able to use a [USB-Serial converter](/gettinstarted/programming/usbserial/) or [WiFi](/gettingstarted/programming/ftp/) to connect. 
+>Note: If you do not have an expansion board, you are able to use a [USB-Serial converter](/gettinstarted/programming/usbserial/) or [WiFi](/gettingstarted/programming/ftp/) to connect.
 
-# Step 2: Setting up your computer 
+# Step 2: Setting up your computer
 
 Now that your module is successfully connected, you will need to install some software on your computer to interface with it. For this, we use Pymakr, a plugin for both Visual Studio Code or Atom IDE. Through one of the environments, we can connect to the board and talk python! Follow the link below for the installation instructions:
 
@@ -40,11 +40,11 @@ Now that your module is successfully connected, you will need to install some so
 
 - [VS Code](/pymakr/software/vscode/)
 
-# Step 3: Programming your module 
+# Step 3: Programming your module
 
 Now that you have a connected module and all the required software installed it is time to begin programming your device!
 
-In this first example, we will make the on-board RGB LED flash different colors. 
+In this first example, we will make the on-board RGB LED flash different colors.
 ### Creating a project in Pymakr
 
 1. Firstly you will need to create a new, empty, directory on your computer.
@@ -65,7 +65,7 @@ If you are using Atom, it is important to check at this point that Atom has succ
 >If this is not the case you can press `alt-ctrl-r` on Windows/Linux or `ctrl-alt-cmd-l` on macOS, in order to reload Atom and fix the issue.
 
 
-4. Now that you have created a poject, we need to add some files. A standard MicroPython project will have a `lib` folder for additional libraries, and two python files: `main.py` and `boot.py`. 
+4. Now that you have created a poject, we need to add some files. A standard MicroPython project will have a `lib` folder for additional libraries, and two python files: `main.py` and `boot.py`.
 
     * `main.py` This script runs directly after `boot.py` and should contain the main code you wish to run on your device.
 
@@ -91,8 +91,8 @@ You may have noticed that when you power up your Pycom module, the on-board LED 
 
 
 ```python
-pycom.heartbeat(False) 
-``` 
+pycom.heartbeat(False)
+```
 
 
 Now it's time to test your code. On the Pymakr pane/bottom of the window you will see a `run` button. (If you haven't connected to your device yet, you will need to do that first). When you click the run button, the code in the currently open file will be executed on the device, but it won't copy it to the device. After running this code, you should see that that on-board LED stops blinking blue.
@@ -117,7 +117,7 @@ while True:
 
 Once you run the above script, it will run forever. You will notice this prevents you from accessing the interactive REPL on the device (You cannot see the `>>>` prompt). In order to stop the script, click onto the Pymakr terminal, and press `ctrl-c` on your keyboard. This should stop the script running and return you to the interactive REPL.
 
-Great work, the RGB-LED on your device should now blink in red, green and blue 
+Great work, the RGB-LED on your device should now blink in red, green and blue
 
 ### Uploading to your module
 
@@ -128,8 +128,8 @@ If you need to remove files from your device you can use the following commands:
 
 ```python
 import os
-os.fsformat('/flash') 
-``` 
+os.fsformat('/flash')
+```
 
 # Step 4: Further reading
 Now that we got the basic example running, you can continue with the links below.
