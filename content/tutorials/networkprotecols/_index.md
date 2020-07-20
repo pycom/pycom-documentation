@@ -13,6 +13,7 @@ Using our devices, several different network protecols can be used. We have grou
 * [OTA-LoRaWAN](../networkprotecols/ota-lorawan/)
 * [Socket](../networkprotecols/socket/)
 * [HTTP Server](../networkprotecols/webserver/)
+
 **Cloud**
 
 * [AWS](../networkprotecols/aws/)
