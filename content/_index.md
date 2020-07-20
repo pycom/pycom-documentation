@@ -6,11 +6,8 @@ aliases:
 Pycom ecosystem makes IoT development easy
 
 * Choose [IoT hardware](products) which fit your project requirements.
-
 * Install Pymakr plugin in [Atom](https://atom.io/packages/pymakr) or [VS Code](https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr) and start with your IoT project in seconds.
-
 * Write [MicroPython](https://micropython.org/) code and up to three times faster compared to C/C++.
-
 * Send data to [Pybytes IoT platform](https://pybytes.pycom.io/?utm_source=docs&utm_medium=web&utm_campaign=getting-started-top) or use your device standalone with the range of supported networks.
 * Start using our products [here!](/gettingstarted/)
 

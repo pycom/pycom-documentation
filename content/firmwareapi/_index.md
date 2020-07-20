@@ -8,10 +8,9 @@ aliases:
 
 This chapter describes modules (function and class libraries) that are built into MicroPython. There are a number of categories for the available modules:
 
-* Modules which implement a subset of standard Python functionality and are not intended to be extended by the user.
-* Modules which implement a subset of Python functionality, with a provision for extension by the user (via Python code).
-* Modules which implement MicroPython extensions to the Python standard libraries.
-* Modules specific to a particular port and thus not portable.
+* [implemented by Pycom](/firmwareapi/pycom/)
+* [Implemented by Micropython](/firmwareapi/micropython/)
+* External or custom modules and libraries
 
 ## Note about the availability of modules and their contents
 

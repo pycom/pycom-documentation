@@ -2755,7 +2755,7 @@ blockquote {
   font-size: 14px;
   font-weight: 300;
   background-color:rgba(0,128,0,0.7);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 code,
 kbd {

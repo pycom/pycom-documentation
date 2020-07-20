@@ -21,3 +21,10 @@ while not lte.isattached()"
 print("LTE modem attached!")
 
 ```
+>Note: the first time, it can take a long while to attach to the network. 
+
+If you want to check the status of the modem while attaching, you can use the following commands:
+```python
+print(lte.send_at_cmd('AT!="showphy"')     # get the PHY status
+print(lte.send_at_cmd('AT!="fsm"')         # get the System FSM
+```

@@ -62,8 +62,8 @@ If you are using Atom, it is important to check at this point that Atom has succ
 
 ![](/gitbook/assets/atom_project.png)
 
-If this is not the case you can press `alt-ctrl-r` on Windows/Linux or `ctrl-alt-cmd-l` on macOS, in order to reload Atom and fix the issue.
-{{% /hint %}}
+>If this is not the case you can press `alt-ctrl-r` on Windows/Linux or `ctrl-alt-cmd-l` on macOS, in order to reload Atom and fix the issue.
+
 
 4. Now that you have created a poject, we need to add some files. A standard MicroPython project will have a `lib` folder for additional libraries, and two python files: `main.py` and `boot.py`. 
 
@@ -140,11 +140,11 @@ Now that we got the basic example running, you can continue with the links below
 
 * [Get started using the FTP and Telnet Server](/gettingstarted/programming/ftp/)
 
-* [Connect using Pybytes](/pybytes/gettingstarted/)
+* [Connect using Pybytes](/pybytes/getstarted/)
 
-* [Registering with a network](/gettingstarted/network/)
+* [Registering with a network](/gettingstarted/registration/)
 
-* [Updating the firmware of your device](/firmwareupdate/)
+* [Updating the firmware of your device](/updatefirmware/)
 
 
 <!--## Step 4: (Optional) Connect through WiFi (Telnet & FTP)

@@ -10,8 +10,7 @@ This tutorial explains how to connect and read data from a DS18x20 temperature s
 
 ## Basic usage
 
-```python
-
+```
 import time
 from machine import Pin
 from onewire import DS18X20
@@ -31,7 +30,6 @@ while True:
 ## Library
 
 ```python
-
 #!/usr/bin/env python3
 
 """
