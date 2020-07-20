@@ -54,8 +54,8 @@ Please note that the `updater.elf` file is only around 300K so you can also stor
 import sqnsupgrade
 sqnsupgrade.run('upgdiff_38638-to-39529.dup')
 ```
-If you are updating the Sequans firmware on your module for the first time, please use this file instead upgdiff_33080-to-39529.dup (1.2M), which is from the same archive.
-Similar upgrade packages are available for the NB-IoT firmware.
+If you are updating the Sequans firmware on your module for the first time, please use instead the file upgdiff_33080-to-39529.dup (1.2M) from the same archive.
+Similar upgrade packages are available for the NB-IoT firmwares.
 {{% /hint %}}
 
 ## Via SD card
@@ -70,11 +70,11 @@ To transfer the firmware files onto the SD card you have two options:
 from machine import SD
 
 sd = SD()
-os.fsformat('/sd')            # format SD card
+os.fsformat('/sd')    # format SD card
 from machine import SD
 sd = SD()
 fs = os.mkfat(sd)
-os.mount(sd, '/sd')    # mount it
+os.mount(fs, '/sd')     # mount it
 os.listdir('/sd')      # list its content
 ```
 
