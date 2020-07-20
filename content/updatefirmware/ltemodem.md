@@ -6,23 +6,17 @@ aliases:
     - chapter/tutorials/lte/firmware
 ---
 
-# Modem Firmware Update
+>This article is only related to GPy, FiPy, and G01 boards
 
-{{% hint style="info" %}}
-This article is only related to GPy, FiPy, and G01 boards
-{{% /hint %}}
-
-{{% hint style="danger" %}}
 **Important**: When upgrading your modem for the first time, even if you have updated it in the past with the old firmware update method, you **MUST** use the "recovery" upgrade method described below. Otherwise you will risk breaking your module.
 
 Please also use the file upgdiff_33080-to-39529.dup (1.2M) from the archive.
 
 ```python
-
 import sqnsupgrade
 sqnsupgrade.run('upgdiff_33080-to-39529.dup', 'updater.elf')
 ```
-{{% /hint %}}
+
 
 
 Please read the following instructions carefully as there are some significant changes compared to the previous updater version.
@@ -46,17 +40,14 @@ After unpacking the zip archive, you will find each firmware packages contains t
 
 Please note that the `updater.elf` file is only around 300K so you can also store it inside the flash file system of the module. The firmware dup files will NOT fit into the available `/flash` file system on the module, so you either need to use an SD card or upload it directly from your computer.
 
-{{% hint style="info" %}}
- To upgrade from the previous CAT-M1 firmware 38638 you can simply upload the upgdiff_38638-to-39529.dup file (452K) from the CATM1-39529.zip archive into the /flash directory on your module and run:
-
+>To upgrade from the previous CAT-M1 firmware 38638 you can simply upload the upgdiff_38638-to-39529.dup file (452K) from the CATM1-39529.zip archive into the /flash directory on your module and run:
 ```python
-
 import sqnsupgrade
 sqnsupgrade.run('upgdiff_38638-to-39529.dup')
 ```
 If you are updating the Sequans firmware on your module for the first time, please use instead the file upgdiff_33080-to-39529.dup (1.2M) from the same archive.
 Similar upgrade packages are available for the NB-IoT firmwares.
-{{% /hint %}}
+
 
 ## Via SD card
 
