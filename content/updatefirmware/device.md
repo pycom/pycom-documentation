@@ -14,10 +14,9 @@ Here are the download links to the update tool. Please download the appropriate 
 * [macOS](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=macos&redirect=true) (10.11 or Higher)
 * [Linux](https://software.pycom.io/findupgrade?product=pycom-firmware-updater&type=all&platform=unix&redirect=true) (requires `dialog` and `python-serial` package)
 
-{{% hint style="info" %}}
-Previous versions of firmware are available for download [here](/advance/downgrade).
-{{% /hint %}}
-Jum to [common issues](#common-issues)
+>Previous versions of firmware are available for download [here](/advance/downgrade).
+
+Jump to [common issues](#common-issues)
 ## Updating Device Firmware
 
 The basic firmware upgrade procedure can be found below, please follow these steps carefully:
