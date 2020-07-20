@@ -24,7 +24,9 @@ The datasheet of the WiPy3 is available as a [PDF File](/gitbook/assets/specshee
 
 The Wipy 3 is certified for [CE RED](/gitbook/assets/17-214126_red-certificate_pycom_wipy-3.0.pdf)
 
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS for WiPy 3(8286-00026P)-20190523.pdf)
+[RCM](/gitbook/assets/RCM-Wipy3.pdf)
+
+[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-WiPy-3(8286-00026P)-20190523.pdf)
 
 ## Pinout
 

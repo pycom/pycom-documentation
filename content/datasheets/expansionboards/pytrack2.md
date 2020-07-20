@@ -1,24 +1,24 @@
 ---
-title: "Pytrack"
+title: "Pytrack 2.0X"
 aliases:
     - datasheets/boards/pytrack2.html
     - datasheets/boards/pytrack2.md
     - product-info/boards/pytrack2
     - chapter/datasheets/boards/pytrack2
 ---
-**Store**: [Buy Here](https://pycom.io/product/pytrack2-0-x/)
 
-![](/gitbook/assets/pytrack.png) 
+![](/gitbook/assets/pytrack2_decs.png)
 
 ## Datasheet
 
-The datasheet of the Pytrack is available as a [PDF File](/gitbook/assets/pytrack-specsheet-1.pdf)
+The datasheet of the Pytrack is available as a [PDF File](/gitbook/assets/PyTrack2X_specsheet.pdf)
 
 ## Pinout
 
-The pinout of the Pytrack is available as a [PDF File](/gitbook/assets/pytrack-pinout.pdf")
+The pinout of the Pytrack is available as a [PDF File](
+/gitbook/assets/pytrack2-pinout.pdf)
 
-![](/gitbook/assets/pytrack-pinout-1.png)
+![](/gitbook/assets/pytrack2-pinout.png)
 
 ## Battery Charger
 
@@ -28,8 +28,8 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 
 ## Mechanical Dimensions
 
-![](/gitbook/assets/Pysense_v1.1_MechanicalDimensions_b.png)
+![](/gitbook/assets/Pytrack_v2.0X_MechanicalDimensions.png)
 
 ## 3D model for case design
 
-* Please see the <a href="/gitbook/assets/PyTrack_v1.1.step" target="_blank"> 3D model </a> (step format)
+* Please see the <a href="/gitbook/assets/pytrack_v2.0X.step" target="_blank"> 3D model </a> (step format)
