@@ -45,3 +45,5 @@ The Pygate features a single cell Li-Ion/Li-Po charger. When the board is being 
 
 * If PIC stays in bootloader mode, the [`dfu-util` update](/pytrackpysense/installation/firmware) should be performed
 
+* If `machine.callback()` gives an error, update your -py device with the `pygate` firmware.
+
