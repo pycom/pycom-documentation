@@ -1,8 +1,8 @@
 ---
-title: ""
+title: "Introduction"
 aliases:
- - /tutorial/introduction
- - /tutorial/introduction.md
+    - firmwareapi/expansionboards/_index.html
+    - firmwareapi/expansionboards/_index.html
 
 ---
 
