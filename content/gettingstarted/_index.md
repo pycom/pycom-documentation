@@ -26,7 +26,7 @@ Congratulations on your Pycom module! In the first part of this getting started 
 
 #### Connect your board to your computer through USB
 
-This step works the same for all our development boards and expansion boards. Insert your development board (Lopy, Wipy, etc.) into the expansion board (Pytrack, Pysense, etc.) with the reset button and RGB LED above the USB connector like shown below.Connect an USB cable to the USB port and your computer. Now, you can talk to your device through USB, but we still need some software to upload your first program!
+This step works the same for all our development boards and expansion boards. Insert your development board (Lopy, Wipy, etc.) into the expansion board (Pytrack, Pysense, etc.) with the reset button and RGB LED above the USB connector like shown below. Connect an USB cable to the USB port and your computer. Now, you can talk to your device through USB, but we still need some software to upload your first program!
 
 ![](/gitbook/assets/expansion_board_3_lopy4.png)
 
@@ -36,9 +36,13 @@ This step works the same for all our development boards and expansion boards. In
 
 Now that your module is successfully connected, you will need to install some software on your computer to interface with it. For this, we use Pymakr, a plugin for both Visual Studio Code or Atom IDE. Through one of the environments, we can connect to the board and talk python! Follow the link below for the installation instructions:
 
-- [Atom](/pymakr/software/atom/)
+- [Atom](/gettingstarted/software/atom/)
 
-- [VS Code](/pymakr/software/vscode/)
+- [VS Code](/gettingstarted/software/vscode/)
+
+Once you have installed and opened the IDE, the board should automatically show up in the terminal. If not, check if any of your other plugins are in conflict.
+
+If everything is correct, the terminal will show `>>>`.
 
 # Step 3: Programming your module
 
