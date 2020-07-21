@@ -78,7 +78,9 @@ machine.deepsleep(1000*60) #sleep for 1 minute
 print("This will never be printed")
 ```
 
->Note `pybytes.deepsleep()` is fundamentally the same function as `machine.deepsleep()`, but will gracefully stop the pybytes platform functionality.
+>Note: `pybytes.deepsleep()` is fundamentally the same function as `machine.deepsleep()`, but will gracefully stop the pybytes platform functionality.
+
+>Note: Using `deepsleep()` will also stop the USB connection. Be wary of that when trying to upload new code to the device!
 
 #### Other methods
 
