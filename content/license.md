@@ -15,7 +15,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Copyright (c) 2017, Pycom Limited.
+Copyright (c) 2020, Pycom Limited.
 
 This software is licensed under the GNU GPL version 3 or any later version, with permitted additional terms. For more information see the Pycom Licence v1.0 document supplied with this file, or available at [https://www.pycom.io/opensource/licensing](https://www.pycom.io/opensource/licensing)
 
