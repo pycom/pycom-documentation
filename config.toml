@@ -867,7 +867,7 @@ theme = "doc-theme"
     weight = 260
 
 [[menu.main]]
-    name = "Notes"
+    name = "Interrupts"
     url = "/firmwareapi/notes/"
     identifier = "firmwareapi@notes"
     parent = "firmwareapi"
