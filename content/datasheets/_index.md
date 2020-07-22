@@ -28,11 +28,13 @@ The follow pages contain all information relating to each product, for example: 
 - [Deepsleep](datasheets/oem/deepsleep.md)
 
 ## Expansion boards
-- [Expansion 2](/datasheets/expansionboards/expansion2.md)
-- [Expansion 3](/datasheets/expansionboards/expansion3.md)
 - [Pygate](/datasheets/expansionboards/pygate.md)
 - [Pysense](/datasheets/expansionboards/pysense.md)
 - [Pysense 2.0 X](/datasheets/expansionboards/pysense.md)
 - [Pytrack](/datasheets/expansionboards/pytrack.md)
 - [Pysense 2.0 X](/datasheets/expansionboards/pysense.md)
+- [Pyscan](/datasheets/expansionboards/pyscan.md)
+- [Expansion 2](/datasheets/expansionboards/expansion2.md)
+- [Expansion 3](/datasheets/expansionboards/expansion3.md)
+
 

@@ -2246,7 +2246,7 @@ samp {
 }
 b,
 strong {
-  font-weight: bolder; /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+  font-weight: bold; /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
 }
 dfn {
   font-style: italic; /* Address styling not present in Safari and Chrome */
@@ -2756,6 +2756,10 @@ blockquote {
   font-weight: 300;
   background-color:rgba(0,128,0,0.7);
   border-radius: 3px;
+  margin-bottom: 5px;  
+}
+blockquote > p {
+  margin-bottom:0px;
 }
 code,
 kbd {

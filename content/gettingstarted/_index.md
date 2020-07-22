@@ -51,17 +51,12 @@ Now that you have a connected module and all the required software installed it 
 In this first example, we will make the on-board RGB LED flash different colors.
 ### Creating a project in Pymakr
 
-1. Firstly you will need to create a new, empty, directory on your computer.
+1. Firstly you will need to create a new, empty, directory on your computer. For this example we will create one called `RGB-Blink`.
 
-   For this example we will create one called `RGB-Blink`.
-
-2. Next you will need to open either Atom or Visual Studio Code depending on
-
-   which you setup previously.
+2. Next you will need to open either Atom or Visual Studio Code depending on which you setup previously.
 
 3. Once the text editor has loaded you will need to click `File` &gt; `Open`, and open the directory you created in step 1
 
-{{% hint style="info" %}}
 If you are using Atom, it is important to check at this point that Atom has successfully identified the project. The name of the directory you created in step 1 (`RGB-Blink` in this case) should be shown in the Pymakr pane like so:
 
 ![](/gitbook/assets/atom_project.png)

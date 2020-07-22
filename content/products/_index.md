@@ -50,7 +50,7 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 
 | Accessory | Expansionboard | Pygate | Pytrack / Pysense | Battery Size |
 | :--- | :--- | :--- | :--- | :--- |
-[Pycase](https://pycom.io/product/pycase-clear/) | &#10004; | | | small |
+[Pycase](https://pycom.io/product/pycase-clear/) | &#10004; | #10004; | | small |
 [Pygate case](https://pycom.io/product/pygate-case/) |  &#10004; | &#10004; | | tiny |
 [Small IP67 Case](https://pycom.io/product/ip67-case-for-pysense-pytrack/) |  | | &#10004;| 18650 |
 [Universal IP76 Case](https://pycom.io/product/universal-ip67-case/) |  &#10004; |  &#10004; | &#10004;| 18650 |
