@@ -25,6 +25,7 @@ For example, if using the Pysense and the user wishes to enable the only Acceler
 
 ```text
 - pysense.py
+- pycoproc.py
 - LIS2HH12.py
 - LTR329ALS01.py
 ```

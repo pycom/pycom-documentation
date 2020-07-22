@@ -8,7 +8,7 @@ aliases:
 
 The Pygate is an 8-channel LoRaWAN gateway. Connect a WiPy, Gpy or LoPy4 board to the Pygate and flash the Pygate firmware. See the [Pygate tutorial](/tutorials/expansionboards/pygate) to get started. 
 
->Note: Make sure to update the firmware of the device to the pygate version in order to access the functions below.
+>Note: Make sure to update the firmware of the device to the `pygate` version in order to access the functions below.
 
 ## Methods
 

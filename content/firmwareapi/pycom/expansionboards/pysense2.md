@@ -8,6 +8,8 @@ aliases:
 
 This chapter describes the various libraries which are designed for the Pysense board. This includes details about the various methods and classes available for each of the Pysense's sensors.
 
+>Note: follow the guide [here](/firmwareapi/pycom/expansionboards/) to be able to use the functions below
+
 ## 3-Axis Accelerometer (LIS2HH12)
 
 Pysense has a 3-Axis Accelerometer that provides outputs for acceleration as well as roll, pitch and yaw.
