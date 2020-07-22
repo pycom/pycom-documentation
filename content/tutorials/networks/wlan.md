@@ -26,6 +26,7 @@ wlan = WLAN(mode=WLAN.AP)
 wlan.init(ssid="hello world", auth=None)
 #use the line below to apply a password
 #wlan.init(ssid="hi", auth=(WLAN.WPA2, "eightletters"))
+print(wlan.ifconfig(id=1)) #id =1 signifies the AP interface
 ```
 The device will not be able to access the internet, but you will be able to run a simple webserver. By default, the ip address will be configured to `192.168.4.1`.
 
