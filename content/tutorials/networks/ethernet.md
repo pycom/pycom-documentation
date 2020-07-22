@@ -8,3 +8,5 @@ aliases:
 
 Using the Power over Ethernet (PoE) adapter on the Pygate board, we are able to connect to the local area network. 
 >Note: Make sure you have flashed the Pygate firmware to your -py board!
+
+[Warning for PoE module](/tutorials/networkprotecols/PoE/)
