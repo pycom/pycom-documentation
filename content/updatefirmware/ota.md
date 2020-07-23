@@ -23,7 +23,7 @@ Imagine you a smart metering company and you wish to roll out an update for your
 
 ## Server
 
-Code available [here](https://github.com/pycom/pycom-libraries/blob/master/examples/OTA/OTA_server.py).
+Code available [here](https://github.com/pycom/pycom-libraries/blob/master/examples/OTA/OTA_server.py)
 
 This script runs a HTTP server on port `8000` that provisions over the air (OTA) update manifests in JSON format as well as serving the update content. This script should be run in a directory that contains every version of the end devices code, in the following structure:
 
@@ -256,9 +256,9 @@ Downgarding from 1.20 back to 1.18 is possible, however the target version must 
 
 >Note: Downgrading via OTA from 1.18.3 to 1.18.2.xx is not allowed as this might casuse further OTA operations to fail.
 
-_Note_: Before doing OTA to 1.20 firmware make sure that the Scripts on device are updated (if necessary) to be compatible with 1.20 FW to avoid exceptions once device is updated to 1.20 which might lead to loosing connection to the remote device.
+>Note: Before doing OTA to 1.20 firmware make sure that the Scripts on device are updated (if necessary) to be compatible with 1.20 FW to avoid exceptions once device is updated to 1.20 which might lead to loosing connection to the remote device.
 
-You can find firmware images for 1.18.3 here:
+You can find firmware images here:
 
 [Wipy](https://software.pycom.io/downloads/WiPy.html)
 [FiPy](https://software.pycom.io/downloads/FiPy.html)
