@@ -317,52 +317,52 @@ theme = "doc-theme"
     weight = 50
 
 [[menu.main]]
-    name = "Network Protecols"
-    url = "/tutorials/networkprotecols/"
-    identifier = "tutorials@networkprotecols"
+    name = "Network Protocols"
+    url = "/tutorials/networkprotocols/"
+    identifier = "tutorials@networkprotocols"
     parent = "tutorials"
     weight = 40
 [[menu.main]]
     name = "AWS"
-    url = "/tutorials/networkprotecols/aws/"
-    identifier = "tutorials@networkprotecols@aws"
-    parent = "tutorials@networkprotecols"
+    url = "/tutorials/networkprotocols/aws/"
+    identifier = "tutorials@networkprotocols@aws"
+    parent = "tutorials@networkprotocols"
     weight = 10
 [[menu.main]]
     name = "HTTP Webserver"
-    url = "/tutorials/networkprotecols/webserver/"
-    identifier = "tutorials@networkprotecols@webserver"
-    parent = "tutorials@networkprotecols"
+    url = "/tutorials/networkprotocols/webserver/"
+    identifier = "tutorials@networkprotocols@webserver"
+    parent = "tutorials@networkprotocols"
     weight = 15
 [[menu.main]]
     name = "HTTPS"
-    url = "/tutorials/networkprotecols/https/"
-    identifier = "tutorials@networkprotecols@https"
-    parent = "tutorials@networkprotecols"
+    url = "/tutorials/networkprotocols/https/"
+    identifier = "tutorials@networkprotocols@https"
+    parent = "tutorials@networkprotocols"
     weight = 20
 [[menu.main]]
     name = "MQTT"
-    url = "/tutorials/networkprotecols/mqtt/"
-    identifier = "tutorials@networkprotecols@mqtt"
-    parent = "tutorials@networkprotecols"
+    url = "/tutorials/networkprotocols/mqtt/"
+    identifier = "tutorials@networkprotocols@mqtt"
+    parent = "tutorials@networkprotocols"
     weight = 30
 [[menu.main]]
     name = "PoE"
-    url = "/tutorials/networkprotecols/PoE/"
-    identifier = "tutorials@networkprotecols@poe"
-    parent = "tutorials@networkprotecols"
+    url = "/tutorials/networkprotocols/PoE/"
+    identifier = "tutorials@networkprotocols@poe"
+    parent = "tutorials@networkprotocols"
     weight = 40
 [[menu.main]]
     name = "NTP"
-    url = "/tutorials/networkprotecols/ntp/"
-    identifier = "tutorials@networkprotecols@ntp"
-    parent = "tutorials@networkprotecols"
+    url = "/tutorials/networkprotocols/ntp/"
+    identifier = "tutorials@networkprotocols@ntp"
+    parent = "tutorials@networkprotocols"
     weight = 45
 [[menu.main]]
     name = "Sockets"
-    url = "/tutorials/networkprotecols/socket/"
-    identifier = "tutorials@networkprotecols@socket"
-    parent = "tutorials@networkprotecols"
+    url = "/tutorials/networkprotocols/socket/"
+    identifier = "tutorials@networkprotocols@socket"
+    parent = "tutorials@networkprotocols"
     weight = 50
 
 [[menu.main]]
