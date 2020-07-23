@@ -2758,9 +2758,15 @@ blockquote {
   border-radius: 3px;
   margin-bottom: 5px;  
 }
+/* changes 22-07-2020:
+removed bottom margin from quoteblocks
+*/
 blockquote > p {
   margin-bottom:0px;
 }
+/*changes 23-07-2020:
+  Added padding 
+  */
 code,
 kbd {
   display: inline-block;
@@ -2768,6 +2774,7 @@ kbd {
   white-space: pre-wrap;
   font-size: 85%;
   font-weight: 900;
+  padding: 1px 4px 1px 4px;
 }
 
 /* changes 09-07-2020: 

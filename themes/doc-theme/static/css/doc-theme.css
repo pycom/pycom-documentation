@@ -318,9 +318,11 @@ pre > code {
   margin-top: 4px;
   margin-bottom: 12px;
 }
-
+/* changes 23-07-2020:
+  removed padding here, added in vuetify.css
+  */
 code {
-    padding: 1px;
+    /*padding: 1px;*/
     background-color: #EEEEEE;
 }
 
