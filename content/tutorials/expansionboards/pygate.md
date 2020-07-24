@@ -16,6 +16,7 @@ To connect your Pygate to a LoRa server, please follow these steps:
 
 1. Attach a WiPy 3, GPy or LoPy 4 to the Pygate. The RGB LED of the development board should be aligned with the USB port of the Pygate.
 1. Attach the LoRa Antenna to the Pygate.
+>Note: Do not attach the antenna to the Lopy4 module. Also, make sure you disabled the Pybytes LoRa connection.
 1. Flash the Pycom Device with with a firmware build where Pygate functionality is enabled. In the firmware update tool, please choose pygate as the firmware type.
 1. Create a `config.json` for your Pygate and upload it (please check the template further below).
 1. Create a `main.py` that creates an uplink (wifi, ethernet or lte) and runs the LoRa packet forwarder (see example below).
