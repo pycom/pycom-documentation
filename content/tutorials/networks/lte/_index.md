@@ -11,15 +11,23 @@ Our cellular modules support both LTE CAT-M1 and NB-IoT, these are new lower pow
 Both networks make can make use of the same example:
 (Make sure you check the coverage map of your provider to confirm coverage in your area)
 ```python
-
 from network import LTE
 import time
 import socket
+
 lte = LTE()
-lte.attach(band=20, apn="your apn")
+lte.init()
+#when using verizon, use 
+#lte.init(carrier=verizon)
+#when usint AT&T use, 
+#use lte.init(carrier = at&t)
+
+#some carriers do not require an APN
+#also, check the band settings, for some carriers they auto-configure.
+lte.attach(band=20, apn="your apn") 
 while not lte.isattached()
     time.delay(0.25)
-    print('.', end='')
+    print('.')
     print(lte.send_at_cmd('AT!="fsm"')         # get the System FSM
 print("LTE modem attached!")
 lte.connect()
@@ -34,21 +42,17 @@ print(socket.getaddrinfo('pycom.io', 80))
 
 lte.disconnect()
 lte.detach()
-#now we can do 
-#machine.deepsleep()
-
+lte.deinit()
+#now we can safely machine.deepsleep()
 ```
+The last line of the script should return a tuple containing the IP address of the Pycom server.
+
 >Note: the first time, it can take a long while to attach to the network. 
-
-If you want to check the status of the modem while attaching, you can use the following commands:
-```python
-print(lte.send_at_cmd('AT!="fsm"')         # get the System FSM
-```
 
 # LTE Troubleshooting guide
 
-Reviewing the responses from `print(lte.send_at_cmd('AT!="fsm"')) from the script above:
-* Before calling `lte.attach()` :
+Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
+* Before calling `lte.attach()`, the status will be `STOPPED`.
     ```
     SYSTEM FSM
     ==========
@@ -74,7 +78,7 @@ Reviewing the responses from `print(lte.send_at_cmd('AT!="fsm"')) from the scrip
     | HP CAT FSM               |IDLE                |
     +--------------------------+--------------------+
     ```
-* With no SIM card detected:
+* With no SIM card detected, the `RRC TOP FSM` will keep status `CAMPED`. You will see `HP USIM FSM` marked `ABSENT`.
     ```
     SYSTEM FSM
     ==========
@@ -101,18 +105,18 @@ Reviewing the responses from `print(lte.send_at_cmd('AT!="fsm"')) from the scrip
     +--------------------------+--------------------+
     ```
 * SIM card inserted and attaching:
-    * Scanning `RRC SEARCH FSM` goes from `WAIT_RSSI` to `WAIT_CELL_ID`
-    * Scanning `RRC TOP FSM` goes from `SCANNING` to `SYNCING`
+    * While `SCANNING`, the `RRC SEARCH FSM` goes from `WAIT_RSSI` to `WAIT_CELL_ID`
+    * Later, the `RRC TOP FSM` goes from `SCANNING` to `SYNCING`
+    * There are some states in between not discussed here.
     * If it is stuck at `WAIT_RSSI`, check the antenna connection
-    * If the system returns from `SYNCING` to `CAMPED`, check the network availability, simcard placement and / or the firmware version. 
+    * If the system returns multiple times from `SYNCING` to `CAMPED`, check the network availability, simcard placement and / or the firmware version. 
     >Note: Use the following to check the version number:
     >```python
     >import sqnsupgrade
     >print(sqnsupgrade.info()
     >```
-    Versions LR5.xx are for CAT-M1 
-
-    Versions LR6.xx are for NB-IoT 
+    >* Versions LR5.xx are for CAT-M1 
+    >* Versions LR6.xx are for NB-IoT 
 
     ```
     SYSTEM FSM
@@ -192,4 +196,4 @@ Reviewing the responses from `print(lte.send_at_cmd('AT!="fsm"')) from the scrip
     +--------------------------+--------------------+
     ```
 * Potential other errors:
-    * `OSSError: [Errno 202] EAI_FAIL`: Check the data plan / sim activation status on network 
+    * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network 

@@ -6,33 +6,126 @@ aliases:
     - chapter/tutorials/lte/firmware
 ---
 
->This article is only related to GPy, FiPy, and G01 boards
+**This article is only related to GPy, FiPy, and G01 boards**
 
-**Important**: When upgrading your modem for the first time, even if you have updated it in the past with the old firmware update method, you **MUST** use the "recovery" upgrade method described below. Otherwise you will risk breaking your module.
+>Note: The LTE modem updater is integrated in the latest stable firmware release, make sure you update your device firmware first [here](/updatefirmware/device/)
+
+Before updating the modem firmware, check the current modem firmware version using:
+```python
+>>> import sqnsupgrade
+>>> sqnsupgrade.info()
+```
+The bottom two lines explain the LTE firmware edition:
+
+* LR5.xx is for CAT-M1
+* LR6.xx is for NB-IoT
+
+The last 5 numbers define the firmware version. A higher number represents a newer firmware. 
+
+> Note: The prefered method for updating the LTE modem is using upgdiff- files, as these updates are faster. Check in the zip archive wheter a upgdiff- update for your version is available. When using a upgdiff- file, you do not need to use `updater.elf`
+
+There are several different ways to update the firmware of the LTE modem.
+1. [Flash](/updatefirmware/ltemodem/#flash)
+2. [SD card](/updatefirmware/ltemodem/#sd-card)
+3. [USB](/updatefirmware/ltemodem/#usb)
+4. [Wireless](/updatefirmware/ltemodem/#wireless)
+
+>Note: In case of any failure or interruption to the process of LTE modem upgrade you can repeat the same steps **after doing a hard reset to the board (i.e disconnecting and reconnecting power), pressing the reset button is not enough.**
+
+The modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and click on:
+Announcements & News --> Announcements for members only --> the Firmware Files for the Sequans LTE modem are now secured or click [here](https://software.pycom.io/downloads/sequans2.html).
+
+## Flash
+
+>Note: For Flash updates, we currently only support the use of upgdiff- files! If there is no upgdiff- file for your version available, try to use another method. 
+
+1. Copy the firmware update file you want to use in your project folder and click `upload to device` in the Pymakr plugin. Make sure the first 5 numbers match the current version of your modem firmware.
+2. After uploading the file, you can run the following commands
+  ```python
+  import sqnsupgrade
+  sqnsupgrade.run('upgdiff_old-to-new.dup')
+  ```
+3. The update takes about 5 minutes. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
+    >Note: **Do not disconnect power to the module during the updating process**
+4. The updater will show the new `SYSTEM VERSION` when it is done, and return control to REPL.
+
+## SD Card
+
+1. Format the SD card using your computer, or the following commands:
+    ```python
+    from machine import SD
+    import os
+
+    sd = SD()
+    os.mount(fs, '/sd')     # mount it
+    os.fsformat('/sd')    # format SD card
+    fs = os.mkfat(sd)
+    print(os.listdir('/sd'))     # list its content
+    ```
+    The last command should return an empty list.
+
+2. Copy all the files from the `.zip` archive to the SD card. You can either use the [FTP server](gettingstarted/programming/ftp/) or insert the SD card in your computer and copy the files through there. 
+    >Note: Do not forget to mount the SD card when re-inserting it.
+
+3. Once the files are on the SD card, you can flash the LTE modem using one of the following commands:
+    ```python
+    import sqnsupgrade
+    sqnsupgrade.run('/sd/upgdiff_old-to-new.dup')
+    #if this is not available, run the following instead
+    #sqnsupgrade.run('/sd/name.dup')
+    #If you are updating from version 33080, use this
+    #sqnsupgrade.run('/sd/name.dup', '/sd/updater.elf')
+
+    ```
+    >Note: Replace `name.dup` with the actual filename. There are different versions for `CAT-M1`  and `NB-IoT`
+
+4. The command will now make sure the firmware is updated. This takes about 5 minutes. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
+    >Note: **Do not disconnect power to the module during the updating process**
+5. The updater will show the new `SYSTEM VERSION` when it is done, and return control to REPL.
+
+
+## USB
+If you do not have an SD card available, you can use the existing USB-UART interface. For this you will need to install 
+
+* [Python 3](https://www.python.org/downloads), if it's not directly available through your OS distributor
+* [PySerial](https://pythonhosted.org/pyserial/pyserial.html#installation)
+* [sqnsupgrade python script](https://github.com/pycom/pycom-libraries/tree/master/lib/sqnsupgrade)
+
+1. Use the following command to allow direct UART communication to the LTE modem:
+    ```python
+    import sqnsupgrade
+    sqnsupgrade.uart(True)
+    ```
+2. Take note of the Serial port used and close the IDE.
+
+3. Go to the directory where you saved the `sqnsupgrade` script and run the following commands in the command line / terminal
+    ```
+    $ python3
+    >>> import sqnsupgrade
+    >>> sqnsupgrade.run('Serial_Port', '/path/to/name.dup', '/path/to/updater.elf')
+    ```
+    >Note: Replace the paths and `name.dup` with the actual files. There are different versions for `CAT-M1`  and `NB-IoT`
+
+4. The `updater.elf` script will make sure the firmware is updated. It takes about 5 minutes. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
+    >Note: **Do not disconnect power to the module during the updating process**
+5.  The updater will show `SYSTEM VERSION` when it is done, and return control to REPL.
+
+
+## Wireless
+
+To update the modem firmware wirelessly, you can follow the [Flash](/updatefirmware/ltemodem/#flash) guide. Upload the files through the [FTP Server and communicate throught Telnet](/gettingstarted/programming/ftp/), or use [Pybytes Pymakr](https://pybytes.pycom.io/pymakr)
+
+
+
+# Old content
+
 
 Please also use the file upgdiff_33080-to-39529.dup (1.2M) from the archive.
 
-```python
-import sqnsupgrade
-sqnsupgrade.run('upgdiff_33080-to-39529.dup', 'updater.elf')
-```
-
-
-
-Please read the following instructions carefully as there are some significant changes compared to the previous updater version.
-
-Most importantly, the updater is now integrated in the latest stable firmware release (we will also publish a new development and pybytes firmware in the coming days), so you no longer need to upload any scripts to your module. The built-in updater will take precedence over any scripts uploaded.
-
-Please start with the following steps:
-
-1. Upgrade the Pycom Firmware Updater tool to latest version
-2. Select Firmware Type `stable` in the communication window to upgrade to version `v1.18.1.r1`
-
-
-The modem firmware files are password protected. In order to download them, head to forum.pycom.io and become a member (if you aren't already) and click on:
-Announcements & News --> Announcements for members only --> the Firmware Files for the Sequans LTE modem are now secured or click here.
-
-You can find the different available firmware versions [here](https://software.pycom.io/downloads/sequans2.html)
+    ```python
+    import sqnsupgrade
+    sqnsupgrade.run('upgdiff_33080-to-39529.dup', 'updater.elf')
+    ```
 
 We are using `CATM1-39529.zip` and `NB1-37781.zip` as examples in this tutorial.
 
