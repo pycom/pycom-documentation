@@ -2751,7 +2751,7 @@ video {
   added border-radius 
 */
 blockquote {
-  padding: 10px 0 10px 10px;
+  padding: 10px 10px 10px 10px;
   font-size: 14px;
   font-weight: 300;
   background-color:rgba(0,128,0,0.7);
