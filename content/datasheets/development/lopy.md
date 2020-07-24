@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/development/lopy
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn80ythqnrgah01r2m-lopy-1.png)
+![](/gitbook/assets/lopy-1.png)
 
 
 {{% hint style="info" %}}
@@ -21,14 +21,15 @@ Please Note: We have removed the labels from the pictures in the documentation d
 
 ## Datasheet
 
-The datasheet of the LoPy is available as a PDF File.
+The datasheet of the LoPy is available as a [PDF File](gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy_v2.pdf)
 
-<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy_v2.pdf" target="_blank"> LoPy Datasheet </a>
+The Lopy is certified for [CE RED](/gitbook/assets/16-213298_expertise_pycom_lopy-1.0r.pdf) and [FCC ACC](/gitbook/assets/2090acc16_grant.pdf") [FCC BCC](/gitbook/assets/2090bcc16_grant.pdf) [FCC CCC](/gitbook/assets/2090ccc16_grant.pdf) 
+
+
 ## Pinout
 
-The pinout of the LoPy is available as a PDF File
+The pinout of the LoPy is available as a [PDF File](/gitbook/assets/lopy-pinout.pdf)
 
-<a href="/gitbook/assets/lopy-pinout.pdf" target="_blank"> LoPy Pinout </a>
 
 ![](/gitbook/assets/lopy-pinout.png)
 

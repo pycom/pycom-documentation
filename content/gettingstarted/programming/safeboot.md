@@ -33,9 +33,8 @@ The selection made during safe boot is not persistent, therefore after the next 
 If problems occur within the filesystem or you wish to factory reset your module to remove your code, run following code in the REPL:
 
 ```python
-
 >>> import os
->>> os.fsformat('/flash')
+>>> os.fsformat('flash')
 ```
 
 {{% hint style="danger" %}}
@@ -47,7 +46,6 @@ Be aware, resetting the flash filesystem will delete all files inside the intern
 Pycom devices support both soft and hard resets. A soft reset clears the state of the MicroPython virtual machine but leaves hardware peripherals unaffected. To do a soft reset, press `Ctrl+D` on the REPL or from within a script, run:
 
 ```python
-
 >>> import sys
 >>> sys.exit()
 ```
@@ -55,7 +53,6 @@ Pycom devices support both soft and hard resets. A soft reset clears the state o
 A hard reset is the same as performing a power cycle to the device. In order to hard reset the device, press the `reset` switch or run:
 
 ```python
-
 >>> import machine
 >>> machine.reset()
 ```

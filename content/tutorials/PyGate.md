@@ -85,7 +85,7 @@ print("Wifi Connection established")
 
 # Sync time via NTP server for GW timestamps on Events
 rtc = RTC()
-rtc.ntp_sync(server="0.pool.ntp.org")
+rtc.ntp_sync(server="pool.ntp.org")
 
 # Read the GW config file from Filesystem
 fp = open('/flash/config.json','r')

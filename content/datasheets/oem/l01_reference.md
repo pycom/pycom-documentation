@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/oem/l01_reference
 ---
 
-![](/gitbook/assets/l01-reference%20%281%29.png)
+![](/gitbook/assets/l01-reference.png)
 
 The L01 OEM reference board is a reference design suitable for the L01 as well as the W01. It makes it possible to have a single PCB design that can accommodate both of the  OEM modules.
 

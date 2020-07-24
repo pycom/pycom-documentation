@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/development/sipy
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86n8h-hb1oh1idwb-sipy-2.png)
+![](/gitbook/assets/sipy-2.png)
 
 {{% hint style="info" %}}
  Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
@@ -17,21 +17,18 @@ aliases:
 
 **Store**: [Buy Here](https://pycom.io/product/sipy)
 
-**Getting Started:** [Click Here](/gettingstarted/connection/sipy)
+**Getting Started:** [Click Here](/gettingstarted/)
 
 ## Datasheet
 
+The datasheet of the SiPy is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_SiPy_v2.pdf)
 
-
-The datasheet of the SiPy is available as a PDF File.
-
-<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_SiPy_v2.pdf" target="_blank"> SiPy Datasheet </a>
+The Sipy is certified for [CE RED](gitbook/assets/17-210585_expertise_sipy_sipy-1.0.pdf)
 
 ## Pinout
 
-The pinout of the SiPy is available as a PDF File
+The pinout of the SiPy is available as a [PDF File](/gitbook/assets/sipy-pinout.pdf)
 
-<a href="/gitbook/assets/sipy-pinout.pdf" target="_blank"> SiPy Pinout </a>
 
 ![](/gitbook/assets/sipy-pinout.png)
 

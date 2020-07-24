@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/development/lopy4
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn85npgnazxzxyv-nu-lopy4-1.png)
+![](/gitbook/assets/lopy4-1.png)
 
 
 {{% hint style="info" %}}
@@ -17,19 +17,21 @@ aliases:
 
 **Store**: [Buy Here](https://pycom.io/product/lopy4/)
 
-**Getting Started:** [Click Here](/gettingstarted/connection/lopy4)
+**Getting Started:** [Click Here](/gettingstarted/)
 
 ## Datasheet
 
-The datasheet of the LoPy4 is available as a PDF File.
+The datasheet of the LoPy4 is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy4_v2.pdf)
 
-<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy4_v2.pdf" target="_blank"> LoPy4 Datasheet </a>
+The Lopy 4 is certified for [CE RED](/gitbook/assets/C03-B0-RED-final.pdf) and [FCC DSS](/gitbook/assets/Pycom-2AJMTLOPY4R-FCC-Grant-DSS.pdf)
+[RCM](/gitbook/assets/RCM-Lopy4.pdf)
+[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-LoPy-4(8286-00027P)-20190523.pdf)
+
 
 ## Pinout
 
-The pinout of the LoPy4 is available as a PDF File
+The pinout of the LoPy4 is available as a [PDF File](/gitbook/assets/lopy4-pinout.pdf)
 
-<a href="/gitbook/assets/lopy4-pinout.pdf" target="_blank"> LoPy4 Pinout </a>
 
 ![](/gitbook/assets/lopy4-pinout.png)
 

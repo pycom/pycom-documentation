@@ -318,14 +318,16 @@ pre > code {
   margin-top: 4px;
   margin-bottom: 12px;
 }
-
+/* changes 23-07-2020:
+  removed padding here, added in vuetify.css
+  */
 code {
-    padding: 1px;
+    /*padding: 1px;*/
     background-color: #EEEEEE;
 }
 
 .primary--text {
-  color: #00cc96;
+  color: green; /*#00cc96; */
 }
 
 .v-window {

@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/development/wipy3
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86pdzbdvrponxeg6-wipy3.png)
+![](/gitbook/assets/wipy3.png)
 
 {{% hint style="info" %}}
  Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
@@ -16,19 +16,22 @@ aliases:
 
 **Store**: [Buy Here](https://pycom.io/product/wipy-3-0/)
 
-**Getting Started:** [Click Here](/gettingstarted/connection/wipy)
+**Getting Started:** [Click Here](/gettingstarted/)
 
 ## Datasheet
 
-The datasheet of the WiPy3 is available as a PDF File.
+The datasheet of the WiPy3 is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy3.0_v2.pdf)
 
-<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy3.0_v2.pdf" target="_blank"> WiPy3 Datasheet </a>
+The Wipy 3 is certified for [CE RED](/gitbook/assets/17-214126_red-certificate_pycom_wipy-3.0.pdf)
+
+[RCM](/gitbook/assets/RCM-Wipy3.pdf)
+
+[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-WiPy-3(8286-00026P)-20190523.pdf)
 
 ## Pinout
 
-The pinout of the WiPy3 is available as a PDF File.
+The pinout of the WiPy3 is available as a [PDF File](/gitbook/assets/wipy3-pinout.pdf)
 
-<a href="/gitbook/assets/wipy3-pinout.pdf" target="_blank"> WiPy3 Pinout </a>
 
 ![](/gitbook/assets/wipy3-pinout.png)
 

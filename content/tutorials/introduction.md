@@ -6,7 +6,7 @@ aliases:
     - chapter/tutorials
 ---
 
-![](/gitbook/assets/tutorialsicon%20%281%29.png)
+![](/gitbook/assets/tutorialsicon.png)
 
 ## Tutorials and Examples
 
