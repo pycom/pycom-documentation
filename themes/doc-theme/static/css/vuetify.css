@@ -2751,7 +2751,7 @@ video {
   added border-radius 
 */
 blockquote {
-  padding: 10px 0 10px 10px;
+  padding: 10px 10px 10px 10px;
   font-size: 14px;
   font-weight: 300;
   background-color:rgba(0,128,0,0.7);
@@ -2816,9 +2816,13 @@ html {
 ::-ms-reveal {
   display: none;
 }
+/* changes 24-07-2020:
+added margin-bottom for ul and ol
+*/
 ul,
 ol {
   padding-left: 24px;
+  margin-bottom: 10px;
 }
 .display-4 {
   font-size: 112px !important;

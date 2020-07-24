@@ -11,20 +11,189 @@ Our cellular modules support both LTE CAT-M1 and NB-IoT, these are new lower pow
 Both networks make can make use of the same example:
 (Make sure you check the coverage map of your provider to confirm coverage in your area)
 ```python
-
 from network import LTE
-import machine
-lte = LTE()
-lte.attach(band=20, apn="your apn")
-while not lte.isattached()"
-    machine.idle()
-print("LTE modem attached!")
+import time
+import socket
 
+lte = LTE()
+lte.init()
+#when using verizon, use 
+#lte.init(carrier=verizon)
+#when usint AT&T use, 
+#use lte.init(carrier = at&t)
+
+#some carriers do not require an APN
+#also, check the band settings, for some carriers they auto-configure.
+lte.attach(band=20, apn="your apn") 
+while not lte.isattached()
+    time.delay(0.25)
+    print('.')
+    print(lte.send_at_cmd('AT!="fsm"')         # get the System FSM
+print("LTE modem attached!")
+lte.connect()
+while not lte.isconnected():
+    time.sleep(0.25)
+    print('#')
+    #print(lte.send_at_cmd('AT!="showphy"'))
+    print(lte.send_at_cmd('AT!="fsm"'))
+print("LTE modem connected!")
+
+print(socket.getaddrinfo('pycom.io', 80))  
+
+lte.disconnect()
+lte.detach()
+lte.deinit()
+#now we can safely machine.deepsleep()
 ```
+The last line of the script should return a tuple containing the IP address of the Pycom server.
+
 >Note: the first time, it can take a long while to attach to the network. 
 
-If you want to check the status of the modem while attaching, you can use the following commands:
-```python
-print(lte.send_at_cmd('AT!="showphy"')     # get the PHY status
-print(lte.send_at_cmd('AT!="fsm"')         # get the System FSM
-```
+# LTE Troubleshooting guide
+
+Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
+* Before calling `lte.attach()`, the status will be `STOPPED`.
+    ```
+    SYSTEM FSM
+    ==========
+    +--------------------------+--------------------+
+    |            FSM           |        STATE       |
+    +--------------------------+--------------------+
+    | RRC TOP FSM              |STOPPED             |
+    | RRC SEARCH FSM           |NULL                |
+    | RRC ACTIVE FSM           |NULL                |
+    | PMM PLMN FSM             |NULL                |
+    | EMM MAIN FSM             |NULL                |
+    | EMM AUTH FSM             |NULL                |
+    | EMM CONN FSM             |NULL                |
+    | EMM TAU FSM              |NULL                |
+    | EMM TEST FSM             |NULL                |
+    | ESM BEARER FSM           |BEARER_NULL         |
+    | SMS MT FSM               |IDLE                |
+    | SMS MO FSM               |IDLE                |
+    | HP MAIN FSM              |IDLE                |
+    | HP USIM FSM              |READY               |
+    | HP SMS MO FSM            |IDLE                |
+    | HP SMS MT FSM            |IDLE                |
+    | HP CAT FSM               |IDLE                |
+    +--------------------------+--------------------+
+    ```
+* With no SIM card detected, the `RRC TOP FSM` will keep status `CAMPED`. You will see `HP USIM FSM` marked `ABSENT`.
+    ```
+    SYSTEM FSM
+    ==========
+    +--------------------------+--------------------+
+    |            FSM           |        STATE       |
+    +--------------------------+--------------------+
+    | RRC TOP FSM              |CAMPED              |
+    | RRC SEARCH FSM           |CAMPED_ANY          |
+    | RRC ACTIVE FSM           |IDLE                |
+    | PMM PLMN FSM             |ANY_CAMPED          |
+    | EMM MAIN FSM             |NULL                |
+    | EMM AUTH FSM             |NULL                |
+    | EMM CONN FSM             |NULL                |
+    | EMM TAU FSM              |NULL                |
+    | EMM TEST FSM             |NULL                |
+    | ESM BEARER FSM           |BEARER_NULL         |
+    | SMS MT FSM               |IDLE                |
+    | SMS MO FSM               |IDLE                |
+    | HP MAIN FSM              |IDLE                |
+    | HP USIM FSM              |ABSENT              |
+    | HP SMS MO FSM            |IDLE                |
+    | HP SMS MT FSM            |IDLE                |
+    | HP CAT FSM               |NULL                |
+    +--------------------------+--------------------+
+    ```
+* SIM card inserted and attaching:
+    * While `SCANNING`, the `RRC SEARCH FSM` goes from `WAIT_RSSI` to `WAIT_CELL_ID`
+    * Later, the `RRC TOP FSM` goes from `SCANNING` to `SYNCING`
+    * There are some states in between not discussed here.
+    * If it is stuck at `WAIT_RSSI`, check the antenna connection
+    * If the system returns multiple times from `SYNCING` to `CAMPED`, check the network availability, simcard placement and / or the firmware version. 
+    >Note: Use the following to check the version number:
+    >```python
+    >import sqnsupgrade
+    >print(sqnsupgrade.info()
+    >```
+    >* Versions LR5.xx are for CAT-M1 
+    >* Versions LR6.xx are for NB-IoT 
+
+    ```
+    SYSTEM FSM
+    ==========
+    +--------------------------+--------------------+
+    |            FSM           |        STATE       |
+    +--------------------------+--------------------+
+    | RRC TOP FSM              |SCANNING            |
+    | RRC SEARCH FSM           |WAIT_RSSI           |
+    | RRC ACTIVE FSM           |NULL                |
+    | PMM PLMN FSM             |NORM_WAITCELL       |
+    | EMM MAIN FSM             |NULL                |
+    | EMM AUTH FSM             |NULL                |
+    | EMM CONN FSM             |NULL                |
+    | EMM TAU FSM              |NULL                |
+    | EMM TEST FSM             |NULL                |
+    | ESM BEARER FSM           |BEARER_NULL         |
+    | SMS MT FSM               |IDLE                |
+    | SMS MO FSM               |IDLE                |
+    | HP MAIN FSM              |IDLE                |
+    | HP USIM FSM              |READY               |
+    | HP SMS MO FSM            |IDLE                |
+    | HP SMS MT FSM            |IDLE                |
+    | HP CAT FSM               |IDLE                |
+    +--------------------------+--------------------+
+    ```
+* Connecting
+    ```
+    SYSTEM FSM
+    ==========
+    +--------------------------+--------------------+
+    |            FSM           |        STATE       |
+    +--------------------------+--------------------+
+    | RRC TOP FSM              |CONNECTING          |
+    | RRC SEARCH FSM           |CAMPED              |
+    | RRC ACTIVE FSM           |WAIT_SMC            |
+    | PMM PLMN FSM             |NORM_CAMPED         |
+    | EMM MAIN FSM             |REGISTERED_INIT     |
+    | EMM AUTH FSM             |WAITING_SIM_CONFIRM |
+    | EMM CONN FSM             |AS_ESTABLISHED      |
+    | EMM TAU FSM              |NULL                |
+    | EMM TEST FSM             |NULL                |
+    | ESM BEARER FSM           |BEARER_NULL_PENDING_ACTIVE|
+    | SMS MT FSM               |IDLE                |
+    | SMS MO FSM               |IDLE                |
+    | HP MAIN FSM              |IDLE                |
+    | HP USIM FSM              |READY               |
+    | HP SMS MO FSM            |IDLE                |
+    | HP SMS MT FSM            |IDLE                |
+    | HP CAT FSM               |IDLE                |
+    +--------------------------+--------------------+
+    ```
+* Connected
+    ```
+    SYSTEM FSM
+    ==========
+    +--------------------------+--------------------+
+    |            FSM           |        STATE       |
+    +--------------------------+--------------------+
+    | RRC TOP FSM              |CONNECTED           |
+    | RRC SEARCH FSM           |CAMPED              |
+    | RRC ACTIVE FSM           |CONNECTED           |
+    | PMM PLMN FSM             |NORM_CAMPED         |
+    | EMM MAIN FSM             |REGISTERED          |
+    | EMM AUTH FSM             |KASME_DEFINED       |
+    | EMM CONN FSM             |AS_ESTABLISHED      |
+    | EMM TAU FSM              |NULL                |
+    | EMM TEST FSM             |NULL                |
+    | ESM BEARER FSM           |BEARER_ACTIVE       |
+    | SMS MT FSM               |IDLE                |
+    | SMS MO FSM               |IDLE                |
+    | HP MAIN FSM              |IDLE                |
+    | HP USIM FSM              |READY               |
+    | HP SMS MO FSM            |IDLE                |
+    | HP SMS MT FSM            |IDLE                |
+    | HP CAT FSM               |IDLE                |
+    +--------------------------+--------------------+
+    ```
+* Potential other errors:
+    * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network 
