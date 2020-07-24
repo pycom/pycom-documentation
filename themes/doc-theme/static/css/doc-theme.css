@@ -129,9 +129,13 @@ a.bread:hover {
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
     background-color: transparent;
 }
-
+/* changes 24-07-2020:
+due to adding margin-bottom to ul and ol, 
+we need to remove it here
+*/
 ul.lefttree {
   margin-left: -8px;
+  margin-bottom: 0px;
 }
 
 a, li.lefttree > a {
