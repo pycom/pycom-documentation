@@ -16,10 +16,11 @@ To connect your Pygate to a LoRa server, please follow these steps:
 
 1. Attach a WiPy 3, GPy or LoPy 4 to the Pygate. The RGB LED of the development board should be aligned with the USB port of the Pygate.
 1. Attach the LoRa Antenna to the Pygate.
+>Note: Do not attach the antenna to the Lopy4 module. Also, make sure you disabled the Pybytes LoRa connection.
 1. Flash the Pycom Device with with a firmware build where Pygate functionality is enabled. In the firmware update tool, please choose pygate as the firmware type.
 1. Create a `config.json` for your Pygate and upload it (please check the template further below).
 1. Create a `main.py` that creates an uplink (wifi, ethernet or lte) and runs the LoRa packet forwarder (see example below).
-1. Run the `main.py`. This file is automatically execute every time the module resets.
+1. Run the `main.py`. This file is automatically executed every time the module resets.
 1. Now it is operational. The communication from other LoRa nodes such as a LoPy4 will now reach the gateway and will receive up and downlink messages via the PyGate.
 1. To stop the Pygate at any time press Ctrl-C on the REPL and run `machine.pygate_deinit()`. It will take a few seconds to stop the gateway tasks and safely power-off the concentrator.
 
@@ -55,13 +56,14 @@ import machine
 from machine import RTC
 import pycom
 
+print('\nStarting LoRaWAN concentrator')
 # Disable Hearbeat
 pycom.heartbeat(False)
 
 # Define callback function for Pygate events
 def machine_cb (arg):
     evt = machine.events()
-	if (evt & machine.PYGATE_START_EVT):
+    if (evt & machine.PYGATE_START_EVT):
         # Green
         pycom.rgbled(0x103300)
     elif (evt & machine.PYGATE_ERROR_EVT):
@@ -74,18 +76,25 @@ def machine_cb (arg):
 # register callback function
 machine.callback(trigger = (machine.PYGATE_START_EVT | machine.PYGATE_STOP_EVT | machine.PYGATE_ERROR_EVT), handler=machine_cb)
 
+print('Connecting to WiFi...',  end='')
 # Connect to a Wifi Network
 wlan = WLAN(mode=WLAN.STA)
 wlan.connect(ssid='<SSID>', auth=(WLAN.WPA2, "<PASSWORD>"))
 
 while not wlan.isconnected():
+    print('.', end='')
     time.sleep(1)
-
-print("Wifi Connection established")
+print(" OK")
 
 # Sync time via NTP server for GW timestamps on Events
+print('Syncing RTC via ntp...', end='')
 rtc = RTC()
 rtc.ntp_sync(server="pool.ntp.org")
+
+while not rtc.synced():
+    print('.', end='')
+    time.sleep(.5)
+print(" OK\n")
 
 # Read the GW config file from Filesystem
 fp = open('/flash/config.json','r')
