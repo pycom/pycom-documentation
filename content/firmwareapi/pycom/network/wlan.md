@@ -49,7 +49,7 @@ The WLAN constructor is special in the sense that if no arguments besides the `i
 
 ## Methods
 
-#### wlan.init(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False, bandwidth=HT40, max\_tx\_pwr=20, country=CN)
+#### wlan.init(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False, bandwidth=HT40, max\_tx\_pwr=20, country=CN, protocol=(1,1,1))
 
 Set or get the WiFi network processor configuration.
 
@@ -69,6 +69,7 @@ Arguments are:
 * `bandwidth` is the Bandwidth to use, either 20MHz or 40 MHz , use `HT20` or `HT40`
 * `max_tx_pwr` is the maximum WiFi Tx power allowed. see `WLAN.max_tx_power()` for more details
 * `country` tuple representing the country configuration parameters. see `WLAN.country()` for more details
+* `protocol` tuple representing the protocol. see `WLAN.wifi_protocol()` for more details
 
 For example, you can do:
 
@@ -261,9 +262,9 @@ Gets or set s Country configuration parameters for wifi.
 
 Returns a tuple with (bssid, ssid, primary channel, rssi, Authorization method, wifi standard used) of the connected AP in case of STA mode.
 
-### wlan.wifi\_protocol(\[(bool PHY11\_\_B, bool PHY11\_G, bool PHY11\_N)\])
+### wlan.wifi\_protocol(\[(bool PHY11\_B, bool PHY11\_G, bool PHY11\_N)\])
 
-Sets or gets Wifi Protocol supported.
+Sets or gets Wifi Protocol supported in (`PHY_11_B`,`PHY_11_G`,`PHY_11_N`) format. Currently 802.11b or 802.11bg or 802.11bgn mode is available.
 
 ### wlan.send\_raw(Buffer, interface=STA, use\_sys\_seq=True)
 
