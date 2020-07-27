@@ -64,15 +64,10 @@ This will turn the RGB LED on your device purple! Notice that the REPL does not 
 In this first project, we will make the on-board RGB LED flash different colors.
 
 1. Firstly you will need to create a new, empty, directory on your computer. For this example we will create one called `RGB-Blink`.
-
 2. Open the project folder you have created in your IDE.
-
 3. Now, we will need to add some files. A standard MicroPython project will have a `lib` folder for additional libraries, and two python files: `main.py` and `boot.py`.
-
     * `main.py` This script runs directly after `boot.py` and should contain the main code you wish to run on your device.
-
     * `boot.py` This is the first script that runs on your module when it turns on. This is often used to connect a module to a network without cluttering up the `main.py` file. As a beginner you generally do not need to use a `boot.py`.
-
     * It is often a good idea to split out re-usable code into libraries. If you want to create or use libraries created by others, you will need to create a `lib` directory and put the library files in this. It is important that you put `.py` files directly into `lib` rather than creating a directory tree. For example, the extra sensor libraries for the Pytrack, Pysense and Pyscan are put in this folder. In this example, we will not use it.
 
 
