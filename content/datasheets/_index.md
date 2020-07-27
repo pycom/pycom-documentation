@@ -25,7 +25,7 @@ The follow pages contain all information relating to each product, for example: 
 - [L01](/datasheets/oem/l01/)
 - [L04](/datasheets/oem/l04/)
 - [Baseboard](datasheets/oem/universal_reference/)
-- [Deepsleep](datasheets/oem/deepsleep/)
+
 
 ## Expansion boards
 - [Pygate](/datasheets/expansionboards/pygate/)
@@ -36,5 +36,5 @@ The follow pages contain all information relating to each product, for example: 
 - [Pyscan](/datasheets/expansionboards/pyscan/)
 - [Expansion 2](/datasheets/expansionboards/expansion2/)
 - [Expansion 3](/datasheets/expansionboards/expansion3/)
-
+- [Deepsleep](/datasheets/expansionboards/deepsleep/)
 
