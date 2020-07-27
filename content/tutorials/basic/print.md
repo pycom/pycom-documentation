@@ -19,4 +19,6 @@ print("\n") #feed a new line
 print("\t tabbed in") 
 #you can specify a variable into the string as well!
 print("hello world: " + str(machine.rng()) + " random number" )
+#or use format
+print("hello world: {} {}".format(machine.rng(), " random number"))
 ```
