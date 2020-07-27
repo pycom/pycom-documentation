@@ -17,4 +17,4 @@ Using our devices, several different network protocols can be used. We have grou
 
 **Cloud**
 
-* [AWS](../networkprotecols/aws/)
+* [AWS](../networkprotocols/aws/)

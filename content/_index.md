@@ -15,7 +15,7 @@ Pycom ecosystem makes IoT development easy
 
 
 
-## [Connecting to Pybytes IoT platform](pybytes/introduction)
+## [Connecting to Pybytes IoT platform](/pybytes/)
 Connect your device to [Pybytes](https://pybytes.pycom.io/?utm_source=docs&utm_medium=web&utm_campaign=getting-started-bottom) with Wi-Fi, LoRa or Sigfox. Send data from your device just with one line command.
 Update your firmware over the air and integrate with third-party services like AWS.
 
@@ -24,18 +24,10 @@ Connect your device to your own IoT platform with one of the advertised wireless
 This usually requires some registration. This step will detail how to get registered and connected to various wireless networks.
 
 # Quick navigation
-* [Products](products)
-* [Pymakr](pymakr/installation)
-* [Tutorials](tutorials/introduction)
-* [API Documentation](firmwareapi/introduction)
-* [Product Info](datasheets/introduction)
-* [Pybytes](pybytes/introduction)
+* [Products](/products/)
+* [Pymakr](/gettingstarted/software/)
+* [Tutorials](/tutorials/)
+* [API Documentation](/firmwareapi/)
+* [Product Info](datasheets/)
+* [Pybytes](/pybytes/)
 
-
-<v-layout class="full-width  prev-next pa-2 mt-4 mb-0" styleZZ="background-color: #7800FF;">
-  <v-flex xs6 class="ppurple">
-  </v-flex>
-  <v-flex xs6 class="text-xs-right">
-  <v-btn class="mr-4 pbgpurple white--text"  href="/products/">Next</v-btn>
-    </v-flex>
-</v-layout>

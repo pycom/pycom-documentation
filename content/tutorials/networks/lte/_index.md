@@ -51,7 +51,7 @@ The last line of the script should return a tuple containing the IP address of t
 
 # LTE Troubleshooting guide
 
-Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
+Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what is wrong. We are mainly looking at the status of the top two indicators for now.
 * Before calling `lte.attach()`, the status will be `STOPPED`.
     ```
     SYSTEM FSM
@@ -169,7 +169,7 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     | HP CAT FSM               |IDLE                |
     +--------------------------+--------------------+
     ```
-* Connected
+* Connected, note that `EMM MAIN FSM` has state `REGISTERED`. After a while, the `RRC TOP FSM` will have state `CAMPED`.
     ```
     SYSTEM FSM
     ==========
