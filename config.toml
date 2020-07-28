@@ -986,13 +986,6 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
-    name = "OEM Deepsleep"
-    url = "/datasheets/oem/deepsleep/"
-    identifier = "datasheets@oem@deepsleep"
-    parent = "datasheets@oem"
-    weight = 70
-
-[[menu.main]]
     name = "Expansion Boards and Shields"
     url = "/datasheets/expansionboards/"
     identifier = "datasheets@boards"
