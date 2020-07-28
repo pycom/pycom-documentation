@@ -21,4 +21,7 @@ print("\t tabbed in")
 print("hello world: " + str(machine.rng()) + " random number" )
 #or use format
 print("hello world: {} {}".format(machine.rng(), " random number"))
+#you can also ask for user input
+result = input("what's up?\n")
+print(result)
 ```

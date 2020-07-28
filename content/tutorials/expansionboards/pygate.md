@@ -102,7 +102,8 @@ buf = fp.read()
 
 # Start the Pygate
 machine.pygate_init(buf)
-
+# disable degub messages
+# machine.pygate_debug_level(1)
 ```
 
 A sample `config.json` file for gateway configuration in EU868 region:

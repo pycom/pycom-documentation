@@ -28,7 +28,7 @@ lte.attach(band=20, apn="your apn")
 while not lte.isattached()
     time.delay(0.25)
     print('.')
-    print(lte.send_at_cmd('AT!="fsm"')         # get the System FSM
+    print(lte.send_at_cmd('AT!="fsm"'))         # get the System FSM
 print("LTE modem attached!")
 lte.connect()
 while not lte.isconnected():

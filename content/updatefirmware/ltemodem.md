@@ -25,26 +25,27 @@ The last 5 numbers define the firmware version. A higher number represents a new
 > Note: The prefered method for updating the LTE modem is using upgdiff- files, as these updates are faster. Check in the zip archive wheter a upgdiff- update for your version is available. When using a upgdiff- file, you do not need to use `updater.elf`
 
 There are several different ways to update the firmware of the LTE modem.
-1. [Flash](/updatefirmware/ltemodem/#flash)
-2. [SD card](/updatefirmware/ltemodem/#sd-card)
-3. [USB](/updatefirmware/ltemodem/#usb)
-4. [Wireless](/updatefirmware/ltemodem/#wireless)
+1. [Flash](/updatefirmware/ltemodem/#flash) (slow)
+2. [SD card](/updatefirmware/ltemodem/#sd-card) (fastest)
+3. [USB](/updatefirmware/ltemodem/#usb) (medium)
+4. [Wireless](/updatefirmware/ltemodem/#wireless) (slowest)
 
 >Note: In case of any failure or interruption to the process of LTE modem upgrade you can repeat the same steps **after doing a hard reset to the board (i.e disconnecting and reconnecting power), pressing the reset button is not enough.**
 
 The modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and click on:
-Announcements & News --> Announcements for members only --> the Firmware Files for the Sequans LTE modem are now secured or click [here](https://software.pycom.io/downloads/sequans2.html).
+Announcements & News --> Announcements for members only --> the Firmware Files for the Sequans LTE modem are now secured to retrieve the credentials. You can find the firmwares listed [here](https://software.pycom.io/downloads/sequans2.html).
 
 ## Flash
 
 >Note: For Flash updates, we currently only support the use of upgdiff- files! If there is no upgdiff- file for your version available, try to use another method. 
 
-1. Copy the firmware update file you want to use in your project folder and click `upload to device` in the Pymakr plugin. Make sure the first 5 numbers match the current version of your modem firmware.
+1. Copy the firmware update file you want to use in your project folder and click `upload to device` in the Pymakr plugin. Make sure the first 5 numbers match the current version of your modem firmware. Uploading might take a while because of the large filesize.
+    > Note: If the firmware does not sync to your device, open the Pymakr settings &rarr; project settings and add `"dup"` to the entry `"sync_file_types"`. This will create a `pymakr.conf` file in your project and allow you to sync `.dup` files to the device using pymakr.
 2. After uploading the file, you can run the following commands
-  ```python
-  import sqnsupgrade
-  sqnsupgrade.run('upgdiff_old-to-new.dup')
-  ```
+    ```python
+    import sqnsupgrade
+    sqnsupgrade.run('upgdiff_old-to-new.dup')
+    ```
 3. The update takes about 5 minutes. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
     >Note: **Do not disconnect power to the module during the updating process**
 4. The updater will show the new `SYSTEM VERSION` when it is done, and return control to REPL.
@@ -71,9 +72,9 @@ Announcements & News --> Announcements for members only --> the Firmware Files f
     ```python
     import sqnsupgrade
     sqnsupgrade.run('/sd/upgdiff_old-to-new.dup')
-    #if this is not available, run the following instead
+    #if no upgdiff is available, run the following instead
     #sqnsupgrade.run('/sd/name.dup')
-    #If you are updating from version 33080, use this
+    #WARNING! If you are updating from version 33080, use the .elf file as well
     #sqnsupgrade.run('/sd/name.dup', '/sd/updater.elf')
 
     ```
@@ -116,7 +117,7 @@ If you do not have an SD card available, you can use the existing USB-UART inter
 To update the modem firmware wirelessly, you can follow the [Flash](/updatefirmware/ltemodem/#flash) guide. Upload the files through the [FTP Server and communicate throught Telnet](/gettingstarted/programming/ftp/), or use [Pybytes Pymakr](https://pybytes.pycom.io/pymakr)
 
 
-
+<!--
 # Old content
 
 
@@ -352,3 +353,4 @@ The latest version of the `sqnsupgrade` class has a few additional features that
 
 #### sqnsupgrade.run(load_fff=True)
 There is an optional command line load_fff for the sqnsupgrade.run() command. This is designed to be an internal flag. IMPORTANT: This should only be used when advised by Pycom Support.
+-->
