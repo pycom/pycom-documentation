@@ -9,9 +9,7 @@ aliases:
 
 ![](/gitbook/assets/wipy3.png)
 
-{{% hint style="info" %}}
- Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
-{{% /hint %}}
+> Note: Orient the RGB LED / reset button over the USB connector on any expansion board 
 
 
 **Store**: [Buy Here](https://pycom.io/product/wipy-3-0/)
@@ -35,9 +33,8 @@ The pinout of the WiPy3 is available as a [PDF File](/gitbook/assets/wipy3-pinou
 
 ![](/gitbook/assets/wipy3-pinout.png)
 
-{{% hint style="info" %}}
-Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
-{{% /hint %}}
+> Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
+
 
 ## Differences from WiPy 2.0
 
@@ -47,6 +44,13 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 * The antenna select pin has moved from GPIO16 to GPIO21 \(P12\)
 
 ## Notes
+
+### Power
+Do not use the 3.3V pin **in combination with** the Vin pin to supply the device as this will damage the voltage regulator on the board.
+
+### Antenna placement
+Always attach the appropriate antenna when using a wireless connection. For WiFi / BLE, it is not mandatory to use an external antenna when you did not explicitly specify this in your code. 
+
 
 ### WiFi
 
