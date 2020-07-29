@@ -8,10 +8,6 @@ aliases:
 
 If powering up normally or upon pressing the reset button, a Pycom module will boot into standard mode; the `boot.py` file will be executed first, followed by `main.py`. It is possible to alter the boot procedure of the module by tying certain pins `high` or `low` when the module boots.
 
-## Bootloader
-
-If you updated your device before using it, you have already put the device into bootloader mode. This is achieved by connecting `G23` to `GND` while the device boots. If you used a Pysense/Pytrack to update, it did this automatically for you. You only need to put your Pycom module into bootloader mode if you are updating its firmware, or are programming your own low level code. This is not required if you are updating your MicroPython code.
-
 ## Safe Boot
 
 Some times the code you have written will prevent you gaining access to the REPL or prevent you updating your code. Some example may be:
@@ -37,9 +33,7 @@ If problems occur within the filesystem or you wish to factory reset your module
 >>> os.fsformat('flash')
 ```
 
-{{% hint style="danger" %}}
-Be aware, resetting the flash filesystem will delete all files inside the internal device storage (not the SD card) and they cannot be recovered.
-{{% /hint %}}
+> Be aware, formatting the flash filesystem will delete all files inside the internal device storage (not the SD card) and they cannot be recovered.
 
 ## Reset
 

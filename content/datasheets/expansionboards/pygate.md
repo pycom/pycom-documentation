@@ -36,12 +36,13 @@ Now, attach the antenna(s) to the SMA connector(s) and upload code!
 ![](/gitbook/assets/pygate-case.jpg)
 The case will also work for the regular expansion board and has the SD card holder accessible from the outside.
 
+## Notes
+### Battery Charger
 
-## Battery Charger
+The Pygate features a single cell Li-Ion/Li-Po charger. When the board is being powered via the USB-C connector, the Pygate will charge the battery if connected.
+> Make sure you check the polarity of the battery before plugging it in! Connect the positive side to the side marked with a `+`.
 
-The Pygate features a single cell Li-Ion/Li-Po charger. When the board is being powered via the USB-C connector, the Pygate will charge the battery \(if connected\).
-
-## Troubleshooting
+### Troubleshooting
 
 * If PIC stays in bootloader mode, the [`dfu-util` update](/pytrackpysense/installation/firmware) should be performed
 
