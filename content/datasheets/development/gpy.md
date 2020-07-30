@@ -18,7 +18,7 @@ aliases:
 ## Datasheet
 
 
-The datasheet of the GPy is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_GPy_v2.pdf")
+The datasheet of the GPy is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_GPy_v2.pdf)
 
 The drawing of the LTE-M antenna is available as a [PDF File](/gitbook/assets/lte-m-antenna-drawing.pdf")
 

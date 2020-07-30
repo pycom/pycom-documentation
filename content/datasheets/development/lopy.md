@@ -18,7 +18,9 @@ aliases:
 
 ## Datasheet
 
-The datasheet of the LoPy is available as a [PDF File](gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy_v2.pdf)
+The datasheet of the LoPy is available as a [PDF File]
+(/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy_v2.pdf)
+
 
 The Lopy is certified for [CE RED](/gitbook/assets/16-213298_expertise_pycom_lopy-1.0r.pdf) and [FCC ACC](/gitbook/assets/2090acc16_grant.pdf") [FCC BCC](/gitbook/assets/2090bcc16_grant.pdf) [FCC CCC](/gitbook/assets/2090ccc16_grant.pdf) 
 
