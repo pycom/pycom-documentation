@@ -12,8 +12,7 @@ Pycom modules come with the ability to update the devices firmware, while it is 
 ## Pybytes 
 1. Go to your device (make sure it is connected to the platform!)
 2. Click on the configuration tab
-3. Use the OTA firmware update tool here
-hello
+3. Use the OTA firmware update tool there
 
 ## Method A
 
@@ -21,7 +20,7 @@ Here we will describe one possible update methodology you could use that is impl
 
 Imagine you a smart metering company and you wish to roll out an update for your Pycom based smart meter. These meters usually send data back via LoRa. Unfortunately LoRa downlink messages have a very limited size and several hundred if not thousand would be required to upload a complete firmware image. To get around this you can have your devices sending their regular data via LoRa and when they receive a special command via a downlink message, the devices will connect to a WiFi network. It is unfeasible to ask customers to allow your device to connect to their home network so instead this network could be provided by a vehicle. This vehicle will travel around a certain geographic area in which the devices have been sent the special downlink message to initiate the update. The devices will look for the WiFi network being broadcast by the vehicle and connect. The devices will then connect to a server running on this WiFi network. This server (also shown in this example) will generate manifest files that instruct the device on what it should update, and where to get the update data from.
 
-## Server
+### Server
 
 Code available [here](https://github.com/pycom/pycom-libraries/blob/master/examples/OTA/OTA_server.py)
 
@@ -128,7 +127,7 @@ In order for the URL's to be properly formatted you are required to send a "host
 GET /manifest.json?current_ver=1.0.0 HTTP/1.0\r\nHost: 192.168.1.144:8000\r\n\r\n
 ```
 
-## Client Library
+### Client Library
 
 A MicroPyton library for interfacing with the server described above is available [here](https://github.com/pycom/pycom-libraries/blob/master/examples/OTA/1.0.0/flash/lib/OTA.py).
 
@@ -137,7 +136,7 @@ This library is split into two layers. The top level `OTA` class implements all 
 >Although the above code is functional, it is provided only as an example of how an end user might implement a OTA update mechanism. It is not 100% feature complete e.g. even though it does backup previous versions of files, the roll back procedure is not implemented. This is left of the end user to do.
 
 
-## Example
+### Example
 
 Below is am example implementing the methodology previously explained in this tutorial to initiate an OTA update.
 
