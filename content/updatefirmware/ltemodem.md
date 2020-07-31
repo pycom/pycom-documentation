@@ -24,6 +24,8 @@ The last 5 numbers define the firmware version. A higher number represents a new
 
 > Note: The prefered method for updating the LTE modem is using upgdiff- files, as these updates are faster. Check in the zip archive wheter a upgdiff- update for your version is available. When using a upgdiff- file, you do not need to use `updater.elf`
 
+> Using `sqnsupgrade` does not currently work properly in the pygate firmware
+
 There are several different ways to update the firmware of the LTE modem.
 1. [Flash](/updatefirmware/ltemodem/#flash) (slow)
 2. [SD card](/updatefirmware/ltemodem/#sd-card) (fastest)
@@ -72,13 +74,13 @@ Announcements & News --> Announcements for members only --> the Firmware Files f
     ```python
     import sqnsupgrade
     sqnsupgrade.run('/sd/upgdiff_old-to-new.dup')
-    #if no upgdiff is available, run the following instead
-    #sqnsupgrade.run('/sd/name.dup')
-    #WARNING! If you are updating from version 33080, use the .elf file as well
-    #sqnsupgrade.run('/sd/name.dup', '/sd/updater.elf')
+    # if no upgdiff is available, run the following instead
+    # sqnsupgrade.run('/sd/name.dup')
+    # WARNING! If you are updating from version 33080, use the updater.elf file as well
+    # sqnsupgrade.run('/sd/name.dup', '/sd/updater.elf')
 
     ```
-    >Note: Replace `name.dup` with the actual filename. There are different versions for `CAT-M1`  and `NB-IoT`
+    >Note: Replace `name.dup` or `z`upgdiff_old-to-new.dup` with the actual filename. There are different versions for `CAT-M1`  and `NB-IoT`
 
 4. The command will now make sure the firmware is updated. This takes about 5 minutes. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
     >Note: **Do not disconnect power to the module during the updating process**
@@ -88,7 +90,7 @@ Announcements & News --> Announcements for members only --> the Firmware Files f
 ## USB
 If you do not have an SD card available, you can use the existing USB-UART interface. For this you will need to install 
 
-* [Python 3](https://www.python.org/downloads), if it's not directly available through your OS distributor
+* [Python 3](https://www.python.org/downloads)
 * [PySerial](https://pythonhosted.org/pyserial/pyserial.html#installation)
 * [sqnsupgrade python script](https://github.com/pycom/pycom-libraries/tree/master/lib/sqnsupgrade)
 
@@ -100,14 +102,16 @@ If you do not have an SD card available, you can use the existing USB-UART inter
 2. Take note of the Serial port used and close the IDE.
 
 3. Go to the directory where you saved the `sqnsupgrade` script and run the following commands in the command line / terminal
-    ```
+    ```python
     $ python3
     >>> import sqnsupgrade
-    >>> sqnsupgrade.run('Serial_Port', '/path/to/name.dup', '/path/to/updater.elf')
+    >>> sqnsupgrade.run('Serial_Port', '/path/to/name.dup')
+    # WARNING! If you are updating from version 33080, use the updater.elf file as well
+    # >>> sqnsupgrade.run('Serial_Port', '/path/to/name.dup', '/path/to/updater.elf')
     ```
     >Note: Replace the paths and `name.dup` with the actual files. There are different versions for `CAT-M1`  and `NB-IoT`
 
-4. The `updater.elf` script will make sure the firmware is updated. It takes about 5 minutes. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
+4. The update is now running. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
     >Note: **Do not disconnect power to the module during the updating process**
 5.  The updater will show `SYSTEM VERSION` when it is done, and return control to REPL.
 

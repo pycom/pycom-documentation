@@ -19,6 +19,8 @@ or in the terminal as shown here: (Example is an Expansion board 3.1 on MacOS)
 
 * If it does show up, the expansion module is connected and recognised. This also means the USB cable and board are connected correctly. Contintue to [step 5](#step-5)
 
+* If it shows up with the Device ID in DFU update mode, check [here](/updatefirmware/expansionboard/).
+
 * If it does not show up, continue to [step 2](#step-2)
     
 ### Step 2
@@ -50,43 +52,30 @@ etc
 ### Step 5
 If you reached this step, the expansion board's USB connection is fully operational. 
 
-Once the USB device shows up and gets assigned a COM port (in Windows), the Pymakr plugin will try to connect to it, however, there is no py- module to connect to yet. If this is not the case, 
+Once the expansion board shows up and gets assigned a COM port in Windows, or a `/dev/tty-` address in MacOS or Linux, the Pymakr plugin will try to connect to it. However, there is no py- module to connect to yet, so it will wait forever. 
 
-Insert your py- module with the button / RGB LED towards the USB connector, like shown here: (This works the same for all modules)
+Now is the time to insert your py- module. Always place the button / RGB LED towards the USB connector, like shown here: (This works the same for all modules and expansion board variants)
 
 ![](/gitbook/assets/expansion_board_3_lopy4.png)
 
-> Note: For the expansion board, make sure that at least the jumpers for TX RX LED and RTS are inserted correctly. 
+> Note: For the Expansion board, make sure that at least the jumpers for TX RX LED and RTS are inserted correctly. 
 
-* The module should flash the RGB LED blue every 4 seconds (unless you disabled the hearbeat last time). This indicates the module is operational. 
----
-* If it does not flash, the module might be constantly crashing or in programming mode. You can check this by viewing the Pymakr REPL terminal in VSCode or Atom. The text will be similar to ..
-    ```
-    Connecting to /dev/tty.usbmodemPy37219b1...
-    ets Jun  8 2016 00:22:57
+> Note: all (new) -py modules give a flashing blue led every 4 seconds. This is the heartbeat. Once you see this, the module is guarenteed to work. It is also possible to disable this.
 
-    rst:0x1 (POWERON_RESET),boot:0x6 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_FEO_V2))
-    waiting for download
-    ```
-This means GPIO0, (P2) of the py module is pulled LOW and the module keeps itself in programming mode. This problem can be caused by the expansion board, in which case you should update the firmware, described here: https://docs.pycom.io/pytrackpysense/installation/firmware/. If your expansion board fails to update, check this link: https://forum.pycom.io/topic/4911/expansion-board-3-1-issues?_=1593093156432. 
+> In some instances you will have to restart your IDE or computer to pick up the connection again. 
 
-Note: The expansion board firmware updater has some issues in MacOS, causing the dfu-util: set alt interfaces zero error, any other operating system works fine
+If you inserted the module and:
+* The green LED on the Expansion board turned off
+* The module gets hot
+* The expansionboard is now disconnected 
+Go to [step 8](#step-8)
 
-If it does not give that, try the safe boot procedure described here: https://docs.pycom.io/gettingstarted/programming/safeboot/. 
+If, on the other hand, the module now shows connected in Pymakr, but keeps coredumping or does not return anything, go to the next step
 
-Okay, when you got this far, it means that 
-
-Your expansion board is operational
-
-Your -py module is operational
-
-If you still cannot get the device to show up in your computer, please check that your USB cable has a data connection. 
-
-
-Showing up in Pymakr, but no response / keeps coredumping
-You should now receive something similar to this in the REPL terminal of Pymakr, after you press the reset button:
-
->>> ets Jun  8 2016 00:22:57
+### Step 6
+First, try to press the reset button on the device. The output should look similar to this:
+```
+ets Jun  8 2016 00:22:57
 
 rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
 configsip: 0, SPIWP:0xee
@@ -101,17 +90,44 @@ entry 0x400a05bc
 Pycom MicroPython 1.20.2.rc9 [v1.11-1a257d8] on 2020-06-10; LoPy4 with ESP32
 Type "help()" for more information.
 >>> 
-If this is not the case, you should use the Firmware updater tool: https://docs.pycom.io/gettingstarted/installation/firmwaretool/ to update your module to the latest firmware. A firmware update might also solve some of the Guru-Meditation errors, in that case, also make sure the NVM is formatted using the advanced option:
+```
+This means the module is in working condition and you are done! On the other hand, if it does not do this, but continues to crash or return nothing, try to do a `safe-boot` like described [here](/gettingstarted/programming/safeboot/). That should bring the device in a mode where the python code is disabled, or the previous firmware is loaded. 
 
+If your output looks like this:
+```
+ets Jun  8 2016 00:22:57
 
+rst:0x1 (POWERON_RESET),boot:0x6 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_FEO_V2))
+waiting for download
+```
+Pin `P2` is stuck pulled `LOW`, causing the controller to expect a new firmware upload. This can be caused by ... updating expansion board?
 
+If your expansion board fails to update, check this [Forum post](https://forum.pycom.io/topic/4911/expansion-board-3-1-issues?_=1593093156432) 
+
+> Note: The expansion board firmware updater has some issues in MacOS, causing the dfu-util: set alt interfaces zero error, any other operating system works fine
+
+If that does not help, try to use the [Firmware Updater tool](/updatefirmware/device/). make a more exhaustive guide here.
+
+> After updating the firmware, the heartbeat will be re-enabled. 
+
+### Step 7
+Your expansion board is operational
+
+Your -py module is operational
+
+## Step 8
+
+Measure voltages. 
+If you end up here, your module's hardware is most probably broken. Either the voltage regulator died, or the micrcontroller inside is not responding to any inputs anymore. 
+
+## Notes
 If the firmware upgrade tool returns:
 
 “Failed to connect to ESP32: Timed out waiting for packet header”
 And you followed all previous steps (no blinking heartbeat LED, no orange LED on the expansionboard 3.0, etc.) The probability that your board is dead is quite high. It is quite unusual for both an expansion board and a -py module to die simultaneously, without user error. Generally, this is caused by reversing the polarity on the battery charger, thus breaking both modules. 
 
 
-Intermittent problems
+# Intermittent problems
 Intermittent problems are generally caused by
 
 Unstable power supply
