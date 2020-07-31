@@ -20,11 +20,11 @@ In the following guide, we will explain the basic process to get started using y
 
 <!-- ![](/gitbook/assets/getting_started%20%281%29.png) -->
 
-# Step 1: Setting up the hardware
+## Step 1: Setting up the hardware
 
 In the first part of this getting started guide, we will take you through setting up your device. Firstly we will cover how to connect the module to your computer via USB.
 
-#### Connect your board to your computer through USB
+### Connect your board to your computer through USB
 
 This step works the same for all our development boards and expansion boards. Insert your development board (Lopy, Wipy, etc.) into the expansion board (Pytrack, Pysense, Expansion board etc.) with the reset button and RGB LED above the USB connector like shown below. Connect an USB cable to the USB port and your computer. Now, you can talk to your device through USB, but we still need some software to upload your first program!
 
@@ -33,7 +33,7 @@ This step works the same for all our development boards and expansion boards. In
 >Note: If you do not have an expansion board, you are able to use a [USB-Serial converter](/gettinstarted/programming/usbserial/) or [WiFi](/gettingstarted/programming/ftp/) to connect.
 
 
-# Step 2: Setting up your computer
+## Step 2: Setting up your computer
 
 Now that your module is successfully connected, you will need to install some software on your computer to interface with it. For this, we use Pymakr, a plugin for both Visual Studio Code and Atom IDE. Through either one of the environments, we can connect to the board and talk Python! 
 
@@ -47,7 +47,7 @@ Once you have installed and opened the IDE, the board should automatically show 
 
 >Note: If your device does not get recognized the first time on Windows, check if you need [additional drivers](/gettingstarted/software/drivers/)
 
-# Step 3: Programming your module
+## Step 3: Programming your module
 
 Now that you have connected your device and installed Pymakr, it is time to begin programming your device!
 
@@ -127,7 +127,7 @@ If you need to remove files from your device you can use the following commands:
 >>> os.fsformat('/flash')
 ```
 
-# Step 4: Further references
+## Step 4: Further references
 Now that we got the basic example running, you can proceed to develop your own application! For further references, you can check the links below:
 
 * [More examples](/tutorials/)

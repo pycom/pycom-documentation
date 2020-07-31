@@ -18,6 +18,7 @@ The follow pages contain all information relating to each product, for example: 
 - [Lopy 4](/datasheets/development/lopy4/)
 - [Gpy](/datasheets/development/gpy/)
 - [Sipy](/datasheets/development/sipy/)
+- [Fipy](/datasheets/development/fipy/)
 
 ## OEM modules
 
