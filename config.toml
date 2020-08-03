@@ -420,6 +420,12 @@ theme = "doc-theme"
     parent = "tutorials@expansionboards"
     weight = 60
 [[menu.main]]
+    name = "Sleep"
+    url = "/tutorials/expansionboards/sleep/"
+    identifier = "tutorials@expansionboards@sleep"
+    parent = "tutorials@basic"
+    weight = 20
+[[menu.main]]
     name = "Advanced"
     url = "/tutorials/advanced/"
     identifier = "tutorials@advanced"
