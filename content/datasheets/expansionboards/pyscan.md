@@ -18,7 +18,14 @@ The datasheet of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-
 
 ## Pyscan Libraries
 
-* Pyscan libraries to use the RFID/NFC reader and sensors are located [here](https://github.com/pycom/pycom-libraries/tree/master/pyscan)
+* Pyscan libraries to use the RFID/NFC reader are located [here](https://github.com/pycom/pycom-libraries/tree/master/pyscan)
+* The accelerometer library is [here](https://github.com/pycom/pycom-libraries/blob/master/pytrack/lib/LIS2HH12.py)
+
+{{% hint style="info" %}}
+For the time being, we recommend uploading the `MFRC630.mpy` file via FTP due to current Pymakr limitations that will be fixed shortly.
+{{% /hint %}}
+
+Libraries for the rest of the components will be added soon.
 
 ## Pyscan components:
 
@@ -34,24 +41,21 @@ For other Operating Systems, no driver is required.
 
 ## Pinout
 
-The pinout of the Pyscan is available as a PDF File
+The pinout of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-pinout.pdf)
 
-<a href="/gitbook/assets/pyscan-pinout.pdf" target="_blank"> Pyscan Pinout </a>
 
 ![](/gitbook/assets/pyscan-pinout-1.png)
-## Notes 
-### Battery Charger
 
-The board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, it will charge the battery if connected.
+## Battery Charger
 
-> Make sure you check the polarity of the battery before plugging it in! Connect the positive side to the side marked with a `+`.
+The board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, it will charge the battery (if connected).
 
 
 
 
-### Mechanical Dimensionsde
+## Mechanical Dimensionsde
 ![](/gitbook/assets/pyscan_V0.7_20180416_MecahnicalDimensions.png)
 
-### 3D model for case design
+## 3D model for case design
 
-* Please see the [3D model](/gitbook/assets/PyScan_v0.7.step) (step format)
+* Please see the [3D model] (/gitbook/assets/PyScan_v0.7.step) (step format)
