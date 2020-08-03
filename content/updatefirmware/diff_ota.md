@@ -6,25 +6,35 @@ aliases:
     - chapter/updatefirmwate/diff_ota
 
 ---
-
-It is also possible to do an OTA differential firmware update using [**OTA Method A**](../ota). In case of a differential update, you download a diff/patch file instead of a complete binary. This can save a considerable amount of bandwidth while downloading the firmware. The exact size of the patch file depends on the source and the target versions and it will usually be minimum when upgrading to successive versions.
-The diff generation and patching is based on `bsdiff`. You can download the diff generator from [here](/gitbook/assets/DiffCreator.tar.gz).
-After extracting the contents, go to the directory and do `make` to build the utility. After building you can run the following command in the terminal to generate the patch file:
-```bash
-./diff_creator source.bin target.bin patch.bin
-```
-
-Here the 'source.bin' is the current binary of your device, 'target.bin' is the target binary and patch.bin is the name of the patch file that you want to be generated.
-The generated patch.bin file should now be downloaded to the device instead of target.bin. In the example given in `Method A`, if you are upgrading from firmware_1.0.0 to firmware_1.0.1, the patch file would be renamed as firmware_1.0.1.bin.
-After the file has been downloaded, the device identify it as a patch file and you will see the following message in the REPL:
-```
-Differential Update Image detected. The device will restart to apply the patch.
-```
-After this, the device will reset and apply the patch.
-```
-Patching the binary...
-Patching SUCCESSFUL.
-```
-After patching is done, the device will restart again and this time the updated firmware will be loaded.
-
 > Note: You can only perform the differential updates if your current firmware version supports this feature. The target can be any version (above 1.20).
+In case of a differential update, you download a diff/patch file instead of a complete binary. This can save a considerable amount of bandwidth while downloading the firmware. The exact size of the patch file depends on the source and the target versions and it will usually be minimum when upgrading to successive versions.
+
+To perform a differential firmware update Over The Air (OTA), you will need the following tools and files:
+* [bsdiff](/gitbook/assets/DiffCreator.tar.gz)
+* Old firmware version archive
+* New firmware version archive
+
+> It is also possible to do an OTA differential firmware update using [**OTA Method A**](../ota). 
+
+1. After extracting the contents of the `bsdiff` archive, navigate to the directory with the terminal and type `make` to build the utility. 
+2. After building you can run the following command in the terminal to generate the patch file:
+    ```bash
+    ./diff_creator source.bin target.bin patch.bin
+    ```
+    * `source.bin` is the current binary of your device, 
+    * `target.bin' is the target binary
+    * `patch.bin` is the name of the patch file that you want to be generated.
+    > Note: replace the `.bin` filenames with the actual filenames.
+3. Now, download the `patch.bin` file to the device using [...] . Note that this file is considerably smaller than the `target.bin` file. 
+
+    ```
+    Differential Update Image detected. The device will restart to apply the patch.
+    ```
+
+4. Afterwards, the device will reset and apply the patch.
+    ```
+    Patching the binary...
+    Patching SUCCESSFUL.
+    ```
+5. After patching is done, the device will restart again and this time the updated firmware will be loaded.
+
