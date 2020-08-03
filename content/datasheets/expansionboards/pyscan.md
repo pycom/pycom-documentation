@@ -41,8 +41,9 @@ For other Operating Systems, no driver is required.
 
 ## Pinout
 
-The pinout of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-pinout.pdf)
+The pinout of the Pyscan is available as a PDF File
 
+<a href="/gitbook/assets/pyscan-pinout.pdf" target="_blank"> Pyscan Pinout </a>
 
 ![](/gitbook/assets/pyscan-pinout-1.png)
 
