@@ -213,5 +213,7 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     | HP CAT FSM               |IDLE                |
     +--------------------------+--------------------+
     ```
+* During and after `lte.connect()` we cannot call the `print(lte.send_at_cmd('AT!="fsm"'))` as the modem is in `data state`.
 * Potential other errors:
     * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network 
+    * `OSError: [Errno 113] ECONNABORTED`: 

@@ -329,7 +329,13 @@ theme = "doc-theme"
     parent = "tutorials@networkprotocols"
     weight = 10
 [[menu.main]]
-    name = "HTTP Webserver"
+    name = "HTTP Client"
+    url = "/tutorials/networkprotocols/httpclient/"
+    identifier = "tutorials@networkprotocols@httpclient"
+    parent = "tutorials@networkprotocols"
+    weight = 12
+[[menu.main]]
+    name = "HTTP Server"
     url = "/tutorials/networkprotocols/webserver/"
     identifier = "tutorials@networkprotocols@webserver"
     parent = "tutorials@networkprotocols"
@@ -364,6 +370,12 @@ theme = "doc-theme"
     identifier = "tutorials@networkprotocols@socket"
     parent = "tutorials@networkprotocols"
     weight = 50
+[[menu.main]]
+    name = "WiFi Sniffer"
+    url = "/tutorials/networkprotocols/wifisniffer/"
+    identifier = "tutorials@networkprotocols@wifisniffer"
+    parent = "tutorials@networkprotocols"
+    weight = 60
 
 [[menu.main]]
     name = "Expansion Boards"
