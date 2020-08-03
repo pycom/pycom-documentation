@@ -80,7 +80,7 @@ Announcements & News --> Announcements for members only --> the Firmware Files f
     # sqnsupgrade.run('/sd/name.dup', '/sd/updater.elf')
 
     ```
-    >Note: Replace `name.dup` or `z`upgdiff_old-to-new.dup` with the actual filename. There are different versions for `CAT-M1`  and `NB-IoT`
+    >Note: Replace `name.dup` or `upgdiff_old-to-new.dup` with the actual filename. There are different versions for `CAT-M1`  and `NB-IoT`
 
 4. The command will now make sure the firmware is updated. This takes about 5 minutes. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
     >Note: **Do not disconnect power to the module during the updating process**
