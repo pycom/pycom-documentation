@@ -14,7 +14,6 @@ import time
 import socket
 
 lte = LTE()
-lte.init()
 #when using verizon, use 
 #lte.init(carrier=verizon)
 #when usint AT&T use, 
