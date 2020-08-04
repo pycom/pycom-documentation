@@ -17,7 +17,7 @@ lte = LTE()
 #when using verizon, use 
 #lte.init(carrier=verizon)
 #when usint AT&T use, 
-#use lte.init(carrier=at&t)
+#lte.init(carrier=at&t)
 
 #some carriers do not require an APN
 #also, check the band settings, for some carriers they auto-configure.
