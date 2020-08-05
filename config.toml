@@ -1639,6 +1639,12 @@ theme = "doc-theme"
     identifier = "advance@encryption"
     parent = "advance"
     weight = 30
+[[menu.main]]
+    name = "Frozen code"
+    url = "/advance/frozen/"
+    identifier = "advance@frozen"
+    parent = "advance"
+    weight = 40
 
 [[menu.main]]
     name="License"
