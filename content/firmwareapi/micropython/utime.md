@@ -67,7 +67,7 @@ Just like `ticks_ms` above, but in microseconds.
 
 Same as `ticks_us`, but faster.
 
-#### utime.ticks\_diff(old, new)
+#### utime.ticks\_diff(new, old)
 
 Measure period between consecutive calls to `ticks_ms()`, `ticks_us()`, or `ticks_cpu()`. The value returned by these functions may wrap around at any time, so directly subtracting them is not supported. `ticks_diff()` should be used instead. "old" value should actually precede "new" value in time, or result is undefined. This function should not be used to measure arbitrarily long periods of time (because `ticks_*()` functions wrap around and usually would have short period). The expected usage pattern is implementing event polling with timeout:
 
@@ -76,7 +76,7 @@ Measure period between consecutive calls to `ticks_ms()`, `ticks_us()`, or `tick
 # Wait for GPIO pin to be asserted, but at most 500us
 start = time.ticks_us()
 while pin.value() == 0:
-    if time.ticks_diff(start, time.ticks_us()) > 500:
+    if time.ticks_diff(time.ticks_us(), start) > 500:
         raise TimeoutError
 ```
 
