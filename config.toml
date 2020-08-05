@@ -1408,12 +1408,19 @@ theme = "doc-theme"
     parent = "pybytes"
     weight = 80
 
- [[menu.main]]
-     name = "Pymesh Integration"
-     url = "/pybytes/pymeshintegration/"
-     identifier = "pybytes@pymeshintegration"
-     parent = "pybytes"
-     weight = 90
+[[menu.main]]
+   name = "Pymesh Integration"
+   url = "/pybytes/pymeshintegration/"
+   identifier = "pybytes@pymeshintegration"
+   parent = "pybytes"
+   weight = 90
+
+[[menu.main]]
+   name = "Machine Learning"
+   url = "/pybytes/mlintegration/"
+   identifier = "pybytes@mlintegration"
+   parent = "pybytes"
+   weight = 100
 
 [[menu.main]]
     name = "Amazon IoT"
