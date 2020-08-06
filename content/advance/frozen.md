@@ -32,5 +32,5 @@ What we call `Frozen` code, relates to a principle in MicroPython where you can 
     >>> Block()
     My Frozen codeblock
     ```
-
+This works similar to `import machine` and the other built in modules.
 This concludes the section about Frozen code. You should now be able to include Frozen python code inside the firmware. 
