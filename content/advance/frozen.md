@@ -9,8 +9,8 @@ What we call `Frozen` code, relates to a principle in MicroPython where you can 
 1. Download the (latest) source code from our [Github Repository](https://github.com/pycom/pycom-micropython-sigfox) and extract the archive, or use the GitHub desktop tool. If you have never build firmware from the sourcecode before, you can find the setup guide on GitHub as well. 
 
 2. Inside the folder `pycom-micropython-sigfox/esp32/frozen` you will find the `frozen` section. We already have frozen some of the python modules into the firmware, such as `sqnsupgrade.py` and `OTA.py`.
-3. In here, you can find the `_main.py` and `_boot.py` files in the `frozen/Base/` folder. These are similar to `main.py` and `boot.py` files you can build into the source code, with the exception that `_boot.py` will also run in safeboot mode. Moreover can only change the behaviour by rebuilding and reflashing the firmware. 
-    > Note that if you add anything in the `_boot.py`, keep the code already in the boot file, as that enables the output to REPL.
+3. You can find the `_main.py` and `_boot.py` files in the `frozen/Base/` folder. These are similar to `main.py` and `boot.py` files you can build into the source code, with the exception that `_boot.py` will also run in safeboot mode. Moreover can only change the behaviour by rebuilding and reflashing the firmware. 
+    > Note that if you plan to make changes in the `_boot.py`, keep the code already in the file, as that enables the output to REPL.
 
     > When building firmware with `VARIANT=PYBYTES`, you can find the `_boot.py` and `_main.py` in the `frozen/Pybytes/` folder and the files in `Base` will **NOT** be used
 
@@ -32,5 +32,5 @@ What we call `Frozen` code, relates to a principle in MicroPython where you can 
     >>> Block()
     My Frozen codeblock
     ```
-This works similar to `import machine` and the other built in modules.
+This works similar to `import machine` and the other built-in modules.
 This concludes the section about Frozen code. You should now be able to include Frozen python code inside the firmware. 
