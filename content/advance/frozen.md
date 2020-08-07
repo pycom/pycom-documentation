@@ -5,7 +5,7 @@ In this section, we discuss the usage of so called `Frozen` code. This is only u
 
 What we call `Frozen` code, relates to a principle in MicroPython where you can include specific codeblocks or python module inside the firmware, such that you do not have to manually upload them. This can be very useful if you have a specific section of code you want to include on all your devices, without manually uploading it every time and risk losing it when formatting the file system.
 
-## How To use the Frozen section (Without Pybytes)
+## How To use the Frozen section
 1. Download the (latest) source code from our [Github Repository](https://github.com/pycom/pycom-micropython-sigfox) and extract the archive, or use the GitHub desktop tool. If you have never build firmware from the sourcecode before, you can find the setup guide on GitHub as well. 
 
 2. Inside the folder `pycom-micropython-sigfox/esp32/frozen` you will find the `frozen` section. We already have frozen some of the python modules into the firmware, such as `sqnsupgrade.py` and `OTA.py`.
