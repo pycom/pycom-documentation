@@ -20,7 +20,7 @@ In the following guide, we will explain the basic process to get started using y
 
 <!-- ![](/gitbook/assets/getting_started%20%281%29.png) -->
 
-# Step 1: Setting up the hardware
+## Step 1: Setting up the hardware
 
 Congratulations on your Pycom module! In the first part of this getting started guide, we will take you through setting up your device. Firstly we will cover how to connect the module to your computer via USB.
 
@@ -129,6 +129,14 @@ If you need to remove files from your device you can use the following commands:
 import os
 os.fsformat('/flash')
 ```
+
+## Getting started with
+From here on, you can continue to use the additional features of your expansionboard:
+
+|[ Pygate](/tutorials/expansionboards/pysense/)| [Pysense](/tutorials/expansionboards/pysense/) | [Pysense 2.0 X](/tutorials/expansionboards/pysense/)| [Pytrack](/tutorials/expansionboards/pysense/)| [Pytrack 2.0 X](/tutorials/expansionboards/pysense/)| [PyScan ](/tutorials/expansionboards/pysense/)|
+|:---|:---|:---|:---|:---|:---|
+| ![](/gitbook/assets/expansion_board_3_lopy4.png)|![](/gitbook/assets/pysense_icon.png) | ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png) |
+
 
 # Step 4: Further reading
 Now that we got the basic example running, you can continue with the links below.
