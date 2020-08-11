@@ -1099,7 +1099,7 @@ theme = "doc-theme"
     url = "/updatefirmware/diff_ota/"
     identifier = "updatefirmware@diff_ota"
     parent= "updatefirmware"
-    weight = 20
+    weight = 25
 
 [[menu.main]]
     name = "Expansion Board"
