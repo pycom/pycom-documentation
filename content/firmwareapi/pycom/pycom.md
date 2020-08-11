@@ -154,7 +154,7 @@ data = pulses_get(pin, 100)
 
 #### pycom.ota\_finish()
 
-Perform a firmware update. These methods are internally used by a firmware update though FTP. The update starts with a call to `ota_start()`, followed by a series of calls to `ota_write(buffer)`, and is terminated with `ota_finish()`. After reset, the new image gets active. `buffer` shall hold the image data to be written, in arbitrary sizes. A block size of 4096 is recommended.
+Perform a firmware update. These methods are internally used by a firmware update through FTP. The update starts with a call to `ota_start()`, followed by a series of calls to `ota_write(buffer)`, and is terminated with `ota_finish()`. After reset, the new image gets active. `buffer` shall hold the image data to be written, in arbitrary sizes. A block size of 4096 is recommended.
 
 Example:
 
@@ -197,5 +197,11 @@ Instead of reading the data to be written from a file, it can obviously also be 
   _Note: When the firmware is built with option_ `FS_USE_LITTLEFS` _the file system for_ `/flash` _is forced to be LittleFS._
 
 * `safeboot` Enable or Disable safemoot mode.
-* `reset` Set `True` to reset target after updating the `bootmgr` options , `False` for not resetting.
+* `reset` Set `True` to reset target after updating the `bootmgr` options, `False` for not resetting.
+
+#### pycom.diff_update_enabled()
+
+Provides the status of the differential update feature. Returns `True` if differential update is enabled and `False` otherwise. `DIFF_UPDATE_ENABLED` build flag can be used to enable the differential update feature.
+
+> Note: This function is only available in the firmware versions which support differential update feature. If you get an exception while calling this function, your firmware version does not support this feature.
 
