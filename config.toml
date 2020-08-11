@@ -329,7 +329,13 @@ theme = "doc-theme"
     parent = "tutorials@networkprotocols"
     weight = 10
 [[menu.main]]
-    name = "HTTP Webserver"
+    name = "HTTP Client"
+    url = "/tutorials/networkprotocols/httpclient/"
+    identifier = "tutorials@networkprotocols@httpclient"
+    parent = "tutorials@networkprotocols"
+    weight = 12
+[[menu.main]]
+    name = "HTTP Server"
     url = "/tutorials/networkprotocols/webserver/"
     identifier = "tutorials@networkprotocols@webserver"
     parent = "tutorials@networkprotocols"
@@ -364,6 +370,12 @@ theme = "doc-theme"
     identifier = "tutorials@networkprotocols@socket"
     parent = "tutorials@networkprotocols"
     weight = 50
+[[menu.main]]
+    name = "WiFi Sniffer"
+    url = "/tutorials/networkprotocols/wifisniffer/"
+    identifier = "tutorials@networkprotocols@wifisniffer"
+    parent = "tutorials@networkprotocols"
+    weight = 60
 
 [[menu.main]]
     name = "Expansion Boards"
@@ -407,6 +419,12 @@ theme = "doc-theme"
     identifier = "tutorials@expansionboards@pyscan"
     parent = "tutorials@expansionboards"
     weight = 60
+[[menu.main]]
+    name = "Sleep"
+    url = "/tutorials/expansionboards/sleep/"
+    identifier = "tutorials@expansionboards@sleep"
+    parent = "tutorials@basic"
+    weight = 20
 [[menu.main]]
     name = "Advanced"
     url = "/tutorials/advanced/"
@@ -986,13 +1004,6 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
-    name = "OEM Deepsleep"
-    url = "/datasheets/oem/deepsleep/"
-    identifier = "datasheets@oem@deepsleep"
-    parent = "datasheets@oem"
-    weight = 70
-
-[[menu.main]]
     name = "Expansion Boards and Shields"
     url = "/datasheets/expansionboards/"
     identifier = "datasheets@boards"
@@ -1086,12 +1097,20 @@ theme = "doc-theme"
     identifier = "updatefirmware@device"
     parent= "updatefirmware"
     weight = 10
+
 [[menu.main]]
     name = "Device (OTA)"
     url = "/updatefirmware/OTA/"
     identifier = "updatefirmware@ota"
     parent= "updatefirmware"
     weight = 20
+
+[[menu.main]]
+    name = "Device (Differential OTA)"
+    url = "/updatefirmware/diff_ota/"
+    identifier = "updatefirmware@diff_ota"
+    parent= "updatefirmware"
+    weight = 25
 
 [[menu.main]]
     name = "Expansion Board"

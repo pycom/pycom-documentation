@@ -23,17 +23,17 @@ The pinout of the Pytrack is available as a [PDF File](/gitbook/assets/pytrack-p
 
 
 ![](/gitbook/assets/pytrack-pinout-1.png)
-
-## Battery Charger
+## Notes
+### Battery Charger
 
 The board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, it will charge the battery (if connected).
+> Make sure you check the polarity of the battery before plugging it in! Connect the positive side to the side marked with a `+`.
 
 
-
-## Mechanical Dimensions
+### Mechanical Dimensions
 
 ![](/gitbook/assets/Pysense_v1.1_MechanicalDimensions_b.png)
 
-## 3D model for case design
+### 3D model for case design
 
-* Please see the <a href="/gitbook/assets/PyTrack_v1.1.step" target="_blank"> 3D model </a> (step format)
+* Please see the [3D model](/gitbook/assets/PyTrack_v1.1.step") (step format)

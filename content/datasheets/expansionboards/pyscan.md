@@ -41,9 +41,8 @@ For other Operating Systems, no driver is required.
 
 ## Pinout
 
-The pinout of the Pyscan is available as a PDF File
+The pinout of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-pinout.pdf)
 
-<a href="/gitbook/assets/pyscan-pinout.pdf" target="_blank"> Pyscan Pinout </a>
 
 ![](/gitbook/assets/pyscan-pinout-1.png)
 
@@ -59,4 +58,4 @@ The board features a single cell Li-Ion/Li-Po charger. When the board is being p
 
 ## 3D model for case design
 
-* Please see the <a href="/gitbook/assets/PyScan_v0.7.step" target="_blank"> 3D model </a> (step format)
+* Please see the [3D model] (/gitbook/assets/PyScan_v0.7.step) (step format)

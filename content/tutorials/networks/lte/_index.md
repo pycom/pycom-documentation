@@ -14,29 +14,34 @@ import time
 import socket
 
 lte = LTE()
+lte.init()
+#some carriers have special requirements, check print(lte.send_at_cmd("AT+SQNCTM=?")) to see if your carrier is listed.
 #when using verizon, use
 #lte.init(carrier=verizon)
 #when usint AT&T use,
 #lte.init(carrier=at&t)
 
 #some carriers do not require an APN
-#also, check the band settings, for some carriers they auto-configure.
+#also, check the band settings with your carrier
 lte.attach(band=20, apn="your apn")
+print("attaching..",end='')
 while not lte.isattached()
     time.delay(0.25)
-    print('.')
+
+    print('.',end='')
     print(lte.send_at_cmd('AT!="fsm"'))         # get the System FSM
-print("LTE modem attached!")
+print("attached!")
+
 lte.connect()
+print("connecting [##",end='')
 while not lte.isconnected():
     time.sleep(0.25)
-    print('#')
+    print('#',end='')
     #print(lte.send_at_cmd('AT!="showphy"'))
     print(lte.send_at_cmd('AT!="fsm"'))
-print("LTE modem connected!")
+print("] connected!")
 
 print(socket.getaddrinfo('pycom.io', 80))  
-
 lte.deinit()
 #now we can safely machine.deepsleep()
 ```
@@ -44,10 +49,31 @@ The last line of the script should return a tuple containing the IP address of t
 
 >Note: the first time, it can take a long while to attach to the network.
 
+# LTE disconnecting
+When the LTE disconnects in an unexpected situation, for example when the signal is lost, `lte.isconnected()` will still return `True`. Currently, there is a solution using the callback and handler function listed below:
+```python
+from network import LTE
+import time
+from sleep import sleep
+import machine
+def cb_handler(arg):
+    print("CB: LTE Coverage lost")
+    print("CB: sleep", s)
+    print("CB: deinit")
+    lte.deinit()
+    print("CB: reset")
+    machine.reset()
+
+lte.lte_callback(LTE.EVENT_COVERAGE_LOSS, cb_handler)
+
+```
 # LTE Troubleshooting guide
+
+
 
 Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
 1. Before calling `lte.attach()`, the status will be `STOPPED`.
+
     ```
     SYSTEM FSM
     ==========
@@ -184,6 +210,7 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     | HP CAT FSM               |IDLE                |
     +--------------------------+--------------------+
     ```
+
 * Firmware version:
     Use the following to check the version number:
     ```python

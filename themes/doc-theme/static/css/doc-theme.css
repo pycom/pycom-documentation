@@ -242,10 +242,19 @@ li.hot {
 .theme--light.v-toolbar {
     color: #171730!important;
 }
+/* changes 13-07-2020:
+  corrected tabs in table of contents (top right)
+
+  */
 
 nav#TableOfContents {
+    display: contents;
     overflow-y: scroll;
     max-height: 640px;
+}
+
+nav#TableOfContents > ul{
+  padding-left:0px
 }
 
 img {

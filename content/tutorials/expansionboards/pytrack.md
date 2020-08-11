@@ -7,11 +7,9 @@ aliases:
 ---
 
 Both the Pysense and Pytrack use the same accelerometer. Please see the [Pysense Examples](../pysense) to see how to use the accelerometer.
+>Note: You can find this example in the [GitHub repository](https://github.com/pycom/pycom-libraries/tree/master/pytrack). Over there, you can also find the relevant libraries.
 
->Note: You need to add the libraries from [here](https://github.com/pycom/pycom-libraries/tree/master/pytrack) in the `lib` folder of your project before the example will work. You can also find the example in there.
-
-
-## Example
+## GPS Example
 
 ```python
 

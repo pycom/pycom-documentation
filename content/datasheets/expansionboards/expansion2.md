@@ -29,6 +29,7 @@ The pinout of the Expansion Board is available as a [PDF File](/gitbook/assets/e
 Be gentle when plugging and unplugging from the USB connector. Whilst the USB connector is soldered and is relatively strong, if it breaks off it can be very difficult to fix.
 {{% /hint %}}
 
-## Battery Charger
+## Notes 
+### Battery Charger
 
 The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, the Expansion Board will charge the battery \(if connected\). When the `CHG` jumper is present, the battery will be charged at `450mA`. If this value is too high for your application, removing the jumper lowers the charge current to `100mA`.
