@@ -7,7 +7,7 @@ aliases:
 
 ---
 
-Differential update allows you to update your device using a differntial update file(patch file) instead of a complete new binary. This can save a considerable amount of space and bandwidth while downloading the new firmware. The exact size of the patch file depends on the differences  between the source and the target versions and it will usually be quite small when upgrading to a successive version.
+Differential update allows you to update your device using a differential update file (patch file) instead of a complete new binary. This can save a considerable amount of space and bandwidth while downloading the new firmware. The exact size of the patch file depends on the differences  between the source and the target versions and it will usually be quite small when upgrading to a successive version.
 
 > Note: You can only perform the differential updates if your current firmware version supports this feature. The target can be any version above `1.20`. You can check whether this feature is enabled in your firmware or not by calling `pycom.diff_update_enabled()` function.
 
@@ -20,7 +20,7 @@ In order to generate the differential update file, you will need the following t
 * Old firmware version binary
 * New firmware version binary
 
-> Note: The finary files used for this are the *.bin* files generated after firmware is built. If you have downloaded the firmware as a compressed archive, you can decompress it to find the *.bin* file.
+> Note: The binary files used for this are the *.bin* files generated after the firmware is built. If you have downloaded the firmware as a compressed archive, you can decompress it to find the *.bin* file.
 
 1. Download the `DiffCreator` tool using the above link.
 2. After extracting the contents of the `DiffCreator` archive, navigate to the directory with the terminal and type `make` to build the utility. 
