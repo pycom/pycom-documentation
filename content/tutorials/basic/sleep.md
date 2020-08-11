@@ -82,34 +82,4 @@ print("This will never be printed")
 
 >Note: Using `deepsleep()` will also stop the USB connection. Be wary of that when trying to upload new code to the device!
 
-#### Other methods
-
-The expansionboards (Pysense 2.0 X, and Pytrack 2.0 X, DeepSleep shield) use a different mechanism to put the controller to sleep. A separate controller on the expansion board will put the main controller to sleep. This will actually cut all power from the module for the set amount of time, hard resetting it. Cutting power to the expansion board will work as well. Using this method, we can still recover the wake up reason and remaining sleep time. The example below works was written for a Pysense, but works on any of the boards by changing the first lines
-
-```python
-from pysense import Pysense
-py = Pysense()
-py.setup_sleep(10) # set sleep time of 10 seconds
-py.go_to_sleep()
-print("this will never be printed")
-```
-Using this method, we can also wake the board using the accelerometer and external pin `P6` by rising (`True`) or falling (`False`) edge 
-
-```python
-from pysense import Pysense
-from LIS2HH12 import LIS2HH12
-
-py = Pysense()
-acc = LIS2HH12()
-
-# enable activity and also inactivity interrupts, using the default callback handler
-py.setup_int_wake_up(True, True)
-
-# set the acceleration threshold to 2000mG (2G) and the min duration to 200ms
-acc.enable_activity_interrupt(2000, 200)
-
-py.set_int_pin_wake_up(True) #wake up on rising edge on pin 6 of the expansion header
-
-py.go_to_sleep()# the device will sleep indefinitely, until pin 6 goes high, or the accelerometer is triggered
-```
-LTE Power saving mode (PSM)
+For the Pysense, Pytrack and Pyscan expansionboards, an additional sleep function is available. You can find out more about that [here](../expansionboards/sleep/)

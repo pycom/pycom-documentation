@@ -9,10 +9,7 @@ aliases:
 
 ![](/gitbook/assets/wipy2-1.png)
 
-{{% hint style="info" %}}
- Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
-{{% /hint %}}
-
+> Note: Orient the RGB LED / reset button over the USB connector on any expansion board 
 
 **Store**: Discontinued, See [WiPy3](../wipy3)
 
@@ -31,19 +28,15 @@ The pinout of the WiPy2 is available as a [PDF File](/gitbook/assets/wipy2-pinou
 
 ![](/gitbook/assets/wipy2-pinout.png)
 
-{{% hint style="info" %}}
-Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
-{{% /hint %}}
+> Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
 
 ## Notes
 
-### WiFi
-
-By default, upon booting up the WiPy2 will create a WiFi access point with the SSID `wipy-wlan-XXXX`, where `XXXX` is a random 4-digit number, and the password `www.pycom.io`.
-
 ### Power
+Do not use the 3.3V pin **in combination with** the Vin pin to supply the device as this will damage the voltage regulator on the board.
 
-The `Vin` pin on the WiPy2 can be supplied with a voltage ranging from `3.5v` to `5.5v`. The `3.3v` pin on the other hand is output **only**, and must not be used to feed power into the WiPy2, otherwise the on-board regulator will be damaged.
+### Antenna placement
+Always attach the appropriate antenna when using a wireless connection. For WiFi / BLE, it is not mandatory to use an external antenna when you did not explicitly specify this in your code. 
 
 ### Deep Sleep
 

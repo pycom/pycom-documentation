@@ -19,16 +19,17 @@ The pinout of the Pysense is available as a [PDF File](/gitbook/assets/pysense2-
 
 
 ![](/gitbook/assets/pysense2-pinout.png)
-
-## Battery Charger
+## Notes
+### Battery Charger
 
 The board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, it will charge the battery (if connected).
+> Make sure you check the polarity of the battery before plugging it in! Connect the positive side to the side marked with a `+`.
 
-## Mechanical Dimensions
+### Mechanical Dimensions
 
 ![](/gitbook/assets/Pysense_v2.0X_MechanicalDimensions.png)
 
 
-## 3D model for case design
+### 3D model for case design
 
 * Please see the [3D model](/gitbook/assets/pysense_v2.0X.step) (Step format)

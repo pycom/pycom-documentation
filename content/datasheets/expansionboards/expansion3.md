@@ -26,23 +26,20 @@ The expansion board contains 6 headers labeled:
 - RUN
 - BAT
 - LED
-- CHG
+- CHG: Decrease battery charging current from 450mA to 100mA
 
 ![](/gitbook/assets/expansion3-pinout-1.png)
 
-{{% hint style="danger" %}}
-Be gentle when plugging and unplugging from the USB connector. Whilst the USB connector is soldered and is relatively strong, if it breaks off it can be very difficult to fix.
-{{% /hint %}}
-
-## Battery Charger
+> Be gentle when plugging and unplugging from the USB connector. Whilst the USB connector is soldered and is relatively strong, if it breaks off it can be very difficult to fix.
+## Notes
+### Battery Charger
+> Make sure you check the polarity of the battery before plugging it in! Connect the positive side to the side marked with a `+`. 
 
 The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, the Expansion Board will charge the battery \(if connected\). When the `CHG` jumper is present, the battery will be charged at `450mA`. If this value is too high for your application, removing the jumper lowers the charge current to `100mA`.
 
-{{% hint style="info" %}}
-To use the battery, pull `P8/G15` high (connect to `3v3`). If you want to use the SD card as well, use a 10k pull-up.
-{{% /hint %}}
+> To use the battery, pull `P8/G15` high (connect to `3v3`). If you want to use the SD card as well, use a 10k pull-up.
 
-## Differences between v2.0 and v3.0
+### Differences between v2.0 and v3.0
 
 * The FTDI chip as been replaced with a custom programmed PIC, similar to the
 

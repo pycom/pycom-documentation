@@ -2,16 +2,14 @@
 title: "Deep Sleep Shield"
 aliases:
 ---
+>The Deep Sleep Shield works very similar to how the Pysense / Pytrack sleep modes work
 
-The schematic of the Deep Sleep Shield is available as a PDF File.
+The schematic of the Deep Sleep Shield is available as a [PDF File](/gitbook/assets/deepsleep-schematic.pdf)
 
-<a href="/gitbook/assets/deepsleep-schematic.pdf" target="_blank"> Deep Sleep Schematic </a>
 
 ## Pinout
 
-The pinout of the Deep Sleep Shield is available as a PDF File
-
-<a href="/gitbook/assets/deepsleep-pinout.pdf" target="_blank"> Deep Sleep Pinout </a>
+The pinout of the Deep Sleep Shield is available as a [PDF File](/gitbook/assets/deepsleep-pinout.pdf)
 
 
 ![](/gitbook/assets/deepsleep-pinout.png)

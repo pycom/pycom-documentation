@@ -12,29 +12,32 @@ The follow pages contain all information relating to each product, for example: 
 ## Development Modules
 
 
-- [Wipy 2.0](/datasheets/development/wipy2.md)
-- [Wipy 3.0](/datasheets/development/wipy3.md)
-- [Lopy](/datasheets/development/lopy.md)
-- [Lopy 4](/datasheets/development/lopy4.md)
-- [Gpy](/datasheets/development/gpy.md)
-- [Sipy](/datasheets/development/sipy.md)
+- [Wipy 2.0](/datasheets/development/wipy2/)
+- [Wipy 3.0](/datasheets/development/wipy3/)
+- [Lopy](/datasheets/development/lopy/)
+- [Lopy 4](/datasheets/development/lopy4/)
+- [Gpy](/datasheets/development/gpy/)
+- [Sipy](/datasheets/development/sipy/)
+- [Fipy](/datasheets/development/fipy/)
 
 ## OEM modules
 
-- [W01](/datasheets/oem/w01.md)
-- [L01](/datasheets/oem/l01.md)
-- [L04](/datasheets/oem/l04.md)
-- [Baseboard](datasheets/oem/universal_reference.md)
-- [Deepsleep](datasheets/oem/deepsleep.md)
+- [W01](/datasheets/oem/w01/)
+- [L01](/datasheets/oem/l01/)
+- [L01 OEM Baseboard](/datasheets/oem/l01_reference/)
+- [L04](/datasheets/oem/l04/)
+- [Universal OEM Baseboard](/datasheets/oem/universal_reference/)
+
+
 
 ## Expansion boards
-- [Pygate](/datasheets/expansionboards/pygate.md)
-- [Pysense](/datasheets/expansionboards/pysense.md)
-- [Pysense 2.0 X](/datasheets/expansionboards/pysense.md)
-- [Pytrack](/datasheets/expansionboards/pytrack.md)
-- [Pysense 2.0 X](/datasheets/expansionboards/pysense.md)
-- [Pyscan](/datasheets/expansionboards/pyscan.md)
-- [Expansion 2](/datasheets/expansionboards/expansion2.md)
-- [Expansion 3](/datasheets/expansionboards/expansion3.md)
-
+- [Pygate](/datasheets/expansionboards/pygate/)
+- [Pysense](/datasheets/expansionboards/pysense/)
+- [Pysense 2.0 X](/datasheets/expansionboards/pysense/)
+- [Pytrack](/datasheets/expansionboards/pytrack/)
+- [Pysense 2.0 X](/datasheets/expansionboards/pysense/)
+- [Pyscan](/datasheets/expansionboards/pyscan/)
+- [Expansion 2](/datasheets/expansionboards/expansion2/)
+- [Expansion 3](/datasheets/expansionboards/expansion3/)
+- [Deepsleep](/datasheets/expansionboards/deepsleep/)
 
