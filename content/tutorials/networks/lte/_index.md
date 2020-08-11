@@ -4,12 +4,10 @@ aliases:
     - chapter/tutorials/lte
 ---
 
-The following tutorials demonstrate the use of the LTE CAT-M1 and NB-IoT functionality on cellular enabled Pycom modules.
+The following tutorial demonstrates the use of the LTE CAT-M1 and NB-IoT functionality on cellular enabled Pycom modules.
 
-Our cellular modules support both LTE CAT-M1 and NB-IoT, these are new lower power, long range, cellular protocols. These are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are.
+GPy and FiPy support both LTE CAT-M1 and NB-IoT. These are newer, low power, long range, cellular protocols. They are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are. Together with the SIM card, the provider will supply you with configuration details: Usually band and APN. Use these in the example code below. 
 
-Both networks make can make use of the same example:
-(Make sure you check the coverage map of your provider to confirm coverage in your area)
 ```python
 from network import LTE
 import time
@@ -18,7 +16,10 @@ import socket
 lte = LTE()
 lte.init()
 #some carriers have special requirements, check print(lte.send_at_cmd("AT+SQNCTM=?")) to see if your carrier is listed.
-# e.g. lte.init(carrier='verizion')
+#when using verizon, use 
+#lte.init(carrier=verizon)
+#when usint AT&T use, 
+#lte.init(carrier=at&t)
 
 #some carriers do not require an APN
 #also, check the band settings with your carrier
@@ -26,9 +27,11 @@ lte.attach(band=20, apn="your apn")
 print("attaching..",end='')
 while not lte.isattached()
     time.delay(0.25)
+
     print('.',end='')
     print(lte.send_at_cmd('AT!="fsm"'))         # get the System FSM
 print("attached!")
+
 lte.connect()
 print("connecting [##",end='')
 while not lte.isconnected():
@@ -39,13 +42,10 @@ while not lte.isconnected():
 print("] connected!")
 
 print(socket.getaddrinfo('pycom.io', 80))  
-
-lte.disconnect()
-lte.detach()
 lte.deinit()
 #now we can safely machine.deepsleep()
 ```
-The last line of the script should return a tuple containing the IP address of the Pycom server.
+The last line of the script should return a tuple containing the IP address of the Pycom webserver.
 
 >Note: the first time, it can take a long while to attach to the network. 
 
@@ -69,8 +69,11 @@ lte.lte_callback(LTE.EVENT_COVERAGE_LOSS, cb_handler)
 ```
 # LTE Troubleshooting guide
 
-Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what is wrong. We are mainly looking at the status of the top two indicators for now.
-* Before calling `lte.attach()`, the status will be `STOPPED`.
+
+
+Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
+1. Before calling `lte.attach()`, the status will be `STOPPED`.
+
     ```
     SYSTEM FSM
     ==========
@@ -96,7 +99,7 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     | HP CAT FSM               |IDLE                |
     +--------------------------+--------------------+
     ```
-* With no SIM card detected, the `RRC TOP FSM` will keep status `CAMPED`. You will see `HP USIM FSM` marked `ABSENT`.
+1. With no SIM card detected, the `RRC TOP FSM` will keep status `CAMPED`. You will see `HP USIM FSM` marked `ABSENT`.
     ```
     SYSTEM FSM
     ==========
@@ -122,19 +125,13 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     | HP CAT FSM               |NULL                |
     +--------------------------+--------------------+
     ```
-* SIM card inserted and attaching:
+1. SIM card inserted and attaching:
     * While `SCANNING`, the `RRC SEARCH FSM` goes from `WAIT_RSSI` to `WAIT_CELL_ID`
     * Later, the `RRC TOP FSM` goes from `SCANNING` to `SYNCING`
     * There are some states in between not discussed here.
     * If it is stuck at `WAIT_RSSI`, check the antenna connection
     * If the system returns multiple times from `SYNCING` to `CAMPED`, check the network availability, simcard placement and / or the firmware version. 
-    >Note: Use the following to check the version number:
-    >```python
-    >import sqnsupgrade
-    >print(sqnsupgrade.info()
-    >```
-    >* Versions LR5.xx are for CAT-M1 
-    >* Versions LR6.xx are for NB-IoT 
+
 
     ```
     SYSTEM FSM
@@ -161,7 +158,7 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     | HP CAT FSM               |IDLE                |
     +--------------------------+--------------------+
     ```
-* Connecting
+1. Connecting
     ```
     SYSTEM FSM
     ==========
@@ -187,7 +184,7 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     | HP CAT FSM               |IDLE                |
     +--------------------------+--------------------+
     ```
-* Connected, note that `EMM MAIN FSM` has state `REGISTERED`. After a while, the `RRC TOP FSM` will have state `CAMPED`.
+1. Connected
     ```
     SYSTEM FSM
     ==========
@@ -213,7 +210,15 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     | HP CAT FSM               |IDLE                |
     +--------------------------+--------------------+
     ```
-* During and after `lte.connect()` we cannot call the `print(lte.send_at_cmd('AT!="fsm"'))` as the modem is in `data state`.
+
+* Firmware version:
+    Use the following to check the version number:
+    ```python
+    import sqnsupgrade
+    sqnsupgrade.info()
+    ```
+    * Versions LR5.xx are for CAT-M1 
+    * Versions LR6.xx are for NB-IoT 
 * Potential other errors:
     * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network 
-    * `OSError: [Errno 113] ECONNABORTED`: 
+

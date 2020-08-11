@@ -1097,12 +1097,20 @@ theme = "doc-theme"
     identifier = "updatefirmware@device"
     parent= "updatefirmware"
     weight = 10
+
 [[menu.main]]
     name = "Device (OTA)"
     url = "/updatefirmware/OTA/"
     identifier = "updatefirmware@ota"
     parent= "updatefirmware"
     weight = 20
+
+[[menu.main]]
+    name = "Device (Differential OTA)"
+    url = "/updatefirmware/diff_ota/"
+    identifier = "updatefirmware@diff_ota"
+    parent= "updatefirmware"
+    weight = 25
 
 [[menu.main]]
     name = "Expansion Board"
