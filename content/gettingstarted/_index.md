@@ -16,7 +16,7 @@ In the following guide, we will explain the basic process to get started using y
 1. [Setting up the hardware](#step-1-setting-up-the-hardware)
 2. [Setting up your computer](#step-2-setting-up-your-computer)
 3. [Programming the module](#step-3-programming-your-module)
-
+4. [Using your Expansionboard](#step-4-using-your-expansionboard)
 
 <!-- ![](/gitbook/assets/getting_started%20%281%29.png) -->
 
@@ -127,15 +127,22 @@ If you need to remove files from your device you can use the following commands:
 >>> os.fsformat('/flash')
 ```
 
-## Getting started with
+## Step 4: Using your expansionboard
 From here on, you can continue to use the additional features of your expansionboard:
+>Note The Expansionboard does not need any additional libraries and provides no additional features
 
-|[ Pygate](/tutorials/expansionboards/pysense/)| [Pysense](/tutorials/expansionboards/pysense/) | [Pysense 2.0 X](/tutorials/expansionboards/pysense/)| [Pytrack](/tutorials/expansionboards/pysense/)| [Pytrack 2.0 X](/tutorials/expansionboards/pysense/)| [PyScan ](/tutorials/expansionboards/pysense/)|
+|[ Pygate](/tutorials/expansionboards/pygate/)| [Pysense](/tutorials/expansionboards/pysense/) | [Pysense 2.0 X](/tutorials/expansionboards/pysense2/)| [Pytrack](/tutorials/expansionboards/pytrack/)| [Pytrack 2.0 X](/tutorials/expansionboards/pytrack2/)| [PyScan ](/tutorials/expansionboards/pyscan/)|
 |:---|:---|:---|:---|:---|:---|
 | ![](/gitbook/assets/expansion_board_3_lopy4.png)|![](/gitbook/assets/pysense_icon.png) | ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png) |
 
+## Step 5: Connecting antennas
+Click on the Icon of your board to get redirect to the datasheet and antenna connection diagrams
 
-# Step 4: Further reading
+|[Wipy 3](/tutorials/expansionboards/pysense/)| [Lopy 4](/tutorials/expansionboards/pysense/) | [Sipy](/tutorials/expansionboards/pysense/)| [Gpy](/tutorials/expansionboards/pysense/)| [Fipy](/tutorials/expansionboards/pysense/)| 
+|:---|:---|:---|:---|:---|
+| ![](/gitbook/assets/wipy.png)|![](/gitbook/assets/lopy4.png) | ![](/gitbook/assets/sipy.png)| ![](/gitbook/assets/gpy.png)| ![](/gitbook/assets/fipy.png)| 
+
+## Further references
 Now that we got the basic example running, you can continue with the links below.
 
 
