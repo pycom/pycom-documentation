@@ -12,7 +12,12 @@ What we call `Frozen` code, relates to a principle in MicroPython where you can 
 3. You can find the `_main.py` and `_boot.py` files in the `frozen/Base/` folder. These are similar to `main.py` and `boot.py` files you can build into the source code, with the exception that `_boot.py` will also run in safeboot mode. Moreover can only change the behaviour by rebuilding and reflashing the firmware. 
     > Note that if you plan to make changes in the `_boot.py`, keep the code already in the file, as that enables the output to REPL.
 
-    > When building firmware with `VARIANT=PYBYTES`, you can find the `_boot.py` and `_main.py` in the `frozen/Pybytes/` folder and the files in `Base` will **NOT** be used
+    > When building firmware with `VARIANT=PYBYTES`, you need to use the `frozen/Pybytes/_boot.py` and `frozen/Pybytes/_main.py`, and the files in `Base` will **NOT** be used. If you then enable Pybytes on boot with the following flag:
+    >```python
+    >import pycom; pycom.pybytes_on_boot(True)
+    >```
+    > Not the `Pybytes/_main.py`, but the `Pybytes/_pybytes_main.py` will be used.
+
 
 4. For example, add to the `_main.py`:
     ```python
