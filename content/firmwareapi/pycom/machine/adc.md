@@ -36,7 +36,7 @@ Enable the ADC block. This method is automatically called on object creation.
 
 Disable the ADC block.
 
-### adc.channel(\* , pin, attn=ADC.ATTN_0DB)
+### adc.channel(pin, attn=ADC.ATTN_0DB)
 
 Create an analog pin.
 
