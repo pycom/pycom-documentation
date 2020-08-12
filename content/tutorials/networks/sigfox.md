@@ -13,26 +13,25 @@ The following tutorials demonstrate how to register and get started with the SiP
 ```python
 from network import Sigfox
 import socket
-​
+
 # init Sigfox for RCZ1 (Europe)
 sigfox = Sigfox(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1)
-​
+
 # create a Sigfox socket
 s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
-​
+
 # make the socket blocking
 s.setblocking(True)
-​
+
 # configure it as uplink only
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
-​
+
 # send some bytes
 s.send(bytes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
 ```
 
-{{% hint style="danger" %}}
-Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use (e.g. without an antenna), may damage the device.
-{{% /hint %}}
+> Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use (e.g. without an antenna), may damage the device.
+
 
 ## Disengage Sequence Number
 
