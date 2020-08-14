@@ -28,7 +28,7 @@ p_in() # get value, 0 or 1
 
 ## Constructors
 
-#### class machine.Pin(id, ...)
+### class machine.Pin(id, [mode=Pin.OUT, pull=None, alt])
 
 Create a new Pin object associated with the string `id`. If additional arguments are given, they are used to initialise the pin. [See pin.init()](../pin#pin-init-mode-pull-alt)
 
@@ -40,7 +40,7 @@ p = Pin('P10', mode=Pin.OUT, pull=None, alt=-1)
 
 ## Methods
 
-#### pin.init(mode, pull, \* , alt)
+### pin.init(mode, pull, * , alt)
 
 Initialise the pin:
 
@@ -58,18 +58,19 @@ Initialise the pin:
 
 Returns: `None`.
 
-#### pin.id()
+### pin.id()
 
 Get the pin id.
 
-#### pin.value(\[value\])
+### pin.value([value])
 
-Get or set the digital logic level of the pin:
+Get or set the digital logic level of the pin. This only works in `Pin.OUT` mode. Values can be:
+* `True` or 1: High
+* `False`or 0: Low
 
-* With no argument, return 0 or 1 depending on the logic level of the pin.
-* With value given, set the logic level of the pin. value can be anything that converts to a boolean. If it converts to True, the pin is set high, otherwise it is set low.
 
-#### pin(\[value\])
+
+### pin([value])
 
 Pin objects are callable. The call method provides a (fast) shortcut to set and get the value of the pin.
 
@@ -84,25 +85,31 @@ pin()   # fast method to get the value
 
 See `pin.value()` for more details.
 
-#### pin.toggle()
+### pin.toggle()
 
 Toggle the value of the pin.
 
-#### pin.mode(\[mode\])
+### pin.mode([mode])
 
-Get or set the pin mode.
+Get or set the pin mode. Modes can be:
+* `Pin.IN` or 1
+* `Pin.OUT` or 2
+* `Pin.OPEN_DRAIN` or 7
 
-#### pin.pull(\[pull\])
+### pin.pull([pull])
 
-Get or set the pin pull.
+Get or set the pin pull. Pull can be:
+* `Pin.PULL_UP`
+* `Pin.PULL_DOWN`
+* None
 
-#### pin.hold(\[hold\])
+### pin.hold([hold])
 
 Get or set the pin hold. You can apply a hold to a pin by passing `True` (or clear it by passing `False`). When a pin is held, its value cannot be changed by using `Pin.value()` or `Pin.toggle()` until the hold is released. This Can be used to retain the pin state through a core reset and system reset triggered by watchdog time-out or Deep-sleep events. Only pins in the RTC power domain can retain their value through deep sleep or reset.
 
 These are: `P2, P3, P4, P6, P8, P9, P10, P13, P14, P15, P16, P17, P18, P19, P20, P21, P22, P23`
 
-#### pin.callback(trigger, handler=None, arg=None)
+### pin.callback(trigger, [handler=None, arg=None])
 
 Set a callback to be triggered when the input level at the pin changes.
 
@@ -130,13 +137,12 @@ p_in = Pin('P10', mode=Pin.IN, pull=Pin.PULL_UP)
 p_in.callback(Pin.IRQ_FALLING | Pin.IRQ_RISING, pin_handler)
 ```
 
-{{% hint style="info" %}}
-For more information on how Pycom's products handle interrupts, see [here](/firmwareapi/notes#interrupt-handling).
-{{% /hint %}}
+>For more information on how Pycom's products handle interrupts, see [here](/firmwareapi/notes#interrupt-handling).
+
 
 ## Attributes
 
-#### class pin.exp\_board
+### class pin.exp_board
 
 Contains all Pin objects supported by the expansion board. Examples:
 
@@ -147,7 +153,7 @@ led = Pin(Pin.exp_board.G16, mode=Pin.OUT)
 Pin.exp_board.G16.id()
 ```
 
-#### class pin.module
+### class pin.module
 
 Contains all `Pin` objects supported by the module. Examples:
 

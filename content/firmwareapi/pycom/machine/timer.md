@@ -18,13 +18,13 @@ These two concepts are grouped into two different subclasses:
 You can create as many of these objects as needed.
 {{% /hint %}}
 
-### Constructors
+## Constructors
 
-#### class Timer.Chrono()
+### class Timer.Chrono()
 
 Create a chronometer object.
 
-#### class Timer.Alarm(handler=None, s, \* , ms, us, arg=None, periodic=False)
+### class Timer.Alarm([handler=None, {s, ms, us}, arg=None, periodic=False])
 
 Create an Alarm object.
 
@@ -35,7 +35,7 @@ Create an Alarm object.
 
 ### Methods
 
-#### Timer.sleep\_us()
+### Timer.sleep_us()
 
 Delay for a given number of microseconds, should be positive or 0 (for speed, the condition is not enforced). Internally it uses the same timer as the other elements of the `Timer` class. It compensates for the calling overhead, so for example, 100us should be really close to 100us. For times bigger than 10,000us it releases the GIL to let other threads run, so exactitude is not guaranteed for delays longer than that.
 
@@ -43,29 +43,29 @@ Delay for a given number of microseconds, should be positive or 0 (for speed, th
 
 Can be used to measure time spans.
 
-### Methods
+## Methods
 
-#### chrono.start()
+### chrono.start()
 
 Start the chronometer.
 
-#### chrono.stop()
+### chrono.stop()
 
 Stop the chronometer.
 
-#### chrono.reset()
+### chrono.reset()
 
 Reset the time count to 0.
 
-#### chrono.read()
+### chrono.read()
 
 Get the elapsed time in seconds.
 
-#### chrono.read\_ms()
+### chrono.read_ms()
 
 Get the elapsed time in milliseconds.
 
-#### chrono.read\_us()
+### chrono.read_us()
 
 Get the elapsed time in microseconds.
 
@@ -95,15 +95,15 @@ class Alarm – get interrupted after a specific interval
 
 Used to get interrupted after a specific interval.
 
-### Methods
+## Methods
 
-#### alarm.callback(handler, \* , arg=None)
+### alarm.callback(handler, * , arg=None)
 
 Specify a callback handler for the alarm. If set to `None`, the alarm will be disabled.
 
 An optional argument `arg` can be passed to the callback handler function. If `None` is specified, the function will receive the object that triggered the alarm.
 
-#### alarm.cancel()
+### alarm.cancel()
 
 Disables the alarm.
 
@@ -127,6 +127,4 @@ class Clock:
 clock = Clock()
 ```
 
-{{% hint style="info" %}}
-For more information on how Pycom's products handle interrupts, see [notes](/firmwareapi/notes#interrupt-handling).
-{{% /hint %}}
+> For more information on how Pycom's products handle interrupts, see [notes](/firmwareapi/notes#interrupt-handling).

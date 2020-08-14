@@ -73,7 +73,7 @@ uart.read(5) # read up to 5 bytes
 
 ## Constructors
 
-#### class machine.UART(bus, ...)
+### class machine.UART(bus, ...)
 
 Construct a UART object on the given `bus`. `bus` can be `0, 1 or 2`. If the `bus` is not given, the default one will be selected (`0`) or the selection will be made based on the given pins.
 
@@ -83,7 +83,7 @@ On the GPy/FiPy UART2 is unavailable because it is used to communicate with the 
 
 ## Methods
 
-#### uart.init(baudrate=9600, bits=8, parity=None, stop=1, \* , timeout\_chars=2, pins=(TXD, RXD, RTS, CTS), rx\_buffer\_size=512)
+### uart.init(baudrate=9600, bits=8, parity=None, stop=1, \* , timeout_chars=2, pins=(TXD, RXD, RTS, CTS), rx_buffer_size=512)
 
 Initialise the UART bus with the given parameters:
 
@@ -95,49 +95,49 @@ Initialise the UART bus with the given parameters:
 * `pins` is a 4 or 2 item list indicating the TXD, RXD, RTS and CTS pins (in that order). Any of the pins can be `None` if one wants the UART to operate with limited functionality. If the RTS pin is given the the RX pin must be given as well. The same applies to CTS. When no pins are given, then the default set of TXD (P1) and RXD (P0) pins is taken, and hardware flow control will be disabled. If `pins=None`, no pin assignment will be made.
 * `rx_buffer_size` is the size of the buffer used for storing the RX packets. By default is is 512 bytes.
 
-#### uart.deinit()
+### uart.deinit()
 
 Turn off the UART bus.
 
-#### uart.any()
+### uart.any()
 
 Return the number of characters available for reading.
 
-#### uart.read(\[nbytes\])
+### uart.read([nbytes])
 
 Read characters. If `nbytes` is specified then read at most that many bytes.
 
 Return value: a bytes object containing the bytes read in. Returns `None` on timeout.
 
-#### uart.readall()
+### uart.readall()
 
 Read as much data as possible.
 
 Return value: a bytes object or `None` on timeout.
 
-#### uart.readinto(buf\[, nbytes\])
+### uart.readinto(buf, [nbytes])
 
 Read bytes into the `buf`. If `nbytes` is specified then read at most that many bytes. Otherwise, read at most `len(buf)` bytes.
 
 Return value: number of bytes read and stored into `buf` or `None` on timeout.
 
-#### uart.readline()
+### uart.readline()
 
 Read a line, ending in a newline character. If such a line exists, return is immediate. If the timeout elapses, all available data is returned regardless of whether a newline exists.
 
 Return value: the line read or `None` on timeout if no data is available.
 
-#### uart.write(buf)
+### uart.write(buf)
 
 Write the buffer of bytes to the bus.
 
 Return value: number of bytes written or None on timeout.
 
-#### uart.sendbreak()
+### uart.sendbreak()
 
 Send a break condition on the bus. This drives the bus low for a duration of 13 bits. Return value: `None`.
 
-#### uart.wait\_tx\_done(timeout\_ms)
+### uart.wait_tx_done(timeout_ms)
 
 Waits at most `timeout_ms` for the last Tx transaction to complete. Returns `True` if all data has been sent and the TX buffer has no data in it, otherwise returns `False`.
 

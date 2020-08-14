@@ -21,7 +21,7 @@ print(rtc.now())
 
 ## Constructors
 
-#### class machine.RTC(id=0, ...)
+### class machine.RTC([id=0, ...])
 
 Create an RTC object. See init for parameters of initialisation.
 
@@ -33,7 +33,7 @@ rtc = RTC(id=0)
 
 ## Methods
 
-#### rtc.init(datetime=None, source=RTC.INTERNAL\_RC)
+### rtc.init(datetime=None, [source=RTC.INTERNAL_RC])
 
 Initialise the RTC. The arguments are:
 
@@ -48,23 +48,11 @@ For example:
 rtc.init((2017, 2, 28, 10, 30, 0, 0, 0))
 ```
 
-{{% hint style="info" %}}
-`tzinfo` is ignored by this method. Use `time.timezone` to achieve similar results.
-{{% /hint %}}
+>`tzinfo` is ignored by this method. Use `time.timezone` to achieve similar results.
 
-#### rtc.now()
+### rtc.ntp_sync(server, [update_period=3600])
 
-Get get the current `datetime` tuple:
-
-```python
-
-# returns datetime tuple
-rtc.now()
-```
-
-#### rtc.ntp\_sync(server, \* , update\_period=3600)
-
-Set up automatic fetch and update the time using NTP (SNTP).
+Inits the RTC and sets up up automatic fetch and update the time using NTP (SNTP).
 
 * `server` is the URL of the NTP server. Can be set to `None` to disable the periodic updates.
 * `update_period` is the number of seconds between updates. Shortest period is 15 seconds.
@@ -76,7 +64,18 @@ Can be used like:
 rtc.ntp_sync("pool.ntp.org") # this is an example. You can select a more specific server according to your geographical location
 ```
 
-#### rtc.synced()
+
+### rtc.now()
+
+Get get the current `datetime` tuple:
+
+```python
+
+# returns datetime tuple
+rtc.now()
+```
+
+### rtc.synced()
 
 Returns `True` if the last `ntp_sync` has been completed, `False` otherwise:
 
@@ -85,7 +84,7 @@ Returns `True` if the last `ntp_sync` has been completed, `False` otherwise:
 rtc.synced()
 ```
 
-#### rtc.memory(\[data\])
+### rtc.memory([data])
 
 Reads RTC memory contents or write data in passed Buffer in to RTC memory
 
