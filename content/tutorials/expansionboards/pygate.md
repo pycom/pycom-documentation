@@ -1,15 +1,16 @@
-## Pygate
+---
+title: "Pygate"
+---
 
 The Pygate is an 8-channel LoRaWAN gateway. This page will help you get started with it.
 
->While the Pygate shield has the radio chips required to act as a LoRaWAN gateway, it will require a WiPy3, GPy or LoPy4 to run the LoRaWAN gateway software and provide connectivity to the LoRaWAN server (TTN / ChirpStack etc.) via WiFi, Ethernet (with the optional PyEthernet adapter) or LTE-M (a GPy with a mobile subscription is required for LTE-M connectivity).
+While the Pygate shield has the radio chips required to act as a LoRaWAN gateway, it will require a WiPy3, GPy or LoPy4 to run the LoRaWAN gateway software and provide connectivity to the LoRaWAN server (TTN / ChirpStack etc.) via WiFi, Ethernet (with the optional PyEthernet adapter) or LTE-M (a GPy with a mobile subscription is required for LTE-M connectivity).
 
-
-A USB connection is recommended for the initial firmware update of the Pycom development module (WiPy 3, GPy, LoPy4) and to upload the configuration & start-up script. The module can be updated over the air via WiFi / LTE-M (depending on network capabilities) or via Ethernet connection which allows installation of the gateway in remote locations.
+A USB connection is recommended for the initial firmware update of the Pycom development module (WiPy 3, GPy, LoPy4) and to upload the configuration & start-up script. The module can be updated over the air via WiFi / LTE-M (depending on network capabilities) or via Ethernet connection which allows installation of the gateway in remote locations. 
 
 The Pygate board can have the PyEthernet adapter connected which allows an Ethernet connection. The PyEthernet also supports PoE. Please check the separate [page and warning for PoE-NI!](/tutorials/all/poe)
 
-### Quickstart
+## Setup
 
 To connect your Pygate to a LoRa server, please follow these steps:
 
@@ -26,12 +27,9 @@ To connect your Pygate to a LoRa server, please follow these steps:
 
 Make sure you supply a config matching your region (EU868, US915, etc), e.g. https://github.com/Lora-net/packet_forwarder/tree/master/lora_pkt_fwd/cfg. If you are in EU region, it should be sufficient to update the example below with your GW ID, the LoRa server address and port number.
 
-{{% hint style="info" %}}
-**Note** Running the LoRa gateway on a GPy can get you close to the memory limit of the device. To avoid running out of memory one should not *run* the WiFi task and the LTE task at the same time. This shouldn't really restrict your use of the Pygate, since you wouldn't be *using* WiFi and LTE at the same time. The tasks *run* when you explicitly initialize them with ``wlan = WLAN()`` or ``lte = LTE()``, or when they get automatically started upon boot based on the settings ``pycom.wifi_on_boot(True)`` or ``pycom.lte_modem_en_on_boot(True)``. Bottom line, if you have trouble starting the LoRa packet forwarder, please double check these settings and make sure at least the network that you don't use is not automatically started.{{% /hint %}}
+Running the LoRa gateway on a GPy can get you close to the memory limit of the device. To avoid running out of memory one should not *run* the WiFi task and the LTE task at the same time. This shouldn't really restrict your use of the Pygate, since you wouldn't be *using* WiFi and LTE at the same time. The tasks *run* when you explicitly initialize them with ``wlan = WLAN()`` or ``lte = LTE()``, or when they get automatically started upon boot based on the settings ``pycom.wifi_on_boot(True)`` or ``pycom.lte_modem_en_on_boot(True)``. Bottom line, if you have trouble starting the LoRa packet forwarder, please double check these settings and make sure at least the network that you don't use is not automatically started.
 
-
-
-### Example TTN Wifi
+## Example TTN WiFi
 
 The following example shows the script and json file to run the Pygate over Wifi connecting to [The Things Network](https://www.thethingsnetwork.org/).
 
@@ -41,7 +39,7 @@ The following example shows the script and json file to run the Pygate over Wifi
 1. make up a EUI (8 byte hexadecimal value) and register it on the TTN website
 1. enter the EUI in your `config.json` under `gateway_ID` (Just enter the hex digits without the "eui-" prefix and without spaces)
 1. select your Frequency Plan
-1. select a router - also enter the hostname in your `config.json` under `server_address`
+1. select the router for your region.
 1. enter your wifi SSID and password in `main.py`
 1. upload `config.json` and `main.py` and reset the board
 1. you will see how it creates the uplink connection and then start the LoRa GW. It will print out some debug information while it is running. After some initialization it will print "LoRa GW started" and the LED will turn green.
@@ -105,19 +103,38 @@ machine.pygate_init(buf)
 # machine.pygate_debug_level(1)
 ```
 
-A sample `config.json` file for gateway configuration in EU868 region:
+## Config file
+1. You can find the config file for your region [here](https://github.com/TheThingsNetwork/gateway-conf)
+2. Make a file called `config.json` in your project and paste the appropriate region settings to that file
+3. Add the following to the bottom of the `config.json` file:
+	```json
+	...
+		} ],
+		"gateway_ID": "XXXXXXXXXXXXXXXX",
+		"keepalive_interval": 10,
+		"stat_interval": 30,
+		"push_timeout_ms": 100,
+		"forward_crc_valid": true,
+		"forward_crc_error": false,
+		"forward_crc_disabled": false
+		}
+	}
+4. Edit the `gateway_ID` to reflect yours.
+5. An example for EU868 is shown here:
 
 ```json
 {
 	"SX1301_conf": {
 		"lorawan_public": true,
 		"clksrc": 1,
+		"clksrc_desc": "radio_1 provides clock to concentrator for most devices except MultiTech. For MultiTech set to 0.",
 		"antenna_gain": 0,
+		"antenna_gain_desc": "antenna gain, in dBi",
 		"radio_0": {
 			"enable": true,
 			"type": "SX1257",
 			"freq": 867500000,
-			"rssi_offset": -164.0,
+			"rssi_offset": -166.0,
 			"tx_enable": true,
 			"tx_freq_min": 863000000,
 			"tx_freq_max": 870000000
@@ -126,50 +143,59 @@ A sample `config.json` file for gateway configuration in EU868 region:
 			"enable": true,
 			"type": "SX1257",
 			"freq": 868500000,
-			"rssi_offset": -164.0,
+			"rssi_offset": -166.0,
 			"tx_enable": false
 		},
 		"chan_multiSF_0": {
+			"desc": "Lora MAC, 125kHz, all SF, 868.1 MHz",
 			"enable": true,
 			"radio": 1,
 			"if": -400000
 		},
 		"chan_multiSF_1": {
+			"desc": "Lora MAC, 125kHz, all SF, 868.3 MHz",
 			"enable": true,
 			"radio": 1,
 			"if": -200000
 		},
 		"chan_multiSF_2": {
+			"desc": "Lora MAC, 125kHz, all SF, 868.5 MHz",
 			"enable": true,
 			"radio": 1,
 			"if": 0
 		},
 		"chan_multiSF_3": {
+			"desc": "Lora MAC, 125kHz, all SF, 867.1 MHz",
 			"enable": true,
 			"radio": 0,
 			"if": -400000
 		},
 		"chan_multiSF_4": {
+			"desc": "Lora MAC, 125kHz, all SF, 867.3 MHz",
 			"enable": true,
 			"radio": 0,
 			"if": -200000
 		},
 		"chan_multiSF_5": {
+			"desc": "Lora MAC, 125kHz, all SF, 867.5 MHz",
 			"enable": true,
 			"radio": 0,
 			"if": 0
 		},
 		"chan_multiSF_6": {
+			"desc": "Lora MAC, 125kHz, all SF, 867.7 MHz",
 			"enable": true,
 			"radio": 0,
 			"if": 200000
 		},
 		"chan_multiSF_7": {
+			"desc": "Lora MAC, 125kHz, all SF, 867.9 MHz",
 			"enable": true,
 			"radio": 0,
 			"if": 400000
 		},
 		"chan_Lora_std": {
+			"desc": "Lora MAC, 250kHz, SF7, 868.3 MHz",
 			"enable": true,
 			"radio": 1,
 			"if": -200000,
@@ -177,6 +203,7 @@ A sample `config.json` file for gateway configuration in EU868 region:
 			"spread_factor": 7
 		},
 		"chan_FSK": {
+			"desc": "FSK 50kbps, 868.8 MHz",
 			"enable": true,
 			"radio": 1,
 			"if": 300000,
@@ -184,114 +211,137 @@ A sample `config.json` file for gateway configuration in EU868 region:
 			"datarate": 50000
 		},
 		"tx_lut_0": {
-			"pa_gain": 0,
-			"mix_gain": 5,
-			"rf_power": 9,
-			"dig_gain": 3
-		},
-		"tx_lut_1": {
-			"pa_gain": 0,
-			"mix_gain": 5,
-			"rf_power": 9,
-			"dig_gain": 3
-		},
-		"tx_lut_2": {
-			"pa_gain": 0,
-			"mix_gain": 5,
-			"rf_power": 9,
-			"dig_gain": 3
-		},
-		"tx_lut_3": {
-			"pa_gain": 0,
-			"mix_gain": 5,
-			"rf_power": 9,
-			"dig_gain": 3
-		},
-		"tx_lut_4": {
-			"pa_gain": 0,
-			"mix_gain": 5,
-			"rf_power": 9,
-			"dig_gain": 3
-		},
-		"tx_lut_5": {
-			"pa_gain": 0,
-			"mix_gain": 5,
-			"rf_power": 9,
-			"dig_gain": 3
-		},
-		"tx_lut_6": {
-			"pa_gain": 0,
-			"mix_gain": 5,
-			"rf_power": 9,
-			"dig_gain": 3
-		},
-		"tx_lut_7": {
-			"pa_gain": 0,
-			"mix_gain": 6,
-			"rf_power": 11,
-			"dig_gain": 3
-		},
-		"tx_lut_8": {
-			"pa_gain": 0,
-			"mix_gain": 5,
-			"rf_power": 13,
-			"dig_gain": 2
-		},
-		"tx_lut_9": {
+			"desc": "TX gain table, index 0",
 			"pa_gain": 0,
 			"mix_gain": 8,
-			"rf_power": 14,
-			"dig_gain": 3
+			"rf_power": -6,
+			"dig_gain": 0
 		},
-		"tx_lut_10": {
-			"pa_gain": 0,
-			"mix_gain": 6,
-			"rf_power": 15,
-			"dig_gain": 2
-		},
-		"tx_lut_11": {
-			"pa_gain": 0,
-			"mix_gain": 6,
-			"rf_power": 16,
-			"dig_gain": 1
-		},
-		"tx_lut_12": {
-			"pa_gain": 0,
-			"mix_gain": 9,
-			"rf_power": 17,
-			"dig_gain": 3
-		},
-		"tx_lut_13": {
+		"tx_lut_1": {
+			"desc": "TX gain table, index 1",
 			"pa_gain": 0,
 			"mix_gain": 10,
-			"rf_power": 18,
-			"dig_gain": 3
+			"rf_power": -3,
+			"dig_gain": 0
 		},
-		"tx_lut_14": {
-			"pa_gain": 0,
-			"mix_gain": 11,
-			"rf_power": 19,
-			"dig_gain": 3
-		},
-		"tx_lut_15": {
+		"tx_lut_2": {
+			"desc": "TX gain table, index 2",
 			"pa_gain": 0,
 			"mix_gain": 12,
+			"rf_power": 0,
+			"dig_gain": 0
+		},
+		"tx_lut_3": {
+			"desc": "TX gain table, index 3",
+			"pa_gain": 1,
+			"mix_gain": 8,
+			"rf_power": 3,
+			"dig_gain": 0
+		},
+		"tx_lut_4": {
+			"desc": "TX gain table, index 4",
+			"pa_gain": 1,
+			"mix_gain": 10,
+			"rf_power": 6,
+			"dig_gain": 0
+		},
+		"tx_lut_5": {
+			"desc": "TX gain table, index 5",
+			"pa_gain": 1,
+			"mix_gain": 12,
+			"rf_power": 10,
+			"dig_gain": 0
+		},
+		"tx_lut_6": {
+			"desc": "TX gain table, index 6",
+			"pa_gain": 1,
+			"mix_gain": 13,
+			"rf_power": 11,
+			"dig_gain": 0
+		},
+		"tx_lut_7": {
+			"desc": "TX gain table, index 7",
+			"pa_gain": 2,
+			"mix_gain": 9,
+			"rf_power": 12,
+			"dig_gain": 0
+		},
+		"tx_lut_8": {
+			"desc": "TX gain table, index 8",
+			"pa_gain": 1,
+			"mix_gain": 15,
+			"rf_power": 13,
+			"dig_gain": 0
+		},
+		"tx_lut_9": {
+			"desc": "TX gain table, index 9",
+			"pa_gain": 2,
+			"mix_gain": 10,
+			"rf_power": 14,
+			"dig_gain": 0
+		},
+		"tx_lut_10": {
+			"desc": "TX gain table, index 10",
+			"pa_gain": 2,
+			"mix_gain": 11,
+			"rf_power": 16,
+			"dig_gain": 0
+		},
+		"tx_lut_11": {
+			"desc": "TX gain table, index 11",
+			"pa_gain": 3,
+			"mix_gain": 9,
 			"rf_power": 20,
-			"dig_gain": 3
+			"dig_gain": 0
+		},
+		"tx_lut_12": {
+			"desc": "TX gain table, index 12",
+			"pa_gain": 3,
+			"mix_gain": 10,
+			"rf_power": 23,
+			"dig_gain": 0
+		},
+		"tx_lut_13": {
+			"desc": "TX gain table, index 13",
+			"pa_gain": 3,
+			"mix_gain": 11,
+			"rf_power": 25,
+			"dig_gain": 0
+		},
+		"tx_lut_14": {
+			"desc": "TX gain table, index 14",
+			"pa_gain": 3,
+			"mix_gain": 12,
+			"rf_power": 26,
+			"dig_gain": 0
+		},
+		"tx_lut_15": {
+			"desc": "TX gain table, index 15",
+			"pa_gain": 3,
+			"mix_gain": 14,
+			"rf_power": 27,
+			"dig_gain": 0
 		}
 	},
-
 	"gateway_conf": {
-		"gateway_ID": "XXXXXXXXXXXXXXXX",
 		"server_address": "router.eu.thethings.network",
 		"serv_port_up": 1700,
 		"serv_port_down": 1700,
-		"keepalive_interval": 10,
-		"stat_interval": 30,
-		"push_timeout_ms": 100,
-		"forward_crc_valid": true,
-		"forward_crc_error": false,
-		"forward_crc_disabled": false
+		"servers": [ {
+			"server_address": "router.eu.thethings.network",
+			"serv_port_up": 1700,
+			"serv_port_down": 1700,
+			"serv_enabled": true
+		} ],
+	"gateway_ID": "XXXXXXXXXXXXXXXX",
+	"keepalive_interval": 10,
+	"stat_interval": 30,
+	"push_timeout_ms": 100,
+	"forward_crc_valid": true,
+	"forward_crc_error": false,
+	"forward_crc_disabled": false
+	
 	}
+
 }
 ```
