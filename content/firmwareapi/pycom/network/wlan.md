@@ -71,8 +71,8 @@ Arguments are:
 * `power_save` enables or disables power save functions in `WLAN.STA` mode.
 * `hidden`: create a hidden SSID when set to `True`. only valid in `WLAN.AP` mode.
 * `bandwidth` is the Bandwidth to use, either:
-  * `HT20`: 20MHz
-  * `HT40`: 40MHz
+  * `WLAN.HT20`: 20MHz
+  * `WLAN.HT40`: 40MHz
 * `max_tx_pwr` is the maximum WiFi TX power allowed. see `WLAN.max_tx_power()` for more details
 * `country` tuple representing the country configuration parameters. see `WLAN.country()` for more details
 * `protocol` tuple representing the protocol. see `WLAN.wifi_protocol()` for more details
@@ -84,12 +84,16 @@ Disables the WiFi radio.
 
 ### wlan.connect(ssid, [auth=None, bssid=None, timeout=None, ca_certs=None, keyfile=None, certfile=None, identity=None, hostname=None])
 
-Connect to a wifi access point using the given SSID, and other security parameters.
+Connect to a WiFi Access Point using the given SSID, and other parameters
 
-* `auth` is a tuple with `(sec, key)`. Security can be `None`, `WLAN.WEP`, `WLAN.WPA`, `WLAN.WPA2` or `WLAN.WPA2_ENT`. The key is a string with the network password.
-  * If `sec` is `WLAN.WEP` the key must be a string representing hexadecimal values (e.g. `ABC1DE45BF`).
-  * If `sec` is `WLAN.WPA2_ENT` then the `auth` tuple can have either 3 elements: `(sec, username, password)`, or just 1: `(sec,)`. When passing the 3 element tuple, the`keyfile` and `certifle` arguments must not be given.
-* `bssid` is the MAC address of the AP to connect to. Useful when there are several APs with the same SSID.
+* `ssid`: a string with the SSID name.
+* `auth`: a tuple with `(sec, key)`. Security can be one of the following. The key is a string with the network password.
+  * `None`: 
+  * `WLAN.WEP`: Using this in `WLAN.AP`, the key must be a string of hexadecimal values.
+  * `WLAN.WPA`
+  * `WLAN.WPA2`
+  * `WLAN.WPA2_ENT`: this will use the following format: `(sec, username, password)`
+* `bssid` is the MAC address of the AP to connect to. This is useful when there are several APs with the same SSID.
 * `timeout` is the maximum time in milliseconds to wait for the connection to succeed.
 * `ca_certs` is the path to the CA certificate. This argument is not mandatory.
 * `keyfile` is the path to the client key. Only used if `username` and `password` are not part of the `auth` tuple.
@@ -100,32 +104,24 @@ Connect to a wifi access point using the given SSID, and other security paramete
 > The ESP32 only handles certificates with `pkcs8` format (but not the "Traditional SSLeay RSAPrivateKey" format). The private key should be RSA coded with 2048 bits at maximum.
 
 
-### wlan.scan([ssid=NULL, bssid=NULL, channel=0, show_hidden=False, type=WLAN.SCAN_ACTIVE, scantime=120ms])
+### wlan.scan([ssid=None, bssid=None, channel=0, show_hidden=False, type=WLAN.SCAN_ACTIVE, scantime=120ms])
 
 Performs a network scan and returns a list of named tuples with (ssid, bssid, sec, channel, rssi). When no config args passed scan will be performed with default configurations.
 
 Note: For Fast scan mode ssid/bssid and channel should be
 
-* `ssid` : If the SSID is not NULL, it is only the AP with the same SSID that can be scanned.
-* `bssid` : If the BSSID is not NULL, it is only the AP with the same BSSID that can be scanned. The bssid is given as 6 Hexadecimal bytes literals (i.e b'\xff\xff\xff\xff\xff\xff')
-* `channel` : If “channel” is 0, there will be an all-channel scan; otherwise, there will be a specific-channel scan.
-* `show_hidden` : If “show\_hidden” is 0, the scan ignores the AP with a hidden SSID; otherwise, the scan considers the hidden AP a normal one.
-* `type` : If “type” is `WLAN.SCAN_ACTIVE`, the scan is “active”; otherwise, it is a “passive” one.
-  * Active Scan is performed by sending a probe request. The default scan is an active scan
-  * Passive Scan sends no probe request. Just switch to the specific channel and wait for a beacon.
-* `scantime` :
-
-  This field is used to control how long the scan dwells on each channel. For passive scans, scantime=\[int\] designates the dwell time for each channel.
-
-  For active scans, dwell times for each channel are listed below. scantime is given as a tuple for min and max times (min,max)
-
-min=0, max=0: scan dwells on each channel for 120 ms.
-
-min&gt;0, max=0: scan dwells on each channel for 120 ms.
-
-min=0, max&gt;0: scan dwells on each channel for max ms.
-
-min&gt;0, max&gt;0: The minimum time the scan dwells on each channel is min ms. If no AP is found during this time frame, the scan switches to the next channel. Otherwise, the scan dwells on the channel for max ms.If you want to improve the performance of the the scan, you can try to modify these two parameters.
+* `ssid`: Scan only for the given ssid
+* `bssid`: Scan only for the givenbssid. The bssid is given as 6 Hexadecimal bytes literals (i.e `b'\xff\xff\xff\xff\xff\xff'`)
+* `channel`: If set to 0, there will be an all-channel scan; otherwise, there will be a specific-channel scan.
+* `show_hidden`: Scan for hidden ssid's as well.
+* `type`: The type of scan performed. Values can be 
+  * `WLAN.SCAN_ACTIVE`: the scan is will be performed by sending a probe request. 
+  * `WLAN.SCAN_PASSIVE`: switches to a specifi channel and waits for beacon
+* `scantime` : This field is used to control how long the scan dwells on each channel. For active scans, dwell times for each channel are listed below. For passive scans, this designates the dwell time for each channel. scantime is given as a tuple for min and max times `(min,max)`
+  * min=0, max=0: scan dwells on each channel for 120 ms.
+  * min>0, max=0: scan dwells on each channel for 120 ms.
+  * min=0, max>0: scan dwells on each channel for max ms.
+  * min>0, max>0: The minimum time the scan dwells on each channel is min ms. If no AP is found during this time frame, the scan switches to the next channel. Otherwise, the scan dwells on the channel for max ms.If you want to improve the performance of the the scan, you can try to modify these two parameters.
 
 ### wlan.disconnect()
 
@@ -139,12 +135,14 @@ In case of STA mode, returns `True` if connected to a WiFi access point and has 
 
 When `id` is 0, the configuration will be get/set on the Station interface. When `id` is 1 the configuration will be done for the AP interface.
 
-With no parameters given returns a 4-tuple of `(ip, subnet_mask, gateway, DNS_server)`.
+Get or set the interface configuration. 
 
-If `dhcp` is passed as a parameter then the DHCP client is enabled and the IP params are negotiated with the AP.
+Optionally specify the configuration parameter:
 
-If the 4-tuple config is given then a static IP is configured. For instance:
+* `config='dhcp'`: If 'dhcp' is passed as a parameter, then the DHCP client is enabled and the IP parameters are negotiated with the DHCP server.
+* `config=(ip, nm, gw, dns)`: If the 4-tuple config is given then a static IP is configured. 
 
+For example: `eth.ifconfig(config=('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))`.
 
 ### wlan.mode([mode])
 
@@ -160,7 +158,6 @@ In case of mode = `WLAN.AP` this method can get the ssid of the board's own AP.
 
 In case of mode = `WLAN.STA_AP` this method can get the ssid of board's own AP plus the AP the STA is connected to in form of a tuple:
 
-_\_
 
 ### wlan.auth([auth])
 
@@ -202,8 +199,8 @@ _Note: STA and AP cannot have the Same Mac Address_
 ### wlan.bandwidth()
 
 Set the bandwidth of the wifi, either 20 MHz or 40 MHz can be configured, use constants:
-* `HT20`: 20MHz
-* `HT40`: 40MHz
+* `WLAN.HT20`: 20MHz
+* `WLAN.HT40`: 40MHz
 
 ### wlan.hostname()
 
@@ -213,7 +210,7 @@ Set the Host name of the device connecting to the AP in case of Wifi `mode=WLAN.
 
 Gets an info list of all stations connected to the board's AP.
 
-Info returned is a list of tuples containning (\[mac address of connected STA\], \[average rssi value\], \[Wlan protocol enabled by STA\]).
+Info returned is a list of tuples containning ([mac address of connected STA], [average rssi value], [Wlan protocol enabled by STA]).
 
 Protocol types are either : `WLAN.PHY_11_B`, `WLAN.PHY_11_G`, `WLAN.PHY_11_N` or `WLAN.PHY_LOW_RATE`
 
@@ -245,7 +242,7 @@ Values passed in power are mapped to transmit power levels as follows:
 
 ### wlan.country([country, schan, nchan, max_tx_pwr, policy])
 
-Gets or set s Country configuration parameters for wifi.
+Gets or sets Country configuration parameters for wifi.
 
 * `country` That is the country name code , it is max 2 characters string representing the country eg: "CN" for china nad "NL" for Netherlands
 * `scahn` is the start channel number, in scan process scanning will be performed starting from this channels till the total number of channels. it should be less than or equal 14.
@@ -257,7 +254,7 @@ Gets or set s Country configuration parameters for wifi.
 
 Returns a tuple with (bssid, ssid, primary channel, rssi, Authorization method, wifi standard used) of the connected AP in case of STA mode.
 
-### wlan.wifi_protocol([(bool PHY11_B, bool PHY11_G, bool PHY11_N)\])
+### wlan.wifi_protocol([(bool PHY11_B, bool PHY11_G, bool PHY11_N)])
 
 
 Sets or gets Wifi Protocol supported.	Sets or gets Wifi Protocol supported in (`PHY_11_B`,`PHY_11_G`,`PHY_11_N`) format. Currently 802.11b or 802.11bg or 802.11bgn mode is available.
@@ -329,15 +326,14 @@ To get the current Filter mask, call the function with empty args.
 
 Start SmartConfig operation, the smartConfig is a provisioning technique that enables setting Wifi credentials for station mode wirelessly via mobile app.
 
-####Steps:
-- call **wlan.smartConfig()** \(if smartConfig is not enabled on boot or you want to restart smartConfig\)
+#### Steps:
+- call **wlan.smartConfig()** (if smartConfig is not enabled on boot or you want to restart smartConfig)
 - Use mobile App (ESP touch or Pycom App) to set ssid and password for the AP 
 - You can register a callback to be triggered when smart Config is Finesed successfuly or timedout.
 
 ### wlan.Connected_ap_pwd()
 
 Get the password of AP the Device is connected to.
-
 
 
 ## Constants
