@@ -26,7 +26,6 @@ The GPy and FiPy support both new LTE-M protocols:
 
 - Fipy/GPy v1.2  with Sequans old modem Firmwares  < (39xxx)==> Supports 6 Bands (3, 4, 12, 13, 20, 28)
 
-{{% /hint %}}
 
 ## AT Commands
 
@@ -47,20 +46,41 @@ lte = LTE()
 
 ## Methods
 
-### lte.init([carrier=standard])
+### lte.init([carrier='standard', psm_period_value=0, psm_period_unit=LTE.PSM_PERIOD_DISABLED, psm_active_value=0, psm_active_unit=LTE.PSM_ACTIVE_DISABLED])
 
-This method is used to set up the LTE subsystem. After a `deinit()` this method can take several seconds to return waiting for the LTE modem to start-up. Optionally specify a carrier name. The available options are: 
-* `'at&t'`
-* `'verizon'`
-* `'standard'`
+This method is used to set up the LTE subsystem. Optionally specify 
+* `carrier name`. The available options are: 
+    * `'at&t'`
+    * `'verizon'`
+    * `'standard'`
+* `psm_period_value` : Configure at which period the device will connect to the network. Values from 0 to 31 are allowed
+* `psm_period_unit` : Specify the _unit_ to be used for `psm_period_value`:
+    * `PSM_PERIOD_2S`
+    * `PSM_PERIOD_30S`
+    * `PSM_PERIOD_1M`
+    * `PSM_PERIOD_1H`
+    * `PSM_PERIOD_10H`
+    * `PSM_PERIOD_320H`
+    * `PSM_PERIOD_DISABLED`: Turn off the PSM mode.
+* `psm_active_value` : Configure how long the device will be connected. Values from 0 to 31 are allowed.
+* `psm_active_unit` : Specify the _unit_ for `psm_active_value`:
+    * `PSM_ACTIVE_2S`
+    * `PSM_ACTIVE_1M`
+    * `PSM_ACTIVE_6M`
+    * `PSM_ACTIVE_DISABLED`: turn off the PSM mode.
 
+Multiply the `value` with the `unit` to get the actual active or sleeping times. 
 
-### lte.deinit([detach=True, reset = False])
+### lte.deinit([detach=True, reset=False])
 
 Disables LTE modem completely. This reduces the power consumption to the minimum. Call this before entering deepsleep.
 
 * `detach` : detach from network.
 * `reset` : reset LTE modem.
+
+### lte.psm()
+
+Queries the PSM timers. Returns a 5-tuple of the following structure: `(enabled, period_value, period_unit, active_value, active_unit)`.
 
 ### lte.attach([band=None, apn=None, cid=None, type=LTE.IP, legacyattach=True])
 
@@ -158,6 +178,11 @@ Check Network Coverage for UE device (i.e LTE modem). Returns:
 
 ## Constants
 
-- `LTE.IP` : Internet Protocol IP
+* `LTE.IP` : Internet Protocol IP
 
-- `LTE.IPV4V6` : Internet protocol ver. 4/6
+* `LTE.IPV4V6` : Internet protocol ver. 4/6
+
+* `PSM_PERIOD_2S`, `PSM_PERIOD_30S`, `PSM_PERIOD_1M`, `PSM_PERIOD_10M`, `PSM_PERIOD_1H`, `PSM_PERIOD_10H`, `PSM_PERIOD_320H`: Specify the unit for the PSM period to be 2 seconds, 30 seconds, 1 minute, 10 minutes, 1 hour, 10 hours, or 320 hours, respectively.
+* `PSM_PERIOD_DISABLED`: Means turning PSM off.
+* `PSM_ACTIVE_2S`, `PSM_ACTIVE_1M`, `PSM_ACTIVE_6M`: Specify the unit for the PSM active duration to be 2 seconds, 1 minute, or 6 minutes, respectively.
+* `PSM_ACTIVE_DISABLED`: Means turning PSM off.

@@ -39,7 +39,9 @@ This function starts the Ethernet interface and enables the ethernet adapter.
 
 `hostname`: set the interface hostname
 
-### eth.ifconfig(config=['dhcp' / configtuple])
+### eth.ifconfig([config={'dhcp' / configtuple}])
+
+Get or set the interface configuration. 
 
 Optionally specify the configuration parameter:
 

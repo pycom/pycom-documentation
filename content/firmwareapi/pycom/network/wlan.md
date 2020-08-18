@@ -39,65 +39,50 @@ print(wlan.ifconfig())
 
 ## Constructors
 
-### class network.WLAN(id=0, ...)
+### class network.WLAN([id=0], ...)
 
-Create a WLAN object, and optionally configure it. See [`init`](../wlan#wlan-init-mode-ssid-none-auth-none-channel-1-antenna-none-power_save-false-hidden-false) for params of configuration.
+Create a WLAN object, and optionally configure it. See init for params of configuration.
 
-{{% hint style="info" %}}
-The WLAN constructor is special in the sense that if no arguments besides the `id` are given, it will return the already existing WLAN instance without re-configuring it. This is because WLAN is a system feature of the WiPy. If the already existing instance is not initialised it will do the same as the other constructors an will initialise it with default values.
-{{% /hint %}}
+> The WLAN constructor is special in the sense that if no arguments are given, it will return the already existing WLAN instance without re-configuring it. This is because WLAN is a system feature of the WiPy. If the already existing instance is not initialised it will do the same as the other constructors an will initialise it with default values.
 
 ## Methods
 
-#### wlan.init(mode, \* , ssid=None, auth=None, channel=1, antenna=None, power\_save=False, hidden=False, bandwidth=HT40, max\_tx\_pwr=20, country=CN)
+#### wlan.init(mode, [ssid=None, auth=None, channel=1, antenna=WLAN.INT_ANT, power_save=False, hidden=False, bandwidth=HT40, max_tx_pwr=20, country=NA, protocol=(1,1,1)])
 
 Set or get the WiFi network processor configuration.
 
 Arguments are:
 
-* `mode` can be either `WLAN.STA`, `WLAN.AP`, or `WLAN.STA_AP`.
-* `ssid` is a string with the SSID name. Only needed when mode is `WLAN.AP`.
-* `auth` is a tuple with (sec, key). Security can be `None`, `WLAN.WEP`, `WLAN.WPA`, or `WLAN.WPA2`. The key is a string with the network password.
-  * If `sec` is `WLAN.WEP` the key must be a string representing hexadecimal values (e.g. `ABC1DE45BF`). Only needed when mode is `WLAN.AP`.
-* `channel` a number in the range 1-11. Only needed when mode is `WLAN.AP`.
-* `antenna` selects between the internal and the external antenna. Can be either `WLAN.INT_ANT`, `WLAN.EXT_ANT`. With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be
-
-  used for other things.
-
-* `power_save` enables or disables power save functions in `STA` mode.
-* `hidden` only valid in `WLAN.AP` mode to create an access point with a hidden SSID when set to `True`.
-* `bandwidth` is the Bandwidth to use, either 20MHz or 40 MHz , use `HT20` or `HT40`
-* `max_tx_pwr` is the maximum WiFi Tx power allowed. see `WLAN.max_tx_power()` for more details
+* `mode`: can be either:
+  * `WLAN.STA`: Station mode, connect to a WiFinetwork
+  * `WLAN.AP`: Access Point mode, create a WiFi network. You _must_ specify the `ssid`
+  * `WLAN.STA_AP`: Both Station and Access Point mode are active. 
+* `ssid`: a string with the SSID name.
+* `auth`: a tuple with `(sec, key)`. Security can be one of the following. The key is a string with the network password.
+  * `None`: 
+  * `WLAN.WEP`: Using this in `WLAN.AP`, the key must be a string of hexadecimal values.
+  * `WLAN.WPA`
+  * `WLAN.WPA2`
+  * `WLAN.WPA2_ENT`: this will use the following format: `(sec, username, password)`
+* `channel`: a number in the range 1-11. Only needed when mode is `WLAN.AP`.
+* `antenna`: select between the internal and the external antenna. With our development boards it defaults to using the on-board antenna. Value can be either:
+  * `WLAN.INT_ANT`
+  * `WLAN.EXT_ANT`
+* `power_save` enables or disables power save functions in `WLAN.STA` mode.
+* `hidden`: create a hidden SSID when set to `True`. only valid in `WLAN.AP` mode.
+* `bandwidth` is the Bandwidth to use, either:
+  * `HT20`: 20MHz
+  * `HT40`: 40MHz
+* `max_tx_pwr` is the maximum WiFi TX power allowed. see `WLAN.max_tx_power()` for more details
 * `country` tuple representing the country configuration parameters. see `WLAN.country()` for more details
+* `protocol` tuple representing the protocol. see `WLAN.wifi_protocol()` for more details
 
-For example, you can do:
-
-```python
-# create and configure as an access point
-wlan.init(mode=WLAN.AP, ssid='wipy-wlan', auth=(WLAN.WPA2,'www.wipy.io'), channel=7, antenna=WLAN.INT_ANT)
-```
-
-or
-
-```python
-# configure as an station
-wlan.init(mode=WLAN.STA)
-```
-
-{{% hint style="info" %}}
-To use an external antenna, set `P12 as output pin.`
-
-```python
-
-Pin('P12', mode=Pin.OUT)(True)
-```
-{{% /hint %}}
 
 ### wlan.deinit()
 
 Disables the WiFi radio.
 
-### wlan.connect(ssid, \* , auth=None, bssid=None, timeout=None, ca\_certs=None, keyfile=None, certfile=None, identity=None, hostname=None)
+### wlan.connect(ssid, [auth=None, bssid=None, timeout=None, ca_certs=None, keyfile=None, certfile=None, identity=None, hostname=None])
 
 Connect to a wifi access point using the given SSID, and other security parameters.
 
@@ -112,11 +97,10 @@ Connect to a wifi access point using the given SSID, and other security paramete
 * `identity` is only used in case of `WLAN.WPA2_ENT` security. Needed by the server.
 * `hostname` is the name of the host connecting to the AP. Max length of name string is 32 Bytes
 
-{{% hint style="info" %}}
-The ESP32 only handles certificates with `pkcs8` format (but not the "Traditional SSLeay RSAPrivateKey" format). The private key should be RSA coded with 2048 bits at maximum.
-{{% /hint %}}
+> The ESP32 only handles certificates with `pkcs8` format (but not the "Traditional SSLeay RSAPrivateKey" format). The private key should be RSA coded with 2048 bits at maximum.
 
-#### wlan.scan(\[ssid=NULL, bssid=NULL, channel=0, show\_hidden=False, type=WLAN.SCAN\_ACTIVE, scantime=120ms\])
+
+### wlan.scan([ssid=NULL, bssid=NULL, channel=0, show_hidden=False, type=WLAN.SCAN_ACTIVE, scantime=120ms])
 
 Performs a network scan and returns a list of named tuples with (ssid, bssid, sec, channel, rssi). When no config args passed scan will be performed with default configurations.
 
@@ -151,7 +135,7 @@ Disconnect from the WiFi access point.
 
 In case of STA mode, returns `True` if connected to a WiFi access point and has a valid IP address. In AP mode returns `True` when a station is connected, `False` otherwise.
 
-### wlan.ifconfig(id=0, config=\['dhcp' or configtuple\])
+### wlan.ifconfig(id=0, config=['dhcp' or configtuple])
 
 When `id` is 0, the configuration will be get/set on the Station interface. When `id` is 1 the configuration will be done for the AP interface.
 
@@ -161,15 +145,12 @@ If `dhcp` is passed as a parameter then the DHCP client is enabled and the IP pa
 
 If the 4-tuple config is given then a static IP is configured. For instance:
 
-```python
-wlan.ifconfig(config=('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))
-```
 
-### wlan.mode(\[mode\])
+### wlan.mode([mode])
 
 Get or set the WLAN mode.
 
-### wlan.ssid(\[ssid\])
+### wlan.ssid([ssid])
 
 Get or set the SSID (Set SSID of AP).
 
@@ -181,11 +162,11 @@ In case of mode = `WLAN.STA_AP` this method can get the ssid of board's own AP p
 
 _\_
 
-### wlan.auth(\[auth\])
+### wlan.auth([auth])
 
 Get or set the authentication type when in AP mode.
 
-### wlan.channel(\[channel\])
+### wlan.channel([channel])
 
 _In AP mode:_
 
@@ -197,11 +178,12 @@ _In STA mode:_
 
 _Note: Setting Channel in STA mode is only Allowed in Promiscuous mode_
 
-### wlan.antenna(\[antenna\])
+### wlan.antenna([antenna])
 
-Get or set the antenna type (external or internal).
+Get or set the antenna type (external or internal). Value can be:
 
-### wlan.mac(\[mac, mode\])
+
+### wlan.mac([mac, mode])
 
 when no arguments are passed a 6-byte long `bytes` tuple object with the WiFI MAC address of both Wifi Station mode and Acces Point mode
 
@@ -219,13 +201,15 @@ _Note: STA and AP cannot have the Same Mac Address_
 
 ### wlan.bandwidth()
 
-Set the bandwidth of the wifi, either 20 MHz or 40 MHz can be configured, use constants `HT20` or `HT40`
+Set the bandwidth of the wifi, either 20 MHz or 40 MHz can be configured, use constants:
+* `HT20`: 20MHz
+* `HT40`: 40MHz
 
 ### wlan.hostname()
 
 Set the Host name of the device connecting to the AP in case of Wifi `mode=WLAN.STA`, in case of `mode=WLAN.AP` this is the name of the host hosting the AP. Max length of name string is 32 Bytes
 
-### wlan.ap\_sta\_list()
+### wlan.ap_sta_list()
 
 Gets an info list of all stations connected to the board's AP.
 
@@ -233,7 +217,12 @@ Info returned is a list of tuples containning (\[mac address of connected STA\],
 
 Protocol types are either : `WLAN.PHY_11_B`, `WLAN.PHY_11_G`, `WLAN.PHY_11_N` or `WLAN.PHY_LOW_RATE`
 
-### wlan.max\_tx\_power(\[power\])
+### wlan.ap_tcpip_sta_list()
+
+This API returns with a list of the devices connected to the Pycom board when it is in AP mode.
+Each element of the returned list is a tuple, containing the MAC address and IP address of the device.
+
+### wlan.max_tx_power([power])
 
 Gets or Sets the maximum allowable transmission power for wifi.
 
@@ -254,7 +243,7 @@ Values passed in power are mapped to transmit power levels as follows:
 * \[8, 19\]: level5 - 11dBm
 * \[-128, 7\]: level5 - 14dBm
 
-### wlan.country(\[country, schan, nchan, max\_tx\_pwr, policy\])
+### wlan.country([country, schan, nchan, max_tx_pwr, policy])
 
 Gets or set s Country configuration parameters for wifi.
 
@@ -264,15 +253,16 @@ Gets or set s Country configuration parameters for wifi.
 * `max_tx_pwr` Maximum transmission power allowed. see `WLAN.max_tx_power()` for more details.
 * `policy` Is the method when setting country configuration for `WLAN.COUNTRY_POL_AUTO` in STA mode the wifi will aquire the same country config of the connected AP, for `WLAN.COUNTRY_POL_MAN` the configured country parameters will take effect regardless of Connected AP.
 
-### wlan.joined\_ap\_info()
+### wlan.joined_ap_info()
 
 Returns a tuple with (bssid, ssid, primary channel, rssi, Authorization method, wifi standard used) of the connected AP in case of STA mode.
 
-### wlan.wifi\_protocol(\[(bool PHY11\_\_B, bool PHY11\_G, bool PHY11\_N)\])
+### wlan.wifi_protocol([(bool PHY11_B, bool PHY11_G, bool PHY11_N)\])
 
-Sets or gets Wifi Protocol supported.
 
-### wlan.send\_raw(Buffer, interface=STA, use\_sys\_seq=True)
+Sets or gets Wifi Protocol supported.	Sets or gets Wifi Protocol supported in (`PHY_11_B`,`PHY_11_G`,`PHY_11_N`) format. Currently 802.11b or 802.11bg or 802.11bgn mode is available.
+
+### wlan.send_raw(Buffer, interface=STA, use_sys_seq=True)
 
 Send raw data through the Wifi Interface.
 
@@ -288,7 +278,7 @@ Register a user callback function `handler` to be called once any of the `trigge
 
 For trigger events see `Constants` section.
 
-### wlan.promiscuous(\[bool\])
+### wlan.promiscuous([bool])
 
 * To enable Promiscuous mode `WLAN.promiscuous(True)` should be called, and `WLAN.promiscuous(False)` for disabling
 * To get current mode setting call function with empty args
@@ -325,17 +315,17 @@ wlan.promiscuous(True)
 
 This function will return an integer object as mask for triggered events.
 
-### wlan.wifi\_packet()
+### wlan.wifi_packet()
 
 This function will return a tuble with Wifi packet info captured in promiscuous mode.
 
-### wlan.ctrl\_pkt\_filter(\[int\])
+### wlan.ctrl_pkt_filter([int])
 
 This function is used to set the filter mask for Wifi control packets in promiscuous mode. for Filter masks, see `Constants` section.
 
 To get the current Filter mask, call the function with empty args.
 
-### wlan.smartConfig\(\)
+### wlan.smartConfig()
 
 Start SmartConfig operation, the smartConfig is a provisioning technique that enables setting Wifi credentials for station mode wirelessly via mobile app.
 
@@ -344,9 +334,11 @@ Start SmartConfig operation, the smartConfig is a provisioning technique that en
 - Use mobile App (ESP touch or Pycom App) to set ssid and password for the AP 
 - You can register a callback to be triggered when smart Config is Finesed successfuly or timedout.
 
-### wlan.Connected\_ap\_pwd()
+### wlan.Connected_ap_pwd()
 
 Get the password of AP the Device is connected to.
+
+
 
 ## Constants
 

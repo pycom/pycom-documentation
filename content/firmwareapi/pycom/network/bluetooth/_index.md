@@ -60,35 +60,35 @@ bluetooth = Bluetooth()
 
 ## Methods
 
-#### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None, modem\_sleep=True, pin=None, privacy=True, secure\_connections=True, mtu=200)
+### bluetooth.init(id=0, mode=Bluetooth.BLE, antenna=None, modem_sleep=True, pin=None, privacy=True, secure_connections=True, mtu=200)
 
-* `id` Only one Bluetooth peripheral available so must always be 0.
-* `mode` currently the only supported mode is `Bluetooth.BLE`.
-* `antenna` selects between the internal and the external antenna. Can be either `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`.
-* `modem_sleep` Enables or Disables BLE modem sleep, Disable modem sleep as a workaround when having Crashes due to flash cache being disabled, as this prevents BLE task saving data in external RAM while accesing external flash for R/W.
-* `pin` a one to six digit number (`0`-`9`) to connect to the GATT Sever. Setting any valid pin, GATT Server security features are activated.
-* `privacy` Enables or Disables local privacy settings so address will be random or public.
+
+* `id` Only one Bluetooth peripheral available so must always be 0	* `id` Only one Bluetooth peripheral available so must always be 0.
+* `mode` currently the only supported mode is `Bluetooth.BLE`	* `mode` currently the only supported mode is `Bluetooth.BLE`.
+* `modem_sleep` Enables or Disables BLE modem sleep, Disable modem sleep as a workaround when having Crashes due to flash cache being disabled, as this prevents BLE task saving data in external RAM while accesing external flash for R/W	* `antenna` selects between the internal and the external antenna. Can be either `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`.
+* `antenna` selects between the internal and the external antenna. Can be either `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`	* `modem_sleep` Enables or Disables BLE modem sleep, Disable modem sleep as a workaround when having Crashes due to flash cache being disabled, as this prevents BLE task saving data in external RAM while accesing external flash for R/W.
+* `secure` enables or disables the GATT Server security features	* `pin` a one to six digit number (`0`-`9`) to connect to the GATT Sever. Setting any valid pin, GATT Server security features are activated.
+* `pin` a six digit number to connect to the GATT Sever	* `privacy` Enables or Disables local privacy settings so address will be random or public.
 * `secure_connections` Enables or Disables Secure Connections and MITM Protection.
 * `mtu` Maximum Transmission Unit (MTU) is the maximum length of an ATT packet. Value must be between `23` and `200`.
 
-With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
 
+  With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.	With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
 Initialises and enables the Bluetooth radio in BLE mode.
 
-{{% hint style="info" %}}
 To use an external antenna, set `P12 as output pin.`
 
 ```python
 
 Pin('P12', mode=Pin.OUT)(True)
 ```
-{{% /hint %}}
 
-#### bluetooth.deinit()
+
+### bluetooth.deinit()
 
 Disables the Bluetooth radio.
 
-#### bluetooth.start\_scan(timeout)
+### bluetooth.start_scan(timeout)
 
 Starts performing a scan listening for BLE devices sending advertisements. This function always returns immediately, the scanning will be performed on the background. The return value is `None`. After starting the scan the function `get_adv()` can be used to retrieve the advertisements messages from the FIFO. The internal FIFO has space to cache 16 advertisements.
 
@@ -103,15 +103,15 @@ bluetooth.start_scan(10)        # starts scanning and stop after 10 seconds
 bluetooth.start_scan(-1)        # starts scanning indefinitely until bluetooth.stop_scan() is called
 ```
 
-#### bluetooth.stop\_scan()
+### bluetooth.stop_scan()
 
 Stops an ongoing scanning process. Returns `None`.
 
-#### bluetooth.isscanning()
+### bluetooth.isscanning()
 
 Returns `True` if a Bluetooth scan is in progress. `False` otherwise.
 
-#### bluetooth.get\_adv()
+### bluetooth.get_adv()
 
 Gets an named tuple with the advertisement data received during the scanning. The tuple has the following structure: `(mac, addr_type, adv_type, rssi, data)`
 
@@ -133,11 +133,11 @@ adv = bluetooth.get_adv() #
 ubinascii.hexlify(adv.mac) # convert hexadecimal to ascii
 ```
 
-#### bluetooth.get\_advertisements()
+### bluetooth.get_advertisements()
 
 Same as the `get_adv()` method, but this one returns a list with all the advertisements received.
 
-#### bluetooth.resolve\_adv\_data(data, data\_type)
+### bluetooth.resolve_adv_data(data, data_type)
 
 Parses the advertisement data and returns the requested `data_type` if present. If the data type is not present, the function returns `None`.
 
@@ -167,11 +167,11 @@ while bluetooth.isscanning():
             print(ubinascii.hexlify(mfg_data))
 ```
 
-#### bluetooth.set\_pin()
+### bluetooth.set_pin()
 
 Configures a new PIN to be used by the device. The PIN is a 1-6 digit length decimal number, if less than 6 digits are given the missing leading digits are considered as 0. E.g. 1234 becomes 001234. When a new PIN is configured, the information of all previously bonded device is removed and the current connection is terminated. To restart advertisement the advertise() must be called after PIN is changed.
 
-#### bluetooth.connect(mac\_addr, timeout=None)
+### bluetooth.connect(mac_addr, [timeout=None])
 
 * `mac_addr` is the address of the remote device to connect
 * `timeout` specifies the amount of time in milliseconds to wait for the connection process to finish. If not given then no timeout is applied The function blocks until the connection succeeds or fails (raises OSError) or the given `timeout` expires (raises `Bluetooth.timeout TimeoutError`). If the connections succeeds it returns a object of type `GATTCConnection`.
@@ -180,7 +180,7 @@ Configures a new PIN to be used by the device. The PIN is a 1-6 digit length dec
 bluetooth.connect('112233eeddff') # mac address is accepted as a string
 ```
 
-#### bluetooth.callback(trigger=None, handler=None, arg=None)
+### bluetooth.callback([trigger=None, handler=None, arg=None])
 
 Creates a callback that will be executed when any of the triggers occurs. The arguments are:
 
@@ -190,7 +190,7 @@ Creates a callback that will be executed when any of the triggers occurs. The ar
 
 An example of how this may be used can be seen in the [`bluetooth.events()`](./#bluetooth-events) method.
 
-#### bluetooth.events()
+### bluetooth.events()
 
 Returns a value with bit flags identifying the events that have occurred since the last call. Calling this function clears the events.
 
@@ -214,7 +214,7 @@ bluetooth.callback(trigger=Bluetooth.CLIENT_CONNECTED | Bluetooth.CLIENT_DISCONN
 bluetooth.advertise(True)
 ```
 
-#### bluetooth.set\_advertisement(\* , name=None, manufacturer\_data=None, service\_data=None, service\_uuid=None)
+### bluetooth.set_advertisement([name=None, manufacturer_data=None, service_data=None, service_uuid=None])
 
 Configure the data to be sent while advertising. If left with the default of `None` the data won't be part of the advertisement message.
 
@@ -231,7 +231,7 @@ Example:
 bluetooth.set_advertisement(name="advert", manufacturer_data="lopy_v1")
 ```
 
-#### bluetooth.set\_advertisement\_params(\* , adv\_int\_min=0x20, adv\_int\_max=0x40, adv\_type=Bluetooth.ADV\_TYPE\_IND, own\_addr\_type=Bluetooth.BLE\_ADDR\_TYPE\_PUBLIC, channel\_map=Bluetooth.ADV\_CHNL\_ALL, adv\_filter\_policy=Bluetooth.ADV\_FILTER\_ALLOW\_SCAN\_ANY\_CON\_ANY)
+### bluetooth.set_advertisement_params(adv_int_min=0x20, adv_int_max=0x40, adv_type=Bluetooth.ADV_TYPE_IND, own_addr_type=Bluetooth.BLE_ADDR_TYPE_PUBLIC, channel_map=Bluetooth.ADV_CHNL_ALL, adv_filter_policy=Bluetooth.ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY)
 
 Configure the parameters used when advertising.
 
@@ -244,11 +244,11 @@ The arguments are:
 * `channel_map` is the advertising channel map.
 * `adv_filter_policy` is the advertising filter policy.
 
-#### bluetooth.advertise(\[Enable\])
+### bluetooth.advertise([Enable])
 
 Start or stop sending advertisements. The `set_advertisement()` method must have been called prior to this one.
 
-#### bluetooth.service(uuid, \* , isprimary=True, nbr\_chars=1, start=True)
+#### bluetooth.service(uuid, [isprimary=True, nbr_chars=1, start=True])
 
 Create a new service on the internal GATT server. Returns a object of type `BluetoothServerService`.
 
@@ -263,11 +263,11 @@ The arguments are:
 bluetooth.service('abc123')
 ```
 
-#### bluetooth.disconnect\_client()
+### bluetooth.disconnect_client()
 
 Closes the BLE connection with the client.
 
-### bluetooth.tx\_power(type, level)
+### bluetooth.tx_power(type, level)
 
 Gets or sets the TX Power level.
 If called with only `type` parameter it returns with the current value belonging to the given type.

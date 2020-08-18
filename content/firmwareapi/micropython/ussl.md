@@ -10,7 +10,7 @@ This module provides access to Transport Layer Security (often known as "Secure 
 
 ## Methods
 
-#### ssl.wrap\_socket(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ssl\_version=0, ca\_certs=None, server\_hostname=None, timeout=10sec)
+### ssl.wrap_socket(sock, [keyfile=None, certfile=None, server_side=False, cert_reqs=CERT_NONE, ssl_version=0, ca_certs=None, server_hostname=None, saved_session=None, timeout=10sec])
 
 Takes an instance `sock` of `socket.socket`, and returns an instance of `ssl.SSLSocket`, a subtype of `socket.socket`, which wraps the underlying socket in an SSL context. Example:
 
@@ -39,6 +39,23 @@ ss.connect(socket.getaddrinfo('cloud.blynk.cc', 8441)[0][-1])
 SSL sockets inherit all methods and from the standard sockets, see the `usocket` module.
 
 `timeout` : specify a Timeout in Seconds for the SSL handshake operation between client and server, default is 10 seconds
+
+#### ssl.save\_session(ssl_sock)
+
+Takes an instance `ssl_sock` of `ssl.SSLSocket`, and returns an instance of `ssl.SSLSession`. Saved session can be resumed later, thereby reducing mobile data and time required. Example:
+
+```python
+import socket
+import ssl
+s = socket.socket()
+ss = ssl.wrap_socket(s)
+ss.connect(socket.getaddrinfo('www.google.com', 443)[0][-1])
+ses = ssl.save_session(ss)
+ss.close()
+ss = ssl.wrap_socket(s, saved_session=ses)
+ss.connect(socket.getaddrinfo('www.google.com', 443)[0][-1])
+```
+
 
 ## Exceptions
 
