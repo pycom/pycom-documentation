@@ -39,7 +39,7 @@ f.close()
 
 ## Constructors
 
-### class machine.SD(id, ...)
+### class machine.SD([id])
 
 Create a SD card object. See `sd.init()` for parameters.
 
@@ -47,7 +47,9 @@ Create a SD card object. See `sd.init()` for parameters.
 
 ### sd.init([id=0])
 
-Enable the SD card.
+Enable the SD card. The id is always 0.
+
+> Use the [os](/firmwareapi/micropython/uos/) module to manipulate files.
 
 ### sd.deinit()
 

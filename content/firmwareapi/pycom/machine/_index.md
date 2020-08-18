@@ -118,7 +118,11 @@ Returns a byte string with a unique identifier of a board/SoC. It will vary from
 
 ### machine.info()
 
-Returns the high water mark of the stack associated with various system tasks, in words (1 word = 4 bytes on the ESP32). If the value is zero then the task has likely overflowed its stack. If the value is close to zero then the task has come close to overflowing its stack.
+Returns the high water mark of the stack associated with various system tasks, in words (1 word = 4 bytes on the ESP32). If the value is zero then the task has likely overflowed its stack. 
+
+### machine.temperature()
+
+Returns the temperature of the ESP32 core in degrees Farenheit. You can convert this to Celcius by `((machine.temperature() - 32) / 1.8)`
 
 ## Constants
 

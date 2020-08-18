@@ -97,7 +97,7 @@ Used to get interrupted after a specific interval.
 
 ## Methods
 
-### alarm.callback(handler, * , arg=None)
+### alarm.callback(handler, [arg=None])
 
 Specify a callback handler for the alarm. If set to `None`, the alarm will be disabled.
 

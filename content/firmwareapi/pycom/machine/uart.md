@@ -83,7 +83,7 @@ On the GPy/FiPy UART2 is unavailable because it is used to communicate with the 
 
 ## Methods
 
-### uart.init(baudrate=9600, bits=8, parity=None, stop=1, \* , timeout_chars=2, pins=(TXD, RXD, RTS, CTS), rx_buffer_size=512)
+### uart.init([baudrate=9600, bits=8, parity=None, stop=1, timeout_chars=2, pins=(TXD, RXD, RTS, CTS), rx_buffer_size=512])
 
 Initialise the UART bus with the given parameters:
 
