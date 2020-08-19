@@ -46,5 +46,5 @@ Always attach the appropriate antenna when using a wireless connection (LoRa / S
 ### Power
 Do not use the 3.3V pin **in combination with** the Vin pin to supply the device as this will damage the voltage regulator on the board.
 
-### Antennas
+### Antenna placement
 Always attach the appropriate antenna when using a wireless connection (LoRa / LTE). For WiFi / BLE, it is not mandatory to use an external antenna when you did not explicitly specify this in your code. 

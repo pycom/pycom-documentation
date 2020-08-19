@@ -6,8 +6,20 @@ aliases:
     - chapter/tutorials/sigfox
 ---
 
-Before you start, make sure that your device was registered with [Sigfox](/gettingstarted/registration/sigfox).
+> Before you start, make sure that your device was registered with [Sigfox](/gettingstarted/registration/sigfox).
 
+When using the SigFox network, **Always** connect the appropriate LoRa antenna to your device. See the figures below for the correct antenna placement
+
+|  Lopy4 | Fipy  |   
+|---|---|
+| ![](/gitbook/assets/lora_sigfox_pigtail_ant_lopy4.png) | ![](/gitbook/assets/lora_sigfox_pigtail_ant_fipy.png)  |   
+
+On this page we cover
+1. [Connecting to Sigfox](#connecting-to-sigfox)
+2. [Disengaging Sequence Numbers](#disengaging-sequence-numbers)
+
+
+## Connecting to SigFox
 The following tutorials demonstrate how to register and get started with the SiPy. The board can be configured for operation in various countries based upon specified RCZ zones (see the `Sigfox` class for more info). The SiPy, LoPy 4, and FiPy supports both uplink and downlink `Sigfox` messages as well as device to device communication via its FSK Mode `Sigfox`.
 
 ```python
@@ -30,10 +42,8 @@ s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
 s.send(bytes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
 ```
 
-> Please ensure that there is an antenna connected to your device before sending/receiving Sigfox messages as in proper use (e.g. without an antenna), may damage the device.
 
-
-## Disengage Sequence Number
+## Disengaging Sequence Numbers
 
 If your are experiencing issues with Sigfox connectivity, this could be due to the sequence number being out of sync. To prevent replay on the network, the Sigfox protocol uses sequence numbers. If there is a large difference between the sequence number sent by the device and the one expected by the backend, your message is dropped by the network.
 

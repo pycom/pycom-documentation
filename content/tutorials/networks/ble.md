@@ -6,7 +6,11 @@ aliases:
     - chapter/tutorials/all/ble
 ---
 
-At present, basic BLE functionality is available. More features will be implemented in the near future, such as pairing. This page will be updated in line with these features.
+On this page we cover
+1. [Scanning for BLE devices](#scan-for-ble-devices)
+2. [Connecting to a BLE device](#connect-to-a-ble-device)
+    1. [Retrieve data](#connect-to-a-ble-device-and-retrieve-data)
+    2. [Retrieve manufacturer](#connect-to-a-ble-device-and-get-name-and-manufacturer-data)
 
 ## Scan for BLE devices
 
@@ -47,7 +51,7 @@ while True:
 print("Connected to device with addr = {}".format(ubinascii.hexlify(adv.mac)))
 ```
 
-## Connect to a BLE Device and retrieve data
+### Connect to a BLE Device and retrieve data
 
 Connecting to a device named 'Heart Rate' and receiving data from it's services.
 
@@ -81,7 +85,7 @@ while True:
       time.sleep(0.050)
 ```
 
-## Connect to a BLE device and get name and manufacturer data
+### Connect to a BLE device and get name and manufacturer data
 
 Using `resolve_adv_data()` to attempt to retrieve the name and manufacturer data from the advertiser.
 
