@@ -129,18 +129,16 @@ If you need to remove files from your device you can use the following commands:
 
 ## Step 4: Using your expansionboard
 From here on, you can continue to use the additional features of your expansionboard:
->Note The Expansionboard does not need any additional libraries and provides no additional features
+>Note The Expansionboard requires no additional libraries and all functions work out of the box!
 
 |[ Pygate](/tutorials/expansionboards/pygate/)| [Pysense](/tutorials/expansionboards/pysense/) | [Pysense 2.0 X](/tutorials/expansionboards/pysense2/)| [Pytrack](/tutorials/expansionboards/pytrack/)| [Pytrack 2.0 X](/tutorials/expansionboards/pytrack2/)| [PyScan ](/tutorials/expansionboards/pyscan/)|
 |:---|:---|:---|:---|:---|:---|
 | ![](/gitbook/assets/expansion_board_3_lopy4.png)|![](/gitbook/assets/pysense_icon.png) | ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png) |
 
-## Step 5: Connecting antennas
-Click on the Icon of your board to get redirect to the datasheet and antenna connection diagrams
+## Step 5: Connecting to a network
 
-|[Wipy 3](/tutorials/expansionboards/pysense/)| [Lopy 4](/tutorials/expansionboards/pysense/) | [Sipy](/tutorials/expansionboards/pysense/)| [Gpy](/tutorials/expansionboards/pysense/)| [Fipy](/tutorials/expansionboards/pysense/)| 
-|:---|:---|:---|:---|:---|
-| ![](/gitbook/assets/wipy.png)|![](/gitbook/assets/lopy4.png) | ![](/gitbook/assets/sipy.png)| ![](/gitbook/assets/gpy.png)| ![](/gitbook/assets/fipy.png)| 
+|WiFi | LoRa | SigFox | BLE | LTE | Ethernet |
+|:---|:---|:---|:---|:---|:---|:---|:---|
 
 ## Further references
 Now that we got the basic example running, you can continue with the links below.
