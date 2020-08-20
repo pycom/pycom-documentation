@@ -268,7 +268,7 @@ Send raw data through the Wifi Interface.
 
 `use_sys_seq`: `True` to use the systems next sequance number for sending the data, `False` for keeping the sequance number in the given raw data buffer unchanged.
 
-### wlan.callback(trigger, handler=Null, arg=Null)
+### wlan.callback(trigger, [handler=Null, arg=Null])
 
 Register a user callback function `handler` to be called once any of the `trigger` events occures optionally with a passed `arg`. by default the wlan obj is passed as arg to the handler. To unregister the callback you can call the `wlan.callback` function with empty `handler` and `arg` parameters. Possible triggers:
 
@@ -279,8 +279,8 @@ Register a user callback function `handler` to be called once any of the `trigge
 * `WLAN.EVENT_PKT_DATA_AMPDU`: AMPDU data packet recieved in promiscuous mode
 * `WLAN.EVENT_PKT_MISC`: misc paket recieved in promiscuous mode.
 * `WLAN.EVENT_PKT_ANY`: Any packet recieved in promiscuous mode. 
-* `SMART_CONF_DONE`: Smart Config of wifi ssid/pwd Finished
-* `SMART_CONF_TIEMOUT`: Smart Config of wifi ssid/pwd timed-out
+* `WLAN.SMART_CONF_DONE`: Smart Config of wifi ssid/pwd Finished
+* `WLAN.SMART_CONF_TIEMOUT`: Smart Config of wifi ssid/pwd timed-out
 
 ### wlan.promiscuous([bool])
 
