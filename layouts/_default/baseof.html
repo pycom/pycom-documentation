@@ -36,6 +36,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
   <script>
+    var development = false;
     var app = new Vue({
       el: '#app',
       data: {
@@ -74,10 +75,17 @@
 
       },
       watch: {
-        // whenever question changes, this function will run
+        // whenever the branch changes, this function will run
         branch: function (newb, old) {
           if (newb.value != this.branches[0].value) {
-            window.location = newb + window.location.pathname
+            development = !development;
+            console.log("switch")
+            if (!development){
+              document.getElementById('development').style='display:none';
+            }else{
+              document.getElementById('development').style='display:block';
+            }
+            //window.location = newb + window.location.pathname
           }
         },
       },
@@ -91,8 +99,10 @@
       debug: false // Set debug to true if you want to inspect the dropdown
     });
   </script>
-
+<!--{{- partial "footer.html" . -}}-->
 {{- partial "alexia.html" . -}}
 {{- partial "google_analitycs.html" . -}}
+
+
 </body>
 </html>

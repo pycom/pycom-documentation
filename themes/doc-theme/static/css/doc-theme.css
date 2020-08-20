@@ -220,6 +220,21 @@ li.hot {
     padding:0!important;
 }
 
+/* changes 19-08-2020
+Added shortcode for development markings
+
+*/
+#development {
+  display:none;
+
+}
+.dev {
+  background-color: #EF9A9A !important;
+}
+
+.v-card__text > h3, h4{
+  margin-top:0px;
+}
 .danger-alert {
   background-color: #EF9A9A !important;
   margin-top: 24px;
