@@ -12,7 +12,7 @@ When using the SigFox network, **Always** connect the appropriate LoRa antenna t
 
 |  Lopy4 | Fipy  |   
 |---|---|
-| ![](/gitbook/assets/lora_sigfox_pigtail_ant_lopy4.png) | ![](/gitbook/assets/lora_sigfox_pigtail_ant_fipy.png)  |   
+| ![](/gitbook/assets/lora_sigfox_pigtail_lopy4.png) | ![](/gitbook/assets/lora_sigfox_pigtail_fipy.png)  |   
 
 On this page we cover
 1. [Connecting to Sigfox](#connecting-to-sigfox)

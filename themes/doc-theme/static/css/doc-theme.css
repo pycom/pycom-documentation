@@ -278,7 +278,7 @@ img {
 
 table {
     display: table;
-    width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     overflow: auto;
