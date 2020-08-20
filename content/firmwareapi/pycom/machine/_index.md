@@ -4,7 +4,6 @@ aliases:
 ---
 
 The `machine` module contains specific functions related to the board.
-
 ### Quick Usage Example
 
 ```python

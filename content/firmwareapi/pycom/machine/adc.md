@@ -8,6 +8,11 @@ aliases:
 
 ## class ADC – Analog to Digital Conversion
 
+
+{{< development style="dev" >}}
+hi
+
+{{< /development >}}
 ### Quick Usage Example
 
 ```python

@@ -8,37 +8,60 @@ aliases:
 
 All builtin functions are described here. 
 
-abs()
+### abs(val)
 
-all()
+Returns the absolute value of val
+### all([])
 
-any()
+Returns true if all items in an iterable are True
 
-bin()
+### any([])
 
-class bool
+Returns true if any of the items in an iterable are True
 
-class bytearray
+### bin(val)
 
-class bytes
+Returns the binary equivalent of the given integer
 
-callable()
+### bytearray([source, encoding, errors])
 
-chr()
+Returns the bytearray of the bytes array passed in
 
-class method()
+### bytes()
 
-compile()
+Similar to `bytearray()` but for a single byte
 
-class complex
+### callable(object)
 
-class dict
+Returns True if the object appears callable
 
-dir()
+### chr(val)
 
-divmod()
+Returns a character from an integer
 
-enumerate()
+### classmethod(foo)
+
+Returns a classmethod for the passed function
+
+### complex([real, imag])
+
+Creates a complex number from the passed variables.
+> You can also use `a-bj`
+
+### delattr(object, name)
+
+Deletes attribute from the object.
+
+### dir([object])
+
+Returns a list of valid attributes of the object. If no parameter is passed, it will return all created objects.
+
+### divmod(x, y)
+
+Divides and mods the two values. Similar to `(x / y, x % y)`
+Returns a tuple `(q, r)` of the two paramters, with quotient `q` and remainder `r`
+
+### numerate()
 
 eval()
 
