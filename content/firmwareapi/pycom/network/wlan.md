@@ -163,17 +163,14 @@ In case of mode = `WLAN.STA_AP` this method can get the ssid of board's own AP p
 
 Get or set the authentication type when in AP mode.
 
-### wlan.channel([channel])
+### wlan.channel([channel, secondary_channel=WLAN.SEC_CHN_NONE])
 
-_In AP mode:_
-
-Get or set the wifi channel
-
-_In STA mode:_
-
-`channel`: is the primary channel to listen to.
-
-_Note: Setting Channel in STA mode is only Allowed in Promiscuous mode_
+* In AP mode, this will get or set the WiFi channel. The secondary channel has no effect.
+* In STA mode, this will get the channel. Setting the channel is only allowed in Promiscuous mode. A secondary channel can be given as well if the bandwidth is set to `WLAN.HT40`, choosing from the following:
+  * `WLAN.SEC_CHN_POS_ABOVE`: Choose a secondary channel above the currently selected channel
+  * `WLAN.SEC_CHN_POS_BELOW`: Choose a secondary channel below the currently selected channel
+  * `WLAN.SEC_CHN_NONE`
+Possible channels are in the range of 1-14, depending on your country settings.
 
 ### wlan.antenna([antenna])
 
@@ -198,7 +195,7 @@ _Note: STA and AP cannot have the Same Mac Address_
 
 ### wlan.bandwidth()
 
-Set the bandwidth of the wifi, either 20 MHz or 40 MHz can be configured, use constants:
+Set the bandwidth of the wifi, either 20 MHz or 40 MHz can be configured, use the following:
 * `WLAN.HT20`: 20MHz
 * `WLAN.HT40`: 40MHz
 
@@ -227,18 +224,18 @@ Packets of different rates are transmitted in different powers according to the 
 
 Values passed in power are mapped to transmit power levels as follows:
 
-* \[78, 127\]: level0
-* \[76, 77\]: level1
-* \[74, 75\]: level2
-* \[68, 73\]: level3
-* \[60, 67\]: level4
-* \[52, 59\]: level5
-* \[44, 51\]: level5 - 2dBm
-* \[34, 43\]: level5 - 4.5dBm
-* \[28, 33\]: level5 - 6dBm
-* \[20, 27\]: level5 - 8dBm
-* \[8, 19\]: level5 - 11dBm
-* \[-128, 7\]: level5 - 14dBm
+* [78, 127]: level0
+* [76, 77]: level1
+* [74, 75]: level2
+* [68, 73]: level3
+* [60, 67]: level4
+* [52, 59]: level5
+* [44, 51]: level5 - 2dBm
+* [34, 43]: level5 - 4.5dBm
+* [28, 33]: level5 - 6dBm
+* [20, 27]: level5 - 8dBm
+* [8, 19]: level5 - 11dBm
+* [-128, 7]: level5 - 14dBm
 
 ### wlan.country([country, schan, nchan, max_tx_pwr, policy])
 
@@ -248,11 +245,13 @@ Gets or sets Country configuration parameters for wifi.
 * `scahn` is the start channel number, in scan process scanning will be performed starting from this channels till the total number of channels. it should be less than or equal 14.
 * `nchan` is the total number of channels in the specified country. maximum is 14
 * `max_tx_pwr` Maximum transmission power allowed. see `WLAN.max_tx_power()` for more details.
-* `policy` Is the method when setting country configuration for `WLAN.COUNTRY_POL_AUTO` in STA mode the wifi will aquire the same country config of the connected AP, for `WLAN.COUNTRY_POL_MAN` the configured country parameters will take effect regardless of Connected AP.
+* `policy` Is the method when setting country configuration. Possible options are
+  * `WLAN.COUNTRY_POL_AUTO` in STA mode the wifi will aquire the same country config of the connected AP
+  * `WLAN.COUNTRY_POL_MAN` the configured country parameters will take effect regardless of connected AP.
 
 ### wlan.joined_ap_info()
 
-Returns a tuple with (bssid, ssid, primary channel, rssi, Authorization method, wifi standard used) of the connected AP in case of STA mode.
+Returns a tuple with `(bssid, ssid, primary channel, rssi, Authorization method, wifi standard used)` of the connected AP in case of STA mode.
 
 ### wlan.wifi_protocol([(bool PHY11_B, bool PHY11_G, bool PHY11_N)])
 
@@ -271,14 +270,21 @@ Send raw data through the Wifi Interface.
 
 ### wlan.callback(trigger, handler=Null, arg=Null)
 
-Register a user callback function `handler` to be called once any of the `trigger` events occures optionally with a passed `arg`. by default the wlan obj is passed as arg to the handler. To unregister the callback you can call the `wlan.callback` function with empty `handler` and `arg` parameters.
+Register a user callback function `handler` to be called once any of the `trigger` events occures optionally with a passed `arg`. by default the wlan obj is passed as arg to the handler. To unregister the callback you can call the `wlan.callback` function with empty `handler` and `arg` parameters. Possible triggers:
 
-For trigger events see `Constants` section.
+* `WLAN.EVENT_PKT_MGMT`: Managment packet recieved in promiscuous mode.
+* `WLAN.EVENT_PKT_CTRL`: Control Packet recieved in promiscuous mode
+* `WLAN.EVENT_PKT_DATA`: Data packet recieved in promiscuous mode
+* `WLAN.EVENT_PKT_DATA_MPDU`: MPDU data packet recieved in promiscuous mode
+* `WLAN.EVENT_PKT_DATA_AMPDU`: AMPDU data packet recieved in promiscuous mode
+* `WLAN.EVENT_PKT_MISC`: misc paket recieved in promiscuous mode.
+* `WLAN.EVENT_PKT_ANY`: Any packet recieved in promiscuous mode. 
+* `SMART_CONF_DONE`: Smart Config of wifi ssid/pwd Finished
+* `SMART_CONF_TIEMOUT`: Smart Config of wifi ssid/pwd timed-out
 
 ### wlan.promiscuous([bool])
 
-* To enable Promiscuous mode `WLAN.promiscuous(True)` should be called, and `WLAN.promiscuous(False)` for disabling
-* To get current mode setting call function with empty args
+Gets or sets WiFi Promiscuous mode. 
 
 Note:
 
@@ -318,7 +324,18 @@ This function will return a tuble with Wifi packet info captured in promiscuous 
 
 ### wlan.ctrl_pkt_filter([int])
 
-This function is used to set the filter mask for Wifi control packets in promiscuous mode. for Filter masks, see `Constants` section.
+This function is used to set the filter mask for Wifi control packets in promiscuous mode. Possible filters:
+
+* `WLAN.FILTER_CTRL_PKT_ALL`: Filter all Control packets
+* `WLAN.FILTER_CTRL_PKT_WRAPPER`: Filter control wrapper packets
+* `WLAN.FILTER_CTRL_PKT_BAR`: Filter Control BAR packets
+* `WLAN.FILTER_CTRL_PKT_BA`: Filter Control BA packets
+* `WLAN.FILTER_CTRL_PKT_PSPOLL`: Filter Control PSPOLL Packets
+* `WLAN.FILTER_CTRL_PKT_CTS`: Filter Control CTS packets
+* `WLAN.FILTER_CTRL_PKT_ACK`: Filter Control ACK packets
+* `WLAN.FILTER_CTRL_PKT_CFEND`: Filter Control CFEND Packets
+* `WLAN.FILTER_CTRL_PKT_CFENDACK`: Filter Control CFENDACK Packets
+
 
 To get the current Filter mask, call the function with empty args.
 
@@ -345,43 +362,6 @@ Get the password of AP the Device is connected to.
 * WLAN protocol: `WLAN.PHY_11_B`, `WLAN.PHY_11_G`, `WLAN.PHY_11_N`, `WLAN.PHY_LOW_RATE`
 * Scan Type: `WLAN.SCAN_ACTIVE` `WLAN.SCAN_PASSIVE`
 * WLAN country config policy: `WLAN.COUNTRY_POL_AUTO`, `WLAN.COUNTRY_POL_MAN`
-* Secondary Channel position: `WLAN.SEC_CHN_POS_ABOVE`, `WLAN.SEC_CHN_POS_BELOW`
-* Wlan callback triggers:
-
-  `WLAN.EVENT_PKT_MGMT`: Managment packet recieved in promiscuous mode.
-
-  `WLAN.EVENT_PKT_CTRL`: Control Packet recieved in promiscuous mode
-
-  `WLAN.EVENT_PKT_DATA`: Data packet recieved in promiscuous mode
-
-  `WLAN.EVENT_PKT_DATA_MPDU`: MPDU data packet recieved in promiscuous mode
-
-  `WLAN.EVENT_PKT_DATA_AMPDU`: AMPDU data packet recieved in promiscuous mode
-
-  `WLAN.EVENT_PKT_MISC`: misc paket recieved in promiscuous mode.
-
-  `WLAN.EVENT_PKT_ANY`: Any packet recieved in promiscuous mode.
-  
-  `SMART_CONF_DONE`: Smart Config of wifi ssid/pwd Finished
-  
-  `SMART_CONF_TIEMOUT`: Smart Config of wifi ssid/pwd timed-out
-
-* Control packet filters in promiscuous mode:
-
-  `WLAN.FILTER_CTRL_PKT_ALL`: Filter all Control packets
-
-  `WLAN.FILTER_CTRL_PKT_WRAPPER`: Filter control wrapper packets
-
-  `WLAN.FILTER_CTRL_PKT_BAR`: Filter Control BAR packets
-
-  `WLAN.FILTER_CTRL_PKT_BA`: Filter Control BA packets
-
-  `WLAN.FILTER_CTRL_PKT_PSPOLL`: Filter Control PSPOLL Packets
-
-  `WLAN.FILTER_CTRL_PKT_CTS`: Filter Control CTS packets
-
-  `WLAN.FILTER_CTRL_PKT_ACK`: Filter Control ACK packets
-
-  `WLAN.FILTER_CTRL_PKT_CFEND`: Filter Control CFEND Packets
-
-  `WLAN.FILTER_CTRL_PKT_CFENDACK`: Filter Control CFENDACK Packets
+* Secondary Channel position: `WLAN.SEC_CHN_POS_ABOVE`, `WLAN.SEC_CHN_POS_BELOW`, `WLAN.SEC_CHN_NONE`
+* Wlan callback triggers: `WLAN.EVENT_PKT_MGMT`, `WLAN.EVENT_PKT_CTRL`, `WLAN.EVENT_PKT_DATA`, `WLAN.EVENT_PKT_DATA_MPDU`, `WLAN.EVENT_PKT_DATA_AMPDU`, `WLAN.EVENT_PKT_MISC`, `WLAN.EVENT_PKT_ANY`, `SMART_CONF_DONE`, `SMART_CONF_TIEMOUT`
+* Control packet filters in promiscuous mode: `WLAN.FILTER_CTRL_PKT_ALL`, `WLAN.FILTER_CTRL_PKT_WRAPPER`, `WLAN.FILTER_CTRL_PKT_BAR`, `WLAN.FILTER_CTRL_PKT_BA`, `WLAN.FILTER_CTRL_PKT_PSPOLL`, `WLAN.FILTER_CTRL_PKT_CTS`, `WLAN.FILTER_CTRL_PKT_ACK`, `WLAN.FILTER_CTRL_PKT_CFEND`, `WLAN.FILTER_CTRL_PKT_CFENDACK`
