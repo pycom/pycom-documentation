@@ -344,9 +344,9 @@ To get the current Filter mask, call the function with empty args.
 Start SmartConfig operation, the smartConfig is a provisioning technique that enables setting Wifi credentials for station mode wirelessly via mobile app.
 
 #### Steps:
-- call **wlan.smartConfig()** (if smartConfig is not enabled on boot or you want to restart smartConfig)
+- call `wlan.smartConfig()` (if smartConfig is not enabled on boot or you want to restart smartConfig)
 - Use mobile App (ESP touch or Pycom App) to set ssid and password for the AP 
-- You can register a callback to be triggered when smart Config is Finesed successfuly or timedout.
+- You can register a callback to be triggered when smart Config is Finished successfuly or times out.
 
 ### wlan.Connected_ap_pwd()
 
