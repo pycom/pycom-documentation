@@ -40,8 +40,6 @@ The arguments are:
     * `LoRa.CN470`
     * `LoRa.CN779`
     * `LoRa.IN865`
-    * `LoRa.RU864`
-    * `LoRa.KR920`
 
     > If no region is provided, it will default to the setting provided in the CONFIG partition.
 * `frequency` accepts values within the selected Region frequency bands.
