@@ -224,12 +224,12 @@ li.hot {
 Added shortcode for development markings
 
 */
-#development {
+.development {
   display:none;
 
 }
 .dev {
-  background-color: #EF9A9A !important;
+  background-color: #F6E6D6 !important;
 }
 
 .v-card__text > h3, h4{

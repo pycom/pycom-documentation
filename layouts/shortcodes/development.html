@@ -1,8 +1,13 @@
-<div id='development'>
+{{ $_hugo_config := `{ "version": 1 }` }}
+<div class='development'>
 <v-card class='{{ .Get "style" }}'>
     <v-card-text>
+      Development version {{.Get "version" }}
       {{ .Inner }}
   
     </v-card-text>
 </v-card>
 </div>
+
+
+

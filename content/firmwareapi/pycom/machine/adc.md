@@ -9,11 +9,35 @@ aliases:
 ## class ADC – Analog to Digital Conversion
 
 
-{{< development style="dev" >}}
-hi
+{{% development version="1.20.2.rc10" style="dev" %}}
 
-{{< /development >}}
+## header
+```python
+print('hello world')
+```
+
+> hi
+
+* one
+* two
+    * tab
+    3. three
+ 
+{{% /development %}}
+
+
+
 ### Quick Usage Example
+{{% development version="1.20.3.b0" style="dev" %}}
+
+## Function(var)
+
+Takes var as an input. Output can be:
+* `One`: One thing
+* `Two`: Second thing
+ 
+{{% /development %}}
+
 
 ```python
 import machine
@@ -35,7 +59,7 @@ Create an ADC object; associate a channel with a pin. For more info check the ha
 
 Enable the ADC block. This method is automatically called on object creation.
 
-* `Bits` can take values between 9 and 12 and selects the number of bits of resolution of the ADC block.
+* `bits` can take values between 9 and 12 and selects the number of bits of resolution of the ADC block.
 
 ### adc.deinit()
 
