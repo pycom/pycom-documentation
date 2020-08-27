@@ -130,11 +130,11 @@ If you need to remove files from your device you can use the following commands:
 ## Step 4: Further references
 Now that we got the basic example running, you can proceed to develop your own application! For further references, you can check the links below:
 
-* [More examples](/tutorials/)
+* [Tutorials and examples](/tutorials/)
 
-* [Documentation](/firmwareapi/)
+* [Firmware API](/firmwareapi/)
 
-* [Get started using the FTP and Telnet Server](/gettingstarted/programming/ftp/)
+* [FTP and Telnet](/gettingstarted/programming/ftp/)
 
 * [Connect using Pybytes](/pybytes/getstarted/)
 
