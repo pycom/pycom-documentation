@@ -41,7 +41,7 @@ _Note: USB Vendor ID is always_ `0x04D8`_._
 If using `homebrew`:
 
 ```bash
-$ brew install dfu-util
+brew install dfu-util
 ```
 
 If using `MacPorts`:
@@ -55,19 +55,19 @@ port install libusb dfu-util
 Ubuntu or Debian:
 
 ```bash
-$ sudo apt-get install dfu-util
+sudo apt-get install dfu-util
 ```
 
 Fedora:
 
 ```bash
-$ sudo yum install dfu-util
+sudo yum install dfu-util
 ```
 
 Arch:
 
 ```bash
-$ sudo pacman -Sy dfu-util
+sudo pacman -Sy dfu-util
 ```
 
 ### Windows
@@ -114,7 +114,7 @@ To enter update mode follow these steps:
 ### macOS and Linux:
 
 ```bash
-$ dfu-util -D pytrack_0.0.8.dfu
+dfu-util -D pytrack_0.0.8.dfu
 ```
 
 {{% hint style="info" %}}
