@@ -14,7 +14,7 @@ aliases:
 
 The datasheet of the Expansion Board is available as a [PDF File](/gitbook/assets/expansion3-specsheet-1.pdf)
 
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Expansion Board(8286-00033P)-20190523.pdf)
+[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Expansion-Board(8286-00033P)-20190523.pdf)
 
 ## Pinout
 
