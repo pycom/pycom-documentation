@@ -26,10 +26,10 @@ The drawing of the LTE-M antenna is available as a [PDF File](/gitbook/assets/lt
 
 The Fipy is certified for [CE RED](/gitbook/assets/fipy_c03-b0-red-final.pdf) and [FCC DSS](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dss.pdf) [FCC DTS](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dts.pdf) [FCC DXX](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dxx.pdf) [FCC TNB](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-tnb.pdf)
 [RCM](/gitbook/assets/RCM-Fipy.pdf)
-[ROHS certification](gitbook/assets/RoHs_declarations/RoHS-for-FiPy(8217-00091P)-20190523.pdf)
+[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-FiPy(8217-00091P)-20190523.pdf)
 ## Pinout
 
-The pinout of the FiPy is available as a [PDF File](/gitbook/assents/fipy-pinout.pdf)
+The pinout of the FiPy is available as a [PDF File](/gitbook/assets/fipy-pinout.pdf)
 
 ![](/gitbook/assets/fipy-pinout.png)
 

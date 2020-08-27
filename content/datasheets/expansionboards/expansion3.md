@@ -14,7 +14,7 @@ aliases:
 
 The datasheet of the Expansion Board is available as a [PDF File](/gitbook/assets/expansion3-specsheet-1.pdf)
 
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Expansion-Board(8286-00033P)-20190523.pdf)
+[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Expansion Board(8286-00033P)-20190523.pdf)
 
 ## Pinout
 
@@ -55,7 +55,7 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board 
 
 ## Troubleshooting
 
-* If PIC stays in bootloader mode, the [`dfu-util` update](/pytrackpysense/installation/firmware) should be performed
+* If PIC stays in bootloader mode, the [`dfu-util` update](/updatefirmware/expansionboard/) should be performed
 
 ## 3D model for case design
 
