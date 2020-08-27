@@ -33,11 +33,10 @@ The follow pages contain all information relating to each product, for example: 
 ## Expansion boards
 - [Pygate](/datasheets/expansionboards/pygate/)
 - [Pysense](/datasheets/expansionboards/pysense/)
-- [Pysense 2.0 X](/datasheets/expansionboards/pysense/)
+- [Pysense 2.0 X](/datasheets/expansionboards/pysense2/)
 - [Pytrack](/datasheets/expansionboards/pytrack/)
-- [Pysense 2.0 X](/datasheets/expansionboards/pysense/)
+- [Pysense 2.0 X](/datasheets/expansionboards/pytrack2/)
 - [Pyscan](/datasheets/expansionboards/pyscan/)
 - [Expansion 2](/datasheets/expansionboards/expansion2/)
 - [Expansion 3](/datasheets/expansionboards/expansion3/)
 - [Deepsleep](/datasheets/expansionboards/deepsleep/)
-
