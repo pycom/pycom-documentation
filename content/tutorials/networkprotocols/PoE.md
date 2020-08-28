@@ -23,8 +23,32 @@ Incorrect usages of Power over Ethernet can lead to unrecoverable damage of not 
 A battery can be connected to the PyGate without issues. The battery can be charged either via USB-C or PoE power.
 
 
-### Setup Options
+## Setup Options
 In the following diagram, we clarify what is, and what is not allowed:
+
+### Power over Ethernet
+
 
 ![](/gitbook/assets/poe-ni-warn1.png)
 
+| Connection type | OK?|
+|--- |--- |
+|USB-C cable connected to a PC with mains ground protection|NOT OK|
+|USB-C cable connected to a Notebook without mains ground protection|OK|
+|USB-C charger with mains ground protection|NOT OK|
+|USB-C charger without mains ground protection|OK|
+|Oscilloscope / Logic Analyser / Other equipment with mains ground protection|NOT OK|
+|Battery|OK|
+
+### Power over USB-C / External
+
+![](/gitbook/assets/poe-ni-warn2.png)
+
+| Connection type | OK?|
+|--- |--- |
+|USB-C cable connected to a PC with mains ground protection| OK|
+|USB-C cable connected to a Notebook without mains ground protection|OK|
+|USB-C charger with mains ground protection| OK|
+|USB-C charger without mains ground protection|OK|
+|Oscilloscope / Logic Analyser / Other equipment with mains ground protection| OK|
+|Battery|OK|
