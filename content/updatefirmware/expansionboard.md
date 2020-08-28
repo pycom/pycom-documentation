@@ -27,7 +27,7 @@ In normal operation, the expansionboard is in Application mode. However when we 
 
 | Board | DFU bootloader (update mode) | Application firmware (normal mode) |
 | :--- | :--- | :--- |
-| Pygate | |
+| Pygate | `0xED15` | `0xED14` |
 | Pytrack | `0xF014` | `0xF013` |
 | Pysense | `0xF011` | `0xF012` |
 | Pyscan | `0xEF37` | `0xEF38` |
