@@ -23,72 +23,8 @@ Incorrect usages of Power over Ethernet can lead to unrecoverable damage of not 
 A battery can be connected to the PyGate without issues. The battery can be charged either via USB-C or PoE power.
 
 
-<h3>Setup Options</h3>
+### Setup Options
+In the following diagram, we clarify what is, and what is not allowed:
 
-<h4> Power over Ethernet</h4>
 ![](/gitbook/assets/poe-ni-warn1.png)
 
-<div class="poe-table">
-<table class="poe">
-	<tbody>
-		<tr>
-			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td class="poe-red">NOT OK</td>
-    </tr>
-    <tr>
-			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
-			<td class="poe-green">  OK</td>
-    </tr>
-    <tr>
-			<td> USB-C charger <b>with</b> mains ground protection</td>
-			<td class="poe-red">  NOT OK</td>
-    </tr>
-    <tr>
-			<td> USB-C charger <b>without</b> mains ground protection</td>
-			<td class="poe-green">  OK</td>
-    </tr>
-		<tr>
-			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td class="poe-red">  NOT OK</td>
-    </tr>
-    <tr>
-			<td> Battery</td>
-			<td class="poe-green"> OK</td>
-    </tr>
-	</tbody>
-</table>
-</div>
-
-<br><br>
-<h4> Power over USB-C or external supply</h4>
-![](/gitbook/assets/poe-ni-warn2.png)
-<div class="poe-table">
-<table class="poe">
-	<tbody>
-		<tr>
-			<td> USB-C cable connected to a PC <b>with</b> mains ground protection</td>
-			<td class="poe-green">OK</td>
-    </tr>
-    <tr>
-			<td> USB-C cable connected to a Notebook <b>without</b> mains ground protection</td>
-			<td class="poe-green"> OK </td>
-    </tr>
-    <tr>
-			<td> USB-C charger <b>with</b> mains ground protection</td>
-			<td class="poe-green"> OK </td>
-    </tr>
-    <tr>
-			<td> USB-C charger <b>without</b> mains ground protection</td>
-			<td class="poe-green"> OK </td>
-    </tr>
-		<tr>
-			<td> Oscilloscope / Logic Analyser / Other equipment <b>with</b> mains ground protection</td>
-			<td class="poe-green"> OK </td>
-    </tr>
-    <tr>
-			<td> Battery</td>
-			<td class="poe-green"> OK </td>
-    </tr>
-	</tbody>
-</table>
-</div>
