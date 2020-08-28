@@ -48,8 +48,8 @@
         drawer2: true,
         toc: 0,
         branches: [
-        { value: '1', text: 'version stable'},
-          { value: '2', text: 'version development'},
+        { value: 'https://docs.pycom.io', text: 'version stable'},
+          { value: 'https://development.pycom.io', text: 'version development'},
           /*{ value: '1', text: 'version 1.20.2.r0'},
           { value: '2', text: 'version 1.20.3.b0'},
           { value: '3', text: 'version 1.20.2.rc10'},
@@ -82,22 +82,22 @@
         // whenever the branch changes, this function will run
         branch: function (newb, old) {
           if (newb.value != this.branches[0].value) {
-            development = !development;
-            console.log("switch")
-            if (!development){
-              var x = document.getElementsByClassName('development')
-              var i;
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = 'none';
-              }   
-            }else{
-              var x = document.getElementsByClassName('development')
-              var i;
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = 'block';
-              }   
-            }
-            //window.location = newb + window.location.pathname
+          //   development = !development;
+          //   console.log("switch")
+          //   if (!development){
+          //     var x = document.getElementsByClassName('development')
+          //     var i;
+          //     for (i = 0; i < x.length; i++) {
+          //       x[i].style.display = 'none';
+          //     }   
+          //   }else{
+          //     var x = document.getElementsByClassName('development')
+          //     var i;
+          //     for (i = 0; i < x.length; i++) {
+          //       x[i].style.display = 'block';
+          //     }   
+          //   }
+            window.location = newb + window.location.pathname;
           }
         },
       },
