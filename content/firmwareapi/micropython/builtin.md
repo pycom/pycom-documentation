@@ -12,7 +12,7 @@ All builtin functions are described here.
 
 Returns the absolute value of val
 
-### all(itereable])
+### all(itereable)
 
 Returns true if all items in an iterable are value `True`
 
@@ -64,92 +64,92 @@ Returns a tuple `(q, r)` of the two paramters, with quotient `q` and remainder `
 
 ### numerate()
 
-eval()
+### eval()
 
-exec()
+### exec()
 
-filter()
+### filter()
 
-class float
+### class float
 
-class frozenset
+### class frozenset
 
-getattr()
+### getattr()
 
-globals()
+### globals()
 
-hasattr()
+### hasattr()
 
-hash()
+### hash()
 
-hex()
+### hex()
 
-id()
+### id()
 
-input()
+### input()
 
-class int
+### class int
 
-isinstance()
+### isinstance()
 
-issubclass()
+### issubclass()
 
-iter()
+### iter()
 
-len()
+### len()
 
-class list
+### class list
 
-locals()
+### locals()
 
-map()
+### map()
 
-max()
+### max()
 
-class memoryview
+### class memoryview
 
-min()
+### min()
 
-next()
+### next()
 
-class object
+### class object
 
-oct()
+### oct()
 
-open()
+### open()
 
-ord()
+### ord()
 
-pow()
+### pow()
 
-print()
+### print()
 
-property()
+### property()
 
-range()
+### range()
 
-repr()
+### repr()
 
-reversed()
+### reversed()
 
-round()
+### round()
 
-class set
+### class set
 
-setattr()
+### setattr()
 
-sorted()
+### sorted()
 
-staticmethod()
+### staticmethod()
 
-class str
+### class str
 
-sum()
+### sum()
 
-super()
+### super()
 
-class tuple
+### class tuple
 
-type()
+### type()
 
-zip()
+### zip()
