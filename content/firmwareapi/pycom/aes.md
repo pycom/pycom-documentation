@@ -31,7 +31,7 @@ print(original)
 
 ## Constructors
 
-### class ucrypto.AES(key, mode=AES.MODE_ECB, IV, counter, segment_size)
+### class ucrypto.AES(key, [mode=AES.MODE_ECB, IV, counter, segment_size])
 
 Create an AES object that will let you encrypt and decrypt messages.
 
@@ -39,7 +39,7 @@ The arguments are:
 
 * `key` (byte string) is the secret key to use. It must be 16 (AES-128), 24 (AES-192), or 32 (AES-256) bytes long.
 * `mode` is the chaining mode to use for encryption and decryption. Can be the following values:
-    * `AES.MODE_ECB`: Electronic Code Book. Simplest encryption mode. It does not hide data patterns well (see this article for more info)
+    * `AES.MODE_ECB`: Electronic Code Book. Simplest encryption mode.
     * `AES.MODE_CBC`: Cipher-Block Chaining. An Initialisation Vector (IV) is required.
     * `AES.MODE_CFB`: Cipher feedback. `plaintext` and `ciphertext` are processed in segments of `segment_size` bits. Works a stream cipher.
     * `AES.MODE_CTR`:  Counter mode. Each message block is associated to a counter which must be unique across all messages that get encrypted with the same key.

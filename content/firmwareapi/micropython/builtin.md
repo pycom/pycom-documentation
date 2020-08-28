@@ -11,13 +11,14 @@ All builtin functions are described here.
 ### abs(val)
 
 Returns the absolute value of val
-### all([])
 
-Returns true if all items in an iterable are True
+### all(itereable])
 
-### any([])
+Returns true if all items in an iterable are value `True`
 
-Returns true if any of the items in an iterable are True
+### any(iterable)
+
+Returns true if any of the items in an iterable are value `True`
 
 ### bin(val)
 
@@ -45,8 +46,8 @@ Returns a classmethod for the passed function
 
 ### complex([real, imag])
 
-Creates a complex number from the passed variables.
-> You can also use `a-bj`
+Creates a complex number from the passed variables. 
+> You can also use the textual notation `'a+bj'`, e.g. `'1+2j'`
 
 ### delattr(object, name)
 
@@ -58,7 +59,7 @@ Returns a list of valid attributes of the object. If no parameter is passed, it 
 
 ### divmod(x, y)
 
-Divides and mods the two values. Similar to `(x / y, x % y)`
+Divides and mods the two values. Similar to `(x / y, x % y)` \
 Returns a tuple `(q, r)` of the two paramters, with quotient `q` and remainder `r`
 
 ### numerate()

@@ -53,7 +53,7 @@ Erase the entire NVRAM memory area.
 
 ### pycom.pulses_get(pin, timeout)
 
-Return a list of pulses at `pin`. The methods scans for transitions at `pin` and returns a list of tuples, each telling the pin value and the duration in microseconds of that value. `pin` is a pin object, which must have set to `INP` or `OPEN_DRAIN` mode. The scan stops if not transitions occurs within `timeout` milliseconds.
+Return a list of pulses at `pin`. The methods scans for transitions at `pin` and returns a list of tuples, each telling the pin value and the duration in microseconds of that value. `pin` is a pin object, which must have set to `INP` or `OPEN_DRAIN` mode. The scan stops if no transitions occur within `timeout` milliseconds.
 
 Example:
 
@@ -69,6 +69,16 @@ sleep_ms(20)
 pin(1)
 data = pulses_get(pin, 100)
 ```
+### pycom.get_free_heap()
+
+Returns the free heap bytes in the memory allocation
+
+
+## Pybytes methods
+
+### pycom.pybytes_on_boot()
+
+Get or set the activation of pybytes on boot.
 
 ## Boot methods
 

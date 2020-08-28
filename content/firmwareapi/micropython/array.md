@@ -27,6 +27,7 @@ Create array with elements of given type. Initial contents of the array are give
 * `Q`: unsigned long long, 8 bytes
 * `f`: foat, 4 bytes
 * `d`: double, 8 bytes
+
 Adapting the typecode to the array-type you want to create can save a lot of space on the microcontroller
 
 ## Methods

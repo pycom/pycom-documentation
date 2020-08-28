@@ -629,7 +629,7 @@ theme = "doc-theme"
     weight = 60
 [[menu.main]]
     name = "Pymesh BLE"
-    url = "/firmwareapi/pycom/network/bluetooth/BLE_Mesh/"
+    url = "/firmwareapi/pycom/network/bluetooth/btmesh/"
     identifier = "firmwareapi@pycom@network@bluetooth@BLE_Mesh"
     parent = "firmwareapi@pycom@network@bluetooth"
     weight = 70

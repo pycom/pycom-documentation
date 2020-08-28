@@ -15,6 +15,7 @@ The datasheet of the Pysense 2.0X is available as a [PDF File](gitbook/assets/Py
 
 ## Pinout
 
+The PyPort connector is for a 6 lead mini ribbon cable. Part: Amphenol 20021511-00006T4LF
 The pinout of the Pysense is available as a [PDF File](/gitbook/assets/pysense2-pinout.pdf)
 
 

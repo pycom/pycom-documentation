@@ -3,13 +3,13 @@ title: "LoRa"
 aliases:
   - /firmwareapi/pycom/network/lora.md
 ---
-This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network processor in the LoPy and FiPy. Below is an example demonstrating LoRaWAN Activation by Personalisation usage:
+This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network processor in the LoPy, LoPy4 and FiPy.
 
 > Please ensure that there is an antenna connected to your device before sending/receiving LoRa messages as improper use (e.g. without an antenna), may damage the device.
 
 ## Examples
 
-For various other complete LoRa examples, check [here](/tutorials/networks/lora/) for examples.
+For various complete LoRa examples, check [here](/tutorials/networks/lora/).
 
 ## Constructors
 
@@ -38,16 +38,22 @@ The arguments are:
     * `LoRa.EU868`
     * `LoRa.US915`
     * `LoRa.CN470`
-    * `LoRa.CN779`
     * `LoRa.IN865`
 
-    > If no region is provided, it will default to the setting provided in the CONFIG partition.
+    > If no region is provided, it will default to the setting provided in the CONFIG partition, set by the Firmware Updater tool.
 * `frequency` accepts values within the selected Region frequency bands.
 * `tx_power` is the transmit power in dBm. 
 * `bandwidth` is the channel bandwidth in KHz. 
+    * `LoRa.BW_125KHZ`
+    * `LoRa.BW_250KHZ`
+    * `LoRa.BW_500KHZ`
 * `sf` sets the desired spreading factor. Accepts values between 7 and 12.
 * `preamble` configures the number of pre-amble symbols. The default value is 8.
-* `coding_rate` can take the following values: `LoRa.CODING_4_5`, `LoRa.CODING_4_6`, `LoRa.CODING_4_7` or `LoRa.CODING_4_8`.
+* `coding_rate` can take the following values: 
+    * `LoRa.CODING_4_5`
+    * `LoRa.CODING_4_6`
+    * `LoRa.CODING_4_7`
+    * `LoRa.CODING_4_8`
 * `power_mode` can be either `LoRa.ALWAYS_ON`, `LoRa.TX_ONLY` or `LoRa.SLEEP`. In `ALWAYS_ON` mode, the radio is always listening for incoming - packets whenever a transmission is not taking place. In `TX_ONLY` the radio goes to sleep as soon as the transmission completes. In `SLEEP` mode the radio is sent to sleep permanently and won't accept any commands until the power mode is changed.
 * `tx_iq` enables TX IQ inversion.
 * `rx_iq` enables RX IQ inversion.
@@ -62,7 +68,9 @@ The arguments are:
 
 Join a LoRaWAN network. Internally the stack will automatically retry every 15 seconds until a Join Accept message is received. The parameters are:
 
-* `activation`: can be either `LoRa.OTAA` or `LoRa.ABP`.
+* `activation`: can be either:
+    * `LoRa.OTAA`: Over the Air Activation
+    * `LoRa.ABP`: Activation By Personalisation
 * `auth`: is a tuple with the authentication data.
     * In the case of `LoRa.OTAA` the authentication tuple is: `(dev_eui, app_eui, app_key)` where `dev_eui` is optional. If it is not provided the LoRa MAC will be used.
     * In the case of `LoRa.ABP` the authentication tuple is: `(dev_addr, nwk_swkey, app_swkey)`.
@@ -74,9 +82,16 @@ Join a LoRaWAN network. Internally the stack will automatically retry every 15 s
 
 Get or set the frequency in raw LoRa mode (`LoRa.LORA`). The allowed range is region-specific.
 
+### lora.bandwidth([bandwidth])	
+
+Get or set the bandwidth in raw LoRa mode (`LoRa.LORA`). Bandwidth can be either: (depending on the region setting)
+* `LoRa.BW_125KHZ`
+* `LoRa.BW_250KHZ`
+* `LoRa.BW_500KHZ`
+
 ### lora.coding_rate([coding_rate])
 
-Get or set the coding rate in raw LoRa mode (`LoRa.LORA`). The allowed values are: 
+Get or set the coding rate in raw LoRa mode (`LoRa.LORA`). The allowed values are: (depending on the region setting)
 * `LoRa.CODING_4_5`
 * `LoRa.CODING_4_6`
 * `LoRa.CODING_4_7`
