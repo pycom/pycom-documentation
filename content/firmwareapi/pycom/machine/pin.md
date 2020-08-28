@@ -92,16 +92,16 @@ Toggle the value of the pin.
 ### pin.mode([mode])
 
 Get or set the pin mode. Modes can be:
-* `Pin.IN` or 1
-* `Pin.OUT` or 2
-* `Pin.OPEN_DRAIN` or 7
+* `Pin.IN`
+* `Pin.OUT`
+* `Pin.OPEN_DRAIN`
 
 ### pin.pull([pull])
 
 Get or set the pin pull. Pull can be:
 * `Pin.PULL_UP`
 * `Pin.PULL_DOWN`
-* None
+* `None`
 
 ### pin.hold([hold])
 

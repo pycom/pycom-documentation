@@ -531,6 +531,13 @@ theme = "doc-theme"
     weight = 100
 
 [[menu.main]]
+    name = "Touch"
+    url = "/firmwareapi/pycom/machine/touch/"
+    identifier = "firmwareapi@pycom@machine@touch"
+    parent = "firmwareapi@pycom@touch"
+    weight = 105
+
+[[menu.main]]
     name = "SD"
     url = "/firmwareapi/pycom/machine/sd/"
     identifier = "firmwareapi@pycom@machine@sd"

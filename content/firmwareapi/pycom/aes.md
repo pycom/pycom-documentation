@@ -41,7 +41,7 @@ The arguments are:
 * `mode` is the chaining mode to use for encryption and decryption. Can be the following values:
     * `AES.MODE_ECB`: Electronic Code Book. Simplest encryption mode.
     * `AES.MODE_CBC`: Cipher-Block Chaining. An Initialisation Vector (IV) is required.
-    * `AES.MODE_CFB`: Cipher feedback. `plaintext` and `ciphertext` are processed in segments of `segment_size` bits. Works a stream cipher.
+    * `AES.MODE_CFB`: Cipher feedback. `plaintext` and `ciphertext` are processed in segments of `segment_size` bits. Works as a stream cipher.
     * `AES.MODE_CTR`:  Counter mode. Each message block is associated to a counter which must be unique across all messages that get encrypted with the same key.
 * `IV` (byte string) initialisation vector. Should be 16 bytes long. It is ignored in modes `AES.MODE_ECB` and `AES.MODE_CRT`.
 > To avoid security issues, IV should always be a random number and should never be reused to encrypt two different messages. The same applies to the counter in CTR mode. You can use `crypto.getrandbits()` for this purpose.

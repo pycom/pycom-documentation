@@ -9,32 +9,13 @@ aliases:
 ## class ADC – Analog to Digital Conversion
 
 
-{{% development version="1.20.2.rc10" style="dev" %}}
-
-## header
-```python
-print('hello world')
-```
-
-> hi
-
-* one
-* two
-    * tab
-    3. three
- 
+{{% development version="" style="dev" %}}
 {{% /development %}}
 
 
 
 ### Quick Usage Example
-{{% development version="1.20.3.b0" style="dev" %}}
-
-## Function(var)
-
-Takes var as an input. Output can be:
-* `One`: One thing
-* `Two`: Second thing
+{{% development version="" style="dev" %}}
  
 {{% /development %}}
 
@@ -94,6 +75,7 @@ Connects the internal `1.1v` to external `GPIO`. It can only be connected to `P2
 
 
 The following methods can be applied on the `adcchannel()` instance. ADC channels are created using the `ADC.channel` method.
+## ADCChannel()
 
 ### adcchannel()
 
