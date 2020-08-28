@@ -6,7 +6,7 @@ aliases:
     - chapter/updatefirmware/expansionboard
 ---
 
-To update the firmware on the Pysense/Pytrack/Pyscan/Expansion Board v3, please see the following instructions. The firmware of Pysense/Pytrack/Pyscan/Expansion Board v3 can be updated via the USB port using the terminal tool, `DFU-util`.
+To update the firmware on any of the expansionboards, please see the following instructions. The firmware of can be updated via the USB port using the terminal tool, `DFU-util`.
 
 > There is currently **no firmware update** released for the new **Pytrack 2.0 X** and **Pysense 2.0 X**. Please do not try to flash these boards with firmware released for the old Version 1 hardware revision. The hardware revision is printed on the bottom of the shield.
 
@@ -22,7 +22,8 @@ The latest firmware DFU file can be downloaded from the links below:
 > Make sure to choose the correct firmware version for your expansion board. both 3.0 and 3.1 versions have version numbers in the silkscreen on the back of the board. See the image below for examples highlighted in Red
 >![](/gitbook/assets/expansion_board_version.png)
 
-While in the normal, application mode, the Pysense/Pytrack/Pyscan/Expansion Board v3 require a Serial USB CDC driver, in DFU, bootloader mode, the DFU driver is required. Below, the USB Product ID is depicted for each case.
+## Product ID
+In normal operation, the expansionboard is in Application mode. However when we want to update the firmware, we should put the board in DFU (Device Firmware Upgrade) mode. This is a special mode that allows us to alter the firmware of the device. Entering DFU mode changes the Product ID of the device, such that we will never accidentally update the firmware. To actually upgrade the firmware, we need to install the DFU-Util tool. Below, the USB Product ID is depicted for each case. You can check the Product ID for your board using `lsusb` on macOS and Linux, and checkin the device manager in Windows:
 
 | Board | DFU bootloader (update mode) | Application firmware (normal mode) |
 | :--- | :--- | :--- |
@@ -32,11 +33,11 @@ While in the normal, application mode, the Pysense/Pytrack/Pyscan/Expansion Boar
 | Pyscan | `0xEF37` | `0xEF38` |
 | Expansion Board v3 | `0xEF99` | `0xEF98` |
 
-_Note: USB Vendor ID is always_ `0x04D8`_._
+_Note: USB Vendor ID is always_ `0x04D8`
 
-To update the firmware of your expansionboard, 
 
-1. Installing the DFU-util Tools
+
+## Installing DFU-Util
 
   * MacOS
 
@@ -66,23 +67,21 @@ To update the firmware of your expansionboard,
 
     * [Zadig](http://zadig.akeo.ie/) – Installer tool for the Pytrack/Pysense board DFU Firmware
 
-  To install the drivers, the board must be in DFU-mode:
+    To install the drivers, the board must be in DFU-mode:
 
-  1. Disconnect the USB cable
-  2. Remove the development module from the expansionboard.
-  3. Hold down the button on the shield
-  4. Connect the USB cable
-  5. Keep the button pressed for at least one second
-  6. Release the button. When the board is connected in DFU-mode, it will be in this state for 7 seconds.
-  7. Click the`“Install Driver` button immediately. If the driver was unsuccessful, repeat from step 1.
-  If all went sucessfully, you will see the device show up in `Device Manager` as a LibusbK device.
+    1. Disconnect the USB cable
+    2. Remove the development module from the expansionboard.
+    3. Hold down the button on the shield
+    4. Connect the USB cable
+    5. Keep the button pressed for at least one second
+    6. Release the button. When the board is connected in DFU-mode, it will be in this state for 7 seconds.
+    7. Click the`“Install Driver` button immediately. If the driver was unsuccessful, repeat from step 1.
+    If all went sucessfully, you will see the device show up in `Device Manager` as a LibusbK device.
 
-  ![](/gitbook/assets/pytrack_dfu_mode_zadig.png)
+    ![](/gitbook/assets/pytrack_dfu_mode_zadig.png)
 
-
-
-> If you accidentally installed the `libusbk` while the device was in Application mode, then the need to update the driver to the `Serial USB (CDC)` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
-> ![](/gitbook/assets/pytrack_app_mode_zadig.png)
+    > If you accidentally installed the `libusbk` while the device was in Application mode, then the need to update the driver to the `Serial USB (CDC)` driver has to be installed for application mode. This will allow Windows to allocate a COM port, which is required for REPL console.
+    > ![](/gitbook/assets/pytrack_app_mode_zadig.png)
 
 ## Using DFU-util
 
