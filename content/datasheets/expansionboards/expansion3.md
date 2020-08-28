@@ -55,7 +55,7 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board 
 
 ## Troubleshooting
 
-* If PIC stays in bootloader mode, the [`dfu-util` update](/pytrackpysense/installation/firmware) should be performed
+* If PIC stays in bootloader mode, the [`dfu-util` update](/updatefirmware/expansionboard/) should be performed
 
 ## 3D model for case design
 

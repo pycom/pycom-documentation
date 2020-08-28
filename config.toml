@@ -376,6 +376,12 @@ theme = "doc-theme"
     identifier = "tutorials@networkprotocols@wifisniffer"
     parent = "tutorials@networkprotocols"
     weight = 60
+[[menu.main]]
+    name = "BLE Mesh"
+    url = "/tutorials/networkprotocols/blemesh/"
+    identifier = "tutorials@networkprotocols@blemesh"
+    parent = "tutorials@networkprotocols"
+    weight = 70
 
 [[menu.main]]
     name = "Expansion Boards"
@@ -531,6 +537,13 @@ theme = "doc-theme"
     weight = 100
 
 [[menu.main]]
+    name = "Touch"
+    url = "/firmwareapi/pycom/machine/touch/"
+    identifier = "firmwareapi@pycom@machine@touch"
+    parent = "firmwareapi@pycom@machine"
+    weight = 105
+
+[[menu.main]]
     name = "SD"
     url = "/firmwareapi/pycom/machine/sd/"
     identifier = "firmwareapi@pycom@machine@sd"
@@ -627,6 +640,13 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@network@bluetooth@gattscharacteristic"
     parent = "firmwareapi@pycom@network@bluetooth"
     weight = 60
+[[menu.main]]
+    name = "Pymesh BLE"
+    url = "/firmwareapi/pycom/network/bluetooth/btmesh/"
+    identifier = "firmwareapi@pycom@network@bluetooth@BLE_Mesh"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 70
+    
 
 #  [Errno 2] No such file or directory: './content/firmwareapi/pycom/network/lora/README.md'
 [[menu.main]]

@@ -8,124 +8,148 @@ aliases:
 
 All builtin functions are described here. 
 
-abs()
+### abs(val)
 
-all()
+Returns the absolute value of val
 
-any()
+### all(itereable)
 
-bin()
+Returns true if all items in an iterable are value `True`
 
-class bool
+### any(iterable)
 
-class bytearray
+Returns true if any of the items in an iterable are value `True`
 
-class bytes
+### bin(val)
 
-callable()
+Returns the binary equivalent of the given integer
 
-chr()
+### bytearray([source, encoding, errors])
 
-class method()
+Returns the bytearray of the bytes array passed in
 
-compile()
+### bytes()
 
-class complex
+Similar to `bytearray()` but for a single byte
 
-class dict
+### callable(object)
 
-dir()
+Returns True if the object appears callable
 
-divmod()
+### chr(val)
 
-enumerate()
+Returns a character from an integer
 
-eval()
+### classmethod(foo)
 
-exec()
+Returns a classmethod for the passed function
 
-filter()
+### complex([real, imag])
 
-class float
+Creates a complex number from the passed variables. 
+> You can also use the textual notation `'a+bj'`, e.g. `'1+2j'`
 
-class frozenset
+### delattr(object, name)
 
-getattr()
+Deletes attribute from the object.
 
-globals()
+### dir([object])
 
-hasattr()
+Returns a list of valid attributes of the object. If no parameter is passed, it will return all created objects.
 
-hash()
+### divmod(x, y)
 
-hex()
+Divides and mods the two values. Similar to `(x / y, x % y)` \
+Returns a tuple `(q, r)` of the two paramters, with quotient `q` and remainder `r`
 
-id()
+### numerate()
 
-input()
+### eval()
 
-class int
+### exec()
 
-isinstance()
+### filter()
 
-issubclass()
+### class float
 
-iter()
+### class frozenset
 
-len()
+### getattr()
 
-class list
+### globals()
 
-locals()
+### hasattr()
 
-map()
+### hash()
 
-max()
+### hex()
 
-class memoryview
+### id()
 
-min()
+### input()
 
-next()
+### class int
 
-class object
+### isinstance()
 
-oct()
+### issubclass()
 
-open()
+### iter()
 
-ord()
+### len()
 
-pow()
+### class list
 
-print()
+### locals()
 
-property()
+### map()
 
-range()
+### max()
 
-repr()
+### class memoryview
 
-reversed()
+### min()
 
-round()
+### next()
 
-class set
+### class object
 
-setattr()
+### oct()
 
-sorted()
+### open()
 
-staticmethod()
+### ord()
 
-class str
+### pow()
 
-sum()
+### print()
 
-super()
+### property()
 
-class tuple
+### range()
 
-type()
+### repr()
 
-zip()
+### reversed()
+
+### round()
+
+### class set
+
+### setattr()
+
+### sorted()
+
+### staticmethod()
+
+### class str
+
+### sum()
+
+### super()
+
+### class tuple
+
+### type()
+
+### zip()

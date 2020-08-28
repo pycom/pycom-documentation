@@ -83,7 +83,7 @@ print(id)
 
 ## Initialization
 
-#### Coap.init(address, *, port=5683, service_discovery=False)
+### Coap.init(address, *, port=5683, service_discovery=False)
 
 Initialize the CoAp module.
 
@@ -95,11 +95,11 @@ The arguments are:
 
 ## Methods:
 
-#### Coap.socket()
+### Coap.socket()
 
 Returns with the socket assigned to the given address and port during Coap.init() (= assigned to the CoAp module).
 
-#### Coap.add_resource(uri, *, media_type=-1, max_age=-1, value=0, etag=False)
+### Coap.add_resource(uri, *, media_type=-1, max_age=-1, value=0, etag=False)
 
 Creates a resource object and adds it to the CoAp module to operate as a server.
 
@@ -110,32 +110,28 @@ Creates a resource object and adds it to the CoAp module to operate as a server.
 * `etag` is a Boolean argument that enables/disables entity tag calculation (CoAp option: ETag). By default it is turned off.
 
 
-{{% hint style="info" %}}
-Media-type argument is one of the standard defined values that is available via CoAp module's constants.
-{{% /hint %}}
+> Media-type argument is one of the standard defined values that is available via CoAp module's constants.
 
-{{% hint style="info" %}}
-Entity tag calculation is a simple counter increment between value 1-65535 with overflow, it doesn't include the value 0. It is incremented each time and the value of the resource is changed.
-{{% /hint %}}
+> Entity tag calculation is a simple counter increment between value 1-65535 with overflow, it doesn't include the value 0. It is incremented each time and the value of the resource is changed.
 
 
-#### Coap.remove_resource(uri)
+### Coap.remove_resource(uri)
 
 Removes the resource defined by the `uri` argument.
 
 * `uri` is the full path of the resource to be removed.
 
-#### Coap.get_resource(uri)
+### Coap.get_resource(uri)
 
 Returns with the resource defined by `uri` argument.
 
 * `uri` is the full path of the resource to be returned.
 
-#### Coap.read()
+### Coap.read()
 
 Must be called when a packet is received on the socket assigned to the CoAp module. This function passes on the incoming request, whilst also composing and sending out the response if needed.
 
-#### Coap.register_response_handler(callback)
+### Coap.register_response_handler(callback)
 
 Registers a callback function which will be called when a remote CoAp Server responses to the local CoAp client's request.
 
@@ -146,7 +142,7 @@ Registers a callback function which will be called when a remote CoAp Server res
 * `token` is the token field from the received message
 * `payload` is the payload of the received message
 
-#### Coap.send_request(uri_host, method, *, uri_port=5683, uri_path, content_format, payload, token, include_options=true)
+### Coap.send_request(uri_host, method, *, uri_port=5683, uri_path, content_format, payload, token, include_options=true)
 
 Creates and sends a request to a CoAp server.
 
@@ -163,11 +159,8 @@ Creates and sends a request to a CoAp server.
 
 The resource class represents a resource in the scope of the CoAp module when acting as a server. A new resource can only be created with the `Coap.add_resource` function.
 
-#### Class methods
 
-The following methods are defined in the scope of the `resource` class.
-
-#### resource.add_attribute(name, value)
+### resource.add_attribute(name, value)
 
 Adds a new attribute to the resource. Attributes are used to explain the resource during service discovery.
 
@@ -184,31 +177,28 @@ coap-client -m get coap://<Coap-Server's address>/.well-known/core
 
 {{% /hint %}}
 
-#### resource.value(value)
+### resource.value(value)
 
 Updates or fetches the value of the resource.
 
 * `value` is the new value to update the current value with.
 If the method is called without a parameter, the current value is returned.
 
-#### resource.callback(operation, enable)
+### resource.callback(operation, enable)
 To enable or disable a specific operation (GET, PUT, POST, DELETE) on the resource.
 
 * `operation` is the operation to enable/disable, can be ORED of the followings: `Coap.REQUEST_GET`, `Coap.REQUEST_PUT`, `Coap.REQUEST_POST`, `Coap.REQUEST_DELETE`
 * `enable` is Boolean parameter that enables/disables the operations specified by `operation`
 
 
-{{% hint style="info" %}}
-During a GET request, only the first occurrence of an ETAG or Accept option is passed on and interpreted; others of the same type are dropped (if any).
-{{% /hint %}}
+> During a GET request, only the first occurrence of an ETAG or Accept option is passed on and interpreted; others of the same type are dropped (if any).
 
-{{% hint style="info" %}}
-During a PUT request, only the first occurrence of an If-Match option is passed on and interpreted; others of the same type are dropped (if any).
-{{% /hint %}}
+> During a PUT request, only the first occurrence of an If-Match option is passed on and interpreted; others of the same type are dropped (if any).
 
-{{% hint style="danger" %}}
-Due to limitations of the underlying ESP-IDF/libcoap library, new resources cannot be added via PUT or POST requests.
-{{% /hint %}}
+
+
+> Due to limitations of the underlying ESP-IDF/libcoap library, new resources cannot be added via PUT or POST requests.
+
 
 ## Constants
 
