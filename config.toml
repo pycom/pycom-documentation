@@ -376,6 +376,12 @@ theme = "doc-theme"
     identifier = "tutorials@networkprotocols@wifisniffer"
     parent = "tutorials@networkprotocols"
     weight = 60
+[[menu.main]]
+    name = "BLE Mesh"
+    url = "/tutorials/networkprotocols/blemesh/"
+    identifier = "tutorials@networkprotocols@blemesh"
+    parent = "tutorials@networkprotocols"
+    weight = 70
 
 [[menu.main]]
     name = "Expansion Boards"
@@ -534,7 +540,7 @@ theme = "doc-theme"
     name = "Touch"
     url = "/firmwareapi/pycom/machine/touch/"
     identifier = "firmwareapi@pycom@machine@touch"
-    parent = "firmwareapi@pycom@touch"
+    parent = "firmwareapi@pycom@machine"
     weight = 105
 
 [[menu.main]]
