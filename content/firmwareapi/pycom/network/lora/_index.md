@@ -54,13 +54,18 @@ The arguments are:
     * `LoRa.CODING_4_6`
     * `LoRa.CODING_4_7`
     * `LoRa.CODING_4_8`
-* `power_mode` can be either `LoRa.ALWAYS_ON`, `LoRa.TX_ONLY` or `LoRa.SLEEP`. In `ALWAYS_ON` mode, the radio is always listening for incoming - packets whenever a transmission is not taking place. In `TX_ONLY` the radio goes to sleep as soon as the transmission completes. In `SLEEP` mode the radio is sent to sleep permanently and won't accept any commands until the power mode is changed.
+* `power_mode` can be either 
+    * `LoRa.ALWAYS_ON`: the radio is always listening for incoming - packets whenever a transmission is not taking place
+    * `LoRa.TX_ONLY`: he radio goes to sleep as soon as the transmission completes
+    * `LoRa.SLEEP`: the radio is sent to sleep permanently and won't accept any commands until the power mode is changed.
 * `tx_iq` enables TX IQ inversion.
 * `rx_iq` enables RX IQ inversion.
 * `adr` enables Adaptive Data Rate.
 * `public` selects between the public and private sync word.
 * `tx_retries` sets the number of TX retries in `LoRa.LORAWAN` mode.
-* `device_class` sets the LoRaWAN device class. Can be either `LoRa.CLASS_A` or `LoRa.CLASS_C`.
+* `device_class` sets the LoRaWAN device class. Can be either:
+    * `LoRa.CLASS_A`
+    * `LoRa.CLASS_C`
 
 > In `LoRa.LORAWAN` mode, only `adr`, `public`, `tx_retries` and `device_class` are used. All the other params will be ignored as they are handled by the LoRaWAN stack directly. On the other hand, in `LoRa.LORA` mode from those 4 arguments, only the public one is important in order to program the sync word. In `LoRa.LORA` mode `adr`, `tx_retries` and `device_class` are ignored since they are only relevant to the LoRaWAN stack.
 
@@ -75,7 +80,7 @@ Join a LoRaWAN network. Internally the stack will automatically retry every 15 s
     * In the case of `LoRa.OTAA` the authentication tuple is: `(dev_eui, app_eui, app_key)` where `dev_eui` is optional. If it is not provided the LoRa MAC will be used.
     * In the case of `LoRa.ABP` the authentication tuple is: `(dev_addr, nwk_swkey, app_swkey)`.
 * `timeout`: is the maximum time in milliseconds to wait for the Join Accept message to be received. If no timeout (or zero) is given, the call returns immediately and the status of the join request can be checked with `lora.has_joined()`.
-* `dr`: is an optional value to specify the initial data rate for the Join Request.
+* `dr`: is an optional value to specify the initial data rate for the Join Request. values are region specific.
 
 
 ### lora.frequency([frequency])
