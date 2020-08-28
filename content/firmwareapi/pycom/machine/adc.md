@@ -73,9 +73,9 @@ Connects the internal `1.1v` to external `GPIO`. It can only be connected to `P2
 
 >Note: The voltages will automatically be corrected by `adcchannel.voltage()`
 
+## ADCChannel - created upon initialisation of an ADC Channel
+The following methods can be applied on the `adcchannel()` instance. ADC channels are created using the `ADC.channel(...)` method.
 
-The following methods can be applied on the `adcchannel()` instance. ADC channels are created using the `ADC.channel` method.
-## ADCChannel()
 
 ### adcchannel()
 
