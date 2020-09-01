@@ -21,7 +21,7 @@ The bottom two lines explain the LTE firmware edition:
 * LR6.xx is for NB-IoT
 
 The firmwares for CAT-M1 and NB-IoT are fundamentally different and cannot be used interchangable. The last 5 numbers define the firmware version. A higher number represents a newer firmware. 
-> Our newest prodcuts ship with firmware version CatM1 47510. There is no major difference between 41065 and 47510. 
+> Our newest products ship with firmware version CatM1 47510. There is no major difference between the latest public version 41065 and 47510. 
 
 The prefered method for updating the LTE modem is using `upgdiff-` files, as these updates are faster. Check in the zip archive wheter a upgdiff- update for your version is available. When using a `upgdiff-` file, you do not need to use `updater.elf`
 
@@ -35,7 +35,7 @@ There are several different ways to update the firmware of the LTE modem.
 
 >Note: In case of any failure or interruption to the process of LTE modem upgrade you can repeat the same steps **after doing a hard reset to the board (i.e disconnecting and reconnecting power), pressing the reset button is not enough.**
 
-The modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and go [here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured) for the credentials. 
+The modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and go [here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured) for the credentials. (On the forum: Announcements & News --> Announcements for members only --> the Firmware Files)
 You can find the firmwares listed [here](https://software.pycom.io/downloads/sequans2.html).
 
 ## Flash
