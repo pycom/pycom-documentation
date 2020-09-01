@@ -35,8 +35,8 @@ There are several different ways to update the firmware of the LTE modem.
 
 >Note: In case of any failure or interruption to the process of LTE modem upgrade you can repeat the same steps **after doing a hard reset to the board (i.e disconnecting and reconnecting power), pressing the reset button is not enough.**
 
-The modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and click on:
-Announcements & News --> Announcements for members only --> the Firmware Files for the Sequans LTE modem are now secured to retrieve the credentials. You can find the firmwares listed [here](https://software.pycom.io/downloads/sequans2.html).
+The modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and go [here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured) for the credentials. 
+You can find the firmwares listed [here](https://software.pycom.io/downloads/sequans2.html).
 
 ## Flash
 
