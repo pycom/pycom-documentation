@@ -1094,6 +1094,12 @@ theme = "doc-theme"
     identifier = "datasheets@boards@expansion3"
     parent = "datasheets@boards"
     weight = 70
+[[menu.main]]
+    name = "Deepsleep"
+    url = "/datasheets/expansionboards/deepsleep/"
+    identifier = "datasheets@boards@deepsleep"
+    parent = "datasheets@boards"
+    weight = 80
 
 
 

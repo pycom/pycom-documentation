@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/development/wipy2
 ---
 
-![](/gitbook/assets/wipy2-1.png)
+![](/gitbook/assets/wipy2.png)
 
 > Note: Orient the RGB LED / reset button over the USB connector on any expansion board 
 

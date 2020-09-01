@@ -33,7 +33,7 @@ The pinout of the FiPy is available as a [PDF File](/gitbook/assets/fipy-pinout.
 
 ![](/gitbook/assets/fipy-pinout.png)
 
-> Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
+> Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed via software.
 
 ## Notes
 
