@@ -20,9 +20,10 @@ The bottom two lines explain the LTE firmware edition:
 * LR5.xx is for CAT-M1
 * LR6.xx is for NB-IoT
 
-The last 5 numbers define the firmware version. A higher number represents a newer firmware. 
+The firmwares for CAT-M1 and NB-IoT are fundamentally different and cannot be used interchangable. The last 5 numbers define the firmware version. A higher number represents a newer firmware. 
+> Our newest prodcuts ship with firmware version CatM1 47510. There is no major difference between 41065 and 47510. 
 
-> Note: The prefered method for updating the LTE modem is using upgdiff- files, as these updates are faster. Check in the zip archive wheter a upgdiff- update for your version is available. When using a upgdiff- file, you do not need to use `updater.elf`
+The prefered method for updating the LTE modem is using `upgdiff-` files, as these updates are faster. Check in the zip archive wheter a upgdiff- update for your version is available. When using a `upgdiff-` file, you do not need to use `updater.elf`
 
 > Using `sqnsupgrade` does not currently work properly in the pygate firmware
 
@@ -76,7 +77,7 @@ Announcements & News --> Announcements for members only --> the Firmware Files f
     sqnsupgrade.run('/sd/upgdiff_old-to-new.dup')
     # if no upgdiff is available, run the following instead
     # sqnsupgrade.run('/sd/name.dup')
-    # WARNING! If you are updating from version 33080, use the updater.elf file as well
+    # WARNING! If you are updating from version 33080, use the updater.elf file as well, this is not needed for the upgdiff file.
     # sqnsupgrade.run('/sd/name.dup', '/sd/updater.elf')
 
     ```
@@ -105,8 +106,10 @@ If you do not have an SD card available, you can use the existing USB-UART inter
     ```python
     $ python3
     >>> import sqnsupgrade
-    >>> sqnsupgrade.run('Serial_Port', '/path/to/name.dup')
-    # WARNING! If you are updating from version 33080, use the updater.elf file as well
+    >>> sqnsupgrade.run('Serial_Port', '/path/to/upgdiff_old-to-new.dup')
+    # If no upgdiff file is available, use the following
+    # >>> sqnsupgrade.run('Serial_Port', '/path/to/name.dup')
+    # WARNING! If you are updating from version 33080, use the updater.elf file as well, this is not needed for the upgdiff file
     # >>> sqnsupgrade.run('Serial_Port', '/path/to/name.dup', '/path/to/updater.elf')
     ```
     >Note: Replace the paths and `name.dup` with the actual files. There are different versions for `CAT-M1`  and `NB-IoT`
