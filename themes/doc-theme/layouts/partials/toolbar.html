@@ -29,12 +29,12 @@
   ></v-text-field>
 
   <v-spacer></v-spacer>
-  {{ if eq .Section "firmwareapi"}}
+{{/* if eq .Section "firmwareapi" */}}
   <div style="width: 240px;">
   <v-select :items="branches" v-model="branch" width=120 class="mono">
   </v-select>
   </div>
-  {{ end }}
+  {{/* end */}}
   {{- if gt .WordCount 400 -}}
   <v-btn icon ref="tocBtn" @click.stop="drawer2 = !drawer2" >
     <v-icon style="color: rgb(23, 255, 189);">more_vert</v-icon>
