@@ -1155,8 +1155,8 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "Getting Started"
-    url = "/pybytes/getstarted/"
-    identifier = "pybytes@getstarted"
+    url = "/pybytes/gettingstarted/"
+    identifier = "pybytes@gettingstarted"
     parent = "pybytes"
     weight = 10
 
