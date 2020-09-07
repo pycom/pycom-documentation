@@ -30,6 +30,8 @@ Else, go to [Pybytes](https://pybytes.pycom.io) and create an account
 
 1. At the end, Pybytes will show that your device profile was successfully created.
 
+![](/gitbook/assets/pybytes/add-device/final-step.png)
+
 ## Step 3: Provision your device
 
 After creation, you will land on the provisioning page. This is where we 'inform' the device about the Pybytes connection and how to set it up. The first time you set up the device for use with Pybytes, you will need to provision it using the Firmware Updater Tool. This is a good moment to become familiar with the tool [here](/updatefirmware/device/).
@@ -40,6 +42,7 @@ After creation, you will land on the provisioning page. This is where we 'inform
 
 1. This will ask for a `Pybytes activation token`. Generate a token from pybytes and paste it in the Firmware Updater tool. This will instantly generate a success message in Pybytes.
 
+![](/gitbook/assets/pybytes/add-device/pybytes-provisioning2.png)
 1. Continue with the firmware update to the device.
 
 ## Step 4: Your first signal
@@ -61,8 +64,9 @@ After creation, you will land on the provisioning page. This is where we 'inform
     Firmware: {latest version}
     Pybytes: {latest version}
     Initialized watchdog for WiFi and LTE connection with timeout 1260000 ms
-    Error connecting using WIFI: Connection to AP Timeout!
-    ERROR! Could not connect to Pybytes!
+    WiFi connection established
+    Connected to MQTT mqtt.pybytes.pycom.io
+    Pybytes connected successfully (using the built-in pybytes library)
     Pybytes configuration read from /flash/pybytes_config.json
 
     ```
