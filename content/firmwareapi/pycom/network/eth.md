@@ -5,6 +5,8 @@ aliases:
     - firmwareapi/pycom/network/eth.md
     - chapter/firmwareapi/pycom/network/eth
 ---
+{{% development version="" style="dev" %}}
+ 
 
 The ETH class enables the use of an ethernet connection via the PyEthernet board plugged into a Pygate.
 
@@ -65,3 +67,4 @@ Shuts down the ethernet interface.
 ### eth.isconnected()
 
 Returns `True` if the ethernet link is up and IP is accquired, `False` otherwise.
+{{% /development %}}

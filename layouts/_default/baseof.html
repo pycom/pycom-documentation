@@ -65,11 +65,11 @@
             this.branch= this.branches[b]
           }
         }
-        if(window.location.host == "development.pycom.io"){
+        if(window.location.host == "localhost:1313" || window.location.host == "development.pycom.io"){
           var x = document.getElementsByClassName('development')
           var i;
           for (i = 0; i < x.length; i++) {
-            x[i].style.display = 'block';
+            x[i].style.display = 'inline';
           }
         }else{
           var x = document.getElementsByClassName('development')

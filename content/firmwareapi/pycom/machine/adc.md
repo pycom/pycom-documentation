@@ -30,7 +30,7 @@ val = apin()                    # read an analog value
 
 ## Constructors
 
-### class machine.ADC([id=0])
+### class machine.ADC([id=0] {{% development version="" style="inline" %}}hello  {{% /development %}})
 
 Create an ADC object; associate a channel with a pin. For more info check the hardware section.
 

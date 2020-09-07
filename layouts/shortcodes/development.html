@@ -1,12 +1,18 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 <div class='development'>
-<v-card class='{{ .Get "style" }}'>
+  {{ if ne (.Get "style") ("inline")}}
+<v-card class='dev'>
     <v-card-text>
       Development version {{.Get "version" }}
       {{ .Inner }}
   
     </v-card-text>
 </v-card>
+{{else}}
+<div class='dev' style="display:inline">
+{{.Inner}}
+</div>
+{{end}}
 </div>
 
 
