@@ -38,7 +38,7 @@ After the window is standardized, a filter can be applied to the data. The type 
 
 ##### Features
 
-Using Fourier analysis (FFT transform), features are extracted from the data. Time localization is lost if the Fourier transform is applied to the entire window data. To keep some information about time localization, the user can split the window data in smaller intervals and analyze each interval separately (this is the short-time Fourier transform).
+Using Fourier analysis (FFT transform), features are extracted from the data.
 
 Features are calculated for every axis (X, Y, Z), independently of other axes. The next features are available to be selected/used by the user:
 
