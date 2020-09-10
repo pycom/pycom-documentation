@@ -16,13 +16,15 @@ If the device gets stuck showing the purple light, maybe the sampling should be 
 
 The data collection shows the collected samples. Click on the sample to see the graph.
 
+* Is recommended to have the same number of samples per label. If you have collected 2 samplings for a waving movement, you should have the same number of sampling for the other movements (labels) as well.
+
 ![Data Acquisition](/gitbook/assets/pybytes/ml/data_acquisition_graph.png)
 
-### Signal Processing 
+### Signal Processing
 
-Signal processing is used to extract features for the Neural Network module. 
+Signal processing is used to extract features for the Neural Network module.
 
-There are many ways to extract features. The simplest way is using convolutional layers, but doing this there is no control of what features will be used and also the convolutional layers make the neural network bigger, so more data is needed for training. 
+There are many ways to extract features. The simplest way is using convolutional layers, but doing this there is no control of what features will be used and also the convolutional layers make the neural network bigger, so more data is needed for training.
 
 Signal processing provides an easy and intuitively way to extract features and also the features can be analyzed using different methods.
 
@@ -54,9 +56,9 @@ To select the desired features and also to see the filtered data and calculated 
 
 #### Training
 
-The neural network receives its input from the Signal Processing block. 
+The neural network receives its input from the Signal Processing block.
 
-The number of layers and the number of neurons in this layer can be selected by the user. For the moment there are supported only dense layers as hidden layers.  Other parameters that can be selected are: the number of training epochs, the learning rate and the confidence threshold. 
+The number of layers and the number of neurons in this layer can be selected by the user. For the moment there are supported only dense layers as hidden layers.  Other parameters that can be selected are: the number of training epochs, the learning rate and the confidence threshold.
 
 To train the model, fill the Neural Network Settings form and click on **START TRAINING** button.
 
@@ -87,5 +89,10 @@ After all training and testing, the model can be deployed into the devices.
 Select the devices and click on the **DEPLOY MODEL** button.
 
 ![Model Deployment](/gitbook/assets/pybytes/ml/deploy.png)
+
+* Once you have the model deployed on the devices, it can be used for furthers applications like movement detection and so on.
+
+* This file is going to be used by the device firmware, and once generated it should not be changed by the user. Any changes can cause features to malfunction.
+
 
 [**Machine Learning Integration**](/pybytes/mlintegration)

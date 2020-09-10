@@ -11,6 +11,8 @@ The Machine Learning integration is here to help you to create smart machine lea
 
 ## Let's get started!
 
+* [Device Settings](/pybytes/mlintegration/devicesettings)
+
 * [Machine Learning Model Creation](/pybytes/mlintegration/modelcreation)
 
 * [Machine Learning Features](/pybytes/mlintegration/features)
