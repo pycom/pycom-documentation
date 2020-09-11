@@ -1,3 +1,8 @@
+---
+title: "Pygate"
+
+---
+{{% development version="" style="page" %}}
 ## Pygate
 
 The Pygate is an 8-channel LoRaWAN gateway. This page will help you get started with it.
@@ -296,3 +301,4 @@ A sample `config.json` file for gateway configuration in EU868 region:
 	}
 }
 ```
+{{% /development %}}

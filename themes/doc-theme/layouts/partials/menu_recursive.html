@@ -12,7 +12,7 @@
   {{ if true }}
     <li class="lefttree {{ if or $iz $haz }}padleft hot{{ end }}" >
       <v-icon style="color: transparent; display: hidden;" >done</v-icon>
-      <a href="{{ .URL | relURL }}" class="{{ if or $iz $haz }}hot{{end}}"> {{ .Pre }} {{ .Name }}</a>
+      <a href="{{ .URL | relURL }}" class="{{ if or $iz $haz }}hot{{end}} {{ if eq (print .Pre) "dev" }}dev{{end}}"> {{ .Name }}</a>
       {{ end }}
       {{ if or $iz $haz $phaz }}
         {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page "level" $level ) }}
@@ -27,7 +27,7 @@
 
     <li class="lefttree {{ if $haz }}hot{{end}}">
       <v-icon style="color: transparent; display: hidden;" >done</v-icon>
-      <a href="{{ .URL | relURL }}" class="{{ if $iz }}hot{{end}}">{{ .Name }}</a>
+      <a href="{{ .URL | relURL }}" class="{{ if $iz }}hot{{end}} {{ if eq (print .Pre) "dev" }}dev{{end}}">{{ .Name }}</a>
     </li>
 
   {{ end }}

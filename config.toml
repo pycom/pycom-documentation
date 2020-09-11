@@ -395,6 +395,8 @@ theme = "doc-theme"
     identifier = "tutorials@expansionboards@pygate"
     parent = "tutorials@expansionboards"
     weight = 10
+    pre = "dev"
+
 [[menu.main]]
     name = "pysense"
     url = "/tutorials/expansionboards/pysense"
@@ -444,7 +446,7 @@ theme = "doc-theme"
     url = "/firmwareapi/"
     identifier = "firmwareapi"
     weight = 70
-
+        
 [[menu.main]]
     name = "Pycom Modules"
     url = "/firmwareapi/pycom/"
@@ -769,7 +771,6 @@ theme = "doc-theme"
     identifier = "firmwareapi@micropython@micropython"
     parent = "firmwareapi@micropython"
     weight = 50
-
 [[menu.main]]
     name = "uctypes"
     url = "/firmwareapi/micropython/uctypes/"
