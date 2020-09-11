@@ -25,10 +25,6 @@ pycom.rgbled(0xff00)    # make the LED light up in green color
 
 Get or set the state (enabled or disabled) of the heartbeat LED. Accepts and returns boolean values.
 
-### pycom.heartbeat_on_boot([boolean])
-
-Allows you permanently disable or enable the heartbeat LED. Once this setting is set, it will persist between reboots. Note, this only comes into effect on the next boot, it does not stop the already running heartbeat.
-
 ### pycom.rgbled(color)
 
 Set the colour of the RGB LED. The colour is specified as 24 bit value representing red, green and blue, in the following order `0xRRGGBB`. For instance, passing the value `0x00FF00` will light up the LED in a very bright green.
@@ -73,24 +69,35 @@ data = pulses_get(pin, 100)
 
 Returns the free heap bytes in the memory allocation
 
+### pycom.sigfox_info([id, pac, publickey, privatekey])
 
-## Pybytes methods
+With no arguments, this function will return if the SigFox settings on the device are valid. 
+
+With arguments, the specified keys will be set.
+
+
+## Boot methods
 
 ### pycom.pybytes_on_boot()
 
 Get or set the activation of pybytes on boot.
 
-## Boot methods
+### pycom.heartbeat_on_boot([boolean])
 
+Allows you permanently disable or enable the heartbeat LED. Once this setting is set, it will persist between reboots. Note, this only comes into effect on the next boot, it does not stop the already running heartbeat.
+
+### pycom.lte_modem_on_boot([boolean])
+
+Get or set the LTE modem on boot flag. When this flag is set to `True`, the LTE modem will be enabled.
 ### pycom.wifi_on_boot([boolean])
 
 Get or set the WiFi on boot flag. When this flag is set to `True`, The WiFi will be enabled according to the other WiFi settings. when `False` the WiFi module will be disabled untill enabled directly via WLAN class.
 
-This setting is stored in non-volatile memory which preserves it across resets and power cycles. Example:
+This setting is stored in non-volatile memory which preserves it across resets and power cycles.
 
 ### pycom.wifi_ssid_sta([ssid])
 
-Get or set the ssid of the Access point the device should connect to on startup.
+Get or set the ssid of the Access Point the device should connect to on startup.
 This setting is stored in non-volatile memory which preserves it across resets and power cycles
 
 ### pycom.wifi_ssid_ap([ssid])
@@ -127,10 +134,14 @@ Enables the WDT at boot time with the timeout in ms set by the function `wdt_on_
 
 ### pycom.bootmgr(boot_partition=pycom.FACTORY, fs_type=FAT, safeboot=False, reset=False)
 
-* `boot_partition` This is to set the partition to boot from , this could be set to either `pycom.FACTORY` or `pycom.OTA_0`
-* `fs_type` This is to set the filesystem to use for the flash memory (`/flash`). This could be set to `pycom.FAT` for FAT16 or `pycom.LittleFS` for LittleFS filesystem.
+* `boot_partition` This is to set the partition to boot from , this could be set to either:
+    * `pycom.FACTORY`: The factory boot partition.
+    * `pycom.OTA_0`: The OTA boot partition
+* `fs_type` This is to set the filesystem to use for the flash memory (`/flash`). This could be set to
+    * `pycom.FAT` for the FatFS (FAT16) filesystem.
+    * `pycom.LittleFS` for LittleFS filesystem.
 
-  _Note: When the firmware is built with option_ `FS_USE_LITTLEFS` _the file system for_ `/flash` _is forced to be LittleFS._
+> Note: When the firmware is built with option `FS_USE_LITTLEFS` the file system for `/flash` is forced to be LittleFS.
 
 * `safeboot` Enable or Disable safemoot mode.
 * `reset` Set `True` to reset target after updating the `bootmgr` options, `False` for not resetting.
@@ -142,6 +153,10 @@ Enables the WDT at boot time with the timeout in ms set by the function `wdt_on_
 ### pycom.ota_write(buffer)
 
 ### pycom.ota_finish()
+
+### pycom.ota_slot()
+
+### pycom.ota_verify()
 
 Perform a firmware update. These methods are internally used by a firmware update through FTP. The update starts with a call to `ota_start()`, followed by a series of calls to `ota_write(buffer)`, and is terminated with `ota_finish()`. After reset, the new image gets active. `buffer` shall hold the image data to be written, in arbitrary sizes. A block size of 4096 is recommended.
 
@@ -178,9 +193,13 @@ with open(APPIMG, "rb") as f:
 
 Instead of reading the data to be written from a file, it can obviously also be received from a server using any suitable protocol, without the need to store it in the devices file system.
 
+> For more information about the OTA process, go [here](/updatefirmware/ota/)
 ### pycom.diff_update_enabled()
 
 Provides the status of the differential update feature. Returns `True` if differential update is enabled and `False` otherwise. `DIFF_UPDATE_ENABLED` build flag can be used to enable the differential update feature.
 
 > Note: This function is only available in the firmware versions which support differential update feature. If you get an exception while calling this function, your firmware version does not support this feature.
 
+## Constants
+
+`pycom.LittleFS`, `pycom.FAT`, `pycom.FACTORY`, `pycom.OTA_0`

@@ -14,3 +14,4 @@ This section contains all of the datasheets for the Pycom Expansion Boards and S
 * [Pyscan](../expansionboards/pyscan/)
 * [Expansion 2](../expansionboards/expansion2/)
 * [Expansion 3](../expansionboards/expansion3/)
+* [Deepsleep](../expansionboards/deepsleep/)

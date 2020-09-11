@@ -10,7 +10,7 @@ Some of our devices require registration before you can utilise specific feature
 * [Objenious](/gettingstarted/registration/lora/objenious/)
 ## Other
 * [SigFox](/gettingstarted/registration/sigfox/)
-* [Cellular](/gettinsgtarted/registration/cellular/)
+* [Cellular](/gettingstarted/registration/cellular/)
 
 >**Not all Pycom devices require activation**; most features work immediately out of the box!
 

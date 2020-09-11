@@ -23,14 +23,24 @@ The basic firmware upgrade procedure can be found below, please follow these ste
 
 After you're done with upgrading, you can use the Pymakr Plugins to upload and run programs in your device.
 
-1. Before connecting your module to a Pysense / Pytrack board, you should update the firmware on the Pysense/Pytrack board. Instructions on how to do this can be found [here](/updatefirmware/expansionboard/).
+1. Before connecting your module to a Pysense / Pytrack board, you should check for updates of the firmware on the Pysense/Pytrack board. Instructions on how to do this can be found [here](/updatefirmware/expansionboard/).
 2. Disconnect your device from your computer
-3. Insert module into Expansion Board
+3. Insert the module into Expansion Board
     * On Expansionboard 2.0, connect a jumper cable or wire between `G23` and `GND`
 4. Reconnect the board via USB to your computer
 5. Run the Firmware Upgrade tool and click through the menus
 
-![](/gitbook/assets/firmware-update-2.png)
+    ![](/gitbook/assets/firmware_update-0.png)
+    > Checking 'Include Development Releases' will check for the development releases of the Firmware Updater Tool
+
+
+    ![](/gitbook/assets/firmware_update-1.png)
+    > Checking 'Show Advanced Settings' will give you the option screen in the next figure.
+
+    ![](/gitbook/assets/firmware_update-2.png)
+
+    > In some cases, erasing the NVS and CONFIG partitions can solve issues relating to WiFi, Timers or other variables stored in the NVS / CONFIG. Erase during update will remove all Python code on the device.
+
 
 6. The firmware version of your device is now upgraded to the latest version.
     * On Expansionboard 2.0, remove the jumper cable.
@@ -39,7 +49,7 @@ After you're done with upgrading, you can use the Pymakr Plugins to upload and r
 
 ## Common issues:
 
-* If you are having any issues, make sure the **TX and RX jumpers** are present on your Expansion Board, as the jumpers sometimes come loose in the box during transport. Without these jumpers, the updater will fail.
+* If you are having any issues uploading firmware to your device, make sure the **TX and RX jumpers** are present on your Expansion Board, as the jumpers sometimes come loose in the box during transport. Without these jumpers, the updater will fail.
 * On MacOS, the firmware upgrade tool needs access to the `/tmp` folder
 * On MacOS, there is an issue with signing of the firmware tool. Go to system preferences --> Security & Privacy --> General, and click "Allow" for the Pycom Firmware Updater tool.
 

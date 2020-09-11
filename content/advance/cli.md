@@ -2,7 +2,7 @@
 title: "CLI Updater"
 aliases:
     - advance/cli.html
-    - advance/cli.md
+    - advance/cli
     - chapter/advance/cli
 ---
 

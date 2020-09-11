@@ -14,6 +14,16 @@ Pycom modules come with the ability to update the devices firmware, while it is 
 2. Click on the configuration tab
 3. Use the OTA firmware update tool there
 
+
+Before we talk about OTA, we need to first discuss the inner workings of the `bootmgr` and partitioning. The (modern) Pycom devices all have 16MB flash, divided across different partitions:
+
+| Factory () | Firmware (~3MB) | OTA () | Python code () | Free () |
+|------|--------------|-----|-------|----|
+
+Using the function `pycom.bootmgr()`, we can switch between the different boot partitions. This way, we can upload a new firmware to the device and then reboot, with the boot partition switched from `pycom.FACTORY` to `pycom.OTA_0` to load the updated firmware. We can do this using the functions:
+`pycom.ota_start()` `pycom.ota_write()`, `pycom.ota_finish()` and `pycom.ota_verify()`.
+
+
 ## Method A
 
 Here we will describe one possible update methodology you could use that is implemented by this example.

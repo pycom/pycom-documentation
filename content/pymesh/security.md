@@ -30,10 +30,10 @@ The challenge is in distributing the keys used for encryption(decryption), this 
 
 Symmetric-key algorithms are algorithms for cryptography that use the same cryptographic keys for both encryption of plaintext and decryption of ciphertext. More info could be checked on [Symmetric-key algorithm](https://en.wikipedia.org/wiki/Symmetric-key_algorithm).
 
-A micropython example script can be seen [here](../../firmwareapi/pycom/aes.md) using AES 128, 192 or 256 bits keys (`crypto.AES` class).
+A micropython example script can be seen [here](../../firmwareapi/pycom/aes/) using AES 128, 192 or 256 bits keys (`crypto.AES` class).
 
 ### Asymmetric encryption
 
 Public-key cryptography, or asymmetric cryptography, is a cryptographic system that uses pairs of keys: public keys which may be disseminated widely, and private keys which are known only to the owner. More info could be checked on [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
-A micropython example script can be seen [here](../../firmwareapi/micropython/ucrypto.md) using RSA 2048 bits keys (`crypto.rsa_encrypt()` method).
+A micropython example script can be seen [here](../../firmwareapi/micropython/ucrypto/) using RSA 2048 bits keys (`crypto.rsa_encrypt()` method).
