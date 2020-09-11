@@ -2,6 +2,8 @@
 title: "Pygate"
 
 ---
+This page contains development information. Switch to the development documentation by using the options in the top right corner
+
 {{% development version="" style="page" %}}
 ## Pygate
 
