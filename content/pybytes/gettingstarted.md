@@ -18,17 +18,17 @@ Else, go to [Pybytes](https://pybytes.pycom.io) and create an account
 1. Click on [Add Device](https://pybytes.pycom.io/devices). You can either add a device using USB, or the Pybytes App for [iPhone](https://apps.apple.com/us/app/pybytes/id1465696479) or [Android](https://play.google.com/store/apps/details?id=io.pycom.pybytes_android&hl=en). In this guide, we will describe the process using USB.
 ![](/gitbook/assets/pybytes/add-device/add-device-btn.png)
 
-1. Select your device (WiPy, LoPy, SiPy, etc.).
+2. Select your device (WiPy, LoPy, SiPy, etc.).
 ![](/gitbook/assets/pybytes/add-device/select-device-type.png)
 
-1. Select your network options. This will be how your device connects to both Pybytes and the internet. For now, we will choose WiFi. This will show a subwindow where you enter your WiFi credentials. This will only be used to connect your device with a WiFi network to access pybytes.
+3. Select your network options. This will be how your device connects to both Pybytes and the internet. For now, we will choose WiFi. This will show a subwindow where you enter your WiFi credentials. This will only be used to connect your device with a WiFi network to access pybytes.
 ![](/gitbook/assets/pybytes/add-device/network-step.png)
 
-1. Enter a unique name for your device and hit save!
+4. Enter a unique name for your device and hit save!
 
 ![](/gitbook/assets/pybytes/add-device/customize-step.png)
 
-1. At the end, Pybytes will show that your device profile was successfully created.
+5. At the end, Pybytes will show that your device profile was successfully created.
 
 ![](/gitbook/assets/pybytes/add-device/final-step.png)
 
@@ -40,14 +40,14 @@ After creation, you will land on the provisioning page. This is where we 'inform
 
 ![](/gitbook/assets/pybytes/add-device/pybytes-provisioning.png)
 
-1. This will ask for a `Pybytes activation token`. Generate a token from pybytes and paste it in the Firmware Updater tool. This will instantly generate a success message in Pybytes.
+2. This will ask for a `Pybytes activation token`. Generate a token from pybytes and paste it in the Firmware Updater tool. This will instantly generate a success message in Pybytes.
 
 ![](/gitbook/assets/pybytes/add-device/pybytes-provisioning2.png)
-1. Continue with the firmware update to the device.
+3. Continue with the firmware update to the device.
 
 ## Step 4: Your first signal
 
-1. Reset your Pycom device using the reset button. This will reboot the device and activate the Pybytes connection automatically. The output will look similar to this:
+1. Reset your Pycom device using the reset button. This will reboot the device and activate the Pybytes connection automatically. The output will look similar to this. You should see the `Last Connection` status in Pybytes change from `Never` to `Seconds ago`
     ```
     >>> ets Jun  8 2016 00:22:57
 
@@ -71,10 +71,20 @@ After creation, you will land on the provisioning page. This is where we 'inform
 
     ```
 
+    > If you get any kind of error message, check the WiFi credentials you entered are correct and that you are in range of this WiFi network
 
+2. Use the opportunity to define a signal in Pybytes. The signal number can be anywhere from 0-254 (255 is reserved)
 
+![](/gitbook/assets/pybytes/add-device/define-signal.png)
 
+3. Now, in the REPL, you can type:
+    ```python
+    >>> pybytes.send_signal(1, "hello world")
+    ```
+    And it will show up on Pybytes in the `signals` tab:
+    ![](/gitbook/assets/pybytes/add-device/send-signal.png)
 
+    > Next to `pybytes.send_signal(...)`, we can use ...
 
 
 ## Final remarks
