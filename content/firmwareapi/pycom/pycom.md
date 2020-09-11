@@ -193,7 +193,7 @@ with open(APPIMG, "rb") as f:
 
 Instead of reading the data to be written from a file, it can obviously also be received from a server using any suitable protocol, without the need to store it in the devices file system.
 
-> For more information about the OTA process, go [here](/updatefirmware/OTA/)
+> For more information about the OTA process, go [here](/updatefirmware/ota/)
 ### pycom.diff_update_enabled()
 
 Provides the status of the differential update feature. Returns `True` if differential update is enabled and `False` otherwise. `DIFF_UPDATE_ENABLED` build flag can be used to enable the differential update feature.

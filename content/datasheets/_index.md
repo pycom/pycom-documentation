@@ -23,6 +23,7 @@ The follow pages contain all information relating to each product, for example: 
 ## OEM modules
 
 - [W01](/datasheets/oem/w01/)
+- [G01](/datasheets/oem/g01/)
 - [L01](/datasheets/oem/l01/)
 - [L01 OEM Baseboard](/datasheets/oem/l01_reference/)
 - [L04](/datasheets/oem/l04/)

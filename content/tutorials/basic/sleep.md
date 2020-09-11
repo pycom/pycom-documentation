@@ -82,4 +82,4 @@ print("This will never be printed")
 
 >Note: Using `deepsleep()` will also stop the USB connection. Be wary of that when trying to upload new code to the device!
 
-For the Pysense, Pytrack and Pyscan expansionboards, an additional sleep function is available. You can find out more about that [here](../expansionboards/sleep/)
+For the Pysense, Pytrack and Pyscan expansionboards, an additional sleep function is available. You can find out more about that [here](/tutorials/expansionboards/sleep/)

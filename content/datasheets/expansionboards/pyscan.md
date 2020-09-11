@@ -29,7 +29,7 @@ The datasheet of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-
 
 ## Driver
 
-The Windows 7 driver for Pyscan is located [here](/pytrackpysense/installation/firmware).
+The Windows 7 driver for Pyscan is located [here](/gettingstarted/software/drivers/).
 
 For other Operating Systems, no driver is required.
 

@@ -1357,7 +1357,7 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "Write configuration"
-    url = "/pybytes/api/write_config/"
+    url = "/pybytes/api/update_config/"
     identifier = "pybytes@api@write_config"
     parent = "pybytes@api"
     weight = 38

@@ -36,4 +36,4 @@ The board features a single cell Li-Ion/Li-Po charger with a JST PHR‑2 connect
 
 ### 3D model for case design
 
-* Please see the [3D model](/gitbook/assets/PyTrack_v1.1.step") (step format)
+* Please see the [3D model](/gitbook/assets/PyTrack_v1.1.step) (step format)

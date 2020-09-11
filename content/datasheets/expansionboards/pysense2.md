@@ -11,7 +11,7 @@ aliases:
 
 ## Datasheet
 
-The datasheet of the Pysense 2.0X is available as a [PDF File](gitbook/assets/PySense2X_specsheet.pdf)
+The datasheet of the Pysense 2.0X is available as a [PDF File](/gitbook/assets/PySense2X_specsheet.pdf)
 
 ## Pinout
 

@@ -30,7 +30,7 @@ There are multiple debug levels, the lowest is 0 which is for warnings only and 
 
 * [Activate](activate)
 
-* [Connect](connect)
+* [Connect](connect_device)
 
 * [Connect LTE](connect_lte)
 

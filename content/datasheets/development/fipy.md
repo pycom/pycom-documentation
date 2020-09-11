@@ -46,4 +46,4 @@ Always attach the appropriate antenna when using a wireless connection (LoRa / L
 
 ### AT Commands
 
-The AT commands for the Sequans Monarch modem on the FiPy are available in a [PDF file](gitbook/assets/Monarch-LR5110-ATCmdRefMan-rev6_noConfidential.pdf).
+The AT commands for the Sequans Monarch modem on the FiPy are available in a [PDF file](/gitbook/assets/Monarch-LR5110-ATCmdRefMan-rev6_noConfidential.pdf).
