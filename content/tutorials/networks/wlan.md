@@ -6,7 +6,7 @@ aliases:
     - chapter/tutorials/networks/wlan
 ---
 
-The WLAN (WiFi) is a system feature of all Pycom devices, therefore it is enabled by default. The development boards include an on-board antenna by default, so no external antenna is needed to get started. When deploying your solution, you might want to concider using the external antenna to increase the wireless range. 
+The WLAN (WiFi) is a system feature of all Pycom devices, therefore it is enabled by default. The development boards include an on-board antenna by default, so no external antenna is needed to get started. When deploying your solution, you might want to consider using the external antenna to increase the wireless range. 
 
 >Note: Changing the WLAN settings while using the Telnet server might break the wireless connection to the device permanently. Please use caution, or a USB cable :)
 
