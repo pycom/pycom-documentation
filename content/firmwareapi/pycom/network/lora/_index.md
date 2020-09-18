@@ -239,7 +239,7 @@ Enable the Mesh network. Only after Mesh enabling the `lora.cli()` and `socket` 
 
 ### lora.cli()
 
-Send OpenThread CLI commands, the list is [here](https://github.com/openthread/openthread/blob/master/src/cli/README). The output is multiline string, having as line-endings the `\r\n`.
+Send OpenThread CLI commands, the list is [here](https://github.com/openthread/openthread/tree/master/src/cli/). The output is multiline string, having as line-endings the `\r\n`.
 
 ```bash
 >>> print(lora.cli("ipaddr"))
