@@ -222,7 +222,7 @@ Gets or Sets the maximum allowable transmission power for wifi. This is also rel
 
 Packets of different rates are transmitted in different powers according to the configuration in phy init data. This API only sets maximum WiFi transmiting power. If this API is called, the transmiting power of every packet will be less than or equal to the value set by this API.
 
-Values passed in power are mapped to transmit power levels as power = [8, 78] = [2, 20] dBm, in 0.25dBm increments.
+Values passed in the `power` argument are mapped to transmit power level in dBm. Possible values are between 8 and 78, where 8 corresponds to 2dBm and 78 to 20dBm. All values in between increase the maximum output power in 0.25dBm increments. 
 
 ### wlan.country([country, schan, nchan, max_tx_pwr, policy])
 
