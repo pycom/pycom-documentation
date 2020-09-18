@@ -756,6 +756,7 @@ theme = "doc-theme"
     weight = 70
 
 
+
 [[menu.main]]
     name = "MicroPython Modules"
     url = "/firmwareapi/micropython/"
@@ -1094,6 +1095,18 @@ theme = "doc-theme"
     identifier = "datasheets@boards@expansion3"
     parent = "datasheets@boards"
     weight = 70
+[[menu.main]]
+    name = "Deepsleep"
+    url = "/datasheets/expansionboards/deepsleep/"
+    identifier = "datasheets@boards@deepsleep"
+    parent = "datasheets@boards"
+    weight = 80
+[[menu.main]]
+    name = "PyEthernet"
+    url = "/datasheets/expansionboards/pyethernet/"
+    identifier = "datasheets@expansionboards@pyethernet"
+    parent = "datasheets@boards"
+    weight = 90
 
 
 
@@ -1344,7 +1357,7 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "Write configuration"
-    url = "/pybytes/api/write_config/"
+    url = "/pybytes/api/update_config/"
     identifier = "pybytes@api@write_config"
     parent = "pybytes@api"
     weight = 38
@@ -1447,12 +1460,19 @@ theme = "doc-theme"
     parent = "pybytes"
     weight = 80
 
- [[menu.main]]
-     name = "Pymesh Integration"
-     url = "/pybytes/pymeshintegration/"
-     identifier = "pybytes@pymeshintegration"
-     parent = "pybytes"
-     weight = 90
+[[menu.main]]
+   name = "Pymesh Integration"
+   url = "/pybytes/pymeshintegration/"
+   identifier = "pybytes@pymeshintegration"
+   parent = "pybytes"
+   weight = 90
+
+[[menu.main]]
+   name = "Machine Learning"
+   url = "/pybytes/mlintegration/"
+   identifier = "pybytes@mlintegration"
+   parent = "pybytes"
+   weight = 100
 
 [[menu.main]]
     name = "Amazon IoT"

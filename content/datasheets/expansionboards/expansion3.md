@@ -35,7 +35,7 @@ The expansion board contains 6 headers labeled:
 ### Battery Charger
 > Make sure you check the polarity of the battery before plugging it in! Connect the positive side to the side marked with a `+`. 
 
-The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, the Expansion Board will charge the battery \(if connected\). When the `CHG` jumper is present, the battery will be charged at `450mA`. If this value is too high for your application, removing the jumper lowers the charge current to `100mA`.
+The Expansion Board features a single cell Li-Ion/Li-Po charger with a JST PHR‑2 connector. When the board is being powered via the micro USB connector, the Expansion Board will charge the battery (if connected). When the `CHG` jumper is present, the battery will be charged at `450mA`. If this value is too high for your application, removing the jumper lowers the charge current to `100mA`.
 
 > To use the battery, pull `P8/G15` high (connect to `3v3`). If you want to use the SD card as well, use a 10k pull-up.
 
@@ -59,4 +59,5 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger. When the board 
 
 ## 3D model for case design
 
-* Please see the <a href="/gitbook/assets/Expansion_Board_3D.step" target="_blank"> 3D model </a> (step format)
+* Please see the [3D model](/gitbook/assets/Expansion_Board_3D.step) (step format)
+

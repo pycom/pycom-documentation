@@ -33,7 +33,7 @@ The pinout of the FiPy is available as a [PDF File](/gitbook/assets/fipy-pinout.
 
 ![](/gitbook/assets/fipy-pinout.png)
 
-> Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
+> Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed via software.
 
 ## Notes
 
@@ -46,4 +46,4 @@ Always attach the appropriate antenna when using a wireless connection (LoRa / L
 
 ### AT Commands
 
-The AT commands for the Sequans Monarch modem on the FiPy are available in a [PDF file](gitbook/assets/Monarch-LR5110-ATCmdRefMan-rev6_noConfidential.pdf).
+The AT commands for the Sequans Monarch modem on the FiPy are available in a [PDF file](/gitbook/assets/Monarch-LR5110-ATCmdRefMan-rev6_noConfidential.pdf).

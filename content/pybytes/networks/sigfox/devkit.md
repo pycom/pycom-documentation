@@ -47,4 +47,4 @@ This is not an issue with Custom contract, where _device type_ on Sigfox backend
 
 ## Troubleshooting
 
-[Disengage Sigfox sequence number](/tutorials/sigfox#disengage-sequence-number)
+[Disengage Sigfox sequence number](/tutorials/networks/sigfox#disengage-sequence-number)

@@ -39,7 +39,7 @@ The case will also work for the regular expansion board and has the SD card hold
 ## Notes
 ### Battery Charger
 
-The Pygate features a single cell Li-Ion/Li-Po charger. When the board is being powered via the USB-C connector, the Pygate will charge the battery if connected.
+The Pygate features a single cell Li-Ion/Li-Po charger with a JST PHR‑2 connector. When the board is being powered via the USB-C connector, the Pygate will charge the battery if connected.
 > Make sure you check the polarity of the battery before plugging it in! Connect the positive side to the side marked with a `+`.
 
 ### Troubleshooting

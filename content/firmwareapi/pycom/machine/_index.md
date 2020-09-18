@@ -64,7 +64,7 @@ Sets the device in to light sleep mode , where in this mode digital peripherals,
 
 ### machine.deepsleep([time_ms])
 
-Stops the CPU and all peripherals, including the networking interfaces (except for LTE). Execution is resumed from the main script, just like when pressing the reset button. The pin states are not held by default. You can choose to hold specific pins using [machine.pin.hold()](../machine/pin/#pinholdhold)
+Stops the CPU and all peripherals, including the networking interfaces (except for LTE). Execution is resumed similar to pressing the reset button. The pin states are not held by default. You can choose to hold specific pins using [machine.pin.hold()](../machine/pin/#pinholdhold)
 
 * `time_ms` is the sleep time in milliseconds. If not given, it will sleep indefinitely unless power is removed, the reset button is pressed or another wakeup source is configured.
 
