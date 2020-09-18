@@ -43,6 +43,7 @@ After creation, you will land on the provisioning page. This is where we 'inform
 2. This will ask for a `Pybytes activation token`. Generate a token from pybytes and paste it in the Firmware Updater tool. This will instantly generate a success message in Pybytes.
 
 ![](/gitbook/assets/pybytes/add-device/pybytes-provisioning2.png)
+
 3. Continue with the firmware update to the device.
 
 ## Step 4: Your first signal
@@ -82,20 +83,14 @@ After creation, you will land on the provisioning page. This is where we 'inform
     >>> pybytes.send_signal(1, "hello world")
     ```
     And it will show up on Pybytes in the `signals` tab:
-    ![](/gitbook/assets/pybytes/add-device/send-signal.png)
 
-    > Next to `pybytes.send_signal(...)`, we can use ...
+![](/gitbook/assets/pybytes/add-device/send-signal.png)
+
+> Next to `pybytes.send_signal(...)`, we can use ...
+
 
 
 ## Final remarks
-If you wish to disable Pybytes, yo ucan use `pycom.pybytes_on_boot(False)` will permanently
-## Step 1: Go to the registration page
+If you wish to disable Pybytes, you can use `pycom.pybytes_on_boot(False)` will permanently
 
-1. Go to [https://pybytes.pycom.io](https://pybytes.pycom.io/?utm_source=docs&utm_medium=web&utm_campaign=pybytes-getting-started).
-2. Enter your full name, email address and set a password for your account.
-3. Confirm the verification message sent to your email address.
-4. Click on the link and complete your login.
-
-## Go Invent!
-
-Now it's time to explore Pybytes. You can start by [connecting your Pycom board to Pybytes](../connect).
+Continue to [display data from your device into the Pybytes dashboard](/pybytes/dashboard/) 
