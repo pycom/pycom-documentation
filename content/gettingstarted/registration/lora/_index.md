@@ -27,11 +27,11 @@ The output will be a hex string like: `70B3D5499585FCA1`. Once you have this you
 
 #### OTAA
 
-If you wish to connect via OTAA (which is the recommended method) the network will provide you with an `Application EUI` and `Application Key`. The former identifies what application your device is connecting to, the latter is a shared secret key unique to your device to generate the session keys that prove its identity to the network. Once you have these you can use the [LoRaWAN OTAA example](/tutorials/lora/lorawan-otaa) code to connect to the network.
+If you wish to connect via OTAA (which is the recommended method) the network will provide you with an `Application EUI` and `Application Key`. The former identifies what application your device is connecting to, the latter is a shared secret key unique to your device to generate the session keys that prove its identity to the network. Once you have these you can use the [LoRaWAN OTAA example](/tutorials/networks/lora/lorawan-otaa) code to connect to the network.
 
 #### ABP
 
-With ABP the encryption keys enabling communication with the network are preconfigured in the device. The network will need to provide you with a `Device Address`, `Network Session Key` and `Application Session Key`. Once you have these you can use the [LoRaWAN ABP example](/tutorials/lora/lorawan-abp) code to connect to the network.
+With ABP the encryption keys enabling communication with the network are preconfigured in the device. The network will need to provide you with a `Device Address`, `Network Session Key` and `Application Session Key`. Once you have these you can use the [LoRaWAN ABP example](/tutorials/networks/lora/lorawan-abp) code to connect to the network.
 
 ### Networks
 

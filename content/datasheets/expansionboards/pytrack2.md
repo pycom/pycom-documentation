@@ -15,6 +15,7 @@ The datasheet of the Pytrack is available as a [PDF File](/gitbook/assets/PyTrac
 
 ## Pinout
 
+The PyPort connector is for a 6 lead mini ribbon cable. Part: Amphenol 20021511-00006T4LF
 The pinout of the Pytrack is available as a [PDF File](
 /gitbook/assets/pytrack2-pinout.pdf)
 
@@ -22,7 +23,7 @@ The pinout of the Pytrack is available as a [PDF File](
 ## Notes
 ### Battery Charger
 
-The board features a single cell Li-Ion/Li-Po charger. When the board is being powered via the micro USB connector, it will charge the battery (if connected).
+The board features a single cell Li-Ion/Li-Po charger with a JST PHR‑2 connector. When the board is being powered via the micro USB connector, it will charge the battery (if connected).
 > Make sure you check the polarity of the battery before plugging it in! Connect the positive side to the side marked with a `+`.
 
 

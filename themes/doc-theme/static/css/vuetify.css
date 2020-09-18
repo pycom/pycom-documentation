@@ -2824,6 +2824,9 @@ ol {
   padding-left: 24px;
   margin-bottom: 10px;
 }
+li p{
+  margin-bottom: 0px;
+}
 .display-4 {
   font-size: 112px !important;
   font-weight: 300;

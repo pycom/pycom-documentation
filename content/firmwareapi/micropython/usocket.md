@@ -129,7 +129,7 @@ The socket must be in blocking mode; it can have a timeout, but the file object'
 
 #### socket.read(size)
 
-Read up to size bytes from the socket. Return a bytes object. If `size` is not given, it behaves just like [`socket.readall()`](../usocket.md#socket-readall), see below.
+Read up to size bytes from the socket. Return a bytes object. If `size` is not given, it behaves just like [`socket.readall()`](../usocket#socket-readall), see below.
 
 #### socket.readall()
 

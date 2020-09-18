@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/development/wipy2
 ---
 
-![](/gitbook/assets/wipy2-1.png)
+![](/gitbook/assets/wipy2.png)
 
 > Note: Orient the RGB LED / reset button over the USB connector on any expansion board 
 
@@ -40,11 +40,11 @@ Always attach the appropriate antenna when using a wireless connection. For WiFi
 
 ### Deep Sleep
 
-Due to a couple of issues with the WiPy2 design, the module draws more current than it should while in Deep Sleep. The DC-DC switching regulator always stays in high performance mode, which is used to provide the lowest possible output ripple when the module is in use. In this mode, it draws a quiescent current of 10mA. When the regulator is put into ECO mode the quiescent current drops to 10uA. Unfortunately, the pin used to control this mode is out of the RTC domain. This means that it is not usable during Deep Sleep. This results in the regulator remaining in PWM mode, keeping its quiescent current at 10mA. The flash chip also doesn't enter into power down mode as the CS pin floats during Deep Sleep. This causes the flash chip to consume around 2mA of current. To work around this issue a ["deep sleep shield"](../../boards/deepsleep/) is available that attaches to the module and allows power to be cut off from the device. The device can then be re-enabled either through a timer or via a pin interrupt. With the Deep Sleep Shield, the current consumption during deep sleep is between 7uA and 10uA depending on the wake sources configured.
+Due to a couple of issues with the WiPy2 design, the module draws more current than it should while in Deep Sleep. The DC-DC switching regulator always stays in high performance mode, which is used to provide the lowest possible output ripple when the module is in use. In this mode, it draws a quiescent current of 10mA. When the regulator is put into ECO mode the quiescent current drops to 10uA. Unfortunately, the pin used to control this mode is out of the RTC domain. This means that it is not usable during Deep Sleep. This results in the regulator remaining in PWM mode, keeping its quiescent current at 10mA. The flash chip also doesn't enter into power down mode as the CS pin floats during Deep Sleep. This causes the flash chip to consume around 2mA of current. To work around this issue a ["deep sleep shield"]../expansionboards/deepsleep/) is available that attaches to the module and allows power to be cut off from the device. The device can then be re-enabled either through a timer or via a pin interrupt. With the Deep Sleep Shield, the current consumption during deep sleep is between 7uA and 10uA depending on the wake sources configured.
 
 ## Tutorials
 
 Tutorials on the WiPy2 module can be found in the [examples](/tutorials/introduction) section of this documentation. The following tutorials might be of  interest for those using the WiPy2:
 
-* [WiFi connection](/tutorials/all/wlan)
-* [BLE](/tutorials/all/ble)
+* [WiFi connection](/tutorials/networks/wlan)
+* [BLE](/tutorials/networks/ble)

@@ -30,7 +30,7 @@ This step works the same for all our development boards and expansion boards. In
 
 ![](/gitbook/assets/expansion_board_3_lopy4.png)
 
->Note: If you do not have an expansion board, you are able to use a [USB-Serial converter](/gettinstarted/programming/usbserial/) or [WiFi](/gettingstarted/programming/ftp/) to connect.
+>Note: If you do not have an expansion board, you are able to use a [USB-Serial converter](/gettingstarted/programming/usbserial/) or [WiFi](/gettingstarted/programming/ftp/) to connect.
 
 
 ## Step 2: Setting up your computer
@@ -130,11 +130,11 @@ If you need to remove files from your device you can use the following commands:
 ## Step 4: Further references
 Now that we got the basic example running, you can proceed to develop your own application! For further references, you can check the links below:
 
-* [More examples](/tutorials/)
+* [Tutorials and examples](/tutorials/)
 
-* [Documentation](/firmwareapi/)
+* [Firmware API](/firmwareapi/)
 
-* [Get started using the FTP and Telnet Server](/gettingstarted/programming/ftp/)
+* [FTP and Telnet](/gettingstarted/programming/ftp/)
 
 * [Connect using Pybytes](/pybytes/getstarted/)
 

@@ -18,7 +18,7 @@ The first step is to have your python application uploaded and running on your P
 
 1. Install the [Pymakr](https://atom.io/packages/pymakr) plugin.
 
-    (We highly recommend using Pymakr with Atom, but you can also use Pymakr with [VS Code](https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr)). Learn more about Pymakr [here](/pymakr).
+    (We highly recommend using Pymakr with Atom, but you can also use Pymakr with [VS Code](https://marketplace.visualstudio.com/items?itemName=pycom.Pymakr)).
 2. In Atom create a project folder `my-first-wipy` (any other name will work as well).
 4. In your project folder create the `main.py` file
 3. Copy and paste the following code into your `main.py`
