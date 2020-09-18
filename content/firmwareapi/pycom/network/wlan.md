@@ -47,7 +47,7 @@ Create a WLAN object, and optionally configure it. See init for params of config
 
 ## Methods
 
-#### wlan.init(mode, [ssid=None, auth=None, channel=1, antenna=WLAN.INT_ANT, power_save=False, hidden=False, bandwidth=HT40, max_tx_pwr=20, country=NA, protocol=(1,1,1)])
+#### wlan.init(mode, [ssid=None, auth=None, channel=1, antenna=WLAN.INT_ANT, power_save=False, hidden=False, bandwidth=WLAN.HT40, max_tx_pwr, country=NA, protocol=(1,1,1)])
 
 Set or get the WiFi network processor configuration.
 
@@ -218,24 +218,11 @@ Each element of the returned list is a tuple, containing the MAC address and IP 
 
 ### wlan.max_tx_power([power])
 
-Gets or Sets the maximum allowable transmission power for wifi.
+Gets or Sets the maximum allowable transmission power for wifi. This is also related to the country setting.
 
-Packets of different rates are transmitted in different powers according to the configuration in phy init data. This API only sets maximum WiFi transmiting power. If this API is called, the transmiting power of every packet will be less than or equal to the value set by this API. Default is Level 0.
+Packets of different rates are transmitted in different powers according to the configuration in phy init data. This API only sets maximum WiFi transmiting power. If this API is called, the transmiting power of every packet will be less than or equal to the value set by this API.
 
-Values passed in power are mapped to transmit power levels as follows:
-
-* [78, 127]: level0
-* [76, 77]: level1
-* [74, 75]: level2
-* [68, 73]: level3
-* [60, 67]: level4
-* [52, 59]: level5
-* [44, 51]: level5 - 2dBm
-* [34, 43]: level5 - 4.5dBm
-* [28, 33]: level5 - 6dBm
-* [20, 27]: level5 - 8dBm
-* [8, 19]: level5 - 11dBm
-* [-128, 7]: level5 - 14dBm
+Values passed in the `power` argument are mapped to transmit power level in dBm. Possible values are between 8 and 78, where 8 corresponds to 2dBm and 78 to 20dBm. All values in between increase the maximum output power in 0.25dBm increments. 
 
 ### wlan.country([country, schan, nchan, max_tx_pwr, policy])
 
