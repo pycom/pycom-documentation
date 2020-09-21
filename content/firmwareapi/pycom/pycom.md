@@ -89,11 +89,18 @@ Allows you permanently disable or enable the heartbeat LED. Once this setting is
 ### pycom.lte_modem_on_boot([boolean])
 
 Get or set the LTE modem on boot flag. When this flag is set to `True`, the LTE modem will be enabled.
+
 ### pycom.wifi_on_boot([boolean])
 
-Get or set the WiFi on boot flag. When this flag is set to `True`, The WiFi will be enabled according to the other WiFi settings. when `False` the WiFi module will be disabled untill enabled directly via WLAN class.
+Get or set the WiFi on boot flag. When this flag is set to `True`, The WiFi will be enabled according to the other WiFi settings. when `False` the WiFi module will be disabled until enabled directly via WLAN class. This setting is stored in the non-volatile memory which preserves it across resets and power cycles. See [FTP & Telnet](/gettingstarted/programming/ftp/) for more information on possible usage.
 
-This setting is stored in non-volatile memory which preserves it across resets and power cycles.
+### pycom.wifi_mode_on_boot(mode)
+
+Set or get the Wifi Mode at startup, valid options are:
+* `WLAN.STA`
+* `WLAN.AP`
+* `WLAN.APSTA`
+This setting is stored in non-volatile memory which preserves it across resets and power cycles
 
 ### pycom.wifi_ssid_sta([ssid])
 
@@ -102,7 +109,7 @@ This setting is stored in non-volatile memory which preserves it across resets a
 
 ### pycom.wifi_ssid_ap([ssid])
 
-Get or set the ssid of the Access point that should be started by the device at startup, if not set and startup Wifi mode is AP the default AP name (`Board_Name>-wlan-<last_4_digits_mac`) will be used.This setting is stored in non-volatile memory which preserves it across resets and power cycles
+Get or set the ssid of the Access point that should be started by the device at startup, if not set and startup Wifi mode is AP the default AP name (`xxpy-wlan-####`) will be used. This setting is stored in non-volatile memory which preserves it across resets and power cycles.
 
 ### pycom.wifi_pwd_sta([key])
 
@@ -119,10 +126,6 @@ Read or (Enable/Disable) SmartConfig functionality on startup, this flag will be
 ### pycom.smart_config_on_boot([boolean])
 
 Read or (Enable/Disable) SmartConfig functionality on startup, this flag will be reset after successful completion of the smartConfig process after startup.This setting is stored in non-volatile memory which preserves it across resets and power cycles
-
-### pycom.wifi_mode_on_boot([boolean])
-
-Set or get the Wifi Mode at startup , `WLAN.STA`, `WLAN.AP` or `WLAN.APSTA`.This setting is stored in non-volatile memory which preserves it across resets and power cycles
 
 ### pycom.wdt_on_boot_timeout([timeout])
 

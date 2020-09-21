@@ -6,6 +6,8 @@ aliases:
     - chapter/gettingstarted/programming/ftp
 ---
 
+> This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
+
 There is a small internal file system accessible with each Pycom device, called `/flash`. This is stored within the external serial flash memory. If a microSD card is also connected and mounted, it will be available as well. When the device starts up, it will always boot from the `boot.py` located in the `/flash` file system.
 
 The first time(s), your device will create an Access Point (AP) you can connect to using your computer's WiFi.
@@ -14,7 +16,22 @@ By default, the device will create a WiFi access point with the following creden
 * SSID: `xxpy-wlan-####`
 * Password: `www.pycom.io`
 
->Note: This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
+> If the WiFi network does not show up by default, use the following:
+>```python
+> import pycom
+> from network import WLAN
+> pycom.wifi_on_boot(True)
+> pycom.wifi_mode_on_boot(WLAN.AP)
+> ```
+> The last 4 characters of the broadcast SSID are equal to the last 4 characters of the `unique_id()`: (Except if the AP SSID was set previously)
+> ```python
+> import machine
+> import ubinascii
+> ubinascii.hexlify(machine.unique_id())
+> ```
+
+
+
 
 Once connected to this network you will be able to access the telnet and FTP servers running on the LoPy4. 
 
