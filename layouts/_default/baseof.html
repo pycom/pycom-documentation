@@ -48,12 +48,12 @@
         drawer2: true,
         toc: 0,
         branches: [
-        { value: 'https://docs.pycom.io', text: 'version stable'},
-        { value: 'https://development.pycom.io', text: 'version development'},
-          /*{ value: '1', text: 'version 1.20.2.r0'},
-          { value: '2', text: 'version 1.20.3.b0'},
-          { value: '3', text: 'version 1.20.2.rc10'},
-          { value: '4', text: 'version 1.20.2.rc9'},*/
+        { value: '', text: 'latest'},
+        { value: 'dev', text: 'version development'},
+          /*{ value: '1.20.2.r0', text: 'version 1.20.2.r0'},
+          { value: '1.20.3.b0', text: 'version 1.20.3.b0'},
+          { value: '1.20.2.rc10', text: 'version 1.20.2.rc10'},
+          { value: '1.20.2.rc9', text: 'version 1.20.2.rc9'},*/
         ],
         branch: ""
       },
@@ -65,19 +65,14 @@
             this.branch= this.branches[b]
           }
         }
-        if(window.location.host == "localhost:1313" || window.location.host == "development.pycom.io"){
-          var x = document.getElementsByClassName('development')
-          var i;
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = 'inline';
-          }
-        }else{
-          var x = document.getElementsByClassName('development')
-          var i;
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = 'none';
-          }
+        var li = document.links;
+        targetVersion = this.branch.value;
+        console.log(targetVersion);
+        for(var i = 0; i< li.length; i++){
+          li[i].href = "/" +targetVersion + li[i].href;
+          console.log(li[i].href);
         }
+
         // there is not always a toc button
         // temp. show page-toc to the user as hint of existence
         if (this.$refs.tocBtn) {
@@ -93,24 +88,27 @@
       },
       watch: {
         // whenever the branch changes, this function will run
-        branch: function (newb, old) {
+        branch: function (newb, currentb) {
           if (newb.value != this.branches[0].value) {
-          //   development = !development;
-          //   console.log("switch")
-          //   if (!development){
-          //     var x = document.getElementsByClassName('development')
-          //     var i;
-          //     for (i = 0; i < x.length; i++) {
-          //       x[i].style.display = 'none';
-          //     }   
-          //   }else{
-          //     var x = document.getElementsByClassName('development')
-          //     var i;
-          //     for (i = 0; i < x.length; i++) {
-          //       x[i].style.display = 'block';
-          //     }   
-          //   }
-            window.location = newb + window.location.pathname;
+              var targetVersion = newb;
+              var currentVersion = currentb.value;
+              if (currentVersion !== targetVersion) {
+                console.log("targetversion: ",targetVersion);
+                console.log("currentVersion: ", currentVersion);
+                var basePath = getPathBeforeVersionName(location, currentVersion);
+                console.log("basePath: ",basePath);
+                // Getting everything after targetVersion and concatenating it with the hash part.
+                var currentPath = getPathAfterVersionName(location, currentVersion);
+                console.log("Currentpath:",currentPath);
+                var targetPath;
+                if (targetVersion === "") {
+                  targetPath = basePath + currentPath;
+                } else {
+                  targetPath = basePath + targetVersion + "/" + currentPath;
+                }
+                console.log("targetPath:", targetPath);
+                //location.assign(targetPath);
+              }
           }
         },
       },
@@ -123,6 +121,29 @@
       inputSelector: '.algolia-search-field input',
       debug: false // Set debug to true if you want to inspect the dropdown
     });
+
+
+    function getPathBeforeVersionName(location, versionName) {
+      return "/";
+    }
+
+    // getPathAfterVersionName gets the current URL path after the version prefix
+    function getPathAfterVersionName(location, versionName) {
+      let path;
+      if (versionName === "") {
+        path = location.pathname
+          .split("/")
+          .slice(1)
+          .join("/");
+      } else {
+        path = location.pathname
+          .split("/")
+          .slice(2)
+          .join("/");
+      }
+
+      return path + location.hash;
+    }
   </script>
 <!--{{- partial "footer.html" . -}}-->
 {{- partial "alexia.html" . -}}
