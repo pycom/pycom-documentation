@@ -92,7 +92,7 @@ Select the devices and click on the **DEPLOY MODEL** button.
 
 * Once the model is deployed on the device, it can be called from python code to classify new gestures using the data collected from the accelerometer sensor. 
 
-* The path to the deployed model is: `/flash/model_definition.json`. This file is going to be used by the device firmware, and once generated it should not be changed by the user. Any changes can cause features to malfunction.
+* The path to the deployed model is: `flash/model_definition.json`. This file is going to be used by the device firmware, and once generated it should not be changed by the user. Any changes can cause features to malfunction.
 
 * The pycom module provides two functions for model interaction: `pycom.ml_new_model()` and `pycom.ml_run_model()`. Below is a very simple example:
 
@@ -100,13 +100,24 @@ Select the devices and click on the **DEPLOY MODEL** button.
 import json
 import pycom
 
-# A window which contains a gesture. Should be a list with 126 * 3 = 378 entries. This is because, in model_definition.json, the window_size_ms = 2000, sampling_frequency=62.5, so: 62.5*2 + 1 = 126 samples in a window. 
-# The data is in the next format: acc_x, acc_y, acc_z, acc_x, ...
-# This is just an example. In a real application, this data should be collected from the accelerometer.
-data_l = []  
+# This is just an example. In a real application, the input 
+# data should be collected from the accelerometer.
+
+# In order for this model to run with the data_l defined here, in 
+# the model_definition.json, we must have: window_size_ms = 2000 
+# and sampling_frequency=62.5! If the model used has other 
+# settings please update the data_l list accordingly. The data_l 
+# list should contain only one window of data, on three axes!
+
+# A window which contains a gesture. It is a list with 126 * 3 = 378 
+# entries. This is because in the model_definition.json the 
+# window_size_ms = 2000 and sampling_frequency = 62.5, so there are 
+# 62.5*2 + 1 = 126 samples in a window. The data is in the next 
+# format: acc_x, acc_y, acc_z, acc_x, ...
+data_l = [-0.9337, 0.0575, 11.8405, -0.7422, -0.1006, 10.6195, -0.1532, 0.6129, 10.0353, -0.4357, 0.7135, 7.6938, -0.4357, 0.7135, 7.6938, -0.4405, 0.5315, 6.3434, -0.2346, 0.4788, 4.5191, 0.1772, 0.6177, 3.705, 0.4597, 0.5219, 4.7202, 0.8619, 1.2258, 6.1711, 1.1013, 2.2936, 6.1567, 0.9002, 2.2362, 4.0642, 0.9002, 2.2362, 4.0642, 0.2921, 1.7573, 1.5407, 0.656, 1.4748, -0.1448, 0.8523, 1.3408, -0.3938, 1.2067, 1.3551, 0.9373, 1.403, 1.9106, 2.7809, 1.0056, 1.9776, 3.4081, 1.0056, 1.9776, 3.4081, 1.1396, 1.5419, 2.8766, 1.0439, 1.1684, 3.1831, 1.1971, 1.3743, 3.5853, 0.9816, 1.6616, 3.6332, 0.249, 1.8387, 3.5949, 0.4884, 1.8675, 4.203, 0.5698, 1.7382, 5.2948, 0.3543, 1.901, 5.8646, 0.3687, 1.9249, 5.7928, 0.3687, 1.9249, 5.7928, 0.5459, 1.4078, 5.357, 0.4741, 0.4549, 5.3762, 0.5842, 0.723, 6.8414, 0.3639, 1.1444, 7.6363, 0.3639, 1.2019, 8.8334, 0.4884, 0.565, 9.341, 0.723, 0.6033, 10.088, 0.407, 0.6752, 10.1359, -0.431, 0.7374, 10.1023, -0.3112, 0.68, 11.9459, 0.249, 0.5842, 13.4494, 0.0479, 0.7183, 13.21, -0.972, 0.8763, 12.5396, -0.814, 0.6656, 13.8181, -0.6321, 0.7039, 15.451, -1.221, 0.565, 15.2259, -1.4317, 0.5028, 15.1972, -1.7526, 0.8811, 16.356, -2.2553, 0.9242, 17.5339, -2.3559, 1.5802, 18.7646, -2.5331, 1.5371, 19.2099, -2.7054, 1.6616, 19.5882, -2.7916, 1.6185, 19.8084, -2.7916, 1.6185, 19.8084, -2.5762, 1.5993, 20.0383, -2.5762, 1.5993, 20.0383, -2.1117, 0.9529, 18.9321, -1.81, 0.4645, 17.4765, -1.6137, 0.2873, 17.1365, -1.2402, 0.1053, 16.3895, -1.0439, 0.0479, 15.4414, -0.7087, -0.1006, 14.613, -0.5124, -0.1101, 14.273, -0.6752, 0.5028, 13.5787, -0.4741, 0.6943, 12.9036, -0.3926, 0.7422, 11.8453, -0.3926, 0.7422, 11.8453, -0.1006, 0.5219, 10.4088, 0.3926, 0.5459, 11.9459, 0.5555, 0.7422, 11.491, 0.4693, 1.2402, 8.5317, -0.2921, 0.8188, 4.9979, -0.2921, 0.8188, 4.9979, 0.1006, 0.7757, 5.0985, 0.8523, 1.0918, 7.9332, 0.8236, 2.4086, 9.1447, 0.2921, 2.5953, 7.2532, 0.431, 2.2122, 5.9891, 1.1109, 1.2258, 3.8439, 1.1109, 1.2258, 3.8439, 0.838, 0.431, 1.5838, 1.2929, 0.5986, 1.1432, 1.3503, 0.838, 1.7178, 1.336, 1.7813, 3.0969, 0.9194, 2.4229, 3.8678, 0.7901, 2.4852, 4.2365, 0.7087, 2.3894, 4.2653, 0.8763, 1.6999, 4.045, 0.9912, 1.4413, 3.7816, 0.8092, 1.5993, 4.1312, 0.7757, 1.8531, 4.8638, 0.7374, 1.8004, 5.2086, 0.6512, 1.8244, 5.1415, 0.6177, 2.2362, 5.6204, 0.2203, 2.2745, 5.5869, -0.2346, 1.7382, 5.0218, 0.1724, 1.5083, 5.1846, 0.7949, 1.5802, 6.7935, 0.2251, 2.5091, 7.8326, -0.2346, 2.4038, 7.7129, -0.2729, 1.8196, 7.4974, 0.2921, 1.5802, 8.0385, -0.2586, 1.6712, 8.6706, -0.3065, 1.7382, 9.0633, -0.3065, 1.7382, 9.0633, -0.0144, 1.6233, 10.1885, -0.182, 1.0056, 10.8302, -0.3017, 0.9337, 10.5285, -0.5267, 0.9194, 10.337, -0.6656, 0.7805, 11.2803, -0.1389, 0.1484, 12.5588, -0.067, 0.2586, 12.9658, -0.0527, 0.4214, 13.6601, -0.7901, 0.8332, 13.3824, -0.5507, 0.3735, 12.2236, -0.7278, 0.1053, 13.8947, -0.5602, 0.0718, 14.5125, -0.9816, 0.5938, 15.0344, -1.3791, 0.407, 15.2403, -1.3503, 0.3112, 16.2746, -1.494, 0.407, 16.6146, -1.494, 0.407, 16.6146, -1.992, 0.6512, 17.2466, -2.3367, 1.3216, 18.4725, -2.1883, 1.5897, 18.9178, -2.4229, 1.6712, 18.5634]  
 
 # Read deployed model.
-with open('/flash/model_definition.json') as file:
+with open('flash/model_definition.json') as file:
     model_str = file.read()
     model_dict = json.loads(model_str)
 
@@ -117,8 +128,8 @@ for block in model_dict['model']['blocks']:
 
 def new_model():
     """Instantiate deployed model."""
-    ret = pycom.ml_new_model(model_str)
-    print('new_model status = {}'.format(ret))
+    return pycom.ml_new_model(model_str)
+    
 
 def run_model():
     """Run model to classify data."""
@@ -127,135 +138,15 @@ def run_model():
     for (label, index) in output_labels.items():
         print('{}: {:.2}%'.format(label, result[index] * 100))
 
-new_model()
-run_model()
+if new_model():
+    print('Model succesfully created')
+    run_model()
+
 ```
 
 * And an example in which data is real-time collected from the accelerometer:
-
 ```python
-import pycom
-import time
-import json
-from pysense import Pysense
-from LIS2HH12 import *
-import _thread
-
-GRAVITATIONAL_ACC = 9.80665
-
-with open('/flash/model_definition.json') as file:
-    model_str = file.read()
-
-done_acq = False
-data = []
-done_sig = False
-
-py = Pysense()
-
-li = LIS2HH12(py)
-li.set_odr(ODR_400_HZ)
-
-def new_model():
-
-    print('Create new model.')
-
-    ret = pycom.ml_new_model(model_str)
-
-    print('ret = {}'.format(ret))
-
-def run_model(data_l):
-
-    print('Run model.')
-
-    t0 = time.ticks_us()
-    ret = pycom.ml_run_model(data_l)
-    delta = time.ticks_us() - t0
-
-    print("time duration = {} ms".format(delta/1000))
-
-    return ret
-
-def data_acq(window_size_ms, sampling_frequency, window_step_ms):
-    global done_acq, data, done_sig
-
-    delta_t_us = int(1000000.0 / sampling_frequency)
-    samples_num = 3 * int(window_size_ms * sampling_frequency / 1000)
-    step_samples = 3 * int(window_step_ms * sampling_frequency / 1000)
-
-    print("Start acquisition data for %d msec, freq %d Hz, samples_num %d"%(window_size_ms, sampling_frequency, samples_num))
-
-    data_local = []
-    index = 0
-    done_acq = False
-
-    next_ts = time.ticks_us()
-    while True:
-        if done_sig:
-            _thread.exit()
-            # while next_ts - time.ticks_us() > 0:
-        while time.ticks_diff(next_ts, time.ticks_us()) > 0:
-            pass
-        acc = li.acceleration()
-        ts = next_ts
-        data_local.append(acc[0] * GRAVITATIONAL_ACC)
-        data_local.append(acc[1] * GRAVITATIONAL_ACC)
-        data_local.append(acc[2] * GRAVITATIONAL_ACC)
-        next_ts = ts + delta_t_us
-        index += 3
-        if index >= samples_num:
-            # signal the main thread that we have a new window of data
-            done_acq = True
-            data  = data_local[-samples_num:]
-            # delete the first samples, that are not useful anymore
-            index -= step_samples
-            del data_local[:step_samples]
-
-# parse the mode to obtain window sise and sampling frecquncy
-try:
-    model_dict = json.loads(model_str)
-    window_size_ms = float(model_dict['model']['blocks'][0]['window_size_ms'])
-    sampling_frequency = float(model_dict['model']['blocks'][0]['sampling_frequency'])
-    window_step_ms = float(model_dict['model']['blocks'][0]['window_step_ms'])
-    output_labels =  model_dict['model']['blocks'][2]['trained_nn_model']['label_to_id']
-    minimum_confidence_rating =  model_dict['model']['blocks'][2]['trained_nn_model']['minimum_confidence_rating']
-except:
-    print("Model parsing failed")
-    import sys
-    sys.exit(0)
-
-new_model()
-
-_thread.start_new_thread(data_acq, (window_size_ms, sampling_frequency, window_step_ms))
-
-print("Result labels: ", output_labels)
-
-while True:
-
-    # wait for buffer of acceleration to be filled in the Thread
-    while not done_acq:
-        time.sleep(.2)
-    done_acq = False
-    # print("\nNew data:", len(data), data[:10])
-    result = run_model(data)['NN']
-    # print("Inference result:", result)
-    activity = "None"
-    activity_idx = -1
-    if max(result) >= minimum_confidence_rating:
-        activity_idx = result.index(max(result))
-
-    for (label, index) in output_labels.items():
-        print('{}: {:.2}%'.format(label, result[index] * 100))
-        # print('{}: {}'.format(label, index))
-        if activity_idx == index:
-            activity = label
-
-    print("Result activity: {}".format(activity))
-    print("--------------------------------------------------")
-
-done_sig = True
-time.sleep(1)
-print("Done")
-
+# TODO: Add example.
 ```
 
 [**Machine Learning Integration**](/pybytes/mlintegration)
