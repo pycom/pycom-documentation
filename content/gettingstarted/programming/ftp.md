@@ -6,43 +6,40 @@ aliases:
     - chapter/gettingstarted/programming/ftp
 ---
 
-> This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
+This page discusses the possibility to upload files through the internal FTP server and access the REPL through a Telnet connection. Using this method as the single option to connect to the device is not advisable, as unexpected crashes and changes in the wifi settings might lock you out. 
 
 There is a small internal file system accessible with each Pycom device, called `/flash`. This is stored within the external serial flash memory. If a microSD card is also connected and mounted, it will be available as well. When the device starts up, it will always boot from the `boot.py` located in the `/flash` file system.
-
-The first time(s), your device will create an Access Point (AP) you can connect to using your computer's WiFi.
 
 By default, the device will create a WiFi access point with the following credentials:
 * SSID: `xxpy-wlan-####`
 * Password: `www.pycom.io`
 
-> If the WiFi network does not show up by default, use the following:
->```python
-> import pycom
-> from network import WLAN
-> pycom.wifi_on_boot(True)
-> pycom.wifi_mode_on_boot(WLAN.AP)
-> ```
-> The last 4 characters of the broadcast SSID are equal to the last 4 characters of the `unique_id()`: (Except if the AP SSID was set previously)
-> ```python
-> import machine
-> import ubinascii
-> ubinascii.hexlify(machine.unique_id())
-> ```
+If you made changes to the WiFi settings, the AP might not show up by default. You can use the following to get it back up and running:
+```python
+import pycom
+from network import WLAN
+pycom.wifi_on_boot(True)
+pycom.wifi_mode_on_boot(WLAN.AP)
+```
+ The last 4 characters of the broadcast SSID are equal to the last 4 characters of the `unique_id()`:
+```python
+import machine
+import ubinascii
+ubinascii.hexlify(machine.unique_id())
+```
+
+> You can find the methods to change the default settings [here](/firmwareapi/pycom/pycom/#boot-methods)
 
 
-
-
-Once connected to this network you will be able to access the telnet and FTP servers running on the LoPy4. 
-
-The file system is accessible via the native FTP server running on each Pycom device. Open an FTP client and connect to:
+The file system is accessible via the native FTP server running on each Pycom device. Open a FTP client and connect to:
 
 * url: `ftp://192.168.4.1`
 * username: `micro`
 * password: `python`
 
-See [network.server](/firmwareapi/pycom/network/server/) for information on how to change the defaults. The recommended clients are:
+See [network.server](/firmwareapi/pycom/network/server/) for information on how to change the default credentials. 
 
+The recommended clients are:
 * macOS/Linux: default FTP client
 * Windows: Filezilla and FireFTP
 
