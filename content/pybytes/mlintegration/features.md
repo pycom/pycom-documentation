@@ -90,7 +90,7 @@ Select the devices and click on the **DEPLOY MODEL** button.
 
 ![Model Deployment](/gitbook/assets/pybytes/ml/deploy.png)
 
-* Once the model is deployed on the device, it can be called from python code to classify new gestures using the data collected from the accelerometer sensor. 
+* Once the model is deployed on the device, it can be called from python code to classify new gestures using the data collected from the accelerometer sensor.
 
 * The path to the deployed model is: `flash/model_definition.json`. This file is going to be used by the device firmware, and once generated it should not be changed by the user. Any changes can cause features to malfunction.
 
@@ -102,13 +102,13 @@ from math import sin
 import json
 import pycom
 
-# This is just a dummy example. In a real application, the input 
+# This is just a dummy example. In a real application, the input
 # data should be collected from the accelerometer.
 
 def new_model(model_str):
     """Instantiate deployed model."""
     return pycom.ml_new_model(model_str)
-    
+
 
 def run_model(window_data):
     """Run model to classify data."""
@@ -119,14 +119,14 @@ def run_model(window_data):
         print('    {}: {:.2}%'.format(label, result[index] * 100))
 
 # Read deployed model.
-with open('flash/model_definition.json') as file:
+with open('/flash/model_definition.json') as file:
 
     # Parse the model_definition.
     model_str = file.read()
     model_dict = json.loads(model_str)
 
     # Read blocks.
-    for block in model_dict['model']['blocks']:
+    for block in model_dict['blocks']:
         if block['block_type'] == 'pre_processing_block':
             pp_block =  block
         if block['block_type'] == 'nn_block':
