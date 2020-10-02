@@ -59,7 +59,7 @@ Connect to Pybytes using LTE and the settings from the configuration file.
 
 ### pybytes.connect_wifi([reconnect=True, check_interval=0.5])
 
-Connect to Pybytes using WiFi and the settings from the configuration file.
+Connect to Pybytes using WiFi and the settings from the configuration file. Setting reconnect to `True` will reconnect the WiFi connection once disconnected.
 
 ### pybytes.connect_sigfox()
 
@@ -89,41 +89,82 @@ Returns the connection status to Pybytes, can be `True` or `False`.
 
 Same as `pybytes.isconnected()`
 
+### pybytes.enable_ssl()
+
+Enable SSL on the Pybytes connection
+
+### pybytes.dump_ca([file='/flash/cert/pycom-ca.pem'])
+
+Write SSL certificate to file.
+
+
 ## Signals
 
-### pybytes.send_signal
+### pybytes.send_signal(signal_number, value)
 
-Note this will create a separate thread. 
-__class__       __init__        __module__      __qualname__
-start           __dict__        WAKEUP_ALL_LOW  WAKEUP_ANY_HIGH
-connect         deepsleep              
+Send a signal to Pybytes. Arguments are:
+* `signal_number`
+* `value`
 
-send_custom_message             set_custom_message_callback
-send_ping_message               send_info_message
-send_scan_info_message          send_digital_pin_value
-send_analog_pin_value           send_node_signal
-send_signal     __periodical_pin_callback
+> This will also work in Pymesh.
+
+### send_digital_pin_value(pin_number, pull_mode)
+
+Similar to `pybytes.send_signal()`. Will send the value of `pin_number` to Pybytes.
+
+### pybytes.send_analog_pin_value()
+
+### pybytes.send_ping_message()
+
+Sends a ping (is-alive) message to Pybytes. 
+
+### pybytes.send_info_message()
+
+Send an info message to Pybytes containing the device type and firmware version.
+
+### pybytes.send_battery_level(battery_level)
+
+Sends the battery level to Pybytes. The argument `battery_level` can be any integer.
+
+### send_custom_message()
+
+### pybytes.send_custom_message(persistent, message_type, message)
+
+Send a custom message to Pybytes. Arguments are:
+* `persistent`: Not used, set any value
+* `message_type`: 
+
+### pybytes.enable_terminal()
+
+### send_digital_pin_value(persistent, pin_number, pull_mode)
+### pybytes.send_analog_pin_value(persistent, pin_number)
+### pybytes.send_custom_location(pin, x, y)
+
+
+
+
+send_custom_message             set_custom_message_callback        send_digital_pin_value
+send_analog_pin_value           send_node_signal  
+
 register_periodical_digital_pin_publish
 register_periodical_analog_pin_publish
 add_custom_method               enable_terminal
-send_battery_level              send_custom_location
-__recv_message  __process_protocol_message      
-export_config   enable_ssl
-enable_lte      dump_ca         activate        smart_config
-__smart_config_callback         __smart_config_setup
-__frozen        __activation    __custom_message_callback
-__config_updated                __pybytes_connection
-__smart_config  __conf          __pymesh        __conf_reader
+send_custom_location
+
+    
+
+enable_lte           smart_config
 ## Sending messages
 
 ## Miscellaneous
 
-### pybytes.deepsleep()
-To test the Pybytes library API, connect your device to Pymakr and call the methods listed below.
-You can use the Pybytes library API in your MicroPython project.
+### pybytes.deepsleep([pins=None, mode=None, enable_pull=None])
+
+See [machine.deepsleep()](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms) for more details. Mode can be:
 
 
-### Debugging
+
+## Debugging
 Enable debugging if you are having any issues.
 There are multiple debug levels, the lowest is 0 which is for warnings only and 99 is the highest used and will print more debugging messages
 
@@ -170,26 +211,3 @@ There are multiple debug levels, the lowest is 0 which is for warnings only and 
 
 * [Enable terminal](enable_terminal)
 
-* [Export configuration](export_config)
-
-* [Get configuration](get_config)
-
-* [Is connected](is_connected)
-
-* [Print configuration](print_config)
-
-* [Read configuration](read_config)
-
-* [Reconnect](reconnect)
-
-* [Send info message](send_info_message)
-
-* [Send ping message](send_ping_message)
-
-* [Send signal](send_signal)
-
-* [Set configuration](set_config)
-
-* [Start](start)
-
-* [Update configuration](update_config)
