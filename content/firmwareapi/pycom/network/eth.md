@@ -21,7 +21,7 @@ The PyEthernet board is connected via SPI bus 3 and GPIO's 17-19 and 21-23. So t
 
 ## Constructors
 
-### class network.ETH(id=0, ...)
+### class network.ETH([id=0], ...)
 
 Create and configure an ETH object. See init for params of configuration.
 
@@ -33,25 +33,22 @@ eth = ETH()
 ## Methods
 
 
-### eth.init(hostname=None)
+### eth.init([hostname=None])
 
 This function starts the Ethernet interface and enables the ethernet adapter.
 
 `hostname`: set the interface hostname
 
-### eth.ifconfig(config=\['dhcp' or configtuple\])
+### eth.ifconfig([config={'dhcp' / configtuple}])
 
-With no parameters given, this returns a 4-tuple of (ip, subnet mask, gateway, DNS server).
+Get or set the interface configuration. 
 
 Optionally specify the configuration parameter:
 
-- `config='dhcp'`  
+* `config='dhcp'`: If 'dhcp' is passed as a parameter, then the DHCP client is enabled and the IP parameters are negotiated with the DHCP server.
+* `config=(ip, nm, gw, dns)`: If the 4-tuple config is given then a static IP is configured. 
 
-If 'dhcp' is passed as a parameter, then the DHCP client is enabled and the IP parameters are negotiated with the DHCP server.
-
-- `config=(ip, nm, gw, dns)`
-
-If the 4-tuple config is given then a static IP is configured. For example: `eth.ifconfig(config=('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))`.
+For example: `eth.ifconfig(config=('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))`.
 
 ### eth.hostname(string)
 

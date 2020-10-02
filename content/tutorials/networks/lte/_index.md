@@ -6,7 +6,16 @@ aliases:
 
 The following tutorial demonstrates the use of the LTE CAT-M1 and NB-IoT functionality on cellular enabled Pycom modules.
 
-GPy and FiPy support both LTE CAT-M1 and NB-IoT. These are newer, low power, long range, cellular protocols. They are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are. Together with the SIM card, the provider will supply you with configuration details: Usually band and APN. Use these in the example code below.
+> Before you start, make sure that your Simcard is registered and activated with your carrier.
+
+When using the SigFox network, **Always** connect the appropriate LoRa antenna to your device. See the figures below for the correct antenna placement
+
+|  Gpy | Fipy  |   
+|---|---|
+| ![](/gitbook/assets/lte_ant_gpy.png) | ![](/gitbook/assets/lte_ant_fipy.png)  |  
+
+
+GPy and FiPy support both LTE CAT-M1 and NB-IoT. These are newer, low power, long range, cellular protocols. They are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are. Together with the SIM card, the provider will supply you with configuration details: Usually band and APN. Use these in the example code below. 
 
 ```python
 from network import LTE

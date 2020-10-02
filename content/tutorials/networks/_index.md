@@ -6,7 +6,7 @@ title: 'Networks'
 The Pycom devices support several different types of networks. 
 We have the WiFi and Bluetooth connections:
 
-* [WiFi](../networks/wifi/)
+* [WiFi](../networks/wlan/)
 * [Bluetooth Low Energy](../networks/ble/)
 * [LoRa](../networks/lora/)
 * [Sigfox]( ../networks/sigfox/)

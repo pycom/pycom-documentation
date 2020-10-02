@@ -19,7 +19,7 @@ These libraries should be uploaded to a device (LoPy, SiPy, WiPy 3.0, etc.) in t
 
 Add as many or as few of the libraries that are required.
 
-In addition to the Pysense or Pytrack specific libraries, for hardware version 1.x boards you also need to upload the `pycoproc.py` file from the `_lib/pycoproc_` folder inside the libraries archive. For the Pytrack 2.0 X and Pysense 2.0 X, the pycoproc.py file is included in the pytrack-2 and pysense-2 directories to avoid confusion over which library to use.
+In addition to the Pysense or Pytrack specific libraries, for hardware version 1.x boards you also need to upload the `pycoproc.py` file from the `lib/pycoproc` folder inside the libraries archive. For the Pytrack 2.0 X and Pysense 2.0 X, the pycoproc.py file is included in the pytrack-2 and pysense-2 directories to avoid confusion over which library to use.
 
 For example, if using the Pysense and the user wishes to enable the only Accelerometer and the Light Sensor, they should place the following `.py` files into the device's `/lib` folder:
 

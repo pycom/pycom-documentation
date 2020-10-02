@@ -20,9 +20,9 @@ aliases:
 
 The datasheet of the GPy is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_GPy_v2.pdf)
 
-The drawing of the LTE-M antenna is available as a [PDF File](/gitbook/assets/lte-m-antenna-drawing.pdf")
+The drawing of the LTE-M antenna is available as a [PDF File](/gitbook/assets/lte-m-antenna-drawing.pdf)
 
-The Gpy is certified for [CE RED](/gitbook/assets/gpy_c03-b0-red-final.pdf) and [FCC DSS](/gitbook/assets/pycom-2ajmtgpy01r-fcc-grant-dss.pdf) [FCC DTS](/gitbook/assets/pycom-2ajmtgpy01r-fcc-grant-dts.pdf) [FCC TNB](//gitbook/assets/pycom-2ajmtgpy01r-fcc-grant-tnb.pdf) 
+The Gpy is certified for [CE RED](/gitbook/assets/c03-b0-red-gpy.pdf) and [FCC DSS](/gitbook/assets/pycom-2ajmtgpy01r-fcc-grant-dss.pdf) [FCC DTS](/gitbook/assets/pycom-2ajmtgpy01r-fcc-grant-dts.pdf) [FCC TNB](/gitbook/assets/pycom-2ajmtgpy01r-fcc-grant-tnb.pdf) 
 
 [RCM](/gitbook/assets/RCM-Gpy.pdf)
 [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-GPy(8217-00090P)-20190523.pdf)

@@ -220,6 +220,21 @@ li.hot {
     padding:0!important;
 }
 
+/* changes 19-08-2020
+Added shortcode for development markings
+
+*/
+.development {
+  display:none;
+
+}
+.dev {
+  background-color: #F6E6D6 !important;
+}
+
+.v-card__text > h3, h4{
+  margin-top:0px;
+}
 .danger-alert {
   background-color: #EF9A9A !important;
   margin-top: 24px;
@@ -278,7 +293,7 @@ img {
 
 table {
     display: table;
-    width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     overflow: auto;
@@ -340,7 +355,7 @@ code {
 }
 
 .primary--text {
-  color: green; /*#00cc96; */
+  color: #00cc96;
 }
 
 .v-window {

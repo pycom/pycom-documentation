@@ -376,6 +376,12 @@ theme = "doc-theme"
     identifier = "tutorials@networkprotocols@wifisniffer"
     parent = "tutorials@networkprotocols"
     weight = 60
+[[menu.main]]
+    name = "BLE Mesh"
+    url = "/tutorials/networkprotocols/blemesh/"
+    identifier = "tutorials@networkprotocols@blemesh"
+    parent = "tutorials@networkprotocols"
+    weight = 70
 
 [[menu.main]]
     name = "Expansion Boards"
@@ -531,6 +537,13 @@ theme = "doc-theme"
     weight = 100
 
 [[menu.main]]
+    name = "Touch"
+    url = "/firmwareapi/pycom/machine/touch/"
+    identifier = "firmwareapi@pycom@machine@touch"
+    parent = "firmwareapi@pycom@machine"
+    weight = 105
+
+[[menu.main]]
     name = "SD"
     url = "/firmwareapi/pycom/machine/sd/"
     identifier = "firmwareapi@pycom@machine@sd"
@@ -627,6 +640,13 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@network@bluetooth@gattscharacteristic"
     parent = "firmwareapi@pycom@network@bluetooth"
     weight = 60
+[[menu.main]]
+    name = "Pymesh BLE"
+    url = "/firmwareapi/pycom/network/bluetooth/btmesh/"
+    identifier = "firmwareapi@pycom@network@bluetooth@BLE_Mesh"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 70
+    
 
 #  [Errno 2] No such file or directory: './content/firmwareapi/pycom/network/lora/README.md'
 [[menu.main]]
@@ -734,6 +754,7 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@expansionboards@sleep"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 70
+
 
 
 [[menu.main]]
@@ -1074,6 +1095,18 @@ theme = "doc-theme"
     identifier = "datasheets@boards@expansion3"
     parent = "datasheets@boards"
     weight = 70
+[[menu.main]]
+    name = "Deepsleep"
+    url = "/datasheets/expansionboards/deepsleep/"
+    identifier = "datasheets@boards@deepsleep"
+    parent = "datasheets@boards"
+    weight = 80
+[[menu.main]]
+    name = "PyEthernet"
+    url = "/datasheets/expansionboards/pyethernet/"
+    identifier = "datasheets@expansionboards@pyethernet"
+    parent = "datasheets@boards"
+    weight = 90
 
 
 
@@ -1135,10 +1168,17 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "Getting Started"
-    url = "/pybytes/getstarted/"
-    identifier = "pybytes@getstarted"
+    url = "/pybytes/gettingstarted/"
+    identifier = "pybytes@gettingstarted"
     parent = "pybytes"
     weight = 10
+
+[[menu.main]]
+    name = "Visualise data"
+    url = "/pybytes/dashboard/"
+    identifier = "pybytes@dashboard"
+    parent = "pybytes"
+    weight = 15
 
 [[menu.main]]
     name = "Pybytes library API"
@@ -1324,7 +1364,7 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "Write configuration"
-    url = "/pybytes/api/write_config/"
+    url = "/pybytes/api/update_config/"
     identifier = "pybytes@api@write_config"
     parent = "pybytes@api"
     weight = 38
@@ -1414,25 +1454,63 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-    name = "Visualise data"
-    url = "/pybytes/dashboard/"
-    identifier = "pybytes@dashboard"
-    parent = "pybytes"
-    weight = 70
-
-[[menu.main]]
     name = "Integrations"
     url = "/pybytes/integrations/"
     identifier = "pybytes@integrations"
     parent = "pybytes"
     weight = 80
 
- [[menu.main]]
-     name = "Pymesh Integration"
-     url = "/pybytes/pymeshintegration/"
-     identifier = "pybytes@pymeshintegration"
-     parent = "pybytes"
-     weight = 90
+[[menu.main]]
+   name = "Pymesh Integration"
+   url = "/pybytes/pymeshintegration/"
+   identifier = "pybytes@pymeshintegration"
+   parent = "pybytes"
+   weight = 90
+[[menu.main]]
+   name = "Example"
+   url = "/pybytes/pymeshintegration/example/"
+   identifier = "pybytes@pymeshintegration@example"
+   parent = "pybytes@pymeshintegration"
+   weight = 10
+[[menu.main]]
+   name = "Monitoring"
+   url = "/pybytes/pymeshintegration/monitoring/"
+   identifier = "pybytes@pymeshintegration@monitoring"
+   parent = "pybytes@pymeshintegration"
+   weight = 20
+[[menu.main]]
+   name = "Provisioning"
+   url = "/pybytes/pymeshintegration/provisioning/"
+   identifier = "pybytes@pymeshintegration@provisioning"
+   parent = "pybytes@pymeshintegration"
+   weight = 30
+[[menu.main]]
+   name = "Machine Learning"
+   url = "/pybytes/mlintegration/"
+   identifier = "pybytes@mlintegration"
+   parent = "pybytes"
+   weight = 100
+
+[[menu.main]]
+   name = "Device Settings"
+   url = "/pybytes/mlintegration/devicesettings/"
+   identifier = "pybytes@mlintegration@devicesettings"
+   parent = "pybytes@mlintegration"
+   weight = 10
+
+[[menu.main]]
+   name = "Features"
+   url = "/pybytes/mlintegration/features/"
+   identifier = "pybytes@mlintegration@features"
+   parent = "pybytes@mlintegration"
+   weight = 20
+[[menu.main]]
+   name = "Model Creation"
+   url = "/pybytes/mlintegration/modelcreation/"
+   identifier = "pybytes@mlintegration@modelcreation"
+   parent = "pybytes@mlintegration"
+   weight = 30
+
 
 [[menu.main]]
     name = "Amazon IoT"
@@ -1639,6 +1717,12 @@ theme = "doc-theme"
     identifier = "advance@encryption"
     parent = "advance"
     weight = 30
+[[menu.main]]
+    name = "Frozen code"
+    url = "/advance/frozen/"
+    identifier = "advance@frozen"
+    parent = "advance"
+    weight = 40
 
 [[menu.main]]
     name="License"

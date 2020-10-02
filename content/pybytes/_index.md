@@ -26,10 +26,14 @@ In a nutshell, Pybytes is an environment designed to optimise your IoT applicati
 * Firmware updates over the air: Upgrade or downgrade firmware versions with our exclusive firmware update.
 * Track your assets position: Google Maps API means you can track your device's geolocation.
 
+> Note: If the [Pybytes website](https://pybytes.pycom.io/) seems to be down for you, do not worry! 
+  > * In Chrome, open developer settings using F12, click on the `Application` tab and `Service workers` next to the gear icon. Then, open the menu `service workers from other origins` and click `unregister`. That should solve the problem!
+  
 ## Let's get started!
 
-* [Getting started with Pybytes](/pybytes/getstarted)
-* [Connect your Pycom module to Pybytes](/pybytes/connect)
-* [Visualise data from your device](/pybytes/dashboard)
-* [LoRa Servers](/pybytes/lora)
-* ​[Integrations with external services](/pybytes/integrations/index.html)​
+
+* [Getting started with Pybytes](/pybytes/gettingstarted/)
+* [Connect your Pycom module to Pybytes](/pybytes/connect/)
+* [Visualise data from your device](/pybytes/dashboard/)
+* [LoRa Servers](/pybytes/lora/)
+* [Integrations with external services](/pybytes/integrations/)

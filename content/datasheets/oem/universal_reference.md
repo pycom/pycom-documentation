@@ -40,5 +40,5 @@ The schematic of the OEM baseboard reference is available as a [PDF File](/gitbo
 
 ## Altium Project and Gerber Files
 
-The Altium Project and Gerber files are also available as a [ZIP File](gitbook/assets/oem-universal-baseboard-ref.zip)
+The Altium Project and Gerber files are also available as a [ZIP File](/gitbook/assets/oem-universal-baseboard-ref.zip)
 

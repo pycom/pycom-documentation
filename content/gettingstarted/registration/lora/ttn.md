@@ -45,7 +45,7 @@ Once the device has been added, change the `Activation Method` between `OTAA` an
 
 ## Register a Nano-Gateway
 
-You can also setup your Pycom module to act as a gateway with The Things Network. The code required to do this can be found [here](/tutorials/lora/lorawan-nano-gateway).
+You can also setup your Pycom module to act as a gateway with The Things Network. The code required to do this can be found [here](/tutorials/networks/lora/lorawan-nano-gateway).
 
 Inside the TTN Console, there are two options, `Applications` and `Gateways`. Select `Gateways` and then click on `register Gateway`. This will allow for the set up and registration of a new nano-gateway.
 

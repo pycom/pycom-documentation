@@ -42,7 +42,7 @@ print("this will be printed after 10 seconds: " str(time.ticks_ms()))
 
 #### Deep sleep
 Deepsleep disables, next to the lightsleep, the main CPU and RAM. This leaves only a low power coprocessor and RTC timer running. After waking up, the board will start again at `boot.py`, just like with pressing the reset button. The CPU counter (`time.ticks()`) will continue to count however!
-You can also leave the brackets empty to sleep indefinetely, until the reset button is pressed, the power is removed, or an external wake up signal (interrupt) is provided. Be aware that the LTE modem. ***
+You can also leave the brackets empty to sleep indefinetely, until the reset button is pressed, the power is removed, or an external wake up signal (interrupt) is provided. Be aware that the LTE modem will remain switched on unless you actively switch off its power, or use its own power saving modes.
 
 
 ```python
@@ -82,4 +82,4 @@ print("This will never be printed")
 
 >Note: Using `deepsleep()` will also stop the USB connection. Be wary of that when trying to upload new code to the device!
 
-For the Pysense, Pytrack and Pyscan expansionboards, an additional sleep function is available. You can find out more about that [here](../expansionboards/sleep/)
+For the Pysense, Pytrack and Pyscan expansionboards, an additional sleep function is available. You can find out more about that [here](/tutorials/expansionboards/sleep/)

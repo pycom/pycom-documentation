@@ -26,14 +26,14 @@ The drawing of the LTE-M antenna is available as a [PDF File](/gitbook/assets/lt
 
 The Fipy is certified for [CE RED](/gitbook/assets/fipy_c03-b0-red-final.pdf) and [FCC DSS](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dss.pdf) [FCC DTS](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dts.pdf) [FCC DXX](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dxx.pdf) [FCC TNB](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-tnb.pdf)
 [RCM](/gitbook/assets/RCM-Fipy.pdf)
-[ROHS certification](gitbook/assets/RoHs_declarations/RoHS-for-FiPy(8217-00091P)-20190523.pdf)
+[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-FiPy(8217-00091P)-20190523.pdf)
 ## Pinout
 
-The pinout of the FiPy is available as a [PDF File](/gitbook/assents/fipy-pinout.pdf)
+The pinout of the FiPy is available as a [PDF File](/gitbook/assets/fipy-pinout.pdf)
 
 ![](/gitbook/assets/fipy-pinout.png)
 
-> Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
+> Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed via software.
 
 ## Notes
 
@@ -55,4 +55,4 @@ Do not use the 3.3V pin **in combination with** the Vin pin to supply the device
 
 ### AT Commands
 
-The AT commands for the Sequans Monarch modem on the FiPy are available in a [PDF file](gitbook/assets/Monarch-LR5110-ATCmdRefMan-rev6_noConfidential.pdf).
+The AT commands for the Sequans Monarch modem on the FiPy are available in a [PDF file](/gitbook/assets/Monarch-LR5110-ATCmdRefMan-rev6_noConfidential.pdf).

@@ -39,7 +39,7 @@ print(binascii.hexlify(sigfox.pac()))
 
 ## Creating account at Sigfox backend
 
-You need to register to the Sigfox Backend. Navigate to [https://backend.sigfox.com/activate](https://backend.sigfox.com/activate)
+You need to register to the Sigfox Backend. Navigate to [https://buy.sigfox.com/activate](https://buy.sigfox.com/activate)
 
 ![](/gitbook/assets/sigfoxactivate.png)
 
@@ -79,4 +79,4 @@ Now you can see your new Sigfox PAC.
 
 ![](/gitbook/assets/newsigfoxpac.png)
 
-Once you know your new Sigfox PAC go to [https://backend.sigfox.com/activate](https://backend.sigfox.com/activate) and register device with different account.
+Once you know your new Sigfox PAC go to [https://buy.sigfox.com/activate](https://buy.sigfox.com/activate) and register device with different account.

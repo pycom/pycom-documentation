@@ -23,6 +23,7 @@ The follow pages contain all information relating to each product, for example: 
 ## OEM modules
 
 - [W01](/datasheets/oem/w01/)
+- [G01](/datasheets/oem/g01/)
 - [L01](/datasheets/oem/l01/)
 - [L01 OEM Baseboard](/datasheets/oem/l01_reference/)
 - [L04](/datasheets/oem/l04/)
@@ -33,11 +34,10 @@ The follow pages contain all information relating to each product, for example: 
 ## Expansion boards
 - [Pygate](/datasheets/expansionboards/pygate/)
 - [Pysense](/datasheets/expansionboards/pysense/)
-- [Pysense 2.0 X](/datasheets/expansionboards/pysense/)
+- [Pysense 2.0 X](/datasheets/expansionboards/pysense2/)
 - [Pytrack](/datasheets/expansionboards/pytrack/)
-- [Pysense 2.0 X](/datasheets/expansionboards/pysense/)
+- [Pytrack 2.0 X](/datasheets/expansionboards/pytrack2/)
 - [Pyscan](/datasheets/expansionboards/pyscan/)
 - [Expansion 2](/datasheets/expansionboards/expansion2/)
 - [Expansion 3](/datasheets/expansionboards/expansion3/)
 - [Deepsleep](/datasheets/expansionboards/deepsleep/)
-
