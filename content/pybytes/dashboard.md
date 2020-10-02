@@ -12,7 +12,7 @@ In this section, we will explain how to create widgets for data visualisation an
 
 ## Step 1: Setup a Pymakr Project
 
-1. Create a project in Pymakr called `Pybytes_signals`, and add the following code to `main.py`. This python application will send data from the array every 5 seconds to Pybytes.
+1. Create a project in Pymakr called `Pybytes_signals`, and add the following code to `main.py`. This python application will send data every 5 seconds to Pybytes.
 
     ```python
     # Import what is necessary to create a thread
@@ -21,14 +21,15 @@ In this section, we will explain how to create widgets for data visualisation an
 
     # Send data continuously to Pybytes
     while True:
-        for i in range(0,10):
-
+        for i in range(0,20):
             pybytes.send_signal(math.sin(i*math.pi))
             print('sent signal {}'.format(i))
             time.sleep(10)
     ```
 
 2. Press *Upload* button to upload the code into your device.
+
+>Note that if you have a Pytrack or Pysense expansion board, you could also sent sensor data instead!
 
 
 ## Step 2: Add a signal from your device
