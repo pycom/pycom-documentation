@@ -49,14 +49,24 @@ The file system is accessible via the native FTP server running on each Pycom de
 
 > See [network.server](/firmwareapi/pycom/network/server/) for information on how to change the default credentials. 
 
+
+## Telnet server
+You can use the same credentials to connect to the telnet server to bring up the REPL:
+```bash
+telnet 192.168.4.1
+```
+Note that the REPL works exactly the same over Telnet as it does through Pymakr. 
+
+## Clients
 The recommended clients are:
-* macOS/Linux: default FTP client
+* macOS/Linux: default FTP / Telnet client
 * Windows: Filezilla and FireFTP
 
 For example, from a macOS/Linux terminal:
 
 ```bash
 ftp 192.168.4.1
+telnet 192.168.4.1
 ```
 
 The FTP server doesn't support active mode, only passive mode. Therefore, if you are using the native unix FTP client, run the following command after logging in:
@@ -67,14 +77,7 @@ ftp> passive
 
 The FTP server only supports one connection at a time. If using other FTP clients, please check their documentation for how to limit the maximum allowed connections to one at a time.
 
-## Telnet server
-You can use the same credentials to connect to the telnet server to bring up the REPL:
-```bash
-telnet 192.168.4.1
-```
-Note that the REPL works exactly the same over Telnet as it does through Pymakr. 
-
-## FileZilla
+### FileZilla
 
 If using FileZilla, it's important to configure the settings correctly.
 
@@ -85,4 +88,8 @@ Do not use the quick connect button. Instead, open the site manager and create a
 In the `Transfer Settings` tab, limit the max number of connections to one. Other FTP clients may behave in a similar ways; visit their documentation for more specific information.
 
 ![](/gitbook/assets/filezilla-settings-2.png)
+
+
+
+
 
