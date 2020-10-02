@@ -4,4 +4,4 @@ There are several ways to upload Python code to your device. On the following pa
 * [USB Serial](usbserial/)
 * [FTP & Telnet](ftp/)
 
-And lastly, we discuss the [Safe boot](../safeboot/) feature. 
+And lastly, we discuss the [Safe boot](safeboot/) feature. 
