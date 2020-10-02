@@ -49,36 +49,10 @@ After creation, you will land on the provisioning page. This is where we 'inform
 ## Step 4: Your first signal
 
 1. Reset your Pycom device using the reset button. This will reboot the device and activate the Pybytes connection automatically. The output will look similar to this. You should see the `Last Connection` status in Pybytes change from `Never` to `Seconds ago`
-    ```
-    >>> ets Jun  8 2016 00:22:57
-
-    rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-    configsip: 0, SPIWP:0xee
-    clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-    mode:DIO, clock div:1
-    load:0x3fff8020,len:8
-    load:0x3fff8028,len:2140
-    ho 0 tail 12 room 4
-    load:0x4009fa00,len:19760
-    entry 0x400a05bc
-    WMAC: {redacted}
-    Firmware: {latest version}
-    Pybytes: {latest version}
-    Initialized watchdog for WiFi and LTE connection with timeout 1260000 ms
-    WiFi connection established
-    Connected to MQTT mqtt.pybytes.pycom.io
-    Pybytes connected successfully (using the built-in pybytes library)
-    Pybytes configuration read from /flash/pybytes_config.json
-
-    ```
 
     > If you get any kind of error message, check the WiFi credentials you entered are correct and that you are in range of this WiFi network
 
-2. Use the opportunity to define a signal in Pybytes. The signal number can be anywhere from 0-254 (255 is reserved)
-
-![](/gitbook/assets/pybytes/add-device/define-signal.png)
-
-3. Now, in the REPL, you can type:
+2. Now, in the REPL, you can type:
     ```python
     >>> pybytes.send_signal(1, "hello world")
     ```
@@ -86,11 +60,13 @@ After creation, you will land on the provisioning page. This is where we 'inform
 
 ![](/gitbook/assets/pybytes/add-device/send-signal.png)
 
-> Next to `pybytes.send_signal(...)`, we can use ...
-
-
+You can continue to [display data from your device into the Pybytes dashboard](/pybytes/dashboard/) 
 
 ## Final remarks
-If you wish to disable Pybytes, you can use `pycom.pybytes_on_boot(False)` will permanently
+If you wish to disable Pybytes, you can use `pycom.pybytes_on_boot(False)` will permanently. It is also possible to start Pybytes in a later stage (not on boot) by importing the module:
+```python
+from _pybytes import Pybytes
+pybytes = Pybytes
+```
 
-Continue to [display data from your device into the Pybytes dashboard](/pybytes/dashboard/) 
+
