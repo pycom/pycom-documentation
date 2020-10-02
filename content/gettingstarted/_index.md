@@ -137,9 +137,8 @@ From here on, you can continue to use the additional features of your expansionb
 
 ## Step 5: Connecting to a network
 
-|WiFi | LoRa | SigFox | BLE | LTE | Ethernet |
-|:---|:---|:---|:---|:---|:---|:---|:---|
-
+|[WiFi](/tutorials/networks/wlan/) | [LoRa](/tutorials/networks/lora/) | [SigFox](/tutorials/networks/sigfox/) | [BLE](/tutorials/networks/ble/) | [LTE](/tutorials.networks/lte/) | Ethernet |
+|:---|:---|:---|:---|:---|:---|
 ## Further references
 Now that we got the basic example running, you can continue with the links below.
 
