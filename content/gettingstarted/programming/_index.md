@@ -1,5 +1,5 @@
 
-There are several ways to upload Python code to your device. On the following pages, we the alternative (e.g. not using an expansion board) methods:
+There are several ways to upload Python code to your device. On the following pages, we highlight the alternative (e.g. not using an expansion board) methods:
 
 * [USB Serial](usbserial/)
 * [FTP & Telnet](ftp/)
