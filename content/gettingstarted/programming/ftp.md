@@ -6,38 +6,48 @@ aliases:
     - chapter/gettingstarted/programming/ftp
 ---
 
-This page discusses the possibility to upload files through the internal FTP server and access the REPL through a Telnet connection. Using this method as the single option to connect to the device is not advisable, as unexpected crashes and changes in the wifi settings might lock you out. 
+This page discusses the possibility to upload files through the internal FTP server and access the REPL through a Telnet connection. 
 
-There is a small internal file system accessible with each Pycom device, called `/flash`. This is stored within the external serial flash memory. If a microSD card is also connected and mounted, it will be available as well. When the device starts up, it will always boot from the `boot.py` located in the `/flash` file system.
+On each Pycom device, there is a small internal filesystem called `/flash`, to which the Python code is uploaded. We can access this filesystem through an internally running FTP server, that allows us to make changes to the files. Next to that, a Telnet connection can be made to communicate with the device through the REPL. 
+## Connecting
+1. **Connect through the Access Point**
 
-By default, the device will create a WiFi access point with the following credentials:
-* SSID: `xxpy-wlan-####`
-* Password: `www.pycom.io`
+    By default, the Pycom device will create a WiFi access point with the following default credentials:
+    * SSID: `xxpy-wlan-####`
+    * Password: `www.pycom.io`
 
-If you made changes to the WiFi settings, the AP might not show up by default. You can use the following to get it back up and running:
-```python
-import pycom
-from network import WLAN
-pycom.wifi_on_boot(True)
-pycom.wifi_mode_on_boot(WLAN.AP)
-```
- The last 4 characters of the broadcast SSID are equal to the last 4 characters of the `unique_id()`:
-```python
-import machine
-import ubinascii
-ubinascii.hexlify(machine.unique_id())
-```
+    The last 4 characters of the broadcast SSID are equal to the last 4 characters of the `unique_id()`:
+    ```python
+    import machine
+    import ubinascii
+    ubinascii.hexlify(machine.unique_id())
+    ```
 
-> You can find the methods to change the default settings [here](/firmwareapi/pycom/pycom/#boot-methods)
+    Note that if you made changes to the WiFi settings, the AP might not show up by default. You can use the following to get it back up and running:
+    ```python
+    import pycom
+    from network import WLAN
+    pycom.wifi_on_boot(True)
+    pycom.wifi_mode_on_boot(WLAN.AP)
+    ```
 
+    > You can find the methods to change the default settings [here](/firmwareapi/pycom/pycom/#boot-methods)
 
+2. **Connect through A WiFi Network**
+    
+    It is also possible to connect your pycom device to a WiFi network first, and then connect to its IP address. Note that you will have to figure out its IP address before you can access the FTP server. For that, you can use the following command. This will return a tuple with four items, where the first item will contain the assigned IP address.
+    ```python
+    wlan.ifconfig()
+    ```
+> Note that if you make changes to the WLAN Configuration in the uploaded Python code, the connection might drop. Moreover, if your program contains continuous reboot loops, sleep cycles or coredumps, you might not be able to recover the wireless connection without [safe booting](../safeboot/)
+## FTP Server
 The file system is accessible via the native FTP server running on each Pycom device. Open a FTP client and connect to:
 
 * url: `ftp://192.168.4.1`
 * username: `micro`
 * password: `python`
 
-See [network.server](/firmwareapi/pycom/network/server/) for information on how to change the default credentials. 
+> See [network.server](/firmwareapi/pycom/network/server/) for information on how to change the default credentials. 
 
 The recommended clients are:
 * macOS/Linux: default FTP client
@@ -46,16 +56,23 @@ The recommended clients are:
 For example, from a macOS/Linux terminal:
 
 ```bash
-$ ftp 192.168.4.1
+ftp 192.168.4.1
 ```
 
-The FTP server doesn't support active mode, only passive mode. Therefore, if using the native unix FTP client, immediately after logging in, run the following command:
+The FTP server doesn't support active mode, only passive mode. Therefore, if you are using the native unix FTP client, run the following command after logging in:
 
 ```bash
 ftp> passive
 ```
 
 The FTP server only supports one connection at a time. If using other FTP clients, please check their documentation for how to limit the maximum allowed connections to one at a time.
+
+## Telnet server
+You can use the same credentials to connect to the telnet server to bring up the REPL:
+```bash
+telnet 192.168.4.1
+```
+Note that the REPL works exactly the same over Telnet as it does through Pymakr. 
 
 ## FileZilla
 
