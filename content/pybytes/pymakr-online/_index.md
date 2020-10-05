@@ -20,7 +20,7 @@ Pymakr Online is an online IDE for your MicroPython projects. We brought our Pym
 ## Let's get started!
 
 There are two ways in which you can use Pymakr online. 
-1. Go to [your device](https://pybytes.pycom.io/devices) and select the `Pymakr Online` tab. This method allows you to make quick changes to the Python code on your device and upload it.
+1. Go to [your device](https://pybytes.pycom.io/devices) and select the `Pymakr Online` tab. This method allows you to make quick changes to the Python code on your device and upload it. This is the method we use below.
 
 ![](/gitbook/assets/pybytes/pymakr-online/opening-pymakr-device.png)
 
@@ -36,7 +36,7 @@ There are two ways in which you can use Pymakr online.
 
 
   * On the left we see the files. Depending on where you started, the online environment will first load with the files you last used. If the device is online, it will automatically try to `Refresh Hierarcy` and synchronise the content. You can click the `Refresh Hierarcy` icon next to your device name to manually update the online filestructure. The online editor will automatically try to connect.
-  * In the top right, the connection status is displayed. Every so often, you will see a ping being sent out to the device to check if it is still connected. 
+  * In the top right, the connection status is displayed. Every so often, you will see a ping being sent out to the device to check if it is still connected. If you started pymakr from a project, you will also see the `Save/Export` button here as well. 
   * And finally, on the bottom, the REPL is displayed, this works exactly the same as the REPL you are used to in VSCode or Atom. Everything you type in there will be duplicated to the REPL over USB. 
 
 2. Open the `main.py` file, or, when not available, create one by right clicking on the device name to `Create File`. Here, we can write our own python code in the main editor. You can use the example we added below to try it out. 
@@ -55,36 +55,33 @@ There are two ways in which you can use Pymakr online.
     pycom.rgbled(0x00AA00)
     time.sleep(0.5)
   ```
-3. After adding the code, a `Save and Upload` button will appear, allowing you to upload code to the device. Clicking this will upload and reboot the device. The device will restart and go offline for a second. Then come back online and show the RGB LED blinking in three different colors.
+3. After adding the code, a `Save and Upload` button will appear (or you can use the `Save/Export` button already present), allowing you to upload code to the device. Clicking this will upload and reboot the device. The device will restart and go offline for a second. Then come back online and show the RGB LED blinking in three different colors.
 
 ![](/gitbook/assets/pybytes/pymakr-online/upload.png)
 
 >Note that if you make a syntax error, the device will come back online but not throw any error in the REPL.
 
-4. Now that you know how to use the Pymakr Online environment, we can creat a project.
+## Creating a Project 
 
-## The differences between the two ways of opening Pymakr online
+1. Now that you know how to use the Pymakr Online environment, we can create a project (if you have not already). If you just followed the example above, go to the [Pymakr](https://pybytes.pycom.io/pymakr#) tab and click on `Import from Existing Device`. 
 
-### From the device page
+![](/gitbook/assets/pybytes/pymakr-online/starting-project.png)
 
-![](/gitbook/assets/pymakr-online/pymakr-linked.jpg)
+2. Select your device and either `Retrieve from Cloud` or `Request from device`, depending on where the latest version of your code is. This will load the hierarchy and bring up the Pymakr Online interface. 
 
-If you have opened Pymakr Online from a device page, you may notice: 
+3. Make your changes and then click the `Save/Export` button, this offers three options. This time, we use `Include in Release`. It will ask us to create a new project, or add to an already existing project. 
 
-1. Device activity indicator. To track what's going on between the Pymakr Online and the linked device.
-2. REPL terminal.
-3. Save and upload current file. That will save that file on the cloud and upload it to your device.
-4. Refresh hierarchy. That will request the device its hierarchy, in case the files structure has been changed. 
-5. Download file. That will request the file from the device, forcing the download of it. Warning: that will override your changes in case you haven't uploaded the file to the device. 
+![](/gitbook/assets/pybytes/pymakr-online/new-project.png)
 
-### From the Pymakr initial page
 
-![](/gitbook/assets/pymakr-online/pymakr-no-device.jpg)
+4. Assuming you have not create a project yet, creat a new one, and name it `My first project` and click next.
 
-1. Save/export button. 
+![](/gitbook/assets/pybytes/pymakr-online/new-project1.png)
 
-Since there's no device linked in this way of opening Pymakr Online, there are no device related actions here (download file, device activity indicator etc). Instead, you decide what you are going to do with your code:
+5. Here, it asks for the networks we want to use. For now, lets select WiFi. 
 
-![](/gitbook/assets/pymakr-online/pymakr-export-modal.png)
+![](/gitbook/assets/pybytes/pymakr-online/new-project1.png)
 
-*Modal opened after clicking on Save/Export button*
+6. In the next screen, it asks for the WiFi network you want to use, select the one that is most convenient for you.
+
+7. Now that we have successfully create a project
