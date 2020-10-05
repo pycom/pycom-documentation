@@ -7,7 +7,11 @@ aliases:
 The Pybytes library is positioned in the [frozen](/advance/frozen/) section of the firmware. It can be imported like regular modules:
 ```python
 from _pybytes import Pybytes
-pybytes = Pybytes()
+from _pybytes_config import PybytesConfig
+conf = PybytesConfig().read_config()
+pybytes = Pybytes(conf)
+
+pybytes.start()
 ```
 
 
