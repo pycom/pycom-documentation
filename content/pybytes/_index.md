@@ -31,8 +31,9 @@ In a nutshell, Pybytes is an environment designed to optimise your IoT applicati
   
 ## Let's get started!
 
-* [Getting started with Pybytes](/pybytes/getstarted/)
+
+* [Getting started with Pybytes](/pybytes/gettingstarted/)
 * [Connect your Pycom module to Pybytes](/pybytes/connect/)
 * [Visualise data from your device](/pybytes/dashboard/)
-* [LoRa Servers](/pybytes/networks/lora/)
-* ​[Integrations with external services](/pybytes/integrations/index.html)​
+* [LoRa Servers](/pybytes/lora/)
+* [Integrations with external services](/pybytes/integrations/)

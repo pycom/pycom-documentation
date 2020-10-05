@@ -1168,10 +1168,17 @@ theme = "doc-theme"
 
 [[menu.main]]
     name = "Getting Started"
-    url = "/pybytes/getstarted/"
-    identifier = "pybytes@getstarted"
+    url = "/pybytes/gettingstarted/"
+    identifier = "pybytes@gettingstarted"
     parent = "pybytes"
     weight = 10
+
+[[menu.main]]
+    name = "Visualise data"
+    url = "/pybytes/dashboard/"
+    identifier = "pybytes@dashboard"
+    parent = "pybytes"
+    weight = 15
 
 [[menu.main]]
     name = "Pybytes library API"
@@ -1447,13 +1454,6 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-    name = "Visualise data"
-    url = "/pybytes/dashboard/"
-    identifier = "pybytes@dashboard"
-    parent = "pybytes"
-    weight = 70
-
-[[menu.main]]
     name = "Integrations"
     url = "/pybytes/integrations/"
     identifier = "pybytes@integrations"
@@ -1466,13 +1466,51 @@ theme = "doc-theme"
    identifier = "pybytes@pymeshintegration"
    parent = "pybytes"
    weight = 90
-
+[[menu.main]]
+   name = "Example"
+   url = "/pybytes/pymeshintegration/example/"
+   identifier = "pybytes@pymeshintegration@example"
+   parent = "pybytes@pymeshintegration"
+   weight = 10
+[[menu.main]]
+   name = "Monitoring"
+   url = "/pybytes/pymeshintegration/monitoring/"
+   identifier = "pybytes@pymeshintegration@monitoring"
+   parent = "pybytes@pymeshintegration"
+   weight = 20
+[[menu.main]]
+   name = "Provisioning"
+   url = "/pybytes/pymeshintegration/provisioning/"
+   identifier = "pybytes@pymeshintegration@provisioning"
+   parent = "pybytes@pymeshintegration"
+   weight = 30
 [[menu.main]]
    name = "Machine Learning"
    url = "/pybytes/mlintegration/"
    identifier = "pybytes@mlintegration"
    parent = "pybytes"
    weight = 100
+
+[[menu.main]]
+   name = "Device Settings"
+   url = "/pybytes/mlintegration/devicesettings/"
+   identifier = "pybytes@mlintegration@devicesettings"
+   parent = "pybytes@mlintegration"
+   weight = 10
+
+[[menu.main]]
+   name = "Features"
+   url = "/pybytes/mlintegration/features/"
+   identifier = "pybytes@mlintegration@features"
+   parent = "pybytes@mlintegration"
+   weight = 20
+[[menu.main]]
+   name = "Model Creation"
+   url = "/pybytes/mlintegration/modelcreation/"
+   identifier = "pybytes@mlintegration@modelcreation"
+   parent = "pybytes@mlintegration"
+   weight = 30
+
 
 [[menu.main]]
     name = "Amazon IoT"
