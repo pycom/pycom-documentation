@@ -84,4 +84,5 @@ There are two ways in which you can use Pymakr online.
 
 6. In the next screen, it asks for the WiFi network you want to use, select the one that is most convenient for you.
 
-7. Now that we have successfully create a project
+7. Now that we have successfully create a project. Using projects, you can add unlimited devices and keep them all up-to-date Over The Air (OTA) with new Pybytes configuration files, Python code or update the firmware.
+
