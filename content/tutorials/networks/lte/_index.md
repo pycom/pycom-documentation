@@ -17,6 +17,8 @@ When using the SigFox network, **Always** connect the appropriate LoRa antenna t
 
 GPy and FiPy support both LTE CAT-M1 and NB-IoT. These are newer, low power, long range, cellular protocols. They are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are. Together with the SIM card, the provider will supply you with configuration details: Usually band and APN. Use these in the example code below. 
 
+## Example 
+
 ```python
 from network import LTE
 import time
@@ -58,7 +60,7 @@ The last line of the script should return a tuple containing the IP address of t
 
 >Note: the first time, it can take a long while to attach to the network. 
 
-# LTE disconnecting 
+## LTE disconnecting 
 When the LTE disconnects in an unexpected situation, for example when the signal is lost, `lte.isconnected()` will still return `True`. Currently, there is a solution using the callback and handler function listed below:
 ```python
 from network import LTE
@@ -77,7 +79,7 @@ def cb_handler(arg):
 lte.lte_callback(LTE.EVENT_COVERAGE_LOSS, cb_handler)
 
 ```
-# LTE Troubleshooting guide
+## LTE Troubleshooting guide
 
 
 
