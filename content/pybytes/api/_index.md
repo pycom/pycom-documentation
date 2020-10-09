@@ -4,7 +4,9 @@ aliases:
 ---
 
 
-The Pybytes library is positioned in the [frozen](/advance/frozen/) section of the firmware. It can be imported like regular modules:
+The Pybytes library is positioned in the [frozen](/advance/frozen/) section of the firmware. 
+
+It can be imported like regular modules:
 ```python
 from _pybytes import Pybytes
 from _pybytes_config import PybytesConfig
@@ -12,6 +14,13 @@ conf = PybytesConfig().read_config()
 pybytes = Pybytes(conf)
 
 pybytes.start()
+```
+Or on booot
+```python
+import pycom
+import machine
+pycom.pybytes_on_boot(True)
+machine.reset()
 ```
 
 
@@ -56,6 +65,9 @@ Connect the device to Pybytes following the loaded configuration file. You will 
 
 Same as `pybytes.connect()`, with the option to not connect
 
+### pybytes.enable_lte(carrier=None, cid=None, band=None, apn=None, type=None, reset=None, fallback=False)
+
+Enable the LTE connection to pybytes. Enter the paramters you would normally enter for a LTE connection.
 
 ### pybytes.connect_lte()
 
@@ -97,26 +109,21 @@ Same as `pybytes.isconnected()`
 
 Enable SSL on the Pybytes connection
 
+>Note that SSL might not be supported by your LTE connection
+
 ### pybytes.dump_ca([file='/flash/cert/pycom-ca.pem'])
 
 Write SSL certificate to file.
-
 
 ## Signals
 
 ### pybytes.send_signal(signal_number, value)
 
 Send a signal to Pybytes. Arguments are:
-* `signal_number`
-* `value`
+* `signal_number`: The signal number in Pybytes, can be any value between 0-254 (255 is reserved)
+* `value`: The value you want to send, this can be any type.
 
 > This will also work in Pymesh.
-
-### send_digital_pin_value(pin_number, pull_mode)
-
-Similar to `pybytes.send_signal()`. Will send the value of `pin_number` to Pybytes.
-
-### pybytes.send_analog_pin_value()
 
 ### pybytes.send_ping_message()
 
@@ -130,42 +137,15 @@ Send an info message to Pybytes containing the device type and firmware version.
 
 Sends the battery level to Pybytes. The argument `battery_level` can be any integer.
 
-### send_custom_message()
-
-### pybytes.send_custom_message(persistent, message_type, message)
-
-Send a custom message to Pybytes. Arguments are:
-* `persistent`: Not used, set any value
-* `message_type`: 
-
-### pybytes.enable_terminal()
-
-### send_digital_pin_value(persistent, pin_number, pull_mode)
-### pybytes.send_analog_pin_value(persistent, pin_number)
-### pybytes.send_custom_location(pin, x, y)
-
-
-
-
-send_custom_message             set_custom_message_callback        send_digital_pin_value
-send_analog_pin_value           send_node_signal  
-
-register_periodical_digital_pin_publish
-register_periodical_analog_pin_publish
-add_custom_method               enable_terminal
-send_custom_location
-
-    
-
-enable_lte           smart_config
-## Sending messages
-
 ## Miscellaneous
 
 ### pybytes.deepsleep([pins=None, mode=None, enable_pull=None])
 
 See [machine.deepsleep()](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms) for more details. Mode can be:
 
+### pybytes.smart_config()
+
+Allows for the usage of `smart_config()`, see `pycom.smart_config()` for more information [here](/firmwareapi/pycom/pycom/#pycomsmart_config_on_bootboolean)
 
 
 ## Debugging
@@ -184,34 +164,4 @@ There are multiple debug levels, the lowest is 0 which is for warnings only and 
 >> import pycom;
 >> pycom.nvs_set('pybytes_debug', 99)
 ```    
-
-
-# API List
-
-
-* [Activate](activate)
-
-* [Connect](connect_device)
-
-* [Connect LTE](connect_lte)
-
-* [Connect LoRa ABP](connect_lora_abp)
-
-* [Connect LoRa OTAA](connect_lora_otaa)
-
-* [Connect Sigfox](connect_sigfox)
-
-* [Connect Wifi](connect_wifi)
-
-* [Deepsleep](deepsleep)
-
-* [Disconnect](disconnect)
-
-* [Dump CA](dump_ca)
-
-* [Enable LTE](enable_lte)
-
-* [Enable SSL](enable_ssl)
-
-* [Enable terminal](enable_terminal)
 
