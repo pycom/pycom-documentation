@@ -34,8 +34,8 @@ lte.init()
 #also, check the band settings with your carrier
 lte.attach(band=20, apn="your apn") 
 print("attaching..",end='')
-while not lte.isattached()
-    time.delay(0.25)
+while not lte.isattached():
+    time.sleep(0.25)
 
     print('.',end='')
     print(lte.send_at_cmd('AT!="fsm"'))         # get the System FSM
@@ -63,11 +63,12 @@ When the LTE disconnects in an unexpected situation, for example when the signal
 ```python
 from network import LTE
 import time
-from sleep import sleep
 import machine
 def cb_handler(arg):
     print("CB: LTE Coverage lost")
+    s = 120
     print("CB: sleep", s)
+    time.sleep(s)
     print("CB: deinit")
     lte.deinit()
     print("CB: reset")
