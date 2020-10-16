@@ -24,7 +24,7 @@ Connect your device to your own IoT platform with one of the advertised wireless
 This usually requires some registration. This step will detail how to get registered and connected to various wireless networks.
 
 # Quick navigation
-* [Products](/products/)
+* [Products]({{<relref "products">}})
 * [Pymakr](/gettingstarted/software/)
 * [Tutorials](/tutorials/)
 * [API Documentation](/firmwareapi/)

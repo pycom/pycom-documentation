@@ -29,6 +29,12 @@
     <p>&nbsp;</p>
     <li class="lefttree"> <a href="" class="dev">Development Feature</a></li>
       <p>&nbsp;</p>
+
+      <ul>
+{{ range $.Site.Home.AllTranslations }}
+<li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+{{ end }}
+</ul>
       
   </div>
 </v-navigation-drawer>

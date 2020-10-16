@@ -19,6 +19,8 @@
 <body>
 </script>
 <v-app id="app" class=""  v-cloak style="background-color: white;">
+
+  
    {{ partial "menu.html" . }}
    {{- partial "toolbar.html" . -}}
    <v-content >
@@ -48,8 +50,8 @@
         drawer2: true,
         toc: 0,
         branches: [
-        { value: '', text: 'latest'},
-        { value: 'dev', text: 'version development'},
+        { value: '/', text: 'latest'},
+        { value: '/dev/', text: 'version development'},
           /*{ value: '1.20.2.r0', text: 'version 1.20.2.r0'},
           { value: '1.20.3.b0', text: 'version 1.20.3.b0'},
           { value: '1.20.2.rc10', text: 'version 1.20.2.rc10'},
@@ -64,13 +66,6 @@
           if ( document.location.href.indexOf(this.branches[b].value) > -1) {
             this.branch= this.branches[b]
           }
-        }
-        var li = document.links;
-        targetVersion = this.branch.value;
-        console.log(targetVersion);
-        for(var i = 0; i< li.length; i++){
-          li[i].href = "/" +targetVersion + li[i].href;
-          console.log(li[i].href);
         }
 
         // there is not always a toc button
@@ -90,25 +85,7 @@
         // whenever the branch changes, this function will run
         branch: function (newb, currentb) {
           if (newb.value != this.branches[0].value) {
-              var targetVersion = newb;
-              var currentVersion = currentb.value;
-              if (currentVersion !== targetVersion) {
-                console.log("targetversion: ",targetVersion);
-                console.log("currentVersion: ", currentVersion);
-                var basePath = getPathBeforeVersionName(location, currentVersion);
-                console.log("basePath: ",basePath);
-                // Getting everything after targetVersion and concatenating it with the hash part.
-                var currentPath = getPathAfterVersionName(location, currentVersion);
-                console.log("Currentpath:",currentPath);
-                var targetPath;
-                if (targetVersion === "") {
-                  targetPath = basePath + currentPath;
-                } else {
-                  targetPath = basePath + targetVersion + "/" + currentPath;
-                }
-                console.log("targetPath:", targetPath);
-                //location.assign(targetPath);
-              }
+            //window.location = newb + window.location.pathname;
           }
         },
       },
@@ -121,29 +98,6 @@
       inputSelector: '.algolia-search-field input',
       debug: false // Set debug to true if you want to inspect the dropdown
     });
-
-
-    function getPathBeforeVersionName(location, versionName) {
-      return "/";
-    }
-
-    // getPathAfterVersionName gets the current URL path after the version prefix
-    function getPathAfterVersionName(location, versionName) {
-      let path;
-      if (versionName === "") {
-        path = location.pathname
-          .split("/")
-          .slice(1)
-          .join("/");
-      } else {
-        path = location.pathname
-          .split("/")
-          .slice(2)
-          .join("/");
-      }
-
-      return path + location.hash;
-    }
   </script>
 <!--{{- partial "footer.html" . -}}-->
 {{- partial "alexia.html" . -}}
