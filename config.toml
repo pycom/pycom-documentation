@@ -8,6 +8,17 @@ PygmentsCodeFences = true
 PygmentsStyle = "friendly"
 theme = "doc-theme"
 
+
+[languages]
+    [languages.en]
+        languageName= "Stable"
+        contentDir = "content/"
+        weight=1
+    [languages.dev]
+        languageName = "Development"
+        contentDir = "content/"
+        weight=2
+
 [menu]
 
 [[menu.main]]
