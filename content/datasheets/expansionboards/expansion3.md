@@ -20,13 +20,14 @@ The datasheet of the Expansion Board is available as a [PDF File](/gitbook/asset
 
 The pinout of the Expansion Board is available as a [PDF File](/gitbook/assets/expansion3-pinout.pdf)
 
-The expansion board contains 6 headers labeled:
-- TX: TX UART communication of the development board
-- RX: RX UART communication of the development board
-- RUN
-- BAT
-- LED
-- CHG: Decrease battery charging current from 450mA to 100mA
+The expansion board contains 6 jumpers labeled:
+- TX: TX UART (GPIO1) communication of the development board to the Expansionboard
+- RTS: Can be used for UART flow control. Connected to GPIO7. 
+- RX: RX UART (GPIO2() communication of the development board to the Expansionboard
+- CTS: Can be used for UART flow control. Connected to GPIO6.
+- BAT: Connect the resistor divider on the Expansionboard to the Voltage monitoring ADC Pin (GPIO3)
+- LED: Connect the LED on the Expansionboard to GPIO16
+- CHG: Removing the jumper will decrease battery charging current from 450mA to 100mA
 
 ![](/gitbook/assets/expansion3-pinout-1.png)
 
