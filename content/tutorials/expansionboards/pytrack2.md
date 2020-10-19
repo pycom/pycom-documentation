@@ -68,3 +68,8 @@ py.setup_sleep(10)
 py.go_to_sleep()
 """
 ```
+
+## Alternative Libraries
+
+* [micropyGPS](https://github.com/inmcm/micropyGPS)
+* [Alternative L76GNSS module](https://github.com/andrethemac/L76GLNSV4/blob/master/L76GNSV4.py)
