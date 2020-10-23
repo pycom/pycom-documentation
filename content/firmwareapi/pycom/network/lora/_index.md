@@ -63,7 +63,7 @@ The arguments are:
 * `adr` enables Adaptive Data Rate.
 * `public` selects between the public and private sync word.
 * `tx_retries` sets the number of TX retries in `LoRa.LORAWAN` mode.
-* `device_class` sets the LoRaWAN device class. Go [here](https://www.thethingsnetwork.org/docs/lorawan/classes.html) to learn more about the LoRa device classes. Can be either:
+* `device_class` sets the LoRaWAN device class. Visit the [TTN Website](https://www.thethingsnetwork.org/docs/lorawan/classes.html) to learn more about the LoRa device classes. Can be either:
     * `LoRa.CLASS_A`
     * `LoRa.CLASS_C`
 
@@ -137,7 +137,7 @@ Where:
 * `tx_counter` is the number of packets transmitted.
 * `tx_frequency` is the frequency used for the last transmission.
 
-> Note that the tuple will only contain the respective information after receiver and/or sending LoRa packets.
+> Note that the tuple will only contain the respective information after receiving and/or sending LoRa packets.
 
 ### lora.has_joined()
 

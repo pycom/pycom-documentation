@@ -118,7 +118,7 @@ Returns `True` if there is an active LTE data session and IP address has been ob
 
 End the data session with the network.
 
-### lte.send_at_cmd(cmd)
+### lte.send_at_cmd(cmd, [delay=10000])
 
 Send an AT command directly to the modem. Returns the raw response from the modem as a string object. You can find the possible AT commands [here](/gitbook/assets/Monarch-LR5110-ATCmdRefMan-rev6_noConfidential.pdf).
 

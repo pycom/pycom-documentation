@@ -20,7 +20,7 @@ The datasheet of the Expansion Board is available as a [PDF File](/gitbook/asset
 
 The pinout of the Expansion Board is available as a [PDF File](/gitbook/assets/expansion3-pinout.pdf)
 
-The expansion board contains 6 jumpers labeled:
+The expansion board contains 7 jumpers labeled:
 - TX: TX UART (GPIO1) communication of the development board to the Expansionboard
 - RTS: Can be used for UART flow control. Connected to GPIO7. 
 - RX: RX UART (GPIO2() communication of the development board to the Expansionboard
