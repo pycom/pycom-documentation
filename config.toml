@@ -1710,19 +1710,25 @@ theme = "doc-theme"
     identifier = "advance@cli"
     parent = "advance"
     weight = 20
+[[menu.main]]
+    name = "Coredump"
+    url = "/advance/coredump/"
+    identifier = "advance@coredump"
+    parent= "advance"
+    weight = 30
 
 [[menu.main]]
     name = "SecureBoot and Encryption"
     url = "/advance/encryption/"
     identifier = "advance@encryption"
     parent = "advance"
-    weight = 30
+    weight = 40
 [[menu.main]]
     name = "Frozen code"
     url = "/advance/frozen/"
     identifier = "advance@frozen"
     parent = "advance"
-    weight = 40
+    weight = 50
 
 [[menu.main]]
     name="License"
