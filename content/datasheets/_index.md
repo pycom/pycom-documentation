@@ -41,3 +41,7 @@ The follow pages contain all information relating to each product, for example: 
 - [Expansion 2](/datasheets/expansionboards/expansion2/)
 - [Expansion 3](/datasheets/expansionboards/expansion3/)
 - [Deepsleep](/datasheets/expansionboards/deepsleep/)
+
+## Footprints and 3D models
+
+You can find the footprints of all relevant devices in this [GitHub](https://github.com/pycom/footprints) repository.
