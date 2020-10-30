@@ -133,7 +133,7 @@ From here on, you can continue to use the additional features of your expansionb
 
 |[ Pygate](/tutorials/expansionboards/pygate/)| [Pysense](/tutorials/expansionboards/pysense/) | [Pysense 2.0 X](/tutorials/expansionboards/pysense2/)| [Pytrack](/tutorials/expansionboards/pytrack/)| [Pytrack 2.0 X](/tutorials/expansionboards/pytrack2/)| [PyScan ](/tutorials/expansionboards/pyscan/)|
 |:---|:---|:---|:---|:---|:---|
-| ![](/gitbook/assets/expansion_board_3_lopy4.png)|![](/gitbook/assets/pysense_icon.png) | ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png) |
+<!--| ![](/gitbook/assets/expansion_board_3_lopy4.png)|![](/gitbook/assets/pysense_icon.png) | ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png) |-->
 
 ## Step 5: Connecting to a network
 

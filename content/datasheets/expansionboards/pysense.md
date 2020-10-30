@@ -24,14 +24,6 @@ The pinout of the Pysense is available as a [PDF File](/gitbook/assets/pysense-p
 
 ![](/gitbook/assets/pysense-pinout-1.png)
 
-## Sensors
-The Pysense includes 4 additional sensors:
-1. Altitude/Pressure sensor [MPL3115A2 datasheet]()
-2. Light sensor [datasheet]()
-3. Accelerometer [LIS2HH12 datasheet]()
-4. Temperature/Humidity sensor [SI7006A20 datasheet]()
-
-
 ## Notes 
 ### Battery Charger
 
