@@ -15,7 +15,7 @@ pybytes = Pybytes(conf)
 
 pybytes.start()
 ```
-Or on booot
+Or on boot
 ```python
 import pycom
 import machine
