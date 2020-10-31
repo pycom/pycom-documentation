@@ -16,7 +16,7 @@ At Pycom, we manufacture and sell several different categories:
 
 Below you will find tables of all Pycom products. These tables illustrate the functionality of our various products, their compatibility with each other, as well as what accessories are required to utilise certain functionality.
 
-| Module | WiFi | Bluetooth | LoRa | Sigfox | LTE CAT-M1NB-IoT |
+| Module | WiFi | Bluetooth | LoRa | Sigfox | LTE CAT-M1 NB-IoT |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | [WiPy 3.0](/datasheets/development/wipy3) | &#10004; | &#10004; |  |  |  |
 | [SiPy](/datasheets/development/sipy) | &#10004; | &#10004; |  | &#10004; |  |
@@ -50,7 +50,7 @@ Below you will find tables of all Pycom products. These tables illustrate the fu
 
 | Accessory | Expansionboard | Pygate | Pytrack / Pysense | Battery Size |
 | :--- | :--- | :--- | :--- | :--- |
-[Pycase](https://pycom.io/product/pycase-clear/) | &#10004; | #10004; | | small |
+[Pycase](https://pycom.io/product/pycase-clear/) | &#10004; | &#10004; | | small |
 [Pygate case](https://pycom.io/product/pygate-case/) |  &#10004; | &#10004; | | tiny |
 [Small IP67 Case](https://pycom.io/product/ip67-case-for-pysense-pytrack/) |  | | &#10004;| 18650 |
 [Universal IP76 Case](https://pycom.io/product/universal-ip67-case/) |  &#10004; |  &#10004; | &#10004;| 18650 |
