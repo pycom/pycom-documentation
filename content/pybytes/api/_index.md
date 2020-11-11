@@ -26,9 +26,9 @@ machine.reset()
 
 ## Provisioning
 
-### Pybytes.activate(activation string)
+### Pybytes.activate(activationstring)
 
-Provision the device to Pybytes. Use the `activation string` provided in Pybytes to activate the device.
+Provision the device to Pybytes. Use the `activationstring` provided in Pybytes to activate the device.
 
 ### pybytes.read_config([filename='/flash/pybytes_config.json', reconnect=False])
 
@@ -37,8 +37,8 @@ Load the Pybytes configuration file. By default, this is found in `/flash/pybyte
 ### pybytes.update_config(key, [value=None, permanent=True, silent=False, reconnect=False])
 
 Update a `key` and `value` of the default configuration file. additional options:
-* `permanent`: will call `pybytes.write_config()`. If set `False`, the update will not be stored in the configuration file.
-* `silent`: set `silent` parameter of above.
+* `permanent`: will call `pybytes.write_config()`. If set `False`, the new value will not be stored in the configuration file and only used this session.
+* `silent`: set `silent` to `True` to not print to REPL.
 * `reconnect`: calls `pybytes.reconnect()`
 
 ### set_config([key=None, value=None, permanent=True, silent=False, reconnect=False])
@@ -49,21 +49,21 @@ Same as `update_config(...)`
 
 Writes the updated configuration to the default configuration file. The parameters:
 * `file`: The file name and location
-* `silent`: Do not print anything
+* `silent`: set `silent` to `True` to not print to REPL.
 
 ### pybytes.print_config()
 
-Print the configuration settings to the REPL
+Print the configuration settings to the REPL.
 
 ## Connection
 
 ### pybytes.connect()
 
-Connect the device to Pybytes following the loaded configuration file. You will need to load a configuration file before calling this.
+Connect the device to Pybytes following the loaded configuration file. You will need to load a configuration file before calling this. If you are using the WiFi or LTE connection, and it is already available, Pybytes will use the existing connection.
 
 ### pybytes.start([autoconnect=True])
 
-Same as `pybytes.connect()`, with the option to not connect
+Same as `pybytes.connect()`, with the option to set `autoconnect`. Setting `autoconnect` to `False` will not start the connection immediately. 
 
 ### pybytes.enable_lte(carrier=None, cid=None, band=None, apn=None, type=None, reset=None, fallback=False)
 
@@ -73,9 +73,9 @@ Enable the LTE connection to pybytes. Enter the paramters you would normally ent
 
 Connect to Pybytes using LTE and the settings from the configuration file.
 
-### pybytes.connect_wifi([reconnect=True, check_interval=0.5])
+### pybytes.connect_wifi()
 
-Connect to Pybytes using WiFi and the settings from the configuration file. Setting reconnect to `True` will reconnect the WiFi connection once disconnected.
+Connect to Pybytes using WiFi and the settings from the configuration file.
 
 ### pybytes.connect_sigfox()
 
