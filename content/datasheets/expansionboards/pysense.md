@@ -20,7 +20,7 @@ The datasheet of the Pysense is available as a [PDF File](/gitbook/assets/pysens
 ## Pinout
 
 The pinout of the Pysense is available as a [PDF File](/gitbook/assets/pysense-pinout.pdf)
-* The user button is connected to `P14` or `G4`. This button can also be used to put the Pysense board in `dfu-bootloader` mode to update the firmware.
+* The user button is connected to `P14`. This button can also be used to put the Pysense board in `dfu-bootloader` mode to update the firmware.
 
 ![](/gitbook/assets/pysense-pinout-1.png)
 
