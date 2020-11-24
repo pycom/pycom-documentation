@@ -37,20 +37,11 @@ The pinout of the FiPy is available as a [PDF File](/gitbook/assets/fipy-pinout.
 
 ## Notes
 
-### Antenna connections
-
->Always attach the appropriate antenna when using a wireless connection (LoRa / LTE / SigFox). For WiFi / BLE, it is not mandatory to use an external antenna when you did not explicitly specify this in your code.
-#### WiFi antenna
-![](/gitbook/assets/wifi_pigtail_ant_fipy.png)
-#### LoRa / SigFox antenna
-![](/gitbook/assets/lora_sigfox_pigtail_ant_fipy.png)
-#### LTE antenna
-![](/gitbook/assets/lte_ant_fipy.png)
 ### Power
 Do not use the 3.3V pin **in combination with** the Vin pin to supply the device as this will damage the voltage regulator on the board.
 
 ### Antenna placement
- 
+Always attach the appropriate antenna when using a wireless connection (LoRa / LTE / SigFox). For WiFi / BLE, it is not mandatory to use an external antenna when you did not explicitly specify this in your code. 
 
 
 ### AT Commands
