@@ -12,17 +12,17 @@ The Pygate is an 8-channel LoRaWAN gateway. Connect a WiPy, Gpy or LoPy4 board t
 
 ## Methods
 
-#### machine.pygate\_init(buff)
+### machine.pygate_init(buff)
 
 This function is used to initialize the Pygate
 
 - `buff`: the data contents of the gateway global config json file
 
-#### machine.pygate\_deinit()
+### machine.pygate_deinit()
 
 This shuts down the concentrator.
 
-#### machine.callback(trigger, handler=None, arg=None)
+### machine.callback(trigger, handler=None, arg=None)
 
 - `trigger`: A trigger event(s) for invoking the callback function `handler`, the triggers/events are:
 
@@ -36,6 +36,11 @@ This shuts down the concentrator.
 
 - `arg`: Optional argument to be passed to the callback function.
 
-#### machine.events()
+### machine.events()
 
 Get the Pygate events
+
+### machine.pygate_reset()
+
+Hard-reset (power cycle) the Pygate and development module inserted
+
