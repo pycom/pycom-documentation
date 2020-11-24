@@ -46,5 +46,6 @@ py.setup_int_wake_up(True, True)
 acc.enable_activity_interrupt(2000, 200)
 
 # go to sleep for 5 minutes maximum if no accelerometer interrupt happens
-machine.deepsleep(5*60*1000)
+py.setup_sleep(300)
+py.go_to_sleep()
 ```
