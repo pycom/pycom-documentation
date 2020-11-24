@@ -59,7 +59,7 @@ print(data)
 
 ## US915
 
-For US915, there are 64 channels available. Note that the Pygate only listens to 8 channels. To make your messages always transmitted on the channels listened to by the pygate, you can use the following:
+By default, the LoRa radio will transmit data on all 64 available channels. However, if you want to receive the packets with a [Pygate](/tutorials/expansionboards/pygate/), we need to specify which channels we can transmit on, as the Pygate only listens to 8 channels. If you use the default Pygate configuration file, the example below will enable the correct transmit channels:
 
 ```python
 
