@@ -42,5 +42,7 @@ Get the Pygate events
 
 ### machine.pygate_reset()
 
-Hard-reset (power cycle) the Pygate and development module inserted
+Hard-reset (power cycle) the Pygate and development module inserted. 
+
+> To use this functionality, you will need to update the Pygate firmware. Go to [update firmware](/updatefirmware/expansionboard/) to do so.
 
