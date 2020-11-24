@@ -143,7 +143,7 @@ Returns `True` if a LoRaWAN network has been joined. `False` otherwise.
 
 ### lora.add_channel(index, frequency, dr_min, dr_max)
 
-Add a LoRaWAN channel on the specified `index`. If there's already a channel with that index it will be replaced with the new one.
+Add a LoRaWAN channel on the specified `index`. If there's already a channel with that index it will be replaced with the new one. By default, the regulated LoRaWAN channels are assigned according to the region settings.
 
 The arguments are:
 
@@ -160,11 +160,8 @@ lora.add_channel(index=0, frequency=868000000, dr_min=5, dr_max=6)
 
 ### lora.remove_channel(index)
 
-Removes the channel from the specified `index`. On the 868MHz band the channels 0 to 2 cannot be removed, they can only be replaced by other channels using the `lora.add_channel` method. A way to remove all channels except for one is to add the same channel, 3 times on indexes 0, 1 and 2. An example can be seen below:
+Removes the channel from the specified `index`. On EU868, the channels 0 to 2 cannot be removed, they can only be replaced by other channels using the `lora.add_channel` method. A way to remove all channels except for one is to add the same channel, 3 times on indexes 0, 1 and 2.
 
-```python
-lora.remove_channel()
-```
 
 ### lora.mac()
 
@@ -220,10 +217,6 @@ lora.callback(trigger=(LoRa.RX_PACKET_EVENT | LoRa.TX_PACKET_EVENT), handler=lor
 
 Save the LoRaWAN state (joined status, network keys, packet counters, etc) in non-volatile memory in order to be able to restore the state when coming out of deepsleep or a power cycle.
 
-```python
-lora.nvram_save()
-```
-
 ### lora.nvram_restore()
 
 Restore the LoRaWAN state (joined status, network keys, packet counters, etc) from non-volatile memory. State must have been previously stored with a call to `nvram_save` before entering deepsleep. This is useful to be able to send a LoRaWAN message immediately after coming out of deepsleep without having to join the network again. This can only be used if the current region matches the one saved.
@@ -248,6 +241,54 @@ fdde:ad00:beef:0:0:ff:fe00:e800
 fdde:ad00:beef:0:e1f0:783c:1e8f:c763
 fe80:0:0:0:2c97:cb65:3219:c86
 ```
+## Working with LoRa and LoRaWAN Sockets
+
+### LoRa RAW
+
+LoRa raw sockets are created in the following way:
+
+```python
+import socket
+s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
+```
+
+And they must be created after initialising the LoRa network card.
+
+LoRa-Mesh socket is created, if the Mesh was enabled before (`lora.mesh()` was called).
+
+The LoRa-Mesh socket supports only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
+
+### LoRa WAN 
+LoraWAN sockets are created in the following way:
+```python
+import socket
+s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
+
+s.setsockopt(socket.SOL_LORA, socket.SO_DR, 0) #where 0 represents the datarate used DR_0
+
+```
+Data rate table (also applies to the socket setting)
+
+#### TX 
+
+| Region | DR_0 | DR_1 | DR_2 | DR_3 | DR_4 | DR_5 | DR_6 | DR_7 |
+| ------ | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| EU868 / AS923 / IN865 | SF12BW125 | SF11BW125 | SF10BW125 | SF9BW125 | SF8BW125 | SF7BW125 | SF7BW250 | FSK50 |
+| US915 / AU915 | SF10BW125 | SF9BW125 | SF8BW125 | SF7BW125 | SF8BW500 | | | |
+
+For Join requests in OTAA, EU868 uses `DR_0` to `DR_5`, this is handled in the firmware by default.
+
+#### RX
+
+For EU868, AS923 and IN865, the TX rates are used for RX as well. US915 and AU915 use different RX rates. Note that the RX settings are all handled in the firmware.
+
+The default receive window is 1 second.
+
+| Region | DR_8 | DR_9 | DR_10 | DR_11 | DR_12  | DR_13  |
+| ------ | ---- | ---- | ----- | ----- | ----- | ----- |
+| US915 /AU915 | SF12BW500 | SF11BW500 | SF10BW500 | SF9BW125 | SF8BW500 | SF7BW500 |
+
+For more information about LoRaWAN specifications, you can check this document by the LoRa Allience: https://lora-alliance.org/lorawan-for-developers
 
 ## Constants
 
@@ -264,17 +305,3 @@ fe80:0:0:0:2c97:cb65:3219:c86
 
 * `LoRa.timeout`
 
-## Working with LoRa and LoRaWAN Sockets
-
-LoRa sockets are created in the following way:
-
-```python
-import socket
-s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
-```
-
-And they must be created after initialising the LoRa network card.
-
-LoRa-Mesh socket is created, if the Mesh was enabled before (`lora.mesh()` was called).
-
-> The LoRa-Mesh socket supports only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
