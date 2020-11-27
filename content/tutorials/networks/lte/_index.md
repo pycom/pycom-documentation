@@ -61,24 +61,46 @@ The last line of the script should return a tuple containing the IP address of t
 >Note: the first time, it can take a long while to attach to the network. 
 
 ## LTE disconnecting 
-When the LTE disconnects in an unexpected situation, for example when the signal is lost, `lte.isconnected()` will still return `True`. Currently, there is a solution using the callback and handler function listed below:
+> You will need firmware 1.20.2.r2 or later for this functionality
+
+It is possible that the LTE disconnects unexpectedly (some time after `lte.connect()`) due to a whole variety of reasons.
+
+When such event happens, the modem will report a `UART break`, which triggers the callback functionality we discuss later. By default the model will automatically reconnect and no user intervention is needed, or, the modem can not automatically reconnect and we can take action. Note that taking action might not resolve the issue and will keep us disconnected. 
+
 ```python
-from network import LTE
-import time
-import machine
-def cb_handler(arg):
-    print("CB: LTE Coverage lost")
-    s = 120
-    print("CB: sleep", s)
-    time.sleep(s)
-    print("CB: deinit")
-    lte.deinit()
-    print("CB: reset")
-    machine.reset()
+def lte_cb_handler(arg):
+    print("CB LTE Callback Handler")
+    ev = arg.events() # NB: reading the events clears them
+    t = time.ticks_ms()
+    print("CB", t, time.time(), ev, time.gmtime())
+    pycom.rgbled(0x222200)
+    if ev & LTE.EVENT_COVERAGE_LOSS:
+        print("CB", t, "coverage loss")
+    if ev & LTE.EVENT_BREAK:
+        print("CB", t, "uart break signal")
+    # investiage the situation. Generally speaking, it will be one of the following:
+    # - the modem lost connection, but will automatically reestablish it by itself if we give it some time, e.g. new
+    # - the modem can't automatically reconnect, now we could
+    #   - try to suspend/resume or detach/reattach, or lte.reset(),
+    #   - but it could simply mean that we are out of lte coverage and all we can do is:
+    #     log the event, and then either machine.deepsleep() and try again later or simply
+    #     keep going and wait longer for the modem to reconnect. or, especially if we suspect a
+    #     FW problem, we could machine.reset() and try again
+    print("CB", t, time.time(), "test connection")
 
-lte.lte_callback(LTE.EVENT_COVERAGE_LOSS, cb_handler)
+    #write your own test_connection function
+    if test_connection():
+        print("CB", t, time.time(), "connection ok")
+    else:
+        print("CB", t, time.time(), "connection not ok")
+        # suspendresume()
+        # lte.reset()
 
+    print("CB", t, time.time(), ev, " done") 
+
+lte_callback(LTE.EVENT_BREAK, lte_cb_handler)
 ```
+
 ## LTE Troubleshooting guide
 
 
