@@ -1174,11 +1174,18 @@ theme = "doc-theme"
     weight = 10
 
 [[menu.main]]
-    name = "Visualise data"
+    name = "Visualise signals"
     url = "/pybytes/dashboard/"
     identifier = "pybytes@dashboard"
     parent = "pybytes"
     weight = 15
+
+[[menu.main]]
+    name = "Pymakr Online"
+    url = "/pybytes/pymakr-online/"
+    identifier = "pybytes@pymakr-online"
+    parent = "pybytes"
+    weight = 17
 
 [[menu.main]]
     name = "Pybytes library API"
