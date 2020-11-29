@@ -88,7 +88,6 @@ print()
 print("\nthe racer took %f seconds to finish the race" % total)
 print("  %f seconds in the first lap" % lap)
 print("  %f seconds in the last lap" % (total - lap))
-class Alarm – get interrupted after a specific interval
 ```
 
 ## class Alarm
