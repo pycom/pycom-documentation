@@ -12,34 +12,28 @@ On each Pycom device, there is a small internal filesystem called `/flash`, to w
 ## Connecting
 1. **Connect through the Access Point**
 
-    By default, the Pycom device will create a WiFi access point with the following default credentials:
-    * SSID: `xxpy-wlan-####`
-    * Password: `www.pycom.io`
-
-    The last 4 characters of the broadcast SSID are equal to the last 4 characters of the `unique_id()`:
-    ```python
-    import machine
-    import ubinascii
-    ubinascii.hexlify(machine.unique_id())
-    ```
-
-    Note that if you made changes to the WiFi settings, the AP might not show up by default. You can use the following to get it back up and running:
+    You can activate the internal Access Point (AP) on boot by using the following:
     ```python
     import pycom
     from network import WLAN
+    pycom.pybytes_on_boot(False) #we do not want Pybytes using the WLAN
+    pycom.smart_config_on_boot(False) #we also do not want smart config
     pycom.wifi_on_boot(True)
     pycom.wifi_mode_on_boot(WLAN.AP)
+    pycom.wifi_ssid_ap('ssid')
     ```
 
     > You can find the methods to change the default settings [here](/firmwareapi/pycom/pycom/#boot-methods)
 
 2. **Connect through A WiFi Network**
     
-    It is also possible to connect your pycom device to a WiFi network first, and then connect to its IP address. Note that you will have to figure out its IP address before you can access the FTP server. For that, you can use the following command. This will return a tuple with four items, where the first item will contain the assigned IP address.
+    It is also possible to connect your pycom device to a WiFi network first, and then connect to its IP address. Note that you will have to figure out its IP address before you can access the FTP server or use [MDNS](/tutorials/networkprotocols/mdns/). For that, you can use the following command. This will return a tuple with four items, where the first item will contain the assigned IP address.
     ```python
     wlan.ifconfig()
     ```
-> Note that if you make changes to the WLAN Configuration in the uploaded Python code, the connection might drop. Moreover, if your program contains continuous reboot loops, sleep cycles or coredumps, you might not be able to recover the wireless connection without [safe booting](../safeboot/)
+
+Note that if you make changes to the WLAN Configuration in the uploaded Python code, for example by using Pybytes or changing the WiFi credentials, the connection might drop. Moreover, if your program contains continuous reboot loops, sleep cycles or coredumps, you might not be able to recover the wireless connection without [safe booting](../safeboot/)
+
 ## FTP Server
 The file system is accessible via the native FTP server running on each Pycom device. Open a FTP client and connect to:
 
