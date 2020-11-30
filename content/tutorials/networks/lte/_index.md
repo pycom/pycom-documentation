@@ -8,7 +8,7 @@ The following tutorial demonstrates the use of the LTE CAT-M1 and NB-IoT functio
 
 > Before you start, make sure that your Simcard is registered and activated with your carrier.
 
-When using the SigFox network, **Always** connect the appropriate LoRa antenna to your device. See the figures below for the correct antenna placement
+When using the LTE network, **Always** connect the appropriate antenna to your device. See the figures below for the correct antenna placement.
 
 |  Gpy | Fipy  |   
 |---|---|
