@@ -60,43 +60,30 @@ The last line of the script should return a tuple containing the IP address of t
 
 >Note: the first time, it can take a long while to attach to the network. 
 
-## LTE disconnecting 
-> You will need firmware 1.20.2.r2 or later for this functionality
+## LTE Connectivity loss
+> You need firmware 1.20.2.r2 or later for this functionality
 
-It is possible that the LTE disconnects unexpectedly (some time after `lte.connect()`) due to a whole variety of reasons.
+It is possible that the LTE modem loses connectivity. It could be due to some radio interference, maybe the reception in the location of the module is not too good. Or if the module is being physically moved to another location with worse reception.
 
-When such event happens, the modem will report a `UART break`, which triggers the callback functionality we discuss later. By default the model will automatically reconnect and no user intervention is needed, or, the modem can not automatically reconnect and we can take action. Note that taking action might not resolve the issue and will keep us disconnected. 
+If the connectivity is lost this will in general not be reflected when you check `lte.isconnected()`. However, the lte modem sends a `UART break` signal. You can receive these events by using the `lte_callback` functionality. When connectivity is lost, the modem will try it's best to re-establish connectivity and this also works well in general. When connectivity is re-established, the modem will send another break signal, ie, the `lte_callback` will fire again.
+
+This means the best practice is to capture the callback and inside the callback test whether the module is connected or not. If, with some timeout, there really is no connection, then one can try to react to this. Let's say the application is a sensor, that is most of the time in deepsleep, wakes up once in a while, measures something and then tries to send it's measurement before going back to deepsleep. In this case one could simply log the event, go back to sleep and hope that in the next interval the reception will be better. Or, if there is some alternative connectivity implemented, one could trigger it at this point.
 
 ```python
 def lte_cb_handler(arg):
-    print("CB LTE Callback Handler")
-    ev = arg.events() # NB: reading the events clears them
-    t = time.ticks_ms()
-    print("CB", t, time.time(), ev, time.gmtime())
+    ev = arg.events() # NB: reading the events also clears them
+    print("LTE CB", time.time(), ev, time.gmtime())
     pycom.rgbled(0x222200)
-    if ev & LTE.EVENT_COVERAGE_LOSS:
-        print("CB", t, "coverage loss")
     if ev & LTE.EVENT_BREAK:
-        print("CB", t, "uart break signal")
-    # investiage the situation. Generally speaking, it will be one of the following:
-    # - the modem lost connection, but will automatically reestablish it by itself if we give it some time, e.g. new
-    # - the modem can't automatically reconnect, now we could
-    #   - try to suspend/resume or detach/reattach, or lte.reset(),
-    #   - but it could simply mean that we are out of lte coverage and all we can do is:
-    #     log the event, and then either machine.deepsleep() and try again later or simply
-    #     keep going and wait longer for the modem to reconnect. or, especially if we suspect a
-    #     FW problem, we could machine.reset() and try again
-    print("CB", t, time.time(), "test connection")
-
-    #write your own test_connection function
+        print("LTE CB", "uart break signal")
+    print("LTE CB", time.time(), "test connection")
+    # TBD: write your own test_connection function
     if test_connection():
-        print("CB", t, time.time(), "connection ok")
+        print("LTE CB", time.time(), "connection ok")
     else:
-        print("CB", t, time.time(), "connection not ok")
-        # suspendresume()
-        # lte.reset()
-
-    print("CB", t, time.time(), ev, " done") 
+        print("LTE CB", time.time(), "connection not ok")
+        # TBD: implement handling of lost connection
+        # machine.deepsleep(deepsleeptime)
 
 lte_callback(LTE.EVENT_BREAK, lte_cb_handler)
 ```
