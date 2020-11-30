@@ -27,7 +27,7 @@ On each Pycom device, there is a small internal filesystem called `/flash`, to w
 
 2. **Connect through A WiFi Network**
     
-    It is also possible to connect your pycom device to a WiFi network first, and then connect to its IP address or use [mdns](/firmwareapi/pycom/network/mdns/). Note that you will have to figure out its IP address before you can access the FTP server. For that, you can use the following command. This will return a tuple with four items, where the first item will contain the assigned IP address.
+    It is also possible to connect your pycom device to a WiFi network first, and then connect to its IP address. Note that you will have to figure out its IP address before you can access the FTP server or use [MDNS](/firmwareapi/pycom/network/mdns/). For that, you can use the following command. This will return a tuple with four items, where the first item will contain the assigned IP address.
     ```python
     wlan.ifconfig()
     ```
