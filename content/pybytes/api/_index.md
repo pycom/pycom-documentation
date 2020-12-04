@@ -141,7 +141,7 @@ Sends the battery level to Pybytes. The argument `battery_level` can be any inte
 
 ### pybytes.deepsleep(ms, [pins=None, mode=None, enable_pull=None])
 
-See [machine.deepsleep()](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms) for more details. Additionally, this method disconnects from Pybytes gracefully. The optional arguments operate [machine.pin_sleep_wakeup()](firmwareapi/pycom/machine/#machinepin_sleep_wakeuppins-mode-enable_pull)
+See [machine.deepsleep()](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms) for more details. Additionally, this method disconnects from Pybytes gracefully. The optional arguments operate [machine.pin_sleep_wakeup()](/firmwareapi/pycom/machine/#machinepin_sleep_wakeuppins-mode-enable_pull)
 
 ### pybytes.smart_config()
 
