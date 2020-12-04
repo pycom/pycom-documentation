@@ -132,8 +132,8 @@ From here on, you can continue to use the additional features of your expansionb
 >Note The Expansionboard requires no additional libraries and all functions work out of the box!
 
 |[ Pygate](/tutorials/expansionboards/pygate/)| [Pysense](/tutorials/expansionboards/pysense/) | [Pysense 2.0 X](/tutorials/expansionboards/pysense2/)| [Pytrack](/tutorials/expansionboards/pytrack/)| [Pytrack 2.0 X](/tutorials/expansionboards/pytrack2/)| [PyScan ](/tutorials/expansionboards/pyscan/)|
-|:---|:---|:---|:---|:---|:---|
-<!--| ![](/gitbook/assets/expansion_board_3_lopy4.png)|![](/gitbook/assets/pysense_icon.png) | ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png)| ![](/gitbook/assets/pytrack_icon.png) |-->
+|:----|:-----|:-----|:-----|:-----|:----|
+| [![](/gitbook/assets/expansionboards/pygate.png)](/tutorials/expansionboards/pygate/)|[![](/gitbook/assets/expansionboards/pysense1.png)](/tutorials/expansionboards/pysense/) | [![](/gitbook/assets/expansionboards/pysense2.png)](/tutorials/expansionboards/pysense2/)| [![](/gitbook/assets/expansionboards/pytrack1.png)](/tutorials/expansionboards/pytrack/)| [![](/gitbook/assets/expansionboards/pytrack2.png)](/tutorials/expansionboards/pytrack2/)| [![](/gitbook/assets/expansionboards/pyscan.png)](/tutorials/expansionboards/pyscan/) |
 
 ## Step 5: Connecting to a network
 
