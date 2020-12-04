@@ -41,7 +41,7 @@ Update a `key` and `value` of the default configuration file. additional options
 * `silent`: set `silent` to `True` to not print to REPL.
 * `reconnect`: calls `pybytes.reconnect()`
 
-### set_config([key=None, value=None, permanent=True, silent=False, reconnect=False])
+### pybytes.set_config([key=None, value=None, permanent=True, silent=False, reconnect=False])
 
 Same as `update_config(...)`
 
@@ -139,9 +139,9 @@ Sends the battery level to Pybytes. The argument `battery_level` can be any inte
 
 ## Miscellaneous
 
-### pybytes.deepsleep([pins=None, mode=None, enable_pull=None])
+### pybytes.deepsleep(ms, [pins=None, mode=None, enable_pull=None])
 
-See [machine.deepsleep()](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms) for more details. Mode can be:
+See [machine.deepsleep()](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms) for more details. Additionally, this method disconnects from Pybytes gracefully. The optional arguments operate [machine.pin_sleep_wakeup()](/firmwareapi/pycom/machine/#machinepin_sleep_wakeuppins-mode-enable_pull)
 
 ### pybytes.smart_config()
 
