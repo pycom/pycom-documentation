@@ -19,10 +19,12 @@ sleep_time = 1000
 print("init LoRa")
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 time.sleep(1) #Allows us to exit the code using ctrl+c
+
 # create an ABP authentication params
-dev_addr = struct.unpack(">l", ubinascii.unhexlify(''))[0]
-nwk_swkey = ubinascii.unhexlify('')
-app_swkey = ubinascii.unhexlify('')
+dev_addr = struct.unpack(">l", ubinascii.unhexlify('00000005'))[0]
+nwk_swkey = ubinascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
+app_swkey = ubinascii.unhexlify('2B7E151628AED2A6ABF7158809CF4F3C')
+
 lora.nvram_restore()
 if(lora.has_joined() == False):
     print("LoRa not joined yet")
