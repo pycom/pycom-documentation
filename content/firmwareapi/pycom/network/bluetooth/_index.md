@@ -76,8 +76,7 @@ bluetooth = Bluetooth()
 * `secure_connections` Enables or Disables Secure Connections and MITM Protection.
 * `mtu` Maximum Transmission Unit (MTU) is the maximum length of an ATT packet. Value must be between `23` and `200`.
 
-
-    With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.	With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
+With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
     Initialises and enables the Bluetooth radio in BLE mode.
 
 
