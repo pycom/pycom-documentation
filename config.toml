@@ -302,6 +302,12 @@ theme = "doc-theme"
     identifier = "tutorials@networks@lora@module-module"
     parent = "tutorials@networks@lora"
     weight = 60
+[[menu.main]]
+    name = "nvram"
+    url = "/tutorials/networks/lora/nvram/"
+    identifier = "tutorials@networks@lora@nvram"
+    parent = "tutorials@networks@lora"
+    weight = 70
 
 [[menu.main]]
     name = "LTE"
