@@ -18,8 +18,7 @@ import ubinascii
 sleep_time = 1000
 print("init LoRa")
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
-for i in range(0,10):
-    time.sleep(0.1) #be able to ctrl+c out of this
+time.sleep(1) #Allows us to exit the code using ctrl+c
 # create an ABP authentication params
 dev_addr = struct.unpack(">l", ubinascii.unhexlify(''))[0]
 nwk_swkey = ubinascii.unhexlify('')
