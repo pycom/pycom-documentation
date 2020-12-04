@@ -180,7 +180,7 @@ Get or set the antenna type (external or internal). Value can be:
   * `WLAN.EXT_ANT`: The U.FL connector (external antenna)
   * `WLAN.MAN_ANT`: Manually select the state of the antenna switch on `P12`. By default, this will select the on-board antenna
 
-    With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.	With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
+   With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
 
 ### wlan.mac([mac, mode])
 
