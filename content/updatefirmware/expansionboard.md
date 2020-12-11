@@ -92,10 +92,9 @@ To enter update mode follow these steps:
 3. Remove the development module
 4. Press this button on your device:
 
-| Pygate | Pysense / Pytrack | Pysense 2.0 X / Pytrack 2.0 X | Expansionboard |
-|:------:|:-----------------:|:-----------------------------:|:--------------:|
-|         |       |           |           |
-
+| Expansionboard 3.1 | Pygate | Pysense | Pysense 2.0 X | Pytrack | Pytrack 2.0 X | PyScan |
+|:----|:----|:-----|:--------|:-----|:-----|:----|
+| ![](/gitbook/assets/expansionboards/expansionboard31_dfu.png) | ![](/gitbook/assets/expansionboards/pygate_dfu.png)|![](/gitbook/assets/expansionboards/pysense1_dfu.png)] | ![](/gitbook/assets/expansionboards/pysense2_dfu.png) | ![](/gitbook/assets/expansionboards/pytrack1_dfu.png) | ![](/gitbook/assets/expansionboards/pytrack2_dfu.png) | ![](/gitbook/assets/expansionboards/pyscan_dfu.png) |
 
 5. Plug in the USB cable to the host computer and wait 1 second before releasing the button
 6. After this you will have approximately 7 seconds to run the DFU-util tool
