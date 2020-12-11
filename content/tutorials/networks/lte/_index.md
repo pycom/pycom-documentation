@@ -8,7 +8,7 @@ The following tutorial demonstrates the use of the LTE CAT-M1 and NB-IoT functio
 
 > Before you start, make sure that your Simcard is registered and activated with your carrier.
 
-When using the SigFox network, **Always** connect the appropriate LoRa antenna to your device. See the figures below for the correct antenna placement
+When using the LTE network, **Always** connect the appropriate antenna to your device. See the figures below for the correct antenna placement.
 
 |  Gpy | Fipy  |   
 |---|---|
@@ -16,6 +16,8 @@ When using the SigFox network, **Always** connect the appropriate LoRa antenna t
 
 
 GPy and FiPy support both LTE CAT-M1 and NB-IoT. These are newer, low power, long range, cellular protocols. They are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are. Together with the SIM card, the provider will supply you with configuration details: Usually band and APN. Use these in the example code below. 
+
+## Example 
 
 ```python
 from network import LTE
@@ -34,8 +36,8 @@ lte.init()
 #also, check the band settings with your carrier
 lte.attach(band=20, apn="your apn")
 print("attaching..",end='')
-while not lte.isattached()
-    time.delay(0.25)
+while not lte.isattached():
+    time.sleep(0.25)
 
     print('.',end='')
     print(lte.send_at_cmd('AT!="fsm"'))         # get the System FSM
@@ -58,25 +60,36 @@ The last line of the script should return a tuple containing the IP address of t
 
 >Note: the first time, it can take a long while to attach to the network.
 
-# LTE disconnecting
-When the LTE disconnects in an unexpected situation, for example when the signal is lost, `lte.isconnected()` will still return `True`. Currently, there is a solution using the callback and handler function listed below:
+## LTE Connectivity loss
+> You need firmware 1.20.2.r2 or later for this functionality
+
+
+It is possible that the LTE modem loses connectivity. It could be due to some radio interference, maybe the reception in the location of the module is not too good. Or if the module is being physically moved to another location with worse reception.
+
+If the connectivity is lost this will in general not be reflected when you check `lte.isconnected()`. However, the lte modem sends a `UART break` signal. You can receive these events by using the `lte_callback` functionality. When connectivity is lost, the modem will try it's best to re-establish connectivity and this also works well in general. When connectivity is re-established, the modem will send another break signal, ie, the `lte_callback` will fire again.
+
+This means the best practice is to capture the callback and inside the callback test whether the module is connected or not. If, with some timeout, there really is no connection, then one can try to react to this. Let's say the application is a sensor, that is most of the time in deepsleep, wakes up once in a while, measures something and then tries to send it's measurement before going back to deepsleep. In this case one could simply log the event, go back to sleep and hope that in the next interval the reception will be better. Or, if there is some alternative connectivity implemented, one could trigger it at this point.
+
 ```python
-from network import LTE
-import time
-from sleep import sleep
-import machine
-def cb_handler(arg):
-    print("CB: LTE Coverage lost")
-    print("CB: sleep", s)
-    print("CB: deinit")
-    lte.deinit()
-    print("CB: reset")
-    machine.reset()
+def lte_cb_handler(arg):
+    ev = arg.events() # NB: reading the events also clears them
+    print("LTE CB", time.time(), ev, time.gmtime())
+    pycom.rgbled(0x222200)
+    if ev & LTE.EVENT_BREAK:
+        print("LTE CB", "uart break signal")
+    print("LTE CB", time.time(), "test connection")
+    # TBD: write your own test_connection function
+    if test_connection():
+        print("LTE CB", time.time(), "connection ok")
+    else:
+        print("LTE CB", time.time(), "connection not ok")
+        # TBD: implement handling of lost connection
+        # machine.deepsleep(deepsleeptime)
 
-lte.lte_callback(LTE.EVENT_COVERAGE_LOSS, cb_handler)
-
+lte_callback(LTE.EVENT_BREAK, lte_cb_handler)
 ```
-# LTE Troubleshooting guide
+
+## LTE Troubleshooting guide
 
 
 

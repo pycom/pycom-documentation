@@ -15,6 +15,7 @@ The datasheet of the Pytrack is available as a [PDF File](/gitbook/assets/PyTrac
 
 ## Pinout
 
+
 The PyPort connector is for a 6 lead mini ribbon cable. Part: Amphenol 20021511-00006T4LF.
 The external IO header power pins are labelled as follows
 * 3V3AUX - The power provided by the development module 
@@ -23,6 +24,9 @@ The external IO header power pins are labelled as follows
 
 The pinout of the Pytrack is available as a [PDF File](
 /gitbook/assets/pytrack2-pinout.pdf)
+
+The Pytrack 2.0 X features a SMA connector that allows for the connection of an external active or passive GPS antenna. The SMA connector has an internal switch that switches the connection from the internal to the external antenna automatically upon connection of the external antenna. 
+
 
 ![](/gitbook/assets/pytrack2-pinout.png)
 ## Notes

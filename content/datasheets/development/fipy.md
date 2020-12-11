@@ -9,7 +9,7 @@ aliases:
 
 ![](/gitbook/assets/fipy-1.png)
 
-> Note: Orient the RGB LED / reset button over the USB connector on any expansion board 
+> Note: Orient the RGB LED / reset button over the USB connector on any expansion board
 
 
 
@@ -25,7 +25,7 @@ The datasheet of the FiPy is available as a [PDF File](/gitbook/assets/specsheet
 The drawing of the LTE-M antenna is available as a [PDF File](/gitbook/assets/lte-m-antenna-drawing.pdf).
 
 The Fipy is certified for [CE RED](/gitbook/assets/fipy_c03-b0-red-final.pdf) and [FCC DSS](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dss.pdf) [FCC DTS](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dts.pdf) [FCC DXX](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-dxx.pdf) [FCC TNB](/gitbook/assets/pycom-2ajmtfipy01r-fcc-grant-tnb.pdf)
-[RCM](/gitbook/assets/RCM-Fipy.pdf)
+[RCM](/gitbook/assets/RCM-FIPY.zip)
 [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-FiPy(8217-00091P)-20190523.pdf)
 ## Pinout
 
@@ -41,7 +41,7 @@ The pinout of the FiPy is available as a [PDF File](/gitbook/assets/fipy-pinout.
 Do not use the 3.3V pin **in combination with** the Vin pin to supply the device as this will damage the voltage regulator on the board.
 
 ### Antenna placement
-Always attach the appropriate antenna when using a wireless connection (LoRa / LTE / SigFox). For WiFi / BLE, it is not mandatory to use an external antenna when you did not explicitly specify this in your code. 
+Always attach the appropriate antenna when using a wireless connection (LoRa / LTE / SigFox). For WiFi / BLE, it is not mandatory to use an external antenna when you did not explicitly specify this in your code.
 
 
 ### AT Commands
