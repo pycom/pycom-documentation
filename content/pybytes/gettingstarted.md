@@ -15,7 +15,8 @@ If you already have a Forum or Webshop account, you can use the same credentials
 Else, go to [Pybytes](https://pybytes.pycom.io) and create an account
 
 ## Step 2: Create a device 
-1. Click on [Add Device](https://pybytes.pycom.io/devices). You can either add a device using USB, or the Pybytes App for [iPhone](https://apps.apple.com/us/app/pybytes/id1465696479) or [Android](https://play.google.com/store/apps/details?id=io.pycom.pybytes_android&hl=en). In this guide, we will describe the process using USB.
+1. Click on [Add Device](https://pybytes.pycom.io/devices). You can either add a device using USB, or the [Pybytes App](/pybytes/smart/). If you are planning on provisioning a lot of devices, we would definitely recommend using the Pybytes app. In this guide, we will describe the process using USB.
+
 ![](/gitbook/assets/pybytes/add-device/add-device-btn.png)
 
 2. Select your device (WiPy, LoPy, SiPy, etc.).

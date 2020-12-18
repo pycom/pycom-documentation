@@ -1,24 +1,24 @@
 ---
-title: "Pybytes iOS"
+title: "Pybytes App"
 aliases:
 ---
 
-Pybytes iOS app will allow you to quickly provision any number of devices effortlessly to Pybytes.
+The Pybytes app will allow you to quickly provision any number of devices effortlessly to Pybytes. This is especially useful if you are planning to provision multiple devices, as the device type, WiFi network and name get automatically assigned in the Pybytes application, and all you will need to do is power up the devices that need provisioning.
 
 > Your devices will need to run **firmware 1.20.1** or newer.
 
 Further down the page you will find the following information:
 
-*  [Pybytes iOS installing and Device Provisioning](#pybytes-ios-installing-and-device-provisioning)
+*  [Pybytes app installing and Device Provisioning](#pybytes-app-installing-and-device-provisioning)
 *  [Take into consideration](#take-into-consideration)
 *  [Quick help/FAQ](#faq)
 
-> Before starting, make sure you have enabled Pybytes smart config on the devices you want to provision by using `pybytes.smart_config(True)`, or by checking the option in the firmware updater tool
+> Before starting, make sure you have enabled Pybytes smart config on the devices you want to provision by using `pybytes.smart_config(True)`, or by checking the option in the firmware updater tool. New devices will come with pybtes and smart config enabled by default.
 
-## Pybytes iOS installing and Device Provisioning
+## Pybytes app installing and Device Provisioning
 
-1. Go to the App Store and download Pybytes iOS app.
-2. Use your Pybytes web app account to log in.
+1. Install the app for [iPhone](https://apps.apple.com/us/app/pybytes/id1465696479) or [Android](https://play.google.com/store/apps/details?id=io.pycom.pybytes_android&hl=en).
+2. Use your Pybytes account to log in.
 3. On the next screen, you will need to enter your Wi-Fi credentials.
 4. After pressing the START button, a list of devices will appear on the screen. It may take up to several minutes to provision all of your devices. The first device usually appears on the screen within one minute.
 
@@ -27,8 +27,6 @@ Further down the page you will find the following information:
 ![](/gitbook/assets/pybytes/iOS/provisionedDevicesIOS.jpg)
 
 > The name of a device provisioned device is its Wireless MAC address.
-
-
 
 5. As your devices are provisioning in Pybytes devices management platform, you will see notifications appearing on the screen when the provisioning is successful. You will also see the provisioned devices in the Devices section.
 

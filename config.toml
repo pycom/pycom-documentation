@@ -1230,7 +1230,7 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-  name = "Pybytes iOS"
+  name = "Pybytes App"
   url = "/pybytes/smart/"
   identifier = "pybytes@smart"
   parent = "pybytes"
