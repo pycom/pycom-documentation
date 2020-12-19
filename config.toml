@@ -801,6 +801,13 @@ theme = "doc-theme"
     weight = 25
 
 [[menu.main]]
+    name = "ESP-NOW"
+    url = "/firmwareapi/pycom/network/espnow/"
+    identifier = "firmwareapi@pycom@network@espnow"
+    parent = "firmwareapi@pycom@network"
+    weight = 30
+
+[[menu.main]]
     name = "Bluetooth"
     url = "/firmwareapi/pycom/network/bluetooth/"
     identifier = "firmwareapi@pycom@network@bluetooth"
