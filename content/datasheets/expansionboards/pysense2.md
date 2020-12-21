@@ -15,7 +15,10 @@ The datasheet of the Pysense 2.0X is available as a [PDF File](/gitbook/assets/P
 
 ## Pinout
 
-The PyPort connector is for a 6 lead mini ribbon cable. Part: Amphenol 20021511-00006T4LF
+The PyPort connector is for a 6 lead mini ribbon cable, part: Amphenol 20021511-00006T4LF. The external IO header power pins are labelled as follows
+* 3V3AUX - The power provided by the development module 
+* 3V3AUX_LP - the power provided by the development module for the SD card (This can be switched off)
+* 3V3 - The power provided by the Pysense 2, for the USB-Serial converter.
 The pinout of the Pysense is available as a [PDF File](/gitbook/assets/pysense2-pinout.pdf)
 
 

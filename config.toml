@@ -397,31 +397,31 @@ theme = "doc-theme"
     weight = 10
 [[menu.main]]
     name = "pysense"
-    url = "/tutorials/expansionboards/pysense"
+    url = "/tutorials/expansionboards/pysense/"
     identifier = "tutorials@expansionboards@pysense"
     parent = "tutorials@expansionboards"
     weight = 20
 [[menu.main]]
     name = "pysense 2.0 X"
-    url = "/tutorials/expansionboards/pysense2"
+    url = "/tutorials/expansionboards/pysense2/"
     identifier = "tutorials@expansionboards@pysense2"
     parent = "tutorials@expansionboards"
     weight = 30
 [[menu.main]]
     name = "pytrack"
-    url = "/tutorials/expansionboards/pytrack"
+    url = "/tutorials/expansionboards/pytrack/"
     identifier = "tutorials@expansionboards@pytrack"
     parent = "tutorials@expansionboards"
     weight = 40
 [[menu.main]]
     name = "pytrack 2.0 X"
-    url = "/tutorials/expansionboards/pytrack2"
+    url = "/tutorials/expansionboards/pytrack2/"
     identifier = "tutorials@expansionboards@pytrack2"
     parent = "tutorials@expansionboards"
     weight = 50
 [[menu.main]]
     name = "pyscan"
-    url = "/tutorials/expansionboards/pyscan"
+    url = "/tutorials/expansionboards/pyscan/"
     identifier = "tutorials@expansionboards@pyscan"
     parent = "tutorials@expansionboards"
     weight = 60
