@@ -93,7 +93,7 @@ Returns a signed integer with indicating the signal strength value of the last r
 Returns a byte object with the 8-Byte bytes object with the Sigfox PAC. To return human-readable values you should import `ubinascii` and convert binary values to hexidecimal representation. For example:
 
 ```python
-print(ubinascii.hexlify(sigfox.mac()))
+print(ubinascii.hexlify(sigfox.pac()))
 ```
 
 
@@ -164,23 +164,16 @@ s.recv(64)
 
 ### socket.setsockopt(level, optname, value)
 
-Set the value of the given socket option. The needed symbolic constants are defined in the socket module (`SO_*` etc.). In the case of Sigfox the values are always an integer. Examples:
+Set the value of the given socket option. For the Sigfox level, the following options are available (all options accept the values `True` or `False`):
+* `SO_RX`: Wait for a downlink after sending the uplink packet
+* `SO_OOB`: Use the socket to send a Sigfox Out Of Band (OOB) message
+* `SO_BIT`: Select the bit value when sending bit-only packets
+
+Example:
 
 ```python
 # wait for a downlink after sending the uplink packet
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, True)
-
-# make the socket uplink only
-s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, False)
-
-# use the socket to send a Sigfox Out Of Band message
-s.setsockopt(socket.SOL_SIGFOX, socket.SO_OOB, True)
-
-# disable Out-Of-Band to use the socket normally
-s.setsockopt(socket.SOL_SIGFOX, socket.SO_OOB, False)
-
-# select the bit value when sending bit only packets
-s.setsockopt(socket.SOL_SIGFOX, socket.SO_BIT, False)
 ```
 
 Sending a Sigfox packet with a single bit is achieved by sending an empty string, i.e.:
@@ -189,7 +182,7 @@ Sending a Sigfox packet with a single bit is achieved by sending an empty string
 import socket
 s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
 
-# send a 1 bit
+# send 1 bit
 s.setsockopt(socket.SOL_SIGFOX, socket.SO_BIT, True)
 s.send('')
 socket.settimeout(value)
@@ -202,70 +195,4 @@ s.setblocking(True)
 
 If the socket is set to blocking, your code will be wait until the socket completes sending/receiving.
 
-## Sigfox Downlink
-
-A Sigfox capable Pycom devices (SiPy) can both send and receive data from the Sigfox network. To receive data, a message must first be sent up to Sigfox, requesting a downlink message. This can be done by passing a `True` argument into the `setsockopt()` method.
-
-```python
-s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, True)
-```
-
-An example of the downlink procedure can be seen below:
-
-```python
-# init Sigfox for RCZ1 (Europe)
-sigfox = Sigfox(mode=Sigfox.SIGFOX, rcz=Sigfox.RCZ1)
-
-# create a Sigfox socket
-s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
-
-# make the socket blocking
-s.setblocking(True)
-
-# configure it as DOWNLINK specified by 'True'
-s.setsockopt(socket.SOL_SIGFOX, socket.SO_RX, True)
-
-# send some bytes and request DOWNLINK
-s.send(bytes([1, 2, 3]))
-
-# await DOWNLINK message
-r = s.recv(32)
-print(ubinascii.hexlify(r))
-```
-
-## Sigfox FSK (Device to Device)
-
-To communicate between two Sigfox capable devices, it may be used in FSK mode. Two devices are required to be set to the same frequency, both using FSK.
-
-{{% hint style="info" %}}
-`Sigfox.FSK` mode is not supported on LoPy 4 and FiPy.
-{{% /hint %}}
-
-**Device 1**:
-
-```python
-sigfox = Sigfox(mode=Sigfox.FSK, frequency=868000000)
-
-s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
-s.setblocking(True)
-
-while True:
-  s.send('Device-1')
-  time.sleep(1)
-  print(s.recv(64))
-```
-
-**Device 2**:
-
-```python
-sigfox = Sigfox(mode=Sigfox.FSK, frequency=868000000)
-
-s = socket.socket(socket.AF_SIGFOX, socket.SOCK_RAW)
-s.setblocking(True)
-
-while True:
-  s.send('Device-2')
-  time.sleep(1)
-  print(s.recv(64))
-```
-
+For additional information about sockets, take a look at the [usockets API](/firmwareapi/micropython/usocket/)
