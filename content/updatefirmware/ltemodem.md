@@ -61,7 +61,7 @@ You can find the firmwares listed [here](https://software.pycom.io/downloads/seq
     import os
 
     sd = SD()
-    os.mount(fs, '/sd')     # mount it
+    os.mount(sd, '/sd')     # mount it
     os.fsformat('/sd')    # format SD card
     fs = os.mkfat(sd)
     print(os.listdir('/sd'))     # list its content
