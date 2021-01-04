@@ -310,6 +310,13 @@ theme = "doc-theme"
     parent = "tutorials@networks"
     weight = 40
 [[menu.main]]
+    name = "Power Saving Mode"
+    url = "/tutorials/networks/lte/power/"
+    identifier = "tutorials@networks@lte@power"
+    parent = "tutorials@networks@lte"
+    weight = 10
+
+[[menu.main]]
     name = "Ethernet"
     url = "/tutorials/networks/ethernet/"
     identifier = "tutorials@networks@ethernet"
