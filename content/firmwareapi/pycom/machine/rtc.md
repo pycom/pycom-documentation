@@ -36,7 +36,7 @@ rtc = RTC(id=0)
 
 Initialise the RTC. The arguments are:
 
-* `datetime` when passed it sets the current time. It is a tuple of the form: `(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])`
+* `datetime` when passed it sets the current time. It is a tuple of the form: `(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])`. Without argument, it will not reset the previously set time.
 * `source` selects the oscillator that drives the RTC. The options are 
     * `RTC.INTERNAL_RC`: Internal RC resonator
     * `RTC.XTAL_32KHZ`: External 32KHz crystal
