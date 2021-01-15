@@ -1,12 +1,12 @@
 ---
-title: "non-volatile RAM"
+title: "LoRa NVRAM"
 aliases:
     - tutorials/lora/nvram.html
     - tutorials/lora/nvram.md
     - chapter/tutorials/lora/nvram
 ---
 
-See the example below on how to use the lora nvram methods: 
+See the example below on how to use the lora nvram methods. You can use this to for example send a packet of sensor data over LoRa, and then enter deepsleep to save power. It is also possible to use OTAA instead of ABP by changing the activation method and authentication parameters. Note that the non volatile LoRa storage will be erased after it is restored, meaning you will have to save it again before sleeping, _and_ it is not possible to restore the values twice without saving in between.
 
 ```python
 import machine
@@ -15,7 +15,7 @@ from network import LoRa
 import socket
 import ubinascii
 
-sleep_time = 1000
+sleep_time = 10000 # sleep for 10 seconds
 print("init LoRa")
 lora = LoRa(mode=LoRa.LORAWAN, region=LoRa.EU868)
 time.sleep(1) #Allows us to exit the code using ctrl+c
@@ -52,4 +52,5 @@ print("received: {}".format(data))
 
 print("sleeping for {} ms".format(sleep_time))
 machine.deepsleep(sleep_time)
+print("this will never get printed")
 ```
