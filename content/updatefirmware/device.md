@@ -29,17 +29,16 @@ After you're done with upgrading, you can use the Pymakr Plugins to upload and r
     * On Expansionboard 2.0, connect a jumper cable or wire between `G23` and `GND`
 4. Reconnect the board via USB to your computer
 5. Run the Firmware Upgrade tool and click through the menus. There are several different firmware types available:
-    * `Pybytes`: this is the most comonly used latest firmware with built in pybytes library. You can use this firmware to connect to Pybytes (or choose to not use it)
+    * `Pybytes`: this is the most commonly used latest firmware with built in Pybytes library. You can use this firmware to connect to Pybytes (or choose to not use it)
     * `Pygate`: This firmware is needed to operate the Pygate expansionboard. It contains additional features like support for the LoRa gateway and PyEthernet. On the Lopy4, you cannot use the onboard LoRa radio. This version also includes the Pybytes library
     * `Pymesh`: This firmware is only available through a package on Pybytes as you will need to agree to additional licensing. It allows you to set up a LoRa mesh of pycom devices connected through Pybytes
     
     We do not recommend using the following firmware types in a production environment:
     
-    * `Development`: The latest beta-releases will be published here, they will be of the pybytes variant. There might be unkown bugs in this firmware.
+    * `Development`: The latest beta-releases will be published here, they will be of the pybytes variant. This is new development, so it can contain known and unknown issues. Testing and feedback is very much appreciated, but don't run it in production.
     * `Legacy`: Older firmwares without support for Pybytes.
     * `Pybytes-legacy`: Older firmwares with support for Pybytes.
     
-    Note that we only provide support on the latest firmware version!
     ![](/gitbook/assets/firmware_update-0.png)
     > Checking 'Include Development Releases' will check for the development releases of the Firmware Updater Tool
 
