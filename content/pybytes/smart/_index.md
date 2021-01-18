@@ -13,7 +13,7 @@ Further down the page you will find the following information:
 *  [Take into consideration](#take-into-consideration)
 *  [Quick help/FAQ](#faq)
 
-> Before starting, make sure you have enabled Pybytes smart config on the devices you want to provision by using `pybytes.smart_config(True)`, or by checking the option in the firmware updater tool. New devices will come with pybtes and smart config enabled by default.
+> Before starting, make sure you have enabled Pybytes smart config on the devices you want to provision by using `pybytes.smart_config(True)`, or by checking the option in the firmware updater tool. New devices will come with pybytes and smart config enabled by default.
 
 ## Pybytes app installing and Device Provisioning
 
