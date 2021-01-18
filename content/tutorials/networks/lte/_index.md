@@ -27,14 +27,14 @@ import socket
 lte = LTE()
 lte.init()
 #some carriers have special requirements, check print(lte.send_at_cmd("AT+SQNCTM=?")) to see if your carrier is listed.
-#when using verizon, use 
+#when using verizon, use
 #lte.init(carrier=verizon)
-#when usint AT&T use, 
+#when usint AT&T use,
 #lte.init(carrier=at&t)
 
 #some carriers do not require an APN
 #also, check the band settings with your carrier
-lte.attach(band=20, apn="your apn") 
+lte.attach(band=20, apn="your apn")
 print("attaching..",end='')
 while not lte.isattached():
     time.sleep(0.25)
@@ -58,10 +58,11 @@ lte.deinit()
 ```
 The last line of the script should return a tuple containing the IP address of the Pycom webserver.
 
->Note: the first time, it can take a long while to attach to the network. 
+>Note: the first time, it can take a long while to attach to the network.
 
 ## LTE Connectivity loss
 > You need firmware 1.20.2.r2 or later for this functionality
+
 
 It is possible that the LTE modem loses connectivity. It could be due to some radio interference, maybe the reception in the location of the module is not too good. Or if the module is being physically moved to another location with worse reception.
 
@@ -151,7 +152,7 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     * Later, the `RRC TOP FSM` goes from `SCANNING` to `SYNCING`
     * There are some states in between not discussed here.
     * If it is stuck at `WAIT_RSSI`, check the antenna connection
-    * If the system returns multiple times from `SYNCING` to `CAMPED`, check the network availability, simcard placement and / or the firmware version. 
+    * If the system returns multiple times from `SYNCING` to `CAMPED`, check the network availability, simcard placement and / or the firmware version.
 
 
     ```
@@ -238,8 +239,7 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     import sqnsupgrade
     sqnsupgrade.info()
     ```
-    * Versions LR5.xx are for CAT-M1 
-    * Versions LR6.xx are for NB-IoT 
+    * Versions LR5.xx are for CAT-M1
+    * Versions LR6.xx are for NB-IoT
 * Potential other errors:
-    * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network 
-
+    * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network

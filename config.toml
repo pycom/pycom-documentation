@@ -260,6 +260,24 @@ theme = "doc-theme"
     parent = "tutorials@networks"
     weight = 20
 [[menu.main]]
+    name = "Downlink"
+    url = "/tutorials/networks/sigfox/downlink/"
+    identifier = "tutorials@networks@sigfox@downlink"
+    parent = "tutorials@networks@sigfox"
+    weight = 10
+[[menu.main]]
+    name = "Disengage sequence numbers"
+    url = "/tutorials/networks/sigfox/disengage/"
+    identifier = "tutorials@networks@sigfox@disenage"
+    parent = "tutorials@networks@sigfox"
+    weight = 20
+[[menu.main]]
+    name = "Sipy to Sipy"
+    url = "/tutorials/networks/sigfox/module-module/"
+    identifier = "tutorials@networks@sigfox@module-module"
+    parent = "tutorials@networks@sigfox"
+    weight = 40
+[[menu.main]]
     name = "LoRa"
     url = "/tutorials/networks/LoRa/"
     identifier = "tutorials@networks@lora"
@@ -302,6 +320,12 @@ theme = "doc-theme"
     identifier = "tutorials@networks@lora@module-module"
     parent = "tutorials@networks@lora"
     weight = 60
+[[menu.main]]
+    name = "nvram"
+    url = "/tutorials/networks/lora/nvram/"
+    identifier = "tutorials@networks@lora@nvram"
+    parent = "tutorials@networks@lora"
+    weight = 70
 
 [[menu.main]]
     name = "LTE"
@@ -309,6 +333,13 @@ theme = "doc-theme"
     identifier = "tutorials@networks@lte"
     parent = "tutorials@networks"
     weight = 40
+[[menu.main]]
+    name = "Power Saving Mode"
+    url = "/tutorials/networks/lte/power/"
+    identifier = "tutorials@networks@lte@power"
+    parent = "tutorials@networks@lte"
+    weight = 10
+
 [[menu.main]]
     name = "Ethernet"
     url = "/tutorials/networks/ethernet/"
@@ -397,31 +428,31 @@ theme = "doc-theme"
     weight = 10
 [[menu.main]]
     name = "pysense"
-    url = "/tutorials/expansionboards/pysense"
+    url = "/tutorials/expansionboards/pysense/"
     identifier = "tutorials@expansionboards@pysense"
     parent = "tutorials@expansionboards"
     weight = 20
 [[menu.main]]
     name = "pysense 2.0 X"
-    url = "/tutorials/expansionboards/pysense2"
+    url = "/tutorials/expansionboards/pysense2/"
     identifier = "tutorials@expansionboards@pysense2"
     parent = "tutorials@expansionboards"
     weight = 30
 [[menu.main]]
     name = "pytrack"
-    url = "/tutorials/expansionboards/pytrack"
+    url = "/tutorials/expansionboards/pytrack/"
     identifier = "tutorials@expansionboards@pytrack"
     parent = "tutorials@expansionboards"
     weight = 40
 [[menu.main]]
     name = "pytrack 2.0 X"
-    url = "/tutorials/expansionboards/pytrack2"
+    url = "/tutorials/expansionboards/pytrack2/"
     identifier = "tutorials@expansionboards@pytrack2"
     parent = "tutorials@expansionboards"
     weight = 50
 [[menu.main]]
     name = "pyscan"
-    url = "/tutorials/expansionboards/pyscan"
+    url = "/tutorials/expansionboards/pyscan/"
     identifier = "tutorials@expansionboards@pyscan"
     parent = "tutorials@expansionboards"
     weight = 60

@@ -10,11 +10,13 @@ aliases:
 
 ![](/gitbook/assets/pyscan-new.png)
 
-## Datasheet
+## Datasheet & Pinout
 
-The datasheet of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-specsheet.pdf)
+The pinout and datasheet of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-pinout.pdf)
 
 [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pyscan(8286-00031P)-20190523.pdf)
+
+![](/gitbook/assets/pyscan-pinout-1.png)
 
 ## Pyscan Libraries
 
@@ -33,12 +35,6 @@ The Windows 7 driver for Pyscan is located [here](/gettingstarted/software/drive
 
 For other Operating Systems, no driver is required.
 
-## Pinout
-
-The pinout of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-pinout.pdf)
-
-
-![](/gitbook/assets/pyscan-pinout-1.png)
 
 ## Battery Charger
 

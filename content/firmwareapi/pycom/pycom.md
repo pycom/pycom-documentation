@@ -25,9 +25,9 @@ pycom.rgbled(0xff00)    # make the LED light up in green color
 
 Get or set the state (enabled or disabled) of the heartbeat LED. Accepts and returns boolean values.
 
-### pycom.rgbled(color)
+### pycom.rgbled([color])
 
-Set the colour of the RGB LED. The colour is specified as 24 bit value representing red, green and blue, in the following order `0xRRGGBB`. For instance, passing the value `0x00FF00` will light up the LED in a very bright green.
+Get or set the colour of the RGB LED. The colour is specified as 24 bit value representing red, green and blue, in the following order `0xRRGGBB`. For instance, passing the value `0x00FF00` will light up the LED in a very bright green. If no color is provided, this will return the current color of the LED.
 
 ### pycom.nvs_set(key, value)
 

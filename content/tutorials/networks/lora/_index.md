@@ -3,14 +3,13 @@ title: "LoRa Examples"
 aliases:
 ---
 
-The following tutorials demonstrate the use of the LoRa functionality on the LoPy. LoRa can work in 2 different modes; **LoRa-MAC** (which we also call Raw-LoRa) and **LoRaWAN** mode.
-> Note: LoRa will not work with Pygate firmware loaded on your device. It will return a `/event_groups.c:498 (xEventGroupClearBits)- assert failed!` error.
+The following tutorials demonstrate the use of the LoRa functionality. LoRa can work in 2 different modes: **LoRa-MAC** (which we also call Raw-LoRa) and **LoRaWAN** mode. Link for the [Pygate tutorial](/tutorials/expansionboards/pygate/)
 
 When using Lora, **Always** connect the appropriate LoRa antenna to your device. See the figures below for the correct antenna placement
 
-| Lopy / Fipy | Lopy4 |
+| Lopy4 | Lopy / Fipy |
 |:---|:---|
-| ![](/gitbook/assets/lora_pigtail_lopy.png) | ![](/gitbook/assets/lora_sigfox_pigtail_lopy4.png) |
+| ![](/gitbook/assets/lora_sigfox_pigtail_lopy4.png) |  ![](/gitbook/assets/lora_pigtail_lopy.png)|
 
 * **LoRaWAN mode** implements the full LoRaWAN stack for a class A device. It supports both OTAA and ABP connection methods, as well as advanced features like adding and removing custom channels to support "special" frequencies plans like the those used in New Zealand. There are two basic ways of accessing the LoraWAN network:
     * [LoRaWAN ABP](../lora/lorawan-abp/)
