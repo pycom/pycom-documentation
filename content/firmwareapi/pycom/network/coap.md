@@ -15,10 +15,23 @@ from network import WLAN
 from network import Coap
 import _thread
 
+# Callback to be called when a new resource has been added via PUT
+def new_resource_callback(new_resource):
+    details = new_resource.get_details()
+    print("New resource has been created!")
+    print("URI: {}".format(details[0]))
+    print("Mediatype: {}".format(details[1]))
+    print("Max Age: {}".format(details[2]))
+    print("ETAG: {}".format(details[3]))
+    print("ETAG value: {}".format(details[4]))
+    print("Value: {}".format(new_resource.value()))
+    # Configure the properties of the new resource
+    new_resource.set_details(mediatype=Coap.MEDIATYPE_TEXT_PLAIN, max_age=132, etag=True)
+
 # Thread handling the CoAp Server
 def coap_thread():
     while True:
-        # Call Coap.read() without specyfing timeout value, in this way it handled all requests sent to the CoAp Server silently
+        # Call Coap.read() without specyfing timeout value, in this way it handles all requests sent to the CoAp Server silently
         Coap.read()
 
 
@@ -26,8 +39,10 @@ def coap_thread():
 wlan = WLAN(mode=WLAN.STA)
 wlan.connect('your-ssid', auth=(WLAN.WPA2, 'your-key'))
 
-# Initialize Coap module as CoAp Server
-Coap.init(str(wlan.ifconfig()[0]), service_discovery=True)
+# Initialize Coap module as CoAp Server, enable new resources to be added via PUT 
+Coap.init(str(wlan.ifconfig()[0]), service_discovery=True, dynamic_resources=True)
+# Register callback which will be called when new resource is added via PUT
+Coap.register_new_resource_handler(new_resource_callback)
 
 # Add a resource with default value and plain text content format
 r = Coap.add_resource("resource1", media_type=Coap.MEDIATYPE_TEXT_PLAIN, value="default_value")
@@ -174,7 +189,7 @@ print(id)
 
 ## Initialization
 
-#### Coap.init(address, *, port=5683, service_discovery=False)
+#### Coap.init(address, *, port=5683, service_discovery=False, dynamic_resources=False)
 
 Initialize the CoAp module.
 
@@ -183,6 +198,10 @@ The arguments are:
 * `address` is the address where the CoAp module handles communication when it is a Server. If not set, the module can be used as a CoAp Client only.
 * `port` is the port where the CoAp Server listens. If not set, the default CoAp UDP port is 5683.
 * `service_discovery` is a Boolean argument that enables/disables service discovery. If enabled, the CoAp Server will listen on the CoAp multicast address: 224.0.1.187. This is disabled by default.
+* `dynamic_resources` is a Boolean argument that enables/disables new resource creation via PUT operations. This is disabled by default.
+
+When `dynamic_resources` is TRUE new resources can be created via PUT reqeusts, if the resource with the given URI does not already exist.
+The new resource is created with default properties (no mediatype, no Max-Age and no ETAG is enabled) and with default value received in the PUT request. On the new resource by default all operations (GET, PUT, POST and DELETE) are enabled.
 
 ## Methods:
 
@@ -239,6 +258,13 @@ Registers a callback function which will be called when a remote CoAp Server res
 * `token` is the token field from the received message
 * `payload` is the payload of the received message
 
+#### Coap.register_new_resource_handler(callback)
+
+Registers a callback function which will be called when a a new resource has been created via PUT operation.
+
+* `callback` is the callback to be registered. It must have the following arguments:
+* `resource` is the new resource which has been created
+
 #### Coap.new_client_session(destination, port=5683, protocol=UDP)
 
 Creates a new CoAp Client Session which can be used to communicate with an external CoAp Server.
@@ -284,7 +310,7 @@ Returns with a list of elements showing internal information about this CoAP Cli
 
 ## Class CoapResource
 
-The CoapResource class represents a resource in the scope of the CoAp module when acting as a server. A new resource can only be created with the `Coap.add_resource` function.
+The CoapResource class represents a resource in the scope of the CoAp module when acting as a server.
 
 #### Class methods
 
@@ -307,6 +333,25 @@ coap-client -m get coap://<Coap-Server's address>/.well-known/core
 
 {{% /hint %}}
 
+#### CoapResource.get_details()
+
+Returns with the main details of this resource in a form of list:
+* `Item 0:` is the URI of the resource.
+* `Item 1:` is the mediatype (content format) configured for this resource. -1 means no mediatype is configured.
+* `Item 2:` is the Max-Age configured for this resource. -1 means no Max-Age is configured.
+* `Item 3:` is a boolean showing whether ETAG is enabled on this resource.
+* `Item 4:` is the current ETAG value.
+
+#### CoapResource.set_details(*, mediatype, max_age, etag)
+
+Configures the main details of this resource:
+* `mediatype` is the mediatype (content format) os the resource. Value -1 means no mediatype is defined for this resource.
+* `max_age` is max-age value to be used on the resource. Value -1 means no Max-Age is defined for this resource.
+* `etag` is a Boolean which enables or disables ETAG on the resource.
+
+This function leaves untouched any property of the resource not given as a parameter.
+
+
 #### CoapResource.value(value)
 
 Updates or fetches the value of the resource.
@@ -322,15 +367,15 @@ To enable or disable a specific operation (GET, PUT, POST, DELETE) on the resour
 
 
 {{% hint style="info" %}}
-During a GET request, only the first occurrence of an ETAG or Accept option is passed on and interpreted; others of the same type are dropped (if any).
+During a GET request, only the first occurrence of an ETAG or Accept option is interpreted; others of the same type are dropped (if any).
 {{% /hint %}}
 
 {{% hint style="info" %}}
-During a PUT request, only the first occurrence of an If-Match option is passed on and interpreted; others of the same type are dropped (if any).
+During a PUT request, only the first occurrence of an If-Match and If-None-Match option is interpreted; others of the same type are dropped (if any).
 {{% /hint %}}
 
 {{% hint style="danger" %}}
-Due to limitations of the underlying ESP-IDF/libcoap library, new resources cannot be added via PUT or POST requests.
+Due to limitations of the underlying ESP-IDF/libcoap library, new resources cannot be added via POST request.
 {{% /hint %}}
 
 ## Constants
