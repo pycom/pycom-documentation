@@ -260,10 +260,10 @@ Registers a callback function which will be called when a remote CoAp Server res
 
 #### Coap.register_new_resource_handler(callback)
 
-Registers a callback function which will be called when a a new resource has been created via PUT operation.
+Registers a callback function which will be called when a new resource has been created via PUT operation.
 
-* `callback` is the callback to be registered. It must have the following arguments:
-* `resource` is the new resource which has been created
+* `callback` is the callback to be registered. The callback must have 1 argument:
+    * `resource` is the new resource which has been created
 
 #### Coap.new_client_session(destination, port=5683, protocol=UDP)
 
@@ -305,8 +305,8 @@ Creates and sends a request to the external CoAp Server defined by the `destinat
 
 Returns with a list of elements showing internal information about this CoAP Client Session:
 
-* `destination` is the IPv4 Address of the CoAp Server where this CoAp Client Session has joined.
-* `port` is the port of the CoAp Server where this CoAp Client Session has joined.
+* `Item 0:` is the IPv4 Address of the CoAp Server where this CoAp Client Session has joined.
+* `Item 1:` is the port of the CoAp Server where this CoAp Client Session has joined.
 
 ## Class CoapResource
 
