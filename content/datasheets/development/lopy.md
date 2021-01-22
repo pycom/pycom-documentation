@@ -33,6 +33,10 @@ The pinout of the LoPy is available as a [PDF File](/gitbook/assets/lopy-pinout.
 
 > Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
 
+## Footprints & 3D files
+
+[3D STEP file](/gitbook/assets/3D-files/LoPy4.step)
+[Pycom footprints](https://github.com/pycom/footprints)
 
 ## Notes
 

@@ -20,11 +20,7 @@ aliases:
 
 The datasheet of the WiPy3 is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy3.0_v2.pdf)
 
-The Wipy 3 is certified for [CE RED](/gitbook/assets/17-214126_red-certificate_pycom_wipy-3.0.pdf)
-
-[RCM](/gitbook/assets/RCM-Wipy3.pdf)
-
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-WiPy-3(8286-00026P)-20190523.pdf)
+The Wipy 3 is certified for [CE RED](/gitbook/assets/17-214126_red-certificate_pycom_wipy-3.0.pdf), [RCM](/gitbook/assets/RCM-Wipy3.pdf), [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-WiPy-3(8286-00026P)-20190523.pdf)
 
 ## Pinout
 
@@ -33,8 +29,12 @@ The pinout of the WiPy3 is available as a [PDF File](/gitbook/assets/wipy3-pinou
 
 ![](/gitbook/assets/wipy3-pinout.png)
 
-> Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
+> Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed via software.
 
+## Footprints & 3D files
+
+[3D STEP file](/gitbook/assets/3D-files/WiPy.step)
+[Pycom footprints](https://github.com/pycom/footprints)
 
 ## Differences from WiPy 2.0
 
@@ -42,6 +42,7 @@ The pinout of the WiPy3 is available as a [PDF File](/gitbook/assets/wipy3-pinou
 * The RAM has been upgraded from 512KB to 4MB
 * The External FLASH has been upgraded from 4MB to 8MB
 * The antenna select pin has moved from GPIO16 to GPIO21 \(P12\)
+
 
 ## Notes
 
