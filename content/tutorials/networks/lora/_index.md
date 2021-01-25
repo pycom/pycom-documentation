@@ -4,7 +4,6 @@ aliases:
 ---
 
 The following tutorials demonstrate the use of the LoRa functionality on the LoPy. LoRa can work in 2 different modes; **LoRa-MAC** (which we also call Raw-LoRa) and **LoRaWAN** mode.
-> Note: LoRa will not work with Pygate firmware loaded on your device. It will return a `/event_groups.c:498 (xEventGroupClearBits)- assert failed!` error.
 
 When using Lora, **Always** connect the appropriate LoRa antenna to your device. See the figures below for the correct antenna placement
 
@@ -24,3 +23,4 @@ When using Lora, **Always** connect the appropriate LoRa antenna to your device.
 * **Lopy to Lopy** You are also able to connect two devices to each other using LoRa frequencies. We have one example explaining more about that
     * [Lopy to Lopy](../lora/module-module/)
 
+* **Pygate** Go to the [Expansionboard tutorials](/tutorials/expansionboards/pygate/) for the Pygate tutorial
