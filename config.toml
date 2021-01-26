@@ -507,6 +507,13 @@ theme = "doc-theme"
     weight = 180
 
 [[menu.main]]
+    name = "ESP-NOW"
+    url = "/tutorials/all/espnow/"
+    identifier = "tutorials@all@espnow"
+    parent = "tutorials@all"
+    weight = 190
+
+[[menu.main]]
     name = "LoRa Examples"
     url = "/tutorials/lora/"
     identifier = "tutorials@lora"
