@@ -26,8 +26,6 @@ wlan.connect('your-ssid', auth=(WLAN.WPA2, 'your-key'))
 
 # Initialize Coap module as CoAp Server, enable new resources to be added via PUT 
 Coap.init(str(wlan.ifconfig()[0]), service_discovery=True, dynamic_resources=True)
-# Register callback which will be called when new resource is added via PUT
-Coap.register_new_resource_handler(new_resource_callback)
 
 # Add an example resource with URI "resource1" and value "default_value" and content format "plain text" 
 r = Coap.add_resource("resource1", media_type=Coap.MEDIATYPE_TEXT_PLAIN, value="default_value")
