@@ -514,6 +514,13 @@ theme = "doc-theme"
     weight = 190
 
 [[menu.main]]
+    name = "CoAp"
+    url = "/tutorials/all/coap/"
+    identifier = "tutorials@all@coap"
+    parent = "tutorials@all"
+    weight = 200
+
+[[menu.main]]
     name = "LoRa Examples"
     url = "/tutorials/lora/"
     identifier = "tutorials@lora"
