@@ -62,7 +62,11 @@ ESPNOW.send(None, "Hello all Peers!")
 
 #### ESPNOW.init()
 
-Initialize the ESP-NOW module.
+Initialize the ESP-NOW module. The module needs that WLAN has already been initialized.
+
+{{% hint style="danger" %}}
+When using ESP-NOW module, WLAN must not be reconfigured or deinitialized.
+{{% /hint %}}
 
 ## Methods:
 
