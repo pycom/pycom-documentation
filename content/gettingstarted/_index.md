@@ -16,7 +16,7 @@ In the following guide, we will explain the basic process to get started using y
 1. [Setting up the hardware](#step-1-setting-up-the-hardware)
 2. [Setting up your computer](#step-2-setting-up-your-computer)
 3. [Programming the module](#step-3-programming-your-module)
-
+4. [Using your Expansionboard](#step-4-using-your-expansionboard)
 
 <!-- ![](/gitbook/assets/getting_started%20%281%29.png) -->
 
@@ -35,7 +35,7 @@ This step works the same for all our development boards and expansion boards. In
 
 ## Step 2: Setting up your computer
 
-Now that your module is successfully connected, you will need to install some software on your computer to interface with it. For this, we use Pymakr, a plugin for both Visual Studio Code and Atom IDE. Through either one of the environments, we can connect to the board and talk Python! 
+Now that your module is successfully connected, you will need to install some software on your computer to interface with it. For this, we use Pymakr, a plugin for both Visual Studio Code and Atom IDE. Through either one of the environments, we can connect to the board and talk Python!
 
 Follow the link below for the installation instructions:
 
@@ -82,7 +82,7 @@ import time
 
 This will import two libraries, `pycom` which is responsible for Pycom specific features, such as the on-board LED and `time` which is a standard library used for timing and delays.
 
->You may have noticed that when you power up your Pycom module, the on-board LED blinks blue on a regular basis. This "heartbeat" is used as a way of know that your module has powered up and started correctly. 
+>You may have noticed that when you power up your Pycom module, the on-board LED blinks blue on a regular basis. This "heartbeat" is used as a way of know that your module has powered up and started correctly.
 
 Before we can change the colour of this LED we need to disable this heart beat. Below your imports you will need to add the following:
 
@@ -92,7 +92,7 @@ pycom.heartbeat(False)
 ```
 
 
-Now it's time to test your code. On the Pymakr pane, you will see a `run` button, but als an `upload (to device)` button. For now, we will use `run`. 
+Now it's time to test your code. On the Pymakr pane, you will see a `run` button, but als an `upload (to device)` button. For now, we will use `run`.
 
 After running the example code above, you should see that that on-board LED stops blinking blue. Now, we can complete our script to blink the LED like so:
 
@@ -127,8 +127,21 @@ If you need to remove files from your device you can use the following commands:
 >>> os.fsformat('/flash')
 ```
 
-## Step 4: Further references
-Now that we got the basic example running, you can proceed to develop your own application! For further references, you can check the links below:
+## Step 4: Using your expansionboard
+From here on, you can continue to use the additional features of your expansionboard:
+>Note The Expansionboard requires no additional libraries and all functions work out of the box!
+
+|[ Pygate](/tutorials/expansionboards/pygate/)| [Pysense](/tutorials/expansionboards/pysense/) | [Pysense 2.0 X](/tutorials/expansionboards/pysense2/)| [Pytrack](/tutorials/expansionboards/pytrack/)| [Pytrack 2.0 X](/tutorials/expansionboards/pytrack2/)| [PyScan ](/tutorials/expansionboards/pyscan/)|
+|:----|:-----|:-----|:-----|:-----|:----|
+| [![](/gitbook/assets/expansionboards/pygate.png)](/tutorials/expansionboards/pygate/)|[![](/gitbook/assets/expansionboards/pysense1.png)](/tutorials/expansionboards/pysense/) | [![](/gitbook/assets/expansionboards/pysense2.png)](/tutorials/expansionboards/pysense2/)| [![](/gitbook/assets/expansionboards/pytrack1.png)](/tutorials/expansionboards/pytrack/)| [![](/gitbook/assets/expansionboards/pytrack2.png)](/tutorials/expansionboards/pytrack2/)| [![](/gitbook/assets/expansionboards/pyscan.png)](/tutorials/expansionboards/pyscan/) |
+
+## Step 5: Connecting to a network
+
+|[WiFi](/tutorials/networks/wlan/) | [LoRa](/tutorials/networks/lora/) | [SigFox](/tutorials/networks/sigfox/) | [BLE](/tutorials/networks/ble/) | [LTE](/tutorials.networks/lte/) | Ethernet |
+|:---|:---|:---|:---|:---|:---|
+## Further references
+Now that we got the basic example running, you can continue with the links below.
+
 
 * [Tutorials and examples](/tutorials/)
 

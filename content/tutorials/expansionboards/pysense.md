@@ -5,9 +5,15 @@ aliases:
     - tutorials/pysense.md
     - chapter/tutorials/pysense
 ---
+The Pysense board includes 4 additional sensors to be used with your pycom device! You can find an example on how to use the sensors below, but first we need to install the libraries. You can find more information about the Pysense and its sensors in the [datasheet section](/datasheets/expansionboards/pysense/)
 
-## All sensors
->Note: You can find this example in the [GitHub repository](https://github.com/pycom/pycom-libraries/tree/master/pysense). Over there, you can also find the relevant libraries. 
+## Install libraries
+To use the Pysense board, you will first need to add some libraries to your project: 
+1. Go the the [GitHub repository](https://github.com/pycom/pycom-libraries/) and download the archive. 
+2. Extract the archive and copy the files from the pysense folder into your project folder
+3. Upload the project to your device. This will enable the functionality. 
+
+## Use sensors
 ```python
 #!/usr/bin/env python
 #
@@ -64,7 +70,7 @@ time.sleep(3)
 py.setup_sleep(10)
 py.go_to_sleep()
 ```
-## Accelerometer
+## Accelerometer example
 
 This basic example shows how to read pitch and roll from the on-board accelerometer and output it in comma separated value (CSV) format over serial.
 
