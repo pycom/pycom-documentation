@@ -90,9 +90,26 @@ lte_callback(LTE.EVENT_BREAK, lte_cb_handler)
 
 ## LTE Troubleshooting guide
 
+### Firmware version
+    Use either of the following snippets to check the version of the LTE modem firmware:
+    ```python
+    import sqnsupgrade
+    sqnsupgrade.info()
+    ```
+    or
+    ```python
+    from network import LTE
+    lte = LTE()
+    print(lte.send_at_cmd('ATI1'))
+    ```
+    * Versions LR5.xx are for CAT-M1
+    * Versions LR6.xx are for NB-IoT
 
 
-Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
+
+### State transitions
+
+Below, we review the state transitions of the modem firmware as reported by `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
 1. Before calling `lte.attach()`, the status will be `STOPPED`.
 
     ```
@@ -232,14 +249,6 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     +--------------------------+--------------------+
     ```
 
-* Firmware version:
-    Use the following to check the version number:
-    ```python
-    import sqnsupgrade
-    sqnsupgrade.info()
-    ```
-    * Versions LR5.xx are for CAT-M1 
-    * Versions LR6.xx are for NB-IoT 
-* Potential other errors:
-    * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network 
 
+### Potential other errors
+    * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network
