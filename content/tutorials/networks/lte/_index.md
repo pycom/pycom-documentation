@@ -252,6 +252,29 @@ Below, we review the state transitions of the modem firmware as reported by `pri
     +--------------------------+--------------------+
     ```
 
+### Full FSM log
+
+In order to capture all state transitions in a log file during an attach, you can use this snippet:
+```python
+# initiate the attach
+lte.attach()
+# turn off debugging if it was turned on before
+# otherwise there is too much details/noise in the logfile
+lte.init(debug=False)
+rsrpq = None
+fsm = None
+while not lte.isattached():
+    rsrpq2 = lte.send_at_cmd('AT+CESQ').strip()
+    if rsrpq2 != rsrpq:
+        rsrpq = rsrpq2
+        print(time.time(), rsrpq)
+    fsm2 = lte.send_at_cmd('AT!="fsm"').strip()
+    if fsm != fsm2:
+        fsm=fsm2
+        print(time.time(), fsm)
+    time.sleep(0.1)
+print(time.time(), "attached")
+```
 
 ### Potential other errors
     * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network
