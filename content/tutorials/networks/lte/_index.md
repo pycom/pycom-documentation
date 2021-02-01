@@ -109,6 +109,13 @@ lte_callback(LTE.EVENT_BREAK, lte_cb_handler)
 
 When you add `debug=True` to the initialization, e.g. `lte = LTE(debug=True)` then the AT commands sent to the modem and the responses will be printed to the REPL. This can help with diagnosing problems with the LTE module.
 
+### First attach can be slow
+
+The first time when the modem tries to attach to the network the scan process can take a long time. This is especially true with NB-IoT. Also it makes a very big difference whether the band to be used is specified with the `attach()` command with the `band` or `bands` parameters. In the worst cases, if many or large bands need to be scanned, this might take in the order of half an hour for the first attach. If the band is not specified, the modem might fall back to scanning all bands which could take even longer or fail altogether. So, it is always advised to specify the band.
+
+When the first attach succeeds the modem will store the frequency internally. Subsequent attach attempts will try the stored frequency first and should attach in seconds. Only if that frequency fails, will the modem fall back to scanning.
+
+After flashing a new firmware or performing a factory reset, the next attach will be a "first" . Changing operators might imply a "first scan". Changes of the geographic location, could in principle also lead to a change of frequency and a "first scan", but this is less likely.
 
 ### State transitions
 
