@@ -15,9 +15,9 @@ When using the LTE network, **Always** connect the appropriate antenna to your d
 | ![](/gitbook/assets/lte_ant_gpy.png) | ![](/gitbook/assets/lte_ant_fipy.png)  |  
 
 
-GPy and FiPy support both LTE CAT-M1 and NB-IoT. These are newer, low power, long range, cellular protocols. They are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are. Together with the SIM card, the provider will supply you with configuration details: Usually band and APN. Use these in the example code below. 
+GPy and FiPy support both LTE CAT-M1 and NB-IoT. These are newer, low power, long range, cellular protocols. They are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are. Together with the SIM card, the provider will supply you with configuration details: Usually band and APN. Use these in the example code below.
 
-## Example 
+## Example
 
 ```python
 from network import LTE
@@ -91,9 +91,36 @@ lte_callback(LTE.EVENT_BREAK, lte_cb_handler)
 
 ## LTE Troubleshooting guide
 
+### Firmware version
+    Use either of the following snippets to check the version of the LTE modem firmware:
+    ```python
+    import sqnsupgrade
+    sqnsupgrade.info()
+    ```
+    or
+    ```python
+    from network import LTE
+    lte = LTE()
+    print(lte.send_at_cmd('ATI1'))
+    ```
+    * Versions LR5.xx are for CAT-M1
+    * Versions LR6.xx are for NB-IoT
 
+### Debug output
 
-Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
+When you add `debug=True` to the initialization, e.g. `lte = LTE(debug=True)` then the AT commands sent to the modem and the responses will be printed to the REPL. This can help with diagnosing problems with the LTE module.
+
+### First attach can be slow
+
+The first time when the modem tries to attach to the network the scan process can take a long time. This is especially true with NB-IoT. Also it makes a very big difference whether the band to be used is specified with the `attach()` command with the `band` or `bands` parameters. In the worst cases, if many or large bands need to be scanned, this might take in the order of half an hour for the first attach. If the band is not specified, the modem might fall back to scanning all bands which could take even longer or fail altogether. So, it is always advised to specify the band.
+
+When the first attach succeeds the modem will store the frequency internally. Subsequent attach attempts will try the stored frequency first and should attach in seconds. Only if that frequency fails, will the modem fall back to scanning.
+
+After flashing a new firmware or performing a factory reset, the next attach will be a "first" . Changing operators might imply a "first scan". Changes of the geographic location, could in principle also lead to a change of frequency and a "first scan", but this is less likely.
+
+### State transitions
+
+Below, we review the state transitions of the modem firmware as reported by `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
 1. Before calling `lte.attach()`, the status will be `STOPPED`.
 
     ```
@@ -233,13 +260,30 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     +--------------------------+--------------------+
     ```
 
-* Firmware version:
-    Use the following to check the version number:
-    ```python
-    import sqnsupgrade
-    sqnsupgrade.info()
-    ```
-    * Versions LR5.xx are for CAT-M1
-    * Versions LR6.xx are for NB-IoT
-* Potential other errors:
+
+### Full FSM log
+
+In order to capture all state transitions in a log file during an attach, you can use this snippet:
+```python
+# initiate the attach
+lte.attach()
+# turn off debugging if it was turned on before
+# otherwise there is too much details/noise in the logfile
+lte.init(debug=False)
+rsrpq = None
+fsm = None
+while not lte.isattached():
+    rsrpq2 = lte.send_at_cmd('AT+CESQ').strip()
+    if rsrpq2 != rsrpq:
+        rsrpq = rsrpq2
+        print(time.time(), rsrpq)
+    fsm2 = lte.send_at_cmd('AT!="fsm"').strip()
+    if fsm != fsm2:
+        fsm=fsm2
+        print(time.time(), fsm)
+    time.sleep(0.1)
+print(time.time(), "attached")
+```
+
+### Potential other errors
     * `OSError: [Errno 202] EAI_FAIL`: Check the data plan / SIM activation status on network
