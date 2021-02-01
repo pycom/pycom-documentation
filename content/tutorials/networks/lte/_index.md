@@ -15,9 +15,9 @@ When using the LTE network, **Always** connect the appropriate antenna to your d
 | ![](/gitbook/assets/lte_ant_gpy.png) | ![](/gitbook/assets/lte_ant_fipy.png)  |  
 
 
-GPy and FiPy support both LTE CAT-M1 and NB-IoT. These are newer, low power, long range, cellular protocols. They are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are. Together with the SIM card, the provider will supply you with configuration details: Usually band and APN. Use these in the example code below. 
+GPy and FiPy support both LTE CAT-M1 and NB-IoT. These are newer, low power, long range, cellular protocols. They are not the same as the full version of 2G/3G/LTE supported by cell phones, and require your local carriers to support them. At the time of writing, CAT-M1 and NB-IoT connectivity is not widely available so be sure to check with local carriers if support is available where you are. Together with the SIM card, the provider will supply you with configuration details: Usually band and APN. Use these in the example code below.
 
-## Example 
+## Example
 
 ```python
 from network import LTE
@@ -27,14 +27,14 @@ import socket
 lte = LTE()
 lte.init()
 #some carriers have special requirements, check print(lte.send_at_cmd("AT+SQNCTM=?")) to see if your carrier is listed.
-#when using verizon, use 
+#when using verizon, use
 #lte.init(carrier=verizon)
-#when usint AT&T use, 
+#when usint AT&T use,
 #lte.init(carrier=at&t)
 
 #some carriers do not require an APN
 #also, check the band settings with your carrier
-lte.attach(band=20, apn="your apn") 
+lte.attach(band=20, apn="your apn")
 print("attaching..",end='')
 while not lte.isattached():
     time.sleep(0.25)
@@ -58,7 +58,7 @@ lte.deinit()
 ```
 The last line of the script should return a tuple containing the IP address of the Pycom webserver.
 
->Note: the first time, it can take a long while to attach to the network. 
+>Note: the first time, it can take a long while to attach to the network.
 
 ## LTE Connectivity loss
 > You need firmware 1.20.2.r2 or later for this functionality
@@ -151,7 +151,7 @@ Below, we review the responses from `print(lte.send_at_cmd('AT!="fsm"'))`. If yo
     * Later, the `RRC TOP FSM` goes from `SCANNING` to `SYNCING`
     * There are some states in between not discussed here.
     * If it is stuck at `WAIT_RSSI`, check the antenna connection
-    * If the system returns multiple times from `SYNCING` to `CAMPED`, check the network availability, simcard placement and / or the firmware version. 
+    * If the system returns multiple times from `SYNCING` to `CAMPED`, check the network availability, simcard placement and / or the firmware version.
 
 
     ```
