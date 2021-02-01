@@ -63,6 +63,7 @@ The last line of the script should return a tuple containing the IP address of t
 ## LTE Connectivity loss
 > You need firmware 1.20.2.r2 or later for this functionality
 
+
 It is possible that the LTE modem loses connectivity. It could be due to some radio interference, maybe the reception in the location of the module is not too good. Or if the module is being physically moved to another location with worse reception.
 
 If the connectivity is lost this will in general not be reflected when you check `lte.isconnected()`. However, the lte modem sends a `UART break` signal. You can receive these events by using the `lte_callback` functionality. When connectivity is lost, the modem will try it's best to re-establish connectivity and this also works well in general. When connectivity is re-established, the modem will send another break signal, ie, the `lte_callback` will fire again.
@@ -258,6 +259,7 @@ Below, we review the state transitions of the modem firmware as reported by `pri
     | HP CAT FSM               |IDLE                |
     +--------------------------+--------------------+
     ```
+
 
 ### Full FSM log
 
