@@ -105,6 +105,9 @@ lte_callback(LTE.EVENT_BREAK, lte_cb_handler)
     * Versions LR5.xx are for CAT-M1
     * Versions LR6.xx are for NB-IoT
 
+### Debug output
+
+When you add `debug=True` to the initialization, e.g. `lte = LTE(debug=True)` then the AT commands sent to the modem and the responses will be printed to the REPL. This can help with diagnosing problems with the LTE module.
 
 
 ### State transitions
