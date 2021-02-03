@@ -89,20 +89,30 @@ You can find the firmwares listed [here](https://software.pycom.io/downloads/seq
 
 
 ## USB
-If you do not have an SD card available, you can use the existing USB-UART interface. For this you will need to install 
+If you do not have an SD card available, you can update the firmware over USB. For this you will need to install 
 
 * [Python 3](https://www.python.org/downloads)
 * [PySerial](https://pythonhosted.org/pyserial/pyserial.html#installation)
 * [sqnsupgrade python script](https://github.com/pycom/pycom-libraries/tree/master/lib/sqnsupgrade)
 
-1. Use the following command to allow direct UART communication to the LTE modem:
+1. On the Pycom module run the following command to allow direct UART communication to the LTE modem:
     ```python
     import sqnsupgrade
     sqnsupgrade.uart(True)
     ```
-2. Take note of the Serial port used and close the IDE.
+1. You will see a response similar to this:
+    ```python
+    <<< Welcome to the SQN3330 firmware updater [1.2.6] >>>
+    >>> GPy with firmware version 1.20.3.b2
+    Preparing modem for upgrade...
+    FFH mode is not necessary... ignoring!
+    Do not specify updater.elf when updating!
+    Attempting AT wakeup...
+    Going into MIRROR mode... please close this terminal to resume the upgrade via UART
+    ```
+1. Take note of the Serial port used and close the REPL.
 
-3. Go to the directory where you saved the `sqnsupgrade` script and run the following commands in the command line / terminal
+1. On the computer go to the directory where you saved the `sqnsupgrade` script and run the following commands in the command line / terminal
     ```python
     $ python3
     >>> import sqnsupgrade
@@ -114,9 +124,9 @@ If you do not have an SD card available, you can use the existing USB-UART inter
     ```
     >Note: Replace the paths and `name.dup` with the actual files. There are different versions for `CAT-M1`  and `NB-IoT`
 
-4. The update is now running. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
+1. The update is now running. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
     >Note: **Do not disconnect power to the module during the updating process**
-5.  The updater will show `SYSTEM VERSION` when it is done, and return control to REPL.
+1.  The updater will show `SYSTEM VERSION` when it is done, and return control to REPL.
 
 
 ## Wireless
