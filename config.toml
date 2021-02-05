@@ -1138,15 +1138,25 @@ theme = "doc-theme"
     identifier = "datasheets@expansionboards@pyethernet"
     parent = "datasheets@boards"
     weight = 90
-
-
+[[menu.main]]
+    name = "Accessories"
+    url = "/datasheets/accessories/"
+    identifier = "datasheets@accessories"
+    parent = "datasheets"
+    weight = 40
+[[menu.main]]
+    name = "IP67 Case"
+    url = "/datasheets/accessories/ip67case/"
+    identifier = "datasheets@accessories@ip67case"
+    parent = "datasheets@accessories"
+    weight = 10
 
 [[menu.main]]
     name = "Notes"
     url = "/datasheets/notes/"
     identifier = "datasheets@notes"
     parent = "datasheets"
-    weight = 40
+    weight = 50
 
 # firmware tool
 [[menu.main]]

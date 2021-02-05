@@ -11,6 +11,8 @@ At Pycom, we manufacture and sell several different categories:
 * [OEM Modules](#oem-modules)
 * [Accessories](#accessories)
 
+For more information about each, check out the [Product info, Datasheets](/datasheets/)
+
 ## Development boards
 
 
