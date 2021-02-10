@@ -82,16 +82,18 @@ print(id)
 
 ## Initialization
 
-#### Coap.init(address, *, port=5683, service_discovery=False, dynamic_resources=False)
+#### Coap.init(address, *, port=5683, service_discovery=False, dynamic_resources=False, psk=None, hint=None)
 
 Initialize the CoAp module.
 
 The arguments are:
 
 * `address` is the address where the CoAp module handles communication when it is a Server. If not set, the module can be used as a CoAp Client only.
-* `port` is the port where the CoAp Server listens. If not set, the default CoAp UDP port is 5683.
+* `port` is the port where the CoAp Server listens. If not set, the default CoAp UDP port 5683 is used if no PSK is given otherwise the default CoAp DTLS port 5684 is used.
 * `service_discovery` is a Boolean argument that enables/disables service discovery. If enabled, the CoAp Server will listen on the CoAp multicast address: 224.0.1.187. This is disabled by default.
 * `dynamic_resources` is a Boolean argument that enables/disables new resource creation via PUT operations. This is disabled by default.
+* `psk` is a String representing the Pre-Shared Key to be used for the DTLS connection. 
+* `hint` is a String representing the hint value to be used for the DTLS connection.
 
 When `dynamic_resources` is TRUE new resources can be created via PUT reqeusts, if the resource with the given URI does not already exist.
 The new resource is created with default properties (no mediatype, no Max-Age and no ETAG is enabled) and with default value received in the PUT request. On the new resource by default all operations (GET, PUT, POST and DELETE) are enabled.
@@ -158,13 +160,14 @@ Registers a callback function which will be called when a new resource has been 
 * `callback` is the callback to be registered. The callback must have 1 argument:
     * `resource` is the new resource which has been created
 
-#### Coap.new_client_session(destination, port=5683, protocol=UDP)
+#### Coap.new_client_session(address, *, port=5683, psk=None, identity=None)
 
 Creates a new CoAp Client Session which can be used to communicate with an external CoAp Server.
 
-* `destination` is the IPv4 Address of the CoAp Server to join.
-* `port` is the port of the CoAp Server to join. If not set, the default CoAp UDP port 5683 is used.
-* `protocol` is the protocol to use to communicate with the CoAp Server. If not set the protocol UDP is used. Currently no other protocols than UDP is supported.
+* `address` is the IPv4 Address of the CoAp Server to join.
+* `port` is the port of the CoAp Server to join. If not set, the default CoAp UDP port 5683 is used if no PSK is given otherwise the default CoAp DTLS port 5684 is used.
+* `psk` is a String representing the Pre-Shared Key to be used for the DTLS connection. 
+* `identity` is a String representing the identity value to be used for the DTLS connection.
 
 
 #### Coap.remove_client_session(destination, port=5683, protocol=UDP)
@@ -173,7 +176,7 @@ Removes the specified CoAp Client Session.
 
 * `destination` is the IPv4 Address of the CoAp Server where this CoAp Client Session has joined.
 * `port` is the port of the CoAp Server where this CoAp Client Session has joined. If not set, the default CoAp UDP port 5683 is used.
-* `protocol` is the protocol to use to communicate with the CoAp Server where this CoAp Client Session has joined. If not set the protocol UDP is used. Currently no other protocols than UDP is supported.
+* `protocol` is the protocol to be used to communicate with the CoAp Server where this CoAp Client Session has joined. This value can be: `Coap.PROTOCOL_UDP`,`Coap.PROTOCOL_DTLS`, if not set the protocol UDP is used.
 
 #### Coap.get_client_sessions()
 
@@ -275,3 +278,4 @@ Due to limitations of the underlying ESP-IDF/libcoap library, new resources cann
 
 * Define the media type: `Coap.MEDIATYPE_TEXT_PLAIN`, `Coap.MEDIATYPE_APP_LINK_FORMAT`, `Coap.MEDIATYPE_APP_XML`, `Coap.MEDIATYPE_APP_OCTET_STREAM`, `Coap.MEDIATYPE_APP_RDF_XML`, `Coap.MEDIATYPE_APP_EXI`, `Coap.MEDIATYPE_APP_JSON`, `Coap.MEDIATYPE_APP_CBOR`
 * Define the operation: `Coap.REQUEST_GET`, `Coap.REQUEST_PUT`, `Coap.REQUEST_POST`, `Coap.REQUEST_DELETE`
+* Define the protocol:  `Coap.PROTOCOL_UDP`,`Coap.PROTOCOL_DTLS`
