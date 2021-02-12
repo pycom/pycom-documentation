@@ -23,3 +23,4 @@ When using Lora, **Always** connect the appropriate LoRa antenna to your device.
 * **Lopy to Lopy** You are also able to connect two devices to each other using LoRa frequencies. We have one example explaining more about that
     * [Lopy to Lopy](../lora/module-module/)
 
+* **Pygate** Go to the [Expansionboard tutorials](/tutorials/expansionboards/pygate/) for the Pygate tutorial
