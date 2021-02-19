@@ -55,7 +55,7 @@ if __name__ == '__main__':
     input()
 ```
 
-## config.py
+### config.py
 
 This file contains settings for the server and network it is connecting to. Depending on the nano-gateway region and provider (TTN, Loriot, etc.) these will vary. The provided example will work with The Things Network (TTN) in the European, 868Mhz, region.
 
@@ -93,7 +93,7 @@ LORA_NODE_DR = 5
 # LORA_NODE_DR = 0
 ```
 
-## nanogateway.py
+### nanogateway.py
 
 The nano-gateway library controls all of the packet generation and forwarding for the LoRa data. This does not require any user configuration and the latest version of this code should be downloaded from the Pycom [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway).
 
@@ -563,7 +563,7 @@ To set up the gateway with The Things Network (TTN), navigate to their website a
 
 Once an account has been registered, the nano-gateway can then be registered. To do this, navigate to the TTN Console web page.
 
-## Registering the Gateway
+### Registering the Gateway
 
 Inside the TTN Console, there are two options, `applications` and `gateways`. Select `gateways` and then click on `register gateway`. This will allow for the set up and registration of a new nano-gateway.
 
@@ -592,9 +592,9 @@ Once these settings have been applied, click `Register Gateway`. A Gateway Overv
 
 The `Gateway` should now be configured. Next, one or more nodes can now be configured to use the nano-gateway and TTN applications may be built.
 
-## Nano-gateway node
+### Nano-gateway node
 
-As the gateway only supports a single channel, we need to setup our nodes to only send packets over that channel. We can either use the OTAA activation, or ABP activation, but we'll have to setup the correct channel. Use the following example to setup the correct channels for EU868. This can be modified for use in 915MHz regions as well:
+As the gateway only supports a single channel, we need to setup our nodes to only send packets over that channel. The node can either use OTAA or ABP, but we'll have to setup the correct channel. Use the following example to setup the correct channels for EU868. This can be modified for use in 915MHz regions as well:
 
 ```python
 
@@ -622,7 +622,7 @@ lora.add_channel(2, frequency=903900000, dr_min=0, dr_max=3)
 
 Now that the gateway & nodes have been setup, a TTN Application can be built; i.e. what happens to the LoRa data once it is received by TTN. There are a number of different setups/systems that can be used, however the following example demonstrates the HTTP request integration.
 
-## Registering an Application
+### Registering an Application (Gateway)
 
 Selecting the `Applications` tab at the top of the TTN console, will bring up a screen for registering applications. Click register and a new page, similar to the one below, will open.
 
@@ -632,7 +632,7 @@ Enter a unique `Application ID` as well as a Description & Handler Registration.
 
 Now the LoPy nodes must be registered to send data up to the new Application.
 
-### Registering Devices (LoPy)
+### Registering Nodes
 
 To connect nodes to the nano-gateway, devices need to be added to the application. To do this, navigate to the `Devices` tab on the `Application` home page and click the `Register Device` button.
 
