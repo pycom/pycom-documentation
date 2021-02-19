@@ -45,7 +45,7 @@ from network import WLAN
 import machine
 wlan = WLAN(mode=WLAN.STA)
 
-wlan.connect(ssid='ssid', auth=(WLAN,WPA2, 'password'))
+wlan.connect(ssid='ssid', auth=(WLAN.WPA2, 'password'))
 while not wlan.isconnected():
     machine.idle()
 print("WiFi connected succesfully")
