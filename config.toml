@@ -744,47 +744,41 @@ theme = "doc-theme"
     weight = 50
 
 [[menu.main]]
-    name = "Pygate"
-    url = "/firmwareapi/pycom/expansionboards/pygate/"
-    identifier = "firmwareapi@pycom@expansionboards@pygate"
+    name = "Pycoproc"
+    url = "/firmwareapi/pycom/expansionboards/pycoproc/"
+    identifier = "firmwareapi@pycom@expansionboards@pycoproc"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 10
 [[menu.main]]
-    name = "pysense"
-    url = "/firmwareapi/pycom/expansionboards/pysense/"
-    identifier = "firmwareapi@pycom@expansionboards@pysense"
+    name = "Pycoproc2"
+    url = "/firmwareapi/pycom/expansionboards/pycoproc2/"
+    identifier = "firmwareapi@pycom@expansionboards@pycoproc2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 20
 [[menu.main]]
-    name = "pysense 2.0 x"
-    url = "/firmwareapi/pycom/expansionboards/pysense2/"
+    name = "Accelerometer"
+    url = "/firmwareapi/pycom/expansionboards/LIS2HH12/"
     identifier = "firmwareapi@pycom@expansionboards@pysense2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 30
 [[menu.main]]
-    name = "pytrack"
-    url = "/firmwareapi/pycom/expansionboards/pytrack/"
-    identifier = "firmwareapi@pycom@expansionboards@pytrack"
+    name = "Light sensor"
+    url = "/firmwareapi/pycom/expansionboards/LTR329ALS01/"
+    identifier = "firmwareapi@pycom@expansionboards@LTR329ALS01"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 40
 [[menu.main]]
-    name = "pytrack 2.0 x"
-    url = "/firmwareapi/pycom/expansionboards/pytrack2/"
-    identifier = "firmwareapi@pycom@expansionboards@pytrack2"
+    name = "Temperature sensor"
+    url = "/firmwareapi/pycom/expansionboards/SI7006A20/"
+    identifier = "firmwareapi@pycom@expansionboards@SI7006A20"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 50
 [[menu.main]]
-    name = "pyscan"
-    url = "/firmwareapi/pycom/expansionboards/pyscan/"
-    identifier = "firmwareapi@pycom@expansionboards@pyscan"
+    name = "Pressure sensor"
+    url = "/firmwareapi/pycom/expansionboards/MPL3115A2/"
+    identifier = "firmwareapi@pycom@expansionboards@MPL3115A2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 60
-[[menu.main]]
-    name = "sleep"
-    url = "/firmwareapi/pycom/expansionboards/sleep/"
-    identifier = "firmwareapi@pycom@expansionboards@sleep"
-    parent = "firmwareapi@pycom@expansionboards"
-    weight = 70
 
 
 
