@@ -8,14 +8,12 @@ aliases:
 ---
 As the development for these devices are on going with additional features being added, every week, it is essential to ensure you frequently check for updates on the Pytrack/Pysense/Pyscan. As well as updating the device firmware, it is important to check the [GitHub repository](https://github.com/pycom/pycom-libraries) for the respective library files as they as also being updated, to include additional features/functionality.
 
-{{% hint style="info" %}}
-Please note that updated libraries are available for the Pytrack 2.0 X and Pysense 2.0 X in the pytrack-2 and pysense-2 directories on GitHub.
+> Please note that updated libraries are available for the Pytrack 2.0 X and Pysense 2.0 X in the pytrack-2 and pysense-2 directories on GitHub.
 These new libraries will allow you to use the new additional features.
-{{% /hint %}}
 
 ## Uploading the Libraries to a Device
 
-These libraries should be uploaded to a device (LoPy, SiPy, WiPy 3.0, etc.) in the same process as a standard MicroPython library. The various `.py` files should be placed into the `/lib` folder on the device. 
+These libraries should be uploaded to a device in the same process as a standard MicroPython library. The various `.py` files should be placed into the `/lib` folder on the device. 
 
 Add as many or as few of the libraries that are required.
 
@@ -29,10 +27,6 @@ For example, if using the Pysense and the user wishes to enable the only Acceler
 - LIS2HH12.py
 - LTR329ALS01.py
 ```
-
-{{% hint style="info" %}}
-The Pytrack and Pysense boards behave the same as the Expansion Board. `Upload`, `Run` and upload code to Pycom modules via the Pymakr Plugin, in exactly the same process.
-{{% /hint %}}
 
 ## Importing/Using the Libraries
 
