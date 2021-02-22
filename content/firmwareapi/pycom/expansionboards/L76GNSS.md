@@ -8,7 +8,7 @@ The L76GNSS is the GPS module that can provide location data to your application
 
 ### class L76GNSS(pytrack = None, sda = 'P22', scl = 'P21', timeout = None)
 
-Creates a `L76GNSS` object. Constructor must be passed a Pytrack or I2C object to successfully construct. Set the `timeout` to a time period (in seconds) for the GPS to search for a lock. If a lock is not found by the time the `timeout` has expired, the `coordinates` method will return `(None, None)`.
+Creates a L76GNSS object. Constructor must be passed a Pytrack or I2C object to successfully construct. Set the `timeout` to a period in seconds for the GPS to search for a lock. If a lock is not found by the time the `timeout` has expired, the `coordinates` method will return `(None, None)`.
 
 ## Methods
 

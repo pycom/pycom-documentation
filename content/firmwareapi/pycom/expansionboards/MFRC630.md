@@ -14,7 +14,7 @@ Creates a `MFRC630` object. Constructor must be passed a Pycoproc or I2C object 
 
 ### MFRC630.mfrc630_cmd_init()
 
-Initialises the `MFRC630`.
+Initialises the MFRC630.
 
 ### MFRC630.mfrc630_cmd_reset()
 
