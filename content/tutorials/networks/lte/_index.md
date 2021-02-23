@@ -128,7 +128,7 @@ If you downgrade the Pycom firmware from 1.20.2.r2 or any later version to some 
     print(lte.send_at_cmd('AT+CEREG=2'))
     ```
 
-This adjusts the CEREG value in the LTE modem. Older firmwares (1.20.2.r1 and earlier) expect this value to be 2. This had always been the default value and so it just worked. Starting with version v1.20.2.r2 the firmware expects a value of 1 and it also configures it that way. So, this also just works.
+This adjusts the CEREG setting in the LTE modem. This setting determines the verbosity with which the modem reports the registration status. Older firmwares (1.20.2.r1 and earlier) expect this value to be 2. This had always been the default value and so it just worked. Starting with version v1.20.2.r2 the firmware expects a value of 1 and it also configures it that way. So, this also just works.
 
 But, lets say you downgrade from v1.20.2.r2 to v1.20.2.r1 then the modem will remember the new setting of 1 and the older firmware will now fail to detect the attach event. With the lines above you can correct this setting. If in doubt you can check the current setting like this:
     ```python
