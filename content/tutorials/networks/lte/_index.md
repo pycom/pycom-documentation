@@ -118,6 +118,34 @@ When the first attach succeeds the modem will store the frequency internally. Su
 
 After flashing a new firmware or performing a factory reset, the next attach will be a "first" . Changing operators might imply a "first scan". Changes of the geographic location, could in principle also lead to a change of frequency and a "first scan", but this is less likely.
 
+### Problems after Firmware downgrade
+
+If you downgrade the Pycom firmware from 1.20.2.r2 or any later version to some older version, then you need to manually run this snippet of code, otherwise the firmware will not be able to attach.
+
+    ```python
+    from network import LTE
+    lte = LTE()
+    print(lte.send_at_cmd('AT+CEREG=2'))
+    ```
+
+This adjusts the CEREG setting in the LTE modem. This setting determines the verbosity with which the modem reports the registration status. Older firmwares (1.20.2.r1 and earlier) expect this value to be 2. This had always been the default value and so it just worked. Starting with version v1.20.2.r2 the firmware expects a value of 1 and it also configures it that way. So, this also just works.
+
+But, lets say you downgrade from v1.20.2.r2 to v1.20.2.r1 then the modem will remember the new setting of 1 and the older firmware will now fail to detect the attached state and never report `lte.isattached()==True`. With the lines above you can correct this setting. If in doubt you can check the current setting like this:
+    ```python
+    print(lte.send_at_cmd('AT+CEREG?'))
+    ```
+
+It will return something similar to one of these lines:
+    ```
+    +CEREG: 2,0
+    +CEREG: 2,1,"0001","01A2D001",7
+    +CEREG: 1,4
+    +CEREG: 1,0
+    ```
+
+In this context we care about that first number. You want this to be 2, like in the first two examples. Then you're good to go with older firmwares.
+
+
 ### State transitions
 
 Below, we review the state transitions of the modem firmware as reported by `print(lte.send_at_cmd('AT!="fsm"'))`. If you are having trouble attaching to the network, or getting a connection up and running, this might give some direction into what you are looking for. We are mainly looking at the status of the top two indicators for now.
