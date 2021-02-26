@@ -22,7 +22,7 @@ In this section, we will explain how to create widgets for data visualisation an
     # Send data continuously to Pybytes
     while True:
         for i in range(0,20):
-            pybytes.send_signal(math.sin(i/10*math.pi))
+            pybytes.send_signal(1, math.sin(i/10*math.pi))
             print('sent signal {}'.format(i))
             time.sleep(10)
     ```
