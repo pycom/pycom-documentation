@@ -18,6 +18,7 @@ With Pybytes you have control over your device's data stream and more:
 
 In a nutshell, Pybytes is an environment designed to optimise your IoT applications when using Pycom boards.
 
+{{<youtube p14NOueBzL4>}}
 ## What does Pybytes offer you?
 
 * Data Visualisation: The Pybytes dashboard is customisable, allowing you to freely set up key performance indicators and time series data from all your sensors.
