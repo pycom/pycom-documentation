@@ -737,7 +737,7 @@ theme = "doc-theme"
     weight = 40
 
 [[menu.main]]
-    name = "Expansion boards"
+    name = "Pyshields"
     url = "/firmwareapi/pycom/expansionboards/"
     identifier = "firmwareapi@pycom@expansionboards"
     parent = "firmwareapi@pycom"
@@ -779,6 +779,18 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@expansionboards@MPL3115A2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 60
+    [[menu.main]]
+    name = "RFID / NFC"
+    url = "/firmwareapi/pycom/expansionboards/MFRC630/"
+    identifier = "firmwareapi@pycom@expansionboards@MFRC630"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 70
+[[menu.main]]
+    name = "GPS"
+    url = "/firmwareapi/pycom/expansionboards/L76GNSS/"
+    identifier = "firmwareapi@pycom@expansionboards@L76GNSS"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 80
 
 
 

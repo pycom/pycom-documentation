@@ -6,9 +6,13 @@ The `pycoproc.py` file is a supporting python library for the first version of P
 
 ## Constructors
 
-### class Pycoproc(i2c=None, sda='P22', scl='P21')
+### class Pycoproc(board_type, [i2c=None, sda='P22', scl='P21'])
 
-Initialise I2C communication with the supervisor MCU, if no i2c object is passed, the `sda` and `scl` pins are used. On the board, the sensors are connected on these pins.
+Initialise I2C communication with the supervisor MCU, if no i2c object is passed, the `sda` and `scl` pins are used. On the shield, the sensors are connected on these pins. Board type can be:
+* `Pycoproc.PYSENSE`
+* `Pycoproc.PYTRACK`
+* `Pycoproc.PYSCAN`
+
 
 ## General functions
 
@@ -32,29 +36,7 @@ Returns `True` if the on-board `MCLR` button is pressed.
 
 Returns the battery voltage
 
-### py.reset_cmd()
-
-Power cycles the development module.
-
 ## Power functions
-
-### py.sd_power([enabled=True])
-
-This command allows switching the power supply for the SD card:
-* `True`: the SD card is enabled
-* `False`: the SD card is disabled
-
-### py.sensor_power([enabled=True])
-
-This command allows switching the power supply for the GPS module and any sensors connected through the external Pyport:
-* `True`: the power is enabled
-* `False`: the power is disabled
-
-### py.gps_standby([enabled=True])
-
-This command allows switching the GPS module into stand-by mode. The GPS module is no longer accessible via I2C in this case:
-* `True`: the GPS is put in standby mode
-* `False`: the GPS is activated. 
 
 ### py.setup_sleep(seconds)
 
