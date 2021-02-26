@@ -10,7 +10,7 @@ The `pycoproc.py` file is a supporting python library for the first version of P
 
 Initialise I2C communication with the supervisor MCU, if no i2c object is passed, the `sda` and `scl` pins are used. On the board, the sensors are connected on these pins.
 
-## General methods
+## General functions
 
 ### py.read_fw_version()
 
@@ -26,7 +26,7 @@ Read the product ID
 
 ### py.button_pressed()
 
-Returns if the on-board `MCLR` button is pressed.
+Returns `True` if the on-board `MCLR` button is pressed.
 
 ### py.read_battery_voltage()
 
@@ -36,7 +36,7 @@ Returns the battery voltage
 
 Power cycles the development module.
 
-## Power methods
+## Power functions
 
 ### py.sd_power([enabled=True])
 
@@ -76,5 +76,3 @@ Puts the board in sleep mode. This sleep mode consumes less power than the `mach
 ### py.get_sleep_remaining()
 
 In the event of a sleep session that was awoken by an asynchronous event (Accelerometer, INT pin or Reset button) the approximate sleep remaining interval (expressed in **seconds**) can be found out. The user has to manually use `setup_sleep()` to configure the next sleep interval.
-
-## Example
