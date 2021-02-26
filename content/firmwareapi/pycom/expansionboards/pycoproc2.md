@@ -10,7 +10,7 @@ The `pycoproc2.py` file is a supporting python library for the Pysense 2 and Pyt
 
 Initialise I2C communication with the supervisor MCU, if no i2c object is passed, the `sda` and `scl` pins are used. On a Pysense 2 / Pytrack 2 board, the sensors are connected on these pins.
 
-## General methods
+## General functions
 
 ### py.read_fw_version()
 
@@ -26,7 +26,7 @@ Read the product ID
 
 ### py.button_pressed()
 
-Returns if the on-board `MCLR` button is pressed.
+Returns `True` if the on-board `MCLR` button is pressed.
 
 ### py.read_battery_voltage()
 
@@ -36,7 +36,7 @@ Returns the battery voltage
 
 Power cycles the development module.
 
-## Power methods
+## Power functions
 
 ### py.sd_power([enabled=True])
 
