@@ -737,7 +737,7 @@ theme = "doc-theme"
     weight = 40
 
 [[menu.main]]
-    name = "Pyshields"
+    name = "Shields"
     url = "/firmwareapi/pycom/expansionboards/"
     identifier = "firmwareapi@pycom@expansionboards"
     parent = "firmwareapi@pycom"
