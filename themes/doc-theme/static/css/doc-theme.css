@@ -108,21 +108,6 @@ url("/fonts/space-mono/SpaceMono-Regular.eot") format("opentype");
 }
 /* 'Beba',Helvetica,Arial,Lucida,sans-serif; */
 
-@font-face {
-  font-family: 'Montserrat';
-  font-weight: normal;
-  src: url("/fonts/Montserrat/Montserrat-Regular.ttf");
-  src: url("/fonts/Montserrat/Montserrat-Regular.woff") format("woff"),
-  url("/fonts/Montserrat/Montserrat-Regular.eot") format("opentype");
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-weight: bold;
-  src: url("/fonts/Montserrat/Montserrat-Bold.ttf");
-  src: url("/fonts/Montserrat/Montserrat-Bold.woff") format("woff"),
-  url("/fonts/Montserrat/Montserrat-Bold.eot") format("opentype");
-}
-
 .mono {
   font-family: monospace!important;
 }
