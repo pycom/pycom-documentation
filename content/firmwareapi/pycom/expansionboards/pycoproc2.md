@@ -4,6 +4,14 @@ Title: "Pycoproc2"
 
 The `pycoproc2.py` file is a supporting python library for the Pysense 2 and Pytrack 2 expansionboards. 
 
+> The latest version of `pycoproc2.py` only works with a v16 or later expansionboard-firmware on the Pytrack 2 / Pysense 2. Check whether you have the correct firmware installed by using the following:
+> ```python
+> from pycoproc import Pycoproc
+> py = Pycoproc()
+> print(py.read_fw_version())
+> ```
+> If this returns 15 or lower, please update the [expansionboard firmware](/updatefirmware/expansionboard/)
+
 ## Constructors
 
 ### class Pycoproc(i2c=None, sda='P22', scl='P21')
