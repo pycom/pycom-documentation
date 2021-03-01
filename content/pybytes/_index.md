@@ -1,7 +1,5 @@
 ---
-title: ""
-aliases:
-  - pybytes/introduction
+title: "Pybytes"
 ---
 
 ![pybytes](/gitbook/assets/pybytes/introduction/pybytes_logo.png)
