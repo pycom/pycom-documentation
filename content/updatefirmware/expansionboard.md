@@ -15,6 +15,8 @@ The latest firmware DFU file can be downloaded from the links below:
 * [Pygate](https://software.pycom.io/findupgrade?key=pygate.dfu&type=all&redirect=true)
 * [Pytrack 1 DFU](https://software.pycom.io/findupgrade?key=pytrack.dfu&type=all&redirect=true)
 * [Pysense 1 DFU](https://software.pycom.io/findupgrade?key=pysense.dfu&type=all&redirect=true)
+* [Pytrack 2 DFU](https://software.pycom.io/findupgrade?key=pytrack2.dfu&type=all&redirect=true)
+* [Pysense 2 DFU](https://software.pycom.io/findupgrade?key=pysense2.dfu&type=all&redirect=true)
 * [Expansion Board DFU v3.0](https://software.pycom.io/findupgrade?key=expansion3.dfu&type=all&redirect=true)
 * [Expansion Board DFU v3.1](https://software.pycom.io/findupgrade?key=expansion31.dfu&type=all&redirect=true)
 
