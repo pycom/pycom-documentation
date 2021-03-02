@@ -6,10 +6,12 @@ aliases:
 ![](/gitbook/assets/pymesh/pymesh_roles.png)
 
 ## Pymesh on Pybytes
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4dgxvkZbF_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{{< youtube 4dgxvkZbF_4>}}
 
 ## Pymesh presentation  at TTN Conference
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ab_WFE93BQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{{< youtube Ab_WFE93BQI>}}
 
 ## What is Pymesh?
 
