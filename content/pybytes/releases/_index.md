@@ -6,6 +6,8 @@ aliases:
 ### What is the release?
 Each **Pybytes** project contains list of devices. You can update the devices **code**, **network configurations** and/or **firmware version** using a **release** version.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JSNTZDHKm5M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### What is included in the release?
 Each **Release** can contains one or more of the following:
 
