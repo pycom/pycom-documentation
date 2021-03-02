@@ -18,6 +18,8 @@ With Pybytes you have control over your device's data stream and more:
 
 In a nutshell, Pybytes is an environment designed to optimise your IoT applications when using Pycom boards.
 
+{{<youtube p14NOueBzL4>}}
+
 ## What does Pybytes offer you?
 
 * Data Visualisation: The Pybytes dashboard is customisable, allowing you to freely set up key performance indicators and time series data from all your sensors.
@@ -26,9 +28,9 @@ In a nutshell, Pybytes is an environment designed to optimise your IoT applicati
 * Firmware updates over the air: Upgrade or downgrade firmware versions with our exclusive firmware update.
 * Track your assets position: Google Maps API means you can track your device's geolocation.
 
-> Note: If the [Pybytes website](https://pybytes.pycom.io/) seems to be down for you, do not worry! 
+> Note: If the [Pybytes website](https://pybytes.pycom.io/) seems to be down for you, do not worry!
   > * In Chrome, open developer settings using F12, click on the `Application` tab and `Service workers` next to the gear icon. Then, open the menu `service workers from other origins` and click `unregister`. That should solve the problem!
-  
+
 ## Let's get started!
 
 
@@ -37,3 +39,11 @@ In a nutshell, Pybytes is an environment designed to optimise your IoT applicati
 * [Visualise data from your device](/pybytes/dashboard/)
 * [LoRa Servers](/pybytes/lora/)
 * [Integrations with external services](/pybytes/integrations/)
+
+## Pybytes unboxing
+
+{{<youtube iGV11MhjuZ0>}}
+
+## Pybytes device management platform
+
+{{<youtube 0H77_yUF8iM>}}

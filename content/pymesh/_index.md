@@ -5,6 +5,14 @@ aliases:
 ---
 ![](/gitbook/assets/pymesh/pymesh_roles.png)
 
+## Pymesh on Pybytes
+
+{{< youtube 4dgxvkZbF_4>}}
+
+## Pymesh presentation  at TTN Conference
+
+{{< youtube Ab_WFE93BQI>}}
+
 ## What is Pymesh?
 
 Pymesh is the LoRa full-mesh network technology.
