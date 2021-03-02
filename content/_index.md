@@ -1,7 +1,5 @@
 ---
 title: "Introduction"
-aliases:
-  - pybytes/introduction
 ---
 Pycom ecosystem makes IoT development easy
 
