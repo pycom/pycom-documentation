@@ -9,4 +9,4 @@ Pybytes supports four network types, which you can configure for each device or 
 
 [**LoRa**](/pybytes/networks/lora)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YfQW9rAc42U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube YfQW9rAc42U>}}

@@ -17,11 +17,11 @@ Pymakr Online is an online IDE for your MicroPython projects. We brought our Pym
 * Import from multiple sources (blank/device/project/Github repository), export to a zip file/device/project
 * Device activity indicator: track what's going between Pymakr Online and your device.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qydlJKRDzFs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube qydlJKRDzFs>}}
 
 ## Pymakr Git Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-yIdZmY6N3g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube -yIdZmY6N3g>}}
 
 ## Let's get started!
 

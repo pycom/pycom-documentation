@@ -19,21 +19,20 @@ The Machine Learning integration is here to help you to create smart machine lea
 
 ## Model creation
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FAOPVWzaEcU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube FAOPVWzaEcU>}}
 
  ## Data acquisition
 
- <iframe width="560" height="315" src="https://www.youtube.com/embed/yf5B1NARQRo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube yf5B1NARQRo>}}
 
  ## Processing data
 
- <iframe width="560" height="315" src="https://www.youtube.com/embed/20JxZKt4aJU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube 20JxZKt4aJU>}}
 
  ## Training neural network
 
- <iframe width="560" height="315" src="https://www.youtube.com/embed/KeOzpsahrb8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube KeOzpsahrb8>}}
 
  ## Testing and deployment on board
 
- <iframe width="560" height="315" src="https://www.youtube.com/embed/BflPsHO67sU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
- 
+{{<youtube BflPsHO67sU>}}

@@ -18,7 +18,7 @@ With Pybytes you have control over your device's data stream and more:
 
 In a nutshell, Pybytes is an environment designed to optimise your IoT applications when using Pycom boards.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p14NOueBzL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube p14NOueBzL4>}}
 
 ## What does Pybytes offer you?
 
@@ -42,8 +42,8 @@ In a nutshell, Pybytes is an environment designed to optimise your IoT applicati
 
 ## Pybytes unboxing
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iGV11MhjuZ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube iGV11MhjuZ0>}}
 
 ## Pybytes device management platform
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0H77_yUF8iM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube 0H77_yUF8iM>}}
