@@ -52,8 +52,10 @@ nav#TableOfContents {
 
 h1, h2, h3, h4 {
   color: #1E1E3C;
-  letter-spacing: 0.1em;
   opacity: 0.9;
+}
+h1, h3, h4 {
+  letter-spacing: 0.1em;
 }
 h2 {
   font-family: 'Montserrat';
