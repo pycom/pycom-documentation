@@ -43,8 +43,8 @@ The board features a single cell Li-Ion/Li-Po charger with a JST PHR‑2 connect
 
 
 
-## Mechanical Dimensionsde
-![](/gitbook/assets/pyscan_V0.7_20180416_MecahnicalDimensions.png)
+## Mechanical Dimensions
+![](/gitbook/assets/Pyscan-measurements.png)
 
 ## 3D model for case design
 
