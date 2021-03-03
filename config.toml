@@ -415,6 +415,18 @@ theme = "doc-theme"
     weight = 70
 
 [[menu.main]]
+    name = "CoAP"
+    url = "/tutorials/networkprotocols/coap/"
+    identifier = "tutorials@networkprotocols@coap"
+    parent = "tutorials@networkprotocols"
+    weight = 80
+[[menu.main]]
+    name = "ESP-NOW"
+    url = "/tutorials/networkprotocols/espnow/"
+    identifier = "tutorials@networkprotocols@espnow"
+    parent = "tutorials@networkprotocols"
+    weight = 90
+[[menu.main]]
     name = "Expansion Boards"
     url = "/tutorials/expansionboards/"
     identifier = "tutorials@expansionboards"
@@ -623,6 +635,12 @@ theme = "doc-theme"
     parent = "firmwareapi@pycom@network"
     weight = 20
 
+[[menu.main]]
+    name = "ESP-NOW"
+    url = "/firmwareapi/pycom/network/espnow/"
+    identifier = "firmwareapi@pycom@network@espnow"
+    parent = "firmwareapi@pycom@network"
+    weight = 20
 [[menu.main]]
     name = "Bluetooth"
     url = "/firmwareapi/pycom/network/bluetooth/"
