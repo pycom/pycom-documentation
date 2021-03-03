@@ -42,11 +42,18 @@ characteristic.write(b'x0f')
 
 #### characteristic.callback(trigger=None, handler=None, arg=None)
 
-This method allows to register for notifications on the characteristic.
+Creates a callback that will be executed when any of the triggers occur. The arguments are:
 
-* `trigger` can must be `Bluetooth.CHAR_NOTIFY_EVENT`.
+* `trigger` can be `Bluetooth.CHAR_NOTIFY_EVENT`.
 * `handler` is the function that will be executed when the callback is triggered.
 * `arg` is the argument that gets passed to the callback. If nothing is given, the characteristic object that owns the callback will be used.
+
+Beyond the `arg` a tuple (called `data`) is also passed to `handler`. The tuple consists of (event, value), where `event` is the triggering event and `value` is the value strictly belonging to the `event`.
+
+We recommend getting both the `event` and new `value` of the characteristic via this tuple, and not via `characteristic.event()` and `characteristic.value()` calls in the context of the `handler` to make sure no event and value is lost.
+The reason behind this is that `characteristic.event()` and `characteristic.value()` return with the very last event received and with the current value of the characteristic, while the input parameters are always linked to the specific event triggering the `handler`. If the device is busy executing other operations,  the `handler` of an incoming event may not be called before the next event occurs and is processed.
+
+Usage example can be found under GATTSCharacteristic page.
 
 #### characteristic.read\_descriptor(uuid)
 
