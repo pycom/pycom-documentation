@@ -19,7 +19,7 @@ aliases:
 
 The datasheet of the WiPy2 is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy2.0_v2.pdf)
 
-The Wipy 2 is certified for [CE RED](/gitbook/assets/16-213297_expertise_pycom_wipy-2.0r.pdf) and [FCC ACC](/gitbook/assets/2091acc16_grant.pdf) [FCC BCC](/gitbook/assets/2091bcc16_grant.pdf)
+The Wipy 2 is certified for [CE RED](/gitbook/assets/16-213297_expertise_pycom_wipy-2.0r.pdf), [FCC ACC](/gitbook/assets/2091acc16_grant.pdf), [FCC BCC](/gitbook/assets/2091bcc16_grant.pdf)
 
 
 ## Pinout
@@ -28,7 +28,12 @@ The pinout of the WiPy2 is available as a [PDF File](/gitbook/assets/wipy2-pinou
 
 ![](/gitbook/assets/wipy2-pinout.png)
 
-> Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
+> Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed via software.
+
+## Footprints & 3D files
+
+[3D STEP file](/gitbook/assets/3D-files/WiPy.step)
+[Pycom footprints](https://github.com/pycom/footprints)
 
 ## Notes
 

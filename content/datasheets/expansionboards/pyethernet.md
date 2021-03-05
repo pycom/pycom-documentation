@@ -15,6 +15,10 @@ The PyEthernet is a module meant for the [Pygate](../pygate/) expansionboard, en
 
 We currently have no datasheet available for the module. On the bottom, near the pinheaders, you can find labels for the pin functions. The pins are used to connect both power and a SPI bus.
 
+## Footprints & 3D files
+
+[3D STEP file](/gitbook/assets/3D-files/PyEthernet.step)
+[Pycom footprints](https://github.com/pycom/footprints)
 
 ## Notes
 

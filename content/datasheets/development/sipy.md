@@ -28,7 +28,12 @@ The pinout of the SiPy is available as a [PDF File](/gitbook/assets/sipy-pinout.
 
 ![](/gitbook/assets/sipy-pinout.png)
 
-> Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
+> Please note that the PIN assignments for UART1 (TX1/RX1), SPI (CLK, MOSI, MISO) and I2C (SDA, SCL) are defaults and can be changed via software.
+
+## Footprints & 3D files
+
+[3D STEP file](/gitbook/assets/3D-files/SiPy.step)
+[Pycom footprints](https://github.com/pycom/footprints)
 
 ## Notes
 
