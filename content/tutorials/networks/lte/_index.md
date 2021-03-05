@@ -25,7 +25,6 @@ import time
 import socket
 
 lte = LTE()
-lte.init()
 #some carriers have special requirements, check print(lte.send_at_cmd("AT+SQNCTM=?")) to see if your carrier is listed.
 #when using verizon, use
 #lte.init(carrier=verizon)
