@@ -22,6 +22,9 @@ The external IO header power pins are labelled as follows
 * 3V3AUX_LP - the power provided by the development module for the SD card (This can be switched off)
 * 3V3 - The power provided by the Pysense 2, for the USB-Serial converter. This is also used to power the GPS in standby mode.
 
+The Pytrack 2 can be powered through the USB port, the battery connector and the VUSB_AUX header just below the PyPort. Connecting a 5V supply to the header will result in exactly the same behaviour as powering it through the USB connector.
+
+
 The pinout of the Pytrack is available as a [PDF File](
 /gitbook/assets/pytrack2-pinout.pdf)
 
