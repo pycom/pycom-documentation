@@ -415,7 +415,7 @@ theme = "doc-theme"
     weight = 70
 
 [[menu.main]]
-    name = "Expansion Boards"
+    name = "Shields"
     url = "/tutorials/expansionboards/"
     identifier = "tutorials@expansionboards"
     parent = "tutorials"

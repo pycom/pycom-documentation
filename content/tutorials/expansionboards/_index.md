@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "Shields"
 aliases:
     - tutorials/expansionboards/introduction.html
     - tutorials/expansionboards/introduction.md
