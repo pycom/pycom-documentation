@@ -25,7 +25,7 @@ Next to that, you will need either one of the supporting files needed to operate
 
 ## Uploading the Libraries to a Device
 
-Place the applicable Python files for your shield into the `/lib` folder of your project. Do not forget to press `upload project to device` in Pymakr to make sure you are able to use them. 
+Place the applicable Python files for your shield into the `/lib` folder of your project. Do not forget to press `upload project to device` in Pymakr to make sure you are able to use them.
 
 ## Importing and using the libraries
 
