@@ -1,17 +1,27 @@
 ---
-title: "PyShields"
+title: "Shields"
 ---
 
-The following shields offer additional functionality through sensors and other peripherals:
+The API pages in this section explain the additional functionality offered by the following shields:
 * Pysense
 * Pysense 2.0 X
 * Pytrack
 * Pytrack 2.0 X
 * Pyscan
 
-These libraries are available from the [GitHub releases](https://github.com/pycom/pycom-libraries/releases) and not built directly into the firmware. You can use the Libraries with the first and second version of the Pysense, Pytrack and Pyscan. You can also download individual libraries from our [Github repository](https://github.com/pycom/pycom-libraries/).
+Note that this functionality is not built into the firmware, and you will need to download additional libraries from our [Github libraries repository](https://github.com/pycom/pycom-libraries/tree/master/shields).
 
-The API pages are separated per sensor. On the first hardware version of the pyshields, the `pycoproc` is used. For the second version, we use `pycoproc2`.
+The API pages are separated per sensor:
+* [Accelerometer](lis2hh12/) (LIS2HH12)
+* [Light Sensor](ltr329als01/) (LTR329ALS01)
+* [Temperature Sensor](si7005a20/) (SI7006A20)
+* [Pressure Sensor](mpl311a2/) (MPL3115A2)
+* [RFID / NFC](mfrc630/) (MFRC630)
+* [GPS](l76gnss/) (L76GNSS)
+
+Next to that, you will need either one of the supporting files needed to operate the shield:
+* [Pycoproc](pycoproc/) - used on the first version of the Shields
+* [Pycoproc2](pycoproc2/) - used on the second version of the Shields
 
 ## Uploading the Libraries to a Device
 
