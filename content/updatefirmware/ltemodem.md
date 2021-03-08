@@ -35,10 +35,10 @@ There are several different ways to update the firmware of the LTE modem:
 
 
 
-## Note on Updating to CAT-M1 5.2.1.0-48829
+## Note on Updating to CAT-M1 5.2-48829
 
 This update has to be done in two steps and is a full upgrade, meaning you can only use the steps for 'SD Card' or 'USB'.
-1. update with `LR5.2.1.0-48829-1.dup`
+1. update with `CATM1-5.2-48829-1.dup`
     
     For the first update you have to also specify `load_fff=False`. Using the SD cad method, it would be like this:
 
@@ -57,7 +57,7 @@ This update has to be done in two steps and is a full upgrade, meaning you can o
     LR5.1.1.0-39529
     IMEI: xyz
     ```
-2. update with `LR5.2.1.0-48829-2.dup`
+2. update with `CATM1-5.2-48829-2.dup`
 
     ```
     sqnsupgrade.run('/sd/LR5.2.1.0-48829-2.dup')
