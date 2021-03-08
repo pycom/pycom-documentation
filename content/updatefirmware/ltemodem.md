@@ -1,5 +1,5 @@
 ---
-title: "Modem Firmware Update"
+title: "LTE Modem Firmware Update"
 aliases:
     - tutorials/lte/firmware.html
     - tutorials/lte/firmware.md
