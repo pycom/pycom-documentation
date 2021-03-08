@@ -756,37 +756,37 @@ theme = "doc-theme"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 20
 [[menu.main]]
-    name = "Accelerometer"
+    name = "LIS2HH12"
     url = "/firmwareapi/pycom/expansionboards/LIS2HH12/"
     identifier = "firmwareapi@pycom@expansionboards@pysense2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 30
 [[menu.main]]
-    name = "Light sensor"
+    name = "LTR329ALS01"
     url = "/firmwareapi/pycom/expansionboards/LTR329ALS01/"
     identifier = "firmwareapi@pycom@expansionboards@LTR329ALS01"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 40
 [[menu.main]]
-    name = "Temperature sensor"
+    name = "SI7006A20"
     url = "/firmwareapi/pycom/expansionboards/SI7006A20/"
     identifier = "firmwareapi@pycom@expansionboards@SI7006A20"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 50
 [[menu.main]]
-    name = "Pressure sensor"
+    name = "MPL3115A2"
     url = "/firmwareapi/pycom/expansionboards/MPL3115A2/"
     identifier = "firmwareapi@pycom@expansionboards@MPL3115A2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 60
     [[menu.main]]
-    name = "RFID / NFC"
+    name = "MFRC630"
     url = "/firmwareapi/pycom/expansionboards/MFRC630/"
     identifier = "firmwareapi@pycom@expansionboards@MFRC630"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 70
 [[menu.main]]
-    name = "GPS"
+    name = "L76GNSS"
     url = "/firmwareapi/pycom/expansionboards/L76GNSS/"
     identifier = "firmwareapi@pycom@expansionboards@L76GNSS"
     parent = "firmwareapi@pycom@expansionboards"
