@@ -10,7 +10,7 @@ There are some trade offs one can do to reduce power consumption of the LTE mode
 
 
 
-## Don't enable on boot<a id="lte-disable-on-boot" ></a>
+## Don't enable on boot
 
 If you don't need LTE connectivity at all, you can make sure the modem is not initialized at boot with the following command:
 
@@ -23,7 +23,7 @@ pycom.lte_modem_en_on_boot(False)
 This setting is persisted across reboots.
 
 
-## Turn off after use<a id="lte-power-off" ></a>
+## Turn off after use
 
 
 If you do use LTE connectivity, but you want the modem to go into low power consumption after you are done with the communication, you can disable it with `deinit()` at the end.
@@ -80,7 +80,7 @@ The example above is the simple case where we attach, connect, communicate and t
 
 ## Leave LTE modem on
 
-Depending on your use case, you may want to save the time (and energy) for reattaching that you get after [turning the modem off](#lte-power-off).
+Depending on your use case, you may want to save the time (and energy) for reattaching that you get after [turning the modem off](#Turn-off-after-use).
 If your device communicates frequently, then you can choose to not turn the modem off at all and save the time for the reattach. Then you trade the higher power consumption during any idle time for the quicker response. For this, simply remove the deinit from the example:
 
 
