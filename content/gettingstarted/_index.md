@@ -131,9 +131,9 @@ If you need to remove files from your device you can use the following commands:
 From here on, you can continue to use the additional features of your expansionboard:
 >Note The Expansionboard requires no additional libraries and all functions work out of the box!
 
-|[ Pygate](/tutorials/expansionboards/pygate/)| [Pysense](/tutorials/expansionboards/pysense/) | [Pysense 2.0 X](/tutorials/expansionboards/pysense2/)| [Pytrack](/tutorials/expansionboards/pytrack/)| [Pytrack 2.0 X](/tutorials/expansionboards/pytrack2/)| [PyScan ](/tutorials/expansionboards/pyscan/)|
+|[ Pygate](/datasheets/expansionboards/pygate/)| [Pysense](/datasheets/expansionboards/pysense/) | [Pysense 2.0 X](/datasheets/expansionboards/pysense2/)| [Pytrack](/datasheets/expansionboards/pytrack/)| [Pytrack 2.0 X](/datasheets/expansionboards/pytrack2/)| [PyScan ](/datasheets/expansionboards/pyscan/)|
 |:----|:-----|:-----|:-----|:-----|:----|
-| [![](/gitbook/assets/expansionboards/pygate.png)](/tutorials/expansionboards/pygate/)|[![](/gitbook/assets/expansionboards/pysense1.png)](/tutorials/expansionboards/pysense/) | [![](/gitbook/assets/expansionboards/pysense2.png)](/tutorials/expansionboards/pysense2/)| [![](/gitbook/assets/expansionboards/pytrack1.png)](/tutorials/expansionboards/pytrack/)| [![](/gitbook/assets/expansionboards/pytrack2.png)](/tutorials/expansionboards/pytrack2/)| [![](/gitbook/assets/expansionboards/pyscan.png)](/tutorials/expansionboards/pyscan/) |
+| [![](/gitbook/assets/expansionboards/pygate.png)](/datasheets/expansionboards/pygate/)|[![](/gitbook/assets/expansionboards/pysense1.png)](/datasheets/expansionboards/pysense/) | [![](/gitbook/assets/expansionboards/pysense2.png)](/datasheets/expansionboards/pysense2/)| [![](/gitbook/assets/expansionboards/pytrack1.png)](/datasheets/expansionboards/pytrack/)| [![](/gitbook/assets/expansionboards/pytrack2.png)](/datasheets/expansionboards/pytrack2/)| [![](/gitbook/assets/expansionboards/pyscan.png)](/datasheets/expansionboards/pyscan/) |
 
 ## Step 5: Connecting to a network
 
