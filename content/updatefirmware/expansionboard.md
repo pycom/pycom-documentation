@@ -8,8 +8,6 @@ aliases:
 
 To update the firmware on any of the expansionboards, please see the following instructions. The firmware of can be updated via the USB port using the terminal tool, `DFU-util`.
 
-> There is currently **no firmware update** released for the new **Pytrack 2.0 X** and **Pysense 2.0 X**. Please do not try to flash these boards with firmware released for the old Version 1 hardware revision. The hardware revision is printed on the bottom of the shield.
-
 
 The latest firmware DFU file can be downloaded from the links below:
 * [Pygate](https://software.pycom.io/findupgrade?key=pygate.dfu&type=all&redirect=true)
