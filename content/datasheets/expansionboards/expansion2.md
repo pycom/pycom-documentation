@@ -1,12 +1,12 @@
 ---
-title: "Expansion Board 2.0"
+title: "Expansion Board 2"
 aliases:
     - datasheets/boards/expansion2.html
     - datasheets/boards/expansion2.md
     - product-info/boards/expansion2
     - chapter/datasheets/boards/expansion2
 ---
-**Store**: Discontinued, See [Expansionboard 3.0](../expansion3)
+**Store**: Discontinued, See [Expansionboard 3](../expansion3)
 
 ![](/gitbook/assets/expansion2.png) 
 
@@ -15,7 +15,9 @@ aliases:
 
 The datasheet of the Expansion Board is available as a [PDF File](/gitbook/assets/expansion2-specsheet.pdf)
 
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Expansion-Board(8286-00033P)-20190523.pdf)
+### Certifications
+The Expansionboard 2 is certified for:
+* [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Expansion-Board(8286-00033P)-20190523.pdf)
 
 
 ## Pinout
