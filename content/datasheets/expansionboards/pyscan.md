@@ -8,6 +8,7 @@ aliases:
 ---
 **Store**: [Buy Here](https://pycom.io/product/pyscan/)
 
+The Pyscan shield allows you to scan RFID and NFC tags and includes an accelerometer and light sensor.
 
 ## Getting started
 1. Find the libraries for the Pyscan in the [Pycom libraries](https://github.com/pycom/pycom-libraries/shields/) repository on Github. 
@@ -18,21 +19,20 @@ aliases:
 example output
 ```
 
-### Examples
+### Examples
 The Pyscan has several examples:
 * [Scanning](/tutorials/expansionboards/scanning/)
 
 ## Features
 
-![](/gitbook/assets/pyscan-new.png)
-
+![](/gitbook/assets/pyscan-pinout-1.png)
 ## Datasheet & Pinout
 
 The pinout and datasheet of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-pinout.pdf)
 
 [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pyscan(8286-00031P)-20190523.pdf)
 
-![](/gitbook/assets/pyscan-pinout-1.png)
+
 
 ## Pyscan Libraries
 
@@ -64,4 +64,4 @@ The board features a single cell Li-Ion/Li-Po charger with a JST PHR‑2 connect
 
 ## 3D model for case design
 
-* Please see the [3D model] (/gitbook/assets/PyScan_v0.7.step) (step format)
+* Please see the [3D model](/gitbook/assets/PyScan_v0.7.step) (step format)
