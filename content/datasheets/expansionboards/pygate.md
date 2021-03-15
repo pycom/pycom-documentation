@@ -8,7 +8,15 @@ aliases:
 ---
 **Store**: [Buy Here](https://pycom.io/product/pygate/)
 
-## ![](/gitbook/assets/pygate.png)
+The Pygate is an 8-channel LoRa Gateway
+
+## Getting started
+1. Upload the latest stable `pygate` firmware release using the [firmware updater](/updatefirmware/device/). 
+1. Follow the [tutorial](/tutorials/expansionboards/pygate/) to get your Pygate up and connected to The Things Network.
+
+## Features
+
+![](/gitbook/assets/pygate.png)
 
 ## Datasheet
 
