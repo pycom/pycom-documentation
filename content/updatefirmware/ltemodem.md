@@ -43,7 +43,7 @@ This update has to be done in two steps and is a full upgrade, meaning you can o
     For the first update you have to also specify `load_fff=False`. Using the SD cad method, it would be like this:
 
     ```
-    sqnsupgrade.run('/sd/CATM1-5.2-48829-2.dup', load_fff=False)
+    sqnsupgrade.run('/sd/CATM1-5.2-48829-1.dup', load_fff=False)
     ```
 
 
