@@ -59,7 +59,7 @@ print("Battery voltage: " + str(py.read_battery_voltage()))
 
 ## Sensor data to Pybytes
 Pybytes is an online IoT platform, where you can receive data from your sensors and visualize it over time. 
-To forward generated sensor data to Pybytes, you'll first have to [provision your device](/pybytes/gettingstarted/) to Pybytes, and have it activated. Then, you can use the following example to send the light sensor data to Pybytes:
+To forward generated sensor data to Pybytes, you'll first have to [provision your device](/pybytes/gettingstarted/) to Pybytes, and have it activated on boot. Then, you can use the following example to send the light sensor data to Pybytes:
 
 ```python
 import time
