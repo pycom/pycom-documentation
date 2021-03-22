@@ -8,7 +8,11 @@ aliases:
 ---
 **Store**: [Buy Here](https://pycom.io/product/pysense/)
 
-The Pyscan shield allows you to scan RFID and NFC tags and includes an accelerometer and light sensor.
+The Pysense shield allows you to sense the environment using 5 different sensors:
+* Accelerometer (LIS2HH12)
+* Light Sensor (LTR329ALS01)
+* Pressure Sensor (MPL3115A2)
+* Temperature / Humidity Sensor (SI7006A20)
 
 ## Getting started
 1. Find the libraries for the Pysense in the [Pycom libraries](https://github.com/pycom/pycom-libraries/shields/) repository on Github. 

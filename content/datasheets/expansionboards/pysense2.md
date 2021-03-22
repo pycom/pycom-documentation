@@ -7,10 +7,14 @@ aliases:
     - chapter/datasheets/boards/pysense2
 ---
 
-The Pyscan shield allows you to scan RFID and NFC tags and includes an accelerometer and light sensor.
+The Pysense 2.0 X shield allows you to sense the environment using 5 different sensors:
+* Accelerometer (LIS2HH12)
+* Light Sensor (LTR329ALS01)
+* Pressure Sensor (MPL3115A2)
+* Temperature / Humidity Sensor (SI7006A20)
 
 ## Getting started
-1. Find the libraries for the Pyscan in the [Pycom libraries](https://github.com/pycom/pycom-libraries/shields/) repository on Github. 
+1. Find the libraries for the Pysense 2.0 X in the [Pycom libraries](https://github.com/pycom/pycom-libraries/shields/) repository on Github. 
 1. Download the files and extract them into the project folder in Pymakr
 1. Click the `upload project to device` button. This will store all necessary files on the device and allow you to import them in the example `main.py`.
 1. Check the REPL:
@@ -19,8 +23,8 @@ example output
 ```
 
 ### Examples
-The Pyscan has several examples:
-* [Scanning](/tutorials/expansionboards/scanning/)
+The Pysense has several examples:
+* [Sensing](/tutorials/expansionboards/sensing/)
 
 ## Features
 
