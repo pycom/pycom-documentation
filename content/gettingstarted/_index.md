@@ -30,7 +30,7 @@ This step works the same for all our development boards and expansion boards. In
 
 ![](/gitbook/assets/expansion_board_3_lopy4.png)
 
->Note: If you do not have an expansion board, you are able to use a [USB-Serial converter](/gettingstarted/programming/usbserial/) or [WiFi](/gettingstarted/programming/ftp/) to connect.
+>Note: If you do not have an expansion board, you are able to use a [USB-Serial converter](/gettingstarted/programming/usbserial/) to connect or the [Pybytes App](/pybytes/smart/) to provision your device to Pybytes.
 
 
 ## Step 2: Setting up your computer
