@@ -14,7 +14,8 @@ To use the Pysense, Pytrack or Pyscan, make a folder inside your project folder 
 * [Asset tracking](tracking/)
 * [Environment sensing](sensing/)
 * [Scanning RFID / NFC Tags](scanning/)
-* [Wake on accelerometer](pysleep/)
+* [Pysleep](sleep/)
+* [Movement detection](/accelerometer/)
 
 
 

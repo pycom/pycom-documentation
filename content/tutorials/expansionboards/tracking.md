@@ -1,6 +1,8 @@
 ---
 title: "Asset Tracking"
 ---
+> This example can be used on a **Pytrack** and **Pytrack 2.0 X**
+
 Using the Pytrack, you are able to gather location data of your device. In this tutorial, we will go through how to set up your device, such that you can save the data on a SD card. Extending this example with a Pybytes integration on any network will allow you to forward any data to the cloud. 
 On this page, we cover the following:
 * [Save data to a SD card](#save-data-to-a-sd-card)

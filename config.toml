@@ -439,7 +439,7 @@ theme = "doc-theme"
     parent = "tutorials@expansionboards"
     weight = 30
 [[menu.main]]
-    name = "Accelerometer sleep"
+    name = "Pysleep"
     url = "/tutorials/expansionboards/sleep/"
     identifier = "tutorials@expansionboards@sleep"
     parent = "tutorials@expansionboards"

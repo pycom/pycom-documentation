@@ -1,17 +1,24 @@
 ---
 title: 'Sleep'
 ---
+> This example can be used on a **All shields**
 
-The expansionboards (Pysense 2.0 X, and Pytrack 2.0 X, DeepSleep shield) use a different mechanism to put the controller to sleep. A separate controller on the expansion board will put the main controller to sleep. This will actually cut all power from the module for the set amount of time, hard resetting it. Cutting power to the expansion board will work as well. Using this method, we can still recover the wake up reason and remaining sleep time. The example below works was written for a Pysense, but works on any of the boards by changing the first lines
-
+On these shields, an additional sleep method is available. Next to [`machine.deepsleep()`](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms). there is `py.go_to_sleep()`, which is able to completely cut the power to the development board, and using only the coprocessor to keep track of when to wake up again. This way, we can save more power, which is especially useful when operating on a battery. On this page, we will cover the following:
+* [Simple Pysleep](#simple-pysleep)
+* [Wake up from accelerometer](#wake-up-from-accelerometer)
+*
+## Simple Pysleep
 ```python
-from pysense import Pysense
-py = Pysense()
-py.setup_sleep(10) # set sleep time of 10 seconds
+from pycoproc import Pycoproc
+py = Pycoproc
+# setup the sleep time in seconds
+py.setup_sleep(10)
+# go to pysleep
 py.go_to_sleep()
 print("this will never be printed")
 ```
-Using this method, we can also wake the board using the accelerometer interrupt method:
+## Wake up from accelerometer
+Using this method, we can also wake the board using the onboard accelerometer to wake up from pysleep after we detect movement. The example below shows how to achieve that:
 
 ```python
 
