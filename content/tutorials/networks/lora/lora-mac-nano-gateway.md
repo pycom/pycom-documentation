@@ -6,9 +6,7 @@ aliases:
     - chapter/tutorials/lora/lora-mac-nano-gateway
 ---
 
-This example allows a raw LoRa connection between two LoPys (nodes) to a single LoPy acting as a Nano-Gateway.
-
-For more information and discussions about this code, see this forum [post](https://forum.pycom.io/topic/236/lopy-nano-gateway).
+This example allows a raw LoRa connection between several nodes to a single LoPy acting as a Nano-Gateway. Note that this gateway only listens on a single channel.
 
 ## Gateway Code
 
@@ -40,7 +38,6 @@ while (True):
 
         device_id, pkg_len, msg = struct.unpack(_LORA_PKG_FORMAT % recv_pkg_len, recv_pkg)
 
-# If the uart = machine.UART(0, 115200) and os.dupterm(uart) are set in the boot.py this print should appear in the serial port
         print('Device: %d - Pkg:  %s' % (device_id, msg))
 
         ack_pkg = struct.pack(_LORA_PKG_ACK_FORMAT, device_id, 1, 200)
@@ -91,11 +88,9 @@ while(True):
             if (device_id == DEVICE_ID):
                 if (ack == 200):
                     waiting_ack = False
-                    # If the uart = machine.UART(0, 115200) and os.dupterm(uart) are set in the boot.py this print should appear in the serial port
                     print("ACK")
                 else:
                     waiting_ack = False
-                    # If the uart = machine.UART(0, 115200) and os.dupterm(uart) are set in the boot.py this print should appear in the serial port
                     print("Message Failed")
 
     time.sleep(5)
