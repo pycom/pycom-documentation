@@ -9,7 +9,7 @@ _This module implements a subset of the corresponding_ `CPython` _module, as des
 
 This module allows to decompress binary data compressed with [DEFLATE algorithm](https://en.wikipedia.org/wiki/DEFLATE) (commonly used in zlib library and gzip archiver). Compression is not yet implemented.
 
-## **Methods**
+## Methods
 
 ### uzlib.decompress(data, wbits=0, bufsize=0)
 
