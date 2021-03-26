@@ -52,8 +52,25 @@ nav#TableOfContents {
 
 h1, h2, h3, h4 {
   color: #1E1E3C;
-  letter-spacing: 0.1em;
   opacity: 0.9;
+}
+h1, h3, h4 {
+  letter-spacing: 0.1em;
+}
+h2 {
+  font-family: 'Montserrat';
+}
+h3 {
+  font-family: 'Montserrat';
+  color: rgb(0,112,32);
+  letter-spacing: normal;
+  font-size: 1em;
+  padding-top: 1em;
+}
+h4 {
+  font-family: 'Montserrat';
+  letter-spacing: normal;
+  padding-top: 1em;
 }
 
 
@@ -114,7 +131,7 @@ url("/fonts/space-mono/SpaceMono-Regular.eot") format("opentype");
 
 .application {
   /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
-  font-family: 'Space Mono';
+  /* font-family: 'Space Mono'; */
 }
 
 a.bread:hover {
@@ -362,8 +379,8 @@ code {
   padding-top: 24px;
 }
 
-p {
-  font-family: 'Space Mono';
+p, li {
+  font-family: 'Montserrat';
 }
 
 

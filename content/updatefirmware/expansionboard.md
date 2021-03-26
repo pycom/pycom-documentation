@@ -8,13 +8,12 @@ aliases:
 
 To update the firmware on any of the expansionboards, please see the following instructions. The firmware of can be updated via the USB port using the terminal tool, `DFU-util`.
 
-> There is currently **no firmware update** released for the new **Pytrack 2.0 X** and **Pysense 2.0 X**. Please do not try to flash these boards with firmware released for the old Version 1 hardware revision. The hardware revision is printed on the bottom of the shield.
-
-
 The latest firmware DFU file can be downloaded from the links below:
 * [Pygate](https://software.pycom.io/findupgrade?key=pygate.dfu&type=all&redirect=true)
 * [Pytrack 1 DFU](https://software.pycom.io/findupgrade?key=pytrack.dfu&type=all&redirect=true)
 * [Pysense 1 DFU](https://software.pycom.io/findupgrade?key=pysense.dfu&type=all&redirect=true)
+* [Pytrack 2 DFU](https://software.pycom.io/findupgrade?key=pytrack2.dfu&type=all&redirect=true)
+* [Pysense 2 DFU](https://software.pycom.io/findupgrade?key=pysense2.dfu&type=all&redirect=true)
 * [Expansion Board DFU v3.0](https://software.pycom.io/findupgrade?key=expansion3.dfu&type=all&redirect=true)
 * [Expansion Board DFU v3.1](https://software.pycom.io/findupgrade?key=expansion31.dfu&type=all&redirect=true)
 
@@ -27,10 +26,10 @@ In normal operation, the expansionboard is in Application mode. However when we 
 
 | Board | DFU bootloader (update mode) | Application firmware (normal mode) |
 | :--- | :--- | :--- |
-| Pygate | `0xED15` | `0xED14` |
-| Pytrack | `0xF014` | `0xF013` |
-| Pysense | `0xF011` | `0xF012` |
-| Pyscan | `0xEF37` | `0xEF38` |
+| Pygate             | `0xED15` | `0xED14` |
+| Pytrack            | `0xF014` | `0xF013` |
+| Pysense            | `0xF011` | `0xF012` |
+| Pyscan             | `0xEF37` | `0xEF38` |
 | Expansion Board v3 | `0xEF99` | `0xEF98` |
 
 _Note: USB Vendor ID is always_ `0x04D8`
@@ -59,8 +58,8 @@ _Note: USB Vendor ID is always_ `0x04D8`
 
   * Windows
 
-    Download and install [DFU-util v0.9](http://dfu-util.sourceforge.net/releases/dfu-util-0.9-win64.zip) 
-    
+    Download and install [DFU-util v0.9](http://dfu-util.sourceforge.net/releases/dfu-util-0.9-win64.zip)
+
     For Windows, we will need to install separate drivers for the board to recognized as a Pycom board in DFU mode.
     1. Disconnect the USB cable to your expansion board
     2. Hold down the DFU mode button on the shield
@@ -90,7 +89,7 @@ To enter update mode follow these steps:
 1. Navigate the terminal to the folder where you downloaded the `.dfu` file to
 2. Unplug the device
 3. Remove the development module
-4. Press this button on your device:
+4. Press and hold the S1/MCLR button on your device. Highlighted in red below:
 
 | Expansionboard 3.1 | Pygate | Pysense | Pysense 2.0 X | Pytrack | Pytrack 2.0 X | PyScan |
 |:----|:----|:-----|:--------|:-----|:-----|:----|
@@ -143,9 +142,9 @@ Done!
 
 Using `lsusb` command, the device should be visible in both normal and bootloader modes.
 
-For exemple, a Pytrack board is visible as either:
+For example, a Pytrack board is visible as either:
 
 * `Bus 020 Device 004: ID 04d8:f014 Microchip Technology Inc. Application Specific Device`
-  * this is bootloader mode (`f014` is USB PID), active just for 7-8 seconds, if the reset button was just  pressed before plugging USB connector.
+  * This is the bootloader mode (`f014` is USB PID). It is active for just 7-8 seconds, if the MCLR button was pressed just before plugging in the USB connector.
 * `Bus 020 Device 005: ID 04d8:f013 Microchip Technology Inc. Pytrack Serial: Pyabcde0`
-  * this is normal, application mode (`f013` is USB PID), this means the bootloader verified application partition and it boot-up correctly.
+  * This is the normal, application mode (`f013` is USB PID). This means the bootloader verified the firmware and it boot-up correctly.

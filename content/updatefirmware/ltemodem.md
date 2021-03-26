@@ -1,5 +1,5 @@
 ---
-title: "Modem Firmware Update"
+title: "LTE Modem Firmware Update"
 aliases:
     - tutorials/lte/firmware.html
     - tutorials/lte/firmware.md
@@ -8,7 +8,7 @@ aliases:
 
 **This article is only related to GPy, FiPy, and G01 boards**
 
->Note: The LTE modem updater is integrated in the latest stable firmware release, make sure you update your device firmware first [here](/updatefirmware/device/)
+>Note: The LTE modem updater is integrated in the latest stable **pybytes-firmware** release, make sure you update your device firmware first [here](/updatefirmware/device/)
 
 Before updating the modem firmware, check the current modem firmware version using:
 ```python
@@ -20,27 +20,55 @@ The bottom two lines explain the LTE firmware edition:
 * LR5.xx is for CAT-M1
 * LR6.xx is for NB-IoT
 
-The firmwares for CAT-M1 and NB-IoT are fundamentally different and cannot be used interchangable. The last 5 numbers define the firmware version. A higher number represents a newer firmware. 
-> Our newest products ship with firmware version CatM1 47510. There is no major difference between the latest public version 41065 and 47510. 
-
-The prefered method for updating the LTE modem is using `upgdiff-` files, as these updates are faster. Check in the zip archive wheter a upgdiff- update for your version is available. When using a `upgdiff-` file, you do not need to use `updater.elf`
-
-> Using `sqnsupgrade` does not currently work properly in the pygate firmware
-
-There are several different ways to update the firmware of the LTE modem.
-1. [Flash](/updatefirmware/ltemodem/#flash) (slow)
-2. [SD card](/updatefirmware/ltemodem/#sd-card) (fastest)
-3. [USB](/updatefirmware/ltemodem/#usb) (medium)
-4. [Wireless](/updatefirmware/ltemodem/#wireless) (slowest)
-
->Note: In case of any failure or interruption to the process of LTE modem upgrade you can repeat the same steps **after doing a hard reset to the board (i.e disconnecting and reconnecting power), pressing the reset button is not enough.**
-
-The modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and go [here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured) for the credentials. (On the forum: Announcements & News --> Announcements for members only --> the Firmware Files)
+The firmwares for CAT-M1 and NB-IoT are fundamentally different and cannot be used interchangable. For security reasons, the modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and go [here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured) for the credentials. (On the forum: Announcements & News &rarr; Announcements for members only &rarr; the Firmware Files)
 You can find the firmwares listed [here](https://software.pycom.io/downloads/sequans2.html).
+
+>If you currently have CAT-M1 firmware **33080**, then make sure to update to 41065, before you go to any other version such as 48829!
+
+Our newest products ship with the modem firmware version CAT-M1 5.4.1.0-50523. At the moment it is not possible to update the modem to that version.
+
+There are several different ways to update the firmware of the LTE modem:
+1. [Flash](#flash) (slow)
+1. [SD card](#sd-card) (fastest)
+1. [USB](#usb) (medium)
+1. [Wireless](#wireless) (slowest)
+
+>In case of any failure or interruption to the process of LTE modem upgrade you can repeat the same steps after **power cycling to the board (i.e disconnecting and reconnecting power)**. Just pressing the reset button is not enough.
+
+
+
+## Note on Updating to CAT-M1 5.2-48829
+
+This update has to be done in two steps and is a full upgrade, meaning you can only use the steps for 'SD Card' or 'USB'.
+1. update with `CATM1-5.2-48829-1.dup`
+    
+    For the first update you have to also specify `load_fff=False`. Using the SD cad method, it would be like this:
+
+    ```
+    sqnsupgrade.run('/sd/CATM1-5.2-48829-1.dup', load_fff=False)
+    ```
+
+
+    wait until the LTE modem resets and prints out something similar to this:
+
+    ```
+    Resetting............
+    Your modem has been successfully updated.
+    Here is the current firmware version:
+    UE5.0.0.0d
+    LR5.1.1.0-39529
+    IMEI: xyz
+    ```
+2. update with `CATM1-5.2-48829-2.dup`
+
+    ```
+    sqnsupgrade.run('/sd/CATM1-5.2-48829-2.dup')
+    ```
+    At the end reset the board.
 
 ## Flash
 
->Note: For Flash updates, we currently only support the use of upgdiff- files! If there is no upgdiff- file for your version available, try to use another method. 
+>Note: For Flash updates, we currently only support the use of upgdiff- files. If there is no upgdiff- file for your version available, try to use another method. 
 
 1. Copy the firmware update file you want to use in your project folder and click `upload to device` in the Pymakr plugin. Make sure the first 5 numbers match the current version of your modem firmware. Uploading might take a while because of the large filesize.
     > Note: If the firmware does not sync to your device, open the Pymakr settings &rarr; project settings and add `"dup"` to the entry `"sync_file_types"`. This will create a `pymakr.conf` file in your project and allow you to sync `.dup` files to the device using pymakr.

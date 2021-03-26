@@ -16,7 +16,7 @@ In the following guide, we will explain the basic process to get started using y
 1. [Setting up the hardware](#step-1-setting-up-the-hardware)
 2. [Setting up your computer](#step-2-setting-up-your-computer)
 3. [Programming the module](#step-3-programming-your-module)
-4. [Using your Expansionboard](#step-4-using-your-expansionboard)
+4. [Using your Shield](#step-4-using-your-shield)
 
 <!-- ![](/gitbook/assets/getting_started%20%281%29.png) -->
 
@@ -30,7 +30,7 @@ This step works the same for all our development boards and expansion boards. In
 
 ![](/gitbook/assets/expansion_board_3_lopy4.png)
 
->Note: If you do not have an expansion board, you are able to use a [USB-Serial converter](/gettingstarted/programming/usbserial/) or [WiFi](/gettingstarted/programming/ftp/) to connect.
+>Note: If you do not have an expansion board, you are able to use a [USB-Serial converter](/gettingstarted/programming/usbserial/) to connect or the [Pybytes App](/pybytes/smart/) to provision your device to Pybytes.
 
 
 ## Step 2: Setting up your computer
@@ -127,7 +127,7 @@ If you need to remove files from your device you can use the following commands:
 >>> os.fsformat('/flash')
 ```
 
-## Step 4: Using your expansionboard
+## Step 4: Using your shield
 From here on, you can continue to use the additional features of your expansionboard:
 >Note The Expansionboard requires no additional libraries and all functions work out of the box!
 

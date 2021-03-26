@@ -415,7 +415,7 @@ theme = "doc-theme"
     weight = 70
 
 [[menu.main]]
-    name = "Expansion Boards"
+    name = "Shields"
     url = "/tutorials/expansionboards/"
     identifier = "tutorials@expansionboards"
     parent = "tutorials"
@@ -737,54 +737,60 @@ theme = "doc-theme"
     weight = 40
 
 [[menu.main]]
-    name = "Expansion boards"
+    name = "Shields"
     url = "/firmwareapi/pycom/expansionboards/"
     identifier = "firmwareapi@pycom@expansionboards"
     parent = "firmwareapi@pycom"
     weight = 50
 
 [[menu.main]]
-    name = "Pygate"
-    url = "/firmwareapi/pycom/expansionboards/pygate/"
-    identifier = "firmwareapi@pycom@expansionboards@pygate"
+    name = "Pycoproc"
+    url = "/firmwareapi/pycom/expansionboards/pycoproc/"
+    identifier = "firmwareapi@pycom@expansionboards@pycoproc"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 10
 [[menu.main]]
-    name = "pysense"
-    url = "/firmwareapi/pycom/expansionboards/pysense/"
-    identifier = "firmwareapi@pycom@expansionboards@pysense"
+    name = "Pycoproc2"
+    url = "/firmwareapi/pycom/expansionboards/pycoproc2/"
+    identifier = "firmwareapi@pycom@expansionboards@pycoproc2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 20
 [[menu.main]]
-    name = "pysense 2.0 x"
-    url = "/firmwareapi/pycom/expansionboards/pysense2/"
+    name = "LIS2HH12"
+    url = "/firmwareapi/pycom/expansionboards/LIS2HH12/"
     identifier = "firmwareapi@pycom@expansionboards@pysense2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 30
 [[menu.main]]
-    name = "pytrack"
-    url = "/firmwareapi/pycom/expansionboards/pytrack/"
-    identifier = "firmwareapi@pycom@expansionboards@pytrack"
+    name = "LTR329ALS01"
+    url = "/firmwareapi/pycom/expansionboards/LTR329ALS01/"
+    identifier = "firmwareapi@pycom@expansionboards@LTR329ALS01"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 40
 [[menu.main]]
-    name = "pytrack 2.0 x"
-    url = "/firmwareapi/pycom/expansionboards/pytrack2/"
-    identifier = "firmwareapi@pycom@expansionboards@pytrack2"
+    name = "SI7006A20"
+    url = "/firmwareapi/pycom/expansionboards/SI7006A20/"
+    identifier = "firmwareapi@pycom@expansionboards@SI7006A20"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 50
 [[menu.main]]
-    name = "pyscan"
-    url = "/firmwareapi/pycom/expansionboards/pyscan/"
-    identifier = "firmwareapi@pycom@expansionboards@pyscan"
+    name = "MPL3115A2"
+    url = "/firmwareapi/pycom/expansionboards/MPL3115A2/"
+    identifier = "firmwareapi@pycom@expansionboards@MPL3115A2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 60
-[[menu.main]]
-    name = "sleep"
-    url = "/firmwareapi/pycom/expansionboards/sleep/"
-    identifier = "firmwareapi@pycom@expansionboards@sleep"
+    [[menu.main]]
+    name = "MFRC630"
+    url = "/firmwareapi/pycom/expansionboards/MFRC630/"
+    identifier = "firmwareapi@pycom@expansionboards@MFRC630"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 70
+[[menu.main]]
+    name = "L76GNSS"
+    url = "/firmwareapi/pycom/expansionboards/L76GNSS/"
+    identifier = "firmwareapi@pycom@expansionboards@L76GNSS"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 80
 
 
 
@@ -1271,7 +1277,7 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-  name = "Pybytes iOS"
+  name = "Pybytes App"
   url = "/pybytes/smart/"
   identifier = "pybytes@smart"
   parent = "pybytes"
