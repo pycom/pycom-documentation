@@ -1050,7 +1050,7 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
-    name = "Expansion Boards and Shields"
+    name = "Shields"
     url = "/datasheets/expansionboards/"
     identifier = "datasheets@boards"
     parent = "datasheets"
