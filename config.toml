@@ -927,6 +927,12 @@ theme = "doc-theme"
     identifier = "firmwareapi@micropython@ustruct"
     parent = "firmwareapi@micropython"
     weight = 180
+[[menu.main]]
+    name = "uzlib"
+    url = "/firmwareapi/micropython/uzlib/"
+    identifier = "firmwareapi@micropython@uzlib"
+    parent = "firmwareapi@micropython"
+    weight = 190
 
 [[menu.main]]
     name = "_thread"
