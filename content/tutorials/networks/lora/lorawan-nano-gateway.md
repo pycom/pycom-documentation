@@ -33,11 +33,38 @@ This file runs at boot and calls the library and `config.py` files to initialise
 
 ```python
 """ LoPy LoRaWAN Nano Gateway example usage """
+# Acknowledgement:
+# Thanks to robert-hh for providing us with an updated, more stable example for the nanogateway 
+
+# disable heartbeat
+from pycom import heartbeat
+heartbeat(False)
+print ("Heartbeat off")
+
+
+import utime
+from machine import RTC
+rtc = RTC()
+rtc.ntp_sync("pool.ntp.org")
+utime.sleep_ms(750)
+t = rtc.now()
+with open("bootlog.txt", "a") as f:
+   f.write(repr(utime.time()) + " " + repr(t) + "\n")
+
+def reload(mod):
+    import sys
+    mod_name = mod.__name__
+    del sys.modules[mod_name]
+    return __import__(mod_name)
+
+from machine import reset
+
+""" LoPy LoRaWAN Nano Gateway example usage """
 
 import config
 from nanogateway import NanoGateway
 
-if __name__ == '__main__':
+if True: #__name__ == '__main__':
     nanogw = NanoGateway(
         id=config.GATEWAY_ID,
         frequency=config.LORA_FREQUENCY,
@@ -51,8 +78,9 @@ if __name__ == '__main__':
         )
 
     nanogw.start()
-    nanogw._log('You may now press ENTER to enter the REPL')
-    input()
+    #nanogw._log('You may now press ENTER to enter the REPL')
+    #input()
+
 ```
 
 ### config.py
@@ -71,26 +99,31 @@ import ubinascii
 
 WIFI_MAC = ubinascii.hexlify(machine.unique_id()).upper()
 # Set  the Gateway ID to be the first 3 bytes of MAC address + 'FFFE' + last 3 bytes of MAC address
-GATEWAY_ID = WIFI_MAC[:6] + "FFFE" + WIFI_MAC[6:12]
-
+# GATEWAY_ID = WIFI_MAC[:6] + "FFFE" + WIFI_MAC[6:12]
+GATEWAY_ID = WIFI_MAC[:6] + "FFFF" + WIFI_MAC[6:12]
 SERVER = 'router.eu.thethings.network'
 PORT = 1700
 
 NTP = "pool.ntp.org"
 NTP_PERIOD_S = 3600
 
-WIFI_SSID = 'my-wifi'
-WIFI_PASS = 'my-wifi-password'
+WIFI_SSID = ''
+WIFI_PASS = ''
+
+# for IN865
+# LORA_FREQUENCY = 865062500
+# LORA_GW_DR = "SF7BW125" # DR_5
+# LORA_NODE_DR = 5
 
 # for EU868
-LORA_FREQUENCY = 868100000
+LORA_FREQUENCY = 868500000
 LORA_GW_DR = "SF7BW125" # DR_5
 LORA_NODE_DR = 5
 
 # for US915
 # LORA_FREQUENCY = 903900000
-# LORA_GW_DR = "SF10BW125" # DR_0
-# LORA_NODE_DR = 0
+# LORA_GW_DR = "SF7BW125" # DR_3
+# LORA_NODE_DR = 3
 ```
 
 ### nanogateway.py
@@ -99,6 +132,7 @@ The nano-gateway library controls all of the packet generation and forwarding fo
 
 ```python
 """ LoPy LoRaWAN Nano Gateway. Can be used for both EU868 and US915. """
+
 import errno
 import machine
 import ubinascii
@@ -107,11 +141,12 @@ import uos
 import usocket
 import utime
 import _thread
+import gc
 from micropython import const
 from network import LoRa
 from network import WLAN
 from machine import Timer
-
+from machine import WDT
 
 PROTOCOL_VERSION = const(2)
 
@@ -130,7 +165,9 @@ TX_ERR_TX_FREQ = 'TX_FREQ'
 TX_ERR_TX_POWER = 'TX_POWER'
 TX_ERR_GPS_UNLOCKED = 'GPS_UNLOCKED'
 
-UDP_THREAD_CYCLE_MS = const(20)
+UDP_THREAD_CYCLE_MS = const(10)
+WDT_TIMEOUT = const(120)
+
 
 STAT_PK = {
     'stat': {
@@ -219,6 +256,8 @@ class NanoGateway:
 
         self.rtc = machine.RTC()
 
+        self.watchdog = WDT(timeout=10000)
+
     def start(self):
         """
         Starts the LoRaWAN nano gateway.
@@ -229,14 +268,15 @@ class NanoGateway:
         # setup WiFi as a station and connect
         self.wlan = WLAN(mode=WLAN.STA)
         self._connect_to_wifi()
-
+        self.watchdog.feed()
         # get a time sync
         self._log('Syncing time with {} ...', self.ntp_server)
         self.rtc.ntp_sync(self.ntp_server, update_period=self.ntp_period)
         while not self.rtc.synced():
             utime.sleep_ms(50)
+            self.watchdog.feed()
         self._log("RTC NTP sync complete")
-
+        self.watchdog.feed()
         # get the server IP and create an UDP socket
         self.server_ip = usocket.getaddrinfo(self.server, self.port)[0][-1]
         self._log('Opening UDP socket to {} ({}) port {}...', self.server, self.server_ip[0], self.server_ip[1])
@@ -251,14 +291,20 @@ class NanoGateway:
         self.stat_alarm = Timer.Alarm(handler=lambda t: self._push_data(self._make_stat_packet()), s=60, periodic=True)
         self.pull_alarm = Timer.Alarm(handler=lambda u: self._pull_data(), s=25, periodic=True)
 
+        # start the watchdog
+        self.watchdog.feed()
+        utime.sleep(1)
+        self._log("Watchdog started")
+
         # start the UDP receive thread
         self.udp_stop = False
         _thread.start_new_thread(self._udp_thread, ())
-
+        self.watchdog.feed()
         # initialize the LoRa radio in LORA mode
         self._log('Setting up the LoRa radio at {} Mhz using {}', self._freq_to_float(self.frequency), self.datarate)
         self.lora = LoRa(
             mode=LoRa.LORA,
+            region=LoRa.EU868,
             frequency=self.frequency,
             bandwidth=self.bw,
             sf=self.sf,
@@ -271,8 +317,14 @@ class NanoGateway:
         self.lora_sock = usocket.socket(usocket.AF_LORA, usocket.SOCK_RAW)
         self.lora_sock.setblocking(False)
         self.lora_tx_done = False
-
+        self.watchdog.feed()
         self.lora.callback(trigger=(LoRa.RX_PACKET_EVENT | LoRa.TX_PACKET_EVENT), handler=self._lora_cb)
+        self.watchdog.feed()
+        if uos.uname()[0] == "LoPy":
+            self.window_compensation = -1000
+        else:
+            self.window_compensation = -6000
+        self.watchdog.feed()
         self._log('LoRaWAN nano gateway online')
 
     def stop(self):
@@ -306,6 +358,7 @@ class NanoGateway:
         self.wlan.connect(self.ssid, auth=(None, self.password))
         while not self.wlan.isconnected():
             utime.sleep_ms(50)
+            self.watchdog.feed()
         self._log('WiFi connected to: {}', self.ssid)
 
     def _dr_to_sf(self, dr):
@@ -344,7 +397,6 @@ class NanoGateway:
             rx_data = self.lora_sock.recv(256)
             stats = lora.stats()
             packet = self._make_node_packet(rx_data, self.rtc.now(), stats.rx_timestamp, stats.sfrx, self.bw, stats.rssi, stats.snr)
-            packet = self.frequency_rounding_fix(packet, self.frequency)
             self._push_data(packet)
             self._log('Received packet: {}', packet)
             self.rxfw += 1
@@ -352,6 +404,7 @@ class NanoGateway:
             self.txnb += 1
             lora.init(
                 mode=LoRa.LORA,
+                region=LoRa.EU868,
                 frequency=self.frequency,
                 bandwidth=self.bw,
                 sf=self.sf,
@@ -376,16 +429,6 @@ class NanoGateway:
         if divider > 0:
             frequency = frequency / (10 ** divider)
         return frequency
-
-    def frequency_rounding_fix(self, packet, frequency):
-        freq = str(frequency)[0:3] + '.' + str(frequency)[3]
-
-        start = packet.find("freq\":")
-        end = packet.find(",", start)
-
-        packet = packet[:start + 7] + freq + packet[end:]
-
-        return packet
 
     def _make_stat_packet(self):
         now = self.rtc.now()
@@ -443,6 +486,7 @@ class NanoGateway:
 
         self.lora.init(
             mode=LoRa.LORA,
+            region=LoRa.EU868,
             frequency=frequency,
             bandwidth=self._dr_to_bw(datarate),
             sf=self._dr_to_sf(datarate),
@@ -450,34 +494,15 @@ class NanoGateway:
             coding_rate=LoRa.CODING_4_5,
             tx_iq=True
             )
-        #while utime.ticks_cpu() < tmst:
-        #    pass
+        while utime.ticks_diff(utime.ticks_cpu(), tmst) > 0:
+            pass
+        self.lora_sock.settimeout(1)
         self.lora_sock.send(data)
+        self.lora_sock.setblocking(False)
         self._log(
-            'Sent downlink packet scheduled on {:.3f}, at {:.3f} Mhz using {}: {}',
+            'Sent downlink packet scheduled on {:.3f}, at {:,d} Hz using {}: {}',
             tmst / 1000000,
-            self._freq_to_float(frequency),
-            datarate,
-            data
-        )
-
-    def _send_down_link_class_c(self, data, datarate, frequency):
-        self.lora.init(
-            mode=LoRa.LORA,
-            frequency=frequency,
-            bandwidth=self._dr_to_bw(datarate),
-            sf=self._dr_to_sf(datarate),
-            preamble=8,
-            coding_rate=LoRa.CODING_4_5,
-            tx_iq=True,
-            device_class=LoRa.CLASS_C
-            )
-
-        self.lora_sock.send(data)
-        self._log(
-            'Sent downlink packet scheduled on {:.3f}, at {:.3f} Mhz using {}: {}',
-            utime.time(),
-            self._freq_to_float(frequency),
+            frequency,
             datarate,
             data
         )
@@ -488,6 +513,7 @@ class NanoGateway:
         """
 
         while not self.udp_stop:
+            gc.collect()
             try:
                 data, src = self.sock.recvfrom(1024)
                 _token = data[1:3]
@@ -500,32 +526,22 @@ class NanoGateway:
                     self.dwnb += 1
                     ack_error = TX_ERR_NONE
                     tx_pk = ujson.loads(data[4:])
-                    if "tmst" in data:
-                        tmst = tx_pk["txpk"]["tmst"]
-                        t_us = tmst - utime.ticks_cpu() - 15000
-                        if t_us < 0:
-                            t_us += 0xFFFFFFFF
-                        if t_us < 20000000:
-    					    self.uplink_alarm = Timer.Alarm(
-                                handler=lambda x: self._send_down_link(
-                                    ubinascii.a2b_base64(tx_pk["txpk"]["data"]),
-                                    tx_pk["txpk"]["tmst"] - 50, tx_pk["txpk"]["datr"],
-                                    int(tx_pk["txpk"]["freq"] * 1000) * 1000
-                                ),
-                                us=t_us
-                            )
-                        else:
-                            ack_error = TX_ERR_TOO_LATE
-                            self._log('Downlink timestamp error!, t_us: {}', t_us)
-                    else:
+                    payload = ubinascii.a2b_base64(tx_pk["txpk"]["data"])
+                    # depending on the board, pull the downlink message 1 or 6 ms upfronnt
+                    tmst = utime.ticks_add(tx_pk["txpk"]["tmst"], self.window_compensation)
+                    t_us = utime.ticks_diff(utime.ticks_cpu(), utime.ticks_add(tmst, -15000))
+                    if 1000 < t_us < 10000000:
                         self.uplink_alarm = Timer.Alarm(
-                            handler=lambda x: self._send_down_link_class_c(
-                                ubinascii.a2b_base64(tx_pk["txpk"]["data"]),
-                                tx_pk["txpk"]["datr"],
-                                int(tx_pk["txpk"]["freq"] * 1000) * 1000
+                            handler=lambda x: self._send_down_link(
+                                payload,
+                                tmst, tx_pk["txpk"]["datr"],
+                                int(tx_pk["txpk"]["freq"] * 1000 + 0.0005) * 1000
                             ),
-                            us=50
+                            us=t_us
                         )
+                    else:
+                        ack_error = TX_ERR_TOO_LATE
+                        self._log('Downlink timestamp error!, t_us: {}', t_us)
                     self._ack_pull_rsp(_token, ack_error)
                     self._log("Pull rsp")
             except usocket.timeout:
@@ -535,6 +551,9 @@ class NanoGateway:
                     self._log('UDP recv OSError Exception: {}', ex)
             except Exception as ex:
                 self._log('UDP recv Exception: {}', ex)
+
+            self.watchdog.feed()
+            # self._log("Feeding the dog")
 
             # wait before trying to receive again
             utime.sleep_ms(UDP_THREAD_CYCLE_MS)
@@ -553,6 +572,7 @@ class NanoGateway:
             utime.ticks_ms() / 1000,
             str(message).format(*args)
             ))
+
 ```
 
 ## Registering with TTN
