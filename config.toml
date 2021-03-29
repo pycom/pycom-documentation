@@ -468,6 +468,12 @@ theme = "doc-theme"
     identifier = "tutorials@advanced"
     parent = "tutorials"
     weight = 60
+[[menu.main]]
+    name= "File decompression"
+    url= "/tutorials/advanced/uzlib/"
+    identifier = "tutorials@advanced@uzlib"
+    parent = "tutorials@advanced"
+    weight=10
 
 # *** Firmware & API Reference
 [[menu.main]]
