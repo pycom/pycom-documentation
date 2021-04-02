@@ -1,7 +1,7 @@
 ---
 Title: 'HTTP Client'
 ---
-In this example, we discuss how to access information served on the internet. Once you have connected to either WiFi or LTE, it is possible to access any webpage. Now there is no such thing as a webbrowser like Chrome or Firefox in your device, and the REPL is not that great at rendering webpages either, so we are mainly looking at the source of the page here. Though for sending and receiving sensor measurements, this can be very useful. The example below connects to `pycom.io` using the HTTP protocol. Note that we use the `ssl` library to wrap the socket with for use with HTTPS, as it is required by most webservices nowadays.
+In this example, we discuss how to access information served on the internet. Once you have connected to either WiFi or LTE, it is possible to access any webpage. Now there is no such thing as a webbrowser like Chrome or Firefox in your device, and the REPL is not that great at rendering webpages either, so we are mainly looking at the source of the page here. Though for sending and receiving sensor measurements, this can be very useful. The example below connects to `pycom.io` using the HTTP protocol. Note that we use the `ssl` library to wrap the socket with for use with HTTPS, as it is required by most webservices nowadays. The example will print out the received data from the webserver, which in this case, is the index page's source.
 
 
 ```python
