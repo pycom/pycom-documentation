@@ -67,24 +67,18 @@ bluetooth = Bluetooth()
 * `mode` currently the only supported mode is `Bluetooth.BLE`
 * `modem_sleep` Enables or Disables BLE modem sleep, Disable modem sleep as a workaround when having Crashes due to flash cache being disabled, as this prevents BLE task saving data in external RAM while accesing external flash for R/W	
 * `antenna` selects between the internal and the external antenna. Can be either:
-    * `Bluetooth.INT_ANT`
-    * `Bluetooth.EXT_ANT`	
+  * `bluetooth.INT_ANT`: The on-board antenna
+  * `bluetooth.EXT_ANT`: The U.FL connector (external antenna)
+  * `bluetooth.MAN_ANT`: Manually select the state of the antenna switch on `P12`. By default, this will select the on-board antenna
 * `secure` enables or disables the GATT Server security feature
 * `pin` a six digit number to connect to the GATT Sever	Setting any valid pin, GATT Server security features are activated.
 * `privacy` Enables or Disables local privacy settings so address will be random or public.
 * `secure_connections` Enables or Disables Secure Connections and MITM Protection.
 * `mtu` Maximum Transmission Unit (MTU) is the maximum length of an ATT packet. Value must be between `23` and `200`.
 
+With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
+    Initialises and enables the Bluetooth radio in BLE mode.
 
-  With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.	With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
-Initialises and enables the Bluetooth radio in BLE mode.
-
-To use an external antenna, set `P12 as output pin.`
-
-```python
-
-Pin('P12', mode=Pin.OUT)(True)
-```
 
 
 ### bluetooth.deinit()
@@ -288,7 +282,7 @@ Valid values for `level`: Bluetooth.TX_PWR_N12` -> -12dbm, `Bluetooth.TX_PWR_N9`
 * Advertisement parameters: `Bluetooth.ADV_TYPE_IND`, `Bluetooth.ADV_TYPE_DIRECT_IND_HIGH`, `Bluetooth.ADV_TYPE_SCAN_IND`, `Bluetooth.ADV_TYPE_NONCONN_IND`, `Bluetooth.ADV_TYPE_DIRECT_IND_LOW`, `Bluetooth.ADV_BLE_ADDR_TYPE_PUBLIC`, `Bluetooth.ADV_BLE_ADDR_TYPE_RANDOM`, `Bluetooth.ADV_BLE_ADDR_TYPE_RPA_PUBLIC`, `Bluetooth.ADV_BLE_ADDR_TYPE_RPA_RANDOM`, `Bluetooth.ADV_CHNL_37`, `Bluetooth.ADV_CHNL_38`, `Bluetooth.ADV_CHNL_39`, `Bluetooth.ADV_CHNL_ALL`, `Bluetooth.ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY`, `Bluetooth.ADV_FILTER_ALLOW_SCAN_WLST_CON_ANY`, `Bluetooth.ADV_FILTER_ALLOW_SCAN_ANY_CON_WLST`, `Bluetooth.ADV_FILTER_ALLOW_SCAN_WLST_CON_WLST`
 * Characteristic properties (bit values that can be combined): `Bluetooth.PROP_BROADCAST`, `Bluetooth.PROP_READ`, `Bluetooth.PROP_WRITE_NR`, `Bluetooth.PROP_WRITE`, `Bluetooth.PROP_NOTIFY`, `Bluetooth.PROP_INDICATE`, `Bluetooth.PROP_AUTH`, `Bluetooth.PROP_EXT_PROP`
 * Characteristic callback events: `Bluetooth.CHAR_READ_EVENT`, `Bluetooth.CHAR_WRITE_EVENT`, `Bluetooth.NEW_ADV_EVENT`, `Bluetooth.CLIENT_CONNECTED`, `Bluetooth.CLIENT_DISCONNECTED`, `Bluetooth.CHAR_NOTIFY_EVENT`
-* Antenna type: `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`
+* Antenna type: `Bluetooth.INT_ANT`, `Bluetooth.EXT_ANT`, `Bluetooth.MAN_ANT`
 * TX Power type: `Bluetooth.TX_PWR_CONN`, `Bluetooth.TX_PWR_ADV`, `Bluetooth.TX_PWR_SCAN`, `Bluetooth.TX_PWR_DEFAULT`
 * TX Power level: `Bluetooth.TX_PWR_N12`, `Bluetooth.TX_PWR_N9`, `Bluetooth.TX_PWR_N6`, `Bluetooth.TX_PWR_N3`, `Bluetooth.TX_PWR_0`, `Bluetooth.TX_PWR_P3`, `Bluetooth.TX_PWR_P6`, `Bluetooth.TX_PWR_P9`
 
