@@ -40,14 +40,26 @@ If problems occur within the filesystem or you wish to factory reset your module
 
 > Be aware, formatting the flash filesystem will delete all files inside the internal device storage (not the SD card) and they cannot be recovered.
 
+### Programatticaly enable safeboot
+
+Next to the manual method to enter safeboot, it is also possible to enable safebooting in micropython using the following snippet, which is the same as pressing `CTRL+F` in Pymakr, and will **not** hold through a hard-reset:
+```python
+import machine
+import pycom
+pycom.bootmgr(safeboot=True)
+machine.reset()
+```
+
 ## Reset
 
+### Soft reset
 Pycom devices support both soft and hard resets. A soft reset clears the state of the MicroPython virtual machine but leaves hardware peripherals unaffected. To do a soft reset, press `Ctrl+D` on the REPL or from within a script, run:
 
 ```python
 >>> import sys
 >>> sys.exit()
 ```
+### Hard reset
 
 A hard reset is the same as performing a power cycle to the device. In order to hard reset the device, press the `reset` switch or run:
 
