@@ -63,11 +63,3 @@ After creation, you will land on the provisioning page. This is where we 'inform
 
 You can continue to [display data from your device into the Pybytes dashboard](/pybytes/dashboard/) 
 
-## Final remarks
-If you wish to disable Pybytes, you can use `pycom.pybytes_on_boot(False)`. It is also possible to start Pybytes in a later stage (not on boot) by importing the module:
-```python
-from _pybytes import Pybytes
-pybytes = Pybytes
-```
-
-
