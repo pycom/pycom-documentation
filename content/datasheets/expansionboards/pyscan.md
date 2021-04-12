@@ -11,13 +11,10 @@ aliases:
 The Pyscan shield allows you to scan RFID and NFC tags and includes an accelerometer and light sensor.
 
 ## Getting started
-1. Find the libraries for the Pyscan in the [Pycom libraries](https://github.com/pycom/pycom-libraries/tree/master/shields) repository on Github. 
+1. Find the libraries for the Pyscan in the [Pycom libraries](https://github.com/pycom/pycom-libraries/releases/) repository on Github. 
 1. Download the files and extract them into the project folder in Pymakr
 1. Click the `upload project to device` button. This will store all necessary files on the device and allow you to import them in the example `main.py`.
-1. Check the REPL:
-```
-example output
-```
+1. Check the REPL. If you have Pybytes activated, the example will send the sensor data to Pybytes automatically. Note that the Pyscan will return command to the REPL while it scans for NFC cards in the background. Note that the example also allows the decoding of cards by changing the variable `DECODE_CARD = True`
 
 ### Examples
 The Pyscan has several examples:

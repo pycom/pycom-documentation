@@ -14,13 +14,11 @@ The Pysense 2.0 X shield allows you to sense the environment using 5 different s
 * Temperature / Humidity Sensor (SI7006A20)
 
 ## Getting started
-1. Find the libraries for the Pysense 2.0 X in the [Pycom libraries](https://github.com/pycom/pycom-libraries/tree/master/shields) repository on Github. 
+1. Find the libraries for the Pysense 2.0 X in the [Pycom libraries](https://github.com/pycom/pycom-libraries/releases/) repository on Github. 
 1. Download the files and extract them into the project folder in Pymakr
 1. Click the `upload project to device` button. This will store all necessary files on the device and allow you to import them in the example `main.py`.
-1. Check the REPL:
-```
-example output
-```
+1. Check the REPL. If you have Pybytes activated, the example will send the sensor data to Pybytes automatically.
+
 
 ### Examples
 The Pysense has several examples:
