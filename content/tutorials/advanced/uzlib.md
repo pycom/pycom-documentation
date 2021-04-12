@@ -1,7 +1,7 @@
 ---
 title: "Compressed files"
 ---
-The Pycom firmware includes the [`uzlib`](/firmwareapi/micropython/uzlib/) module by default, which supports the decompression of files and streams. Below, three usage examples are highlighted:
+The Pycom firmware includes the [`uzlib`](/firmwareapi/micropython/uzlib/) module by default, which supports the decompression of files and streams. Below, two usage examples are highlighted:
 * [Decompressing a zlib file](decompressing-a-zlib-file)
 * [Decompressing a gzip file](#decompressing-a-gzip-file)
 
@@ -43,7 +43,7 @@ print(s)
 A `gzip` archive (not to be confused with a `zip` or `zlib` file) can be generated using the terminal in Linux or macOS. You can use the following commands to create and gzip a file in the terminal:
 ```bash
 touch test.txt
-add text
+echo "Hello world" > test.txt
 gzip test.txt
 ```
 This generates the file `test.txt.gz`. Now, you can copy the file over to your project and allow pymakr to upload the `.gz` file (Pymakr Settings --> Global settings --> Upload file types, add `.gz` in the list). On your device, you can run the following to decompress the file:
@@ -53,7 +53,8 @@ file = 'test.txt.gz'
 print('dir', os.listdir())
 print(file, os.stat(file))
 
-file = open(file, 'r') #do not .read(), this will change the stream
-data = uzlib.DecompIO(file, 31)
-print(data.readline())
+with open('test.txt.gz', 'r') as file:
+    data = uzlib.DecompIO(file, 31)
+    #use data.readline() to read a single line
+    print(data.read())
 ```
