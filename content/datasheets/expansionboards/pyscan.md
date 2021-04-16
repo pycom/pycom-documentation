@@ -27,7 +27,9 @@ The Pyscan has several examples:
 
 The pinout and datasheet of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-pinout.pdf)
 
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pyscan(8286-00031P)-20190523.pdf)
+### Certifications
+The Pyscan is certified for:
+* [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pyscan(8286-00031P)-20190523.pdf)
 
 
 

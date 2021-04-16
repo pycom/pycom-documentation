@@ -20,9 +20,12 @@ aliases:
 
 The datasheet of the LoPy4 is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_LoPy4_v2.pdf)
 
-The Lopy 4 is certified for [CE RED](/gitbook/assets/c03-b0-red-final.pdf) and [FCC DSS](/gitbook/assets/Pycom-2AJMTLOPY4R-FCC-Grant-DSS.pdf)
-[RCM](/gitbook/assets/RCM-LOPY4.zip)
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-LoPy-4(8286-00027P)-20190523.pdf)
+### Certifications
+The Lopy 4 is certified for:
+* [CE RED](/gitbook/assets/c03-b0-red-final.pdf)
+* [FCC DSS](/gitbook/assets/Pycom-2AJMTLOPY4R-FCC-Grant-DSS.pdf)
+* [RCM](/gitbook/assets/RCM-LOPY4.zip)
+* [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-LoPy-4(8286-00027P)-20190523.pdf)
 
 
 ## Pinout

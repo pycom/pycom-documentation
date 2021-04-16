@@ -23,6 +23,8 @@ The bottom two lines explain the LTE firmware edition:
 The firmwares for CAT-M1 and NB-IoT are fundamentally different and cannot be used interchangable. For security reasons, the modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and go [here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured) for the credentials. (On the forum: Announcements & News &rarr; Announcements for members only &rarr; the Firmware Files)
 You can find the firmwares listed [here](https://software.pycom.io/downloads/sequans2.html).
 
+>If you currently have CAT-M1 firmware **33080**, then make sure to update to 41065, before you go to any other version such as 48829!
+
 Our newest products ship with the modem firmware version CAT-M1 5.4.1.0-50523. At the moment it is not possible to update the modem to that version.
 
 There are several different ways to update the firmware of the LTE modem:
@@ -43,7 +45,7 @@ This update has to be done in two steps and is a full upgrade, meaning you can o
     For the first update you have to also specify `load_fff=False`. Using the SD cad method, it would be like this:
 
     ```
-    sqnsupgrade.run('/sd/CATM1-5.2-48829-2.dup', load_fff=False)
+    sqnsupgrade.run('/sd/CATM1-5.2-48829-1.dup', load_fff=False)
     ```
 
 

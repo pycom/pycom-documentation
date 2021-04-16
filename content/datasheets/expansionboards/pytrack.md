@@ -30,7 +30,9 @@ The Pytrack has several examples:
 
 The datasheet of the Pytrack is available as a [PDF File](/gitbook/assets/pytrack-specsheet-1.pdf)
 
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pysense(8286-00030P)-20190523.pdf)
+### Certifications
+The Pytrack is certified for:
+* [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pysense(8286-00030P)-20190523.pdf)
 
 ## Pinout
 

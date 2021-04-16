@@ -267,13 +267,6 @@ Downgarding from 1.20 back to 1.18 is possible, however the target version must 
 
 >Note: Before doing OTA to 1.20 firmware make sure that the Scripts on device are updated (if necessary) to be compatible with 1.20 FW to avoid exceptions once device is updated to 1.20 which might lead to loosing connection to the remote device.
 
-You can find firmware images here:
-
-[Wipy](https://software.pycom.io/downloads/WiPy.html)
-[FiPy](https://software.pycom.io/downloads/FiPy.html)
-[GPy](https://software.pycom.io/downloads/GPy.html)
-[LoPy](https://software.pycom.io/downloads/LoPy.html)
-[LoPy4](https://software.pycom.io/downloads/LoPy4.html)
-[SiPy](https://software.pycom.io/downloads/SiPy.html)
+You can find the firmware images [here](/advance/downgrade/).
 
 

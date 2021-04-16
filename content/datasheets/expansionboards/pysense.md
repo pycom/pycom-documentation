@@ -33,7 +33,9 @@ The Pysense has several examples:
 
 The datasheet of the Pysense is available as a [PDF File](/gitbook/assets/pysense-specsheet.pdf)
 
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pysense(8286-00030P)-20190523.pdf)
+### Certifications
+The Pysense is certified for: 
+* [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pysense(8286-00030P)-20190523.pdf)
 
 ## Pinout
 
