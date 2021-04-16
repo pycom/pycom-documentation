@@ -42,7 +42,6 @@ print(s)
 ## Decompressing a gzip file
 A `gzip` archive (not to be confused with a `zip` or `zlib` file) can be generated using the terminal in Linux or macOS. You can use the following commands to create and gzip a file in the terminal:
 ```bash
-touch test.txt
 echo "Hello world" > test.txt
 gzip test.txt
 ```
