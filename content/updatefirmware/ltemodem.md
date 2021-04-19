@@ -140,7 +140,7 @@ If you do not have an SD card available, you can update the firmware over USB. F
     ```
 1. Take note of the Serial port used and close the REPL.
 
-1. On the computer go to the directory where you saved the `sqnsupgrade` script and run the following commands in the command line / terminal
+1. On the computer go to the directory where you saved the `sqnsupgrade` script and run the following commands in the command line / terminal. Replace the paths and `name.dup` with the actual files. 
     ```python
     $ python3
     >>> import sqnsupgrade
@@ -150,7 +150,7 @@ If you do not have an SD card available, you can update the firmware over USB. F
     # WARNING! If you are updating from version 33080, use the updater.elf file as well, this is not needed for the upgdiff file
     # >>> sqnsupgrade.run('Serial_Port', '/path/to/name.dup', '/path/to/updater.elf')
     ```
-    >Note: Replace the paths and `name.dup` with the actual files. There are different versions for `CAT-M1`  and `NB-IoT`
+    If the updater script is stuck at `Attempting AT wakeup... [921600]`, try again after setting `import pycom; pycom.lte_modem_en_on_boot(True)`, and reboot after setting the flag.
 
 1. The update is now running. Note that the update may seem to 'stall' around 7-10% and again at 99%. This is completely normal. 
     >Note: **Do not disconnect power to the module during the updating process**
