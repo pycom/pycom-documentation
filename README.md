@@ -100,7 +100,7 @@ go to GitHub and create a pull with **publish** branch as a base branch.
 - assets are in ./static directory, a directory aliased at /
 - css in /themes/doc-theme/static/doc-theme.css
 - SUMMARY.md is in config.toml
-- [gohugo.io](gohugo.io)
+- [gohugo.io](https://gohugo.io)
 
 ## detect broken links
 
