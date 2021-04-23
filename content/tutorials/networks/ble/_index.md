@@ -1,5 +1,5 @@
 ---
-title: "Bluetooth"
+title: "Bluetooth Low Energy"
 aliases:
     - tutorials/all/ble.html
     - tutorials/all/ble.md
