@@ -17,7 +17,11 @@ Creates a LTR329ALS01 object. Constructor must be passed a Pycoproc or I2C objec
 
 ### LTR329ALS01.light()
 
-Read the light levels of both light sensors. Returns a tuple with two values for light levels in lux: `(blue, red)`, between 0-65535.
+Read the light levels of both light sensors. Returns a tuple with two values for light levels: `(blue, red)`, between 0-65535.
+
+### LTR329ALS01.lux()
+
+Calculate the illuminance using the readings of the light sensor. Returns a single value in lux.
 
 ## Constants
 
