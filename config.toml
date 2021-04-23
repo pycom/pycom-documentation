@@ -255,7 +255,7 @@ theme = "doc-theme"
     weight = 15
 [[menu.main]]
     name = "Callback"
-    url= "/tutorials/networks/ble/callback/
+    url= "/tutorials/networks/ble/callback/"
     identifier = "tutorials@networks@ble@callback"
     parent = "tutorials@networks@ble"
     weight=10
