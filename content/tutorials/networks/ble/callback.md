@@ -2,7 +2,7 @@
 title: "BLE Callback"
 ---
 
-In the following examples, we'll explain how to use the callback functionality of the Bluetooth module. This can be used to detect when nodes connect and disconnect from the device, and when they get subscribed and read data. See the following example. This will create a BLE server named `FiPy 45`, which publishes 'battery levels' over a service every second, starting at 100 and going down to 0. It will also notify you of any BLE events happening.
+In the following examples, we'll explain how to use the callback functionality of the Bluetooth module. This can be used to detect when nodes connect and disconnect from the device, and when they get subscribed and read data. See the following example. This will create a BLE server named `FiPy 45`, which publishes 'battery levels' over a service every second, starting at 100 and going down to 0. The example will also notify you in the REPL of any BLE events.
 
 ## BLE Server
 ```python
@@ -51,8 +51,5 @@ def update_handler(update_alarm):
         chr1.value(battery)
 
 update_alarm = Timer.Alarm(update_handler, 1, periodic=True)
-
-
-
 
 ```
