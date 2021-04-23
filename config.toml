@@ -254,6 +254,12 @@ theme = "doc-theme"
     parent = "tutorials@networks"
     weight = 15
 [[menu.main]]
+    name = "Callback"
+    url= "/tutorials/networks/ble/callback/"
+    identifier = "tutorials@networks@ble@callback"
+    parent = "tutorials@networks@ble"
+    weight=10
+[[menu.main]]
     name = "SigFox"
     url = "/tutorials/networks/sigfox/"
     identifier = "tutorials@networks@sigfox"
