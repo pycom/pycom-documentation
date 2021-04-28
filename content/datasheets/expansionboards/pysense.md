@@ -8,8 +8,26 @@ aliases:
 ---
 **Store**: [Buy Here](https://pycom.io/product/pysense/)
 
+The Pysense shield allows you to sense the environment using 5 different sensors:
+* Accelerometer (LIS2HH12)
+* Light Sensor (LTR329ALS01)
+* Pressure Sensor (MPL3115A2)
+* Temperature / Humidity Sensor (SI7006A20)
 
-![](/gitbook/assets/pysense.png) 
+## Getting started
+1. Find the libraries for the Pysense in the [Pycom libraries](https://github.com/pycom/pycom-libraries/releases/) repository on Github. 
+1. Download the files and extract them into the project folder in Pymakr
+1. Click the `upload project to device` button. This will store all necessary files on the device and allow you to import them in the example `main.py`.
+1. Check the REPL. If you have Pybytes activated, the example will send the sensor data to Pybytes automatically.
+
+
+### Examples
+The Pysense has several examples:
+* [Sensing](/tutorials/expansionboards/sensing/)
+
+## Features
+
+![](/gitbook/assets/pysense-pinout-1.png)
 
 ## Datasheet
 
@@ -24,7 +42,7 @@ The Pysense is certified for:
 The pinout of the Pysense is available as a [PDF File](/gitbook/assets/pysense-pinout.pdf)
 * The user button is connected to `P14`. This button can also be used to put the Pysense board in `dfu-bootloader` mode to update the firmware.
 
-![](/gitbook/assets/pysense-pinout-1.png)
+
 
 ## Notes 
 ### Battery Charger

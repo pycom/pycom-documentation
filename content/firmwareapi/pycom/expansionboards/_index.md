@@ -14,7 +14,7 @@ Note that this functionality is not built into the firmware, and you will need t
 The API pages are separated per sensor:
 * [Accelerometer](lis2hh12/) (LIS2HH12)
 * [Light Sensor](ltr329als01/) (LTR329ALS01)
-* [Temperature Sensor](si7006a20/) (SI7006A20)
+* [Temperature / Humidity Sensor](si7006a20/) (SI7006A20)
 * [Pressure Sensor](mpl3115a2/) (MPL3115A2)
 * [RFID / NFC](mfrc630/) (MFRC630)
 * [GPS](l76gnss/) (L76GNSS)

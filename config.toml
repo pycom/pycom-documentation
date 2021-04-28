@@ -427,46 +427,34 @@ theme = "doc-theme"
     parent = "tutorials"
     weight = 50
 [[menu.main]]
-    name = "Pygate"
-    url = "/tutorials/expansionboards/pygate/"
-    identifier = "tutorials@expansionboards@pygate"
+    name = "Tracking"
+    url = "/tutorials/expansionboards/tracking/"
+    identifier = "tutorials@expansionboards@tracking"
     parent = "tutorials@expansionboards"
     weight = 10
 [[menu.main]]
-    name = "pysense"
-    url = "/tutorials/expansionboards/pysense/"
-    identifier = "tutorials@expansionboards@pysense"
+    name = "Sensing"
+    url = "/tutorials/expansionboards/sensing/"
+    identifier = "tutorials@expansionboards@sensing"
     parent = "tutorials@expansionboards"
     weight = 20
 [[menu.main]]
-    name = "pysense 2.0 X"
-    url = "/tutorials/expansionboards/pysense2/"
-    identifier = "tutorials@expansionboards@pysense2"
+    name = "Scanning"
+    url = "/tutorials/expansionboards/scanning/"
+    identifier = "tutorials@expansionboards@scanning"
     parent = "tutorials@expansionboards"
     weight = 30
 [[menu.main]]
-    name = "pytrack"
-    url = "/tutorials/expansionboards/pytrack/"
-    identifier = "tutorials@expansionboards@pytrack"
+    name = "Pysleep"
+    url = "/tutorials/expansionboards/sleep/"
+    identifier = "tutorials@expansionboards@sleep"
     parent = "tutorials@expansionboards"
     weight = 40
-[[menu.main]]
-    name = "pytrack 2.0 X"
-    url = "/tutorials/expansionboards/pytrack2/"
-    identifier = "tutorials@expansionboards@pytrack2"
-    parent = "tutorials@expansionboards"
-    weight = 50
-[[menu.main]]
-    name = "pyscan"
-    url = "/tutorials/expansionboards/pyscan/"
-    identifier = "tutorials@expansionboards@pyscan"
-    parent = "tutorials@expansionboards"
-    weight = 60
 [[menu.main]]
     name = "Sleep"
     url = "/tutorials/expansionboards/sleep/"
     identifier = "tutorials@expansionboards@sleep"
-    parent = "tutorials@basic"
+    parent = "tutorials@expansionboards"
     weight = 20
 [[menu.main]]
     name = "Advanced"
@@ -1068,7 +1056,7 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
-    name = "Expansion Boards and Shields"
+    name = "Shields"
     url = "/datasheets/expansionboards/"
     identifier = "datasheets@boards"
     parent = "datasheets"
