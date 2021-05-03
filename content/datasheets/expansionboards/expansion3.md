@@ -44,6 +44,7 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger with a JST PHRâ€
 
 ### Differences between v2.0 and v3.0
 
+On version 3.0:
 * The FTDI chip as been replaced with a custom programmed PIC, similar to the
 
   Pysense/Pytrack/Pyscan boards. This allows our firmware update tool to
@@ -55,6 +56,11 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger with a JST PHRâ€
   `P12` to `3.3v` and if pressed and held while the reset button is pressed on
 
   a Pycom module, the module will enter safe boot.
+
+### Differences between v3.0 and v3.1
+On version 3.1:
+* The green USB-LED is only lit when the USB communication stack is running
+* The USB-Serial converter (PIC) is powered using any power source. Previously, it would only power up when the board was powered through USB.
 
 ## Troubleshooting
 
