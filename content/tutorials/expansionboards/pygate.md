@@ -100,8 +100,8 @@ while not rtc.synced():
 print(" OK\n")
 
 # Read the GW config file from Filesystem
-fp = open('/flash/config.json','r')
-buf = fp.read()
+with open('/flash/config.json','r') as fp:
+    buf = fp.read()
 
 # Start the Pygate
 machine.pygate_init(buf)
