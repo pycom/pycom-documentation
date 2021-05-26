@@ -94,7 +94,7 @@ Connect to a WiFi Access Point using the given SSID, and other parameters
   * `WLAN.WPA`
   * `WLAN.WPA2`
   * `WLAN.WPA2_ENT`: this will use the following format: `(sec, username, password)`
-* `bssid` is the MAC address of the AP to connect to. This is useful when there are several APs with the same SSID.
+* `bssid` is the MAC address of the AP to connect to. This is useful when there are several APs with the same SSID. The bssid is given as 6 Hexadecimal bytes literals (i.e `b'\xff\xff\xff\xff\xff\xff'`)
 * `timeout` is the maximum time in milliseconds to wait for the connection to succeed.
 * `ca_certs` is the path to the CA certificate. This argument is not mandatory.
 * `keyfile` is the path to the client key. Only used if `username` and `password` are not part of the `auth` tuple.
