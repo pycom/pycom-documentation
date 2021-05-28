@@ -105,9 +105,11 @@ Get or set the pin pull. Pull can be:
 
 ### pin.hold([hold])
 
-Get or set the pin hold. You can apply a hold to a pin by passing `True` (or clear it by passing `False`). When a pin is held, its value cannot be changed by using `Pin.value()` or `Pin.toggle()` until the hold is released. This Can be used to retain the pin state through a core reset and system reset triggered by watchdog time-out or Deep-sleep events. Only pins in the RTC power domain can retain their value through deep sleep or reset.
+Get or set the pin hold. Passing `True` will hold the current value of the pin, `False` will release the hold state. When a pin is in hold state, its value cannot be changed by using `Pin.value()` or `Pin.toggle()`, until the hold is released. This can be used to retain the pin state after `machine.reset()`, a [watchdog timer](/firmwareapi/pycom/machine/wdt/) reset or during [deepsleep](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms). Applying a hard-reset, by for example pressing the reset button, will also release the hold. Only pins in the RTC power domain can retain their value through deep sleep or reset.
 
 These are: `P2, P3, P4, P6, P8, P9, P10, P13, P14, P15, P16, P17, P18, P19, P20, P21, P22, P23`
+
+> Note: The pin's hold-state is forgotten by Micropython after a soft-reset, but in hardware the pin is still held. Calling `pin.hold()` after a reset / wake-up will return `False` when you would expect it to be `True`.
 
 ### pin.callback(trigger, [handler=None, arg=None])
 
