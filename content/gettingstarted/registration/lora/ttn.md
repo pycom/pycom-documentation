@@ -1,30 +1,35 @@
 ---
-title: "The Things Network"
+title: "The Things Stack"
 aliases:
     - gettingstarted/registration/lora/ttn.html
     - gettingstarted/registration/lora/ttn.md
     - chapter/gettingstarted/registration/lora/ttn
 ---
 
-In order to use The Things Network (TTN) you should navigate to their website and create/register an account. Enter a username and an email address to verify with their platform.
+> TheThingsNetwork (TTN) is migrating to TheThingsStack Community edition in 2021. Any applications running on TTN should be migrated to the new environment.
 
-![](/gitbook/assets/ttn-1.png)
+## Create an account
+In order to use The Things Stack (TTN) you should navigate to [https://console.cloud.thethings.network](https://console.cloud.thethings.network) and select your region. Following that, either login using your account, or create a new one. Existing accounts on TTN should work here as well.
 
-Once an account has been registered, you can register your Pycom module as either a node or a nano-gateway. The steps below will detail how to do this.
+![](/gitbook/assets/lorawan/tts/index.png)
+
+![](/gitbook/assets/lorawan/tts/account.png)
+
+    Once an account has been registered, you can [create an application](#create-an-application) for your nodes, or [register a gateway](#register-a-gateway). For more information about The Things Stack and LoRaWAN in general, you can visit their documentation at [https://www.thethingsindustries.com/docs/](https://www.thethingsindustries.com/docs/)
 
 ## Create an application
 
-In order to register your device to connect to the things network, you must first create an application for these devices to belong to. This way the Network will know where to send the devices data to.
+In order to register your device, you must first create an application for these devices to belong to. This way the Network will know where to send the devices data to.
 
 Selecting the `Applications` tab at the top of the TTN console, will bring up a screen for registering applications. Click register and a new page, similar to the one below, will open.
 
 ![](/gitbook/assets/ttn-5.png)
 
-Enter a unique `Application ID` as well as a Description & Handler Registration.
+Enter a unique `Application ID` as well as a Description & Handler Registration. 
 
 Now the Pycom module nodes can be registered to send data up to the new Application.
 
-## Register a Device
+### Register a Device
 
 To connect nodes to a things network gateway, devices need to be added to the application. To do this, navigate to the `Devices` tab on the `Application` home page and click the `Register Device` button.
 
