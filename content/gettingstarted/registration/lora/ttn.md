@@ -21,19 +21,19 @@ In order to use The Things Stack (TTN) you should navigate to [https://console.c
 
 In order to register your device, you must first create an application for these devices to belong to. This way the Network will know where to send the devices data to.
 
-Selecting the `Applications` tab at the top of the TTN console, will bring up a screen for registering applications. Click register and a new page, similar to the one below, will open.
+Selecting the `Applications` tab at the top of the TTN console, will bring up a screen for registering applications. 
 
-![](/gitbook/assets/ttn-5.png)
+![](/gitbook/assets/lorawan/tts/application.png)
 
-Enter a unique `Application ID` as well as a Description & Handler Registration. 
+Enter a unique `Application ID` as well as a Description & Handler Registration.
 
 Now the Pycom module nodes can be registered to send data up to the new Application.
 
-### Register a Device
+## Register a Device
 
-To connect nodes to a things network gateway, devices need to be added to the application. To do this, navigate to the `Devices` tab on the `Application` home page and click the `Register Device` button.
+You'll need to register your devices as nodes to the application. Click the button `+ Add device`. Next, you'll need to enter the specifics. You can choose either `OTAA` or `ABP` as activation methods. Learn more about the difference [here](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/). In this application we'll choose `OTAA`. Select `LoRaMAC V1.0.2` and check whether the region servers are set correctly. 
 
-![](/gitbook/assets/ttn-6.png)
+![](/gitbook/assets/lorawan/tts/device.png)
 
 In the `Register Device` panel, complete the forms for the `Device ID` and the `Device EUI`. The `Device ID` is user specified and is unique to the device in this application. The `Device EUI` should be a globally unique identifier for the device. You can run the following on you Pycom module to retrieve its EUI.
 
