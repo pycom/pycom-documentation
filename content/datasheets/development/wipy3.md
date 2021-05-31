@@ -7,34 +7,34 @@ aliases:
     - chapter/datasheets/development/wipy3
 ---
 
-![](/gitbook/assets/assets-lil0igdl11z7jos_jpx-lkn7scqkkkb6tqb3uyo-lkn86pdzbdvrponxeg6-wipy3.png)
+![](/gitbook/assets/wipy2.png)
 
-{{% hint style="info" %}}
- Please Note: We have removed the labels from the pictures in the documentation due to inconsistencies with label orientation.  *The LED must be aligned above the USB socket* when inserting or removing a development board from an expansion board/Pytrack/Pysense/Pyscan.
-{{% /hint %}}
+> Note: Orient the RGB LED / reset button over the USB connector on any expansion board 
 
 
 **Store**: [Buy Here](https://pycom.io/product/wipy-3-0/)
 
-**Getting Started:** [Click Here](/gettingstarted/connection/wipy)
+**Getting Started:** [Click Here](/gettingstarted/)
 
 ## Datasheet
 
-The datasheet of the WiPy3 is available as a PDF File.
+The datasheet of the WiPy3 is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy3.0_v2.pdf)
 
-<a href="/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy3.0_v2.pdf" target="_blank"> WiPy3 Datasheet </a>
+### Certifications 
+The Wipy 3 is certified for:
+* [CE RED](/gitbook/assets/17-214126_red-certificate_pycom_wipy-3.0.pdf)
+* [RCM](/gitbook/assets/RCM-Wipy3.pdf)
+* [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-WiPy-3(8286-00026P)-20190523.pdf)
 
 ## Pinout
 
-The pinout of the WiPy3 is available as a PDF File.
+The pinout of the WiPy3 is available as a [PDF File](/gitbook/assets/wipy3-pinout.pdf)
 
-<a href="/gitbook/assets/wipy3-pinout.pdf" target="_blank"> WiPy3 Pinout </a>
 
 ![](/gitbook/assets/wipy3-pinout.png)
 
-{{% hint style="info" %}}
-Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
-{{% /hint %}}
+> Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MISO\) and I2C \(SDA, SCL\) are defaults and can be changed via software.
+
 
 ## Differences from WiPy 2.0
 
@@ -44,6 +44,13 @@ Please note that the PIN assignments for UART1 \(TX1/RX1\), SPI \(CLK, MOSI, MIS
 * The antenna select pin has moved from GPIO16 to GPIO21 \(P12\)
 
 ## Notes
+
+### Power
+Do not use the 3.3V pin **in combination with** the Vin pin to supply the device as this will damage the voltage regulator on the board.
+
+### Antenna placement
+Always attach the appropriate antenna when using a wireless connection. For WiFi / BLE, it is not mandatory to use an external antenna when you did not explicitly specify this in your code. 
+
 
 ### WiFi
 

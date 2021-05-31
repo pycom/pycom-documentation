@@ -58,9 +58,9 @@ If you are registering multiple devices you can generate more Applications Keys 
 Once you have the three identifiers for your device you need to register them on the Objenius portal.  
 Follow "Importer des capteurs" under "Statuc do Parc" and select "Provisioning Unitaire":
 
-![](//gitbook/assets/objeniousprovision1.jpg)
+![](/gitbook/assets/objeniousprovision1.jpg)
 
 Once there give your device a name and enter the DevEUI, AppEUI, and AppKey obtained from the steps above:
 
-![](//gitbook/assets/objeniousprovision2%20%281%29.jpg)
+![](/gitbook/assets/objeniousprovision2.jpg)
 

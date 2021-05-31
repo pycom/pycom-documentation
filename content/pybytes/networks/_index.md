@@ -8,3 +8,5 @@ Pybytes supports four network types, which you can configure for each device or 
 [**Sigfox**](/pybytes/networks/sigfox)
 
 [**LoRa**](/pybytes/networks/lora)
+
+{{<youtube YfQW9rAc42U>}}

@@ -52,8 +52,25 @@ nav#TableOfContents {
 
 h1, h2, h3, h4 {
   color: #1E1E3C;
-  letter-spacing: 0.1em;
   opacity: 0.9;
+}
+h1, h3, h4 {
+  letter-spacing: 0.1em;
+}
+h2 {
+  font-family: 'Montserrat';
+}
+h3 {
+  font-family: 'Montserrat';
+  color:#00CC96  ;
+  letter-spacing: normal;
+  font-size: 1em;
+  padding-top: 1em;
+}
+h4 {
+  font-family: 'Montserrat';
+  letter-spacing: normal;
+  padding-top: 1em;
 }
 
 
@@ -114,7 +131,7 @@ url("/fonts/space-mono/SpaceMono-Regular.eot") format("opentype");
 
 .application {
   /* font-family: 'Beba',Helvetica,Arial,Lucida,sans-serif; */
-  font-family: 'Space Mono';
+  /* font-family: 'Space Mono'; */
 }
 
 a.bread:hover {
@@ -129,9 +146,13 @@ a.bread:hover {
 .theme--dark.v-navigation-drawer:not(.v-navigation-drawer--floating) .v-navigation-drawer__border {
     background-color: transparent;
 }
-
+/* changes 24-07-2020:
+due to adding margin-bottom to ul and ol, 
+we need to remove it here
+*/
 ul.lefttree {
   margin-left: -8px;
+  margin-bottom: 0px;
 }
 
 a, li.lefttree > a {
@@ -216,6 +237,21 @@ li.hot {
     padding:0!important;
 }
 
+/* changes 19-08-2020
+Added shortcode for development markings
+
+*/
+.development {
+  display:none;
+
+}
+.dev {
+  background-color: #F6E6D6 !important;
+}
+
+.v-card__text > h3, h4{
+  margin-top:0px;
+}
 .danger-alert {
   background-color: #EF9A9A !important;
   margin-top: 24px;
@@ -238,10 +274,19 @@ li.hot {
 .theme--light.v-toolbar {
     color: #171730!important;
 }
+/* changes 13-07-2020:
+  corrected tabs in table of contents (top right)
+
+  */
 
 nav#TableOfContents {
+    display: contents;
     overflow-y: scroll;
     max-height: 640px;
+}
+
+nav#TableOfContents > ul{
+  padding-left:0px
 }
 
 img {
@@ -265,7 +310,7 @@ img {
 
 table {
     display: table;
-    width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     overflow: auto;
@@ -318,9 +363,11 @@ pre > code {
   margin-top: 4px;
   margin-bottom: 12px;
 }
-
+/* changes 23-07-2020:
+  removed padding here, added in vuetify.css
+  */
 code {
-    padding: 1px;
+    /*padding: 1px;*/
     background-color: #EEEEEE;
 }
 
@@ -332,8 +379,8 @@ code {
   padding-top: 24px;
 }
 
-p {
-  font-family: 'Space Mono';
+p, li {
+  font-family: 'Montserrat';
 }
 
 
@@ -358,4 +405,29 @@ img[src="/gitbook/assets/pybytes/lora/ttn_logo.svg"]{
 
 img[src*="/gitbook/assets/pybytes/pymesh/"]{
     width: 70%;
+}
+
+/* PoE table */
+.poe-table {
+  width:80%;
+  display:table;
+  font-weight: 600;
+}
+
+table.poe td:nth-child(1){
+  font-weight: 400;
+}
+
+table.poe td:nth-child(2){
+  text-align:center;
+  font-weight: 600;
+  width:100px;
+}
+
+table.poe .poe-red {
+  background-color: #EF9A9A !important;
+}
+
+table.poe .poe-green {
+  background-color: #c5eee3 !important;
 }

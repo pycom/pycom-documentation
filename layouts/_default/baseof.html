@@ -2,7 +2,9 @@
 <html class="fancyScroll">
 <head>
   <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!--<link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">-->
   <link href="/css/vuetify.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
@@ -17,6 +19,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 </head>
 <body>
+</script>
 <v-app id="app" class=""  v-cloak style="background-color: white;">
    {{ partial "menu.html" . }}
    {{- partial "toolbar.html" . -}}
@@ -35,6 +38,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
   <script>
+    var development = false;
     var app = new Vue({
       el: '#app',
       data: {
@@ -46,8 +50,12 @@
         drawer2: true,
         toc: 0,
         branches: [
+        { value: 'https://docs.pycom.io', text: 'version stable'},
           { value: 'https://development.pycom.io', text: 'version development'},
-          { value: 'https://docs.pycom.io', text: 'version stable',  },
+          /*{ value: '1', text: 'version 1.20.2.r0'},
+          { value: '2', text: 'version 1.20.3.b0'},
+          { value: '3', text: 'version 1.20.2.rc10'},
+          { value: '4', text: 'version 1.20.2.rc9'},*/
         ],
         branch: ""
       },
@@ -73,10 +81,25 @@
 
       },
       watch: {
-        // whenever question changes, this function will run
+        // whenever the branch changes, this function will run
         branch: function (newb, old) {
           if (newb.value != this.branches[0].value) {
-            window.location = newb + window.location.pathname
+          //   development = !development;
+          //   console.log("switch")
+          //   if (!development){
+          //     var x = document.getElementsByClassName('development')
+          //     var i;
+          //     for (i = 0; i < x.length; i++) {
+          //       x[i].style.display = 'none';
+          //     }   
+          //   }else{
+          //     var x = document.getElementsByClassName('development')
+          //     var i;
+          //     for (i = 0; i < x.length; i++) {
+          //       x[i].style.display = 'block';
+          //     }   
+          //   }
+            window.location = newb + window.location.pathname;
           }
         },
       },
@@ -90,7 +113,7 @@
       debug: false // Set debug to true if you want to inspect the dropdown
     });
   </script>
-
+<!--{{- partial "footer.html" . -}}-->
 {{- partial "alexia.html" . -}}
 </body>
 </html>

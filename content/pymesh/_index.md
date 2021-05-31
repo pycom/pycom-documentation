@@ -3,8 +3,15 @@ title: "Pymesh"
 aliases:
   - pymesh/introduction
 ---
+![](/gitbook/assets/pymesh/pymesh_roles.png)
 
-<img src="/gitbook/assets/pymesh/pymesh_roles.png" alt="Pymesh" width="500"/>
+## Pymesh on Pybytes
+
+{{< youtube 4dgxvkZbF_4>}}
+
+## Pymesh presentation  at TTN Conference
+
+{{< youtube Ab_WFE93BQI>}}
 
 ## What is Pymesh?
 
@@ -16,9 +23,7 @@ Mesh networks essentially get rid of gateways, which decentralises the network's
 
 Pymesh works on all of our LoRa supporting development boards, the LoPy4 and FiPy as well as on our OEM modules, L01 and L04.
 
-_**Note: For obtaining the Pymesh firmware please follow the steps from [Pymesh LICENCE page](/pymesh/licence).**_
-
-_**Note: For obtaining the Pymesh firmware please follow the steps from [Pymesh LICENCE page](/pymesh/licence).**_
+_**Note: For obtaining the Pymesh firmware please follow the steps from [Pybytes - Pymesh integration](/pybytes/pymeshintegration/).**_
 
 ## What does Pymesh offer you?
 

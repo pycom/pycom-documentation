@@ -45,11 +45,11 @@ Once the device has been added, change the `Activation Method` between `OTAA` an
 
 ## Register a Nano-Gateway
 
-You can also setup your Pycom module to act as a gateway with The Things Network. The code required to do this can be found [here](/tutorials/lora/lorawan-nano-gateway).
+You can also setup your Pycom module to act as a gateway with The Things Network. The code required to do this can be found [here](/tutorials/networks/lora/lorawan-nano-gateway).
 
 Inside the TTN Console, there are two options, `Applications` and `Gateways`. Select `Gateways` and then click on `register Gateway`. This will allow for the set up and registration of a new nano-gateway.
 
-![](/gitbook/assets/ttn-2%20%281%29.png)
+![](/gitbook/assets/ttn-2.png)
 
 On the Register Gateway page, you will need to set the following settings:
 
@@ -80,6 +80,6 @@ Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit 
 
 Once these settings have been applied, click `Register Gateway`. A Gateway Overview page will appear, with the configuration settings showing. Next click on the `Gateway Settings` and configure the Router address to match that of the gateway (default: `router.eu.thethings.network`).
 
-![](/gitbook/assets/ttn-4%20%281%29.png)
+![](/gitbook/assets/ttn-4.png)
 
 The `Gateway` should now be configured.

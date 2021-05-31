@@ -7,13 +7,11 @@ aliases:
     - chapter/datasheets/oem/l01_reference
 ---
 
-![](/gitbook/assets/l01-reference%20%281%29.png)
+![](/gitbook/assets/l01-reference.png)
 
 The L01 OEM reference board is a reference design suitable for the L01 as well as the W01. It makes it possible to have a single PCB design that can accommodate both of the  OEM modules.
 
-{{% hint style="info" %}}
-If you require a reference board for the L04 or G01, this design is **not** suitable as it does not feature a SIM slot or the double antenna connection. For the L04 or G01 please use the [Universal OEM Baseboard Reference](../universal_reference)
-{{% /hint %}}
+> If you require a reference board for the L04 or G01, this design is **not** suitable as it does not feature a SIM slot or the double antenna connection. For the L04 or G01 please use the [Universal OEM Baseboard Reference](../universal_reference)
 
 ## Features
 
@@ -24,22 +22,19 @@ If you require a reference board for the L04 or G01, this design is **not** suit
 * DC-DC regulator (3.5 - 5.5V) input with low current draw during Deep Sleep
 * Reset button
 
+> The reference board has exactly the same pinout as a developmnent module and can be used in its place!
+
 ## Layout
 
-The layout of the L01 baseboard reference is available as a PDF File.
-
-<a href="/gitbook/assets/l01-oem-layout.pdf" target="_blank"> L01 OEM Layout </a>
+The layout of the L01 baseboard reference is available as a [PDF File](/gitbook/assets/l01-oem-layout.pdf)
 
 ![](/gitbook/assets/l01-oem-layout-1.png)
 
 ## Schematic
 
-The schematic of the L01 baseboard reference is available as a PDF File.
-
-<a href="/gitbook/assets/l01-oem-schematic.pdf" target="_blank"> L01 OEM Schematic </a>
+The schematic of the L01 baseboard reference is available as a [PDF File](/gitbook/assets/l01-oem-schematic.pdf)
 
 ## Altium Project and Gerber Files
 
-The Altium Project and Gerber files are also available as a ZIP File.
+The Altium Project and Gerber files are also available as a [ZIP File](/gitbook/assets/l01-oem-baseboard-ref.zip)
 
-<a href="/gitbook/assets/l01-oem-baseboard-ref.zip" target="_blank"> L01 OEM Altium Project and Gerber Files </a>

@@ -10,8 +10,6 @@ The Pymesh mobile application is available [here for both iOS and Android platfo
 
 ## RPC protocol
 
-It is implemented in [ble_rpc.py](https://github.com/pycom/pycom-libraries/blob/master/lib/pymesh/lib/ble_rpc.py).
-
 In the class `RPCHandler` methods can be added to expand RPC set.
 
 The internal RPC are calling methods from file `mesh_interface.py`.

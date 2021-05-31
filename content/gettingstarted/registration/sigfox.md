@@ -39,9 +39,9 @@ print(binascii.hexlify(sigfox.pac()))
 
 ## Creating account at Sigfox backend
 
-You need to register to the Sigfox Backend. Navigate to [https://backend.sigfox.com/activate](https://backend.sigfox.com/activate)
+You need to register to the Sigfox Backend. Navigate to [https://buy.sigfox.com/activate](https://buy.sigfox.com/activate)
 
-![](/gitbook/assets/sigfoxactivate%20%281%29.png)
+![](/gitbook/assets/sigfoxactivate.png)
 
 Find the specific country country where the device will be activated. Enter the device's _Sigfox ID_ and _Sigfox PAC_.
 
@@ -73,10 +73,10 @@ Once you register your device on Sigfox backend, then your Sigfox PAC was used, 
 
 To get new Sigfox PAC navigate to your device on Sigfox backend. On _device_ click on Sigfox Id of device you want to transfer.
 
-![](/gitbook/assets/sigfoxtableid%20%281%29.png)
+![](/gitbook/assets/sigfoxtableid.png)
 
 Now you can see your new Sigfox PAC.
 
-![](/gitbook/assets/newsigfoxpac%20%281%29.png)
+![](/gitbook/assets/newsigfoxpac.png)
 
-Once you know your new Sigfox PAC go to [https://backend.sigfox.com/activate](https://backend.sigfox.com/activate) and register device with different account.
+Once you know your new Sigfox PAC go to [https://buy.sigfox.com/activate](https://buy.sigfox.com/activate) and register device with different account.

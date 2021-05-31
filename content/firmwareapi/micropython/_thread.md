@@ -28,29 +28,39 @@ for i in range(2):
 
 ## Methods
 
-#### \_thread.start\_new\_thread(function, args\[, kwargs\])
+### _thread.start_new_thread(function, args[, kwargs])
 
 Start a new thread and return its identifier. The thread executes the function with the argument list args (which must be a tuple). The optional `kwargs` argument specifies a dictionary of keyword arguments. When the function returns, the thread silently exits. When the function terminates with an unhandled exception, a stack trace is printed and then the thread exits (but other threads continue to run).
 
-#### \_thread.exit()
+```python
+import _thread
+
+def foo(arg):
+    print(arg)
+
+arg="hello"
+_thread.start_new_thread(foo, (arg,))
+```
+
+### _thread.exit()
 
 Raise the `SystemExit` exception. When not caught, this will cause the thread to exit silently.
 
-#### \_thread.allocate\_lock()
+### _thread.allocate_lock()
 
 Return a new lock object. Methods of locks are described below. The lock is initially unlocked.
 
-#### \_thread.get\_ident()
+### _thread.get_ident()
 
 Return the `thread identifier` of the current thread. This is a nonzero integer. Its value has no direct meaning; it is intended as a magic cookie to be used e.g. to index a dictionary of thread-specific data. Thread identifiers may be recycled when a thread exits and another thread is created.
 
-#### \_thread.stack\_size(\[size\])
+### _thread.stack_size([size])
 
 Return the thread stack size (in bytes) used when creating new threads. The optional size argument specifies the stack size to be used for subsequently created threads, and must be `0` (use platform or configured default) or a positive integer value of at least `4096` (4KiB). 4KiB is currently the minimum supported stack size value to guarantee sufficient stack space for the interpreter itself.
 
 ## Objects
 
-#### \_thread.LockType
+### _thread.LockType
 
 This is the type of lock objects.
 
@@ -58,11 +68,11 @@ This is the type of lock objects.
 
 Used for synchronisation between threads
 
-### Methods
+## Methods
 
 Lock objects have the following methods:
 
-#### lock.acquire(waitflag=1, timeout=-1)
+### lock.acquire(waitflag=1, timeout=-1)
 
 Without any optional argument, this method acquires the lock unconditionally, if necessary waiting until it is released by another thread (only one thread at a time can acquire a lock — that's their reason for existence).
 
@@ -72,11 +82,11 @@ If the floating-point timeout argument is present and positive, it specifies the
 
 The return value is `True` if the lock is acquired successfully, `False` if not.
 
-#### lock.release()
+### lock.release()
 
 Releases the lock. The lock must have been acquired earlier, but not necessarily by the same thread.
 
-#### lock.locked()
+### lock.locked()
 
 Return the status of the lock: `True` if it has been acquired by some thread, `False` if not.
 

@@ -6,11 +6,16 @@ aliases:
 
 ## Overview
 
-The Pymesh micropython library is included as a `frozen python script` in the Pymesh firmware releases.
+The Pymesh micropython library is included as a `frozen python script` in the Pymesh firmware releases. It is also available as [open-source micropython script](https://github.com/pycom/pycom-libraries/blob/master/pymesh/pymesh_frozen/lib/cli.py).
 
-Instead of REPL, a specific Pymesh CLI interprets commands. This is shown by `>`.
+Instead of REPL, a specific Pymesh CLI interprets commands. This is shown by `>`. The CLI is executed on a separate thread inside the Pymesh library.
 
-The CLI is executed on a separate thread inside the Pymesh library.
+{{% hint style="info" %}}
+* The CLI needs to be started using the `pymesh.cli_start()` method.
+* In the CLI the `h` command will print the list of available commands.
+* The command `stop` will break the CLI thread.
+{{% /hint %}}
+
 
 For example:
 ```
@@ -21,32 +26,47 @@ mesh_mac_list  [1, 6, 2]
 ## Internal CLI
 
 ```
+>>> pymesh.cli_start()
+>h
 List of available commands
-ip - display current IPv6 unicast addresses
-mac - set or display the current LoRa MAC address
-self - display all info about current node
-mml - display the Mesh Mac List (MAC of all nodes inside this Mesh)
-mp - display the Mesh Pairs (pairs of all nodes connections)
-s - send message
-ws - verifies if the message sent was acknowledged
-rm - verifies if any message was received
-sleep - deep-sleep
 br - enable/disable or display the current Border Router functionality
 brs - send packet for Mesh-external, to BR, if any
-rst - reset NOW, including NVM Pymesh IPv6
 buf - display buffer info
-ot - sends command to openthread internal CLI
-debug - set debug level
 config - print config file contents
+debug - set debug level
+gps - get/set location coordinates
+h - help, list of commands
+ip - display current IPv6 unicast addresses
+mac - set or display the current LoRa MAC address
+mml - display the Mesh Mac List (MAC of all nodes inside this Mesh), also inquires Leader
+mp - display the Mesh Pairs (Pairs of all nodes connections), also inquires Leader
+ot - sends command to openthread internal CLI
+pause - suspend Pymesh
+resume - resume Pymesh
+rm - verifies if any message was received
+rst - reset NOW, including NVM Pymesh IPv6
+s - send message
+self - display all info about current node
+sleep - deep-sleep
+stop - close this CLI
+tx_pow - set LoRa TX power in dBm (2-20)
+ws - verifies if message sent was acknowledged
 ```
 
 ### Debug commands
 
 ```
+>stop
+CLI stopped
+>>>
+```
+This command stops the CLI thread.
+
+```
 > debug
 5
 ```
-This sets the debug level. Possible values are:
+This command displays or sets the debug level. Possible values are:
 ```
 # recommended debug levels, from the most verbose to off
 DEBUG_DEBG = const(5)
@@ -56,6 +76,16 @@ DEBUG_WARN = const(2)
 DEBUG_CRIT = const(1)
 DEBUG_NONE = const(0)
 ```
+
+```
+>pause
+Pymesh pausing
+>resume
+Pymesh resuming
+```
+This pair of commands stops temporarily and resumes the Pymesh executing threads.
+
+A possible application is to use LoRaWAN when Pymesh is paused. [An example is here](https://github.com/pycom/pycom-libraries/blob/master/pymesh/pymesh_frozen/lorawan/main.py).
 
 ```
 >rst

@@ -21,7 +21,7 @@ Several things must be accomplished:
 
 ## Border Router using CLI
 
-As explained in [Pymesh CLI - Border Router section](pymesh/lib-cli/#border-router-specific), using commands `br` and `brs`, a simple test scenario can be easily implemented.
+As explained in [Pymesh CLI - Border Router section](/pymesh/lib-cli/#border-router-specific), using commands `br` and `brs`, a simple test scenario can be easily implemented.
 
 ## Border Router using Pymesh API
 

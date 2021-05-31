@@ -6,21 +6,25 @@ aliases:
     - chapter/firmwareapi/pycom/machine/pygate
 ---
 
-The Pygate is an 8-channel LoRaWAN gateway. Connect a WiPy, Gpy or LoPy4 board to the Pygate and flash the Pygate firmware. See the [Pygate tutorial](/tutorials/all/pygate) to get started.
+The Pygate is an 8-channel LoRaWAN gateway. Connect a WiPy, Gpy or LoPy4 board to the Pygate and flash the Pygate firmware. See the [Pygate tutorial](/tutorials/expansionboards/pygate) to get started.
 
 ## Methods
 
-#### machine.pygate\_init(buff)
+### machine.pygate_init(config)
 
 This function is used to initialize the Pygate
 
-- `buff`: the data contents of the gateway global config json file
+- `config`: the data contents of the gateway global config json file
 
-#### machine.pygate\_deinit()
+### machine.pygate_deinit()
 
 This shuts down the concentrator.
 
-#### machine.callback(trigger, handler=None, arg=None)
+### machine.pygate_reset()
+
+Resets the Pygate and inserted development module (including the LTE modem, if present). This actually power cycles the Pygate and the attached hardware and is **not** similar to `machine.reset()`.
+
+### machine.callback(trigger, [handler=None, arg=None])
 
 - `trigger`: A trigger event(s) for invoking the callback function `handler`, the triggers/events are:
 
@@ -34,6 +38,6 @@ This shuts down the concentrator.
 
 - `arg`: Optional argument to be passed to the callback function.
 
-#### machine.events()
+### machine.events()
 
 Get the Pygate events

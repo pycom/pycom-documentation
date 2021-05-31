@@ -2246,7 +2246,7 @@ samp {
 }
 b,
 strong {
-  font-weight: bolder; /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+  font-weight: bold; /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
 }
 dfn {
   font-style: italic; /* Address styling not present in Safari and Chrome */
@@ -2743,11 +2743,30 @@ video {
   -webkit-transform: scale(0) rotate(-45deg);
           transform: scale(0) rotate(-45deg);
 }
-.blockquote {
-  padding: 16px 0 16px 24px;
-  font-size: 18px;
+/*changes 09-07-2020:
+  removed . before blockquote
+  changed padding from 16px 0px 16px 24px
+  changed font-size from 18px
+  added background-color
+  added border-radius 
+*/
+blockquote {
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
   font-weight: 300;
+  background-color:#17ffbd;
+  border-radius: 3px;
+  margin-bottom: 5px;  
 }
+/* changes 22-07-2020:
+removed bottom margin from quoteblocks
+*/
+blockquote > p {
+  margin-bottom:0px;
+}
+/*changes 23-07-2020:
+  Added padding 
+  */
 code,
 kbd {
   display: inline-block;
@@ -2755,18 +2774,27 @@ kbd {
   white-space: pre-wrap;
   font-size: 85%;
   font-weight: 900;
+  padding: 1px 4px 1px 4px;
 }
-code:after,
+
+/* changes 09-07-2020: 
+    commented code::before and code:after
+    changed code color
+    commented box-shadow
+*/
+
+/*code:after,*/
 kbd:after,
-code:before,
+/*code:before, */
 kbd:before {
   content: "\00a0";
   letter-spacing: -1px;
 }
 code {
   background-color: #f5f5f5;
-  color: #bd4147;
+  color: #1E1E3C; /*#bd4147;
   box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  */
 }
 kbd {
   background: #616161;
@@ -2788,9 +2816,16 @@ html {
 ::-ms-reveal {
   display: none;
 }
+/* changes 24-07-2020:
+added margin-bottom for ul and ol
+*/
 ul,
 ol {
   padding-left: 24px;
+  margin-bottom: 10px;
+}
+li p{
+  margin-bottom: 0px;
 }
 .display-4 {
   font-size: 112px !important;
@@ -2850,8 +2885,11 @@ ol {
   font-size: 12px !important;
   font-weight: 400;
 }
+/* changes 09-07-2020:
+  changed margin-bottom from 16px
+  */
 p {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .overflow-hidden {
   overflow: hidden;

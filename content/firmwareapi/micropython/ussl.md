@@ -10,7 +10,7 @@ This module provides access to Transport Layer Security (often known as "Secure 
 
 ## Methods
 
-#### ssl.wrap\_socket(sock, keyfile=None, certfile=None, server\_side=False, cert\_reqs=CERT\_NONE, ssl\_version=0, ca\_certs=None, server\_hostname=None, saved_session=None, timeout=10sec)
+### ssl.wrap_socket(sock, [keyfile=None, certfile=None, server_side=False, cert_reqs=CERT_NONE, ssl_version=0, ca_certs=None, server_hostname=None, saved_session=None, timeout=10sec])
 
 Takes an instance `sock` of `socket.socket`, and returns an instance of `ssl.SSLSocket`, a subtype of `socket.socket`, which wraps the underlying socket in an SSL context. Example:
 
@@ -47,7 +47,6 @@ SSL sockets inherit all methods and from the standard sockets, see the `usocket`
 Takes an instance `ssl_sock` of `ssl.SSLSocket`, and returns an instance of `ssl.SSLSession`. Saved session can be resumed later, thereby reducing mobile data and time required. Example:
 
 ```python
-
 import socket
 import ssl
 s = socket.socket()
