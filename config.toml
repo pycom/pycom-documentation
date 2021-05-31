@@ -624,6 +624,13 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "Ethernet"
+    url = "/firmwareapi/pycom/network/eth/"
+    identifier = "firmwareapi@pycom@network@eth"
+    parent = "firmwareapi@pycom@network"
+    weight = 25
+
+[[menu.main]]
     name = "Bluetooth"
     url = "/firmwareapi/pycom/network/bluetooth/"
     identifier = "firmwareapi@pycom@network@bluetooth"
@@ -679,6 +686,13 @@ theme = "doc-theme"
     weight = 70
     
 
+[[menu.main]]
+    name = "Pymesh BLE"
+    url = "/firmwareapi/pycom/network/bluetooth/BLE_Mesh/"
+    identifier = "firmwareapi@pycom@network@bluetooth@BLE_Mesh"
+    parent = "firmwareapi@pycom@network@bluetooth"
+    weight = 70
+
 #  [Errno 2] No such file or directory: './content/firmwareapi/pycom/network/lora/README.md'
 [[menu.main]]
     name = "LoRa"
@@ -688,11 +702,25 @@ theme = "doc-theme"
     weight = 40
 
 [[menu.main]]
+    name = "LoRaWAN v1.0.2"
+    url = "/firmwareapi/pycom/network/lora/lora_102/"
+    identifier = "firmwareapi@pycom@network@lora@lora_102"
+    parent = "firmwareapi@pycom@network@lora"
+    weight = 10
+
+[[menu.main]]
+    name = "LoRaWAN v1.0.3"
+    url = "/firmwareapi/pycom/network/lora/lora_103/"
+    identifier = "firmwareapi@pycom@network@lora@lora_103"
+    parent = "firmwareapi@pycom@network@lora"
+    weight = 20
+
+[[menu.main]]
     name = "Pymesh"
     url = "/firmwareapi/pycom/network/lora/pymesh/"
     identifier = "firmwareapi@pycom@network@lora@pymesh"
     parent = "firmwareapi@pycom@network@lora"
-    weight = 10
+    weight = 30
 
 [[menu.main]]
     name = "Sigfox"

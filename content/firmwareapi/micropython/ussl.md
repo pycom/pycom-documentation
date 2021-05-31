@@ -38,6 +38,8 @@ ss.connect(socket.getaddrinfo('cloud.blynk.cc', 8441)[0][-1])
 
 SSL sockets inherit all methods and from the standard sockets, see the `usocket` module.
 
+`saved_session` : Takes a saved session instance of `ssl.SSLSocket`, and retrieve an already established TLS connection.
+
 `timeout` : specify a Timeout in Seconds for the SSL handshake operation between client and server, default is 10 seconds
 
 #### ssl.save\_session(ssl_sock)
@@ -56,7 +58,6 @@ ss = ssl.wrap_socket(s, saved_session=ses)
 ss.connect(socket.getaddrinfo('www.google.com', 443)[0][-1])
 ```
 
-
 ## Exceptions
 
 * `ssl.SSLError`
@@ -64,4 +65,3 @@ ss.connect(socket.getaddrinfo('www.google.com', 443)[0][-1])
 ## Constants
 
 * `ssl.CERT_NONE`, `ssl.CERT_OPTIONAL`, `ssl.CERT_REQUIRED`: Supported values in `cert_reqs`
-

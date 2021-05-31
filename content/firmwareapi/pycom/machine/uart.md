@@ -88,11 +88,18 @@ Initialise the UART bus with the given parameters:
 
 * `baudrate` is the clock rate.
 * `bits` is the number of bits per character. Can be `5, 6, 7 or 8`.
-* `parity` is the parity, `None`, UART.EVEN or UART.ODD.
+* `parity` is the parity, `None`, `UART.EVEN` or `UART.ODD`.
 * `stop` is the number of stop bits, `1 or 2`.
 * `timeout_chars` Rx timeout defined in number of characters. The value given here will be multiplied by the time a characters takes to be transmitted at the configured `baudrate`.
 * `pins` is a 4 or 2 item list indicating the TXD, RXD, RTS and CTS pins (in that order). Any of the pins can be `None` if one wants the UART to operate with limited functionality. If the RTS pin is given the the RX pin must be given as well. The same applies to CTS. When no pins are given, then the default set of TXD (P1) and RXD (P0) pins is taken, and hardware flow control will be disabled. If `pins=None`, no pin assignment will be made.
-* `rx_buffer_size` is the size of the buffer used for storing the RX packets. By default is is 512 bytes.
+* `invert` is the desired pin to be in inverse mode, by default none of the pins are inverted. Possible values are:
+  * `UART.INV_RX` inverts Receiver dataline.
+  * `UART.INV_TX` inverts Transmitter dataline.
+  * `UART.INV_CTS` inverts Clear To Send dataline.
+  * `UART.INV_RTS` inverts Request To Send dataline.
+
+The values can be OR-ed together, for instance `invert=UART.INV_RX | UART.INV_TX`
+* `rx_buffer_size` is the size of the buffer used for storing the RX packets. By default it is 512 bytes.
 
 ### uart.deinit()
 
@@ -139,4 +146,5 @@ Waits at most `timeout_ms` for the last Tx transaction to complete. Returns `Tru
 
 * Parity types (along with `None`): `UART.EVEN`, `UART.ODD`
 * IRQ trigger sources: `UART.RX_ANY`
+* Inverted mode selectors: `UART.INV_RX`, `UART.INV_TX`, `UART.INV_CTS`, `UART.INV_RTS`
 

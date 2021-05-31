@@ -21,13 +21,13 @@ _LORA_PKG_FORMAT = "!BB%ds"
 # A basic ack package, B: 1 byte for the deviceId, B: 1 byte for the pkg size, B: 1 byte for the Ok (200) or error messages
 _LORA_PKG_ACK_FORMAT = "BBB"
 
-# Open a LoRa Socket, use rx_iq to avoid listening to our own messages
+# Open a LoRa Socket
 # Please pick the region that matches where you are using the device:
 # Asia = LoRa.AS923
 # Australia = LoRa.AU915
 # Europe = LoRa.EU868
 # United States = LoRa.US915
-lora = LoRa(mode=LoRa.LORA, rx_iq=True, region=LoRa.EU868)
+lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868)
 lora_sock = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 lora_sock.setblocking(False)
 
@@ -62,13 +62,13 @@ _LORA_PKG_ACK_FORMAT = "BBB"
 DEVICE_ID = 0x01
 
 
-# Open a Lora Socket, use tx_iq to avoid listening to our own messages
+# Open a Lora Socket
 # Please pick the region that matches where you are using the device:
 # Asia = LoRa.AS923
 # Australia = LoRa.AU915
 # Europe = LoRa.EU868
 # United States = LoRa.US915
-lora = LoRa(mode=LoRa.LORA, tx_iq=True, region=LoRa.EU868)
+lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868)
 lora_sock = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 lora_sock.setblocking(False)
 

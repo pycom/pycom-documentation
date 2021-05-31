@@ -3,6 +3,7 @@ title: "LoRa"
 aliases:
   - /firmwareapi/pycom/network/lora.md
 ---
+<<<<<<< HEAD
 This class provides a LoRaWAN 1.0.2 compliant driver for the LoRa network processor in the LoPy, LoPy4 and FiPy.
 
 > Please ensure that there is an antenna connected to your device before sending/receiving LoRa messages as improper use (e.g. without an antenna), may damage the device.
@@ -278,3 +279,11 @@ And they must be created after initialising the LoRa network card.
 LoRa-Mesh socket is created, if the Mesh was enabled before (`lora.mesh()` was called).
 
 > The LoRa-Mesh socket supports only the following socket methods: `close()` , `bind()`, `sendto()`, and `recvfrom()`.
+=======
+
+This page provides an overview of the available LoRa APIs:
+
+* [LoRaWAN v1.0.2](lora_102)
+* [LoRaWAN v1.0.3](lora_103)
+* [Pymesh (Mesh Network over raw-LoRa radio)](pymesh)
+>>>>>>> origin/development-publish
