@@ -105,19 +105,31 @@ Get or set the pin pull. Pull can be:
 
 ### pin.hold([hold])
 
-Get or set the pin hold. Passing `True` will hold the current value of the pin, `False` will release the hold state. When a pin is in hold state, its value cannot be changed by using `Pin.value()` or `Pin.toggle()`, until the hold is released. Only pins in the RTC power domain can retain their value through deep sleep or reset. These are: `P2, P3, P4, P6, P8, P9, P10, P13, P14, P15, P16, P17, P18, P19, P20, P21, P22, P23`
+Get or set the pin hold. This functionality can be used to hold a pin's state after [deepsleep](#machinedeepsleeptime_ms), `machine.reset()` or a [watchdog timer reset](/firmwareapi/pycom/machine/wdt/). Passing `True` will hold the current value of the pin, `False` will release the hold state. When a pin is in hold state, its value cannot be changed by using `Pin.value()` or `Pin.toggle()`, until the hold is released. Only pins in the RTC power domain can retain their value through deep sleep or reset. These are: `P2, P3, P4, P6, P8, P9, P10, P13, P14, P15, P16, P17, P18, P19, P20, P21, P22, P23`
 
-This functionality can be used to retain the pin's level after `machine.reset()`, a [watchdog timer](/firmwareapi/pycom/machine/wdt/) reset or during [deepsleep](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms). The pin's hold-state is forgotten by Micropython after a soft-reset, but in hardware the pin is still held. Calling `pin.hold()` after a reset / wake-up will return `False` when you would expect it to be `True`. For example, you can try the following:
+You can use the following example:
 ```python
 from machine import Pin
 import machine
 p3 = Pin('P3', mode=Pin.OUT)
-p3.value(1)
+p3.value(1) #can also be p3.value(0)
 p3.hold(True) #hold the pin high
 machine.reset()
-#here, p3.hold() will return False, but is actually True on a hardware level
+# instead, you can use:
+# machine.deepsleep(10000)
+
+# P3 will still be high here
 ```
-Applying a hard-reset, by for example pressing the reset button, will reset the pin value and release the hold. 
+A few things to keep in mind when using the pin hold functionality:
+* This feature only preserves the pin value:
+  * During a (deep)sleep
+  * After waking up from deepsleep
+  * After `machine.reset()`
+  * After a WDT reset
+* The hold state itself is not preserved _in Micropython_ after the above mentioned resets. This means that `pin.hold()` will return `False` after such reset, even though the pin is actually still held _in hardware_.
+* `pin.hold()` does **not** return the pin's value. You can hold a pin high or low.
+* Applying a hard-reset, by for example pressing the reset button, will reset the pin value and release the hold. 
+
 
 ### pin.callback(trigger, [handler=None, arg=None])
 
