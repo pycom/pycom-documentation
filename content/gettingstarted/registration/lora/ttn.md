@@ -8,16 +8,22 @@ aliases:
 
 > TheThingsNetwork (TTN) is migrating to TheThingsStack Community edition in 2021. Any applications running on TTN should be migrated to the new environment.
 
+The Things Stack (TTS) is a LoRaWAN service that allows you to send and receive LoRa packets from your nodes. Registering your LoRa-enabled Pycom nodes and gateways with TTS gives access to their IoT infrastructure and integrate your devices with the cloud. For more information about The Things Stack and LoRaWAN in general, you can visit their documentation at [https://www.thethingsindustries.com/docs/](https://www.thethingsindustries.com/docs/). On this page, we will cover:
+
+* [Create an account](#create-an-account)
+* [Register a node](#register-a-node)
+* [Registera Gateway](#register-a-gateway)
+
 ## Create an account
-In order to use The Things Stack (TTN) you should navigate to [https://console.cloud.thethings.network](https://console.cloud.thethings.network) and select your region. Following that, either login using your account, or create a new one. Existing accounts on TTN should work here as well.
+In order to use TTS you should navigate to [https://console.cloud.thethings.network](https://console.cloud.thethings.network) and select your region. Following that, either login using your account, or create a new one. Already Existing accounts on The Things Network (TTN) should work here as well.
 
 ![](/gitbook/assets/lorawan/tts/index.png)
 
 ![](/gitbook/assets/lorawan/tts/account.png)
 
-    Once an account has been registered, you can [create an application](#create-an-application) for your nodes, or [register a gateway](#register-a-gateway). For more information about The Things Stack and LoRaWAN in general, you can visit their documentation at [https://www.thethingsindustries.com/docs/](https://www.thethingsindustries.com/docs/)
+Once an account has been registered, you can [create an application](#register-a-node) for your nodes, or [register a gateway](#register-a-gateway).
 
-## Create an application
+## Registera node
 
 In order to register your device, you must first create an application for these devices to belong to. This way the Network will know where to send the devices data to.
 
@@ -29,62 +35,48 @@ Enter a unique `Application ID` as well as a Description & Handler Registration.
 
 Now the Pycom module nodes can be registered to send data up to the new Application.
 
-## Register a Device
-
 You'll need to register your devices as nodes to the application. Click the button `+ Add device`. Next, you'll need to enter the specifics. You can choose either `OTAA` or `ABP` as activation methods. Learn more about the difference [here](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/). In this application we'll choose `OTAA`. Select `LoRaMAC V1.0.2` and check whether the region servers are set correctly. 
 
 ![](/gitbook/assets/lorawan/tts/device.png)
 
-In the `Register Device` panel, complete the forms for the `Device ID` and the `Device EUI`. The `Device ID` is user specified and is unique to the device in this application. The `Device EUI` should be a globally unique identifier for the device. You can run the following on you Pycom module to retrieve its EUI.
+In the `Register Device` panel, complete the forms for the `End Device ID`, `APP EUI` and the `Device EUI`. The `End Device ID` is a unique name for the device we're about to register, you can choose something that makes sense for your project. The `APP EUI` is user specified and is unique to the device in this application, we can set that to all 0's in this example. The `Device EUI` should be a globally unique identifier for the device. You can run the following on you Pycom module to retrieve its EUI.
 
 ```python
-
 from network import LoRa
 import ubinascii
 
 lora = LoRa()
 print("DevEUI: %s" % (ubinascii.hexlify(lora.mac()).decode('ascii')))
 ```
+![](/gitbook/assets/lorawan/tts/credentials.png)
 
-Once the device has been added, change the `Activation Method` between `OTAA` and `ABP` depending on user preference. This option can be found under the `Settings` tab.
+The next screen allows us to choose the Frequency plan and regional parameters. Please choose a frequency plan that is compatible with your region and nearby gateways. If you're not sure which one to choose, select the one closest to your region labelled 'used by TTN'. For the regional parameters, select `PHY-V1.0.2-RevA`.
 
-## Register a Nano-Gateway
+In the following section, generate a random `AppKey`. 
 
-You can also setup your Pycom module to act as a gateway with The Things Network. The code required to do this can be found [here](/tutorials/networks/lora/lorawan-nano-gateway).
+Great! Now your device is registered with TTS. You can now use the credentials in the [LoRaWAN OTAA](/tutorials/networks/lora/lorawan-otaa/) example.
 
-Inside the TTN Console, there are two options, `Applications` and `Gateways`. Select `Gateways` and then click on `register Gateway`. This will allow for the set up and registration of a new nano-gateway.
+## Register a Gateway
 
-![](/gitbook/assets/ttn-2.png)
+A LoRaWAN gateway receives the LoRa packets sent out by your (and other people's) nodes and forwards them to the cloud. Next to that, the gateway is able to provide a downlink to your nodes as well. In this case, we will forward the packets to TTS. From there, you can view the traffic coming through your gateway, and view the received messages in your nodes' application. You can also setup your LoRa-enabled Pycom module or Pygate to act as a LoRaWAN gateway. Below we will setup the Gateway in TTS. Have a look at the following pages for more information concerning the device setup:
+* [Pygate](/tutorials/expansionboards/pygate/)
+* [Nano-gateway](/tutorials/networks/lora/lorawan-nano-gateway/)
 
-On the Register Gateway page, you will need to set the following settings:
+Inside the TTS Console, there are two options, `Applications` and `Gateways`. Select `Gateways` and then click on `register Gateway`. This will allow for the set up and registration of a new gateway.
 
-![](/gitbook/assets/ttn-gatewayreg-11-2017-2.jpg)
+![](/gitbook/assets/lorawan/tts/gateway.png)
 
-These are unique to each gateway, location and country specific frequency. Please verify that correct settings are selected otherwise the gateway will not connect to TTN.
-
-**You need to tick the "I'm using the legacy packet forwarder" to enable the right settings.** This is because the Nano-Gateway uses the 'de facto' standard Semtech UDP protocol.
-
-| Option | Value |
-| :--- | :--- |
-| Protocol | Packet Forwarder |
-| Gateway EUI | User Defined (must match `config.py`) |
-| Description | User Defined |
-| Frequency Plan | Select Country (e.g. EU - 868 MHz) |
-| Location | User Defined |
-| Antenna Placement | Indoor or Outdoor |
-
-Most LoRaWAN network servers expect a Gateway ID in the form of a unique 64-bit hexadecimal number (called a EUI-64). The recommended practice is to produce this ID from your board by expanding the WiFi MAC address (a 48-bit number, called MAC-48). You can obtain that by running this code prior to configuration:
+Here, it is important we add the `Gateway ID` and `Gateway EUI`. The first can be an identifying string of characters unique to the gateway. The latter is what we'll use in the gateway configuration on the device, and exists of 16 hexadecimal characters. You can use the following to generate the `Gateway EUI`:
 
 ```python
-
  from network import WLAN
  import binascii
  wl = WLAN()
  binascii.hexlify(wl.mac())[:6] + 'FFFE' + binascii.hexlify(wl.mac())[6:]
-```
+ ```
 
-Once these settings have been applied, click `Register Gateway`. A Gateway Overview page will appear, with the configuration settings showing. Next click on the `Gateway Settings` and configure the Router address to match that of the gateway (default: `router.eu.thethings.network`).
+These are unique to each gateway, location and country specific frequency. Please verify that correct settings are selected otherwise the gateway will not connect to TTN. Further down the page, you will have to select a frequency plan. Select the one appropriate for your region and/or the one compatible with your nodes. After that, you can create the gateway.
 
-![](/gitbook/assets/ttn-4.png)
+![](/gitbook/assets/lorawan/tts/gateway2.png)
 
-The `Gateway` should now be configured.
+From here, you can select to download `global_conf.json` for your selected region. Please check the file for the correct `server_address` and `gateway_ID`. This file can be used for configuring the Pygate.
