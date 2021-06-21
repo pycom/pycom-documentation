@@ -19,9 +19,16 @@ This page discusses the usage of the LTE modem in more detail:
 ## General remarks 
 The LTE modem needs to run a specific firmware depending on the network you want to use. To check the current modem firmware, you can use the following
 ```python
->>> import sqnsupgrade
->>> sqnsupgrade.info()
+import sqnsupgrade
+print(sqnsupgrade.info())
 ```
+or
+```python
+from network import LTE
+lte = LTE()
+print(lte.send_at_cmd('ATI1'))
+```
+
 The bottom two lines explain the LTE firmware edition:
 
 * LR5.xx is for CAT-M1
