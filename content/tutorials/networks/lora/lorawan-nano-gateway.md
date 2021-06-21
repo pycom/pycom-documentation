@@ -6,7 +6,7 @@ aliases:
     - chapter/tutorials/lora/lorawan-nano-gateway
 ---
 
-This example allows a development module to act as a single channel gateway, and connect to a LoRaWAN network such as The Things Network (TTN) or Loriot.
+This example allows a development module to act as a single channel gateway, and connect to a LoRaWAN network such as The Things Stack (TTS), Helium or Loriot.
 The files can be found in our [GitHub Repository](https://github.com/pycom/pycom-libraries/tree/master/examples/lorawan-nano-gateway).
 
 ## Nano-gateway setup
@@ -102,6 +102,7 @@ WIFI_MAC = ubinascii.hexlify(machine.unique_id()).upper()
 # GATEWAY_ID = WIFI_MAC[:6] + "FFFE" + WIFI_MAC[6:12]
 GATEWAY_ID = WIFI_MAC[:6] + "FFFF" + WIFI_MAC[6:12]
 SERVER = 'router.eu.thethings.network'
+#for TTS v3, use 'eu1.cloud.thethings.network'
 PORT = 1700
 
 NTP = "pool.ntp.org"
@@ -575,44 +576,7 @@ class NanoGateway:
 
 ```
 
-## Registering with TTN
-
-To set up the gateway with The Things Network (TTN), navigate to their website and create/register an account. Enter a username and an email address to verify with their platform.
-
-![](/gitbook/assets/ttn-1.png)
-
-Once an account has been registered, the nano-gateway can then be registered. To do this, navigate to the TTN Console web page.
-
-### Registering the Gateway
-
-Inside the TTN Console, there are two options, `applications` and `gateways`. Select `gateways` and then click on `register gateway`. This will allow for the set up and registration of a new nano-gateway.
-
-![](/gitbook/assets/ttn-2.png)
-
-On the Register Gateway page, you will need to set the following settings:
-
-![](/gitbook/assets/ttn-gatewayreg-11-2017-2.jpg) These are unique to each gateway, location and country specific frequency. Please verify that correct settings are selected otherwise the gateway will not connect to TTN.
-
-**You need to tick the "I'm using the legacy packet forwarder" to enable the right settings.** This is because the Nano-Gateway uses the 'de facto' standard Semtech UDP protocol.
-
-| Option | Value |
-| :--- | :--- |
-| Protocol | Packet Forwarder |
-| Gateway EUI | User Defined (must match `config.py`) |
-| Description | User Defined |
-| Frequency Plan | Select Country (e.g. EU - 868 MHz) |
-| Location | User Defined |
-| Antenna Placement | Indoor or Outdoor |
-
-The Gateway EUI should match your Gateway ID from the `config.py` file. We suggest you follow the procedure described near the top of this document to create your own unique Gateway ID.
-
-Once these settings have been applied, click `Register Gateway`. A Gateway Overview page will appear, with the configuration settings showing. Next click on the `Gateway Settings` and configure the Router address to match that of the gateway (default: `router.eu.thethings.network`).
-
-![](/gitbook/assets/ttn-4.png)
-
-The `Gateway` should now be configured. Next, one or more nodes can now be configured to use the nano-gateway and TTN applications may be built.
-
-### Nano-gateway node
+## Nano-gateway node
 
 As the gateway only supports a single channel, we need to setup our nodes to only send packets over that channel. The node can either use OTAA or ABP, but we'll have to setup the correct channel. Use the following example to setup the correct channels for EU868. This can be modified for use in 915MHz regions as well:
 
@@ -637,51 +601,7 @@ lora.add_channel(1, frequency=903900000, dr_min=0, dr_max=3)
 lora.add_channel(2, frequency=903900000, dr_min=0, dr_max=3)
 ```
 
+## Registering with TTN
 
-## TTN Setup
+Please check the [LoRaWAN Device Registration](/gettingstarted/registration/lora/) page for more information
 
-Now that the gateway & nodes have been setup, a TTN Application can be built; i.e. what happens to the LoRa data once it is received by TTN. There are a number of different setups/systems that can be used, however the following example demonstrates the HTTP request integration.
-
-### Registering an Application (Gateway)
-
-Selecting the `Applications` tab at the top of the TTN console, will bring up a screen for registering applications. Click register and a new page, similar to the one below, will open.
-
-![](/gitbook/assets/ttn-5.png)
-
-Enter a unique `Application ID` as well as a Description & Handler Registration.
-
-Now the LoPy nodes must be registered to send data up to the new Application.
-
-### Registering Nodes
-
-To connect nodes to the nano-gateway, devices need to be added to the application. To do this, navigate to the `Devices` tab on the `Application` home page and click the `Register Device` button.
-
-![](/gitbook/assets/ttn-6.png)
-
-In the `Register Device` panel, complete the forms for the `Device ID` and the `Device EUI`. The `Device ID` is user specified and is unique to the device in this application. The `Device EUI` is also user specified but must consist of exactly 8 bytes, given in hexadecimal.
-
-Once the device has been added, change the `Activation Method` between `OTAA` and `ABP` depending on user preference. This option can be found under the Settings tab.
-
-### Adding Application Integrations
-
-Now that the data is arriving on the TTN Backend, TTN can be managed as to where data should be delivered to. To do this, use the `Integrations` tab within the new Application's settings.
-
-![](/gitbook/assets/ttn-7.png)
-
-Upon clicking `add integration`, a screen with 4 different options will appear. These have various functionality and more information about them can be found on the TTN website/documentation.
-
-For this example, use the `HTTP Integration` to forward the LoRaWAN Packets to a remote server/address.
-
-![](/gitbook/assets/ttn-8.png)
-
-Click `HTTP Integration` to connect up an endpoint that can receive the data.
-
-For testing, a website called [RequestBin](https://requestbin.com/), may be used to receive the data that TTN forwards (via POST Request). To set this up, navigate to [RequestBin](https://requestbin.com/) and click the `Create a RequestBin`.
-
-![](/gitbook/assets/ttn-9.png)
-
-Copy the URL that is generated and past this into the `URL` form under the `Application Settings`.
-
-![](/gitbook/assets/ttn-10.png)
-
-This is the address that TTN will forward data onto. As soon as a LoPy starts sending messages, TTN will forward these onto `RequestBin` and they will appear at the unique `RequestBin URL`.
