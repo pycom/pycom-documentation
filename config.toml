@@ -137,6 +137,13 @@ theme = "doc-theme"
     parent = "gettingstarted@registration@lora"
     weight = 30
 
+[[menu.main]]
+    name= "Helium"
+    url = "/gettingstarted/registration/lora/helium/"
+    identifier = "gettingstarted@registration@lora@helium"
+    parent = "gettingstarted@registration@lora"
+    weight = 40
+
 # *** Tutorials & Examples
 [[menu.main]]
     name = "Tutorials & Examples"
