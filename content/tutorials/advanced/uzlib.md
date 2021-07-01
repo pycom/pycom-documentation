@@ -47,13 +47,16 @@ gzip test.txt
 ```
 This generates the file `test.txt.gz`. Now, you can copy the file over to your project and allow pymakr to upload the `.gz` file (Pymakr Settings --> Global settings --> Upload file types, add `.gz` in the list). On your device, you can run the following to decompress the file:
 ```python
+import zlib
+import os
+
 #verify the presence of the file
 file = 'test.txt.gz'
 print('dir', os.listdir())
 print(file, os.stat(file))
 
 with open('test.txt.gz', 'r') as file:
-    data = uzlib.DecompIO(file, 31)
+    data = zlib.DecompIO(file, 31)
     #use data.readline() to read a single line
     print(data.read())
 ```
