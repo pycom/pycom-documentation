@@ -421,6 +421,19 @@ theme = "doc-theme"
     weight = 70
 
 [[menu.main]]
+    name = "CoAP"
+    url = "/tutorials/networkprotocols/coap/"
+    identifier = "tutorials@networkprotocols@coap"
+    parent = "tutorials@networkprotocols"
+    weight = 80
+[[menu.main]]
+    name = "ESP-NOW"
+    url = "/tutorials/networkprotocols/espnow/"
+    identifier = "tutorials@networkprotocols@espnow"
+    parent = "tutorials@networkprotocols"
+    weight = 90
+
+[[menu.main]]
     name = "Shields"
     url = "/tutorials/expansionboards/"
     identifier = "tutorials@expansionboards"
@@ -431,7 +444,7 @@ theme = "doc-theme"
     url = "/tutorials/expansionboards/pygate/"
     identifier = "tutorials@expansionboards@pygate"
     parent = "tutorials@expansionboards"
-    weight = 5   
+    weight = 5
 [[menu.main]]
     name = "Tracking"
     url = "/tutorials/expansionboards/tracking/"
@@ -624,6 +637,12 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
+    name = "ESP-NOW"
+    url = "/firmwareapi/pycom/network/espnow/"
+    identifier = "firmwareapi@pycom@network@espnow"
+    parent = "firmwareapi@pycom@network"
+    weight = 20
+[[menu.main]]  
     name = "Ethernet"
     url = "/firmwareapi/pycom/network/eth/"
     identifier = "firmwareapi@pycom@network@eth"
@@ -684,7 +703,7 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@network@bluetooth@BLE_Mesh"
     parent = "firmwareapi@pycom@network@bluetooth"
     weight = 70
-    
+
 
 [[menu.main]]
     name = "Pymesh BLE"
