@@ -19,7 +19,11 @@ aliases:
 
 The datasheet of the WiPy2 is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_WiPy2.0_v2.pdf)
 
-The Wipy 2 is certified for [CE RED](/gitbook/assets/16-213297_expertise_pycom_wipy-2.0r.pdf) and [FCC ACC](/gitbook/assets/2091acc16_grant.pdf) [FCC BCC](/gitbook/assets/2091bcc16_grant.pdf)
+### Certifications
+The Wipy 2 is certified for:
+* [CE RED](/gitbook/assets/16-213297_expertise_pycom_wipy-2.0r.pdf)
+* [FCC ACC](/gitbook/assets/2091acc16_grant.pdf) 
+* [FCC BCC](/gitbook/assets/2091bcc16_grant.pdf)
 
 
 ## Pinout

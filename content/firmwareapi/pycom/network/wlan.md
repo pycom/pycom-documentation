@@ -47,7 +47,7 @@ Create a WLAN object, and optionally configure it. See init for params of config
 
 ## Methods
 
-#### wlan.init(mode, [ssid=None, auth=None, channel=1, antenna=WLAN.INT_ANT, power_save=False, hidden=False, bandwidth=WLAN.HT40, max_tx_pwr, country=NA, protocol=(1,1,1)])
+#### wlan.init(mode, [ssid=None, auth=None, channel=1, antenna=WLAN.MAN_ANT, power_save=False, hidden=False, bandwidth=WLAN.HT40, max_tx_pwr, country=NA, protocol=(1,1,1)])
 
 Set or get the WiFi network processor configuration.
 
@@ -66,8 +66,9 @@ Arguments are:
   * `WLAN.WPA2_ENT`: this will use the following format: `(sec, username, password)`
 * `channel`: a number in the range 1-11. Only needed when mode is `WLAN.AP`.
 * `antenna`: select between the internal and the external antenna. With our development boards it defaults to using the on-board antenna. Value can be either:
-  * `WLAN.INT_ANT`
-  * `WLAN.EXT_ANT`
+  * `WLAN.INT_ANT`: The on-board antenna
+  * `WLAN.EXT_ANT`: The U.FL connector (external antenna)
+  * `WLAN.MAN_ANT`: Manually select the state of the antenna switch on `P12`. By default, this will select the on-board antenna
 * `power_save` enables or disables power save functions in `WLAN.STA` mode.
 * `hidden`: create a hidden SSID when set to `True`. only valid in `WLAN.AP` mode.
 * `bandwidth` is the Bandwidth to use, either:
@@ -93,7 +94,7 @@ Connect to a WiFi Access Point using the given SSID, and other parameters
   * `WLAN.WPA`
   * `WLAN.WPA2`
   * `WLAN.WPA2_ENT`: this will use the following format: `(sec, username, password)`
-* `bssid` is the MAC address of the AP to connect to. This is useful when there are several APs with the same SSID.
+* `bssid` is the MAC address of the AP to connect to. This is useful when there are several APs with the same SSID. The bssid is given as 6 Hexadecimal bytes literals (i.e `b'\xff\xff\xff\xff\xff\xff'`)
 * `timeout` is the maximum time in milliseconds to wait for the connection to succeed.
 * `ca_certs` is the path to the CA certificate. This argument is not mandatory.
 * `keyfile` is the path to the client key. Only used if `username` and `password` are not part of the `auth` tuple.
@@ -175,7 +176,11 @@ Possible channels are in the range of 1-14, depending on your country settings.
 ### wlan.antenna([antenna])
 
 Get or set the antenna type (external or internal). Value can be:
+  * `WLAN.INT_ANT`: The on-board antenna
+  * `WLAN.EXT_ANT`: The U.FL connector (external antenna)
+  * `WLAN.MAN_ANT`: Manually select the state of the antenna switch on `P12`. By default, this will select the on-board antenna
 
+   With our development boards it defaults to using the internal antenna, but in the case of an OEM module, the antenna pin (`P12`) is not used, so it's free to be used for other things.
 
 ### wlan.mac([mac, mode])
 
@@ -344,7 +349,7 @@ Get the password of AP the Device is connected to.
 
 * WLAN mode: `WLAN.STA`, `WLAN.AP`, `WLAN.STA_AP`
 * WLAN network security: `WLAN.WEP`, `WLAN.WPA`, `WLAN.WPA2`, `WLAN.WPA2_ENT`
-* Antenna type: `WLAN.INT_ANT`, `WLAN.EXT_ANT`
+* Antenna type: `WLAN.INT_ANT`, `WLAN.EXT_ANT`, `WLAN.MAN_ANT`
 * WLAN Bandwidth: `WLAN.HT20`, `WLAN.HT40`
 * WLAN protocol: `WLAN.PHY_11_B`, `WLAN.PHY_11_G`, `WLAN.PHY_11_N`, `WLAN.PHY_LOW_RATE`
 * Scan Type: `WLAN.SCAN_ACTIVE` `WLAN.SCAN_PASSIVE`

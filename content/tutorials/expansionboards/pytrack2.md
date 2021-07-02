@@ -7,7 +7,7 @@ aliases:
 ---
 The Pytrack 2.0 X has an external header that allows you to attach all kinds of sensors. 
 ## All sensors
->Note: You can find this example in the [GitHub repository](https://github.com/pycom/pycom-libraries/tree/master/pytrack-2). Over there, you can also find the relevant libraries. 
+>Note: You can find this example in the [GitHub repository](https://github.com/pycom/pycom-libraries/). Over there, you can also find the relevant libraries. 
 ```python
 #!/usr/bin/env python
 #
@@ -68,3 +68,8 @@ py.setup_sleep(10)
 py.go_to_sleep()
 """
 ```
+
+## Alternative Libraries
+
+* [micropyGPS](https://github.com/inmcm/micropyGPS)
+* [Alternative L76GNSS module](https://github.com/andrethemac/L76GLNSV4/blob/master/L76GNSV4.py)

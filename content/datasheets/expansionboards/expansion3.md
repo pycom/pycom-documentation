@@ -1,5 +1,5 @@
 ---
-title: "Expansion Board 3.0"
+title: "Expansion Board 3"
 aliases:
     - datasheets/boards/expansion3.html
     - datasheets/boards/expansion3.md
@@ -14,19 +14,22 @@ aliases:
 
 The datasheet of the Expansion Board is available as a [PDF File](/gitbook/assets/expansion3-specsheet-1.pdf)
 
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Expansion-Board(8286-00033P)-20190523.pdf)
+### Certifications
+The Expansionboard 3 is certified for:
+* [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Expansion-Board(8286-00033P)-20190523.pdf)
 
 ## Pinout
 
 The pinout of the Expansion Board is available as a [PDF File](/gitbook/assets/expansion3-pinout.pdf)
 
-The expansion board contains 6 headers labeled:
-- TX: TX UART communication of the development board
-- RX: RX UART communication of the development board
-- RUN
-- BAT
-- LED
-- CHG: Decrease battery charging current from 450mA to 100mA
+The expansion board contains 7 jumpers labeled:
+- TX: TX UART (GPIO1) communication of the development board to the Expansionboard
+- RTS: Can be used for UART flow control. Connected to GPIO7. 
+- RX: RX UART (GPIO2() communication of the development board to the Expansionboard
+- CTS: Can be used for UART flow control. Connected to GPIO6.
+- BAT: Connect the resistor divider on the Expansionboard to the Voltage monitoring ADC Pin (GPIO3)
+- LED: Connect the LED on the Expansionboard to GPIO16
+- CHG: Removing the jumper will decrease battery charging current from 450mA to 100mA
 
 ![](/gitbook/assets/expansion3-pinout-1.png)
 
@@ -41,6 +44,7 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger with a JST PHRâ€
 
 ### Differences between v2.0 and v3.0
 
+On version 3.0:
 * The FTDI chip as been replaced with a custom programmed PIC, similar to the
 
   Pysense/Pytrack/Pyscan boards. This allows our firmware update tool to
@@ -52,6 +56,11 @@ The Expansion Board features a single cell Li-Ion/Li-Po charger with a JST PHRâ€
   `P12` to `3.3v` and if pressed and held while the reset button is pressed on
 
   a Pycom module, the module will enter safe boot.
+
+### Differences between v3.0 and v3.1
+On version 3.1:
+* The green USB-LED is only lit when the USB communication stack is running
+* The USB-Serial converter (PIC) is powered using any power source. Previously, it would only power up when the board was powered through USB.
 
 ## Troubleshooting
 

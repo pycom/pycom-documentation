@@ -137,6 +137,13 @@ theme = "doc-theme"
     parent = "gettingstarted@registration@lora"
     weight = 30
 
+[[menu.main]]
+    name= "Helium"
+    url = "/gettingstarted/registration/lora/helium/"
+    identifier = "gettingstarted@registration@lora@helium"
+    parent = "gettingstarted@registration@lora"
+    weight = 40
+
 # *** Tutorials & Examples
 [[menu.main]]
     name = "Tutorials & Examples"
@@ -254,11 +261,35 @@ theme = "doc-theme"
     parent = "tutorials@networks"
     weight = 15
 [[menu.main]]
+    name = "Callback"
+    url= "/tutorials/networks/ble/callback/"
+    identifier = "tutorials@networks@ble@callback"
+    parent = "tutorials@networks@ble"
+    weight=10
+[[menu.main]]
     name = "SigFox"
     url = "/tutorials/networks/sigfox/"
     identifier = "tutorials@networks@sigfox"
     parent = "tutorials@networks"
     weight = 20
+[[menu.main]]
+    name = "Downlink"
+    url = "/tutorials/networks/sigfox/downlink/"
+    identifier = "tutorials@networks@sigfox@downlink"
+    parent = "tutorials@networks@sigfox"
+    weight = 10
+[[menu.main]]
+    name = "Disengage sequence numbers"
+    url = "/tutorials/networks/sigfox/disengage/"
+    identifier = "tutorials@networks@sigfox@disenage"
+    parent = "tutorials@networks@sigfox"
+    weight = 20
+[[menu.main]]
+    name = "Sipy to Sipy"
+    url = "/tutorials/networks/sigfox/module-module/"
+    identifier = "tutorials@networks@sigfox@module-module"
+    parent = "tutorials@networks@sigfox"
+    weight = 40
 [[menu.main]]
     name = "LoRa"
     url = "/tutorials/networks/LoRa/"
@@ -302,6 +333,12 @@ theme = "doc-theme"
     identifier = "tutorials@networks@lora@module-module"
     parent = "tutorials@networks@lora"
     weight = 60
+[[menu.main]]
+    name = "nvram"
+    url = "/tutorials/networks/lora/nvram/"
+    identifier = "tutorials@networks@lora@nvram"
+    parent = "tutorials@networks@lora"
+    weight = 70
 
 [[menu.main]]
     name = "LTE"
@@ -309,6 +346,13 @@ theme = "doc-theme"
     identifier = "tutorials@networks@lte"
     parent = "tutorials@networks"
     weight = 40
+[[menu.main]]
+    name = "Power Saving Mode"
+    url = "/tutorials/networks/lte/power/"
+    identifier = "tutorials@networks@lte@power"
+    parent = "tutorials@networks@lte"
+    weight = 10
+
 [[menu.main]]
     name = "Ethernet"
     url = "/tutorials/networks/ethernet/"
@@ -384,7 +428,7 @@ theme = "doc-theme"
     weight = 70
 
 [[menu.main]]
-    name = "Expansion Boards"
+    name = "Shields"
     url = "/tutorials/expansionboards/"
     identifier = "tutorials@expansionboards"
     parent = "tutorials"
@@ -394,42 +438,36 @@ theme = "doc-theme"
     url = "/tutorials/expansionboards/pygate/"
     identifier = "tutorials@expansionboards@pygate"
     parent = "tutorials@expansionboards"
+    weight = 5   
+[[menu.main]]
+    name = "Tracking"
+    url = "/tutorials/expansionboards/tracking/"
+    identifier = "tutorials@expansionboards@tracking"
+    parent = "tutorials@expansionboards"
     weight = 10
 [[menu.main]]
-    name = "pysense"
-    url = "/tutorials/expansionboards/pysense"
-    identifier = "tutorials@expansionboards@pysense"
+    name = "Sensing"
+    url = "/tutorials/expansionboards/sensing/"
+    identifier = "tutorials@expansionboards@sensing"
     parent = "tutorials@expansionboards"
     weight = 20
 [[menu.main]]
-    name = "pysense 2.0 X"
-    url = "/tutorials/expansionboards/pysense2"
-    identifier = "tutorials@expansionboards@pysense2"
+    name = "Scanning"
+    url = "/tutorials/expansionboards/scanning/"
+    identifier = "tutorials@expansionboards@scanning"
     parent = "tutorials@expansionboards"
     weight = 30
 [[menu.main]]
-    name = "pytrack"
-    url = "/tutorials/expansionboards/pytrack"
-    identifier = "tutorials@expansionboards@pytrack"
+    name = "Pysleep"
+    url = "/tutorials/expansionboards/sleep/"
+    identifier = "tutorials@expansionboards@sleep"
     parent = "tutorials@expansionboards"
     weight = 40
-[[menu.main]]
-    name = "pytrack 2.0 X"
-    url = "/tutorials/expansionboards/pytrack2"
-    identifier = "tutorials@expansionboards@pytrack2"
-    parent = "tutorials@expansionboards"
-    weight = 50
-[[menu.main]]
-    name = "pyscan"
-    url = "/tutorials/expansionboards/pyscan"
-    identifier = "tutorials@expansionboards@pyscan"
-    parent = "tutorials@expansionboards"
-    weight = 60
 [[menu.main]]
     name = "Sleep"
     url = "/tutorials/expansionboards/sleep/"
     identifier = "tutorials@expansionboards@sleep"
-    parent = "tutorials@basic"
+    parent = "tutorials@expansionboards"
     weight = 20
 [[menu.main]]
     name = "Advanced"
@@ -437,6 +475,12 @@ theme = "doc-theme"
     identifier = "tutorials@advanced"
     parent = "tutorials"
     weight = 60
+[[menu.main]]
+    name= "File decompression"
+    url= "/tutorials/advanced/uzlib/"
+    identifier = "tutorials@advanced@uzlib"
+    parent = "tutorials@advanced"
+    weight=10
 
 # *** Firmware & API Reference
 [[menu.main]]
@@ -706,54 +750,60 @@ theme = "doc-theme"
     weight = 40
 
 [[menu.main]]
-    name = "Expansion boards"
+    name = "Shields"
     url = "/firmwareapi/pycom/expansionboards/"
     identifier = "firmwareapi@pycom@expansionboards"
     parent = "firmwareapi@pycom"
     weight = 50
 
 [[menu.main]]
-    name = "Pygate"
-    url = "/firmwareapi/pycom/expansionboards/pygate/"
-    identifier = "firmwareapi@pycom@expansionboards@pygate"
+    name = "Pycoproc"
+    url = "/firmwareapi/pycom/expansionboards/pycoproc/"
+    identifier = "firmwareapi@pycom@expansionboards@pycoproc"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 10
 [[menu.main]]
-    name = "pysense"
-    url = "/firmwareapi/pycom/expansionboards/pysense/"
-    identifier = "firmwareapi@pycom@expansionboards@pysense"
+    name = "Pycoproc2"
+    url = "/firmwareapi/pycom/expansionboards/pycoproc2/"
+    identifier = "firmwareapi@pycom@expansionboards@pycoproc2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 20
 [[menu.main]]
-    name = "pysense 2.0 x"
-    url = "/firmwareapi/pycom/expansionboards/pysense2/"
+    name = "LIS2HH12"
+    url = "/firmwareapi/pycom/expansionboards/LIS2HH12/"
     identifier = "firmwareapi@pycom@expansionboards@pysense2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 30
 [[menu.main]]
-    name = "pytrack"
-    url = "/firmwareapi/pycom/expansionboards/pytrack/"
-    identifier = "firmwareapi@pycom@expansionboards@pytrack"
+    name = "LTR329ALS01"
+    url = "/firmwareapi/pycom/expansionboards/LTR329ALS01/"
+    identifier = "firmwareapi@pycom@expansionboards@LTR329ALS01"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 40
 [[menu.main]]
-    name = "pytrack 2.0 x"
-    url = "/firmwareapi/pycom/expansionboards/pytrack2/"
-    identifier = "firmwareapi@pycom@expansionboards@pytrack2"
+    name = "SI7006A20"
+    url = "/firmwareapi/pycom/expansionboards/SI7006A20/"
+    identifier = "firmwareapi@pycom@expansionboards@SI7006A20"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 50
 [[menu.main]]
-    name = "pyscan"
-    url = "/firmwareapi/pycom/expansionboards/pyscan/"
-    identifier = "firmwareapi@pycom@expansionboards@pyscan"
+    name = "MPL3115A2"
+    url = "/firmwareapi/pycom/expansionboards/MPL3115A2/"
+    identifier = "firmwareapi@pycom@expansionboards@MPL3115A2"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 60
-[[menu.main]]
-    name = "sleep"
-    url = "/firmwareapi/pycom/expansionboards/sleep/"
-    identifier = "firmwareapi@pycom@expansionboards@sleep"
+    [[menu.main]]
+    name = "MFRC630"
+    url = "/firmwareapi/pycom/expansionboards/MFRC630/"
+    identifier = "firmwareapi@pycom@expansionboards@MFRC630"
     parent = "firmwareapi@pycom@expansionboards"
     weight = 70
+[[menu.main]]
+    name = "L76GNSS"
+    url = "/firmwareapi/pycom/expansionboards/L76GNSS/"
+    identifier = "firmwareapi@pycom@expansionboards@L76GNSS"
+    parent = "firmwareapi@pycom@expansionboards"
+    weight = 80
 
 
 
@@ -890,6 +940,12 @@ theme = "doc-theme"
     identifier = "firmwareapi@micropython@ustruct"
     parent = "firmwareapi@micropython"
     weight = 180
+[[menu.main]]
+    name = "uzlib"
+    url = "/firmwareapi/micropython/uzlib/"
+    identifier = "firmwareapi@micropython@uzlib"
+    parent = "firmwareapi@micropython"
+    weight = 190
 
 [[menu.main]]
     name = "_thread"
@@ -1025,7 +1081,7 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
-    name = "Expansion Boards and Shields"
+    name = "Shields"
     url = "/datasheets/expansionboards/"
     identifier = "datasheets@boards"
     parent = "datasheets"
@@ -1107,15 +1163,25 @@ theme = "doc-theme"
     identifier = "datasheets@expansionboards@pyethernet"
     parent = "datasheets@boards"
     weight = 90
-
-
+[[menu.main]]
+    name = "Accessories"
+    url = "/datasheets/accessories/"
+    identifier = "datasheets@accessories"
+    parent = "datasheets"
+    weight = 40
+[[menu.main]]
+    name = "IP67 Case"
+    url = "/datasheets/accessories/ip67case/"
+    identifier = "datasheets@accessories@ip67case"
+    parent = "datasheets@accessories"
+    weight = 10
 
 [[menu.main]]
     name = "Notes"
     url = "/datasheets/notes/"
     identifier = "datasheets@notes"
     parent = "datasheets"
-    weight = 40
+    weight = 50
 
 # firmware tool
 [[menu.main]]
@@ -1174,11 +1240,18 @@ theme = "doc-theme"
     weight = 10
 
 [[menu.main]]
-    name = "Visualise data"
+    name = "Visualise signals"
     url = "/pybytes/dashboard/"
     identifier = "pybytes@dashboard"
     parent = "pybytes"
     weight = 15
+
+[[menu.main]]
+    name = "Pymakr Online"
+    url = "/pybytes/pymakr-online/"
+    identifier = "pybytes@pymakr-online"
+    parent = "pybytes"
+    weight = 17
 
 [[menu.main]]
     name = "Pybytes library API"
@@ -1186,188 +1259,6 @@ theme = "doc-theme"
     identifier= "pybytes@api"
     parent= "pybytes"
     weight = 20
-
-[[menu.main]]
-    name = "Activate Device"
-    url = "/pybytes/api/activate/"
-    identifier = "pybytes@api@activate"
-    parent = "pybytes@api"
-    weight = 11
-
-[[menu.main]]
-    name = "Connect"
-    url = "/pybytes/api/connect_device/"
-    identifier = "pybytes@api@connect_device"
-    parent = "pybytes@api"
-    weight = 12
-
-[[menu.main]]
-    name = "Connect LTE"
-    url = "/pybytes/api/connect_lte/"
-    identifier = "pybytes@api@connect_lte"
-    parent = "pybytes@api"
-    weight = 13
-
-[[menu.main]]
-    name = "Connect loRa ABP"
-    url = "/pybytes/api/connect_lora_abp/"
-    identifier = "pybytes@api@connect_lora_abp"
-    parent = "pybytes@api"
-    weight = 14
-
-[[menu.main]]
-    name = "Connect loRa OTAA"
-    url = "/pybytes/api/connect_lora_otaa/"
-    identifier = "pybytes@api@connect_lora_otaa"
-    parent = "pybytes@api"
-    weight = 15
-
-[[menu.main]]
-    name = "Connect Sigfox"
-    url = "/pybytes/api/connect_sigfox/"
-    identifier = "pybytes@api@connect_sigfox"
-    parent = "pybytes@api"
-    weight = 16
-
-[[menu.main]]
-    name = "Connect Wifi"
-    url = "/pybytes/api/connect_wifi/"
-    identifier = "pybytes@api@connect_wifi"
-    parent = "pybytes@api"
-    weight = 17
-
-[[menu.main]]
-    name = "Deepsleep"
-    url = "/pybytes/api/deepsleep/"
-    identifier = "pybytes@api@deepsleep"
-    parent = "pybytes@api"
-    weight = 19
-
-[[menu.main]]
-    name = "Disconnect"
-    url = "/pybytes/api/disconnect/"
-    identifier = "pybytes@api@disconnect"
-    parent = "pybytes@api"
-    weight = 20
-
-[[menu.main]]
-    name = "Dump CA"
-    url = "/pybytes/api/dump_ca/"
-    identifier = "pybytes@api@dump_ca"
-    parent = "pybytes@api"
-    weight = 22
-
-[[menu.main]]
-    name = "Enable LTE"
-    url = "/pybytes/api/enable_lte/"
-    identifier = "pybytes@api@enable_lte"
-    parent = "pybytes@api"
-    weight = 23
-
-[[menu.main]]
-    name = "Enable SSL"
-    url = "/pybytes/api/enable_ssl/"
-    identifier = "pybytes@api@enable_ssl"
-    parent = "pybytes@api"
-    weight = 24
-
-[[menu.main]]
-    name = "Enable terminal"
-    url = "/pybytes/api/enable_terminal/"
-    identifier = "pybytes@api@enable_terminal"
-    parent = "pybytes@api"
-    weight = 25
-
-[[menu.main]]
-    name = "Export configuration"
-    url = "/pybytes/api/export_config/"
-    identifier = "pybytes@api@export_config"
-    parent = "pybytes@api"
-    weight = 26
-
-[[menu.main]]
-    name = "Get configuration"
-    url = "/pybytes/api/get_config/"
-    identifier = "pybytes@api@get_config"
-    parent = "pybytes@api"
-    weight = 27
-
-[[menu.main]]
-    name = "Is connected"
-    url = "/pybytes/api/is_connected/"
-    identifier = "pybytes@api@is_connected"
-    parent = "pybytes@api"
-    weight = 28
-
-[[menu.main]]
-    name = "Print configuration"
-    url = "/pybytes/api/print_config/"
-    identifier = "pybytes@api@print_config"
-    parent = "pybytes@api"
-    weight = 29
-
-[[menu.main]]
-    name = "Read configuration"
-    url = "/pybytes/api/read_config/"
-    identifier = "pybytes@api@read_config"
-    parent = "pybytes@api"
-    weight = 30
-
-[[menu.main]]
-    name = "Reconnect"
-    url = "/pybytes/api/reconnect/"
-    identifier = "pybytes@api@reconnect"
-    parent = "pybytes@api"
-    weight = 31
-
-[[menu.main]]
-    name = "Send info message"
-    url = "/pybytes/api/send_info_message/"
-    identifier = "pybytes@api@send_info_message"
-    parent = "pybytes@api"
-    weight = 32
-
-[[menu.main]]
-    name = "Send ping message"
-    url = "/pybytes/api/send_ping_message/"
-    identifier = "pybytes@api@send_ping_message"
-    parent = "pybytes@api"
-    weight = 33
-
-[[menu.main]]
-    name = "Send signal"
-    url = "/pybytes/api/send_signal/"
-    identifier = "pybytes@api@send_signal"
-    parent = "pybytes@api"
-    weight = 34
-
-[[menu.main]]
-    name = "Set configuration"
-    url = "/pybytes/api/set_config/"
-    identifier = "pybytes@api@set_config"
-    parent = "pybytes@api"
-    weight = 35
-
-[[menu.main]]
-    name = "Start"
-    url = "/pybytes/api/start/"
-    identifier = "pybytes@api@start"
-    parent = "pybytes@api"
-    weight = 36
-
-[[menu.main]]
-    name = "Update configuration"
-    url = "/pybytes/api/update_config/"
-    identifier = "pybytes@api@update_config"
-    parent = "pybytes@api"
-    weight = 37
-
-[[menu.main]]
-    name = "Write configuration"
-    url = "/pybytes/api/update_config/"
-    identifier = "pybytes@api@write_config"
-    parent = "pybytes@api"
-    weight = 38
 
 [[menu.main]]
     name = "Add a device to Pybytes"
@@ -1405,7 +1296,7 @@ theme = "doc-theme"
     weight = 20
 
 [[menu.main]]
-  name = "Pybytes iOS"
+  name = "Pybytes App"
   url = "/pybytes/smart/"
   identifier = "pybytes@smart"
   parent = "pybytes"
@@ -1710,19 +1601,25 @@ theme = "doc-theme"
     identifier = "advance@cli"
     parent = "advance"
     weight = 20
+[[menu.main]]
+    name = "Coredump"
+    url = "/advance/coredump/"
+    identifier = "advance@coredump"
+    parent= "advance"
+    weight = 30
 
 [[menu.main]]
     name = "SecureBoot and Encryption"
     url = "/advance/encryption/"
     identifier = "advance@encryption"
     parent = "advance"
-    weight = 30
+    weight = 40
 [[menu.main]]
     name = "Frozen code"
     url = "/advance/frozen/"
     identifier = "advance@frozen"
     parent = "advance"
-    weight = 40
+    weight = 50
 
 [[menu.main]]
     name="License"

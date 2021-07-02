@@ -1,49 +1,42 @@
 ---
-title: "Product info & Datasheets"
-aliases:
-    - firmwareapi/introduction.html
-    - firmwareapi/introduction.md
-    - product-info
-    - chapter/firmwareapi
+title: "Shields"
 ---
-As the development for these devices are on going with additional features being added, every week, it is essential to ensure you frequently check for updates on the Pytrack/Pysense/Pyscan. As well as updating the device firmware, it is important to check the [GitHub repository](https://github.com/pycom/pycom-libraries) for the respective library files as they as also being updated, to include additional features/functionality.
 
-{{% hint style="info" %}}
-Please note that updated libraries are available for the Pytrack 2.0 X and Pysense 2.0 X in the pytrack-2 and pysense-2 directories on GitHub.
-These new libraries will allow you to use the new additional features.
-{{% /hint %}}
+The API pages in this section explain the additional functionality offered by the following shields:
+* Pysense
+* Pysense 2.0 X
+* Pytrack
+* Pytrack 2.0 X
+* Pyscan
+
+Note that this functionality is not built into the firmware, and you will need to download additional libraries from our [Github libraries repository](https://github.com/pycom/pycom-libraries/tree/master/shields).
+
+The API pages are separated per sensor:
+* [Accelerometer](lis2hh12/) (LIS2HH12)
+* [Light Sensor](ltr329als01/) (LTR329ALS01)
+* [Temperature / Humidity Sensor](si7006a20/) (SI7006A20)
+* [Pressure Sensor](mpl3115a2/) (MPL3115A2)
+* [RFID / NFC](mfrc630/) (MFRC630)
+* [GPS](l76gnss/) (L76GNSS)
+
+Next to that, you will need either one of the supporting files needed to operate the shield:
+* [Pycoproc](pycoproc/) - used on the first version of the Shields
+* [Pycoproc2](pycoproc2/) - used on the second version of the Shields
 
 ## Uploading the Libraries to a Device
 
-These libraries should be uploaded to a device (LoPy, SiPy, WiPy 3.0, etc.) in the same process as a standard MicroPython library. The various `.py` files should be placed into the `/lib` folder on the device. 
+Place the applicable Python files for your shield into the `/lib` folder of your project. Do not forget to press `upload project to device` in Pymakr to make sure you are able to use them.
 
-Add as many or as few of the libraries that are required.
-
-In addition to the Pysense or Pytrack specific libraries, for hardware version 1.x boards you also need to upload the `pycoproc.py` file from the `lib/pycoproc` folder inside the libraries archive. For the Pytrack 2.0 X and Pysense 2.0 X, the pycoproc.py file is included in the pytrack-2 and pysense-2 directories to avoid confusion over which library to use.
-
-For example, if using the Pysense and the user wishes to enable the only Accelerometer and the Light Sensor, they should place the following `.py` files into the device's `/lib` folder:
-
-```text
-- pysense.py
-- pycoproc.py
-- LIS2HH12.py
-- LTR329ALS01.py
-```
-
-{{% hint style="info" %}}
-The Pytrack and Pysense boards behave the same as the Expansion Board. `Upload`, `Run` and upload code to Pycom modules via the Pymakr Plugin, in exactly the same process.
-{{% /hint %}}
-
-## Importing/Using the Libraries
+## Importing and using the libraries
 
 Once the libraries are uploaded to the device, they can be used/imported as a typical MicroPython library would be. For example, importing and using the light sensor on the Pysense:
 
 ```python
 
-from pysense import Pysense
+from pycoproc import Pycoproc
 from LTR329ALS01 import LTR329ALS01
 
-py = Pysense()
+py = Pycoproc()
 lt = LTR329ALS01(py)
 
 print(lt.light())

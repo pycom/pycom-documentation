@@ -10,36 +10,47 @@ This page discusses the possibility to upload files through the internal FTP ser
 
 On each Pycom device, there is a small internal filesystem called `/flash`, to which the Python code is uploaded. We can access this filesystem through an internally running FTP server, that allows us to make changes to the files. Next to that, a Telnet connection can be made to communicate with the device through the REPL. 
 ## Connecting
+
+In the past, Pycom devices came with the Access Point enabled from the factory. Nowadays, they come with [smart-configuration](/pybytes/smart/) and Pybytes enabled by default, allowing quick and easy provisioning to Pybytes using the app. Follow the steps below to disable that and use enable the Access Point or connect to another WiFi network on boot. 
+
 1. **Connect through the Access Point**
-
-    By default, the Pycom device will create a WiFi access point with the following default credentials:
-    * SSID: `xxpy-wlan-####`
-    * Password: `www.pycom.io`
-
-    The last 4 characters of the broadcast SSID are equal to the last 4 characters of the `unique_id()`:
-    ```python
-    import machine
-    import ubinascii
-    ubinascii.hexlify(machine.unique_id())
-    ```
-
-    Note that if you made changes to the WiFi settings, the AP might not show up by default. You can use the following to get it back up and running:
+    
+    You can activate the internal Access Point (AP) on boot by using the following:
     ```python
     import pycom
     from network import WLAN
+    import machine
+    pycom.pybytes_on_boot(False) #we do not want Pybytes using the WLAN
+    pycom.smart_config_on_boot(False) #we also do not want smart config
     pycom.wifi_on_boot(True)
     pycom.wifi_mode_on_boot(WLAN.AP)
+    pycom.wifi_ssid_ap('ssid')
+    pycom.wifi_pwd_ap('')
+    machine.reset()
     ```
 
     > You can find the methods to change the default settings [here](/firmwareapi/pycom/pycom/#boot-methods)
 
 2. **Connect through A WiFi Network**
     
-    It is also possible to connect your pycom device to a WiFi network first, and then connect to its IP address. Note that you will have to figure out its IP address before you can access the FTP server. For that, you can use the following command. This will return a tuple with four items, where the first item will contain the assigned IP address.
+    It is also possible to connect your pycom device to a WiFi network first, and then connect to its IP address. Note that you will have to figure out its IP address before you can access the FTP server or use [MDNS](/tutorials/networkprotocols/mdns/). For that, you can use the following command. This will return a tuple with four items, where the first item will contain the assigned IP address.
     ```python
+    import pycom
+    from network import WLAN
+    import machine
+    #You can set this to True if Pybytes connects to your router already, and skip the rest
+    pycom.pybytes_on_boot(False) 
+
+    pycom.smart_config_on_boot(False)
+    pycom.wifi_on_boot(True)
+    pycom.wifi_mode_on_boot(WLAN.STA)
+    pycom.wifi_ssid_sta('router ssid')
+    pycom.wifi_pwd_sta('router password')
     wlan.ifconfig()
+    machine.reset()
     ```
-> Note that if you make changes to the WLAN Configuration in the uploaded Python code, the connection might drop. Moreover, if your program contains continuous reboot loops, sleep cycles or coredumps, you might not be able to recover the wireless connection without [safe booting](../safeboot/)
+Note that if you make changes to the WLAN Configuration in the uploaded Python code, for example by using Pybytes or changing the WiFi credentials, the connection might drop. Moreover, if your program contains continuous reboot loops, sleep cycles or coredumps, you might not be able to recover the wireless connection without [safe booting](../safeboot/)
+
 ## FTP Server
 The file system is accessible via the native FTP server running on each Pycom device. Open a FTP client and connect to:
 

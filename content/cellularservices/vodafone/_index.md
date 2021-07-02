@@ -17,4 +17,4 @@ Over the past few years, Pycom has been in receipt of many a request for access 
 
 
 * [SIM card registration](/cellularservices/vodafone/simregistration)
-* [FAQ](https://pycom.io/webshop/services/cellular-services/faq-for-vodafone-pycoms-nb-iot-services/)
+* [FAQ](https://pycom.io/webshop-2/services/cellular-services/faq-for-vodafone-pycoms-nb-iot-services/)

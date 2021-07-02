@@ -27,9 +27,9 @@ Using the WLAN class from network, you can change the name (SSID) and security s
 
 ```python
 from network import WLAN
-wlan = WLAN(mode=WLAN.AP, ssid='hello world')
+wlan = WLAN()
 
-wlan.init()
+wlan.init(mode=WLAN.AP, ssid='hello world')
 #use the line below to apply a password
 #wlan.init(ssid="hi", auth=(WLAN.WPA2, "eightletters"))
 print(wlan.ifconfig(id=1)) #id =1 signifies the AP interface
@@ -45,7 +45,7 @@ from network import WLAN
 import machine
 wlan = WLAN(mode=WLAN.STA)
 
-wlan.connect(ssid='ssid', auth=(WLAN,WPA2, 'password'))
+wlan.connect(ssid='ssid', auth=(WLAN.WPA2, 'password'))
 while not wlan.isconnected():
     machine.idle()
 print("WiFi connected succesfully")

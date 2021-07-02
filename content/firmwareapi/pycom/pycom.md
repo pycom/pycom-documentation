@@ -25,9 +25,9 @@ pycom.rgbled(0xff00)    # make the LED light up in green color
 
 Get or set the state (enabled or disabled) of the heartbeat LED. Accepts and returns boolean values.
 
-### pycom.rgbled(color)
+### pycom.rgbled([color])
 
-Set the colour of the RGB LED. The colour is specified as 24 bit value representing red, green and blue, in the following order `0xRRGGBB`. For instance, passing the value `0x00FF00` will light up the LED in a very bright green.
+Get or set the colour of the RGB LED. The colour is specified as 24 bit value representing red, green and blue, in the following order `0xRRGGBB`. For instance, passing the value `0x00FF00` will light up the LED in a very bright green. If no color is provided, this will return the current color of the LED.
 
 ### pycom.nvs_set(key, value)
 
@@ -78,7 +78,7 @@ With arguments, the specified keys will be set.
 
 ## Boot methods
 
-### pycom.pybytes_on_boot()
+### pycom.pybytes_on_boot([boolean])
 
 Get or set the activation of pybytes on boot.
 
@@ -86,7 +86,7 @@ Get or set the activation of pybytes on boot.
 
 Allows you permanently disable or enable the heartbeat LED. Once this setting is set, it will persist between reboots. Note, this only comes into effect on the next boot, it does not stop the already running heartbeat.
 
-### pycom.lte_modem_on_boot([boolean])
+### pycom.lte_modem_en_on_boot([boolean])
 
 Get or set the LTE modem on boot flag. When this flag is set to `True`, the LTE modem will be enabled.
 

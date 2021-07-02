@@ -19,7 +19,9 @@ aliases:
 
 The datasheet of the SiPy is available as a [PDF File](/gitbook/assets/specsheets/Pycom_002_Specsheets_SiPy_v2.pdf)
 
-The Sipy is certified for [CE RED](/gitbook/assets/17-210585_expertise_sipy_sipy-1.0.pdf)
+### Certifications
+The Sipy is certified for: 
+* [CE RED](/gitbook/assets/17-210585_expertise_sipy_sipy-1.0.pdf)
 
 ## Pinout
 

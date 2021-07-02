@@ -8,13 +8,30 @@ aliases:
 ---
 **Store**: [Buy Here](https://pycom.io/product/pyscan/)
 
-![](/gitbook/assets/pyscan-new.png)
+The Pyscan shield allows you to scan RFID and NFC tags and includes an accelerometer and light sensor.
 
-## Datasheet
+## Getting started
+1. Find the libraries for the Pyscan in the [Pycom libraries](https://github.com/pycom/pycom-libraries/releases/) repository on Github. 
+1. Download the files and extract them into the project folder in Pymakr
+1. Click the `upload project to device` button. This will store all necessary files on the device and allow you to import them in the example `main.py`.
+1. Check the REPL. If you have Pybytes activated, the example will send the sensor data to Pybytes automatically. Note that the Pyscan will return command to the REPL while it scans for NFC cards in the background. Note that the example also allows the decoding of cards by changing the variable `DECODE_CARD = True`
 
-The datasheet of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-specsheet.pdf)
+### Examples
+The Pyscan has several examples:
+* [Scanning](/tutorials/expansionboards/scanning/)
 
-[ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pyscan(8286-00031P)-20190523.pdf)
+## Features
+
+![](/gitbook/assets/pyscan-pinout-1.png)
+## Datasheet & Pinout
+
+The pinout and datasheet of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-pinout.pdf)
+
+### Certifications
+The Pyscan is certified for:
+* [ROHS certification](/gitbook/assets/RoHs_declarations/RoHS-for-Pyscan(8286-00031P)-20190523.pdf)
+
+
 
 ## Pyscan Libraries
 
@@ -33,12 +50,6 @@ The Windows 7 driver for Pyscan is located [here](/gettingstarted/software/drive
 
 For other Operating Systems, no driver is required.
 
-## Pinout
-
-The pinout of the Pyscan is available as a [PDF File](/gitbook/assets/pyscan-pinout.pdf)
-
-
-![](/gitbook/assets/pyscan-pinout-1.png)
 
 ## Battery Charger
 
@@ -52,4 +63,4 @@ The board features a single cell Li-Ion/Li-Po charger with a JST PHR‑2 connect
 
 ## 3D model for case design
 
-* Please see the [3D model] (/gitbook/assets/PyScan_v0.7.step) (step format)
+* Please see the [3D model](/gitbook/assets/PyScan_v0.7.step) (step format)

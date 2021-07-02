@@ -5,8 +5,7 @@ aliases:
     - gettingstarted/hardware/usbserial.md
     - chapter/gettingstarted/hardware/usbserial
 ---
-When you do not own an expansion board, it is possible to connect to your device using a USB to Serial adapter. 
-> Note: We do not recommend this setup for beginners.
+When you do not own an expansion board, it is possible to connect to your device using a USB to Serial adapter. Make sure your USB to Serial converter is able to communicate at baudrates of 115200 and 921600. We do not recommend this setup for beginners.
 
 To connect to your device using a USB to Serial adapter, connect the following pins:
 

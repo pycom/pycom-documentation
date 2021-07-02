@@ -16,13 +16,18 @@ Some times the code you have written will prevent you gaining access to the REPL
 * Your code gets stuck before reaching the REPL
 * You set a socket as blocking but never receive any data
 
-In order to fix this you can safe boot your module. This will prevent `boot.py` and `main.py` from being executed and will drop you straight into the interactive REPL. After reset, if `P12` pin is held `high` (i.e. connect it to the `3V3` output pin), the heartbeat LED will begin flashing orange slowly. If after 3 seconds the pin is still held high, the LED will start blinking faster. In this mode the module will do the same as previously explained but it will also select the previous OTA image to boot if you have updated the module via the OTA update procedure (updates performed via the firmware update tool do not count). This is useful if you flashed a OTA update that breaks the device.
+In order to fix this you can safe boot your module. This will prevent `boot.py` and `main.py` from being executed and will drop you straight into the interactive REPL. After reset, if `P12` pin is held `high` (i.e. connect it to the `3V3` output pin), the heartbeat LED will begin flashing orange slowly. If after 3 seconds the pin is still held high, the LED will start blinking faster. In this mode the module will do the same as previously explained but it will also select the previous OTA image to boot if you have updated the module via the OTA update procedure (updates performed via the firmware update tool do not count). This is useful if you flashed a OTA update that breaks the device. The following expansionboards have a dedicated safeboot-button:
+
+| Expansionboard 3.1 | Pygate | Pysense 2.0X | Pytrack 2.0 X |
+|:----|:---|:-----|:-----|
+| ![](/gitbook/assets/expansionboards/expansionboard31_sb.png) |  ![](/gitbook/assets/expansionboards/pygate_sb.png)]| ![](/gitbook/assets/expansionboards/pysense2_sb.png)| ![](/gitbook/assets/expansionboards/pytrack2_sb.png) |
+
 
 Pin `P12` released during:
 
-| 1st 3 secs window | 2nd 3 secs window |
+| 1st 3 secs window (slow flashing) | 2nd 3 secs window (fast flashing) |
 | :--- | :--- |
-| Disable `boot.py` and `main.py` | Same as previous but using previous OTA firmware |
+| Disable `boot.py` and `main.py` | Disable `boot.py` and `main.py`  and use previous OTA firmware |
 
 The selection made during safe boot is not persistent, therefore after the next normal reset, the latest firmware will proceed to run again.
 
@@ -35,14 +40,26 @@ If problems occur within the filesystem or you wish to factory reset your module
 
 > Be aware, formatting the flash filesystem will delete all files inside the internal device storage (not the SD card) and they cannot be recovered.
 
+### Programatticaly enable safeboot
+
+Next to the manual method to enter safeboot, it is also possible to enable safebooting in micropython using the following snippet, which is the same as pressing `CTRL+F` in Pymakr, and will **not** hold through a hard-reset:
+```python
+import machine
+import pycom
+pycom.bootmgr(safeboot=True)
+machine.reset()
+```
+
 ## Reset
 
+### Soft reset
 Pycom devices support both soft and hard resets. A soft reset clears the state of the MicroPython virtual machine but leaves hardware peripherals unaffected. To do a soft reset, press `Ctrl+D` on the REPL or from within a script, run:
 
 ```python
 >>> import sys
 >>> sys.exit()
 ```
+### Hard reset
 
 A hard reset is the same as performing a power cycle to the device. In order to hard reset the device, press the `reset` switch or run:
 

@@ -36,11 +36,11 @@ Cyan            - SINGLE LEADER (no other Router in the same Pymesh)
 
 ## Example of usage
 
-A simple example of usage is in the [main.py](https://github.com/pycom/pycom-libraries/blob/master/lib/pymesh/main.py).
+A simple example of usage can be found [here](/pymesh/simple-example/).
 
 ## Specifications
 
-It can be easily customised, by modifying any file from [/lib folder](https://github.com/pycom/pycom-libraries/tree/master/pymesh/lib/) and flashing it to the board. The uploaded file will automatically be executed instead of the _frozen_ one, which is already embedded into the binary firmware.
+It can be easily customised, by modifying any file from [/lib folder](https://github.com/pycom/pycom-libraries/tree/master/pymesh/) and flashing it to the board. The uploaded file will automatically be executed instead of the _frozen_ one, which is already embedded into the binary firmware.
 
 ### Structure
 

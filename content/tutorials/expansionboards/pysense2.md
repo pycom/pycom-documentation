@@ -7,7 +7,7 @@ aliases:
 ---
 The Pysense 2.0 X has an external header that allows you to attach all kinds of sensors. 
 ## All sensors
->Note: You can find this example in the [GitHub repository](https://github.com/pycom/pycom-libraries/tree/master/pysense-2). Over there, you can also find the relevant libraries. 
+>Note: You can find this example in the [GitHub repository](https://github.com/pycom/pycom-libraries/). Over there, you can also find the relevant libraries. 
 ```python
 #!/usr/bin/env python
 #

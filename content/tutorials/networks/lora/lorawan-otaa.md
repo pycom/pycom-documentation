@@ -20,6 +20,8 @@ import binascii
 print(binascii.hexlify(LoRa().mac()).upper())
 ```
 
+> **Note for US915 / AU915 regions:** if you are planning to send packets to a Pygate (or any other 8-channel gateway) with the supplied configuration file, you will need to define the correct uplink channels. These regions support up to 64 uplink channels, meaning the node can transmit on a channel that is not received. Uncomment the respective sections in the example below to select the correct uplink channels.
+
 
 ```python
 from network import LoRa
@@ -40,6 +42,14 @@ app_eui = ubinascii.unhexlify('ADA4DAE3AC12676B')
 app_key = ubinascii.unhexlify('11B0282A189B75B0B4D2D8C7FA38548B')
 #uncomment to use LoRaWAN application provided dev_eui
 #dev_eui = ubinascii.unhexlify('70B3D549938EA1EE')
+
+# Uncomment for US915 / AU915 & Pygate
+# for i in range(0,8):
+#     lora.remove_channel(i)
+# for i in range(16,65):
+#     lora.remove_channel(i)
+# for i in range(66,72):
+#     lora.remove_channel(i)
 
 # join a network using OTAA (Over the Air Activation)
 #uncomment below to use LoRaWAN application provided dev_eui
