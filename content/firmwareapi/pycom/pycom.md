@@ -33,11 +33,11 @@ Get or set the colour of the RGB LED. The colour is specified as 24 bit value re
 
 Set the value of the specified key in the NVRAM memory area of the external flash. Data stored here is preserved across resets and power cycles. Value can only take 32-bit integers at the moment. Example:
 
-### pycom.nvs_get(key)
+### pycom.nvs_get(key[, optional_default_value])
 
-Get the value the specified key from the NVRAM memory area of the external flash. Example:
+Get the value with the specified key from the NVRAM memory area of the external flash.
 
-If a non-existing key is given the returned value will be `None`.
+If a non-existing key is given the returned value will be the optional_default_value if it is provided, else an error will be raised. The error message for missing key is: "No matching object for the provided key"
 
 ### pycom.nvs_erase(key)
 
