@@ -20,8 +20,13 @@ The bottom two lines explain the LTE firmware edition:
 * LR5.xx is for CAT-M1
 * LR6.xx is for NB-IoT
 
-The firmwares for CAT-M1 and NB-IoT are fundamentally different and cannot be used interchangable. For security reasons, the modem firmware files are password protected. In order to download them, head to https://forum.pycom.io and become a member (if you aren't already) and go [here](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured) for the credentials. (On the forum: Announcements & News &rarr; Announcements for members only &rarr; the Firmware Files)
-You can find the firmwares listed [here](https://software.pycom.io/downloads/sequans2.html).
+The firmwares for CAT-M1 and NB-IoT are fundamentally different and cannot be used interchangable. 
+
+For security reasons, the modem firmware files are password protected. In order to download them, 
+
+* register in our [forum](https://forum.pycom.io) (if you aren't already) and then 
+* go [to this forum post](https://forum.pycom.io/topic/4020/firmware-files-for-sequans-lte-modem-now-are-secured) for the credentials. (On the forum: Announcements & News &rarr; Announcements for members only &rarr; the Firmware Files) and then
+* you can [download the firmwares](https://software.pycom.io/downloads/sequans2.html).
 
 >If you currently have CAT-M1 firmware **33080**, then make sure to update to 41065, before you go to any other version such as 48829!
 
@@ -42,7 +47,7 @@ There are several different ways to update the firmware of the LTE modem:
 This update has to be done in two steps and is a full upgrade, meaning you can only use the steps for 'SD Card' or 'USB'.
 1. update with `CATM1-5.2-48829-1.dup`
     
-    For the first update you have to also specify `load_fff=False`. Using the SD cad method, it would be like this:
+    For the first update you have to also specify `load_fff=False`. Using the SD card method, it would be like this:
 
     ```
     sqnsupgrade.run('/sd/CATM1-5.2-48829-1.dup', load_fff=False)
