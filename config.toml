@@ -1037,48 +1037,59 @@ theme = "doc-theme"
     identifier = "datasheets@oem"
     parent = "datasheets"
     weight = 20
-
+[[menu.main]]
+    name = "F01 H7"
+    url = "/datasheets/oem/f01h7/"
+    identifier = "datasheets@oem@f01h7"
+    parent = "datasheets@oem"
+    weight = 10
+[[menu.main]]
+    name = "F01 S3"
+    url = "/datasheets/oem/f01s3/"
+    identifier = "datasheets@oem@f01s3"
+    parent = "datasheets@oem"
+    weight = 20
 [[menu.main]]
     name = "W01"
     url = "/datasheets/oem/w01/"
     identifier = "datasheets@oem@w01"
     parent = "datasheets@oem"
-    weight = 10
+    weight = 30
 
 [[menu.main]]
     name = "L01"
     url = "/datasheets/oem/l01/"
     identifier = "datasheets@oem@l01"
     parent = "datasheets@oem"
-    weight = 20
+    weight = 40
 
 [[menu.main]]
     name = "L01 OEM Baseboard"
     url = "/datasheets/oem/l01_reference/"
     identifier = "datasheets@oem@l01_reference"
     parent = "datasheets@oem"
-    weight = 25
+    weight = 50
 
 [[menu.main]]
     name = "L04"
     url = "/datasheets/oem/l04/"
     identifier = "datasheets@oem@l04"
     parent = "datasheets@oem"
-    weight = 30
+    weight = 60
 
 [[menu.main]]
     name = "G01"
     url = "/datasheets/oem/g01/"
     identifier = "datasheets@oem@g01"
     parent = "datasheets@oem"
-    weight = 40
+    weight = 70
 
 [[menu.main]]
     name = "Universal OEM Baseboard"
     url = "/datasheets/oem/universal_reference/"
     identifier = "datasheets@oem@universal_reference"
     parent = "datasheets@oem"
-    weight = 60
+    weight = 80
 
 [[menu.main]]
     name = "Shields"
