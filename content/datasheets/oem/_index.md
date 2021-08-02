@@ -7,9 +7,11 @@ aliases:
 
 This section contains all of the datasheets for the Pycom OEM Devices. This includes the W01, L01, L04, and G01.
 
-- [W01](/datasheets/oem/w01/)
-- [G01](/datasheets/oem/g01/)
-- [L01](/datasheets/oem/l01/)
-- [L01 OEM Baseboard](/datasheets/oem/l01_reference/)
-- [L04](/datasheets/oem/l04/)
-- [Universal OEM Baseboard](/datasheets/oem/universal_reference/)
+- **NEW:** [F01 H7](f01h7/)
+- **NEW:** [F01 S3](f01s3/)
+- [W01](w01/)
+- [G01](g01/)
+- [L01](l01/)
+- [L01 OEM Baseboard](l01_reference/)
+- [L04](l04/)
+- [Universal OEM Baseboard](universal_reference/)
