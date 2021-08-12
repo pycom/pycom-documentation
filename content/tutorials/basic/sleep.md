@@ -37,7 +37,7 @@ import machine
 import time
 print("this will be printed before: " + str(time.ticks_ms()))
 machine.sleep(1000*10, True)
-print("this will be printed after 10 seconds: " str(time.ticks_ms()))
+print("this will be printed after 10 seconds: "+ str(time.ticks_ms()))
 ```
 
 #### Deep sleep
@@ -80,6 +80,6 @@ print("This will never be printed")
 
 >Note: `pybytes.deepsleep()` is fundamentally the same function as `machine.deepsleep()`, but will gracefully stop the pybytes platform functionality.
 
->Note: Using `deepsleep()` will also stop the USB connection. Be wary of that when trying to upload new code to the device!
+>Note: Using `machine.deepsleep()` will also stop the USB connection. Be wary of that when trying to upload new code to the device!
 
 For the Pysense, Pytrack and Pyscan expansionboards, an additional sleep function is available. You can find out more about that [here](/tutorials/expansionboards/sleep/)
