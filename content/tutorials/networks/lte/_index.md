@@ -91,7 +91,7 @@ The last line of the script should return a tuple containing the IP address of t
 
 ## Pycom simcard
 
-When using the Pycom simcard, you can use the above example to connect to the Vodafone LTE network using `apn=pycom.io` and the correct band. Leaving the band open will allow the modem to scan all available bands, which can take very long. You can use the Pycom simcard to relay your signal data to Pybytes using the [Pybytes API](/pybytes/api/). More information about the Pycom simcard can be found in the [webshop](https://pycom.io/product/vodafone-nb-iot-prepaid-subscription/) and in the [Vodafone simcard FAQ](https://pycom.io/webshop-2/services/cellular-services/faq-for-vodafone-pycoms-nb-iot-services/). It is not possible to connect to any other resources on the internet. 
+When using the Pycom simcard, you can use the above example to connect to the Vodafone LTE network using `apn=pycom.io` and the correct band. Leaving the band open will allow the modem to scan all available bands, which can take very long. You can use the Pycom simcard to relay your signal data to Pybytes using the [Pybytes API](/pybytes/api/). More information about the Pycom simcard can be found in the [webshop](https://pycom.io/product/vodafone-nb-iot-prepaid-subscription/) and in the [Vodafone simcard FAQ](https://pycom.io/services/cellular-services/faq-for-vodafone-pycoms-nb-iot-services/). It is not possible to connect to any other resources on the internet. 
 
 In some regions, you might be successful in creating a connection, but receive the following error when sending signals:
 
