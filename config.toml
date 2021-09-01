@@ -1646,9 +1646,9 @@ theme = "doc-theme"
     weight = 50
 
 [[menu.main]]
-    name = "Getting Started"
-    url = "/pybytes/open-api/gettingstarted/"
-    identifier = "pybytes@open-api@gettingstarted"
+    name = "Getting Started with Open-API"
+    url = "/pybytes/open-api/gettingstartedopenapi/"
+    identifier = "pybytes@open-api@gettingstartedopenapi"
     parent = "pybytes@open-api"
     weight = 10
 
