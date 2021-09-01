@@ -1637,3 +1637,24 @@ theme = "doc-theme"
     url="/license/"
     identifier="license"
     weight = 500
+
+[[menu.main]]
+    name = "Open API"
+    url = "/pybytes/open-api/"
+    identifier = "pybytes@open-api"
+    parent = "pybytes"
+    weight = 50
+
+[[menu.main]]
+    name = "Getting Started"
+    url = "/pybytes/open-api/gettingstarted/"
+    identifier = "pybytes@open-api@gettingstarted"
+    parent = "pybytes@open-api"
+    weight = 10
+
+[[menu.main]]
+    name = "Playground"
+    url = "/pybytes/open-api/playground/"
+    identifier = "pybytes@open-api@playground"
+    parent = "pybytes@open-api"
+    weight = 20
