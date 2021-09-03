@@ -1,5 +1,5 @@
 ### The Playground
-The Playground are JavaScript environments where you can prototype queries, aggregations, and MongoDB commands with helpful syntax highlighting.
+The Playground is a JavaScript environments where you can prototype queries, aggregations, and MongoDB commands with helpful syntax highlighting.
 
 
 ### How to Access it
