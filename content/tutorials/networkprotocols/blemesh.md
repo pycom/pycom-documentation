@@ -8,7 +8,7 @@ aliases:
 
 Pymesh BLE module enables many-to-many device connections, based on the Bluetooth module.
 
-For the API, please check the section [Pymesh BLE API](/firmwareapi/pycom/network/bluetooth/ble_mesh/).
+For the API, please check the section [Pymesh BLE API](/firmwareapi/pycom/network/bluetooth/btmesh/).
 
 ## Generic OnOff Example
 Generic OnOff model is one of the simplest model in BLE Mesh.
