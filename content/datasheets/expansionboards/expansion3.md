@@ -31,7 +31,7 @@ The expansion board contains 7 jumpers labeled:
 - LED: Connect the LED on the Expansionboard to GPIO16
 - CHG: Removing the jumper will decrease battery charging current from 450mA to 100mA
 
-> Note: The internal voltage divider can be either 115K / 56 K as depicted in the pinout, or 1M / 1M, depending on the revision of your expansionboard. Take care of this when reading the battery voltage
+> Note: The internal voltage divider is 1M / 1M, instead of the mentioned values in the pinout. Take care of this when reading the battery voltage.
 
 ![](/gitbook/assets/expansion3-pinout-1.png)
 
