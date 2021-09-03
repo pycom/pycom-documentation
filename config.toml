@@ -469,7 +469,7 @@ theme = "doc-theme"
     identifier = "tutorials@expansionboards@vbat"
     parent = "tutorials@expansionboards"
     weight = 50
-[[menu.main]
+[[menu.main]]
     name = "Advanced"
     url = "/tutorials/advanced/"
     identifier = "tutorials@advanced"
