@@ -7,7 +7,7 @@ aliases:
 
 The Pymesh BLE library provides support for connecting to a BLE Mesh Network with various Server and Client models.
 
-For examples, please check the section [Pymesh BLE Examples](/tutorials/networkprotocols/ble_mesh/).
+For examples, please check the section [Pymesh BLE Examples](/tutorials/networkprotocols/blemesh/).
 
 Pymesh BLE features:
 
