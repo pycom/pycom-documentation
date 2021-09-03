@@ -15,7 +15,7 @@ pybytes = Pybytes(conf)
 
 pybytes.start()
 ```
-Or on boot
+Or start the connection to Pybytes on boot, this way it's always available:
 ```python
 import pycom
 import machine

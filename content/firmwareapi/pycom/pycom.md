@@ -78,7 +78,7 @@ With arguments, the specified keys will be set.
 
 ## Boot methods
 
-### pycom.pybytes_on_boot()
+### pycom.pybytes_on_boot([boolean])
 
 Get or set the activation of pybytes on boot.
 
@@ -86,7 +86,7 @@ Get or set the activation of pybytes on boot.
 
 Allows you permanently disable or enable the heartbeat LED. Once this setting is set, it will persist between reboots. Note, this only comes into effect on the next boot, it does not stop the already running heartbeat.
 
-### pycom.lte_modem_on_boot([boolean])
+### pycom.lte_modem_en_on_boot([boolean])
 
 Get or set the LTE modem on boot flag. When this flag is set to `True`, the LTE modem will be enabled.
 

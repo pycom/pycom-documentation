@@ -8,6 +8,36 @@ The following tutorial demonstrates the use of the LTE CAT-M1 and NB-IoT functio
 
 > Before you start, make sure that your Simcard is registered and activated with your carrier.
 
+This page discusses the usage of the LTE modem in more detail:
+* [General remarks](#general-remarks)
+* [Connection example](#example)
+* [Pycom simcard](#pycom-simcard)
+* [LTE Connectivity loss](#lte-connectivity-loss)
+* [Connection troubleshooting guide](#lte-troubleshooting-guide)
+
+
+## General remarks 
+The LTE modem needs to run a specific firmware depending on the network you want to use. To check the current modem firmware, you can use the following
+```python
+import sqnsupgrade
+print(sqnsupgrade.info())
+```
+or
+```python
+from network import LTE
+lte = LTE()
+print(lte.send_at_cmd('ATI1'))
+```
+
+The bottom two lines explain the LTE firmware edition:
+
+* LR5.xx is for CAT-M1
+* LR6.xx is for NB-IoT
+
+Check the [LTE modem update](/updatefirmware/ltemodem/) page on how to get the correct version loaded.
+
+---
+
 When using the LTE network, **Always** connect the appropriate antenna to your device. See the figures below for the correct antenna placement.
 
 |  Gpy | Fipy  |   
@@ -51,13 +81,32 @@ while not lte.isconnected():
     print(lte.send_at_cmd('AT!="fsm"'))
 print("] connected!")
 
-print(socket.getaddrinfo('pycom.io', 80))  
+print(socket.getaddrinfo('pybytes.pycom.io', 80))  
 lte.deinit()
 #now we can safely machine.deepsleep()
 ```
 The last line of the script should return a tuple containing the IP address of the Pycom webserver.
 
 >Note: the first time, it can take a long while to attach to the network.
+
+## Pycom simcard
+
+When using the Pycom simcard, you can use the above example to connect to the Vodafone LTE network using `apn=pycom.io` and the correct band. Leaving the band open will allow the modem to scan all available bands, which can take very long. You can use the Pycom simcard to relay your signal data to Pybytes using the [Pybytes API](/pybytes/api/). More information about the Pycom simcard can be found in the [webshop](https://pycom.io/product/vodafone-nb-iot-prepaid-subscription/) and in the [Vodafone simcard FAQ](https://pycom.io/services/cellular-services/faq-for-vodafone-pycoms-nb-iot-services/). It is not possible to connect to any other resources on the internet. 
+
+In some regions, you might be successful in creating a connection, but receive the following error when sending signals:
+
+```python
+OSError: [Errno 202] EAI_FAIL
+# Check if the following is true:
+>>> socket.dnsserver()
+('0.0.0.0', '0.0.0.0')
+``` 
+In that case, you will have to manually start the LTE connection using the example above, and set the DNS servers before starting Pybytes. You can add the following lines:
+```python
+socket.dnsserver(0, '172.31.16.100')
+socket.dnsserver(1, '172.31.32.100')
+print(socket.dnsserver()) # Verify if the servers are set correctly
+```
 
 ## LTE Connectivity loss
 > You need firmware 1.20.2.r2 or later for this functionality
@@ -90,20 +139,7 @@ lte_callback(LTE.EVENT_BREAK, lte_cb_handler)
 
 ## LTE Troubleshooting guide
 
-### Firmware version
-    Use either of the following snippets to check the version of the LTE modem firmware:
-    ```python
-    import sqnsupgrade
-    sqnsupgrade.info()
-    ```
-    or
-    ```python
-    from network import LTE
-    lte = LTE()
-    print(lte.send_at_cmd('ATI1'))
-    ```
-    * Versions LR5.xx are for CAT-M1
-    * Versions LR6.xx are for NB-IoT
+Below you can find a detailed troubleshooting guide discussing 
 
 ### Debug output
 

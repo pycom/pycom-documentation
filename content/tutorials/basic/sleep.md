@@ -36,8 +36,8 @@ The `machine.sleep()` command will put the controller into a light sleep mode. W
 import machine
 import time
 print("this will be printed before: " + str(time.ticks_ms()))
-machine.sleep(1000*10, True)
-print("this will be printed after 10 seconds: " str(time.ticks_ms()))
+machine.sleep(1000*10, False)
+print("this will be printed after 10 seconds: "+ str(time.ticks_ms()))
 ```
 
 #### Deep sleep

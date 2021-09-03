@@ -12,7 +12,7 @@ import time
 import machine
 
 wlan = WLAN(mode=WLAN.STA)
-wlan.connect(ssid="Pycom", auth=(WLAN.WPA2, "PyE!ndh0ven#")) #for the connection details, check your router.
+wlan.connect(ssid="", auth=(WLAN.WPA2, "")) #for the connection details, check your router.
 while not wlan.isconnected():
     machine.idle()
 print("connected to WiFi")

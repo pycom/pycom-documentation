@@ -99,7 +99,7 @@ To enter update mode follow these steps:
 6. After this you will have approximately 7 seconds to run the DFU-util tool
   * For MacOS and Linux:
     ```bash
-    $ dfu-util -D pytrack_0.0.8.dfu
+    sudo dfu-util -D pytrack_0.0.8.dfu
     ```
   * For Windows:
     ```bash

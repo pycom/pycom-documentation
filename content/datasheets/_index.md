@@ -22,6 +22,9 @@ The follow pages contain all information relating to each product, for example: 
 
 ## OEM modules
 
+- **NEW:** [F01 H7](/datasheets/oem/f01h7/)
+- **NEW:** [F01 S3](/datasheets/oem/f01s3/) 
+
 - [W01](/datasheets/oem/w01/)
 - [G01](/datasheets/oem/g01/)
 - [L01](/datasheets/oem/l01/)

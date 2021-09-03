@@ -120,36 +120,30 @@ Great work, the RGB-LED on your device should now blink in red, green and blue
 
 In the previous section we got code running on on your Pycom module using the `run` feature of Pymakr. This is useful for quick testing but has a couple of drawbacks. Firstly the code does not remain on the device permanently. If you reboot the device, it will no longer be running your code. Secondly, it will only work if you are using libraries built into the firmware. If you need any extra libraries, these need to be copied to the device first. This is where the `upload` feature comes in. If instead of `run` you click `upload`, Pymakr will upload all the files in the project. These then persist on your device even between reboots, and allows you to use libraries from the `lib` folder in your project.
 
-If you need to remove files from your device you can use the following commands:
-
-```python
->>> import os
->>> os.fsformat('/flash')
-```
-
 ## Step 4: Using your shield
 From here on, you can continue to use the additional features of your expansionboard:
 >Note The Expansionboard requires no additional libraries and all functions work out of the box!
 
-|[ Pygate](/tutorials/expansionboards/pygate/)| [Pysense](/tutorials/expansionboards/pysense/) | [Pysense 2.0 X](/tutorials/expansionboards/pysense2/)| [Pytrack](/tutorials/expansionboards/pytrack/)| [Pytrack 2.0 X](/tutorials/expansionboards/pytrack2/)| [PyScan ](/tutorials/expansionboards/pyscan/)|
+|[ Pygate](/datasheets/expansionboards/pygate/)| [Pysense](/datasheets/expansionboards/pysense/) | [Pysense 2.0 X](/datasheets/expansionboards/pysense2/)| [Pytrack](/datasheets/expansionboards/pytrack/)| [Pytrack 2.0 X](/datasheets/expansionboards/pytrack2/)| [PyScan ](/datasheets/expansionboards/pyscan/)|
 |:----|:-----|:-----|:-----|:-----|:----|
-| [![](/gitbook/assets/expansionboards/pygate.png)](/tutorials/expansionboards/pygate/)|[![](/gitbook/assets/expansionboards/pysense1.png)](/tutorials/expansionboards/pysense/) | [![](/gitbook/assets/expansionboards/pysense2.png)](/tutorials/expansionboards/pysense2/)| [![](/gitbook/assets/expansionboards/pytrack1.png)](/tutorials/expansionboards/pytrack/)| [![](/gitbook/assets/expansionboards/pytrack2.png)](/tutorials/expansionboards/pytrack2/)| [![](/gitbook/assets/expansionboards/pyscan.png)](/tutorials/expansionboards/pyscan/) |
+| [![](/gitbook/assets/expansionboards/pygate.png)](/datasheets/expansionboards/pygate/)|[![](/gitbook/assets/expansionboards/pysense1.png)](/datasheets/expansionboards/pysense/) | [![](/gitbook/assets/expansionboards/pysense2.png)](/datasheets/expansionboards/pysense2/)| [![](/gitbook/assets/expansionboards/pytrack1.png)](/datasheets/expansionboards/pytrack/)| [![](/gitbook/assets/expansionboards/pytrack2.png)](/datasheets/expansionboards/pytrack2/)| [![](/gitbook/assets/expansionboards/pyscan.png)](/datasheets/expansionboards/pyscan/) |
 
 ## Step 5: Connecting to a network
 
 |[WiFi](/tutorials/networks/wlan/) | [LoRa](/tutorials/networks/lora/) | [SigFox](/tutorials/networks/sigfox/) | [BLE](/tutorials/networks/ble/) | [LTE](/tutorials.networks/lte/) | Ethernet |
 |:---|:---|:---|:---|:---|:---|
+
 ## Further references
+
 Now that we got the basic example running, you can continue with the links below.
 
+* [Connect using Pybytes](/pybytes/gettingstarted/)
 
 * [Tutorials and examples](/tutorials/)
 
 * [Firmware API](/firmwareapi/)
 
 * [FTP and Telnet](/gettingstarted/programming/ftp/)
-
-* [Connect using Pybytes](/pybytes/getstarted/)
 
 * [Registering with a network](/gettingstarted/registration/)
 

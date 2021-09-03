@@ -137,6 +137,13 @@ theme = "doc-theme"
     parent = "gettingstarted@registration@lora"
     weight = 30
 
+[[menu.main]]
+    name= "Helium"
+    url = "/gettingstarted/registration/lora/helium/"
+    identifier = "gettingstarted@registration@lora@helium"
+    parent = "gettingstarted@registration@lora"
+    weight = 40
+
 # *** Tutorials & Examples
 [[menu.main]]
     name = "Tutorials & Examples"
@@ -253,6 +260,12 @@ theme = "doc-theme"
     identifier = "tutorials@networks@ble"
     parent = "tutorials@networks"
     weight = 15
+[[menu.main]]
+    name = "Callback"
+    url= "/tutorials/networks/ble/callback/"
+    identifier = "tutorials@networks@ble@callback"
+    parent = "tutorials@networks@ble"
+    weight=10
 [[menu.main]]
     name = "SigFox"
     url = "/tutorials/networks/sigfox/"
@@ -425,55 +438,49 @@ theme = "doc-theme"
     url = "/tutorials/expansionboards/pygate/"
     identifier = "tutorials@expansionboards@pygate"
     parent = "tutorials@expansionboards"
+    weight = 5   
+[[menu.main]]
+    name = "Tracking"
+    url = "/tutorials/expansionboards/tracking/"
+    identifier = "tutorials@expansionboards@tracking"
+    parent = "tutorials@expansionboards"
     weight = 10
 [[menu.main]]
-    name = "pysense"
-    url = "/tutorials/expansionboards/pysense/"
-    identifier = "tutorials@expansionboards@pysense"
+    name = "Sensing"
+    url = "/tutorials/expansionboards/sensing/"
+    identifier = "tutorials@expansionboards@sensing"
     parent = "tutorials@expansionboards"
     weight = 20
 [[menu.main]]
-    name = "pysense 2.0 X"
-    url = "/tutorials/expansionboards/pysense2/"
-    identifier = "tutorials@expansionboards@pysense2"
+    name = "Scanning"
+    url = "/tutorials/expansionboards/scanning/"
+    identifier = "tutorials@expansionboards@scanning"
     parent = "tutorials@expansionboards"
     weight = 30
 [[menu.main]]
-    name = "pytrack"
-    url = "/tutorials/expansionboards/pytrack/"
-    identifier = "tutorials@expansionboards@pytrack"
+    name = "Pysleep"
+    url = "/tutorials/expansionboards/sleep/"
+    identifier = "tutorials@expansionboards@sleep"
     parent = "tutorials@expansionboards"
     weight = 40
-[[menu.main]]
-    name = "pytrack 2.0 X"
-    url = "/tutorials/expansionboards/pytrack2/"
-    identifier = "tutorials@expansionboards@pytrack2"
-    parent = "tutorials@expansionboards"
-    weight = 50
-[[menu.main]]
-    name = "pyscan"
-    url = "/tutorials/expansionboards/pyscan/"
-    identifier = "tutorials@expansionboards@pyscan"
-    parent = "tutorials@expansionboards"
-    weight = 60
 [[menu.main]]
     name = "Battery Voltage"
     url = "/tutorials/expansionboards/vbat/"
     identifier = "tutorials@expansionboards@vbat"
     parent = "tutorials@expansionboards"
-    weight = 70
-[[menu.main]]
-    name = "Sleep"
-    url = "/tutorials/expansionboards/sleep/"
-    identifier = "tutorials@expansionboards@sleep"
-    parent = "tutorials@basic"
-    weight = 20
-[[menu.main]]
+    weight = 50
+[[menu.main]
     name = "Advanced"
     url = "/tutorials/advanced/"
     identifier = "tutorials@advanced"
     parent = "tutorials"
     weight = 60
+[[menu.main]]
+    name= "File decompression"
+    url= "/tutorials/advanced/uzlib/"
+    identifier = "tutorials@advanced@uzlib"
+    parent = "tutorials@advanced"
+    weight=10
 
 # *** Firmware & API Reference
 [[menu.main]]
@@ -933,6 +940,12 @@ theme = "doc-theme"
     identifier = "firmwareapi@micropython@ustruct"
     parent = "firmwareapi@micropython"
     weight = 180
+[[menu.main]]
+    name = "uzlib"
+    url = "/firmwareapi/micropython/uzlib/"
+    identifier = "firmwareapi@micropython@uzlib"
+    parent = "firmwareapi@micropython"
+    weight = 190
 
 [[menu.main]]
     name = "_thread"
@@ -1024,51 +1037,62 @@ theme = "doc-theme"
     identifier = "datasheets@oem"
     parent = "datasheets"
     weight = 20
-
+[[menu.main]]
+    name = "F01 H7"
+    url = "/datasheets/oem/f01h7/"
+    identifier = "datasheets@oem@f01h7"
+    parent = "datasheets@oem"
+    weight = 10
+[[menu.main]]
+    name = "F01 S3"
+    url = "/datasheets/oem/f01s3/"
+    identifier = "datasheets@oem@f01s3"
+    parent = "datasheets@oem"
+    weight = 20
 [[menu.main]]
     name = "W01"
     url = "/datasheets/oem/w01/"
     identifier = "datasheets@oem@w01"
     parent = "datasheets@oem"
-    weight = 10
+    weight = 30
 
 [[menu.main]]
     name = "L01"
     url = "/datasheets/oem/l01/"
     identifier = "datasheets@oem@l01"
     parent = "datasheets@oem"
-    weight = 20
+    weight = 40
 
 [[menu.main]]
     name = "L01 OEM Baseboard"
     url = "/datasheets/oem/l01_reference/"
     identifier = "datasheets@oem@l01_reference"
     parent = "datasheets@oem"
-    weight = 25
+    weight = 50
 
 [[menu.main]]
     name = "L04"
     url = "/datasheets/oem/l04/"
     identifier = "datasheets@oem@l04"
     parent = "datasheets@oem"
-    weight = 30
+    weight = 60
 
 [[menu.main]]
     name = "G01"
     url = "/datasheets/oem/g01/"
     identifier = "datasheets@oem@g01"
     parent = "datasheets@oem"
-    weight = 40
+    weight = 70
 
 [[menu.main]]
     name = "Universal OEM Baseboard"
     url = "/datasheets/oem/universal_reference/"
     identifier = "datasheets@oem@universal_reference"
     parent = "datasheets@oem"
-    weight = 60
+    weight = 80
 
 [[menu.main]]
-    name = "Expansion Boards and Shields"
+    name = "Shields"
     url = "/datasheets/expansionboards/"
     identifier = "datasheets@boards"
     parent = "datasheets"
