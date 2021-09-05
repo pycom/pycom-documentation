@@ -164,6 +164,24 @@ theme = "doc-theme"
     parent = "tutorials@basic"
     weight = 10
 [[menu.main]]
+    name = "PyNode+"
+    url = "/tutorials/pynode/"
+    identifier = "tutorials@pynode"
+    parent = "tutorials"
+    weight = 12
+[[menu.main]]
+    name = "PyNode+ Air"
+    url = "/tutorials/pynode/pynodeair/"
+    identifier = "tutorials@pynode@pynodeair"
+    parent = "tutorials@pynode"
+    weight = 12
+[[menu.main]]
+    name = "PyNode+ AirQ"
+    url = "/tutorials/pynode/pynodeairq/"
+    identifier = "tutorials@pynode@pynodeairq"
+    parent = "tutorials@pynode"
+    weight = 12
+[[menu.main]]
     name = "Sleep"
     url = "/tutorials/basic/sleep/"
     identifier = "tutorials@basic@sleep"
@@ -438,7 +456,7 @@ theme = "doc-theme"
     url = "/tutorials/expansionboards/pygate/"
     identifier = "tutorials@expansionboards@pygate"
     parent = "tutorials@expansionboards"
-    weight = 5   
+    weight = 5
 [[menu.main]]
     name = "Tracking"
     url = "/tutorials/expansionboards/tracking/"
@@ -690,7 +708,7 @@ theme = "doc-theme"
     identifier = "firmwareapi@pycom@network@bluetooth@BLE_Mesh"
     parent = "firmwareapi@pycom@network@bluetooth"
     weight = 70
-    
+
 
 #  [Errno 2] No such file or directory: './content/firmwareapi/pycom/network/lora/README.md'
 [[menu.main]]
