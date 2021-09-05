@@ -3,10 +3,9 @@ title: 'Networks'
 
 ---
 
-The Pycom devices support several different types of networks.
-We have the WiFi and Bluetooth connections:
+The following PyNode+ BLE enabled sensors are now available:
 
 * [PyNode Air](../pynode/pynodeair/)
 * [PyNode AirQ](../pynode/pynodeairq/)
 
-> If you are looking for examples on how to connect to different services, check [here](../networkprotocols/)
+> Please see the tutorials above to query the PuNode+ sensor from MicroPython or adjust the sleep time.
