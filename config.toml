@@ -164,24 +164,6 @@ theme = "doc-theme"
     parent = "tutorials@basic"
     weight = 10
 [[menu.main]]
-    name = "PyNode+"
-    url = "/tutorials/pynode/"
-    identifier = "tutorials@pynode"
-    parent = "tutorials"
-    weight = 12
-[[menu.main]]
-    name = "PyNode+ Air"
-    url = "/tutorials/pynode/pynodeair/"
-    identifier = "tutorials@pynode@pynodeair"
-    parent = "tutorials@pynode"
-    weight = 12
-[[menu.main]]
-    name = "PyNode+ AirQ"
-    url = "/tutorials/pynode/pynodeairq/"
-    identifier = "tutorials@pynode@pynodeairq"
-    parent = "tutorials@pynode"
-    weight = 12
-[[menu.main]]
     name = "Sleep"
     url = "/tutorials/basic/sleep/"
     identifier = "tutorials@basic@sleep"
@@ -482,17 +464,29 @@ theme = "doc-theme"
     parent = "tutorials@expansionboards"
     weight = 40
 [[menu.main]]
-    name = "Sleep"
-    url = "/tutorials/expansionboards/sleep/"
-    identifier = "tutorials@expansionboards@sleep"
-    parent = "tutorials@expansionboards"
+    name = "PyNode+"
+    url = "/tutorials/pynode/"
+    identifier = "tutorials@pynode"
+    parent = "tutorials"
+    weight = 60
+[[menu.main]]
+    name = "PyNode+ Air"
+    url = "/tutorials/pynode/pynodeair/"
+    identifier = "tutorials@pynode@pynodeair"
+    parent = "tutorials@pynode"
+    weight = 10
+[[menu.main]]
+    name = "PyNode+ AirQ"
+    url = "/tutorials/pynode/pynodeairq/"
+    identifier = "tutorials@pynode@pynodeairq"
+    parent = "tutorials@pynode"
     weight = 20
 [[menu.main]]
     name = "Advanced"
     url = "/tutorials/advanced/"
     identifier = "tutorials@advanced"
     parent = "tutorials"
-    weight = 60
+    weight = 70
 [[menu.main]]
     name= "File decompression"
     url= "/tutorials/advanced/uzlib/"
@@ -1193,17 +1187,41 @@ theme = "doc-theme"
     parent = "datasheets@boards"
     weight = 90
 [[menu.main]]
+    name = "Pynode+"
+    url = "/datasheets/pynode/"
+    identifier = "datasheets@pynode"
+    parent = "datasheets"
+    weight = 40
+[[menu.main]]
+    name = "Pynode+ Air"
+    url = "/datasheets/pynode/pynodeair/"
+    identifier = "datasheets@pynode@pynodeair"
+    parent = "datasheets@pynode"
+    weight = 10
+[[menu.main]]
+    name = "Pynode+ Air"
+    url = "/datasheets/pynode/pynodeairq/"
+    identifier = "datasheets@pynode@pynodeairq"
+    parent = "datasheets@pynode"
+    weight = 20
+[[menu.main]]
     name = "Accessories"
     url = "/datasheets/accessories/"
     identifier = "datasheets@accessories"
     parent = "datasheets"
-    weight = 40
+    weight = 50
 [[menu.main]]
     name = "IP67 Case"
     url = "/datasheets/accessories/ip67case/"
     identifier = "datasheets@accessories@ip67case"
     parent = "datasheets@accessories"
     weight = 10
+[[menu.main]]
+    name= "Pynode Case"
+    url = "datasheets/accessories/pynodecase/"
+    identifier = "datasheets@accessories@pynodecase"
+    parent = "datasheets@accessories"
+    weight = 20
 
 [[menu.main]]
     name = "Notes"
