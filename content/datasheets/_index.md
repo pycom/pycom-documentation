@@ -45,6 +45,11 @@ The follow pages contain all information relating to each product, for example: 
 - [Expansion 3](/datasheets/expansionboards/expansion3/)
 - [Deepsleep](/datasheets/expansionboards/deepsleep/)
 
+## Pynode+ Sensors
+- **NEW** [Pynode+ Air](/datasheets/sensors/pynodeair/)
+- **NEW** [Pynode+ Air Quality](/datasheets/sensors/pynodeairq)
+
+
 ## Footprints and 3D models
 
 You can find the footprints of all relevant devices in this [GitHub](https://github.com/pycom/footprints) repository.
