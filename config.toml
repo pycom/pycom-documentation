@@ -482,11 +482,11 @@ theme = "doc-theme"
     parent = "tutorials@expansionboards"
     weight = 40
 [[menu.main]]
-    name = "Sleep"
-    url = "/tutorials/expansionboards/sleep/"
-    identifier = "tutorials@expansionboards@sleep"
+    name = "Battery Voltage"
+    url = "/tutorials/expansionboards/vbat/"
+    identifier = "tutorials@expansionboards@vbat"
     parent = "tutorials@expansionboards"
-    weight = 20
+    weight = 50
 [[menu.main]]
     name = "Advanced"
     url = "/tutorials/advanced/"
