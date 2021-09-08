@@ -20,7 +20,7 @@ import binascii
 print(binascii.hexlify(LoRa().mac()).upper())
 ```
 
-> **Note for US915 / AU915 regions:** if you are planning to send packets to a Pygate (or any other 8-channel gateway) with the supplied configuration file, you will need to define the correct uplink channels. These regions support up to 64 uplink channels, meaning the node can transmit on a channel that is not received. Uncomment the respective sections in the example below to select the correct uplink channels.
+**Note for US915 / AU915 regions:** most LoRaWAN gateways are configured to listen to 8 channels only, while the region supports up to 64 uplink channels. In order to receive packets, please confirm the frequency plan of your gateway with the channels configured on your device. By default, our devices will transmit on all 64 channels, meaning you might receive packets intermittently. The most common configuration is `FSB2`, or channels 8-15. Uncomment the respective section in the example below to select the these uplink channels. It is possible to switch to a different sub-band by selecting a different channel set. For more information, have a look [here](https://www.thethingsindustries.com/docs/reference/frequency-plans/)
 
 
 ```python

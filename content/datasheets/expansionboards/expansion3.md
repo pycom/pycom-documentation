@@ -25,11 +25,13 @@ The pinout of the Expansion Board is available as a [PDF File](/gitbook/assets/e
 The expansion board contains 7 jumpers labeled:
 - TX: TX UART (GPIO1) communication of the development board to the Expansionboard
 - RTS: Can be used for UART flow control. Connected to GPIO7. 
-- RX: RX UART (GPIO2() communication of the development board to the Expansionboard
+- RX: RX UART (GPIO2) communication of the development board to the Expansionboard
 - CTS: Can be used for UART flow control. Connected to GPIO6.
 - BAT: Connect the resistor divider on the Expansionboard to the Voltage monitoring ADC Pin (GPIO3)
 - LED: Connect the LED on the Expansionboard to GPIO16
 - CHG: Removing the jumper will decrease battery charging current from 450mA to 100mA
+
+> Note: The internal voltage divider is 1M / 1M, instead of the mentioned values in the pinout. Take care of this when reading the battery voltage.
 
 ![](/gitbook/assets/expansion3-pinout-1.png)
 
