@@ -13,13 +13,15 @@ See the Pynode examples [here](/tutorials/pynode/)
 
 The datasheet of the Pynode+ Air is available as a [PDF File](/assets/gitbook/specsheets/datasheet_pynode_airQ.pdf)
 
-### Certifications
-The Pynode+ Air is certified for:
-* [ROHS certification]()
-
 ### Dimensions
 
 ![](/gitbook/assets/pynodeair.png)
+
+## Pinout
+
+The Pynode+ Air Quality functionality is only accessible over Bluetooth. 
+
+> Be gentle when plugging and unplugging from the USB connector. Whilst the USB connector is soldered and is relatively strong, if it breaks off it can be very difficult to fix.
 
 ## Accessories
 
