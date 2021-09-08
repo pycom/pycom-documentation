@@ -11,7 +11,7 @@ See the Pynode examples [here](/tutorials/pynode/)
 
 ## Datasheet
 
-The datasheet of the Pynode+ Air is available as a [PDF File]()
+The datasheet of the Pynode+ Air is available as a [PDF File](/assets/gitbook/specsheets/datasheet_pynode_airQ.pdf)
 
 ### Certifications
 The Pynode+ Air is certified for:
