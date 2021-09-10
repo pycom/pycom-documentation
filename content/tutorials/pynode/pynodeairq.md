@@ -1,5 +1,5 @@
 ---
-title: "PyNode+ AirQ Examples"
+title: "PyNode+ Air Quality Examples"
 aliases:
     - tutorials/pynode/PyNodeAirQ.html
     - tutorials/pynode/pynodeairq.md
