@@ -1207,7 +1207,7 @@ theme = "doc-theme"
     parent = "datasheets@pynode"
     weight = 10
 [[menu.main]]
-    name = "Pynode+ Air"
+    name = "Pynode+ Air Quality"
     url = "/datasheets/pynode/pynodeairq/"
     identifier = "datasheets@pynode@pynodeairq"
     parent = "datasheets@pynode"
@@ -1226,7 +1226,7 @@ theme = "doc-theme"
     weight = 10
 [[menu.main]]
     name= "Pynode Case"
-    url = "datasheets/accessories/pynodecase/"
+    url = "/datasheets/accessories/pynodecase/"
     identifier = "datasheets@accessories@pynodecase"
     parent = "datasheets@accessories"
     weight = 20
