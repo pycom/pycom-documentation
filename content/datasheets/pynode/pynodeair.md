@@ -1,5 +1,5 @@
 ---
-title: "Pynode+ Air"
+title: "PyNode+ Air"
 ---
 **Store**: [Buy Here](https://pycom.io/product/pynode-air/)
 
@@ -7,7 +7,7 @@ title: "Pynode+ Air"
 
 ## Getting started
 
-See the PyNode examples [here](/tutorials/pynode/)
+See the PyNode+ examples [here](/tutorials/pynode/)
 
 ## Datasheet
 

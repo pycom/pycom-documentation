@@ -2,7 +2,7 @@
 title: "Sensors"
 ---
 
-This section contains all of the datasheets for the Pynode sensors
+This section contains all of the datasheets for the PyNode+ sensors
 
-- [Pynode+ Air](pynodeair/)
-- [Pynode+ Air Quality](pynodeairq/)
+- [PyNode+ Air](pynodeair/)
+- [PyNode+ Air Quality](pynodeairq/)

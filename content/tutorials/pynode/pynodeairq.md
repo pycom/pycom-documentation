@@ -6,7 +6,7 @@ aliases:
     - chapter/tutorials/pynode/PyNodeAirQ
 ---
 
-You can use the following code to query the PyNode+ AirQ sensor from MicroPython
+You can use the following code to query the PyNode+ Air Quality sensor from MicroPython
 
 ```python
 from network import Bluetooth

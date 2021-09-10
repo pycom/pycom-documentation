@@ -1,5 +1,5 @@
 ---
-title: "Pynode+ Air Quality"
+title: "PyNode+ Air Quality"
 ---
 **Store**: [Buy Here](https://pycom.io/product/pynode-airq/)
 
@@ -7,7 +7,7 @@ title: "Pynode+ Air Quality"
 
 ## Getting started
 
-See the PyNode examples [here](/tutorials/pynode/)
+See the PyNode+ examples [here](/tutorials/pynode/)
 
 ## Datasheet
 
