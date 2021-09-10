@@ -1,12 +1,12 @@
 ---
-title: "PyNode+ AirQ Examples"
+title: "PyNode+ Air Quality Examples"
 aliases:
     - tutorials/pynode/PyNodeAirQ.html
     - tutorials/pynode/pynodeairq.md
     - chapter/tutorials/pynode/PyNodeAirQ
 ---
 
-You can use the following code to query the PyNode+ AirQ sensor from MicroPython
+You can use the following code to query the PyNode+ Air Quality sensor from MicroPython
 
 ```python
 from network import Bluetooth
