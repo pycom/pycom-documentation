@@ -740,6 +740,13 @@ theme = "doc-theme"
     weight = 60
 
 [[menu.main]]
+    name = "AT Tips & Tricks"
+    url = "/firmwareapi/pycom/network/lte/at/"
+    identifier = "firmwareapi@pycom@network@lte@at"
+    parent = "firmwareapi@pycom@network@lte"
+    weight = 10
+
+[[menu.main]]
     name = "MDNS"
     url = "/firmwareapi/pycom/network/mdns/"
     identifier = "firmwareapi@pycom@network@mdns"
