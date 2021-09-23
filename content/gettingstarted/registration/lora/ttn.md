@@ -70,11 +70,11 @@ Inside the TTS Console, there are two options, `Applications` and `Gateways`. Se
 Here, it is important we add the `Gateway ID` and `Gateway EUI`. The first can be an identifying string of characters unique to the gateway. The latter is what we'll use in the gateway configuration on the device, and exists of 16 hexadecimal characters. You can use the following to generate the `Gateway EUI`:
 
 ```python
- from network import WLAN
- import binascii
- wl = WLAN()
- binascii.hexlify(wl.mac())[:6] + 'FFFE' + binascii.hexlify(wl.mac())[6:]
- ```
+from network import WLAN
+import binascii
+wl = WLAN()
+binascii.hexlify(wl.mac().sta_mac)[:6] + 'fffe' + binascii.hexlify(wl.mac().sta_mac)[6:]
+```
 
 These are unique to each gateway, location and country specific frequency. Please verify that correct settings are selected otherwise the gateway will not connect to TTN. Further down the page, you will have to select a frequency plan. Select the one appropriate for your region and/or the one compatible with your nodes. After that, you can create the gateway.
 
