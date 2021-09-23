@@ -12,10 +12,10 @@ The Things Stack (TTS) is a LoRaWAN service that allows you to send and receive 
 
 * [Create an account](#create-an-account)
 * [Register a node](#register-a-node)
-* [Registera Gateway](#register-a-gateway)
+* [Register a gateway](#register-a-gateway)
 
 ## Create an account
-In order to use TTS you should navigate to [https://console.cloud.thethings.network](https://console.cloud.thethings.network) and select your region. Following that, either login using your account, or create a new one. Already Existing accounts on The Things Network (TTN) should work here as well.
+In order to use TTS you should navigate to [https://console.cloud.thethings.network](https://console.cloud.thethings.network) and select your region. Following that, either login using your account, or create a new one. Already existing accounts on The Things Network (TTN) should work here as well.
 
 ![](/gitbook/assets/lorawan/tts/index.png)
 
@@ -23,7 +23,7 @@ In order to use TTS you should navigate to [https://console.cloud.thethings.netw
 
 Once an account has been registered, you can [create an application](#register-a-node) for your nodes, or [register a gateway](#register-a-gateway).
 
-## Registera node
+## Register a node
 
 In order to register your device, you must first create an application for these devices to belong to. This way the Network will know where to send the devices data to.
 
@@ -33,13 +33,16 @@ Selecting the `Applications` tab at the top of the TTN console, will bring up a 
 
 Enter a unique `Application ID` as well as a Description & Handler Registration.
 
-Now the Pycom module nodes can be registered to send data up to the new Application.
-
-You'll need to register your devices as nodes to the application. Click the button `+ Add device`. Next, you'll need to enter the specifics. You can choose either `OTAA` or `ABP` as activation methods. Learn more about the difference [here](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/). In this application we'll choose `OTAA`. Select `LoRaMAC V1.0.2` and check whether the region servers are set correctly. 
+Now the Pycom module nodes can be registered to send data up to the new Application. Click the button `+ Add end device`. Next, you'll need to enter the specifics. Click on `Manually` and `Show advanced activation`. You can choose either `OTAA` or `ABP` as activation methods. Learn more about the difference [here](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/). In this example we'll use `OTAA`. Select `LoRaMAC V1.0.2` and check whether the region servers are set correctly. 
 
 ![](/gitbook/assets/lorawan/tts/device.png)
 
-In the `Register Device` panel, complete the forms for the `End Device ID`, `APP EUI` and the `Device EUI`. The `End Device ID` is a unique name for the device we're about to register, you can choose something that makes sense for your project. The `APP EUI` is user specified and is unique to the device in this application, we can set that to all 0's in this example. The `Device EUI` should be a globally unique identifier for the device. You can run the following on you Pycom module to retrieve its EUI.
+Scroll down and fill in the fields for `DevEUI`, `AppEUI` and `End device ID`. 
+
+* The `DevEUI` should be a globally unique identifier for the device. You can run the code below on you Pycom module to retrieve its EUI.
+* The `AppEUI` is user specified and is unique to the device in this application, we can `Fill with zeros` in this example. 
+* The `AppKey` is provided by TTN. Click `Generate`.
+* The `End device ID` is a unique name for the device we're about to register, you can choose something that makes sense for your project.
 
 ```python
 from network import LoRa
@@ -51,8 +54,6 @@ print("DevEUI: %s" % (ubinascii.hexlify(lora.mac()).decode('ascii')))
 ![](/gitbook/assets/lorawan/tts/credentials.png)
 
 The next screen allows us to choose the Frequency plan and regional parameters. Please choose a frequency plan that is compatible with your region and nearby gateways. If you're not sure which one to choose, select the one closest to your region labelled 'used by TTN'. For the regional parameters, select `PHY-V1.0.2-RevA`.
-
-In the following section, generate a random `AppKey`. 
 
 Great! Now your device is registered with TTS. You can now use the credentials in the [LoRaWAN OTAA](/tutorials/networks/lora/lorawan-otaa/) example.
 
