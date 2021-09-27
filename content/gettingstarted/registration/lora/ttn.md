@@ -33,7 +33,10 @@ Selecting the `Applications` tab at the top of the TTN console, will bring up a 
 
 Enter a unique `Application ID` as well as a Description & Handler Registration.
 
-Now the Pycom module nodes can be registered to send data up to the new Application. Click the button `+ Add end device`. Next, you'll need to enter the specifics. Click on `Manually` and `Show advanced activation`. You can choose either `OTAA` or `ABP` as activation methods. Learn more about the difference [here](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/). In this example we'll use `OTAA`. Select `LoRaMAC V1.0.2` and check whether the region servers are set correctly. 
+Now the Pycom module nodes can be registered to send data up to the new Application. Click `+ Add end device`, then on `Manually`. Select `LoRaWAN version`: `MAC V1.0.2`. For the regional parameters, select `PHY-V1.0.2-RevA`. For Frequency plan please choose one that is compatible with your region and nearby gateways. If you're not sure which one to choose, select the one closest to your region labelled 'used by TTN'. 
+
+
+Choose either `OTAA` or `ABP` as activation methods. Learn more about the difference [here](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/). In this example we'll use `OTAA`.  
 
 ![](/gitbook/assets/lorawan/tts/device.png)
 
@@ -53,8 +56,7 @@ print("DevEUI: %s" % (ubinascii.hexlify(lora.mac()).decode('ascii')))
 ```
 ![](/gitbook/assets/lorawan/tts/credentials.png)
 
-The next screen allows us to choose the Frequency plan and regional parameters. Please choose a frequency plan that is compatible with your region and nearby gateways. If you're not sure which one to choose, select the one closest to your region labelled 'used by TTN'. For the regional parameters, select `PHY-V1.0.2-RevA`.
-
+Finally click on `Register end device`. 
 Great! Now your device is registered with TTS. You can now use the credentials in the [LoRaWAN OTAA](/tutorials/networks/lora/lorawan-otaa/) example.
 
 ## Register a Gateway
