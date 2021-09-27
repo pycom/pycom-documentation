@@ -25,7 +25,7 @@
 
 
 ### Security
-Each **Token** is unique and can never be ask again. So be sure to copy and save it.
+Each **Token** is unique and can never be asked for again. So be sure to copy and save it.
 
 ![](/gitbook/assets/open-api/token/token-security.png)
 
