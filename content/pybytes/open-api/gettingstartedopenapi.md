@@ -12,11 +12,11 @@
 
 
 
-3. During the creation of the Token, choose the **Capabilities** that you want to give to this token and generate it.
+3. During the creation of the Token, choose the **Scopes** that you want to give to this token and generate it.
 
     ### Capabilities
     You will have the choice between different accessibility level.
-    You have the **Read** and **Write** Capability that you can give for the **User**, **Devices**, **Network Settings**, **Projects** and 
+    You have the **Read** and **Write** Scope that you can give for the **User**, **Devices**, **Network Settings**, **Projects** and 
     **Releases**.
     This will determine what you can and can't do when you are logged in with this token.
 

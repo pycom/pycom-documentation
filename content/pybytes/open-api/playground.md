@@ -8,7 +8,7 @@ This interface is a place where you can test the API without setting the environ
 
 ### How to Access it
 
-Once you have run your stack, you can access it through **https://open-api.pybytes.pycom.io/graphql**
+You can access it through **https://open-api.pybytes.pycom.io/graphql**
 
 ### Authentification 
 
