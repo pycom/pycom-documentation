@@ -1681,3 +1681,24 @@ theme = "doc-theme"
     url="/license/"
     identifier="license"
     weight = 500
+
+[[menu.main]]
+    name = "Open API"
+    url = "/pybytes/open-api/"
+    identifier = "pybytes@open-api"
+    parent = "pybytes"
+    weight = 50
+
+[[menu.main]]
+    name = "Starting with Open-API"
+    url = "/pybytes/open-api/gettingstartedopenapi/"
+    identifier = "pybytes@open-api@gettingstartedopenapi"
+    parent = "pybytes@open-api"
+    weight = 10
+
+[[menu.main]]
+    name = "Playground"
+    url = "/pybytes/open-api/playground/"
+    identifier = "pybytes@open-api@playground"
+    parent = "pybytes@open-api"
+    weight = 20
