@@ -24,7 +24,9 @@ To connect your Pygate to a LoRa server, please follow these steps:
 1. Now it is operational. The communication from other LoRa nodes such as a LoPy4 will now reach the gateway and will receive up and downlink messages via the PyGate.
 1. To stop the Pygate at any time press Ctrl-C on the REPL and run `machine.pygate_deinit()`. It will take a few seconds to stop the gateway tasks and safely power-off the concentrator.
 
-> Do not attach the antenna to the Lopy4 module. Also, make sure you disabled the Pybytes LoRa connection.
+> There is no need to attach a LoRa antenna to the Lopy4 module directly. The antenna should be connected to the Pygate. 
+
+> If you are using Pybytes, make sure you disabled the LoRa connection for this gateway device.
 
 > Running the LoRa gateway on a GPy can get you close to the memory limit of the device. To avoid running out of memory one should not *run* the WiFi task and the LTE task at the same time. This shouldn't really restrict your use of the Pygate, since you wouldn't be *using* WiFi and LTE at the same time. The tasks *run* when you explicitly initialize them with ``wlan = WLAN()`` or ``lte = LTE()``, or when they get automatically started upon boot based on the settings ``pycom.wifi_on_boot(True)`` or ``pycom.lte_modem_en_on_boot(True)``. Bottom line, if you have trouble starting the LoRa packet forwarder, please double check these settings and make sure at least the network that you don't use is not automatically started.
 
