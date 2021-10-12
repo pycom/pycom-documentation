@@ -17,10 +17,10 @@ To connect your Pygate to a LoRa server, please follow these steps:
 1. Attach a WiPy 3, GPy or LoPy 4 to the Pygate. The RGB LED of the development board should be aligned with the USB port of the Pygate.
 1. Attach the LoRa Antenna to the Pygate.
 1. Flash the Pycom Device with with a firmware build where Pygate functionality is enabled. In the firmware update tool, please choose pygate as the firmware type.
-1. Follow the steps to [register the gateway with TTN](/gettingstarted/registration/lora/ttn/#register-a-gateway) in our getting started guide.
+1. Follow the steps to [register the gateway with TTN](/gettingstarted/registration/lora/ttn/#register-a-gateway) in our getting started guide and download the `global_config.json`.
 1. Create a `main.py` that creates an uplink (wifi, ethernet or LTE) and runs the LoRa packet forwarder (see example below).
-1. upload `config.json` and `main.py` and reset the board. This file is automatically executed every time the module resets.
-1. you will see how it creates the uplink connection and then start the LoRa GW. It will print out some debug information while it is running. After some initialization it will print "LoRa GW started" and the LED will turn green.
+1. Upload `global_config.json` and `main.py` and reset the board. This file is automatically executed every time the module resets.
+1. You will see how it creates the uplink connection and then start the LoRa GW. It will print out some debug information while it is running. After some initialization it will print "LoRa GW started" and the LED will turn green.
 1. Now it is operational. The communication from other LoRa nodes such as a LoPy4 will now reach the gateway and will receive up and downlink messages via the PyGate.
 1. To stop the Pygate at any time press Ctrl-C on the REPL and run `machine.pygate_deinit()`. It will take a few seconds to stop the gateway tasks and safely power-off the concentrator.
 
@@ -76,7 +76,7 @@ while not rtc.synced():
 print(" OK\n")
 
 # Read the GW config file from Filesystem
-with open('/flash/config.json','r') as fp:
+with open('/flash/global_config.json','r') as fp:
     buf = fp.read()
 
 # Start the Pygate
