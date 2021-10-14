@@ -32,7 +32,7 @@ Resets the Pygate and inserted development module (including the LTE modem, if p
 
 	`machine.PYGATE_STOP_EVT`
 
-	`machine.MP_QSTR_PYGATE_ERROR_EVT`
+	`machine.PYGATE_ERROR_EVT`
 
 - `handler`: The callback function to be called.  When not passed to function, any pre-registered callback will be disabled/removed.
 
