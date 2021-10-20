@@ -37,6 +37,8 @@ Else, go to [Pybytes](https://pybytes.pycom.io) and create an account
 
 After creation, you will land on the provisioning page. This is where we 'inform' the device about the Pybytes connection and how to set it up. The first time you set up the device for use with Pybytes, you will need to provision it using the Firmware Updater Tool. This is a good moment to become familiar with the tool [here](/updatefirmware/device/).
 
+### Offline provisioning
+
 1. Open the tool, select your board and select the bottom two checkboxes on this page
 
 ![](/gitbook/assets/pybytes/add-device/pybytes-provisioning.png)
@@ -46,6 +48,45 @@ After creation, you will land on the provisioning page. This is where we 'inform
 ![](/gitbook/assets/pybytes/add-device/pybytes-provisioning2.png)
 
 3. Continue with the firmware update to the device.
+
+### Online provisioning
+
+1. Download the app:
+    - Debian - [Installer](https://software.pycom.io/findupgrade?product=pycom-fwupdater-online&type=all&platform=unix&redirect=true). 
+      Unzip file and run create-service.sh with root privileges. 
+    - MacOS - [Installer](https://software.pycom.io/findupgrade?product=pycom-fwupdater-online&type=all&platform=macos&redirect=true)
+    - Windows - [Installer](https://software.pycom.io/findupgrade?product=pycom-fwupdater-online&type=all&platform=win32&redirect=true)
+    
+    To check if the app is running: 
+    - Debian - run ` sudo systemctl status fwupdater` in your terminal. You 
+      should see the message that service is active and running.
+    - MacOS - Either find `FwUpdater` process in System Monitor list, or run 
+      `ps aux | grep FwUpdater` this command should return list of 3 processes.
+    - Windows - find `Pycom Online Firmware Update` in Windows Task Manager 
+      at Services tab.
+
+   To restart the app:
+   - Debian - run ` sudo systemctl restart fwupdater` in your terminal.
+   - MacOS - Find `FwUpdater` process in System Monitor list and kill the 
+     process, service will restart automatically.
+   - Windows - find `Pycom Online Firmware Update` in Windows Task Manager
+     at Services tab, do the right click and choose 'Restart' option.
+
+2. Click on `Online Firmware updater` at Provisioning tab on the device page.
+
+   ![](/gitbook/assets/fwupdater-1.png)
+
+3. Click `Next`.
+
+   ![](/gitbook/assets/fwupdater-2.png)
+
+4. Select correct port to which your device is connected. Choose region and 
+   country. Select Firmware type and version.
+
+   ![](/gitbook/assets/fwupdater-3.png)
+
+5. Continue with the firmware update to the device.
+
 
 ## Step 4: Your first signal
 
