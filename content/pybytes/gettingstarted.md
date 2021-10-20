@@ -52,10 +52,10 @@ After creation, you will land on the provisioning page. This is where we 'inform
 ### Online provisioning
 
 1. Download the app:
-    - Debian - https://software.pycom.io/findupgrade?product=pycom-fwupdater-online&type=all&platform=unix&redirect=true. 
+    - Debian - [Installer](https://software.pycom.io/findupgrade?product=pycom-fwupdater-online&type=all&platform=unix&redirect=true). 
       Unzip file and run create-service.sh with root privileges. 
-    - MacOS - https://software.pycom.io/findupgrade?product=pycom-fwupdater-online&type=all&platform=macos&redirect=true
-    - Windows - https://software.pycom.io/findupgrade?product=pycom-fwupdater-online&type=all&platform=win32&redirect=true
+    - MacOS - [Installer](https://software.pycom.io/findupgrade?product=pycom-fwupdater-online&type=all&platform=macos&redirect=true)
+    - Windows - [Installer](https://software.pycom.io/findupgrade?product=pycom-fwupdater-online&type=all&platform=win32&redirect=true)
     
     To check if the app is running: 
     - Debian - run ` sudo systemctl status fwupdater` in your terminal. You 
@@ -65,6 +65,12 @@ After creation, you will land on the provisioning page. This is where we 'inform
     - Windows - find `Pycom Online Firmware Update` in Windows Task Manager 
       at Services tab.
 
+   To restart the app:
+   - Debian - run ` sudo systemctl restart fwupdater` in your terminal.
+   - MacOS - Find `FwUpdater` process in System Monitor list and kill the 
+     process, service will restart automatically.
+   - Windows - find `Pycom Online Firmware Update` in Windows Task Manager
+     at Services tab, do the right click and choose 'Restart' option.
 
 2. Click on `Online Firmware updater` at Provisioning tab on the device page.
 
