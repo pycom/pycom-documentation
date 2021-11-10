@@ -69,15 +69,11 @@ Use this example for a **Pysense 2** or **Pytrack 2** shield:
 
 import time
 import pycom
-import struct
 from machine import Pin
 from pycoproc import Pycoproc
 import machine
 
 from LIS2HH12 import LIS2HH12
-from SI7006A20 import SI7006A20
-from LTR329ALS01 import LTR329ALS01
-from MPL3115A2 import MPL3115A2,ALTITUDE,PRESSURE
 
 def accelerometer():
     print("ACCELEROMETER:", "accel:", accelerometer_sensor.acceleration(), "roll:", accelerometer_sensor.roll(), "pitch:", accelerometer_sensor.pitch(), "x/y/z:", accelerometer_sensor.x, accelerometer_sensor.y, accelerometer_sensor.z )
