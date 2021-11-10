@@ -88,9 +88,6 @@ def activity_int_handler(pin_o):
         print('[Inactivity]')
         pycom.rgbled(0x0A0A00) # yellow
 
-def activity_int_handler_none(pin_o):
-    pass
-
 ###############################################################
 sleep_time_s = 300 # 5 min
 pycom.heartbeat(False)
