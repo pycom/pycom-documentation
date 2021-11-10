@@ -6,7 +6,8 @@ title: 'Sleep'
 On these shields, an additional sleep method is available. Next to [`machine.deepsleep()`](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms). there is `py.go_to_sleep()`, which is able to completely cut the power to the development board, and using only the coprocessor to keep track of when to wake up again. This way, we can save more power, which is especially useful when operating on a battery. On this page, we will cover the following:
 * [Simple Pysleep](#simple-pysleep)
 * [Wake up from accelerometer](#wake-up-from-accelerometer)
-*
+
+
 ## Simple Pysleep
 ```python
 from pycoproc import Pycoproc
