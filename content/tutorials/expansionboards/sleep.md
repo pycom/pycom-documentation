@@ -38,6 +38,7 @@ import time
 # WAKE_REASON_TIMER = 4
 # WAKE_REASON_INT_PIN = 8
 
+py = Pysense()
 print("Wakeup reason: " + str(py.get_wake_reason()))
 print("Approximate sleep remaining: " + str(py.get_sleep_remaining()) + " sec")
 time.sleep(0.5)
