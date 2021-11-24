@@ -137,6 +137,31 @@ Send an info message to Pybytes containing the device type and firmware version.
 
 Sends the battery level to Pybytes. The argument `battery_level` can be any integer.
 
+You can define `battery_level` with a function depending on your shield. You can go to this [page](/tutorials/expansionboards/vbat) to find the relevant function.
+
+For example, using an Expansionboard 3.1, this function will be found on the link above
+```python
+from machine import ADC
+adc = ADC()
+bat_voltage = adc.channel(attn=ADC.ATTN_11DB, pin='P16')
+vbat = bat_voltage.voltage()
+# note that the expansionboard 3 has a voltage divider of 1M / 1M to account for
+# 1M / 1M, ratio = 1:2
+print('battery voltage:', vbat*2, 'mV')
+```
+If you implement this function into `pybytes.send_battery_level(battery_level)`, you will receive the battery level to pybytes.
+```python
+from machine import ADC
+def battery_level():
+    adc = ADC()
+    bat_voltage = adc.channel(attn=ADC.ATTN_11DB, pin='P16')
+    vbat = bat_voltage.voltage()
+    print('battery voltage:', vbat*2, 'mV')
+    return vbat*2
+pybytes.send_battery_level(battery_level())
+```
+
+
 ## Miscellaneous
 
 ### pybytes.deepsleep(ms, [pins=None, mode=None, enable_pull=None])
