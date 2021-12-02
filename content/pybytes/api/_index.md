@@ -139,13 +139,13 @@ Sends the battery level to Pybytes. The argument `battery_level` can be any inte
 
 You can define `battery_level` with a function depending on your shield. You can go to this [page](/tutorials/expansionboards/vbat) to find the relevant function.
 
-For example, using an Expansionboard 3.1, this function will be found on the link above
+For example, using an Expansion Board 3.1, this function will be found on the link above
 ```python
 from machine import ADC
 adc = ADC()
 bat_voltage = adc.channel(attn=ADC.ATTN_11DB, pin='P16')
 vbat = bat_voltage.voltage()
-# note that the expansionboard 3 has a voltage divider of 1M / 1M to account for
+# note that the Expansion Board 3 has a voltage divider of 1M / 1M to account for
 # 1M / 1M, ratio = 1:2
 print('battery voltage:', vbat*2, 'mV')
 ```
