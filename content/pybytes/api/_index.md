@@ -135,7 +135,7 @@ Send an info message to Pybytes containing the device type and firmware version.
 
 ### pybytes.send_battery_level(battery_level)
 
-Sends the battery level to Pybytes. The argument `battery_level` can be any integer.
+Sends the battery level to **[Pybytes](https://pybytes.pycom.io/)**. The argument `battery_level` can be any integer.
 
 You can define `battery_level` with a function depending on your shield. Check example code by visiting [Reading Battery Voltage page](/tutorials/expansionboards/vbat).
 
