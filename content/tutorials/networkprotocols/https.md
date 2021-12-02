@@ -23,7 +23,7 @@ while not wlan.isconnected():
 
 print("connected")
 print(wlan.ifconfig())
-s = socket.socket(usocket.AF_INET, usocket.SOCK_STREAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ss = ssl.wrap_socket(s) #adds TLS
 ss.connect(socket.getaddrinfo('pycom.io', 443)[0][-1])
 rec = ss.recv(4096)
