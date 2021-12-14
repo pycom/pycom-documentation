@@ -55,7 +55,7 @@ You can install the missing setup requirements with the following steps:
 
 2. Download Microsoft Visual C++ (https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) and install the community edition.
 
-![](/gitbook/assets/atom_bug_c++.png)
+![](/gitbook/assets/atom_bug_cpp.png)
 
 We are working on updating the serialport package to avoid this type of issue in the future.
 
