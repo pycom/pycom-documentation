@@ -44,4 +44,19 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 These settings can also be applied on a per project basis by clicking `Settings` then `Project Settings`. This will open a JSON file which you can edit to enter your desired settings.
 
+##  Troubleshooting Guide
+
+After the latest upgrade of Atom, the serialport package tries to rebuild based on the new electron version (used by Atom on version 1.57). 
+
+As a result, Pymakr may throw issues on environments that are missing some setup.
+You can install the missing setup requirements with the following steps:
+
+1. Install Python latest version (https://www.python.org/downloads/). If you already have python installed, check if it is added to the path.
+
+2. Download Microsoft Visual C++ (https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) and install the community edition.
+
+![](/gitbook/assets/atom_bug_cpp.png)
+
+We are working on updating the serialport package to avoid this type of issue in the future.
+
 >This process is easiest with either a Pycom Expansion Board or a Pytrack/Pysense as the addresses are automatically selected. For external products such as FTDI USB Serial Cables, the serial address may need to be copied manually. Additionally, the reset button on the device may also need to be pressed before a connection message appears.
