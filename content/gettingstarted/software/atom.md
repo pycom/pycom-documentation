@@ -51,7 +51,7 @@ After the latest upgrade of Atom, the serialport package tries to rebuild based 
 As a result, Pymakr may throw issues on environments that are missing some setup.
 You can install the missing setup requirements with the following steps:
 
-1. Install Python latest version (https://www.python.org/downloads/). If you already have python installed, check if it is added to the environment variable.
+1. Install Python latest version (https://www.python.org/downloads/). If you already have python installed, check if it is added to the path.
 
 2. Download Microsoft Visual C++ (https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) and install the community edition.
 
