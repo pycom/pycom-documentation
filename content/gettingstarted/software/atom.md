@@ -44,18 +44,16 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 These settings can also be applied on a per project basis by clicking `Settings` then `Project Settings`. This will open a JSON file which you can edit to enter your desired settings.
 
-##  Known errors
+##  Troubleshooting Guide
 
-After the latest upgrade of Atom, the serialport package (and because we are still using version 8.0.x) tries to rebuild based on the new electron version (used by Atom on version 1.57). 
+After the latest upgrade of Atom, the serialport package tries to rebuild based on the new electron version (used by Atom on version 1.57). 
 
 As a result, Pymakr may throw issues on environments that are missing some setup.
 You can install the missing setup requirements with the following steps:
 
-1. Install Python latest version (https://www.python.org/downloads/).
+1. Install Python latest version (https://www.python.org/downloads/). If you already have python installed, check if it is added to the environment variable.
 
-2. If you already have python installed, check if it is added to the environment variable.
-
-3. Download Microsoft Visual C++ (2017 or later) and install it. (https://stackoverflow.com/a/54136652)
+2. Download Microsoft Visual C++ (https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) and install the community edition.
 
 ![](/gitbook/assets/atom_bug_c++.png)
 
