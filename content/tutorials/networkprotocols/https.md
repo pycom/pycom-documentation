@@ -5,7 +5,7 @@ aliases:
     - tutorials/all/https.md
     - chapter/tutorials/all/https
 ---
-Using HTTPS adds Transport Layer Security (TLS) to your network traffic. The advantage is an encrypted connection between your device and the server. 
+Using HTTPS adds Transport Layer Security (TLS) to your network traffic. The advantage is an encrypted connection between your device and the server.
 
 ## Basic example
 ```python
@@ -23,10 +23,13 @@ while not wlan.isconnected():
 
 print("connected")
 print(wlan.ifconfig())
-s = socket.socket(usocket.AF_INET, usocket.SOCK_STREAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ss = ssl.wrap_socket(s) #adds TLS
-ss.connect(socket.getaddrinfo('pycom.io', 443)[0][-1])
-rec = ss.recv(4096)
+ss.connect(socket.getaddrinfo(host, 443)[0][-1])
+httpreq = 'GET / HTTP/1.1 \r\nHOST: '+ host + '\r\nConnection: close \r\n\r\n'
+ss.send(httpreq)
+time.sleep(1)
+rec = ss.recv(10000)
 print(rec)
 ```
 Basic connection using `ssl.wrap_socket()`.
