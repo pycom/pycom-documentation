@@ -24,7 +24,7 @@ while not wlan.isconnected():
 print("connected")
 print(wlan.ifconfig())
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-ss = ssl.wrap_socket(s,alpn_protocol='spdy/1,http/1.1') #adds TLS
+ss = ssl.wrap_socket(s) #adds TLS
 ss.connect(socket.getaddrinfo(host, 443)[0][-1])
 httpreq = 'GET / HTTP/1.1 \r\nHOST: '+ host + '\r\nConnection: close \r\n\r\n'
 ss.send(httpreq)
