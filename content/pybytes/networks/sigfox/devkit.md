@@ -6,9 +6,7 @@ aliases:
     - chapter/pybytes/connect/sigfox/sigfoxDevKit
 ---
 
-Every Sigfox Pycom device comes with free Sigfox connectivity - Sigfox DevKit contract. It provides one year of Sigfox connectivity. This is great for prototyping.
-
-But every device you want to add to Pybytes you need register on Sigfox backend. You need to repeat [Sigfox activation procedure](/gettingstarted/registration/sigfox).
+Every device you want to add to Pybytes you need register on Sigfox backend. You need to repeat [Sigfox activation procedure](/gettingstarted/registration/sigfox).
 
 After you add your Sigfox credentials to Pybytes you can see DevKit contract type is selected as default (on page Settings → Sigfox API).
 
