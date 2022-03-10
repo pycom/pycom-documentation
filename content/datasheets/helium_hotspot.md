@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/helium_hotspot
 ---
 
-**Store**: [Buy Here](https://pycom.io/product/pygate/)
+**Store**: [Buy Here](https://pycom.io/product/helium-hotspot-batch1/)
 
 This full Hotspot is compatible with Helium LongFi™ and Helium Blockchain technology.
 
