@@ -1,5 +1,8 @@
 ---
 Title: "Helium Hotspot"
+aliases:
+    - gettingstarted/registration/lora/helium_hotspot_registration.html
+    - gettingstarted/registration/lora/helium_hotspot_registration.md
 ---
 
 Helium’s network is referred to as The People's Network. It is powered by an entirely new incentive model - made possible by their Helium Blockchain. 
