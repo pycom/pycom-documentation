@@ -146,8 +146,8 @@ theme = "doc-theme"
 
 [[menu.main]]
     name= "Helium Hotspot"
-    url = "/gettingstarted/registration/lora/helium_hotspot/"
-    identifier = "gettingstarted@registration@lora@helium_hotspot"
+    url = "/gettingstarted/registration/lora/helium_hotspot_registration/"
+    identifier = "gettingstarted@registration@lora@helium_hotspot_registration"
     parent = "gettingstarted@registration@lora"
     weight = 40
 
