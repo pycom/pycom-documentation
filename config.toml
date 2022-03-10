@@ -144,6 +144,13 @@ theme = "doc-theme"
     parent = "gettingstarted@registration@lora"
     weight = 40
 
+[[menu.main]]
+    name= "Helium Hotspot"
+    url = "/gettingstarted/registration/lora/helium_hotspot/"
+    identifier = "gettingstarted@registration@lora@helium_hotspot"
+    parent = "gettingstarted@registration@lora"
+    weight = 40
+
 # *** Tutorials & Examples
 [[menu.main]]
     name = "Tutorials & Examples"
@@ -1239,7 +1246,7 @@ theme = "doc-theme"
     weight = 50
     
 [[menu.main]]
-    name= "Helium"
+    name= "Helium Hotspot Miner"
     url = "/datasheets/helium_hotspot"
     identifier = "datasheets@helium_hotspot"
     parent = "datasheets"
