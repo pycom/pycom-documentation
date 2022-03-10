@@ -1237,6 +1237,13 @@ theme = "doc-theme"
     identifier = "datasheets@notes"
     parent = "datasheets"
     weight = 50
+    
+[[menu.main]]
+    name = "Helium Hotspot Miner"
+    url = "/datasheets/helium_hotspot"
+    identifier = "datasheets@helium_hotspot"
+    parent = "datasheets"
+    weight = 50
 
 # firmware tool
 [[menu.main]]
