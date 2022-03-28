@@ -87,6 +87,31 @@ After creation, you will land on the provisioning page. This is where we 'inform
 
 5. Continue with the firmware update to the device.
 
+#### Installation from snap
+
+1. Open the terminal.
+2. `sudo snap install pycom-firmware-updater`.
+3. `sudo snap set system experimental.hotplug=true`. 
+4. `sudo systemctl restart snapd`
+5. `snap interface serial-port`.
+
+![](/gitbook/assets/fwupdater-snap-1.png)
+
+
+6. `sudo snap connect pycom-firmware-updater:serial-port snapd:expansion3`.
+
+   `snapd:expansion3` is the name of the hotplug slot from the command above.
+
+   If you have some other name paste it instead.
+7. `snap connect pycom-firmware-updater:raw-usb`.
+8. `snap connections pycom-firmware-updater`.
+
+![](/gitbook/assets/fwupdater-snap-2.png)
+
+In the 3d(Slot) column on the raw-usb and serial-port lines shouldn't be '-'.
+
+9. Run the app `pycom-firmware-updater`, or just click to the Firmware 
+   Updater desktop entry on the App menu.
 
 ## Step 4: Your first signal
 
