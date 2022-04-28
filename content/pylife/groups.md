@@ -1,0 +1,61 @@
+---
+title: "Groups"
+aliases:
+    - pylife/groups.html
+    - pylife/groups.md
+    - chapter/pylife/groups
+---
+
+## Pylife Groups Functionalities
+
+Groups are used for communication with your people and PyGo devices.
+
+You can create and invite members and add devices to your groups.
+
+### Group Creation
+
+To create a group the steps are:
+
+* Tap `Groups` on the bottom of the screen
+* Tap `Create Group` and you will be navigated to the group creation form
+* Provide a unique name for your group and tap `Add Group`
+
+<img src="/gitbook/assets/pylife/groups/add_group_android.jpg" alt="Create account form Android Screenshot"/>
+
+### Invite Members
+
+To invite new members to an empty group:
+
+* Tap on the group name
+* Tap `Invite to the Group`
+* Provide email and tap `Invite`
+
+To invite new members to the group:
+
+* Tap on the group name
+* Tap on the group preferences icon on the top right of the screen
+* Tap `Add People to Group`
+* Provide email and tap `Invite`
+
+Invited members need to check email and accept invite there by clicking on the link
+
+The confirmation window will open and they would need to tap `Accept`
+
+<img src="/gitbook/assets/pylife/groups/invitation_android.jpg" alt="Create account form Android Screenshot"/>
+
+### Add device
+
+To add device to an empty group:
+
+* Tap on the group name
+* Tap `Add new PyGo`
+* Select device and tap `Add PyGo to Group`
+
+To add device to group:
+
+* Tap on the group name
+* Tap on the group preferences icon on the top right of the screen
+* Tap `Add PyGo to Group`
+* Select device and tap `Add PyGo to Group`
+
+<img src="/gitbook/assets/pylife/gettingstarted/permissions_android.jpg" alt="Create account form Android Screenshot"/>
