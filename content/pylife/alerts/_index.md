@@ -1,9 +1,6 @@
 ---
 title: "Alerts"
 aliases:
-    - pylife/alerts.html
-    - pylife/alerts.md
-    - chapter/pylife/alerts
 ---
 
 Alerts can be used in multiple ways for manipulation of PyGo devices.

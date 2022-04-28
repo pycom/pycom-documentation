@@ -1,9 +1,6 @@
 ---
 title: "Getting Started with Pylife"
 aliases:
-    - pylife/getstarted.html
-    - pylife/getstarted.md
-    - chapter/pylife/getstarted/intro
 ---
 
 If you did not install the Pylife app already, please install it from Google Play or Play Market
