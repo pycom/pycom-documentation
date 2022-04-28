@@ -1,9 +1,6 @@
 ---
 title: "Groups"
 aliases:
-    - pylife/groups.html
-    - pylife/groups.md
-    - chapter/pylife/groups
 ---
 
 ## Pylife Groups Functionalities
