@@ -17,7 +17,7 @@ To create a group the steps are:
 * Tap `Create Group` and you will be navigated to the group creation form
 * Provide a unique name for your group and tap `Add Group`
 
-<img src="/gitbook/assets/pylife/groups/add_group_android.jpg" alt="Create account form Android Screenshot"/>
+![Create group](/gitbook/assets/pylife/groups/add_group_android.jpg)
 
 ### Invite Members
 
@@ -38,7 +38,7 @@ Invited members need to check email and accept invite there by clicking on the l
 
 The confirmation window will open and they would need to tap `Accept`
 
-<img src="/gitbook/assets/pylife/groups/invitation_android.jpg" alt="Create account form Android Screenshot"/>
+![Invitation android](/gitbook/assets/pylife/groups/invitation_android.jpg)
 
 ### Add device
 
@@ -55,4 +55,6 @@ To add device to group:
 * Tap `Add PyGo to Group`
 * Select device and tap `Add PyGo to Group`
 
-<img src="/gitbook/assets/pylife/gettingstarted/permissions_android.jpg" alt="Create account form Android Screenshot"/>
+Group details example
+
+![Group details](/gitbook/assets/pylife/groups/group_details.png)

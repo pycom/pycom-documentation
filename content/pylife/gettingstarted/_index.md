@@ -5,6 +5,10 @@ aliases:
 
 If you did not install the Pylife app already, please install it from Google Play or Play Market
 
+For app to work properly please allow pylife to update the necessary permissions.
+
+![Permissions Android Screenshot](/gitbook/assets/pylife/gettingstarted/permissions_android.jpg)
+
 ### Create a Pylife account
 
 To create a Pylife account:
@@ -18,12 +22,15 @@ To confirm your email, click or tap the link in the email you got when you creat
 
 `Note: Confirming your email or mobile number helps us know that we're sending your account info to the right place.`
 
-![Create account form Android Screenshot](/gitbook/assets/pylife/signup/signup.jpg)
-<img src="/gitbook/assets/pylife/gettingstarted/main_screen_android.jpg" alt="Create account form Android Screenshot"/>
+![Sign up form Android](/gitbook/assets/pylife/signup/signup_android.jpg)
 
 ### Login
 
-To login just enter the email and password used when the account was created
+To login just enter the email and password used when the account was created.
+
+You can access the app and should see the main screen.
+
+![Create account form Android Screenshot](/gitbook/assets/pylife/gettingstarted/main_screen_android.jpg)
 
 ### Reset Password
 
