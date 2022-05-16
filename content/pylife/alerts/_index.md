@@ -5,6 +5,8 @@ aliases:
 
 Alerts can be used in multiple ways for manipulation of PyGo devices.
 
+![Alerts templates](/gitbook/assets/pylife/alerts/alert_templates.png)
+
 There are currently 3 templates, more will be added later. The current ones are:
 
 #### Distance Template
@@ -34,6 +36,8 @@ To create alert you need to:
 * Choose the template you need
 * Change the name, set up required conditions, set up notification method
 * Tap `Save as new Alert`
+
+![Create alert](/gitbook/assets/pylife/alerts/create_alert.png)
 
 ### Edit alerts
 
