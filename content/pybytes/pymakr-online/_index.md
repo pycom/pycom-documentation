@@ -30,13 +30,7 @@ There are two ways in which you can use Pymakr online.
 
 ![](/gitbook/assets/pybytes/pymakr-online/opening-pymakr-device.png)
 
-2. Start a new project on the [Pymakr](https://pybytes.pycom.io/pymakr) tab in Pybytes. There are several different types you can choose from, including a link to your Github repository! Later, we can link the project to a release.
-
-![](/gitbook/assets/pybytes/pymakr-online/opening-pymakr-project.png)
-
-## Using Pymakr Online
-
-1. When you open Pymakr Online, you will see the following
+2. When you open Pymakr Online, you will see the following
 
 ![](/gitbook/assets/pybytes/pymakr-online/initial.png)
 
