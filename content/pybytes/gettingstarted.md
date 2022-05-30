@@ -27,9 +27,9 @@ Else, go to [Pybytes](https://pybytes.pycom.io) and create an account
 
 ![](/gitbook/assets/pybytes/add-device/network-step.png)
 
-4. Choose a unique name for your device and hit save!
+4. Choose a unique name for your device and hit `Next` !
 
-[](/gitbook/assets/pybytes/add-device/customize-step.png)
+![](/gitbook/assets/pybytes/add-device/customize-step.png)
 
 5. At the end, Pybytes will show that your device profile was successfully created.
 

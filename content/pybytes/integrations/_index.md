@@ -12,4 +12,4 @@ Pybytes offers a way to interact with external IoT platform or custom services, 
 * [Google Cloud IoT](google): a complete set of tools to connect, process, store, and analyse data, both at the edge and in the cloud
 * [Web Hooks](webhooks): this allows for user-defined HTTP callbacks to a defined remote destination. All elements of the requests (headers, query string parameters, etc) are customisable
 
-![](/gitbook/assets/pybytes/integrations/select-new-integration.png))
+![](/gitbook/assets/pybytes/integrations/select-new-integration.png)
