@@ -1,17 +1,21 @@
 ---
 title: "Getting Started with Pylife"
-aliases:
+aliases: pylife/gettingstarted.html
+aliases: pylife/gettingstarted.md
+aliases: chapter/pylife/gettingstarted
 ---
 
-If you did not install the Pylife app already, please install it from Google Play or Play Market
+To get started with your PyGo's you will need to install PyLife, create an account, and then update the PyGo firmware to the latest version.
 
-For app to work properly please allow pylife to update the necessary permissions.
+The Pylife app is available on the [Apple App Store](https://apps.apple.com/nl/app/pylife/id1615965596?l=en ) and on [Google Play](https://play.google.com/store/apps/details?id=io.pycom.pylife).
+For app to work properly you will need to allow it to update the necessary permissions.
 
 ![Permissions Android Screenshot](/gitbook/assets/pylife/gettingstarted/permissions_android.jpg)
+![Permissions iOS Screenshot](/gitbook/assets/pylife/gettingstarted/permissions_ios.png)
 
 ### Create a Pylife account
 
-To create a Pylife account:
+To get going you will need to create a Pylife account. This is separate from other Pycom accounts.
 
 * Tap `Sign Up Here` on the bottom of the screen
 * Enter your name, surname, email, strong password and agree to the terms of service and privacy policy
@@ -24,17 +28,16 @@ To confirm your email, click or tap the link in the email you got when you creat
 
 ![Sign up form Android](/gitbook/assets/pylife/signup/signup_android.jpg)
 
-### Login
+Once this is complete, you can login using these details.
 
-To login just enter the email and password used when the account was created.
-
-You can access the app and should see the main screen.
-
+### Log in
+Once you are logged in you should see the main screen, and are ready to add your Pygo devices
 ![Create account form Android Screenshot](/gitbook/assets/pylife/gettingstarted/main_screen_android.jpg)
+
 
 ### Reset Password
 
-To reset a password tap `Forgot Password?` and enter the email your account is linked to.
+Should you need to reset your account password, tap `Forgot Password?` and enter the email your account is linked to.
 Your next steps would be:
 
 * You should recieve email with link to reset a password and click on it
