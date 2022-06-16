@@ -15,9 +15,17 @@ We have spent years in the technology field developing multi-network solutions. 
 * Monitor activity of your devices, receive real-time updates;
 * Share your activity with your people through groups;
 
+## WARNING 
+The PyGo is not a toy!  
+To avoid danger of suffocation, please keep out of reach of babies, children, and pets. These must be supervised when a PyGo is attached to them. 
+
+
+**IMPORTANT:** Please make sure you first open the PyGo case inside a building (out of sight of Satellites) and proceed to updating the firmware via the Pylife App as described below. 
+
 ## Let's get started!
 
 * [Getting started with Pylife](/pylife/gettingstarted/)
 * [Add and configure your devices in Pylife](/pylife/devices/)
+* [Update the firmware](/pylife/fwupdate/)
 * [Use groups in Pylife](/pylife/groups/)
 * [Use alerts in Pylife](/pylife/alerts/)
