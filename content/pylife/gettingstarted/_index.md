@@ -32,6 +32,7 @@ Once this is complete, you can login using these details.
 
 ### Log in
 Once you are logged in you should see the main screen, and are ready to add your Pygo devices
+
 ![Create account form Android Screenshot](/gitbook/assets/pylife/gettingstarted/main_screen_android.jpg)
 
 
