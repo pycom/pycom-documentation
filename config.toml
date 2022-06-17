@@ -1605,6 +1605,13 @@ theme = "doc-theme"
     parent = "pylife"
     weight = 40
 
+[[menu.main]]
+    name = "Messaging"
+    url = "/pylife/messaging/"
+    identifier = "pylife@messaging"
+    parent = "pylife"
+    weight = 50
+
 # *** Cellular Services
 [[menu.main]]
     name = "Cellular Services"
