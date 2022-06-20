@@ -1,6 +1,8 @@
 ---
 title: "Getting Started with Pylife"
-aliases:
+aliases: pylife/gettingstarted.html
+aliases: pylife/gettingstarted.md
+aliases: chapter/pylife/gettingstarted
 ---
 
 Pylife is a mobile App that lets you set up, configure and manage your PyGo devices.
@@ -44,10 +46,11 @@ First use:
 For app to work properly, please allow the Pylife App to access your location and allow any other necessary permissions, as prompted on your phone.
 
 ![Permissions Android Screenshot](/gitbook/assets/pylife/gettingstarted/permissions_android.jpg)
+![Permissions iOS Screenshot](/gitbook/assets/pylife/gettingstarted/permissions_ios.png)
 
 ### Create a Pylife Account
 
-To create a Pylife account:
+To get going you will need to create a Pylife account. This is separate from other Pycom accounts.
 
 1. Tap `Sign Up Here` on the bottom of the screen
 2. Enter your name, surname, email, strong password and agree to the terms of service and privacy policy
@@ -65,15 +68,15 @@ Your Pylife Account is now live.
 
 ### Login to your Pylife Account
 
-To login just enter the email and password used when the account was created.
-
-You can access the app and should see the main screen.
+Once you are logged in you should see the main screen, and are ready to add your Pygo devices
 
 ![Create account form Android Screenshot](/gitbook/assets/pylife/gettingstarted/main_screen_android.jpg)
 
+
 ### Reset Password
 
-To reset a password:
+Should you need to reset your account password, tap `Forgot Password?` and enter the email your account is linked to.
+Your next steps would be:
 
 1. Go to the <What> Screen
 

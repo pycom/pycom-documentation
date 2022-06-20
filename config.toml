@@ -500,8 +500,8 @@ theme = "doc-theme"
     identifier = "tutorials@advanced"
     parent = "tutorials"
     weight = 70
-    
-    
+
+
 [[menu.main]]
     name= "File decompression"
     url= "/tutorials/advanced/uzlib/"
@@ -1244,7 +1244,7 @@ theme = "doc-theme"
     identifier = "datasheets@notes"
     parent = "datasheets"
     weight = 50
-    
+
 [[menu.main]]
     name= "Helium Hotspot Miner"
     url = "/datasheets/helium_hotspot"
@@ -1582,12 +1582,19 @@ theme = "doc-theme"
     url = "/pylife/alerts/"
     identifier = "pylife@alerts"
     parent = "pylife"
-    weight = 20
+    weight = 50
 
 [[menu.main]]
     name = "Devices"
     url = "/pylife/devices/"
     identifier = "pylife@devices"
+    parent = "pylife"
+    weight = 20
+
+[[menu.main]]
+    name = "Firmware Update"
+    url = "/pylife/fwupdate/"
+    identifier = "pylife@fwupdate"
     parent = "pylife"
     weight = 30
 
@@ -1597,6 +1604,13 @@ theme = "doc-theme"
     identifier = "pylife@groups"
     parent = "pylife"
     weight = 40
+
+[[menu.main]]
+    name = "Messaging"
+    url = "/pylife/messaging/"
+    identifier = "pylife@messaging"
+    parent = "pylife"
+    weight = 50
 
 # *** Cellular Services
 [[menu.main]]

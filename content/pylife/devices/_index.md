@@ -23,11 +23,14 @@ The Pylife Mobile App will use your mobile phone’s Bluetooth signal to look fo
 ![Device Scanning](/gitbook/assets/pylife/devices/device_scanning.png)
 ![Device Scanning](/gitbook/assets/pylife/devices/device_active_scan.png)
 
-After the PyGo device is found, you will be asked to give it the name.
-
-Enter the name you would like to give your PyGo.
+At this point you can put a PyGo on to a Qi-compatible wireless charger or into a USB cradle to start charging and wake it up.
+Once the screen shows it is charging, click the `Start scanning` button, and the app should find your PyGo. 
+The device will have a unique ID (e.g. PyGo 12345) which cannot be changed, but you can optionally give it a name to easily identify it.
 
 Your added devices are displayed under the Devices menu section.
+Click 'Add PyGo', and your device is now paired. Please now proceed imediately to update its firmware.
+
+Please note: if you have more than one PyGo, we recommend you go through the complete setup process for one of them before starting with the next.
 
 You can add more than one PyGo to your App. If you add more than one PyGo, make sure to give each PyGo an obvious name.
 
