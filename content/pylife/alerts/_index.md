@@ -3,43 +3,49 @@ title: "Alerts"
 aliases:
 ---
 
-Alerts can be used in multiple ways for manipulation of PyGo devices.
+Alerts can be used in multiple ways on your PyGo devices.
 
 ![Alerts templates](/gitbook/assets/pylife/alerts/alert_templates.png)
 
-There are currently 3 templates, more will be added later. The current ones are:
+You can use one of our 3 pre-configured templates for distance, battery monitoring and stumbling.
 
-#### Distance Template
+To create an Alert you need to:
 
-* Notifies if PyGo is far or closer than N meters to the chosen location
+1. Tap `Alerts` on the bottom of the screen menu
+
+2. Tap `Templates` on the top of the screen header
+
+3. Choose the template you need
+
+4. Change the name, set up required conditions, set up notification method
+
+5. Tap `Save as new Alert`
+
+#### <b>The Distance Template</b> 
+
+* Notifies if PyGo is far or closer than N meters to the chosen location 
 * Tracking of location of your beloved
 * Tracking of pets outdoors
-* Interaction between team members during sport activities
+* Interaction between team members during sport activities 
 
-#### Battery Template
+#### <b>The Battery Template</b>
 
-* Notifies if PyGo's battery level is less than N %
-* Helps to prevent the outcharging of your PyGo or Pysence
+* This template helps you manage your battery life. 
+* It Notifies you if your PyGo’s battery level is less than a chosen battery life %
+* This helps to prevent the PyGo running out of charge 
 
-#### Stumbling Template
 
-* Notifies if PyGo has fallen down and stays more than N min
-* Is crucial for the seniors, because it can help to uncover the life-threatening issue
-* Your pet has lost the PyGo tracker
+#### <b>The Stumbling Template</b> 
 
-### Create alerts
+This template helps you receive alerts if the PyGo is carried and the accelerometer is activated for instance by someone who falls. It can also be used for other use cases.
 
-To create alert you need to:
-
-* Tap `Alerts` on the bottom of the screen menu
-* Tap `Templates` on the top of the screen header
-* Choose the template you need
-* Change the name, set up required conditions, set up notification method
-* Tap `Save as new Alert`
+* It notifies you if PyGo has fallen down and stays more than a defined set of minutes  
+* This could be important for the vulnerable person
+* This could also notify you that your pet has lost the PyGo device
 
 ![Create alert](/gitbook/assets/pylife/alerts/create_alert.png)
 
-### Edit alerts
+### Edit Alerts
 
 To edit alert you need to:
 
