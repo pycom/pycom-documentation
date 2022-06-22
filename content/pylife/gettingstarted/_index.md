@@ -5,7 +5,7 @@ aliases: pylife/gettingstarted.md
 aliases: chapter/pylife/gettingstarted
 ---
 
-Pylife is a mobile App that lets you set up, configure and manage your PyGo devices.
+Pylife is a mobile App that lets you set up, configure and manage your PyGos.
 
 ### WARNING
 
@@ -24,9 +24,7 @@ Before you Use the PyGo
 To charge you can use:
 
 * PyGo Qi Charger 
-
 * PyGo Charge Cradle 
-
 * Your own Qi compatible wireless charger 
 
 First use:
@@ -68,7 +66,7 @@ Your Pylife Account is now live.
 
 ### Login to your Pylife Account
 
-Once you are logged in you should see the main screen, and are ready to add your Pygo devices
+Once you are logged in you should see the main screen, and are ready to add your PyGos.
 
 ![Create account form Android Screenshot](/gitbook/assets/pylife/gettingstarted/main_screen_android.jpg)
 
@@ -80,13 +78,13 @@ Your next steps would be:
 
 1. Go to the <What> Screen
 
-2. Tap Forgot Password? and enter the email your account is linked to. Your next steps would be:
+2. Tap 'Forgot Password' and enter the email your account is linked to. Your next steps would be:
 
     * You should receive an email with a link to reset a password. Click on the link to create a new password
 
 3. Enter your new password and confirm it by entering it again
-4. Tap Save and you should see the status page for your password reset
-5. Tap Go to Login Form and login into your account
+4. Tap 'Save' and you should see the status page for your password reset
+5. Tap 'Go to Login Form' and login into your account
 
 ### Logout
 
@@ -96,6 +94,6 @@ To logout:
 
 2. Tap on the <which?> icon on the top right of the screen
 
-Your account info opens up and you can confirm that you want to log out by tapping Logout.
+Your account info opens up and you can confirm that you want to log out by tapping 'Logout'.
 
-Your account set up is now complete. Next you should set up some Alerts.
+Your account set up is now complete.

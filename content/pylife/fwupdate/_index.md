@@ -10,7 +10,7 @@ After installing the app, please do a firmware update immediately by following t
 
 
 ## Firmware update
-In PyLife, go to the devices tab and select your PyGo:
+In PyLife, go to the 'Devices' tab and select your PyGo:
 
 ![Devices tab iOS](/gitbook/assets/pylife/fwupdate/devices_menu_iOS.png)
 
@@ -31,8 +31,13 @@ Once it has reconnected, you are ready to go.
 
 
 ## Troubleshooting
-If the firmware update fails, you can reconnect to the PyGo and try again. It will prompt you to resume the update, and should subsequently update successfully.
-A video demonstrating this is available
+If the firmware update fails, you can reconnect to the PyGo and try again. It will prompt you to resume the update, and should subsequently update successfully. This should fix the majority of firmware update issues.
+[A video demonstrating this is available here](/gitbook/assets/pylife/fwupdate/PyGoFirmwareUpdate.mp4)
 
-We have discovered a bug in the firmware the PyGo's are shipped with where in unusual circumstances involving the GPS the PyGo can enter a locked state where it does not respond to external input.
-The immediate firmware update resolves this issue, but if you do encounter it leave the PyGo off the charger until the battery is discharged and when you restart do a firmware update.
+
+### PyGo not responding
+If your PyGo stops responding in PyLife, and doesn't display a charging symbol when placed on a suitable charger, it may have entered an error state. We have discovered a bug in the firmware the PyGos are shipped with where in unusual circumstances involving the GPS the PyGo can enter this state where it does not respond to external input.
+The immediate firmware update resolves this issue, but if you do encounter please do the following:
+  1) Leave the PyGo off the charger until the battery is discharged (this may take a day or so, but will be much quicker if the battery is not fully charged)
+  2) Wake up the PyGo using a charger, either on a Qi compatible charger or by placing it in a charging cradle
+  3) Restart the update process. PyLife should prompt you to resume the update, and fix the issue.
