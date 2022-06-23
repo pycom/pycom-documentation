@@ -80,7 +80,6 @@ Here you can do:
 ![Device Settings](/gitbook/assets/pylife/devices/device_settings_with_alert.png)
 
 
-=======
 Once the screen shows it is charging, click the 'Start scanning' button, and the app should find your PyGo. 
 The device will have a unique ID (e.g. PyGo 12345) which cannot be changed, but you can optionally give it a name to easily identify it.
 
