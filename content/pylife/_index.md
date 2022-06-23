@@ -6,9 +6,9 @@ title: "Pylife"
 
 ## What is Pylife?
 
-The Pylife App is our digital dashboard, where you will find all of your PyGo devices and their owners. It has messaging, mapping and visualisation features, all in a bid to connect a community of people.
+The Pylife App is our digital dashboard, where you will find all of your PyGos and their owners. It has messaging, mapping and visualisation features, all in a bid to connect a community of people.
 
-We have spent years in the technology field developing multi-network solutions. This means that the Pylife app will work with five different types of network. That means that you’re not paying for a device that only works in certain cases.
+We have spent years in the technology field developing multi-network solutions. This means that the Pylife app will work with five different types of network. That means that you're not paying for a device that only works in certain cases.
 
 * Create groups, invite your people add devices;
 * Create alerts from templates for your devices, configure them;
