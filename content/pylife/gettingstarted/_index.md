@@ -56,8 +56,7 @@ To get going you will need to create a Pylife account. This is separate from oth
 4. To finish creating your account, you need to confirm your email
 5. Please note- PyLife requires a separate account to other Pycom services
 
-Then head over to your inbox and confirm your email by clicking or tapping the link in the email you received when you created your account.
-
+To confirm your email, click or tap the link in the email you got when you created your account.
 `Note: Confirming your email or mobile number helps us know that we're sending your account info to the right place.`
 
 Your Pylife Account is now live.
@@ -74,26 +73,15 @@ Once you are logged in you should see the main screen, and are ready to add your
 ### Reset Password
 
 Should you need to reset your account password, tap `Forgot Password?` and enter the email your account is linked to.
-Your next steps would be:
 
-1. Go to the <What> Screen
-
-2. Tap 'Forgot Password' and enter the email your account is linked to. Your next steps would be:
-
-    * You should receive an email with a link to reset a password. Click on the link to create a new password
-
-3. Enter your new password and confirm it by entering it again
-4. Tap 'Save' and you should see the status page for your password reset
-5. Tap 'Go to Login Form' and login into your account
+* You should recieve email with link to reset a password and click on it
+* Enter your new password and confirm it by entering it again
+* Tap `Save` and you should see the status page for your password reset
+* Tap `Go to Login Form` and login into your account
 
 ### Logout
 
-To logout:
+To logout tap on the icon on the top right of the screen
 
-1. Go to the <What?> screen  
+Your account info opens and you can confirm the logout by tapping `Logout`
 
-2. Tap on the <which?> icon on the top right of the screen
-
-Your account info opens up and you can confirm that you want to log out by tapping 'Logout'.
-
-Your account set up is now complete.

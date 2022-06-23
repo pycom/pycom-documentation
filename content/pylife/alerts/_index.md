@@ -45,7 +45,19 @@ This template helps you receive alerts if the PyGo is carried and the accelerome
 
 ![Create alert](/gitbook/assets/pylife/alerts/create_alert.png)
 
-### Edit Alerts
+### Create alerts
+
+To create alert you need to:
+
+* Tap `Alerts` on the bottom of the screen menu
+* Tap `Templates` on the top of the screen header
+* Choose the template you need
+* Change the name, set up required conditions, set up notification method
+* Tap `Save as new Alert`
+
+![Create alert](/gitbook/assets/pylife/alerts/create_alert.png)
+
+### Edit alerts
 
 To edit alert you need to:
 

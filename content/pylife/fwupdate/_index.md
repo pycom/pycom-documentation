@@ -64,4 +64,3 @@ curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-reboot"
 ```
   5) Check that all commands have run succesfully without error. Your PyGo is now upgraded.
 
-    

@@ -23,33 +23,21 @@ The optional USB cradle allows you to charge the PyGo over USB as well as to con
 
 
 ## Connecting PyGos
-After installing the Mobile App, you will be asked to connect your PyGos.  
-
-Make sure:
-
-1. Your PyGo is charging (you should see a charging symbol on screen).
-2. You turn on the Bluetooth on your Mobile Phone.
-3. Your PyGo is within a few meters from your phone.
-
+After installing the Mobile App, you will be asked to connect your PyGos. 
 This can also be done anytime in the 'Devices' tab of PyLife.
 
-From the Mobile App, go to Add a PyGo and tap `Start Scanning`
-
-The Pylife Mobile App will use your mobile phone's Bluetooth to look for PyGos. 
-
+1) Put a PyGo on to a Qi-compatible wireless charger or into a USB cradle to start charging and wake it up. Make sure it is within a few meters of your phone.
+2) Once the PyGo screen shows it is charging, in Pylife tap `Start Scanning`. Pylife will use your phone's Bluetooth to look for PyGos. 
+3) The device will have a unique ID (e.g. PyGo 12345) which cannot be changed, but you can optionally give it a name to easily identify it.
+4) Click 'Add PyGo', and your PyGo is now paired. Please now proceed imediately to update its firmware.
+5) 
 ![Device Scanning](/gitbook/assets/pylife/devices/device_scanning.png)
 ![Device Scanning](/gitbook/assets/pylife/devices/device_active_scan.png)
 
-At this point you can put a PyGo on to a Qi-compatible wireless charger or into a USB cradle to start charging and wake it up.
-Once the screen shows it is charging, click the `Start scanning` button, and the app should find your PyGo. 
-The device will have a unique ID (e.g. PyGo 12345) which cannot be changed, but you can optionally give it a name to easily identify it.
-
 Your added PyGos are displayed under the Devices menu section.
-Click 'Add PyGo', and your PyGo is now paired. Please now proceed imediately to update its firmware.
 
-Please note: if you have more than one PyGo, we recommend you go through the complete setup process for one of them before starting with the next.
+You can add more than one PyGo to your App. If you do this, make sure to give each PyGo an obvious name and we recommend you go through the complete setup process for one of them before starting with the next.
 
-You can add more than one PyGo to your App. If you add more than one PyGo, make sure to give each PyGo an obvious name.
 
 ![Devices List](/gitbook/assets/pylife/devices/devices_list.png)
 
@@ -91,4 +79,21 @@ Here you can do:
 
 ![Device Settings](/gitbook/assets/pylife/devices/device_settings_with_alert.png)
 
+
+=======
+Once the screen shows it is charging, click the 'Start scanning' button, and the app should find your PyGo. 
+The device will have a unique ID (e.g. PyGo 12345) which cannot be changed, but you can optionally give it a name to easily identify it.
+
+Your added devices are displayed under the Devices menu section.
+Click 'Add PyGo', and your device is now paired. Please now proceed imediately to update its firmware.
+
+Please note: if you have more than one PyGo, we recommend you go through the complete setup process for one of them before starting with the next.
+
+![Devices List](/gitbook/assets/pylife/devices/devices_list.png)
+
+### Device Settings
+
+To open the device settings tap on the device in the list. You can add alerts, check mesh and device details here.
+
+![Device Settings](/gitbook/assets/pylife/devices/device_settings_with_alert.png)
 
