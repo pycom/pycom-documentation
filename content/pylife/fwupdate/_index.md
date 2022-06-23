@@ -49,7 +49,7 @@ If you want to do this, do the following:
   1) Download the relevant firmware for your PyGo. Click on the relevant link below, and download the firmware in the URL field
       * [PyGo1 firmware](https://software.pycom.io/manifest.json?sysname=pygo1&fwtype=pylife&current_ver=1.20.4)
       * [PyGo2 firmware](https://software.pycom.io/manifest.json?sysname=pygo2&fwtype=pylife&current_ver=1.20.4)
-  2) Connect to your PyGo's serial terminal, and run `update()`
+  2) Connect to your PyGo's serial terminal, and run `upgrade()`
   3) On your computer, connect to the PyGo's access point:
       * SSID: PyCom_AP_Firmware_Update
       * Password: pycom
