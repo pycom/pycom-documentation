@@ -55,13 +55,18 @@ Please follow the following steps to upgrade your PyGo on your PC:
   1) Download the relevant firmware for your PyGo. Click on the relevant link below which will initiate the firmware image download.
       * [PyGo1 firmware](https://software.pycom.io/manifest.json?sysname=pygo1&fwtype=pylife&current_ver=1.20.4&download=true)
       * [PyGo2 firmware](https://software.pycom.io/manifest.json?sysname=pygo2&fwtype=pylife&current_ver=1.20.4&download=true)
+
   2a) If your PyGo is still in application mode, connect to your PyGo's serial terminal via Atom, Visual Studio Code, PuTTy or minicom, and run `upgrade()`
+
   2b) If your PyGo is advertising a WiFi network with the name `PyCom_AP_Firmware_Update`, your PyGo is already in upgrade mode and you can continue to the next step.
+
   3) On your computer, connect to the PyGo's access point:
       * SSID: PyCom_AP_Firmware_Update
       * Password: www.pycom.io
+
   4) Open up a command prompt or terminal, navigate to the directory your downloaded firmware is in, and run the following, replacing YOUR_FIRMWARE_HERE with firmware you have downloaded:
-  ```
+
+```
 curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-init"
 curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-update"
 curl --request POST --data-binary @YOUR_FIRMWARE_HERE.bin http://192.168.4.1/update
