@@ -67,7 +67,7 @@ Please follow these steps to upgrade your PyGo on your PC:
 
   4) Open up a command prompt or terminal, navigate to the directory your downloaded firmware is in, and run the following, replacing YOUR_FIRMWARE_HERE with firmware you have downloaded:
 
-  Ensure that you run each command separately and check the output. You should see a line "Status: OK" in the output for commands that do a `--request GET`. Please note the ota-reboot command may not return a result and seem to hang. You can check if your PyGo is showing the usual start-up messages after the upgrade is complete.
+  Ensure that you run each command separately and check the output. You should see a line "Status: OK" in the output for commands that do a `--request GET`. Please note the ota-reboot command may not return a result and seem to hang. You can check if your PyGo is showing the usual start-up messages after the upgrade is complete. You can press ctrl+c to terminate the running commnad.
 
   Pushing the firmware binary to the device (command with `--request POST`) can take several minutes so please be patient.
 
