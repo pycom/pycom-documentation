@@ -52,10 +52,10 @@ If you want to do this, do the following:
   2) Connect to your PyGo's serial terminal, and run `upgrade()`
   3) On your computer, connect to the PyGo's access point:
       * SSID: PyCom_AP_Firmware_Update
-      * Password: pycom
+      * Password: www.pycom.io
   4) Open up a command prompt or terminal, navigate to the directory your downloaded firmware is in, and run the following, replacing YOUR_FIRMWARE_HERE with firmware you have downloaded:
   ```
-  curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-init"
+curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-init"
 curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-update"
 curl --request POST --data-binary @YOUR_FIRMWARE_HERE.bin http://192.168.4.1/update
 curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-finish"
@@ -63,4 +63,3 @@ curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-verify"
 curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-reboot"
 ```
   5) Check that all commands have run succesfully without error. Your PyGo is now upgraded.
-
