@@ -46,10 +46,10 @@ The immediate firmware update resolves this issue, but if you do encounter pleas
 ## Manual firmware update from computer
 For most people, performing the firmware update through the app is the best option. However, it is possible to update through a computer if you have the USB cradle or can connect to the PyGo's serial port through a computer.
 
-If your device is not already in upgrade mode from a previous upgrade attempt, please install [Atom](https://docs.pycom.io/gettingstarted/software/atom/) or [Visual Studio Code](https://docs.pycom.io/gettingstarted/software/vscode/) and enter the REPL prompt in the Pymakr plugin.
+If your device is not already in upgrade mode from a previous upgrade attempt, please install [Atom](https://docs.pycom.io/gettingstarted/software/atom/) or [Visual Studio Code](https://docs.pycom.io/gettingstarted/software/vscode/) and enter the REPL prompt in the Pymakr plugin. Alternatively you can use PuTTy or minicom as Terminal programs
 
 ![Pymakr Console](/gitbook/assets/pylife/fwupdate/pymakr.png)
-The above screenshot shows the usual startup messages from the PyGo when in application made. Wait for these commands to complete before issuing the `upgrade()` command.
+<br>The above screenshot shows the usual startup messages from the PyGo when in application made. Wait for these commands to complete before issuing the `upgrade()` command.
 
 Please follow the following steps to upgrade your PyGo on your PC:
   1) Download the relevant firmware for your PyGo. Click on the relevant link below which will initiate the firmware image download.
@@ -70,6 +70,8 @@ curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-verify"
 curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-reboot"
 ```
 
+Note: For Windows users, the curl command is included in Windows 10 since insider build 17063. For older versions of Windows, please download the curl application from https://curl.se/windows/
+
 For example, if you're using MacOS with a PyGo1 and have download the current PyGo1 firmware to the ~/Downloads folder:
 
 ```
@@ -82,4 +84,4 @@ curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-verify"
 curl -v --request GET http://192.168.4.1/status -H "FW-Header-1: ota-reboot"
 ```
 
-  5) Check that all commands have run succesfully without error. Your PyGo is now upgraded and you should see the startup messages as shown in the screenshot above.
+  5) Check that all commands have run successfully without error. Your PyGo is now upgraded and you should see the startup messages as shown in the screenshot above.
