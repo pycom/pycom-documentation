@@ -29,6 +29,17 @@ You will be prompted to join a new WiFi access point. Please click join. You wil
 After a few moments the firmware update should complete, and your PyGo will automatically reboot.
 Once it has reconnected, you are ready to go.
 
+## Recovery mode
+
+If you have removed your device while it is in firmware upgrade mode, or the app does not allow you to update your device, please try the recovery mode. You can find this at the bottom of the device tab:
+
+![Devices tab iOS](/gitbook/assets/pylife/fwupdate/recover-ios.png)
+
+> For Android users: Until the mobile App has been approved by Google and is available in the Google Play store, you can get the latest version with recovery mode here: https://software.pycom.io/downloads/device-recovery.apk
+
+Please choose the device type (PyGo 1 or PyGo2) and wait for the mobile app to prompt you to connect to the WiFi network of the device to be recovered. Please make sure that the device to be recovered is close by and no other devices in firmware upgrade mode are close by.
+
+![Devices tab iOS](/gitbook/assets/pylife/fwupdate/device-recovery-select.png)
 
 ## Troubleshooting
 If the firmware update fails, you can reconnect to the PyGo and try again. It will prompt you to resume the update, and should subsequently update successfully. This should fix the majority of firmware update issues.
