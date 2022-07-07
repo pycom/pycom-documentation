@@ -43,6 +43,8 @@ Please choose the device type (PyGo 1 or PyGo2) and wait for the mobile app to p
 
 ![Devices tab iOS](/gitbook/assets/pylife/fwupdate/update_join_wifi_iOS.png)
 
+> Please do not use your mobile phone for other activities such as WhatsApp calls at the same time. It is also advised to not use Bluetooth headsets during the upgrade. If you are prompted to join another WiFi network or switch to cellular connectivity during the upgrade, please either ignore or choose to stay connected to the current WiFi network.
+
 ## Troubleshooting
 If the firmware update fails, you can reconnect to the PyGo and try again. It will prompt you to resume the update, and should subsequently update successfully. This should fix the majority of firmware update issues.
 [A video demonstrating this is available here](/gitbook/assets/pylife/fwupdate/PyGoFirmwareUpdate.mp4)
