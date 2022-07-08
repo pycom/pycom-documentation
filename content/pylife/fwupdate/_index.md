@@ -39,12 +39,12 @@ If the firmware update fails, you can reconnect to the PyGo and try again. It wi
 If your PyGo stops responding in PyLife, and doesn't display a charging symbol when placed on a suitable charger, it may have entered an error state. We have discovered a bug in the firmware the PyGos are shipped with where in unusual circumstances involving the GPS the PyGo can enter this state where it does not respond to external input.
 The immediate firmware update resolves this issue, but if you do encounter please do the following:
   1) Leave the PyGo off the charger until the battery is discharged (this may take a day or so, but will be much quicker if the battery is not fully charged)
-  2) Wake up the PyGo using a charger, either on a Qi compatible charger or by placing it in a charging cradle
+  2) Wake up the PyGo by placing it in a charging cradle
   3) Restart the update process. PyLife should prompt you to resume the update, and fix the issue.
 
 
 ## Manual firmware update from computer
-For most people, firmware update through the app is the best option. However it is possible to update through a computer if you have the USB cradle or can connect to the PyGo's serial port through a computer.
+For most people, firmware update through the app is the best option. However it is possible to update through a computer with the USB cradle or if you can connect to the PyGo's serial port through a computer.
 If you want to do this, do the following:
   1) Download the relevant firmware for your PyGo. Click on the relevant link below, and download the firmware in the URL field
       * [PyGo1 firmware](https://software.pycom.io/manifest.json?sysname=pygo1&fwtype=pylife&current_ver=1.20.4)

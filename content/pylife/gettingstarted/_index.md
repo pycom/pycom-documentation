@@ -17,18 +17,6 @@ To avoid danger of suffocation, please keep out of reach of babies, children, an
 
 ### GETTING STARTED WITH PYLIFE  
 
-Before you Use the PyGo
-
-* Charge your PyGo on a wireless charger until the screen shows a full charge 
-
-To charge you can use:
-
-* PyGo Qi Charger 
-* PyGo Charge Cradle 
-* Your own Qi compatible wireless charger 
-
-First use:
-
 1. Download the Pylife App from the iOS or the Android App Store 
 
     Android Shop:
