@@ -70,7 +70,7 @@ Choose your gateway frequency using this detailed [country list](https://lora-al
 
 ## Full Specifications
 
-Data Sheet [Here](https://pycom.io/wp-content/uploads/2022/03/Hotspot_Spec-sheet-V1.12-First-Release.pdf)
+Data Sheet [Here](https://pycom.io/wp-content/uploads/2022/07/Hotspot_Spec-sheet-V1.13-First-Release.pdf)
 
 There is more information about how to mine HNT and much more on the [Helium docs site.](https://docs.helium.com/)
 
