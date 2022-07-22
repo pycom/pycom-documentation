@@ -7,7 +7,7 @@ aliases:
     - chapter/datasheets/helium_hotspot
 ---
 
-**Store**: [Buy Here](https://pycom.io/product/helium-hotspot-batch1/)
+**Store**: [Buy Here](https://pycom.io/product/helium-hotspot-miner-batch-3/)
 
 This full Hotspot is compatible with Helium LongFi™ and Helium Blockchain technology.
 
@@ -46,9 +46,9 @@ This fully certified Helium Hotspot contains
 
 ### Regulatory certifications
 
-* CE completed
-* FCC completed
-* IC completed
+* CE completed, [Certificate Here](/gitbook/assets/lorawan/helium/CECert.pdf)
+* FCC completed, [Certificate Here](/gitbook/assets/lorawan/helium/FCCCert.pdf)
+* IC completed, [Certificate Here](/gitbook/assets/lorawan/helium/ICCert.pdf)
 * RCM pending
 
 ## Helium Hotspot miner (Full Hotspot) specifications
@@ -63,7 +63,7 @@ This fully certified Helium Hotspot contains
 * Dual SX1257 transceivers for a total of 8 channels support
 * Maximum TX power (LoRaWAN) 23.45 dBm
 * Frequencies: EU 863-870 MHz or US 902-928 MHz
-* 64GB uSD card with Operating System and Helium Miner software stack
+* 32GB uSD card with Operating System and Helium Miner software stack
 * Powered via USB-C or optional Ethernet + PoE adapter daughter board
 
 Choose your gateway frequency using this detailed [country list](https://lora-alliance.org/sites/default/files/2020-06/rp_2-1.0.1.pdf)
@@ -75,8 +75,7 @@ Data Sheet [Here](https://pycom.io/wp-content/uploads/2022/03/Hotspot_Spec-sheet
 There is more information about how to mine HNT and much more on the [Helium docs site.](https://docs.helium.com/)
 
 ## Getting started
-1. Upload the latest stable `hotspot` firmware release using the [firmware updater](/updatefirmware/device/).
-2. Follow the [tutorial](https://docs.pycom.io/gettingstarted/registration/lora/helium/) to register and connect your Hotspot  to the Helium Network.
+1. Follow the [tutorial](https://docs.pycom.io/gettingstarted/registration/lora/helium_hotspot_registration/) to register and connect your Hotspot  to the Helium Network.
 
 ## Notes
 ### Battery Charger
