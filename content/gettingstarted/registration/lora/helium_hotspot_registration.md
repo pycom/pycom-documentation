@@ -14,24 +14,20 @@ Installing a LoRa Hotspot means you are rewarded in HNT crypto coins as soon as 
 
 ## Add a Pycom Helium Miner
 
-Go to Helium App to add a hotspot and follow the further steps.
+Download and install the Pycom Helium App from the App Store or Play Store.
+  * Create an account or log in to your existing account
+  * Click +Add Hotspot 
+    * ![](/gitbook/assets/lorawan/helium/helium_reg_1.png)
+  * Add "Pycom Helium Miner BLE"
+  * Follow the step-by-step instructions to pair your Helium Miner
+  * The hotspot automatically goes into pairing mode for 30 minutes after first power-on. 
+  * It should be detected by the app.
+    * ![](/gitbook/assets/lorawan/helium/helium_reg_8.png)
+  * Select the WiFi network the hotspot will use to access the internet
+    * ![](/gitbook/assets/lorawan/helium/helium_reg_9.png)
+  * Add to the blockchain, and you are up and running
+    * ![](/gitbook/assets/lorawan/helium/helium_reg_15.png)
 
-![](/gitbook/assets/lorawan/helium/helium_reg_1.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_2.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_3.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_4.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_5.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_6.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_7.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_8.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_9.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_10.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_11.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_12.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_13.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_14.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_15.png)
-![](/gitbook/assets/lorawan/helium/helium_reg_16.png)
 
 ## Assert Location
 TBD
