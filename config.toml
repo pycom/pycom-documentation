@@ -16,6 +16,12 @@ theme = "doc-theme"
     identifier = "products"
     weight = 30
 
+[[menu.main]]
+    name = "Pycom Helium Miner"
+    url = "/gettingstarted/registration/lora/helium_hotspot_registration/"
+    identifier = "helium"
+    weight = 5
+
 # *** Getting Started
 [[menu.main]]
     name = "Getting Started"
