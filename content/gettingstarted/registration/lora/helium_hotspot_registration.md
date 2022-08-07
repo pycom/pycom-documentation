@@ -25,9 +25,9 @@ WiFi antenna:
 
 ## Add a Pycom Helium Miner
 
-Download and install the Pycom Helium App from the [https://apps.apple.com/us/app/pycom-helium-app/id1630652083](Apple App Store)
+Download and install the Pycom Helium App from the [Apple App Store](https://apps.apple.com/us/app/pycom-helium-app/id1630652083)
 
-For the Android Version, please download the app from [https://software.pycom.io/downloads/pycom-helium.apk](pycom-helium.apk)
+For the Android Version, please download the app from [pycom-helium.apk](https://software.pycom.io/downloads/pycom-helium.apk)
 > Hint: Please enable Location & Nearby Devices permissions in app settings.
 
   * Create an account or log in to your existing account
