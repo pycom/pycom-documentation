@@ -12,12 +12,14 @@ Installing a LoRa Hotspot means you are rewarded in HNT crypto coins as soon as 
 * [Assert Location](#assert-location)
 * [Transfer Hotspot](#transfer-hotspot)
 
-The Hotspot is delivered with a WiFi and LoRa antenna. Please check the polarity of the connector on the antenna and match it with the correct antenna connector on the Hotspot:
+> Hint: The Hotspot is delivered with a WiFi and LoRa antenna. Please check the polarity of the connector on the antenna and match it with the correct antenna connector on the Hotspot:
 
 LoRa antenna:
+
 ![](/gitbook/assets/lorawan/helium/lora_antenna.png)
 
 WiFi antenna:
+
 ![](/gitbook/assets/lorawan/helium/wifi_antenna.png)
 
 
@@ -41,8 +43,12 @@ For the Android Version, please download the app from [https://software.pycom.io
   * Add to the blockchain, and you are up and running
     * ![](/gitbook/assets/lorawan/helium/helium_reg_15.png)
 
+> Hint: The Hotspot is periodically checking for updates. It may take 30 minutes for the first firmware update to be downloaded.
 
 ## Assert Location
-TBD
+
+If you haven't asserted your location during onboarding, you can do this via this option in the app. You can also use the official Helium Hotspot app to assert your location. Please note that only one location assertion is payed by Pycom. If you wish to change your location later, any fees charged by the Helium network are the responsibility of the Hotspot owner!
+
 ## Transfer Hotspot
-TBD
+
+You can use this option to transfer Hotspot ownership to a different wallet.
