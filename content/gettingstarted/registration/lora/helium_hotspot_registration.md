@@ -12,6 +12,15 @@ Installing a LoRa Hotspot means you are rewarded in HNT crypto coins as soon as 
 * [Assert Location](#assert-location)
 * [Transfer Hotspot](#transfer-hotspot)
 
+The Hotspot is delivered with a WiFi and LoRa antenna. Please check the polarity of the connector on the antenna and match it with the correct antenna connector on the Hotspot:
+
+LoRa antenna:
+![](/gitbook/assets/lorawan/helium/lora_antenna.png)
+
+WiFi antenna:
+![](/gitbook/assets/lorawan/helium/wifi_antenna.png)
+
+
 ## Add a Pycom Helium Miner
 
 Download and install the Pycom Helium App from the [https://apps.apple.com/us/app/pycom-helium-app/id1630652083](Apple App Store).
