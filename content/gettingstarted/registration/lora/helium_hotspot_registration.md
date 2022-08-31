@@ -68,8 +68,8 @@ This can be caused by a variety of issues. The first step is to look at the LEDs
 Initially you will see an internal solid green light inside the case above the power lead. After around 20 seconds this should start to blink.
 If this is the case, it is likely your hotspot is working correctly.
   * On some devices, it may take several rescans before the hotspot shows in the app. Please keep retrying until it shows up.
-  * If it does not start to blink, you may have a board that has vibrated loose
-    * It is possible to dissasemble the hotspot case and squeeze the Raspberry Pi module so it clicks back in to the header.
+  * If it does not start to blink, you may have a board that has vibrated loose. We have discovered a small number of units where the board-to-board connectors that hold the Raspberry Pi module in have vibrated loose in transit.
+    * If you feel confident in such things, it is possible to dissasemble the hotspot case and squeeze the Raspberry Pi module so it clicks back in to the header.
   
 
 ## Hotspot won't connect to my WiFi
