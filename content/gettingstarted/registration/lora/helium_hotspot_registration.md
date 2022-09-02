@@ -24,11 +24,13 @@ WiFi antenna:
 
 ![](/gitbook/assets/lorawan/helium/wifi_antenna.png)
 
-Next, connect your device to the included USB-C powersupply.
+Next, connect your device to the included USB-C power supply.
 Initially you will see an internal solid green light inside the case above the power lead. After around 20 seconds this should start to blink.
+
 Leave the miner booting while you set up your phone: it takes a minute or two to boot, and after this should be ready to be paired.
 
 ## Add a Pycom Helium Miner using the app
+The Pycom Helium App allows you to configure the device and once it is up-and-running to reconfigure it. It works in conjunction with the Helium apps to administer your hotspot.
 
 Download and install the Pycom Helium App from the [Apple App Store](https://apps.apple.com/us/app/pycom-helium-app/id1630652083)
 
@@ -56,7 +58,7 @@ The app contains step-by-step instructions for getting you up and running. A sum
 
 ## Assert Location
 
-If you haven't asserted your location during onboarding, you can do this via this option in the app. You can also use the official Helium Hotspot app to assert your location. Please note that only one location assertion is payed by Pycom. If you wish to change your location later, any fees charged by the Helium network are the responsibility of the Hotspot owner!
+If you haven't asserted your location during setup, you can do this at a later date in the app. You can also use the official Helium Hotspot app to assert your location. Please note that only one location assertion is pre-payed by Pycom. If you wish to change your location later, any fees charged by the Helium network are the responsibility of the Hotspot owner!
 
 ## Transfer Hotspot
 
