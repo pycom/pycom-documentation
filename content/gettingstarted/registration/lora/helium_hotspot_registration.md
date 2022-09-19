@@ -74,7 +74,7 @@ If this is the case, it is likely your hotspot is working correctly.
   * On some devices, it may take several rescans before the hotspot shows in the app. Please keep retrying until it shows up.
   * If it does not start to blink, you may have a board that has vibrated loose. We have discovered a small number of units where the board-to-board connectors that hold the Raspberry Pi module in have vibrated loose in transit.
     * If you feel confident in such things, it is possible to disassemble the hotspot case and squeeze the Raspberry Pi module so it clicks back in to the header.
-  
+
 
 ## Hotspot won't connect to my WiFi
 Some users have encountered some issues where the hotspot doesn't connect to a particular WiFi network.
@@ -87,4 +87,5 @@ The pairing process requires that Chrome is the default browser. If you use a di
 
 Some users have reported pressing decline when the app requests location permission this also fixes this error.
 
-
+## SD card corruption or other uSD card related issues
+If you wish to re-flash the uSD card in your miner, you can download [this image](https://software.pycom.io/downloads/pycom-miner.bin.zip). We suggest you use [Balena Etcher](https://www.balena.io/etcher/) to flash the uSD card.
