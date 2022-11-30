@@ -6,7 +6,8 @@ title: 'Sleep'
 On these shields, an additional sleep method is available. Next to [`machine.deepsleep()`](/firmwareapi/pycom/machine/#machinedeepsleeptime_ms). there is `py.go_to_sleep()`, which is able to completely cut the power to the development board, and using only the coprocessor to keep track of when to wake up again. This way, we can save more power, which is especially useful when operating on a battery. On this page, we will cover the following:
 * [Simple Pysleep](#simple-pysleep)
 * [Wake up from accelerometer](#wake-up-from-accelerometer)
-*
+
+
 ## Simple Pysleep
 ```python
 from pycoproc import Pycoproc
@@ -37,6 +38,7 @@ import time
 # WAKE_REASON_TIMER = 4
 # WAKE_REASON_INT_PIN = 8
 
+py = Pysense()
 print("Wakeup reason: " + str(py.get_wake_reason()))
 print("Approximate sleep remaining: " + str(py.get_sleep_remaining()) + " sec")
 time.sleep(0.5)
@@ -69,15 +71,11 @@ Use this example for a **Pysense 2** or **Pytrack 2** shield:
 
 import time
 import pycom
-import struct
 from machine import Pin
 from pycoproc import Pycoproc
 import machine
 
 from LIS2HH12 import LIS2HH12
-from SI7006A20 import SI7006A20
-from LTR329ALS01 import LTR329ALS01
-from MPL3115A2 import MPL3115A2,ALTITUDE,PRESSURE
 
 def accelerometer():
     print("ACCELEROMETER:", "accel:", accelerometer_sensor.acceleration(), "roll:", accelerometer_sensor.roll(), "pitch:", accelerometer_sensor.pitch(), "x/y/z:", accelerometer_sensor.x, accelerometer_sensor.y, accelerometer_sensor.z )
@@ -89,9 +87,6 @@ def activity_int_handler(pin_o):
     else:
         print('[Inactivity]')
         pycom.rgbled(0x0A0A00) # yellow
-
-def activity_int_handler_none(pin_o):
-    pass
 
 ###############################################################
 sleep_time_s = 300 # 5 min
