@@ -1744,7 +1744,12 @@ theme = "doc-theme"
     identifier = "advance@frozen"
     parent = "advance"
     weight = 50
-
+[[menu.main]]
+    name = "Current consumption"
+    url = "/advance/current/"
+    identifier = "advance@current"
+    parent = "advance"
+    weight = 60
 [[menu.main]]
     name="License"
     url="/license/"
