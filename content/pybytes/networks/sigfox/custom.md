@@ -20,7 +20,7 @@ Go to: Settings (in sidebar) → Sigfox API → Settings
 
 and select Sigfox device type which is associated with Sigfox custom contract.
 
-![](/gitbook/assets/pybytes/sigfox/selectdevicetypecustomcontract.png)
+
 
 ### Add your Sigfox device to Pybytes
 
