@@ -12,40 +12,44 @@ You can use the following code to query the PyNode+ Air sensor from MicroPython
 from network import Bluetooth
 import time
 import ubinascii
-import struct
+
 bt = Bluetooth()
 bt.start_scan(-1)
 
-def twoscmp(value):
-    if value > 128:
-        value = value - 256
-    return value
 
+def is_pynode_air(read_adv):
+    uuid = ubinascii.hexlify(read_adv[4:20])
+    return uuid.decode().startswith("50794e6f646553315631")
+
+
+def get_pynode_data(read_adv):
+    return {
+        "temperature": float(
+            -45 + 175 * int(ubinascii.hexlify(read_adv[20:22]), 16) / 65536
+        ),
+        "humidity": float(
+            100 * int(ubinascii.hexlify(read_adv[22:24]), 16) / 65536
+        ),
+    }
+
+
+print("Starting pynode air sensor")
 while True:
     adv = bt.get_adv()
     if adv:
-        read_adv = bt.resolve_adv_data(adv.data, Bluetooth.ADV_MANUFACTURER_DATA)
-        if read_adv==None:
-            pass
-        else:
-            manuf = ubinascii.hexlify(read_adv)
+        read_adv = bt.resolve_adv_data(
+            adv.data, Bluetooth.ADV_MANUFACTURER_DATA
+        )
+        if read_adv:
             manuf_data = ubinascii.hexlify(read_adv[0:4])
-            if manuf_data == b'4c000215': # ibeacon
-                print(ubinascii.hexlify(adv.mac))
-                uuid = ubinascii.hexlify(read_adv[4:20])
-                major = ubinascii.hexlify(read_adv[20:22])
-                minor = ubinascii.hexlify(read_adv[22:24])
-                tx_power = ubinascii.hexlify(read_adv[24:25])
-                tx_power_real = twoscmp(int(tx_power, 16))
-                major_int = int(major, 16)
-                major_f = float(-45 + 175*major_int/65536)
-                minor_int = int(minor,16)
-                minor_f = float(100*minor_int/65536)
-                print("uuid:",ubinascii.unhexlify(uuid), " rest:", major, minor)
-                print("temperature:",major_f, "humidity:", minor_f)
-                print("")
+            if manuf_data == b"4c000215":  # ibeacon
+                if is_pynode_air(read_adv):
+                    data = get_pynode_data(read_adv)
+                    print(data)
+                    time.sleep(10)
     else:
         time.sleep(0.050)
+
 ```
 
 
