@@ -20,18 +20,18 @@ Else, go to [Pybytes](https://pybytes.pycom.io) and create an account
 ![](/gitbook/assets/pybytes/add-device/add-device-btn.png)
 
 2. Select your device (WiPy, LoPy, SiPy, etc.).
+
 ![](/gitbook/assets/pybytes/add-device/select-device-type.png)
 
 3. Select your network options. This will be how your device connects to both Pybytes and the internet. For now, we will choose WiFi. This will show a subwindow where you enter your WiFi credentials. This will only be used to connect your device with a WiFi network to access pybytes.
+
 ![](/gitbook/assets/pybytes/add-device/network-step.png)
 
-4. Enter a unique name for your device and hit save!
+4. Choose a unique name for your device and hit `Next` !
 
 ![](/gitbook/assets/pybytes/add-device/customize-step.png)
 
 5. At the end, Pybytes will show that your device profile was successfully created.
-
-![](/gitbook/assets/pybytes/add-device/final-step.png)
 
 ## Step 3: Provision your device
 
@@ -74,19 +74,18 @@ After creation, you will land on the provisioning page. This is where we 'inform
 
 2. Click on `Online Firmware updater` at Provisioning tab on the device page.
 
-   ![](/gitbook/assets/fwupdater-1.png)
+![](/gitbook/assets/fwupdater-1.png)
 
-3. Click `Next`.
+3. Click on `Start provisionning`
 
-   ![](/gitbook/assets/fwupdater-2.png)
+4. Select the port to which your device is connected. Select your region and 
+   country. Select the Firmware type and version.
 
-4. Select correct port to which your device is connected. Choose region and 
-   country. Select Firmware type and version.
+![](/gitbook/assets/fwupdater-3.png)
 
-   ![](/gitbook/assets/fwupdater-3.png)
+5. Click next to start provisionning the device.
 
-5. Continue with the firmware update to the device.
-
+![](/gitbook/assets/pybytes/add-device/fw-updater/fwupdater-finish.png)
 
 ## Step 4: Your first signal
 

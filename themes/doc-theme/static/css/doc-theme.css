@@ -389,7 +389,7 @@ html {
   scroll-padding-top: 70px; /* height of sticky header */
 }
 
-img[src*="/gitbook/assets/pybytes/lora/screenshots"], img[src*="/gitbook/assets/pybytes/pymesh"]{
+img[src*="/gitbook/assets/pybytes/lora/screenshots"] {
     margin-top: 20px;
     margin-left: 15px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
