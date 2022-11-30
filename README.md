@@ -4,10 +4,8 @@ Welcome to Pycom docs.
 
 ## Run locally
 
-```
-brew install hugo
-hugo serve
-```
+1. Install Hugo v0.92.2
+2. run `hugo serve`
 
 ## Github workflow
 
